@@ -4,11 +4,11 @@
 
 ## porterDuff variable
 
-Higher-order Porter-Duff alpha compositing operator. See  for reference. Returns an optimized AST function which accepts 2 RGBA colors (`vec4`<!-- -->) and returns blended &amp; clamped result (also `vec4`<!-- -->). All built-in PD operators are defined via this HOF.
+Higher-order Porter-Duff alpha compositing operator. See  for reference. Returns an optimized AST function which accepts 2 RGBA colors (vec4) and returns blended &amp; clamped result (also a vec4). All built-in PD operators are defined via this HOF.
 
 The two given JS functions are used to extract blending coefficients for src/dest colors and are called with the alpha components of both colors.
 
-Optimization only happens for cases where either `fa` and/or `fb` are `ZERO`<!-- -->.
+Optimization only happens for cases where either `fa` and/or `fb` are [ZERO](./shader-ast-stdlib.zero.md)<!-- -->.
 
 <b>Signature:</b>
 

@@ -4,7 +4,7 @@
 
 ## unwrap variable
 
-Takes a result tuple returned by `run()` and unwraps one or more items from result stack. If no `n` is given, defaults to single value (TOS) and returns it as is. Returns an array for all other `n`<!-- -->.
+Takes a result tuple returned by [run](./pointfree.run.md) and unwraps one or more items from result stack. If no `n` is given, defaults to single value (TOS) and returns it as is. Returns an array for all other `n`<!-- -->.
 
 <b>Signature:</b>
 

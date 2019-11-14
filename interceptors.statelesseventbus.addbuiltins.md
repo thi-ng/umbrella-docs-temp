@@ -4,9 +4,22 @@
 
 ## StatelessEventBus.addBuiltIns() method
 
-Adds built-in event &amp; side effect handlers. Also see additional built-ins defined by the stateful `EventBus` extension of this class, as well as comments for these class methods:
+Adds built-in event &amp; side effect handlers.
 
-- `mergeEffects()` - `processEvent()`
+<b>Signature:</b>
+
+```typescript
+addBuiltIns(): any;
+```
+<b>Returns:</b>
+
+`any`
+
+## Remarks
+
+Also see additional built-ins defined by the stateful [EventBus](./interceptors.eventbus.md) extension of this class, as well as comments for these class methods:
+
+- [StatelessEventBus.mergeEffects()](./interceptors.statelesseventbus.mergeeffects.md) - [StatelessEventBus.processEvent()](./interceptors.statelesseventbus.processevent.md)
 
 \#\#\# Handlers
 
@@ -50,13 +63,4 @@ Async side effect. Only to be used in conjunction with `FX_DISPATCH_ASYNC`<!-- -
 { [FX_DISPATCH_ASYNC]: [FX_FETCH, "foo.json", EV_SUCCESS, EV_ERROR] }
 
 ```
-
-<b>Signature:</b>
-
-```typescript
-addBuiltIns(): any;
-```
-<b>Returns:</b>
-
-`any`
 

@@ -4,7 +4,7 @@
 
 ## int32 variable
 
-Returns new `Int32` wrapping given ARGB int.
+Returns new [Int32](./color.int32.md) wrapping given ARGB int.
 
 <b>Signature:</b>
 

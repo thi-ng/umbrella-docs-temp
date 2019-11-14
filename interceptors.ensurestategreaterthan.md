@@ -4,7 +4,7 @@
 
 ## ensureStateGreaterThan variable
 
-Specialization of `ensurePred()` to ensure a state value is greater than given min. See `ensureStateLessThan()` for further details.
+Specialization of [ensurePred](./interceptors.ensurepred.md) to ensure a state value is greater than given min. See [ensureStateLessThan](./interceptors.ensurestatelessthan.md) for further details.
 
 <b>Signature:</b>
 

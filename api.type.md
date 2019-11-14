@@ -6,7 +6,7 @@
 
 Type enums for Typedarray-backed buffers.
 
- GLType  GL2TYPE  TYPE2GL
+[GLType](./api.gltype.md) [GL2TYPE](./api.gl2type.md) [TYPE2GL](./api.type2gl.md)
 
 <b>Signature:</b>
 

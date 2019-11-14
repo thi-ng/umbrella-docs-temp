@@ -4,7 +4,7 @@
 
 ## runU variable
 
-Like `run()`<!-- -->, but returns unwrapped value(s) from result data stack.
+Like [run](./pointfree-lang.run.md)<!-- -->, but returns unwrapped value(s) from result data stack.
 
 <b>Signature:</b>
 

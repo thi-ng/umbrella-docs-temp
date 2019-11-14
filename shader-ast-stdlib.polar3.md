@@ -4,7 +4,7 @@
 
 ## polar3 variable
 
-Converts 3D cartesian vector `v` to spherical coordinates, i.e. `[r,θ,ϕ]` (angles in radians). See `cartesian3()` for reverse operation.
+Converts 3D cartesian vector `v` to spherical coordinates, i.e. `[r,θ,ϕ]` (angles in radians). See [cartesian3](./shader-ast-stdlib.cartesian3.md) for reverse operation.
 
 <b>Signature:</b>
 

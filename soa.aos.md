@@ -8,6 +8,15 @@ Constructs SOA instance from given attrib specs and optional ArrayBuffer (w/ opt
 
 First computes attrib offsets, alignments and the overall struct size, then configures buffer views and strides for each attrib. This is to ensure each attrib is correctly mapped in its buffer view (e.g. float values need to be aligned to 4-byte boundaries). The overall inter-struct packing/stride length is dependent on the largest attrib type used. E.g. the following specs will cause a stride length of 16 bytes between each resulting SOA element, even though the actual struct size is only 13 bytes:
 
+<b>Signature:</b>
+
+```typescript
+aos: <K extends string>(num: number, specs: Record<K, Partial<import("./api").AOSAttribSpec>>, buf?: ArrayBuffer | undefined, byteOffset?: number) => SOA<K>
+```
+
+## Example
+
+
 ```ts
 aos(
   1024,
@@ -20,8 +29,3 @@ aos(
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-aos: <K extends string>(num: number, specs: Record<K, Partial<import("./api").AOSAttribSpec>>, buf?: ArrayBuffer | undefined, byteOffset?: number) => SOA<K>
-```

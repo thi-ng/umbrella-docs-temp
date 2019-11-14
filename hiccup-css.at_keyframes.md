@@ -6,6 +6,26 @@
 
 Rule function for `@keyframes`<!-- -->. If a single declaration object is given, it's keys are used as keyframe stops and their values as their declarations objects. This way any number of stops can be specified.
 
+<b>Signature:</b>
+
+```typescript
+export declare function at_keyframes(id: string, stops: any): RuleFn;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  id | <code>string</code> |  |
+|  stops | <code>any</code> |  |
+
+<b>Returns:</b>
+
+`RuleFn`
+
+## Example 1
+
+
 ```ts
 css(at_keyframes("fadein", {0: {opacity: 0}, 100: {opacity: 1}}))
 // @keyframes fadein {
@@ -23,6 +43,9 @@ css(at_keyframes("fadein", {0: {opacity: 0}, 100: {opacity: 1}}))
 ```
 If called with two objects, the first one provides the declarations for the 0% keyframe and the 2nd for the 100% keyframe.
 
+## Example 2
+
+
 ```ts
 css(at_keyframes("fadein", {opacity: 0}, {opacity: 1}));
 // @keyframes fadein {
@@ -38,21 +61,4 @@ css(at_keyframes("fadein", {opacity: 0}, {opacity: 1}));
 // }
 
 ```
-
-<b>Signature:</b>
-
-```typescript
-export declare function at_keyframes(id: string, stops: any): RuleFn;
-```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  id | <code>string</code> |  |
-|  stops | <code>any</code> |  |
-
-<b>Returns:</b>
-
-`RuleFn`
 

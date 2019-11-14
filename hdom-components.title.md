@@ -6,6 +6,15 @@
 
 Configurable Higher order title with optional subtitle component. The returned component function takes two args: title, subtitle.
 
+<b>Signature:</b>
+
+```typescript
+title: (_opts?: Partial<TitleOpts> | undefined) => (_: any, title: any, subtitle: any) => any[]
+```
+
+## Example
+
+
 ```ts
 const h1 = title();
 const h2 = title({ element: "h2", attribs: { class: "blue" }});
@@ -16,8 +25,3 @@ const h2 = title({ element: "h2", attribs: { class: "blue" }});
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-title: (_opts?: Partial<TitleOpts> | undefined) => (_: any, title: any, subtitle: any) => any[]
-```

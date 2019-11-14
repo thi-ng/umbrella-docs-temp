@@ -4,7 +4,7 @@
 
 ## RouterConfig.prefix property
 
-Route prefix. Default: `/`<!-- -->. All routes to be parsed by `route()` are assumed to have this prefix. All routes returned by `format()` will include this prefix.
+Route prefix. Default: `/`<!-- -->. All routes to be parsed by [BasicRouter.route()](./router.basicrouter.route.md) are assumed to have this prefix. All routes returned by  will include this prefix.
 
 <b>Signature:</b>
 

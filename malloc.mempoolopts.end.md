@@ -4,7 +4,7 @@
 
 ## MemPoolOpts.end property
 
-Byte address (+1) of the end of the memory region managed by the `MemPool`<!-- -->.
+Byte address (+1) of the end of the memory region managed by the [MemPool](./malloc.mempool.md)<!-- -->.
 
 <b>Signature:</b>
 

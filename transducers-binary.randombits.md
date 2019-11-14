@@ -6,7 +6,7 @@
 
 Returns an iterator of random bits, with 1's occurring w/ given probability `prob` (in the \[0,1\] interval). If `num` is given, only that many bits will be produced.
 
-By default, uses system PRNG, but a custom `IRandom` impl can be provided via `rnd` arg.
+By default, uses system PRNG, but a custom [IRandom](./random.irandom.md) impl can be provided via `rnd` arg.
 
 <b>Signature:</b>
 

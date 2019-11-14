@@ -4,7 +4,7 @@
 
 ## EV\_UNDO variable
 
-Event ID to trigger undo action. See `EventBus.addBuiltIns()` for further details. Also see `snapshot()` interceptor docs.
+Event ID to trigger undo action. See `EventBus.addBuiltIns()` for further details. Also see [snapshot](./interceptors.snapshot.md) interceptor docs.
 
 <b>Signature:</b>
 

@@ -27,7 +27,7 @@ export interface IGridLayout extends ILayout<[number, number], LayoutBox>
 |  Method | Description |
 |  --- | --- |
 |  [colsForWidth(w)](./imgui.igridlayout.colsforwidth.md) | Returns the number of columns for given width. |
-|  [nest(cols, spans)](./imgui.igridlayout.nest.md) | Requests a <code>spans</code> sized cell from this layout (via <code>.next()</code>) and creates and returns a new child <code>GridLayout</code> for the returned box / grid cell. This child layout is configured to use <code>cols</code> columns and shares same <code>gap</code> as this (parent) layout. The configured row span only acts as initial minimum vertical space reseervation, but is allowed to grow and if needed will propagate the new space requirements to parent layouts.<!-- -->Note: this size child-parent size propagation ONLY works until the next cell is requested from any parent. IOW, child layouts MUST be completed/populated first before continuing with siblings/ancestors of this current layout.
+|  [nest(cols, spans)](./imgui.igridlayout.nest.md) | Requests a <code>spans</code> sized cell from this layout (via <code>.next()</code>) and creates and returns a new child [GridLayout](./imgui.gridlayout.md) for the returned box / grid cell. This child layout is configured to use <code>cols</code> columns and shares same <code>gap</code> as this (parent) layout. The configured row span only acts as initial minimum vertical space reseervation, but is allowed to grow and if needed will propagate the new space requirements to parent layouts.<!-- -->Note: this size child-parent size propagation ONLY works until the next cell is requested from any parent. IOW, child layouts MUST be completed/populated first before continuing with siblings/ancestors of this current layout.
 ```
 // single column layout (default config)
 const outer = gridLayout(null, 0, 0, 200, 1, 16, 4);
@@ -49,7 +49,7 @@ button(gui, outer, "bye",...);
 
 ```
  |
-|  [nextSquare()](./imgui.igridlayout.nextsquare.md) | Returns a squared <code>LayoutBox</code> based on this layout's column width. This box will consume <code>ceil(columnWidth / rowHeight)</code> rows, but the returned box height might be less to satisfy the square constraint. |
+|  [nextSquare()](./imgui.igridlayout.nextsquare.md) | Returns a squared [LayoutBox](./imgui.layoutbox.md) based on this layout's column width. This box will consume <code>ceil(columnWidth / rowHeight)</code> rows, but the returned box height might be less to satisfy the square constraint. |
 |  [rowsForHeight(h)](./imgui.igridlayout.rowsforheight.md) | Returns the number of rows for given height. |
 |  [spansForSize(size)](./imgui.igridlayout.spansforsize.md) | Calculates the required number of columns &amp; rows for the given size. |
 |  [spansForSize(w, h)](./imgui.igridlayout.spansforsize_1.md) |  |

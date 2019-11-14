@@ -4,9 +4,7 @@
 
 ## EventBus.(constructor)
 
-Creates a new event bus instance with given parent state, handler and effect definitions (all optional). If no state is given, automatically creates an `Atom` with empty state object.
-
-In addition to the user provided handlers &amp; effects, a number of built-ins are added automatically. See `addBuiltIns()`<!-- -->. User handlers can override built-ins.
+Creates a new event bus instance with given parent state, handler and effect definitions (all optional).
 
 <b>Signature:</b>
 
@@ -21,4 +19,10 @@ constructor(state?: IAtom<any> | null, handlers?: IObjectOf<EventDef>, effects?:
 |  state | <code>IAtom&lt;any&gt; &#124; null</code> |  |
 |  handlers | <code>IObjectOf&lt;EventDef&gt;</code> |  |
 |  effects | <code>IObjectOf&lt;EffectDef&gt;</code> |  |
+
+## Remarks
+
+If no state is given, automatically creates an [Atom](./atom.atom.md) with empty state object.
+
+In addition to the user provided handlers &amp; effects, a number of built-ins are added automatically. See [EventBus.addBuiltIns()](./interceptors.eventbus.addbuiltins.md)<!-- -->. User handlers can override built-ins.
 

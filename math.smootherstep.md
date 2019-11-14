@@ -4,7 +4,7 @@
 
 ## smootherStep variable
 
-Similar to `smoothStep()` but using different polynomial.
+Similar to [smoothStep](./math.smoothstep.md) but using different polynomial.
 
 <b>Signature:</b>
 

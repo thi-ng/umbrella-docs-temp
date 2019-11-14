@@ -4,7 +4,16 @@
 
 ## updater variable
 
-Similar to `setter()`<!-- -->, returns a function to update values at given `path` using provided update `fn`<!-- -->. The returned function accepts a single object / array and applies `fn` to current path value (incl. any additional/optional arguments passed) and uses result as new value. Does not modify original state (unless given function does so itself).
+Similar to [setter](./paths.setter.md)<!-- -->, returns a function to update values at given `path` using provided update `fn`<!-- -->. The returned function accepts a single object / array and applies `fn` to current path value (incl. any additional/optional arguments passed) and uses result as new value. Does not modify original state (unless given function does so itself).
+
+<b>Signature:</b>
+
+```typescript
+updater: (path: Path, fn: UpdateFn<any>) => (state: any, ...args: any[]) => any
+```
+
+## Example
+
 
 ```ts
 add = updater("a.b", (x, n) => x + n);
@@ -14,8 +23,3 @@ add({a: {b: 10}}, 13);
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-updater: (path: Path, fn: UpdateFn<any>) => (state: any, ...args: any[]) => any
-```

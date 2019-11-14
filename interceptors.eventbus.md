@@ -4,7 +4,7 @@
 
 ## EventBus class
 
-Stateful version of `StatelessEventBus`<!-- -->. Wraps an `IAtom` state container (Atom/Cursor) and provides additional pre-defined event handlers and side effects to manipulate wrapped state. Prefer this as the default implementation for most use cases.
+Stateful version of [StatelessEventBus](./interceptors.statelesseventbus.md)<!-- -->.
 
 <b>Signature:</b>
 
@@ -12,11 +12,15 @@ Stateful version of `StatelessEventBus`<!-- -->. Wraps an `IAtom` state containe
 export declare class EventBus extends StatelessEventBus implements IDeref<any>, IDispatch 
 ```
 
+## Remarks
+
+Wraps an [IAtom](./atom.iatom.md) state container (i.e. `Atom`<!-- -->/`Cursor`<!-- -->/`History`<!-- -->) and provides additional pre-defined event handlers and side effects to manipulate wrapped state. Prefer this as the default implementation for most use cases.
+
 ## Constructors
 
 |  Constructor | Modifiers | Description |
 |  --- | --- | --- |
-|  [(constructor)(state, handlers, effects)](./interceptors.eventbus._constructor_.md) |  | Creates a new event bus instance with given parent state, handler and effect definitions (all optional). If no state is given, automatically creates an <code>Atom</code> with empty state object.<!-- -->In addition to the user provided handlers &amp; effects, a number of built-ins are added automatically. See <code>addBuiltIns()</code>. User handlers can override built-ins. |
+|  [(constructor)(state, handlers, effects)](./interceptors.eventbus._constructor_.md) |  | Creates a new event bus instance with given parent state, handler and effect definitions (all optional). |
 
 ## Properties
 
@@ -28,12 +32,12 @@ export declare class EventBus extends StatelessEventBus implements IDeref<any>, 
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
-|  [addBuiltIns()](./interceptors.eventbus.addbuiltins.md) |  | Adds same built-in event &amp; side effect handlers as in <code>StatelessEventBus.addBuiltIns()</code> and the following additions:<!-- -->\#\#\# Handlers<!-- -->\#\#\#\# <code>EV_SET_VALUE</code>Resets state path to provided value. See <code>setIn()</code>.<!-- -->Example event definition:
+|  [addBuiltIns()](./interceptors.eventbus.addbuiltins.md) |  | Adds same built-in event &amp; side effect handlers as in <code>StatelessEventBus.addBuiltIns()</code> and the following additions:<!-- -->\#\#\# Handlers<!-- -->\#\#\#\# <code>EV_SET_VALUE</code>Resets state path to provided value. See [setIn](./paths.setin.md)<!-- -->.<!-- -->Example event definition:
 ```
 [EV_SET_VALUE, ["path.to.value", val]]
 
 ```
-\#\#\#\# <code>EV_UPDATE_VALUE</code>Updates a state path's value with provided function and optional extra arguments. See <code>updateIn()</code>.<!-- -->Example event definition:
+\#\#\#\# <code>EV_UPDATE_VALUE</code>Updates a state path's value with provided function and optional extra arguments. See [updateIn](./paths.updatein.md)<!-- -->.<!-- -->Example event definition:
 ```
 [EV_UPDATE_VALUE, ["path.to.value", (x, y) => x + y, 1]]
 
@@ -57,7 +61,7 @@ bus.dispatch([EV_UNDO, ["custom", ["ev-undo-success"], ["ev-undo-fail"]]]);
 ```
 \#\#\#\# <code>EV_REDO</code>Similar to <code>EV_UNDO</code>, but for redo actions.<!-- -->\#\#\# Side effects<!-- -->\#\#\#\# <code>FX_STATE</code>Resets state atom to provided value (only a single update per processing frame). |
 |  [deref()](./interceptors.eventbus.deref.md) |  | Returns value of internal state. Shorthand for: <code>bus.state.deref()</code> |
-|  [processQueue(ctx)](./interceptors.eventbus.processqueue.md) |  | Triggers processing of current event queue and returns <code>true</code> if the any of the processed events caused a state change.<!-- -->If an event handler triggers the <code>FX_DISPATCH_NOW</code> side effect, the new event will be added to the currently processed batch and therefore executed in the same frame. Also see <code>dispatchNow()</code>.<!-- -->If the optional <code>ctx</code> arg is provided it will be merged into the <code>InterceptorContext</code> object passed to each interceptor. Since the merged object is also used to collect triggered side effects, care must be taken that there're no key name clashes.<!-- -->In order to use the built-in <code>EV_UNDO</code>, <code>EV_REDO</code> events, users MUST provide a [History](./atom.history.md) (or compatible undo history instance) via the <code>ctx</code> arg, e.g.
+|  [processQueue(ctx)](./interceptors.eventbus.processqueue.md) |  | Triggers processing of current event queue and returns <code>true</code> if the any of the processed events caused a state change.<!-- -->If an event handler triggers the <code>FX_DISPATCH_NOW</code> side effect, the new event will be added to the currently processed batch and therefore executed in the same frame. Also see [dispatchNow](./interceptors.dispatchnow.md)<!-- -->.<!-- -->If the optional <code>ctx</code> arg is provided it will be merged into the [InterceptorContext](./interceptors.interceptorcontext.md) object passed to each interceptor. Since the merged object is also used to collect triggered side effects, care must be taken that there're no key name clashes.<!-- -->In order to use the built-in <code>EV_UNDO</code>, <code>EV_REDO</code> events, users MUST provide a [History](./atom.history.md) (or compatible undo history instance) via the <code>ctx</code> arg, e.g.
 ```
 bus.processQueue({ history });
 

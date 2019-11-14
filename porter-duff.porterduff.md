@@ -4,7 +4,7 @@
 
 ## porterDuff variable
 
-General Porter-Duff HOF operator for \*\*pre-multiplied\*\* RGBA. Use `porderDiffP` for applying pre &amp; post multiplication of input and output colors. The returned function takes 3 arguments:
+General Porter-Duff HOF operator for \*\*pre-multiplied\*\* RGBA. Use [porterDuffP](./porter-duff.porterduffp.md) for applying pre &amp; post multiplication of input and output colors. The returned function takes 3 arguments:
 
 - `out` color (if `null` or `undefined` writes to `dest`<!-- -->) - `src` color (background) - `dest` color (foreground)
 

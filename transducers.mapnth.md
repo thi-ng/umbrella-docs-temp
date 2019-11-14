@@ -4,7 +4,7 @@
 
 ## mapNth() function
 
-Transducer. Similar to `map`<!-- -->, but only transforms every `n`<!-- -->-th input value and passes intermediate values unchanged downstream. The optional `offset` arg can be used to adjust the number of inputs before the first transformation occurs (default 0).
+Transducer. Similar to , but only transforms every `n`<!-- -->-th input value and passes intermediate values unchanged downstream. The optional `offset` arg can be used to adjust the number of inputs before the first transformation occurs (default 0).
 
 ```
 [...mapNth(3, (x) => x * 10, range(1,10))]

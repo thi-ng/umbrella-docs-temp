@@ -4,11 +4,11 @@
 
 ## setAttrib variable
 
-Sets a single attribute on given element. If attrib name is NOT an event name (prefix: "on") and its value is a function, it is called with given `attribs` object (usually the full attrib object passed to `setAttribs`<!-- -->) and the function's return value is used as the actual attrib value.
+Sets a single attribute on given element. If attrib name is NOT an event name (prefix: "on") and its value is a function, it is called with given `attribs` object (usually the full attrib object passed to [setAttribs](./hdom.setattribs.md)<!-- -->) and the function's return value is used as the actual attrib value.
 
 Special rules apply for certain attributes:
 
-- "style": delegated to `setStyle()` - "value": delegated to `updateValueAttrib()` - attrib IDs starting with "on" are treated as event listeners
+- "style": delegated to [setStyle](./hdom.setstyle.md) - "value": delegated to [updateValueAttrib](./hdom.updatevalueattrib.md) - attrib IDs starting with "on" are treated as event listeners
 
 If the given (or computed) attrib value is `false` or `undefined` the attrib is removed from the element.
 

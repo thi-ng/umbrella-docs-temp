@@ -4,7 +4,7 @@
 
 ## IMGUI.setTheme() method
 
-Merges given theme settings with `DEFAULT_THEME` and resets theme stack.
+Merges given theme settings with [DEFAULT\_THEME](./imgui.default_theme.md) and resets theme stack.
 
 <b>Signature:</b>
 

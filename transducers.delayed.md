@@ -6,7 +6,7 @@
 
 Yields transducer which wraps incoming values in promises, which each resolve after specified delay time (in ms).
 
-\*\*Only to be used in async contexts and NOT with `transduce` directly.\*\*
+\*\*Only to be used in async contexts and NOT with  directly.\*\*
 
 <b>Signature:</b>
 

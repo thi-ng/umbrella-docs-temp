@@ -4,7 +4,7 @@
 
 ## coordToIndex variable
 
-Inline function. Reverse op to `indexToCoord()`<!-- -->. Not compatible with WebGL1.
+Inline function. Reverse op to [indexToCoord](./shader-ast-stdlib.indextocoord.md)<!-- -->. Not compatible with WebGL1.
 
 <b>Signature:</b>
 

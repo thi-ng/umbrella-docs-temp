@@ -4,7 +4,7 @@
 
 ## Watch type
 
-Observer function for `IWatch` implementations.
+Observer function for [IWatch](./api.iwatch.md) implementations.
 
 <b>Signature:</b>
 

@@ -4,7 +4,7 @@
 
 ## canvas2D variable
 
-Similar to `canvasWebGL`<!-- -->, but targets default 2D drawing context.
+Similar to [canvasWebGL](./hdom-components.canvaswebgl.md)<!-- -->, but targets default 2D drawing context.
 
 <b>Signature:</b>
 

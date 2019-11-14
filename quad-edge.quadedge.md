@@ -4,7 +4,7 @@
 
 ## QuadEdge type
 
-Type alias for a 4-tuple of `Edge` instances.
+Type alias for a 4-tuple of [Edge](./quad-edge.edge.md) instances.
 
 <b>Signature:</b>
 

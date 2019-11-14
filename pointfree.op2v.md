@@ -4,7 +4,7 @@
 
 ## op2v variable
 
-Similar to `op2`<!-- -->, but for array operators. Either `a` or `b` can be a non-array value, but not both. Creates new array of result values. The result will have the same length as the shortest arg (if `a` and `b` have different lengths).
+Similar to [map2](./pointfree.map2.md)<!-- -->, but for array operators. Either `a` or `b` can be a non-array value, but not both. Creates new array of result values. The result will have the same length as the shortest arg (if `a` and `b` have different lengths).
 
 - ( a b -- a ), if `a` is an array - ( a b -- b ), if `a` is not an array
 

@@ -4,9 +4,9 @@
 
 ## GLType enum
 
-WebGL numeric type constants. Use `GL2TYPE` to convert, if needed.
+WebGL numeric type constants. Use [GL2TYPE](./api.gl2type.md) to convert, if needed.
 
- Type  GL2TYPE  TYPE2GL
+[Type](./api.type.md) [GL2TYPE](./api.gl2type.md) [TYPE2GL](./api.type2gl.md)
 
 <b>Signature:</b>
 

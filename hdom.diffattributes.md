@@ -4,7 +4,7 @@
 
 ## diffAttributes variable
 
-Helper function for `diffTree()` to compute &amp; apply the difference between a node's `prev` and `curr` attributes.
+Helper function for [diffTree](./hdom.difftree.md) to compute &amp; apply the difference between a node's `prev` and `curr` attributes.
 
 <b>Signature:</b>
 

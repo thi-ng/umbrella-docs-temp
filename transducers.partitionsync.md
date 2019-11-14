@@ -10,6 +10,26 @@ By default, a new result is only produced once values from \*\*all\*\* given lab
 
 If the `mergeOnly` option is set to true (default: false), \*\*no\*\* synchronization (waiting) of inputs is applied and potentially partially populated tuple objects will be emitted for each received input value, however as with the default behavior, tuples will retain the most recent consumed value from other inputs.
 
+<b>Signature:</b>
+
+```typescript
+export declare function partitionSync<T>(keys: PropertyKey[] | Set<PropertyKey>, opts?: Partial<PartitionSyncOpts<T>>): Transducer<T, IObjectOf<T>>;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  keys | <code>PropertyKey[] &#124; Set&lt;PropertyKey&gt;</code> | allowed label set |
+|  opts | <code>Partial&lt;PartitionSyncOpts&lt;T&gt;&gt;</code> |  |
+
+<b>Returns:</b>
+
+`Transducer<T, IObjectOf<T>>`
+
+## Example
+
+
 ```ts
 src = [
   ["a", 1], ["a", 2], ["d", 100], ["b", 10],
@@ -30,21 +50,4 @@ In addition to the default mode of operation, i.e. waiting for new values from \
 By default, the last emitted tuple is allowed to be incomplete (in case the input closed). To only allow complete tuples, set the optional `all` arg to false.
 
 Note: If the `keys` set of allowed labels is modified externally, the tuple size will adjust accordingly (only if given as set, will not work if keys are provided as array).
-
-<b>Signature:</b>
-
-```typescript
-export declare function partitionSync<T>(keys: PropertyKey[] | Set<PropertyKey>, opts?: Partial<PartitionSyncOpts<T>>): Transducer<T, IObjectOf<T>>;
-```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  keys | <code>PropertyKey[] &#124; Set&lt;PropertyKey&gt;</code> | allowed label set |
-|  opts | <code>Partial&lt;PartitionSyncOpts&lt;T&gt;&gt;</code> |  |
-
-<b>Returns:</b>
-
-`Transducer<T, IObjectOf<T>>`
 

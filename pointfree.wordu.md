@@ -4,7 +4,7 @@
 
 ## wordU variable
 
-Like `word()`<!-- -->, but automatically calls `unwrap()` on result context to produced unwrapped value/tuple.
+Like [word](./pointfree.word.md)<!-- -->, but automatically calls [unwrap](./pointfree.unwrap.md) on result context to produced unwrapped value/tuple.
 
 \*\*Importatant:\*\* Words defined with this function CANNOT be used as part of a larger stack program, only for standalone use.
 

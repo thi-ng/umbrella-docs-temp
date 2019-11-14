@@ -4,7 +4,16 @@
 
 ## merge variable
 
-Returns a new `StreamMerge` instance, a subscription type consuming inputs from multiple inputs and passing received values on to any subscribers. Input streams can be added and removed dynamically. By default, `StreamMerge` calls `done()` when the last active input is done, but this behavior can be overridden via the `close` option.
+Returns a new [StreamMerge](./rstream.streammerge.md) instance, a subscription type consuming inputs from multiple inputs and passing received values on to any subscribers. Input streams can be added and removed dynamically. By default, [StreamMerge](./rstream.streammerge.md) calls `done()` when the last active input is done, but this behavior can be overridden via the `close` option.
+
+<b>Signature:</b>
+
+```typescript
+merge: <A, B>(opts?: Partial<StreamMergeOpts<A, B>> | undefined) => StreamMerge<A, B>
+```
+
+## Example 1
+
 
 ```ts
 merge({
@@ -28,6 +37,9 @@ merge({
 ```
 Use the `labeled()` transducer for each input to create a stream of labeled values and track their provenance:
 
+## Example 2
+
+
 ```ts
 merge({
     src: [
@@ -43,10 +55,5 @@ merge({
 // ["b", 30]
 
 ```
- StreamMergeOpts
+[StreamMergeOpts](./rstream.streammergeopts.md)
 
-<b>Signature:</b>
-
-```typescript
-merge: <A, B>(opts?: Partial<StreamMergeOpts<A, B>> | undefined) => StreamMerge<A, B>
-```

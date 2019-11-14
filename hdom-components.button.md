@@ -6,9 +6,9 @@
 
 Higher order function to create a new stateless button component, pre-configured via user supplied options. The returned component function accepts the following arguments:
 
-- hdom context object (unused) - partial `ButtonArgs` object (extra attribs, onclick, disabled) - body content (varargs)
+- hdom context object (unused) - partial [ButtonArgs](./hdom-components.buttonargs.md) object (extra attribs, onclick, disabled) - body content (varargs)
 
-Any `attribs` provided as arg via `ButtonArgs` are merged with the default options provided to the HOF. The `disabled` arg decides which button version to create. The button can have any number of body elements (e.g. icon and label), given as varargs.
+Any `attribs` provided as arg via [ButtonArgs](./hdom-components.buttonargs.md) are merged with the default options provided to the HOF. The `disabled` arg decides which button version to create. The button can have any number of body elements (e.g. icon and label), given as varargs.
 
 <b>Signature:</b>
 

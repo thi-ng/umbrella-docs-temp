@@ -4,7 +4,7 @@
 
 ## streamSort() function
 
-Transducer. Similar to `partitionSort()`<!-- -->, however uses proper sliding window and insertion sort instead of fully sorting window as done by `partitionSort()`<!-- -->.
+Transducer. Similar to , however uses proper sliding window and insertion sort instead of fully sorting window as done by .
 
 ```
 [...streamSort(4, [5,9,2,6,4,1,3,8,7,0])]

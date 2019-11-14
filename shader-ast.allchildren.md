@@ -4,9 +4,9 @@
 
 ## allChildren variable
 
-Helper function for `walk()`<!-- -->. Returns an array of all child nodes for a given term (if any).
+Helper function for [walk](./shader-ast.walk.md)<!-- -->. Returns an array of all child nodes for a given term (if any).
 
- scopedChildren
+[scopedChildren](./shader-ast.scopedchildren.md)
 
 <b>Signature:</b>
 

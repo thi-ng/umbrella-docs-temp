@@ -6,19 +6,26 @@
 
 Higher-order interceptor. Returns new interceptor to set state value at provided path. This allows for dedicated events to set state values more concisely, e.g. given this event definition:
 
+<b>Signature:</b>
+
+```typescript
+valueSetter: <T>(path: Path, tx?: Fn<T, T> | undefined) => InterceptorFn
+```
+
+## Example 1
+
+
 ```ts
 setFoo: valueSetter("foo.bar")
 
 ```
 ...the `setFoo` event then can be triggered like so to update the state value at `foo.bar`<!-- -->:
 
+## Example 2
+
+
 ```ts
 bus.dispatch(["setFoo", 23])
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-valueSetter: <T>(path: Path, tx?: Fn<T, T> | undefined) => InterceptorFn
-```

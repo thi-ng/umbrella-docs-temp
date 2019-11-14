@@ -4,7 +4,7 @@
 
 ## History.reset() method
 
-`IAtom.reset()` implementation. Delegates to wrapped atom/cursor, but too applies `changed` predicate to determine if there was a change and if the previous value should be recorded.
+`IReset.reset()` implementation. Delegates to wrapped atom/cursor, but too applies `changed` predicate to determine if there was a change and if the previous value should be recorded.
 
 <b>Signature:</b>
 

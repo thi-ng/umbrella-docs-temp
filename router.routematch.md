@@ -4,7 +4,7 @@
 
 ## RouteMatch interface
 
-Result object returned by a routing operation and event value for `EVENT_ROUTE_CHANGE`<!-- -->. Contains the matched route ID and any route params.
+Result object returned by a routing operation and event value for [EVENT\_ROUTE\_CHANGED](./router.event_route_changed.md)<!-- -->. Contains the matched route ID and any route params.
 
 <b>Signature:</b>
 

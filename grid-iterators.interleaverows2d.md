@@ -4,11 +4,11 @@
 
 ## interleaveRows2d() function
 
-Similar to `interleaveColumns2d`<!-- -->, but yields 2D grid coordinates in the order of interleaved rows with configurable `step` size (default: 2). I.e. returns rows in this order:
+Similar to [interleaveColumns2d()](./grid-iterators.interleavecolumns2d.md)<!-- -->, but yields 2D grid coordinates in the order of interleaved rows with configurable `step` size (default: 2). I.e. returns rows in this order:
 
 - 0, step, 2 \* step, 3 \* step... - 1, 2 \* step + 1, 3 \* step + 1... - etc.
 
- interleaveColumns2d
+[interleaveColumns2d()](./grid-iterators.interleavecolumns2d.md)
 
 <b>Signature:</b>
 

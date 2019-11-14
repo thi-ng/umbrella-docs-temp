@@ -4,7 +4,7 @@
 
 ## foldl variable
 
-Convenience wrapper for `mapl` to provide an alternative stack layout for reduction purposes:
+Convenience wrapper for [mapl](./pointfree.mapl.md) to provide an alternative stack layout for reduction purposes:
 
 ( arr q init -- reduction )
 

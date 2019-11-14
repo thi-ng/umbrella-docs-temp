@@ -4,7 +4,7 @@
 
 ## closestPrimaryHue variable
 
-Returns the `Hue` constant of the closest primary or secondary hue.
+Returns the [Hue](./color.hue.md) constant of the closest primary or secondary hue.
 
 <b>Signature:</b>
 

@@ -6,6 +6,15 @@
 
 Re-orders byte lanes in given order (MSB).
 
+<b>Signature:</b>
+
+```typescript
+swizzle8: (x: number, a: Lane8, b: Lane8, c: Lane8, d: Lane8) => number
+```
+
+## Example
+
+
 ```ts
 swizzle(0x12345678, 3, 2, 1, 0) // 0x78563412
 swizzle(0x12345678, 1, 0, 3, 2) // 0x34127856
@@ -13,8 +22,3 @@ swizzle(0x12345678, 2, 2, 0, 0) // 0x56561212
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-swizzle8: (x: number, a: Lane8, b: Lane8, c: Lane8, d: Lane8) => number
-```

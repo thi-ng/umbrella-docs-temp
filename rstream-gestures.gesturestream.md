@@ -16,14 +16,18 @@ The `zoom` value is always present, but is only updated with wheel events. The v
 
 Note: If using `preventDefault` and attaching the event stream to `document.body`<!-- -->, the following event listener options SHOULD be used:
 
+<b>Signature:</b>
+
+```typescript
+gestureStream: (el: HTMLElement, _opts?: Partial<GestureStreamOpts> | undefined) => StreamMerge<any, GestureEvent>
+```
+
+## Example
+
+
 ```ts
 eventOpts: { passive: false }
 
 ```
 [https://www.chromestatus.com/features/5093566007214080](https://www.chromestatus.com/features/5093566007214080)
 
-<b>Signature:</b>
-
-```typescript
-gestureStream: (el: HTMLElement, _opts?: Partial<GestureStreamOpts> | undefined) => StreamMerge<any, GestureEvent>
-```

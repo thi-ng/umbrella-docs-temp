@@ -6,7 +6,7 @@
 
 Wrapper for strided, arbitrary length vectors. Wraps given buffer in ES6 `Proxy` with custom property getters/setters and implements the following interfaces:
 
-- `Iterable` (ES6) - `ICopy` - `IEmpty` - `IEqualsDelta` - `IVector` - `Object.toString()`
+- `Iterable` (ES6) - [ICopy](./api.icopy.md) - [IEmpty](./api.iempty.md) - [IEqualsDelta](./api.iequalsdelta.md) - [IVector](./vectors.ivector.md) - `Object.toString()`
 
 Read/write access for the following properties:
 

@@ -4,7 +4,7 @@
 
 ## weightedRandom variable
 
-Returns a no-arg function which produces a random choice of given weighted `choices` and using given `IRandom` instance (default [SYSTEM](./random.system.md)<!-- -->. If `weights` are given, it must be the same size as `choices`<!-- -->. If omitted, each choice will have same probability.
+Returns a no-arg function which produces a random choice of given weighted `choices` and using given [IRandom](./random.irandom.md) instance (default [SYSTEM](./random.system.md)<!-- -->. If `weights` are given, it must be the same size as `choices`<!-- -->. If omitted, each choice will have same probability.
 
 [https://www.electricmonk.nl/log/2009/12/23/weighted-random-distribution/](https://www.electricmonk.nl/log/2009/12/23/weighted-random-distribution/)
 

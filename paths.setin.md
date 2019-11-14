@@ -6,14 +6,18 @@
 
 Immediate use setter, i.e. same as: `setter(path)(state, val)`<!-- -->.
 
+<b>Signature:</b>
+
+```typescript
+setIn: (state: any, path: Path, val: any) => any
+```
+
+## Example
+
+
 ```ts
 setIn({}, "a.b.c", 23);
 // {a: {b: {c: 23}}}
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-setIn: (state: any, path: Path, val: any) => any
-```

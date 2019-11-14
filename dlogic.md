@@ -26,8 +26,8 @@
 |  [nand](./dlogic.nand.md) | [https://en.wikipedia.org/wiki/NAND\_gate](https://en.wikipedia.org/wiki/NAND_gate)<!-- -->\| A \| B \| Q \| \|\-\-\-\|\-\-\-\|\-\-\-\| \| 0 \| 0 \| 1 \| \| 0 \| 1 \| 1 \| \| 1 \| 0 \| 1 \| \| 1 \| 1 \| 0 \| |
 |  [nor](./dlogic.nor.md) | [https://en.wikipedia.org/wiki/NOR\_gate](https://en.wikipedia.org/wiki/NOR_gate)<!-- -->\| A \| B \| Q \| \|\-\-\-\|\-\-\-\|\-\-\-\| \| 0 \| 0 \| 1 \| \| 0 \| 1 \| 0 \| \| 1 \| 0 \| 0 \| \| 1 \| 1 \| 0 \| |
 |  [not](./dlogic.not.md) | [https://en.wikipedia.org/wiki/Inverter\_(logic\_gate)](https://en.wikipedia.org/wiki/Inverter_(logic_gate))<!-- -->\| X \| Q \| \|\-\-\-\|\-\-\-\| \| 0 \| 1 \| \| 1 \| 0 \| |
-|  [oai21](./dlogic.oai21.md) | Complement logic of <code>aoi21</code>.<code>q = nand(a, or(b, c))</code> |
-|  [oai22](./dlogic.oai22.md) | Complement logic of <code>aoi22</code>.<code>q = nand(or(a, b), or(c, d))</code> |
+|  [oai21](./dlogic.oai21.md) | Complement logic of [aoi21](./dlogic.aoi21.md)<!-- -->.<code>q = nand(a, or(b, c))</code> |
+|  [oai22](./dlogic.oai22.md) | Complement logic of [aoi22](./dlogic.aoi22.md)<!-- -->.<code>q = nand(or(a, b), or(c, d))</code> |
 |  [or](./dlogic.or.md) | [https://en.wikipedia.org/wiki/OR\_gate](https://en.wikipedia.org/wiki/OR_gate)<!-- -->\| A \| B \| Q \| \|\-\-\-\|\-\-\-\|\-\-\-\| \| 0 \| 0 \| 0 \| \| 0 \| 1 \| 1 \| \| 1 \| 0 \| 1 \| \| 1 \| 1 \| 1 \| |
 |  [rca](./dlogic.rca.md) | [https://en.wikipedia.org/wiki/Adder\_(electronics)\#Ripple-carry\_adder](https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder) |
 |  [xnor](./dlogic.xnor.md) | [https://en.wikipedia.org/wiki/XNOR\_gate](https://en.wikipedia.org/wiki/XNOR_gate)<!-- -->\| A \| B \| Q \| \|\-\-\-\|\-\-\-\|\-\-\-\| \| 0 \| 0 \| 1 \| \| 0 \| 1 \| 0 \| \| 1 \| 0 \| 0 \| \| 1 \| 1 \| 1 \| |

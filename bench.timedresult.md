@@ -4,7 +4,7 @@
 
 ## timedResult variable
 
-Similar to `timed()`<!-- -->, but produces no output and instead returns tuple of `fn`<!-- -->'s result and the time measurement.
+Similar to [timed](./bench.timed.md)<!-- -->, but produces no output and instead returns tuple of `fn`<!-- -->'s result and the time measurement.
 
 <b>Signature:</b>
 

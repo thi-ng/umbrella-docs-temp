@@ -6,7 +6,7 @@
 
 Attempts to convert a single color attrib value.
 
- fattribs
+[fattribs](./hiccup-svg.fattribs.md)
 
 <b>Signature:</b>
 

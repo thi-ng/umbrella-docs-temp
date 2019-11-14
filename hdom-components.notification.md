@@ -6,9 +6,9 @@
 
 Higher order function to create a new stateless notification component, pre-configured via user supplied options. The returned component function accepts the following arguments:
 
-- hdom context object (unused) - partial `NotificationArgs` object (extra attribs, onclose handler) - body content
+- hdom context object (unused) - partial [NotificationArgs](./hdom-components.notificationargs.md) object (extra attribs, onclose handler) - body content
 
-Any `attribs` provided as arg via `NotificationArgs` are merged with the default options provided to the HOF. If the notification body consists of multiple elements then they will need to be wrapped in a container element.
+Any `attribs` provided as arg via [NotificationArgs](./hdom-components.notificationargs.md) are merged with the default options provided to the HOF. If the notification body consists of multiple elements then they will need to be wrapped in a container element.
 
 <b>Signature:</b>
 

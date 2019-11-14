@@ -16,7 +16,7 @@ export interface MultiFnBase<I>
 |  --- | --- |
 |  [add(id, impl)](./defmulti.multifnbase.add.md) | Registers implementation for dispatch value <code>id</code>. Returns true, if successful. Returns false if an implementation already exists (and does nothing in this case). |
 |  [addAll(impls)](./defmulti.multifnbase.addall.md) | Takes an object of dispatch values and their implementations and calls <code>.add()</code> for each KV pair. Returns true, if all impls were added successfully. Note: Only numbers or strings are accepted as dispatch values here. |
-|  [ancestors(id)](./defmulti.multifnbase.ancestors.md) | Similar to <code>parents()</code>, but includes all transitive parent dispatch values for given dispatch value <code>id</code>. |
+|  [ancestors(id)](./defmulti.multifnbase.ancestors.md) | Similar to [MultiFnBase.parents()](./defmulti.multifnbase.parents.md)<!-- -->, but includes all transitive parent dispatch values for given dispatch value <code>id</code>. |
 |  [callable(args)](./defmulti.multifnbase.callable.md) | Returns true, if the function is callable (has a valid implementation) for given arguments. |
 |  [impls()](./defmulti.multifnbase.impls.md) | Returns a set of all registered dispatch values. |
 |  [isa(id, parent)](./defmulti.multifnbase.isa.md) | Updates dispatch hierarchy by declaring dispatch value <code>id</code> to delegate to <code>parent</code>'s implementation. I.e. in terms of dispatch logic, <code>id</code> is considered the same as \`<!-- -->parent. |

@@ -6,6 +6,15 @@
 
 Takes an `ArrayBuffer` and creates a number of typed array vector views of `type` with given `size` (number of elements per vector) and spacing. `byteOffset` defines the start offset for the first vector and `byteStride` the number of bytes between resulting vectors (defaults to `size * SIZEOF[type]`<!-- -->). It's user's responsibility to ensure these two values are compatible with the chosen array type (i.e. for `Type.F32`<!-- -->, these MUST be multiples of 4).
 
+<b>Signature:</b>
+
+```typescript
+mapBuffer: <T extends Type>(type: T, buf: ArrayBuffer | SharedArrayBuffer, num: number, size: number, byteOffset?: number, byteStride?: number) => TypedArrayTypeMap[T][]
+```
+
+## Example
+
+
 ```ts
 mapBuffer(Type.F32, new ArrayBuffer(32), 4, 2)
 // [
@@ -17,8 +26,3 @@ mapBuffer(Type.F32, new ArrayBuffer(32), 4, 2)
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-mapBuffer: <T extends Type>(type: T, buf: ArrayBuffer | SharedArrayBuffer, num: number, size: number, byteOffset?: number, byteStride?: number) => TypedArrayTypeMap[T][]
-```

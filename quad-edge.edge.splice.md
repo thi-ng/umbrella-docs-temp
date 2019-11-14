@@ -4,7 +4,7 @@
 
 ## Edge.splice() method
 
-Modifies the edge rings around the origins of this edge and `e`<!-- -->, as well as, independently, the edge rings of both edges' left dual vertex. In each case, if the rings are separate, this operator will join them and if both rings are the same ring, they will be split / separated. Therefore, `splice()` is it's own reverse operator and the only operator needed to edit quad edge topologies.
+Modifies the edge rings around the origins of this edge and `e`<!-- -->, as well as, independently, the edge rings of both edges' left dual vertex. In each case, if the rings are separate, this operator will join them and if both rings are the same ring, they will be split / separated. Therefore, splice<!-- -->\` is it's own reverse operator and the only operator needed to edit quad edge topologies.
 
 <b>Signature:</b>
 

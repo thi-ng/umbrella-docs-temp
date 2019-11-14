@@ -6,7 +6,7 @@
 
 Syntax sugar for `sign(signedArea2(a, b, c))`<!-- -->.
 
- thi.ng/math/sign  signedArea2
+- [sign](./math.sign.md) - [signedArea2](./vectors.signedarea2.md)
 
 <b>Signature:</b>
 

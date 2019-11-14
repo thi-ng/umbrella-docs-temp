@@ -6,6 +6,15 @@
 
 Computes the nD bounds of given vectors. `vmin` should be initialized to `+∞` and `vmax` to `-∞` (e.g. use copies of `MIN*` / `MAX*` constants defined in thi.ng/vectors).
 
+<b>Signature:</b>
+
+```typescript
+bounds: (pts: readonly Vec[], vmin: Vec, vmax: Vec) => [Vec, Vec]
+```
+
+## Example
+
+
 ```ts
 points = [[-1,-2], [5,-3], [0,4]];
 
@@ -15,8 +24,3 @@ bounds(points, [...MAX2], [...MIN2])
 ```
 Returns 2-tuple of modified `[vmin, vmax]`<!-- -->.
 
-<b>Signature:</b>
-
-```typescript
-bounds: (pts: readonly Vec[], vmin: Vec, vmax: Vec) => [Vec, Vec]
-```

@@ -4,7 +4,7 @@
 
 ## JSTarget.compile() method
 
-Compiles given AST to JavaScript, using optional `env` as backend for various operators / builtins. If `env` is not given the bundled `JS_DEFAULT_ENV` is used (based on  and  packages).
+Compiles given AST to JavaScript, using optional `env` as backend for various operators / builtins. If `env` is not given the bundled [JS\_DEFAULT\_ENV](./shader-ast-js.js_default_env.md) is used (based on  and  packages).
 
 Any functions defined in the given AST will be exported using their defined name via the returned object.
 

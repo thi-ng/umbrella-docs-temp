@@ -4,7 +4,7 @@
 
 ## GL2TYPE variable
 
-Conversion from `GLType` to `Type` enums.
+Conversion from [GLType](./api.gltype.md) to [Type](./api.type.md) enums.
 
 <b>Signature:</b>
 

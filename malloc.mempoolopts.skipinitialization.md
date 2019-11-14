@@ -4,7 +4,7 @@
 
 ## MemPoolOpts.skipInitialization property
 
-Only needed when sharing the underlying ArrayBuffer. If true, the `MemPool` constructor will NOT initialize its internal state and assume the underlying ArrayBuffer has already been initialized by another `MemPool` instance. If this option is used, `buf` MUST be given.
+Only needed when sharing the underlying ArrayBuffer. If true, the [MemPool](./malloc.mempool.md) constructor will NOT initialize its internal state and assume the underlying ArrayBuffer has already been initialized by another [MemPool](./malloc.mempool.md) instance. If this option is used, `buf` MUST be given.
 
 <b>Signature:</b>
 

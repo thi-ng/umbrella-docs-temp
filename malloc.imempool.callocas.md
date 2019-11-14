@@ -4,7 +4,7 @@
 
 ## IMemPool.callocAs() method
 
-Similar to `mallocAs()`<!-- -->, but if allocation was successful also clears the allocated block w/ `fill` value (default: 0).
+Similar to [IMemPool.mallocAs()](./malloc.imempool.mallocas.md)<!-- -->, but if allocation was successful also clears the allocated block w/ `fill` value (default: 0).
 
 <b>Signature:</b>
 

@@ -6,8 +6,6 @@
 
 Creates a new event bus instance with given handler and effect definitions (all optional).
 
-In addition to the user provided handlers &amp; effects, a number of built-ins are added automatically. See `addBuiltIns()`<!-- -->. User handlers can override built-ins.
-
 <b>Signature:</b>
 
 ```typescript
@@ -20,4 +18,8 @@ constructor(handlers?: IObjectOf<EventDef>, effects?: IObjectOf<EffectDef>);
 |  --- | --- | --- |
 |  handlers | <code>IObjectOf&lt;EventDef&gt;</code> |  |
 |  effects | <code>IObjectOf&lt;EffectDef&gt;</code> |  |
+
+## Remarks
+
+In addition to the user provided handlers &amp; effects, a number of built-ins are added automatically. See [StatelessEventBus.addBuiltIns()](./interceptors.statelesseventbus.addbuiltins.md)<!-- -->. User handlers can override built-ins.
 

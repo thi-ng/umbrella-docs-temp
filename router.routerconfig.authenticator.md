@@ -4,7 +4,7 @@
 
 ## RouterConfig.authenticator property
 
-Optional route authentication function. See `RouteAuthenticator` for further details. If no authenticator is given, all matched routes will always succeed, regardless if a rule's `auth` flag is enabled or not.
+Optional route authentication function. See [RouteAuthenticator](./router.routeauthenticator.md) for further details. If no authenticator is given, all matched routes will always succeed, regardless if a rule's `auth` flag is enabled or not.
 
 <b>Signature:</b>
 

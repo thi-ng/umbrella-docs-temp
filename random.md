@@ -26,18 +26,9 @@
 
 |  Variable | Description |
 |  --- | --- |
-|  [randomID](./random.randomid.md) | Generates and returns a random string of <code>len</code> characters (default 4), plus optional given <code>prefix</code> and using only provided <code>syms</code> characters (default lowercase a-z).
-```ts
-randomID()
-"qgdt"
-
-randomID(8, "id-", "0123456789ABCDEF")
-"id-94EF6E1A"
-
-```
- |
+|  [randomID](./random.randomid.md) | Generates and returns a random string of <code>len</code> characters (default 4), plus optional given <code>prefix</code> and using only provided <code>syms</code> characters (default lowercase a-z). |
 |  [SYSTEM](./random.system.md) |  |
-|  [weightedRandom](./random.weightedrandom.md) | Returns a no-arg function which produces a random choice of given weighted <code>choices</code> and using given <code>IRandom</code> instance (default [SYSTEM](./random.system.md)<!-- -->. If <code>weights</code> are given, it must be the same size as <code>choices</code>. If omitted, each choice will have same probability.[https://www.electricmonk.nl/log/2009/12/23/weighted-random-distribution/](https://www.electricmonk.nl/log/2009/12/23/weighted-random-distribution/) |
+|  [weightedRandom](./random.weightedrandom.md) | Returns a no-arg function which produces a random choice of given weighted <code>choices</code> and using given [IRandom](./random.irandom.md) instance (default [SYSTEM](./random.system.md)<!-- -->. If <code>weights</code> are given, it must be the same size as <code>choices</code>. If omitted, each choice will have same probability.[https://www.electricmonk.nl/log/2009/12/23/weighted-random-distribution/](https://www.electricmonk.nl/log/2009/12/23/weighted-random-distribution/) |
 
 ## Type Aliases
 

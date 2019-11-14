@@ -4,7 +4,7 @@
 
 ## converge() function
 
-Transducer which for each input `x` (apart from the very first one) applies given predicate `pred` to previous input and `x`<!-- -->. Only passes values downstream as long as the predicate returns a falsy result. Once the result is truthy, `x` is considered converged and the transformation is terminated (by emitting a `reduced()` value).
+Transducer which for each input `x` (apart from the very first one) applies given predicate `pred` to previous input and `x`<!-- -->. Only passes values downstream as long as the predicate returns a falsy result. Once the result is truthy, `x` is considered converged and the transformation is terminated (by emitting a [reduced](./transducers.reduced.md) value).
 
 This can be used to limit processing of inputs only as long as there're noticeable changes (according to the predicate) and then stop the transducer pipeline once results have converged.
 
@@ -19,7 +19,6 @@ This can be used to limit processing of inputs only as long as there're noticeab
 // [ 0, 0.5, 0.75, 0.875, 0.9375, 0.96875, 0.984375, 0.9921875 ]
 
 ```
- takeWhile
 
 <b>Signature:</b>
 

@@ -6,6 +6,15 @@
 
 Takes an array of keys and target object, then pops &amp; binds deeper stack values to respective keys in object. Pushes result object back on stack at the end. Throws error if there're less stack values than keys in given array.
 
+<b>Signature:</b>
+
+```typescript
+bindkeys: (ctx: StackContext) => StackContext
+```
+
+## Example
+
+
 ```ts
 runU([1,2,3, ["a","b","c"], {}, bindkeys])
 // { c: 3, b: 2, a: 1 }
@@ -13,8 +22,3 @@ runU([1,2,3, ["a","b","c"], {}, bindkeys])
 ```
 (v1 v2 .. \[k1 k2 ..\] obj -- obj )
 
-<b>Signature:</b>
-
-```typescript
-bindkeys: (ctx: StackContext) => StackContext
-```

@@ -4,9 +4,18 @@
 
 ## snapshot variable
 
-Higher-order interceptor. Returns interceptor which calls `ctx[id].record()`<!-- -->, where `ctx` is the currently active `InterceptorContext` passed to all event handlers and `ctx[id]` is assumed to be a [History](./atom.history.md) instance, passed to `processQueue()`<!-- -->. The default ID for the history instance is `"history"`<!-- -->.
+Higher-order interceptor. Returns interceptor which calls `ctx[id].record()`<!-- -->, where `ctx` is the currently active [InterceptorContext](./interceptors.interceptorcontext.md) passed to all event handlers and `ctx[id]` is assumed to be a [History](./atom.history.md) instance, passed to [EventBus.processQueue()](./interceptors.eventbus.processqueue.md)<!-- -->. The default ID for the history instance is `"history"`<!-- -->.
 
 Example usage:
+
+<b>Signature:</b>
+
+```typescript
+snapshot: (id?: string) => InterceptorFn
+```
+
+## Example
+
 
 ```ts
 state = new Atom({});
@@ -27,8 +36,3 @@ bus.processQueue({ history });
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-snapshot: (id?: string) => InterceptorFn
-```

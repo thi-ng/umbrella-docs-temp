@@ -10,6 +10,15 @@ The relations object has dispatch values (parents) as keys and arrays of multi-m
 
 The remaining implementations are associated with their related multi-method and the given `type` dispatch value.
 
+<b>Signature:</b>
+
+```typescript
+implementations: (type: string | number | symbol, rels: IObjectOf<MultiFn<any>[]>, ...impls: (MultiFn<any> | import("@thi.ng/api").FnAny<any>)[]) => void
+```
+
+## Example
+
+
 ```ts
 foo = defmulti((x) => x.id);
 bar = defmulti((x) => x.id);
@@ -48,8 +57,3 @@ baz.impls(); // Set { "c", "a", "b" }
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-implementations: (type: string | number | symbol, rels: IObjectOf<MultiFn<any>[]>, ...impls: (MultiFn<any> | import("@thi.ng/api").FnAny<any>)[]) => void
-```

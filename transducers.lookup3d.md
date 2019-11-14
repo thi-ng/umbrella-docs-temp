@@ -4,7 +4,7 @@
 
 ## lookup3d variable
 
-Same as `lookup2d()`<!-- -->, but for 3D data. The index ordering of the source data MUST be in Z, Y, X order (i.e. a stack of row major 2D slices). No bounds checks are done.
+Same as [lookup2d](./transducers.lookup2d.md)<!-- -->, but for 3D data. The index ordering of the source data MUST be in Z, Y, X order (i.e. a stack of row major 2D slices). No bounds checks are done.
 
 <b>Signature:</b>
 

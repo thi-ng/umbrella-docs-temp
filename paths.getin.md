@@ -6,14 +6,18 @@
 
 Immediate use getter, i.e. same as: `getter(path)(state)`<!-- -->.
 
+<b>Signature:</b>
+
+```typescript
+getIn: (state: any, path: Path) => any
+```
+
+## Example
+
+
 ```ts
 getIn({a: {b: {c: 23}}}, "a.b.c");
 // 23
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-getIn: (state: any, path: Path) => any
-```

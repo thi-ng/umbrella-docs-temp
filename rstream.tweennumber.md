@@ -4,7 +4,7 @@
 
 ## tweenNumber variable
 
-Convenience version of `tween` for its most common use case, tweening of numeric streams.
+Convenience version of [tween](./rstream.tween.md) for its most common use case, tweening of numeric streams.
 
 <b>Signature:</b>
 

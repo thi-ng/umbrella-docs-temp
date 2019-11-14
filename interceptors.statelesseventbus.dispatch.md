@@ -4,7 +4,7 @@
 
 ## StatelessEventBus.dispatch() method
 
-Adds given events to event queue to be processed by `processQueue()` later on. It's the user's responsibility to call that latter function repeatedly in a timely manner, preferably via `requestAnimationFrame()` or similar.
+Adds given events to event queue to be processed by [StatelessEventBus.processQueue()](./interceptors.statelesseventbus.processqueue.md) later on.
 
 <b>Signature:</b>
 
@@ -21,4 +21,8 @@ dispatch(...e: Event[]): void;
 <b>Returns:</b>
 
 `void`
+
+## Remarks
+
+It's the user's responsibility to call that latter function repeatedly in a timely manner, preferably via `requestAnimationFrame()` or similar.
 

@@ -47,9 +47,9 @@ export declare class Edge<T>
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
 |  [connect(e)](./quad-edge.edge.connect.md) |  |  |
-|  [create(src, dest)](./quad-edge.edge.create.md) | <code>static</code> | Main edge / quadedge factory function. Use this in preference of direct invocation of the <code>Edge</code> constructor.<!-- -->Creates new <code>QuadEdge</code> with 4 child edges and returns the first child/primary edge. If <code>src</code> and <code>dest</code> are not <code>null</code>ish, the given args will be associated with that new edge as end points. |
+|  [create(src, dest)](./quad-edge.edge.create.md) | <code>static</code> | Main edge / quadedge factory function. Use this in preference of direct invocation of the [Edge](./quad-edge.edge.md) constructor.<!-- -->Creates new [QuadEdge](./quad-edge.quadedge.md) with 4 child edges and returns the first child/primary edge. If <code>src</code> and <code>dest</code> are not <code>null</code>ish, the given args will be associated with that new edge as end points. |
 |  [remove()](./quad-edge.edge.remove.md) |  |  |
 |  [setEnds(o, d)](./quad-edge.edge.setends.md) |  | Sets the origin &amp; dest vertices of this edge (in other words, the origins of this edge and <code>this.sym</code>). |
-|  [splice(e)](./quad-edge.edge.splice.md) |  | Modifies the edge rings around the origins of this edge and <code>e</code>, as well as, independently, the edge rings of both edges' left dual vertex. In each case, if the rings are separate, this operator will join them and if both rings are the same ring, they will be split / separated. Therefore, <code>splice()</code> is it's own reverse operator and the only operator needed to edit quad edge topologies. |
+|  [splice(e)](./quad-edge.edge.splice.md) |  | Modifies the edge rings around the origins of this edge and <code>e</code>, as well as, independently, the edge rings of both edges' left dual vertex. In each case, if the rings are separate, this operator will join them and if both rings are the same ring, they will be split / separated. Therefore, splice<!-- -->\` is it's own reverse operator and the only operator needed to edit quad edge topologies. |
 |  [swap()](./quad-edge.edge.swap.md) |  |  |
 

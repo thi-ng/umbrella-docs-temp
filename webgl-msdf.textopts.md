@@ -20,5 +20,5 @@ export interface TextOpts
 |  [dirY](./webgl-msdf.textopts.diry.md) | <code>1 &#124; -1</code> | Y direction. Default: 1 |
 |  [leading](./webgl-msdf.textopts.leading.md) | <code>number</code> | Leading (line height multiplier). Default: 1.0 |
 |  [spacing](./webgl-msdf.textopts.spacing.md) | <code>number</code> | Horizontal spacing multiplier. Default: 1.0 |
-|  [useColor](./webgl-msdf.textopts.usecolor.md) | <code>boolean</code> | If true, <code>text()</code> will produce color attributes. |
+|  [useColor](./webgl-msdf.textopts.usecolor.md) | <code>boolean</code> | If true, [text](./webgl-msdf.text.md) will produce color attributes. |
 

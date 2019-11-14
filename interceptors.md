@@ -8,8 +8,8 @@
 
 |  Class | Description |
 |  --- | --- |
-|  [EventBus](./interceptors.eventbus.md) | Stateful version of <code>StatelessEventBus</code>. Wraps an <code>IAtom</code> state container (Atom/Cursor) and provides additional pre-defined event handlers and side effects to manipulate wrapped state. Prefer this as the default implementation for most use cases. |
-|  [StatelessEventBus](./interceptors.statelesseventbus.md) | Batched event processor for using composable interceptors for event handling and side effects to execute the result of handled events.<!-- -->Events processed by this class are simple 2-element tuples/arrays of this form: <code>[&quot;event-id&quot;, payload?]</code>, where the <code>payload</code> is optional and can be of any type.<!-- -->Events are processed by registered handlers which transform each event into a number of side effect descriptions to be executed later. This separation ensures event handlers themselves are pure functions and leads to more efficient reuse of side effecting operations. The pure data nature until the last stage of processing (the application side effects) too means that event flow can be much easier inspected and debugged.<!-- -->In this model a single event handler itself is an array of objects with <code>pre</code> and/or <code>post</code> keys and functions attached to each key. These functions are called interceptors, since each intercepts the processing of an event and can contribute their own side effects. Each event's interceptor chain is processed bi-directionally (<code>pre</code> in forward, <code>post</code> in reverse order) and the effects returned from each interceptor are merged/collected. The outcome of this setup is a more aspect-oriented, composable approach to event handling and allows to inject common, re-usable behaviors for multiple event types (logging, validation, undo/redo triggers etc.).<!-- -->Side effects are only processed after all event handlers have run. Furthermore, their order of execution can be configured with optional priorities.<!-- -->See for further details:<!-- -->- <code>processQueue()</code> - <code>processEvent()</code> - <code>processEffects()</code> - <code>mergeEffects()</code>The overall approach of this type of event processing is heavily based on the pattern initially pioneered by @<!-- -->Day8/re-frame, with the following differences:<!-- -->- stateless (see <code>EventBus</code> for the more common stateful alternative) - standalone implementation (no assumptions about surrounding context/framework) - manual control over event queue processing - supports event cancellation (via FX\_CANCEL side effect) - side effect collection (multiple side effects for same effect type per frame) - side effect priorities (to control execution order) - dynamic addition/removal of handlers &amp; effects |
+|  [EventBus](./interceptors.eventbus.md) | Stateful version of [StatelessEventBus](./interceptors.statelesseventbus.md)<!-- -->. |
+|  [StatelessEventBus](./interceptors.statelesseventbus.md) | Batched event processor for using composable interceptors for event handling and side effects to execute the result of handled events. |
 
 ## Interfaces
 
@@ -26,7 +26,7 @@
 |  --- | --- |
 |  [dispatch](./interceptors.dispatch.md) | Higher-order interceptor. Returns interceptor which assigns given event to <code>FX_DISPATCH</code> side effect. |
 |  [dispatchNow](./interceptors.dispatchnow.md) | Higher-order interceptor. Returns interceptor which assigns given event to <code>FX_DISPATCH_NOW</code> side effect. |
-|  [ensureParamRange](./interceptors.ensureparamrange.md) | Specialization of <code>ensurePred()</code> to ensure an event's payload value is within given <code>min</code> / <code>max</code> closed interval. By default, assumes event format like: <code>[event-id, value]</code>. However if <code>value</code> is given, the provided function can be used to extract the value to be validated from any event. If the value is outside the given interval, triggers <code>FX_CANCEL</code> side effect and if <code>err</code> is given, the error interceptor can return any number of other side effects and so be used to dispatch alternative events instead. |
+|  [ensureParamRange](./interceptors.ensureparamrange.md) | Specialization of [ensurePred](./interceptors.ensurepred.md) to ensure an event's payload value is within given <code>min</code> / <code>max</code> closed interval. By default, assumes event format like: <code>[event-id, value]</code>. However if <code>value</code> is given, the provided function can be used to extract the value to be validated from any event. If the value is outside the given interval, triggers <code>FX_CANCEL</code> side effect and if <code>err</code> is given, the error interceptor can return any number of other side effects and so be used to dispatch alternative events instead. |
 |  [ensurePred](./interceptors.ensurepred.md) | Higher-order interceptor for validation purposes. Takes a predicate function and an optional interceptor function, which will only be called if the predicate fails for a given event. By default the <code>FX_CANCEL</code> side effect is triggered if the predicate failed, thus ensuring the actual event handler for the failed event will not be executed anymore. However, this can be overridden using the error interceptor's result, which is merged into the result of this interceptor.<!-- -->The error interceptor can return any number of other side effects and so be used to dispatch alternative events instead, for example:
 ```
 // this interceptor will cause cancellation of current event
@@ -49,13 +49,13 @@ Note: For this interceptor to work as expected, it needs to be provided BEFORE t
 
 ```
  |
-|  [ensureStateGreaterThan](./interceptors.ensurestategreaterthan.md) | Specialization of <code>ensurePred()</code> to ensure a state value is greater than given min. See <code>ensureStateLessThan()</code> for further details. |
-|  [ensureStateLessThan](./interceptors.ensurestatelessthan.md) | Specialization of <code>ensurePred()</code> to ensure a state value is less than given max at the time when the event is being processed. The optional <code>path</code> fn is used to extract or produce the path for the state value to be validated. If omitted, the event's payload item is interpreted as the value path.<!-- -->For example, without a provided <code>path</code> function and for an event of this form: <code>[&quot;event-id&quot;, &quot;foo.bar&quot;]</code>, the term <code>&quot;foo.bar&quot;</code> would be interpreted as path.<!-- -->If the event has this shape: <code>[&quot;event-id&quot;, [&quot;foo.bar&quot;, 23]]</code>, we must provide <code>(e) =&gt; e[1][0]</code> as path function to extract <code>&quot;foo.bar&quot;</code> from the event. |
-|  [ensureStateRange](./interceptors.ensurestaterange.md) | Specialization of <code>ensurePred()</code> to ensure a state value is within given <code>min</code> / <code>max</code> closed interval. See <code>ensureStateLessThan()</code> for further details. |
-|  [EV\_REDO](./interceptors.ev_redo.md) | Event ID to trigger redo action. See <code>EventBus.addBuiltIns()</code> for further details. Also see <code>snapshot()</code> interceptor docs. |
+|  [ensureStateGreaterThan](./interceptors.ensurestategreaterthan.md) | Specialization of [ensurePred](./interceptors.ensurepred.md) to ensure a state value is greater than given min. See [ensureStateLessThan](./interceptors.ensurestatelessthan.md) for further details. |
+|  [ensureStateLessThan](./interceptors.ensurestatelessthan.md) | Specialization of [ensurePred](./interceptors.ensurepred.md) to ensure a state value is less than given max at the time when the event is being processed. The optional <code>path</code> fn is used to extract or produce the path for the state value to be validated. If omitted, the event's payload item is interpreted as the value path.<!-- -->For example, without a provided <code>path</code> function and for an event of this form: <code>[&quot;event-id&quot;, &quot;foo.bar&quot;]</code>, the term <code>&quot;foo.bar&quot;</code> would be interpreted as path.<!-- -->If the event has this shape: <code>[&quot;event-id&quot;, [&quot;foo.bar&quot;, 23]]</code>, we must provide <code>(e) =&gt; e[1][0]</code> as path function to extract <code>&quot;foo.bar&quot;</code> from the event. |
+|  [ensureStateRange](./interceptors.ensurestaterange.md) | Specialization of [ensurePred](./interceptors.ensurepred.md) to ensure a state value is within given <code>min</code> / <code>max</code> closed interval. See [ensureStateLessThan](./interceptors.ensurestatelessthan.md) for further details. |
+|  [EV\_REDO](./interceptors.ev_redo.md) | Event ID to trigger redo action. See <code>EventBus.addBuiltIns()</code> for further details. Also see [snapshot](./interceptors.snapshot.md) interceptor docs. |
 |  [EV\_SET\_VALUE](./interceptors.ev_set_value.md) |  |
 |  [EV\_TOGGLE\_VALUE](./interceptors.ev_toggle_value.md) |  |
-|  [EV\_UNDO](./interceptors.ev_undo.md) | Event ID to trigger undo action. See <code>EventBus.addBuiltIns()</code> for further details. Also see <code>snapshot()</code> interceptor docs. |
+|  [EV\_UNDO](./interceptors.ev_undo.md) | Event ID to trigger undo action. See <code>EventBus.addBuiltIns()</code> for further details. Also see [snapshot](./interceptors.snapshot.md) interceptor docs. |
 |  [EV\_UPDATE\_VALUE](./interceptors.ev_update_value.md) |  |
 |  [forwardSideFx](./interceptors.forwardsidefx.md) | Higher-order interceptor. Returns interceptor which unpacks payload from event and assigns it as is to given side effect ID. Assigns <code>true</code> to side effect if event has no payload. |
 |  [FX\_CANCEL](./interceptors.fx_cancel.md) |  |
@@ -67,49 +67,10 @@ Note: For this interceptor to work as expected, it needs to be provided BEFORE t
 |  [FX\_STATE](./interceptors.fx_state.md) |  |
 |  [LOGGER](./interceptors.logger.md) |  |
 |  [setLogger](./interceptors.setlogger.md) |  |
-|  [snapshot](./interceptors.snapshot.md) | Higher-order interceptor. Returns interceptor which calls <code>ctx[id].record()</code>, where <code>ctx</code> is the currently active <code>InterceptorContext</code> passed to all event handlers and <code>ctx[id]</code> is assumed to be a [History](./atom.history.md) instance, passed to <code>processQueue()</code>. The default ID for the history instance is <code>&quot;history&quot;</code>.<!-- -->Example usage:
-```ts
-state = new Atom({});
-history = new History(state);
-bus = new EventBus(state);
-// register event handler
-// each time the `foo` event is triggered, a snapshot of
-// current app state is recorded first
-bus.addHandlers({
- foo: [snapshot(), valueSetter("foo")]
-});
-...
-// trigger event
-bus.dispatch(["foo", 23]);
-
-// pass history instance via interceptor context to handlers
-bus.processQueue({ history });
-
-```
- |
+|  [snapshot](./interceptors.snapshot.md) | Higher-order interceptor. Returns interceptor which calls <code>ctx[id].record()</code>, where <code>ctx</code> is the currently active [InterceptorContext](./interceptors.interceptorcontext.md) passed to all event handlers and <code>ctx[id]</code> is assumed to be a [History](./atom.history.md) instance, passed to [EventBus.processQueue()](./interceptors.eventbus.processqueue.md)<!-- -->. The default ID for the history instance is <code>&quot;history&quot;</code>.<!-- -->Example usage: |
 |  [trace](./interceptors.trace.md) | Debug interceptor to log the current event to the console. |
-|  [valueSetter](./interceptors.valuesetter.md) | Higher-order interceptor. Returns new interceptor to set state value at provided path. This allows for dedicated events to set state values more concisely, e.g. given this event definition:
-```ts
-setFoo: valueSetter("foo.bar")
-
-```
-...the <code>setFoo</code> event then can be triggered like so to update the state value at <code>foo.bar</code>:
-```ts
-bus.dispatch(["setFoo", 23])
-
-```
- |
-|  [valueUpdater](./interceptors.valueupdater.md) | Higher-order interceptor. Returns new interceptor to update state value at provided path with given function. This allows for dedicated events to update state values more concisely, e.g. given this event definition:
-```ts
-incFoo: valueUpdater("foo.bar", (x, y) => x + y)
-
-```
-...the <code>incFoo</code> event then can be triggered like so to update the state value at <code>foo.bar</code> (where <code>1</code> is the extra arg provided to the update fn:
-```ts
-bus.dispatch(["incFoo", 1]) // results in value = value + 1
-
-```
- |
+|  [valueSetter](./interceptors.valuesetter.md) | Higher-order interceptor. Returns new interceptor to set state value at provided path. This allows for dedicated events to set state values more concisely, e.g. given this event definition: |
+|  [valueUpdater](./interceptors.valueupdater.md) | Higher-order interceptor. Returns new interceptor to update state value at provided path with given function. This allows for dedicated events to update state values more concisely, e.g. given this event definition: |
 
 ## Type Aliases
 

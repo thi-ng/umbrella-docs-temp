@@ -4,9 +4,9 @@
 
 ## multiplex() function
 
-Yields a new transducer which applies given transducers in parallel (using `juxt()` &amp; `step()`<!-- -->) and produces tuples of results.
+Yields a new transducer which applies given transducers in parallel (using  &amp; [step](./transducers.step.md)<!-- -->) and produces tuples of results.
 
-Tip: Use `noop()` transducer for lanes which should retain the original input values.
+Tip: Use [noop](./transducers.noop.md) transducer for lanes which should retain the original input values.
 
 ```
 [...iterator(

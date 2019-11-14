@@ -6,13 +6,27 @@
 
 Composes a getter function for given nested lookup path. Optimized fast execution paths are provided for path lengths less than 5. Supports any `[]`<!-- -->-indexable data structure (arrays, objects, strings).
 
+<b>Signature:</b>
+
+```typescript
+getter: (path: Path) => (s: any) => any
+```
+
+## Remarks
+
 If `path` is given as string, it will be split using `.`<!-- -->. Returns function which accepts single object and when called, returns value at given path.
 
 If any intermediate key is not present in the given obj, descent stops and the function returns `undefined`<!-- -->.
 
 If `path` is an empty string or array, the returned getter will simply return the given state arg (identity function).
 
-Also see: `getIn()`
+Also see: [getIn](./paths.getin.md)
+
+## Example 1
+
+
+## Example 2
+
 
 ```ts
 g = getter("a.b.c");
@@ -25,8 +39,3 @@ g() // undefined
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-getter: (path: Path) => (s: any) => any
-```

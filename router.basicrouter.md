@@ -28,7 +28,7 @@ export declare class BasicRouter implements INotify
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
 |  [addListener(\_, \_\_, \_\_\_)](./router.basicrouter.addlistener.md) |  |  |
-|  [format(id, params, hash)](./router.basicrouter.format.md) |  | Returns a formatted version of given <code>RouteMatch</code>, incl. any params. Throw an error if an invalid route <code>id</code> is provided. |
+|  [format(id, params, hash)](./router.basicrouter.format.md) |  | Returns a formatted version of given [RouteMatch](./router.routematch.md)<!-- -->, incl. any params. Throw an error if an invalid route <code>id</code> is provided. |
 |  [format(match, hash)](./router.basicrouter.format_1.md) |  |  |
 |  [handleRouteFailure()](./router.basicrouter.handleroutefailure.md) |  |  |
 |  [matchRoute(curr, route)](./router.basicrouter.matchroute.md) |  |  |

@@ -4,9 +4,9 @@
 
 ## History.undo() method
 
-Attempts to re-apply most recent historical value to atom and returns it if successful (i.e. there's a history). Before the switch, first records the atom's current value into the future stack (to enable `redo()` feature). Returns `undefined` if there's no history.
+Attempts to re-apply most recent historical value to atom and returns it if successful (i.e. there's a history). Before the switch, first records the atom's current value into the future stack (to enable [History.redo()](./atom.history.redo.md) feature). Returns `undefined` if there's no history.
 
-If undo was possible, the `History.EVENT_UNDO` event is emitted after the restoration with both the `prev` and `curr` (restored) states provided as event value (and object with these two keys). This allows for additional state handling to be executed, e.g. application of the "Command pattern". See `addListener()` for registering event listeners.
+If undo was possible, the `History.EVENT_UNDO` event is emitted after the restoration with both the `prev` and `curr` (restored) states provided as event value (and object with these two keys). This allows for additional state handling to be executed, e.g. application of the "Command pattern". See [History.addListener()](./atom.history.addlistener.md) for registering event listeners.
 
 <b>Signature:</b>
 

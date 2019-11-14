@@ -6,6 +6,15 @@
 
 Immediate use mutator, i.e. same as: `mutator(path)(state, val)`<!-- -->.
 
+<b>Signature:</b>
+
+```typescript
+mutIn: (state: any, path: Path, val: any) => any
+```
+
+## Example
+
+
 ```ts
 mutIn({ a: { b: [10, 20] } }, "a.b.1", 23);
 // { a: { b: [ 10, 23 ] } }
@@ -16,8 +25,3 @@ mutIn({}, "a.b.c", 23);
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-mutIn: (state: any, path: Path, val: any) => any
-```

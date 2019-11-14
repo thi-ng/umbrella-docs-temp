@@ -4,7 +4,7 @@
 
 ## uvToIndex variable
 
-Inverse operation of `indexToUV()`<!-- -->. Converts vec2 UV coord into linearized 2D index, based on given texture `width` (in pixels).
+Inverse operation of [indexToUV](./shader-ast-stdlib.indextouv.md)<!-- -->. Converts vec2 UV coord into linearized 2D index, based on given texture `width` (in pixels).
 
 <b>Signature:</b>
 

@@ -4,7 +4,7 @@
 
 ## postmultiply variable
 
-Reverse operation of `premultiply`<!-- -->. Divides RGB channels by alpha, unless alpha is zero. Does NOT clamp result.
+Reverse operation of [premultiply](./porter-duff.premultiply.md)<!-- -->. Divides RGB channels by alpha, unless alpha is zero. Does NOT clamp result.
 
 <b>Signature:</b>
 

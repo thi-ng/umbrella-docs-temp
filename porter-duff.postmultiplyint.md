@@ -4,7 +4,7 @@
 
 ## postmultiplyInt variable
 
-Reverse op of `premultiplyInt`<!-- -->. Assumes 8bits/channel and alpha in MSB lane. Divides RGB channels by alpha (unless zero) and DOES clamp result to avoid overflows.
+Reverse op of [premultiplyInt](./porter-duff.premultiplyint.md)<!-- -->. Assumes 8bits/channel and alpha in MSB lane. Divides RGB channels by alpha (unless zero) and DOES clamp result to avoid overflows.
 
 <b>Signature:</b>
 

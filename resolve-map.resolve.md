@@ -8,6 +8,15 @@ Visits all key-value pairs or array items in depth-first order, expands any refe
 
 Reference values are special strings representing lookup paths of other values in the object and are prefixed with `@` for relative refs or `@/` for absolute refs and both using `/` as path separator (Note: trailing slashes are NOT allowed!). Relative refs are resolved from the currently visited object and support "../" prefixes to access any parent levels. Absolute refs are always resolved from the root level (the original object passed to this function).
 
+<b>Signature:</b>
+
+```typescript
+resolve: (root: any) => any
+```
+
+## Example
+
+
 ```ts
 // `c` references sibling `d`
 // `d` references parent `a`
@@ -54,8 +63,3 @@ res.e(2);
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-resolve: (root: any) => any
-```

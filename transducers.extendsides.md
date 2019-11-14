@@ -17,7 +17,7 @@ Yields iterator of given iterable which repeats the first and/or last value(s) `
 // [ 1, 2, 3,  3, 3, 3 ]
 
 ```
- padSides  wrapSides
+- [padSides](./transducers.padsides.md) - [wrapSides()](./transducers.wrapsides.md)
 
 <b>Signature:</b>
 

@@ -4,7 +4,7 @@
 
 ## node variable
 
-Higher order node / stream creator. Takes a transducer and (optional) required input stream IDs. The returned function takes an object of input streams and returns a new `StreamSync` instance. The returned function will throw an error if `inputIDs` is given and the object of inputs does not contain all of them.
+Higher order node / stream creator. Takes a transducer and (optional) required input stream IDs. The returned function takes an object of input streams and returns a new [StreamSync](./rstream.streamsync.md) instance. The returned function will throw an error if `inputIDs` is given and the object of inputs does not contain all of them.
 
 If `reset` is true (default: false), the `xform` will only re-run when all inputs have produced new values. See [StreamSync](./rstream.streamsync.md) for further reference.
 

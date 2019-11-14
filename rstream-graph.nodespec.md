@@ -6,9 +6,9 @@
 
 Specification for a single "node" in the dataflow graph. Nodes here are actually just wrappers of streams / subscriptions (or generally any form of [ISubscribable](./rstream.isubscribable.md)<!-- -->), usually with an associated transducer to transform / combine the inputs and produce values for the node's result stream.
 
-The `fn` function is responsible to produce such a stream transformer construct. The keys used to specify inputs in the `ins` object are dictated by the actual node `fn` used. Most node functions with multiple inputs will be implemented as `StreamSync` instances and the input IDs are used to locally rename input streams within the [StreamSync](./rstream.streamsync.md) container.
+The `fn` function is responsible to produce such a stream transformer construct. The keys used to specify inputs in the `ins` object are dictated by the actual node `fn` used. Most node functions with multiple inputs will be implemented as [StreamSync](./rstream.streamsync.md) instances and the input IDs are used to locally rename input streams within the [StreamSync](./rstream.streamsync.md) container.
 
-Alo see `initGraph` and `nodeFromSpec` (in /src/nodes.ts) for more details how these specs are compiled into stream constructs.
+Alo see [initGraph](./rstream-graph.initgraph.md) and  (in /src/nodes.ts) for more details how these specs are compiled into stream constructs.
 
 <b>Signature:</b>
 

@@ -4,7 +4,7 @@
 
 ## snake variable
 
-Short for `kebab` using `_` as delimiter.
+Short for [kebab](./strings.kebab.md) using `_` as delimiter.
 
 <b>Signature:</b>
 

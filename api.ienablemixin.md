@@ -4,7 +4,7 @@
 
 ## IEnableMixin variable
 
-Mixin class decorator, injects IEnable default implementation, incl. a `_enabled` property. If the target also implements the `INotify` interface, `enable()` and `disable()` will automatically emit the respective events.
+Mixin class decorator, injects IEnable default implementation, incl. a `_enabled` property. If the target also implements the [INotify](./api.inotify.md) interface, [IEnable.enable()](./api.ienable.enable.md) and [IEnable.disable()](./api.ienable.disable.md) will automatically emit the respective events.
 
 <b>Signature:</b>
 

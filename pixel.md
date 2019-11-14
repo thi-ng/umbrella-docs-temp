@@ -53,7 +53,7 @@
 |  [ARGB4444](./pixel.argb4444.md) |  |
 |  [ARGB8888](./pixel.argb8888.md) |  |
 |  [BGR888](./pixel.bgr888.md) |  |
-|  [buffer](./pixel.buffer.md) | Syntax sugar for <code>PackedBuffer</code> ctor. |
+|  [buffer](./pixel.buffer.md) | Syntax sugar for [PackedBuffer](./pixel.packedbuffer.md) ctor. |
 |  [canvas2d](./pixel.canvas2d.md) | Creates a canvas element of given size, obtains its 2D drawing context and returns object of both. |
 |  [clampRegion](./pixel.clampregion.md) |  |
 |  [compileFromABGR](./pixel.compilefromabgr.md) |  |

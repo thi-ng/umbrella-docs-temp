@@ -8,6 +8,15 @@ Takes a function returning either a no-arg function (thunk) or its already reali
 
 This function should be used for non-stack consuming recursion. I.e. a trampoline is a form of continuation passing style and only ever consumes max. 2 extra stack frames, independent from recursion depth.
 
+<b>Signature:</b>
+
+```typescript
+trampoline: <T>(f: T | Fn0<T | Fn0<T>>) => T
+```
+
+## Example
+
+
 ```ts
 const countdown = (acc, x) =>
   x >= 0 ?
@@ -22,8 +31,3 @@ trampoline(countdown([], -1))
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-trampoline: <T>(f: T | Fn0<T | Fn0<T>>) => T
-```

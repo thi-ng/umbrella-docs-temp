@@ -4,7 +4,7 @@
 
 ## polar3 variable
 
-Converts 3D cartesian vector `v` to spherical coordinates, i.e. `[r,θ,ϕ]` (angles in radians). See `cartesian()` for reverse operation. If `out` is null, modifies `v` in place.
+Converts 3D cartesian vector `v` to spherical coordinates, i.e. `[r,θ,ϕ]` (angles in radians). See [cartesian](./vectors.cartesian.md) for reverse operation. If `out` is null, modifies `v` in place.
 
 <b>Signature:</b>
 

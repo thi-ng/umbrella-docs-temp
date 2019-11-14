@@ -6,7 +6,7 @@
 
 > Warning: This API is now obsolete.
 > 
-> renamed to `compL`
+> renamed to 
 > 
 
 <b>Signature:</b>

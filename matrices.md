@@ -96,7 +96,7 @@
 |  [mat44to33](./matrices.mat44to33.md) | Converts 4x4 to 3x3 matrix and writes result to <code>out</code>. Creates new matrix if <code>out</code> is <code>null</code>. |
 |  [mat44v](./matrices.mat44v.md) | Initializes 4x4 matrix from 4D column vectors. |
 |  [mixQ](./matrices.mixq.md) | Interpolates quaternion <code>a</code> to <code>b</code> by given amount <code>t</code> \[0...1\], using SLERP. Writes result to <code>out</code>. The optional <code>eps</code> (default 1e-3) is used to switch to linear interpolation if the angular difference is very small. |
-|  [mul](./matrices.mul.md) | Componentwise matrix addition. Use <code>mulM</code> for actual matrix-matrix multiplication. If <code>out</code> is not given, writes result in <code>a</code>.<!-- -->out = a \* b |
+|  [mul](./matrices.mul.md) | Componentwise matrix addition. Use [mulM](./matrices.mulm.md) for actual matrix-matrix multiplication. If <code>out</code> is not given, writes result in <code>a</code>.<!-- -->out = a \* b |
 |  [mul22](./matrices.mul22.md) |  |
 |  [mul23](./matrices.mul23.md) |  |
 |  [mul33](./matrices.mul33.md) |  |
@@ -118,31 +118,10 @@
 |  [mulV33](./matrices.mulv33.md) | Multiplies 3x3 matrix <code>m</code> with 3D vector <code>v</code>. Supports in-place modification, i.e. if <code>out === v</code>. |
 |  [mulV344](./matrices.mulv344.md) | Multiplies 4x4 matrix <code>m</code> with 3D vector <code>v</code> and assumes <code>w=1</code>, i.e. the vector is interpreted as <code>[x,y,z,1]</code>. After transformation applies perspective divide of the resulting XYZ components. |
 |  [mulV44](./matrices.mulv44.md) | Multiplies 4x4 matrix <code>m</code> with 4D vector <code>v</code>. Supports in-place modification, i.e. if <code>out === v</code>. |
-|  [mulVM22](./matrices.mulvm22.md) | Same as:
-```ts
-out[0] = dot(v, column(m, 0))
-out[1] = dot(v, column(m, 1))
-
-```
- |
+|  [mulVM22](./matrices.mulvm22.md) | Same as: |
 |  [mulVM23](./matrices.mulvm23.md) |  |
-|  [mulVM33](./matrices.mulvm33.md) | Same as:
-```ts
-out[0] = dot(v, column(m, 0))
-out[1] = dot(v, column(m, 1))
-out[2] = dot(v, column(m, 2))
-
-```
- |
-|  [mulVM44](./matrices.mulvm44.md) | Same as:
-```ts
-out[0] = dot(v, column(m, 0))
-out[1] = dot(v, column(m, 1))
-out[2] = dot(v, column(m, 2))
-out[3] = dot(v, column(m, 3))
-
-```
- |
+|  [mulVM33](./matrices.mulvm33.md) | Same as: |
+|  [mulVM44](./matrices.mulvm44.md) | Same as: |
 |  [mulVQ](./matrices.mulvq.md) | Multiplies quaternion <code>q</code> with 3D vector <code>v</code>. Returns transformed vector or modifies in-place if <code>out</code> is null or <code>v</code>. |
 |  [normal33](./matrices.normal33.md) | Converts given 4x4 matrix to a 3x3 normal matrix, i.e. the transposed inverse of its upper-left 3x3 region. If <code>out</code> is null a new result matrix will be created. Returns <code>undefined</code> if matrix inversion failed. |
 |  [normal44](./matrices.normal44.md) | Converts given 4x4 matrix to a 4x4 matrix normal matrix, i.e. the transposed inverse. Writes results to <code>m</code> if <code>out</code> is null. Returns <code>undefined</code> if matrix inversion failed. |
@@ -228,13 +207,13 @@ out[3] = dot(v, column(m, 3))
 |  [subN44](./matrices.subn44.md) |  |
 |  [trace](./matrices.trace.md) | Returns matrix trace of <code>m</code>, i.e. component sum of <code>diag(m)</code>. |
 |  [transform23](./matrices.transform23.md) | Creates 2x3 TRS transformation matrix from given translation vector, rotation angle and scale factor/vector. |
-|  [transform44](./matrices.transform44.md) | Creates 4x4 TRS transformation matrix from given translation vector, rotation angles (given as 3D vector) and scale factor/vector. Internally, uses a quaternion for constructing the rotation matrix part. The quaternion is created via <code>quatFromEuler()</code> with ZYX ordering. |
+|  [transform44](./matrices.transform44.md) | Creates 4x4 TRS transformation matrix from given translation vector, rotation angles (given as 3D vector) and scale factor/vector. Internally, uses a quaternion for constructing the rotation matrix part. The quaternion is created via [quatFromEuler](./matrices.quatfromeuler.md) with ZYX ordering. |
 |  [translation23](./matrices.translation23.md) | Constructs a 2x3 translation matrix. |
 |  [translation44](./matrices.translation44.md) | Constructs a 4x4 translation matrix. |
 |  [transpose22](./matrices.transpose22.md) | Writes transposition of 2x2 matrix <code>m</code> to <code>out</code>. Creates new matrix if <code>out</code> is <code>null</code> |
 |  [transpose33](./matrices.transpose33.md) | Writes transposition of 3x3 matrix <code>m</code> to <code>out</code>. Creates new matrix if <code>out</code> is <code>null</code> |
 |  [transpose44](./matrices.transpose44.md) | Writes transposition of 4x4 matrix <code>m</code> to <code>out</code>. Creates new matrix if <code>out</code> is <code>null</code> |
-|  [unproject](./matrices.unproject.md) | Reverse operation of <code>project()</code>. If <code>invert</code> is true (default: false), both <code>mvp</code> and <code>view</code> matrices will be inverted first (non-destructively), else they're both assumed to be inverted already. |
+|  [unproject](./matrices.unproject.md) | Reverse operation of [project](./matrices.project.md)<!-- -->. If <code>invert</code> is true (default: false), both <code>mvp</code> and <code>view</code> matrices will be inverted first (non-destructively), else they're both assumed to be inverted already. |
 |  [viewport](./matrices.viewport.md) | Produces a 2x3 viewport matrix to transform projected coordinates to screen space. |
 
 ## Type Aliases

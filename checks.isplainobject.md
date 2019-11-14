@@ -4,7 +4,7 @@
 
 ## isPlainObject variable
 
-Similar to `isObject()`<!-- -->, but also checks if prototype is that of `Object` (or `null`<!-- -->).
+Similar to [isObject](./checks.isobject.md)<!-- -->, but also checks if prototype is that of `Object` (or `null`<!-- -->).
 
 <b>Signature:</b>
 

@@ -4,7 +4,7 @@
 
 ## page() function
 
-Pagination helper. Returns transducer which extracts only items for given page number (and page length, default 10). When composing with other transducers, it's most efficient if `page()` is used prior to any heavy processing steps.
+Pagination helper. Returns transducer which extracts only items for given page number (and page length, default 10). When composing with other transducers, it's most efficient if  is used prior to any heavy processing steps.
 
 ```
 [...page(0, 5, range(12))]

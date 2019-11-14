@@ -4,7 +4,7 @@
 
 ## run() function
 
-Transforms `xs` with given transducer and optional side effect without any reduction step. If `fx` is given it will be called with every value produced by the transducer. If `fx` is \*not\* given, the transducer is assumed to include at least one `sideEffect()` step itself. Returns nothing.
+Transforms `xs` with given transducer and optional side effect without any reduction step. If `fx` is given it will be called with every value produced by the transducer. If `fx` is \*not\* given, the transducer is assumed to include at least one [sideEffect](./transducers.sideeffect.md) step itself. Returns nothing.
 
 <b>Signature:</b>
 

@@ -4,9 +4,9 @@
 
 ## View.view() method
 
-Like `deref()`<!-- -->, but doesn't update view's cached state and dirty flag if value has changed. If there's an unprocessed value change, returns result of this sub's transformer or else the cached value.
+Like [IDeref.deref()](./api.ideref.deref.md)<!-- -->, but doesn't update view's cached state and dirty flag if value has changed. If there's an unprocessed value change, returns result of this sub's transformer or else the cached value.
 
-\*\*Important:\*\* Use this function only if the view has none or or a stateless transformer. Else might cause undefined/inconsistent behavior when calling `view()` or `deref()` subsequently.
+\*\*Important:\*\* Use this function only if the view has none or or a stateless transformer. Else might cause undefined/inconsistent behavior when calling `view` or [IDeref.deref()](./api.ideref.deref.md) subsequently.
 
 <b>Signature:</b>
 

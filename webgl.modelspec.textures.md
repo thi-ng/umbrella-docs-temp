@@ -4,7 +4,7 @@
 
 ## ModelSpec.textures property
 
-Array of initialized `ITexture` instances. Each non-null item will be auto-bound to its respective texture unit, each time the model is drawn via `draw()`
+Array of initialized [ITexture](./webgl.itexture.md) instances. Each non-null item will be auto-bound to its respective texture unit, each time the model is drawn via [draw](./webgl.draw.md)
 
 <b>Signature:</b>
 

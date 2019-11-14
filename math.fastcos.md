@@ -4,7 +4,7 @@
 
 ## fastCos variable
 
-Fast cosine approximation using `normCos()` (polynomial). Max. error \~0.00059693
+Fast cosine approximation using [normCos](./math.normcos.md) (polynomial). Max. error \~0.00059693
 
 In \[0 .. 2π\] interval, approx. 18-20% faster than `Math.cos` on V8.
 

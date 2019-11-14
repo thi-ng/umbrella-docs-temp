@@ -4,7 +4,7 @@
 
 ## mutator variable
 
-Higher-order function, similar to `setter()`<!-- -->. Returns function which when called mutates given object/array at given path location and bails if any intermediate path values are non-indexable (only the very last path element can be missing in the actual object structure). If successful, returns original (mutated) object, else `undefined`<!-- -->. This function provides optimized versions for path lengths &lt;<!-- -->= 4.
+Higher-order function, similar to [setter](./paths.setter.md)<!-- -->. Returns function which when called mutates given object/array at given path location and bails if any intermediate path values are non-indexable (only the very last path element can be missing in the actual object structure). If successful, returns original (mutated) object, else `undefined`<!-- -->. This function provides optimized versions for path lengths &lt;<!-- -->= 4.
 
 <b>Signature:</b>
 

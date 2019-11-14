@@ -8,7 +8,7 @@ Computes cubic-hermite interpolation between `a` / `b` at normalized time `t` an
 
 [https://en.wikipedia.org/wiki/Cubic\_Hermite\_spline](https://en.wikipedia.org/wiki/Cubic_Hermite_spline)
 
- mixHermite  tangentCardinal  tangentDiff3
+- [mixHermite](./math.mixhermite.md) - [tangentCardinal](./math.tangentcardinal.md) - [tangentDiff3](./math.tangentdiff3.md)
 
 <b>Signature:</b>
 

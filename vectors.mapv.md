@@ -4,7 +4,7 @@
 
 ## mapV variable
 
-Like `mapVV`<!-- -->, but for `VecOpV` type ops and hence only using single input.
+Like [mapVV](./vectors.mapvv.md)<!-- -->, but for [VecOpV](./vectors.vecopv.md) type ops and hence only using single input.
 
 ```
 // 4x 2D vectors in SOA layout

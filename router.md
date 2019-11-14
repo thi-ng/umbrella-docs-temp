@@ -17,9 +17,9 @@
 |  --- | --- |
 |  [HTMLRouterConfig](./router.htmlrouterconfig.md) |  |
 |  [Route](./router.route.md) | A Route describes an application path (possibly parameterized), incl. parameter coercion, validation and overall route authentication. Apart from <code>id</code> and <code>match</code> all other fields are optional. |
-|  [RouteMatch](./router.routematch.md) | Result object returned by a routing operation and event value for <code>EVENT_ROUTE_CHANGE</code>. Contains the matched route ID and any route params. |
+|  [RouteMatch](./router.routematch.md) | Result object returned by a routing operation and event value for [EVENT\_ROUTE\_CHANGED](./router.event_route_changed.md)<!-- -->. Contains the matched route ID and any route params. |
 |  [RouteParamValidator](./router.routeparamvalidator.md) | Route validator subspecs are optional and used to coerce and/or validate individual route parameters. |
-|  [RouterConfig](./router.routerconfig.md) | Configuration object for <code>Router</code> instances. |
+|  [RouterConfig](./router.routerconfig.md) | Configuration object for [BasicRouter](./router.basicrouter.md) and [HTMLRouter](./router.htmlrouter.md) instances. |
 
 ## Variables
 
@@ -32,5 +32,5 @@
 
 |  Type Alias | Description |
 |  --- | --- |
-|  [RouteAuthenticator](./router.routeauthenticator.md) | A validation function to for authenticated routes. If this function determines that the user is not allowed to access this route, it should return nothing or a <code>RouteMatch</code> object for redirecting (e.g. to a login, home page or other non-protected route). If nothing is returned and no other routes can be matched, the router will eventually return the configure default fallback route. |
+|  [RouteAuthenticator](./router.routeauthenticator.md) | A validation function to for authenticated routes. If this function determines that the user is not allowed to access this route, it should return nothing or a [RouteMatch](./router.routematch.md) object for redirecting (e.g. to a login, home page or other non-protected route). If nothing is returned and no other routes can be matched, the router will eventually return the configure default fallback route. |
 

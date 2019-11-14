@@ -6,14 +6,6 @@
 
 Processes a single event using its configured handler/interceptor chain. Logs warning message and skips processing if no handler is available for the event type.
 
-The array of interceptors is processed in bi-directional order. First any `pre` interceptors are processed in forward order. Then `post` interceptors are processed in reverse.
-
-Each interceptor can return a result object of side effects, which are being merged and collected for `processEffects()`<!-- -->.
-
-Any interceptor can trigger zero or more known side effects, each (side effect) will be collected in an array to support multiple invocations of the same effect type per frame. If no side effects are requested, an interceptor can return `undefined`<!-- -->.
-
-Processing of the current event stops immediately, if an interceptor sets the `FX_CANCEL` side effect key to `true`<!-- -->. However, the results of any previous interceptors (incl. the one which cancelled) are kept and processed further as usual.
-
 <b>Signature:</b>
 
 ```typescript
@@ -30,4 +22,14 @@ protected processEvent(ctx: InterceptorContext, e: Event): void;
 <b>Returns:</b>
 
 `void`
+
+## Remarks
+
+The array of interceptors is processed in bi-directional order. First any `pre` interceptors are processed in forward order. Then `post` interceptors are processed in reverse.
+
+Each interceptor can return a result object of side effects, which are being merged and collected for [StatelessEventBus.processEffects()](./interceptors.statelesseventbus.processeffects.md)<!-- -->.
+
+Any interceptor can trigger zero or more known side effects, each (side effect) will be collected in an array to support multiple invocations of the same effect type per frame. If no side effects are requested, an interceptor can return `undefined`<!-- -->.
+
+Processing of the current event stops immediately, if an interceptor sets the `FX_CANCEL` side effect key to `true`<!-- -->. However, the results of any previous interceptors (incl. the one which cancelled) are kept and processed further as usual.
 

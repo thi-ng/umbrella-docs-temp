@@ -4,9 +4,7 @@
 
 ## untilStr variable
 
-String only. Returns a matcher which consumes input until the given string could be matched. If successful, calls `callback` with string recorded so far (excluding the matched terminator string) and returns `Match.FULL` result. Else `Match.PARTIAL`<!-- -->.
-
- until
+String version of [until](./fsm.until.md)<!-- -->. Returns a matcher which consumes input until the given string could be matched. If successful, calls `callback` with string recorded so far (excluding the matched terminator string) and returns `Match.FULL` result. Else `Match.PARTIAL`<!-- -->.
 
 <b>Signature:</b>
 

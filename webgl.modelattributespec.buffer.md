@@ -4,7 +4,7 @@
 
 ## ModelAttributeSpec.buffer property
 
-Backing `WebGLArrayBuffer` instance. Usually this will be auto-initialized by `compileBuffers()`
+Backing [WebGLArrayBuffer](./webgl.webglarraybuffer.md) instance. Usually this will be auto-initialized by 
 
 <b>Signature:</b>
 

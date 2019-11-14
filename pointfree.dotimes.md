@@ -6,6 +6,15 @@
 
 Executes given `body` word/quotation `n` times. In each iteration pushes current counter on d-stack prior to executing body.
 
+<b>Signature:</b>
+
+```typescript
+dotimes: (ctx: StackContext) => StackContext
+```
+
+## Example
+
+
 ```ts
 pf.run([3, ["i=", pf.swap, pf.add, pf.print], pf.dotimes])
 // i=0
@@ -27,8 +36,3 @@ pf.runU([3, pf.cpdr, [], pf.dotimes, pf.movrd, pf.collect])
 ```
 ( n body -- ? )
 
-<b>Signature:</b>
-
-```typescript
-dotimes: (ctx: StackContext) => StackContext
-```

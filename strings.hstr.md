@@ -6,6 +6,15 @@
 
 Formats given value `x` as Fortran style Hollerith string.
 
+<b>Signature:</b>
+
+```typescript
+hstr: Stringer<any>
+```
+
+## Example
+
+
 ```ts
 hstr("abc")  // "3Habc"
 hstr(123.45) // "6H123.45"
@@ -15,8 +24,3 @@ hstr(null)   // ""
 ```
 [https://en.wikipedia.org/wiki/Hollerith\_constant](https://en.wikipedia.org/wiki/Hollerith_constant)
 
-<b>Signature:</b>
-
-```typescript
-hstr: Stringer<any>
-```

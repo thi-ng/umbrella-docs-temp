@@ -4,7 +4,7 @@
 
 ## $iter variable
 
-Helper function used by various transducers to wrap themselves as transforming iterators. Delegates to `iterator1()` by default.
+Helper function used by various transducers to wrap themselves as transforming iterators. Delegates to [iterator1()](./transducers.iterator1.md) by default.
 
 <b>Signature:</b>
 

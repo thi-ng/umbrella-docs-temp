@@ -8,12 +8,6 @@ Reducer which applies optional `pred` function to each value and terminates earl
 
 Returns true if \*all\* values passed test.
 
-```ts
-reduce(every((x)=> x > 0), [1,2,-1,3]);
-// false
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -29,4 +23,13 @@ export declare function every<T>(pred?: Predicate<T>): Reducer<boolean, T>;
 <b>Returns:</b>
 
 `Reducer<boolean, T>`
+
+## Example
+
+
+```ts
+reduce(every((x)=> x > 0), [1,2,-1,3]);
+// false
+
+```
 

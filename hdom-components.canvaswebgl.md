@@ -6,7 +6,22 @@
 
 Higher order WebGL canvas component delegating to user provided handlers.
 
-Note: Since this is an higher order component, if used within a non-static parent component, this function itself cannot be directly inlined into hdom tree and must be initialized prior/outside, however the returned component can be used as normal.
+<b>Signature:</b>
+
+```typescript
+canvasWebGL: (handlers: Partial<CanvasHandlers<WebGLRenderingContext>>, opts?: WebGLContextAttributes | undefined) => {
+    init(_el: HTMLCanvasElement, hctx: any, ...args: any[]): void;
+    render(hctx: any, ...args: any[]): any[];
+    release(hctx: any, ...args: any[]): void;
+}
+```
+
+## Remarks
+
+Since this is an higher order component, if used within a non-static parent component, this function itself cannot be directly inlined into hdom tree and must be initialized prior/outside, however the returned component can be used as normal.
+
+## Example
+
 
 ```ts
 const glcanvas = canvasWebGL({
@@ -20,12 +35,3 @@ const glcanvas = canvasWebGL({
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-canvasWebGL: (handlers: Partial<CanvasHandlers<WebGLRenderingContext>>, opts?: WebGLContextAttributes | undefined) => {
-    init(_el: HTMLCanvasElement, hctx: any, ...args: any[]): void;
-    render(hctx: any, ...args: any[]): any[];
-    release(hctx: any, ...args: any[]): void;
-}
-```

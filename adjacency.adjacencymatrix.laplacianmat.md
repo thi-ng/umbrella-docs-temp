@@ -16,7 +16,7 @@ laplacianMat(deg?: CSR): CSR;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  deg | <code>CSR</code> | degree type for <code>degreeMat()</code> |
+|  deg | <code>CSR</code> | degree type for [AdjacencyMatrix.degreeMat()](./adjacency.adjacencymatrix.degreemat.md) |
 
 <b>Returns:</b>
 

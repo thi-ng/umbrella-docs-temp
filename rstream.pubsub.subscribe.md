@@ -4,7 +4,7 @@
 
 ## PubSub.subscribe() method
 
-Unsupported. Use `subscribeTopic()` instead.
+Unsupported. Use  instead.
 
 <b>Signature:</b>
 

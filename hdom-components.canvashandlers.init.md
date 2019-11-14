@@ -4,7 +4,7 @@
 
 ## CanvasHandlers.init() method
 
-user init handler (called only once when canvas first)
+User init handler (called only once when canvas first)
 
 <b>Signature:</b>
 

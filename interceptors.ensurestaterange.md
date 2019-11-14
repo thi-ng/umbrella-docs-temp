@@ -4,7 +4,7 @@
 
 ## ensureStateRange variable
 
-Specialization of `ensurePred()` to ensure a state value is within given `min` / `max` closed interval. See `ensureStateLessThan()` for further details.
+Specialization of [ensurePred](./interceptors.ensurepred.md) to ensure a state value is within given `min` / `max` closed interval. See [ensureStateLessThan](./interceptors.ensurestatelessthan.md) for further details.
 
 <b>Signature:</b>
 

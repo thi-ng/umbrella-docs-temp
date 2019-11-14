@@ -6,14 +6,18 @@
 
 Same as:
 
+<b>Signature:</b>
+
+```typescript
+mulVM22: (out: Vec | null, v: import("@thi.ng/api").ArrayLikeIterable<number>, m: import("@thi.ng/api").ArrayLikeIterable<number>) => Vec
+```
+
+## Example
+
+
 ```ts
 out[0] = dot(v, column(m, 0))
 out[1] = dot(v, column(m, 1))
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-mulVM22: (out: Vec | null, v: import("@thi.ng/api").ArrayLikeIterable<number>, m: import("@thi.ng/api").ArrayLikeIterable<number>) => Vec
-```

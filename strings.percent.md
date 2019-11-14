@@ -4,7 +4,7 @@
 
 ## percent variable
 
-Returns `Stringer` which formats given fractions as percentage (e.g. `0.1234 => 12.34%`<!-- -->).
+Returns [Stringer](./strings.stringer.md) which formats given fractions as percentage (e.g. `0.1234 => 12.34%`<!-- -->).
 
 <b>Signature:</b>
 

@@ -4,7 +4,7 @@
 
 ## Fn6 type
 
-A 6-arg function from A,B,C,D,E,F =<!-- -->&gt; G.
+A 6-arg function from A,B,C,D,E,F to G.
 
 <b>Signature:</b>
 

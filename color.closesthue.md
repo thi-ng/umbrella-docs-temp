@@ -4,7 +4,7 @@
 
 ## closestHue variable
 
-Returns the `Hue` constant of the closest of 12 defined hues.
+Returns the [Hue](./color.hue.md) constant of the closest of 12 defined hues.
 
 <b>Signature:</b>
 

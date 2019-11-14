@@ -6,7 +6,7 @@
 
 Takes a memory block address and attempts to return the block to the pool. Depending on `compact` config option, this operation might cause compaction of consecutive free memory blocks to help counter fragmentation. Returns true if block has been freed.
 
-It's the user's responsibility to ensure that freed blocks are not used any further after calling `free()`<!-- -->. Undefined behavior, or worse, pool corruption might ensue!
+It's the user's responsibility to ensure that freed blocks are not used any further after calling [IMemPool.free()](./malloc.imempool.free.md)<!-- -->. Undefined behavior, or worse, pool corruption might ensue!
 
 <b>Signature:</b>
 

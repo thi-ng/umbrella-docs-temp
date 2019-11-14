@@ -8,7 +8,7 @@ Yields 2D grid coordinates in the order of interleaved columns with configurable
 
 - 0, step, 2 \* step, 3 \* step... - 1, 2 \* step + 1, 3 \* step + 1... - etc.
 
- interleaveRows2d
+[interleaveRows2d()](./grid-iterators.interleaverows2d.md)
 
 <b>Signature:</b>
 

@@ -34,37 +34,15 @@
 |  [bits(size, msb, src)](./transducers-binary.bits_3.md) |  |
 |  [bytes(cap)](./transducers-binary.bytes.md) |  |
 |  [bytes(cap, src)](./transducers-binary.bytes_1.md) |  |
-|  [hexDump(opts)](./transducers-binary.hexdump.md) | Transforms bytes into a sequence of hexdump lines with configurable number of <code>columns</code> and <code>address</code> offset. Uses <code>partition()</code> internally, so new lines are only produced once filled. If the input hasn't an exact multiple of <code>cols</code> bytes, the last line will be padded with zeroes.
-```ts
-src = [65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 33, 48, 49, 50, 51, 126, 122, 121, 120]
-
-[...hexDump({ cols: 8, address: 0x400 }, src)]
-// [ '00000400 | 41 42 43 44 45 46 47 48 | ABCDEFGH',
-//   '00000408 | 49 4a 21 30 31 32 33 7e | IJ!0123~',
-//   '00000410 | 7a 79 78 00 00 00 00 00 | zyx.....' ]
-
-```
- |
+|  [hexDump(opts)](./transducers-binary.hexdump.md) | Transforms bytes into a sequence of hexdump lines with configurable number of <code>columns</code> and <code>address</code> offset. Uses  internally, so new lines are only produced once filled. If the input hasn't an exact multiple of <code>cols</code> bytes, the last line will be padded with zeroes. |
 |  [hexDump(src)](./transducers-binary.hexdump_1.md) |  |
 |  [hexDump(opts, src)](./transducers-binary.hexdump_2.md) |  |
 |  [partitionBits(destSize, srcSize)](./transducers-binary.partitionbits.md) | Transducer. |
 |  [partitionBits(destSize, src)](./transducers-binary.partitionbits_1.md) |  |
 |  [partitionBits(destSize, srcSize, src)](./transducers-binary.partitionbits_2.md) |  |
-|  [utf8Decode()](./transducers-binary.utf8decode.md) | Transducer which decodes a byte input sequence into UTF-8 characters. Also see <code>utf8Encode()</code> for reverse transformation. |
+|  [utf8Decode()](./transducers-binary.utf8decode.md) | Transducer which decodes a byte input sequence into UTF-8 characters. Also see  for reverse transformation. |
 |  [utf8Decode(src)](./transducers-binary.utf8decode_1.md) |  |
-|  [utf8Encode()](./transducers-binary.utf8encode.md) | Transducer which encodes UTF-8 characters into a byte sequence.<!-- -->Also see <code>utf8Decode()</code> for reverse transformation.
-```ts
-transduce(
-  comp(utf8Encode(), hexDump()),
-  str("\n"),
-  "¡Hola niña! 😀"
-)
-// 00000000 | c2 a1 48 6f 6c 61 20 6e | ..Hola n
-// 00000008 | 69 c3 b1 61 21 20 f0 9f | i..a! ..
-// 00000010 | 98 80 00 00 00 00 00 00 | ........
-
-```
- |
+|  [utf8Encode()](./transducers-binary.utf8encode.md) | Transducer which encodes UTF-8 characters into a byte sequence.<!-- -->Also see  for reverse transformation. |
 |  [utf8Encode(src)](./transducers-binary.utf8encode_1.md) |  |
 
 ## Interfaces
@@ -88,7 +66,7 @@ transduce(
 |  [i32array](./transducers-binary.i32array.md) |  |
 |  [i8](./transducers-binary.i8.md) |  |
 |  [i8array](./transducers-binary.i8array.md) |  |
-|  [randomBits](./transducers-binary.randombits.md) | Returns an iterator of random bits, with 1's occurring w/ given probability <code>prob</code> (in the \[0,1\] interval). If <code>num</code> is given, only that many bits will be produced.<!-- -->By default, uses system PRNG, but a custom <code>IRandom</code> impl can be provided via <code>rnd</code> arg. |
+|  [randomBits](./transducers-binary.randombits.md) | Returns an iterator of random bits, with 1's occurring w/ given probability <code>prob</code> (in the \[0,1\] interval). If <code>num</code> is given, only that many bits will be produced.<!-- -->By default, uses system PRNG, but a custom [IRandom](./random.irandom.md) impl can be provided via <code>rnd</code> arg. |
 |  [str](./transducers-binary.str.md) |  |
 |  [u16](./transducers-binary.u16.md) |  |
 |  [u16array](./transducers-binary.u16array.md) |  |

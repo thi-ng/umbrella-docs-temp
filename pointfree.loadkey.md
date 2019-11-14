@@ -4,7 +4,7 @@
 
 ## loadkey variable
 
-Higher order word. Similar to `load`<!-- -->, but always uses given preconfigured `key` instead of reading it from d-stack at runtime (also slightly faster). Throws error if var doesn't exist.
+Higher order word. Similar to [load](./pointfree.load.md)<!-- -->, but always uses given preconfigured `key` instead of reading it from d-stack at runtime (also slightly faster). Throws error if var doesn't exist.
 
 ( -- env\[key\] )
 

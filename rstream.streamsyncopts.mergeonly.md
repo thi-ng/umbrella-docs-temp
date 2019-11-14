@@ -4,7 +4,7 @@
 
 ## StreamSyncOpts.mergeOnly property
 
-If true, \*no\* input synchronization (waiting for values) is applied and `StreamSync` will emit potentially partially populated tuple objects for each received input value. However, as with the default behavior, tuples will retain the most recent consumed value from other inputs.
+If true, \*no\* input synchronization (waiting for values) is applied and [StreamSync](./rstream.streamsync.md) will emit potentially partially populated tuple objects for each received input value. However, as with the default behavior, tuples will retain the most recent consumed value from other inputs.
 
 <b>Signature:</b>
 

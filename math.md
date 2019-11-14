@@ -38,7 +38,7 @@
 |  [clamp](./math.clamp.md) | Clamps value <code>x</code> to given closed interval. |
 |  [clamp01](./math.clamp01.md) |  |
 |  [clamp11](./math.clamp11.md) |  |
-|  [classifyCrossing](./math.classifycrossing.md) | Returns <code>Crossing</code> classifier indicating the relationship of line A to line B. The optional epsilon value is used to determine if both lines are considered equal or flat. isCrossUp  isCrossDown  Crossing |
+|  [classifyCrossing](./math.classifycrossing.md) | Returns [Crossing](./math.crossing.md) classifier indicating the relationship of line A to line B. The optional epsilon value is used to determine if both lines are considered equal or flat.<!-- -->- [isCrossOver](./math.iscrossover.md) - [isCrossUnder](./math.iscrossunder.md) - [Crossing](./math.crossing.md) |
 |  [cosine](./math.cosine.md) |  |
 |  [cossin](./math.cossin.md) | Returns vector of <code>[cos(theta)*n, sin(theta)*n]</code>. |
 |  [cot](./math.cot.md) | Cotangent. Approaches <code>±Infinity</code> for <code>theta</code> near multiples of π. |
@@ -57,10 +57,10 @@
 |  [ease](./math.ease.md) | HOF exponential easing.<!-- -->- <code>ease = 1</code> -<!-- -->&gt; linear - <code>ease &gt; 1</code> -<!-- -->&gt; ease in - <code>ease &lt; 1</code> -<!-- -->&gt; ease out |
 |  [EPS](./math.eps.md) |  |
 |  [eqDelta](./math.eqdelta.md) | Checks if <code>&#124;a - b&#124; &lt;= ε</code> and adapts given epsilon value to the given arguments:<!-- -->ε is factored with the largest absolute value of <code>a</code> or <code>b</code> (but never lesser than the given <code>eps</code> value):<code>ε = ε * max(1, &#124;a&#124;, &#124;b&#124;)</code> |
-|  [eqDeltaFixed](./math.eqdeltafixed.md) | Similar to <code>eqDelta()</code>, but used given <code>eps</code> as is. |
+|  [eqDeltaFixed](./math.eqdeltafixed.md) | Similar to [eqDelta](./math.eqdelta.md)<!-- -->, but used given <code>eps</code> as is. |
 |  [expStep](./math.expstep.md) | Exponential ramp with variable shape, e.g.<!-- -->- S-curve: k=8, n=4 - Step near 1.0: k=8, n=20 - Pulse: k=0.005, n=-10 - Ease-in: k=0.5, n=0.25 |
-|  [fastCos](./math.fastcos.md) | Fast cosine approximation using <code>normCos()</code> (polynomial). Max. error \~0.00059693<!-- -->In \[0 .. 2π\] interval, approx. 18-20% faster than <code>Math.cos</code> on V8. |
-|  [fastSin](./math.fastsin.md) |  fastCos |
+|  [fastCos](./math.fastcos.md) | Fast cosine approximation using [normCos](./math.normcos.md) (polynomial). Max. error \~0.00059693<!-- -->In \[0 .. 2π\] interval, approx. 18-20% faster than <code>Math.cos</code> on V8. |
+|  [fastSin](./math.fastsin.md) | [fastCos](./math.fastcos.md) |
 |  [fit](./math.fit.md) |  |
 |  [fit01](./math.fit01.md) |  |
 |  [fit10](./math.fit10.md) |  |
@@ -77,24 +77,8 @@
 |  [INV\_HALF\_PI](./math.inv_half_pi.md) |  |
 |  [INV\_PI](./math.inv_pi.md) |  |
 |  [INV\_TAU](./math.inv_tau.md) |  |
-|  [isCrossOver](./math.iscrossover.md) | Returns true if line A rises up over B.
-```ts
-b1  a2
-  \/
-  /\
-a1  b2
-
-```
- |
-|  [isCrossUnder](./math.iscrossunder.md) | Returns true if line A rises up over B.
-```ts
-a1  b2
-  \/
-  /\
-b1  a2
-
-```
- |
+|  [isCrossOver](./math.iscrossover.md) | Returns true if line A rises up over B. |
+|  [isCrossUnder](./math.iscrossunder.md) | Returns true if line A rises up over B. |
 |  [isMaxima](./math.ismaxima.md) | Returns true if <code>b</code> is a local maxima, i.e. iff a &lt; b and b &gt; c. |
 |  [isMinima](./math.isminima.md) | Returns true if <code>b</code> is a local minima, i.e. iff a &gt; b and b &lt; c. |
 |  [loc](./math.loc.md) | Law of Cosines. Takes length of two sides of a triangle and the inner angle (in radians) between them. Returns length of third side. |
@@ -116,19 +100,10 @@ b1  a2
 |  [minimaIndex](./math.minimaindex.md) | Returns index of the first local &amp; internal minima found in given <code>values</code> array, or -1 if no such minima exists. The search range can be optionally defined via semi-open \[from, to) index interval. |
 |  [minimaIndices](./math.minimaindices.md) | Returns an iterator yielding all minima indices in given <code>values</code> array. The search range can be optionally defined via semi-open \[from, to) index interval. |
 |  [mix](./math.mix.md) |  |
-|  [mixBilinear](./math.mixbilinear.md) | 
-```ts
-c    d
-+----+
-|    |
-+----+
-a    b
-
-```
- |
+|  [mixBilinear](./math.mixbilinear.md) |  |
 |  [mixCubic](./math.mixcubic.md) |  |
-|  [mixCubicHermite](./math.mixcubichermite.md) | Computes cubic-hermite interpolation between <code>a</code> / <code>b</code> at normalized time <code>t</code> and using respective tangents <code>ta</code> / <code>tb</code>.[https://en.wikipedia.org/wiki/Cubic\_Hermite\_spline](https://en.wikipedia.org/wiki/Cubic_Hermite_spline) mixHermite  tangentCardinal  tangentDiff3 |
-|  [mixHermite](./math.mixhermite.md) | Returns hermite interpolation of <code>a, b, c, d</code> at normalized position <code>t</code>, where <code>a</code> and <code>d</code> are used as predecessor/successor of <code>b</code> / <code>c</code> and only inform the tangent of the interpolation curve. The interpolated result is that of <code>b</code> and <code>c</code>.<!-- -->Assumes all inputs are uniformly spaced. If that's not the case, use <code>mixCubicHermite()</code> with one of the tangent generators supporting non-uniform spacing of points.<!-- -->See: [https://www.desmos.com/calculator/j4gf8g9vkr](https://www.desmos.com/calculator/j4gf8g9vkr)<!-- -->Source: [https://www.musicdsp.org/en/latest/Other/93-hermite-interpollation.html](https://www.musicdsp.org/en/latest/Other/93-hermite-interpollation.html) mixCubicHermite  tangentCardinal  tangentDiff3 |
+|  [mixCubicHermite](./math.mixcubichermite.md) | Computes cubic-hermite interpolation between <code>a</code> / <code>b</code> at normalized time <code>t</code> and using respective tangents <code>ta</code> / <code>tb</code>.[https://en.wikipedia.org/wiki/Cubic\_Hermite\_spline](https://en.wikipedia.org/wiki/Cubic_Hermite_spline)<!-- -->- [mixHermite](./math.mixhermite.md) - [tangentCardinal](./math.tangentcardinal.md) - [tangentDiff3](./math.tangentdiff3.md) |
+|  [mixHermite](./math.mixhermite.md) | Returns hermite interpolation of <code>a, b, c, d</code> at normalized position <code>t</code>, where <code>a</code> and <code>d</code> are used as predecessor/successor of <code>b</code> / <code>c</code> and only inform the tangent of the interpolation curve. The interpolated result is that of <code>b</code> and <code>c</code>.<!-- -->Assumes all inputs are uniformly spaced. If that's not the case, use [mixCubicHermite](./math.mixcubichermite.md) with one of the tangent generators supporting non-uniform spacing of points.<!-- -->See: [https://www.desmos.com/calculator/j4gf8g9vkr](https://www.desmos.com/calculator/j4gf8g9vkr)<!-- -->Source: [https://www.musicdsp.org/en/latest/Other/93-hermite-interpollation.html](https://www.musicdsp.org/en/latest/Other/93-hermite-interpollation.html)<!-- -->- [mixCubicHermite](./math.mixcubichermite.md) - [tangentCardinal](./math.tangentcardinal.md) - [tangentDiff3](./math.tangentdiff3.md) |
 |  [mixQuadratic](./math.mixquadratic.md) |  |
 |  [muli16](./math.muli16.md) |  |
 |  [muli32](./math.muli32.md) |  |
@@ -179,11 +154,11 @@ a    b
 |  [SIXTH](./math.sixth.md) |  |
 |  [smax](./math.smax.md) | Smooth maximum. Note: Result values will be slightly larger than max value near max(a,b) + eps due to exponential decay. Higher <code>k</code> values reduce the error, but also reduce the smoothing. Recommended k=16.[https://en.wikipedia.org/wiki/Smooth\_maximum](https://en.wikipedia.org/wiki/Smooth_maximum) |
 |  [smin](./math.smin.md) | See <code>smax()</code>. |
-|  [smootherStep](./math.smootherstep.md) | Similar to <code>smoothStep()</code> but using different polynomial. |
+|  [smootherStep](./math.smootherstep.md) | Similar to [smoothStep](./math.smoothstep.md) but using different polynomial. |
 |  [smoothStep](./math.smoothstep.md) | GLSL-style smoothStep threshold function. |
-|  [solveCubic](./math.solvecubic.md) | Computes solutions for quadratic equation: <code>ax^3 + bx^2 + c*x + d = 0</code>. Returns array of solutions, both real &amp; imaginary. Note: <code>a</code> MUST NOT be zero. If the cubic term is missing (i.e. zero), use <code>solveQuadratic</code> or <code>solveLinear</code> instead.[https://en.wikipedia.org/wiki/Cubic\_function](https://en.wikipedia.org/wiki/Cubic_function) |
+|  [solveCubic](./math.solvecubic.md) | Computes solutions for quadratic equation: <code>ax^3 + bx^2 + c*x + d = 0</code>. Returns array of solutions, both real &amp; imaginary. Note: <code>a</code> MUST NOT be zero. If the cubic term is missing (i.e. zero), use [solveQuadratic](./math.solvequadratic.md) or [solveLinear](./math.solvelinear.md) instead.[https://en.wikipedia.org/wiki/Cubic\_function](https://en.wikipedia.org/wiki/Cubic_function) |
 |  [solveLinear](./math.solvelinear.md) | Computes solution for linear equation: <code>ax + b = 0</code>.<!-- -->Note: <code>a</code> MUST NOT be zero. |
-|  [solveQuadratic](./math.solvequadratic.md) | Computes solutions for quadratic equation: <code>ax^2 + bx + c = 0</code>. Returns array of real solutions. Note: <code>a</code> MUST NOT be zero. If the quadratic term is missing, use <code>solveLinear</code> instead.<!-- -->- [https://en.wikipedia.org/wiki/Quadratic\_function](https://en.wikipedia.org/wiki/Quadratic_function) - [https://en.wikipedia.org/wiki/Quadratic\_equation](https://en.wikipedia.org/wiki/Quadratic_equation) |
+|  [solveQuadratic](./math.solvequadratic.md) | Computes solutions for quadratic equation: <code>ax^2 + bx + c = 0</code>. Returns array of real solutions. Note: <code>a</code> MUST NOT be zero. If the quadratic term is missing, use [solveLinear](./math.solvelinear.md) instead.<!-- -->- [https://en.wikipedia.org/wiki/Quadratic\_function](https://en.wikipedia.org/wiki/Quadratic_function) - [https://en.wikipedia.org/wiki/Quadratic\_equation](https://en.wikipedia.org/wiki/Quadratic_equation) |
 |  [SQRT2\_2](./math.sqrt2_2.md) |  |
 |  [SQRT2\_3](./math.sqrt2_3.md) |  |
 |  [SQRT2](./math.sqrt2.md) |  |
@@ -195,8 +170,8 @@ a    b
 |  [subu16](./math.subu16.md) |  |
 |  [subu32](./math.subu32.md) |  |
 |  [subu8](./math.subu8.md) |  |
-|  [tangentCardinal](./math.tangentcardinal.md) | Helper function for <code>mixCubicHermite()</code>. Computes cardinal tangents based on point neighbors of a point B (not given), i.e. <code>a</code> (predecessor) and <code>c</code> (successor) and their times (defaults to uniformly spaced). The optional <code>tension</code> parameter can be used to scale the tangent where 0.0 produces a Cardinal spline tangent and 1.0 a Catmull-Rom (opposite to the Wikipedia ref).[https://en.wikipedia.org/wiki/Cubic\_Hermite\_spline\#Cardinal\_spline](https://en.wikipedia.org/wiki/Cubic_Hermite_spline#Cardinal_spline) |
-|  [tangentDiff3](./math.tangentdiff3.md) | Helper function for <code>mixCubicHermite()</code>. Computes tangent for <code>curr</code>, based on 3-point finite difference, where <code>prev</code> &amp; <code>next</code> are <code>curr</code>'s neighbors and the <code>tX</code> the three points' respective time values. The latter are equally spaced by default (each 1.0 apart).<!-- -->Using this function with equal spacing of 1.0 and together with <code>mixCubicHermite()</code> will produce same results as the somewhat optimized variant <code>mixHermite()</code>.[https://en.wikipedia.org/wiki/Cubic\_Hermite\_spline\#Finite\_difference](https://en.wikipedia.org/wiki/Cubic_Hermite_spline#Finite_difference) |
+|  [tangentCardinal](./math.tangentcardinal.md) | Helper function for [mixCubicHermite](./math.mixcubichermite.md)<!-- -->. Computes cardinal tangents based on point neighbors of a point B (not given), i.e. <code>a</code> (predecessor) and <code>c</code> (successor) and their times (defaults to uniformly spaced). The optional <code>tension</code> parameter can be used to scale the tangent where 0.0 produces a Cardinal spline tangent and 1.0 a Catmull-Rom (opposite to the Wikipedia ref).[https://en.wikipedia.org/wiki/Cubic\_Hermite\_spline\#Cardinal\_spline](https://en.wikipedia.org/wiki/Cubic_Hermite_spline#Cardinal_spline) |
+|  [tangentDiff3](./math.tangentdiff3.md) | Helper function for [mixCubicHermite](./math.mixcubichermite.md)<!-- -->. Computes tangent for <code>curr</code>, based on 3-point finite difference, where <code>prev</code> &amp; <code>next</code> are <code>curr</code>'s neighbors and the <code>tX</code> the three points' respective time values. The latter are equally spaced by default (each 1.0 apart).<!-- -->Using this function with equal spacing of 1.0 and together with [mixCubicHermite](./math.mixcubichermite.md) will produce same results as the somewhat optimized variant [mixHermite](./math.mixhermite.md)<!-- -->.[https://en.wikipedia.org/wiki/Cubic\_Hermite\_spline\#Finite\_difference](https://en.wikipedia.org/wiki/Cubic_Hermite_spline#Finite_difference) |
 |  [TAU](./math.tau.md) |  |
 |  [THIRD\_PI](./math.third_pi.md) |  |
 |  [THIRD](./math.third.md) |  |

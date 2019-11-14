@@ -4,7 +4,7 @@
 
 ## ModelSpec.attribPool property
 
-Geometry attributes given as `AttribPool` instance.
+Geometry attributes given as [AttribPool](./vector-pools.attribpool.md) instance.
 
 <b>Signature:</b>
 

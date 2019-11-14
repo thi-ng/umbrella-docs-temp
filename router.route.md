@@ -18,7 +18,7 @@ export interface Route extends IID<string>
 |  --- | --- | --- |
 |  [auth](./router.route.auth.md) | <code>boolean</code> | Flag to indicate if this route should be passed to the globally configured authentication function. Only matched and validated routes are processed. |
 |  [match](./router.route.match.md) | <code>string[]</code> | Array of path components. If a value is prefixed with <code>?</code> this path component will be captured under that name. E.g. <code>[&quot;projects&quot;, &quot;?id&quot;]</code> will match any of these routes:<!-- -->- <code>projects/123</code> - <code>projects/abcde</code><code>validate</code> options can then be used to further restrict the possible value range of the <code>id</code> value... |
-|  [title](./router.route.title.md) | <code>string</code> | Optional route title (passed to <code>RouteMatch</code>) |
+|  [title](./router.route.title.md) | <code>string</code> | Optional route title (passed to [RouteMatch](./router.routematch.md)<!-- -->) |
 |  [validate](./router.route.validate.md) | <code>IObjectOf&lt;RouteParamValidator&gt;</code> | This object specifies coercions and validators for variable / parameterized path components, e.g.
 ```
 {

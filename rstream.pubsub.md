@@ -4,7 +4,7 @@
 
 ## pubsub variable
 
-Creates a new `PubSub` instance. See class docs for further details.
+Creates a new [PubSub](./rstream.pubsub.md) instance. See class docs for further details.
 
 <b>Signature:</b>
 

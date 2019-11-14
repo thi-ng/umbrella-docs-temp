@@ -4,9 +4,9 @@
 
 ## distToLine variable
 
-Returns distance from `p` to closest point to infinite line `a` -<!-- -->&gt; `b`<!-- -->. Use `distToSegment` to only consider the actual line segment between these two points.
+Returns distance from `p` to closest point to infinite line `a` -<!-- -->&gt; `b`<!-- -->. Use [distToSegment](./geom-closest-point.disttosegment.md) to only consider the actual line segment between these two points.
 
- distToSegment
+[distToSegment](./geom-closest-point.disttosegment.md)
 
 <b>Signature:</b>
 

@@ -14,6 +14,6 @@ export interface PackedChannelSpec
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [lane](./pixel.packedchannelspec.lane.md) | <code>Lane</code> | Related ABGR lane this channel is mapped from/to. Only used if parent format uses auto-generated <code>IABGRConvert</code> implementation (i.e. only if no-user defined converters are given to <code>PackedFormatSpec</code>). |
+|  [lane](./pixel.packedchannelspec.lane.md) | <code>Lane</code> | Related ABGR lane this channel is mapped from/to. Only used if parent format uses auto-generated [IABGRConvert](./pixel.iabgrconvert.md) implementation (i.e. only if no-user defined converters are given to [PackedFormatSpec](./pixel.packedformatspec.md)<!-- -->). |
 |  [size](./pixel.packedchannelspec.size.md) | <code>number</code> | Channel size in bits (1-8) |
 

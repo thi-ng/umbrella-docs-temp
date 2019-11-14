@@ -6,7 +6,7 @@
 
 Transducer. Same as `map(deepTransform(spec))`
 
-See `deepTransform()` for details.
+See [deepTransform](./transducers.deeptransform.md) for details.
 
 <b>Signature:</b>
 

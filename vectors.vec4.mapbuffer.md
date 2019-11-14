@@ -4,7 +4,7 @@
 
 ## Vec4.mapBuffer() method
 
-Returns array of memory mapped `Vec4` instances using given backing array and stride settings: The `cstride` is the step size between individual XYZ vector components. `estride` is the step size between successive vectors. This arrangement allows for different storage approaches, incl. SOA, AOS, striped / interleaved etc.
+Returns array of memory mapped [Vec4](./vectors.vec4.md) instances using given backing array and stride settings: The `cstride` is the step size between individual XYZ vector components. `estride` is the step size between successive vectors. This arrangement allows for different storage approaches, incl. SOA, AOS, striped / interleaved etc.
 
 <b>Signature:</b>
 

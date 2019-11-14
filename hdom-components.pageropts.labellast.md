@@ -4,7 +4,7 @@
 
 ## PagerOpts.labelLast property
 
-Label for "last page" button. Default: "<!-- -->&gt;<!-- -->&gt;<!-- -->"
+Label for "last page" button. Default: `">>"`
 
 <b>Signature:</b>
 

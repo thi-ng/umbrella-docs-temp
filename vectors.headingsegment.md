@@ -4,7 +4,7 @@
 
 ## headingSegment variable
 
-Same as `headingSegmentXY`<!-- -->.
+Same as [headingSegmentXY](./vectors.headingsegmentxy.md)<!-- -->.
 
 <b>Signature:</b>
 

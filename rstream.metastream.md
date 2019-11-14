@@ -4,7 +4,7 @@
 
 ## metaStream variable
 
-A `MetaStream` is a subscription type which transforms each incoming value into a new stream, subscribes to it (via an hidden / internal subscription) and then only passes values from that stream to its own subscribers. If a new value is received, the meta stream first unsubscribes from any still active stream, before creating and subscribing to the new stream. Hence this stream type is useful for cases where streams need to be dynamically created &amp; inserted into an existing dataflow topology.
+A [MetaStream](./rstream.metastream.md) is a subscription type which transforms each incoming value into a new stream, subscribes to it (via an hidden / internal subscription) and then only passes values from that stream to its own subscribers. If a new value is received, the meta stream first unsubscribes from any still active stream, before creating and subscribing to the new stream. Hence this stream type is useful for cases where streams need to be dynamically created &amp; inserted into an existing dataflow topology.
 
 The user supplied `factory` function will be called for each incoming value and is responsible for creating the new stream instances. If the function returns null/undefined, no further action will be taken (acts like a filter transducer).
 
@@ -33,6 +33,15 @@ The factory function does NOT need to create new streams, but can only merely re
 
 If the meta stream is the only subscriber to these input streams, you'll need to add a dummy subscription to each in order to keep them alive and support dynamic switching between them. See issue \#74
 
+<b>Signature:</b>
+
+```typescript
+metaStream: <A, B>(factory: Fn<A, Subscription<B, B>>, id?: string | undefined) => MetaStream<A, B>
+```
+
+## Example
+
+
 ```ts
 a = fromIterable(tx.repeat("a"), 1000);
 b = fromIterable(tx.repeat("b"), 1000);
@@ -55,8 +64,3 @@ m.next(true);
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-metaStream: <A, B>(factory: Fn<A, Subscription<B, B>>, id?: string | undefined) => MetaStream<A, B>
-```

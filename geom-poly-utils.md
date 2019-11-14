@@ -8,15 +8,7 @@
 
 |  Variable | Description |
 |  --- | --- |
-|  [bounds](./geom-poly-utils.bounds.md) | Computes the nD bounds of given vectors. <code>vmin</code> should be initialized to <code>+∞</code> and <code>vmax</code> to <code>-∞</code> (e.g. use copies of <code>MIN*</code> / <code>MAX*</code> constants defined in thi.ng/vectors).
-```ts
-points = [[-1,-2], [5,-3], [0,4]];
-
-bounds(points, [...MAX2], [...MIN2])
-// [[-1,-3],[5,4]]
-
-```
-Returns 2-tuple of modified <code>[vmin, vmax]</code>. |
+|  [bounds](./geom-poly-utils.bounds.md) | Computes the nD bounds of given vectors. <code>vmin</code> should be initialized to <code>+∞</code> and <code>vmax</code> to <code>-∞</code> (e.g. use copies of <code>MIN*</code> / <code>MAX*</code> constants defined in thi.ng/vectors). |
 |  [centerOfWeight2](./geom-poly-utils.centerofweight2.md) |  |
 |  [centroid](./geom-poly-utils.centroid.md) |  |
 |  [circumCenter2](./geom-poly-utils.circumcenter2.md) | Computes and returns the center of the circumcircle of the given 2D triangle points. Returns <code>undefined</code> if the points are colinear or coincident. |

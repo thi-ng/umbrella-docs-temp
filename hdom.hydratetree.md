@@ -4,7 +4,7 @@
 
 ## hydrateTree variable
 
-See `HDOMImplementation` interface for further details.
+See [HDOMImplementation](./hdom.hdomimplementation.md) interface for further details.
 
 <b>Signature:</b>
 

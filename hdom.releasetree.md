@@ -4,7 +4,7 @@
 
 ## releaseTree variable
 
-Recursively attempts to call the `release` lifecycle method on every element in given tree (branch), using depth-first descent. Each element is checked for the presence of the `__release` control attribute. If (and only if) it is set to `false`<!-- -->, further descent into that element's branch is skipped.
+Recursively attempts to call the [ILifecycle.release()](./hdom.ilifecycle.release.md) lifecycle method on every element in given tree (branch), using depth-first descent. Each element is checked for the presence of the `__release` control attribute. If (and only if) it is set to `false`<!-- -->, further descent into that element's branch is skipped.
 
 <b>Signature:</b>
 

@@ -4,7 +4,7 @@
 
 ## runWord variable
 
-Executes word with given name, defined in supplied `env` object and with given optional initial stack. Returns resulting `StackContext` tuple.
+Executes word with given name, defined in supplied `env` object and with given optional initial stack. Returns resulting [StackContext](./pointfree.stackcontext.md) tuple.
 
 <b>Signature:</b>
 

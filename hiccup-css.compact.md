@@ -4,7 +4,7 @@
 
 ## COMPACT variable
 
-Default format config used by `css()` function. Forms "minimized" CSS without obsolete white space and omits comments unless they were forced.
+Default format config used by [css](./hiccup-css.css.md) function. Forms "minimized" CSS without obsolete white space and omits comments unless they were forced.
 
 <b>Signature:</b>
 

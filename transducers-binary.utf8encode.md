@@ -6,7 +6,19 @@
 
 Transducer which encodes UTF-8 characters into a byte sequence.
 
-Also see `utf8Decode()` for reverse transformation.
+Also see  for reverse transformation.
+
+<b>Signature:</b>
+
+```typescript
+export declare function utf8Encode(): Transducer<string, number>;
+```
+<b>Returns:</b>
+
+`Transducer<string, number>`
+
+## Example
+
 
 ```ts
 transduce(
@@ -19,13 +31,4 @@ transduce(
 // 00000010 | 98 80 00 00 00 00 00 00 | ........
 
 ```
-
-<b>Signature:</b>
-
-```typescript
-export declare function utf8Encode(): Transducer<string, number>;
-```
-<b>Returns:</b>
-
-`Transducer<string, number>`
 

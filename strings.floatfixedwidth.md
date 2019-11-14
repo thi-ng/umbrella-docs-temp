@@ -4,7 +4,7 @@
 
 ## floatFixedWidth variable
 
-Similar to `float`<!-- -->, returns `Stringer` which formats numbers to given character width &amp; precision. Uses scientific notation if needed.
+Similar to `float`<!-- -->, returns [Stringer](./strings.stringer.md) which formats numbers to given character width &amp; precision. Uses scientific notation if needed.
 
 Default precision: 3 fractional digits
 

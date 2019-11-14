@@ -4,7 +4,7 @@
 
 ## StatefulPredicate type
 
-Higher order `Predicate` builder. Possibly stateful.
+Higher order [Predicate](./api.predicate.md) builder. Possibly stateful.
 
 <b>Signature:</b>
 

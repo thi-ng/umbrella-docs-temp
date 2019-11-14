@@ -4,7 +4,7 @@
 
 ## float variable
 
-Returns `Stringer` which formats numbers to given precision. Exceptions:
+Returns [Stringer](./strings.stringer.md) which formats numbers to given precision. Exceptions:
 
 - NaN =<!-- -->&gt; "NaN" - Infinity =<!-- -->&gt; "+/-∞"
 

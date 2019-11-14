@@ -9,7 +9,7 @@
 |  Class | Description |
 |  --- | --- |
 |  [MetaStream](./rstream.metastream.md) |  |
-|  [PubSub](./rstream.pubsub.md) | Topic based stream splitter. Applies <code>topic</code> function to each received value and only forwards it to child subscriptions for returned topic. The actual topic (return value from <code>topic</code> fn) can be of any type, apart from <code>undefined</code>. Complex topics (e.g objects / arrays) are allowed and they're matched with registered topics using  by default (but customizable via <code>equiv</code> option). Each topic can have any number of subscribers.<!-- -->If a transducer is specified for the <code>PubSub</code>, it is always applied prior to passing the input to the topic function. I.e. in this case the topic function will receive the transformed inputs.<!-- -->PubSub supports dynamic topic subscriptions and unsubscriptions via <code>subscribeTopic()</code> and <code>unsubscribeTopic()</code>. However, the standard <code>subscribe()</code> / <code>unsubscribe()</code> methods are NOT supported (since meaningless) and will throw an error! <code>unsubscribe()</code> can only be called WITHOUT argument to unsubscribe the entire <code>PubSub</code> instance (incl. all topic subscriptions) from the parent stream. |
+|  [PubSub](./rstream.pubsub.md) | Topic based stream splitter. Applies <code>topic</code> function to each received value and only forwards it to child subscriptions for returned topic. |
 |  [Resolver](./rstream.resolver.md) |  |
 |  [SidechainPartition](./rstream.sidechainpartition.md) |  |
 |  [SidechainToggle](./rstream.sidechaintoggle.md) |  |
@@ -23,40 +23,14 @@
 
 |  Enumeration | Description |
 |  --- | --- |
-|  [CloseMode](./rstream.closemode.md) | Closing behavior for <code>StreamMerge</code> and <code>StreamSync</code>. |
+|  [CloseMode](./rstream.closemode.md) | Closing behavior for [StreamMerge](./rstream.streammerge.md) and [StreamSync](./rstream.streamsync.md)<!-- -->. |
 |  [State](./rstream.state.md) |  |
 
 ## Functions
 
 |  Function | Description |
 |  --- | --- |
-|  [stream()](./rstream.stream.md) | Creates a new <code>Stream</code> instance, optionally with given <code>StreamSource</code> function and / or ID. If a <code>src</code> function is provided, the function will be only called (with the <code>Stream</code> instance as single argument) once the first subscriber has attached to the stream. If the function returns another function, it will be used for cleanup purposes if the stream is cancelled, e.g. if the last subscriber has unsubscribed. Streams are intended as (primarily async) data sources in a dataflow graph and are the primary construct for the various <code>from*()</code> functions provided by the package. However, streams can also be triggered manually (from outside the stream), in which case the user should call <code>stream.next()</code> to cause value propagation.
-```ts
-a = rs.stream((s) => {
-    s.next(1);
-    s.next(2);
-    s.done()
-});
-a.subscribe(trace("a"))
-// a 1
-// a 2
-// a done
-
-// as reactive value mechanism
-b = rs.stream();
-// or alternatively
-// b = rs.subscription();
-
-b.subscribe(trace("b1"));
-b.subscribe(trace("b2"));
-
-// external trigger
-b.next(42);
-// b1 42
-// b2 42
-
-```
-<code>Stream</code>s (like <code>Subscription</code>s) implement the [IDeref](./api.ideref.md) interface which provides read access to a stream's last received value. This is useful for various purposes, e.g. in combination with , which supports direct embedding of streams (i.e. their values) into UI components (and will be deref'd automatically). If the stream has not yet emitted a value or if the stream is done, it will deref to <code>undefined</code>. |
+|  [stream()](./rstream.stream.md) | Creates a new [Stream](./rstream.stream.md) instance, optionally with given [StreamSource](./rstream.streamsource.md) function and / or ID. If a <code>src</code> function is provided, the function will be only called (with the [Stream](./rstream.stream.md) instance as single argument) once the first subscriber has attached to the stream. If the function returns another function, it will be used for cleanup purposes if the stream is cancelled, e.g. if the last subscriber has unsubscribed. Streams are intended as (primarily async) data sources in a dataflow graph and are the primary construct for the various <code>from*()</code> functions provided by the package. However, streams can also be triggered manually (from outside the stream), in which case the user should call <code>stream.next()</code> to cause value propagation. |
 |  [stream(id)](./rstream.stream_1.md) |  |
 |  [stream(src)](./rstream.stream_2.md) |  |
 |  [stream(src, id)](./rstream.stream_3.md) |  |
@@ -81,105 +55,18 @@ b.next(42);
 
 |  Variable | Description |
 |  --- | --- |
-|  [bisect](./rstream.bisect.md) | Returns a new <code>PubSub</code> instance using given predicate <code>pred</code> as boolean topic function and <code>a</code> &amp; <code>b</code> as subscribers for truthy (<code>a</code>) and falsy <code>b</code> values.
-```ts
-rs.fromIterable([1, 2, 3, 4]).subscribe(
-  rs.bisect(
-    (x) => !!(x & 1),
-    rs.trace("odd"),
-    rs.trace("even")
-  )
-);
-// odd 1
-// even 2
-// odd 3
-// even 4
-// odd done
-// even done
-
-```
-If <code>a</code> or <code>b</code> need to be subscribed to directly, then <code>a</code> / <code>b</code> MUST be first created as <code>Subscription</code> (if not already) and a reference kept prior to calling <code>bisect()</code>.
-```ts
-const odd = rs.subscription();
-const even = rs.subscription();
-odd.subscribe(rs.trace("odd"));
-odd.subscribe(rs.trace("odd x10"), tx.map((x)=> x * 10));
-even.subscribe(rs.trace("even"));
-
-rs.fromIterable([1, 2, 3, 4]).subscribe(
-    rs.bisect((x) => !!(x & 1), odd, even)
-);
-
-```
- |
-|  [fromAtom](./rstream.fromatom.md) | Yields stream of value changes in given atom / cursor. Attaches watch to atom and checks for value changes with given <code>changed</code> predicate (<code>!==</code> by default). If the predicate returns truthy result, the new value is emitted on the stream. If <code>emitFirst</code> is true (default), also emits atom's current value when first subscriber attaches to stream.<!-- -->See: - fromView() - @<!-- -->thi.ng/atom
-```ts
-db = new Atom({a: 23, b: 88});
-cursor = new Cursor(db, "a")
-
-rs.fromAtom(cursor).subscribe(rs.trace("cursor val:"))
-// cursor val: 23
-
-cursor.reset(42);
-// cursor val: 42
-
-db.reset({a: 66})
-// cursor val: 66
-
-```
- |
-|  [fromDOMEvent](./rstream.fromdomevent.md) | Same as <code>fromEvent</code>, however only supports well-known DOM event names. Returned stream instance will use corresponding concrete event type in its type signature, whereas <code>fromEvent</code> will only use the generic <code>Event</code>.
-```ts
-fromDOMEvent(document.body, "mousemove"); // Stream<MouseEvent>
-fromEvent(document.body, "mousemove"); // Stream<Event>
-
-```
- |
+|  [bisect](./rstream.bisect.md) | Returns a new [PubSub](./rstream.pubsub.md) instance using given predicate <code>pred</code> as boolean topic function and <code>a</code> &amp; <code>b</code> as subscribers for truthy (<code>a</code>) and falsy <code>b</code> values. |
+|  [fromAtom](./rstream.fromatom.md) | Yields stream of value changes in given atom / cursor. Attaches watch to atom and checks for value changes with given <code>changed</code> predicate (<code>!==</code> by default). If the predicate returns truthy result, the new value is emitted on the stream. If <code>emitFirst</code> is true (default), also emits atom's current value when first subscriber attaches to stream.<!-- -->See: - [fromView](./rstream.fromview.md) -  |
+|  [fromDOMEvent](./rstream.fromdomevent.md) | Same as [fromEvent](./rstream.fromevent.md)<!-- -->, however only supports well-known DOM event names. Returned stream instance will use corresponding concrete event type in its type signature, whereas [fromEvent](./rstream.fromevent.md) will only use the generic <code>Event</code>. |
 |  [fromEvent](./rstream.fromevent.md) | Creates a new stream of events attached to given element / event target and using given event listener options (same as supported by <code>addEventListener()</code>, default: false). |
-|  [fromInterval](./rstream.frominterval.md) | Returns a new <code>Stream</code> which emits a monotonically increasing counter value at given <code>delay</code> interval, up to an optionally defined max value (default: ∞), after which the stream is closed. The stream only starts when the first subscriber becomes available. |
-|  [fromIterable](./rstream.fromiterable.md) | Creates a new <code>Stream</code> of given iterable which asynchronously calls <code>.next()</code> for each item of the iterable when the first (and in this case the only one) subscriber becomes available. The values are processed via <code>setInterval()</code> using the given <code>delay</code> value (default: 0). Once the iterable is exhausted (if finite), then calls <code>.done()</code> by default, but can be avoided by passing <code>false</code> as last argument. |
-|  [fromIterableSync](./rstream.fromiterablesync.md) | Creates a new <code>Stream</code> of given iterable which synchronously calls <code>.next()</code> for each item of the iterable when the first (and in this case the only one) subscriber becomes available. Once the iterable is exhausted (MUST be finite!), then calls <code>.done()</code> by default, but can be avoided by passing <code>false</code> as last argument. |
+|  [fromInterval](./rstream.frominterval.md) | Returns a new [Stream](./rstream.stream.md) which emits a monotonically increasing counter value at given <code>delay</code> interval, up to an optionally defined max value (default: ∞), after which the stream is closed. The stream only starts when the first subscriber becomes available. |
+|  [fromIterable](./rstream.fromiterable.md) | Creates a new [Stream](./rstream.stream.md) of given iterable which asynchronously calls <code>.next()</code> for each item of the iterable when the first (and in this case the only one) subscriber becomes available. The values are processed via <code>setInterval()</code> using the given <code>delay</code> value (default: 0). Once the iterable is exhausted (if finite), then calls <code>.done()</code> by default, but can be avoided by passing <code>false</code> as last argument. |
+|  [fromIterableSync](./rstream.fromiterablesync.md) | Creates a new [Stream](./rstream.stream.md) of given iterable which synchronously calls <code>.next()</code> for each item of the iterable when the first (and in this case the only one) subscriber becomes available. Once the iterable is exhausted (MUST be finite!), then calls <code>.done()</code> by default, but can be avoided by passing <code>false</code> as last argument. |
 |  [fromPromise](./rstream.frompromise.md) | Yields a single-value stream of the resolved promise and then automatically marks itself done. It doesn't matter if the promise resolves before the first subscriber has attached. |
-|  [fromPromises](./rstream.frompromises.md) | Wraps given promises in <code>Promise.all()</code> to yield stream of results in same order as arguments, then closes. If any of the promises rejects, all others do too and calls <code>error()</code> in subscribers.
-```ts
-rs.fromPromises([
-    Promise.resolve(1),
-    Promise.resolve(2),
-    Promise.resolve(3)
-]).subscribe(rs.trace())
-// 1
-// 2
-// 3
-// done
-
-```
-If individual error handling is required, an alternative is below (however this approach provides no ordering guarantees):
-```ts
-rs.fromIterable([
-    Promise.resolve(1),
-    new Promise(()=> { setTimeout(()=> { throw new Error("eeek"); }, 10); }),
-    Promise.resolve(3)
-]).subscribe(rs.resolve()).subscribe(rs.trace())
-
-```
- |
+|  [fromPromises](./rstream.frompromises.md) | Wraps given promises in <code>Promise.all()</code> to yield stream of results in same order as arguments, then closes. If any of the promises rejects, all others do too and calls [ISubscriber.error](./rstream.isubscriber.error.md) in subscribers. |
 |  [fromRAF](./rstream.fromraf.md) | Yields a stream of monotonically increasing counter, triggered by a <code>requestAnimationFrame()</code> loop (only available in browser environments). In NodeJS, this function falls back to <code>fromInterval(16)</code>, yielding a similar (approximately 60fps) stream.<!-- -->Subscribers to this stream will be processed during that same loop iteration. |
-|  [fromView](./rstream.fromview.md) | Similar to <code>fromAtom()</code>, but creates an eager derived view for a nested value in atom / cursor and yields stream of its value changes. Views are readonly versions of Cursors and more lightweight. The view checks for value changes with given <code>equiv</code> predicate (<code>@thi.ng/equiv</code> by default). If the predicate returns a falsy result, the new value is emitted on the stream. The first value emitted is always the (possibly transformed) current value at the stream's start time (i.e. when the first subscriber attaches).<!-- -->If the optional <code>tx</code> is given, the raw value is first passed to this transformer function and its result emitted on the stream.<!-- -->When the stream is cancelled the view is destroyed as well.<!-- -->See: - fromAtom() - @<!-- -->thi.ng/atom
-```ts
-db = new Atom({a: 1, b: {c: 2}});
-
-fromView(db, "b.c", (x) => x != null ? x : "n/a").subscribe(trace("view:"))
-// view: 2
-
-db.swapIn("b.c", (x: number) => x + 1);
-// view: 3
-
-db.reset({a: 10});
-// view: n/a
-
-```
- |
-|  [fromWorker](./rstream.fromworker.md) | Returns a new <code>Stream</code> instance which adds "message" and "error" event listeners to given <code>worker</code> and then passes received values downstream. If <code>terminate</code> is true (default), the worker will be terminated when the stream is being closed (either directly or indirectly, i.e. if the user called <code>.done()</code> on the stream or the last child subscription has unsubscribed).<!-- -->As with <code>postWorker()</code>, the <code>worker</code> can be an existing <code>Worker</code> instance, a JS source code <code>Blob</code> or an URL string. In the latter two cases, a worker is created automatically using <code>utils/makeWorker()</code>.
+|  [fromView](./rstream.fromview.md) | Similar to [fromAtom](./rstream.fromatom.md)<!-- -->, but creates an eager derived view for a nested value in atom / cursor and yields stream of its value changes. Views are readonly versions of Cursors and more lightweight. The view checks for value changes with given <code>equiv</code> predicate (<code>@thi.ng/equiv</code> by default). If the predicate returns a falsy result, the new value is emitted on the stream. The first value emitted is always the (possibly transformed) current value at the stream's start time (i.e. when the first subscriber attaches).<!-- -->If the optional <code>tx</code> is given, the raw value is first passed to this transformer function and its result emitted on the stream.<!-- -->When the stream is cancelled the view is destroyed as well.<!-- -->See: - [fromAtom](./rstream.fromatom.md) -  |
+|  [fromWorker](./rstream.fromworker.md) | Returns a new [Stream](./rstream.stream.md) instance which adds "message" and "error" event listeners to given <code>worker</code> and then passes received values downstream. If <code>terminate</code> is true (default), the worker will be terminated when the stream is being closed (either directly or indirectly, i.e. if the user called <code>.done()</code> on the stream or the last child subscription has unsubscribed).<!-- -->As with [postWorker](./rstream.postworker.md)<!-- -->, the <code>worker</code> can be an existing <code>Worker</code> instance, a JS source code <code>Blob</code> or an URL string. In the latter two cases, a worker is created automatically using <code>utils/makeWorker()</code>.
 ```
 
 
@@ -188,45 +75,8 @@ db.reset({a: 10});
 |  [inlineWorker](./rstream.inlineworker.md) |  |
 |  [LOGGER](./rstream.logger.md) |  |
 |  [makeWorker](./rstream.makeworker.md) |  |
-|  [merge](./rstream.merge.md) | Returns a new <code>StreamMerge</code> instance, a subscription type consuming inputs from multiple inputs and passing received values on to any subscribers. Input streams can be added and removed dynamically. By default, <code>StreamMerge</code> calls <code>done()</code> when the last active input is done, but this behavior can be overridden via the <code>close</code> option.
-```ts
-merge({
-    // input streams w/ different frequencies
-    src: [
-        fromIterable([1, 2, 3], 10),
-        fromIterable([10, 20, 30], 21),
-        fromIterable([100, 200, 300], 7)
-    ]
-}).subscribe(trace());
-// 100
-// 1
-// 200
-// 10
-// 2
-// 300
-// 3
-// 20
-// 30
-
-```
-Use the <code>labeled()</code> transducer for each input to create a stream of labeled values and track their provenance:
-```ts
-merge({
-    src: [
-        fromIterable([1, 2, 3]).transform(labeled("a")),
-        fromIterable([10, 20, 30]).transform(labeled("b")),
-    ]
-}).subscribe(trace());
-// ["a", 1]
-// ["b", 10]
-// ["a", 2]
-// ["b", 20]
-// ["a", 3]
-// ["b", 30]
-
-```
- StreamMergeOpts |
-|  [metaStream](./rstream.metastream.md) | A <code>MetaStream</code> is a subscription type which transforms each incoming value into a new stream, subscribes to it (via an hidden / internal subscription) and then only passes values from that stream to its own subscribers. If a new value is received, the meta stream first unsubscribes from any still active stream, before creating and subscribing to the new stream. Hence this stream type is useful for cases where streams need to be dynamically created &amp; inserted into an existing dataflow topology.<!-- -->The user supplied <code>factory</code> function will be called for each incoming value and is responsible for creating the new stream instances. If the function returns null/undefined, no further action will be taken (acts like a filter transducer).
+|  [merge](./rstream.merge.md) | Returns a new [StreamMerge](./rstream.streammerge.md) instance, a subscription type consuming inputs from multiple inputs and passing received values on to any subscribers. Input streams can be added and removed dynamically. By default, [StreamMerge](./rstream.streammerge.md) calls <code>done()</code> when the last active input is done, but this behavior can be overridden via the <code>close</code> option. |
+|  [metaStream](./rstream.metastream.md) | A [MetaStream](./rstream.metastream.md) is a subscription type which transforms each incoming value into a new stream, subscribes to it (via an hidden / internal subscription) and then only passes values from that stream to its own subscribers. If a new value is received, the meta stream first unsubscribes from any still active stream, before creating and subscribing to the new stream. Hence this stream type is useful for cases where streams need to be dynamically created &amp; inserted into an existing dataflow topology.<!-- -->The user supplied <code>factory</code> function will be called for each incoming value and is responsible for creating the new stream instances. If the function returns null/undefined, no further action will be taken (acts like a filter transducer).
 ```
 // transform each received odd number into a stream
 // producing 3 copies of that number in the metastream
@@ -248,29 +98,7 @@ a.next(43)
 // 43
 
 ```
-The factory function does NOT need to create new streams, but can only merely return other existing streams, and so making the meta stream act like a switch.<!-- -->If the meta stream is the only subscriber to these input streams, you'll need to add a dummy subscription to each in order to keep them alive and support dynamic switching between them. See issue \#74
-```ts
-a = fromIterable(tx.repeat("a"), 1000);
-b = fromIterable(tx.repeat("b"), 1000);
-
-// dummy subscriptions
-a.subscribe({})
-b.subscribe({})
-
-m = metaStream((x) => x ? a : b);
-m.subscribe(trace("meta from: "));
-
-m.next(true);
-// meta from: a
-
-m.next(false);
-// meta from: b
-
-m.next(true);
-// meta from: a
-
-```
- |
+The factory function does NOT need to create new streams, but can only merely return other existing streams, and so making the meta stream act like a switch.<!-- -->If the meta stream is the only subscriber to these input streams, you'll need to add a dummy subscription to each in order to keep them alive and support dynamic switching between them. See issue \#74 |
 |  [nextID](./rstream.nextid.md) |  |
 |  [postWorker](./rstream.postworker.md) | Creates a subscriber which forwards received values to given worker. The <code>worker</code> can be an existing <code>Worker</code> instance, a JS source code <code>Blob</code> or an URL string. In the latter two cases, a worker is created automatically using <code>utils/makeWorker()</code>. If <code>transfer</code> is true, the received values will be marked as \*transferrable\* and the host app loses all access permissions to the transferred values. See <code>Worker.postMessage()</code> for details.<!-- -->If <code>terminate</code> is set to a positive number, then the worker will be automatically terminated after the stated number of milliseconds \*\*after\*\* the parent subscription is done.
 ```
@@ -287,20 +115,8 @@ a.next(42)
 
 ```
  |
-|  [pubsub](./rstream.pubsub.md) | Creates a new <code>PubSub</code> instance. See class docs for further details. |
-|  [resolve](./rstream.resolve.md) | Creates a new subscription which receives promises, buffers them and then passes their resolved values downstream. If the optional <code>fail</code> handler is provided, it'll be called with the error of each failed promise. If none is provided, the sub's <code>error()</code> handler is called, which then stops the sub from receiving further values.
-```ts
-fromIterable([1, 2, 3], 100)
-  .transform(tx.delayed(1000))
-  .subscribe(resolve())
-  .subscribe(trace("result"))
-// result 1
-// result 2
-// result 3
-// result done
-
-```
- |
+|  [pubsub](./rstream.pubsub.md) | Creates a new [PubSub](./rstream.pubsub.md) instance. See class docs for further details. |
+|  [resolve](./rstream.resolve.md) | Creates a new subscription which receives promises, buffers them and then passes their resolved values downstream. If the optional <code>fail</code> handler is provided, it'll be called with the error of each failed promise. If none is provided, the sub's <code>error()</code> handler is called, which then stops the sub from receiving further values. |
 |  [setLogger](./rstream.setlogger.md) |  |
 |  [sidechainPartition](./rstream.sidechainpartition.md) | Buffers values from <code>src</code> until side chain fires, then emits buffer (unless empty) and repeats process until either input is done. By default, the value read from the side chain is ignored, however the optional predicate can be used to only trigger for specific values / conditions.
 ```
@@ -332,7 +148,7 @@ fromInterval(500)
 
 ```
  |
-|  [subscription](./rstream.subscription.md) | Creates a new <code>Subscription</code> instance, the fundamental datatype &amp; building block provided by this package (<code>Stream</code>s are <code>Subscription</code>s too). Subscriptions can be:<!-- -->- linked into directed graphs (if async, not necessarily DAGs) - transformed using transducers (incl. early termination) - can have any number of subscribers (optionally each w/ their own transducer) - recursively unsubscribe themselves from parent after their last subscriber unsubscribed - will go into a non-recoverable error state if NONE of the subscribers has an error handler itself - implement the [IDeref](./api.ideref.md) interface
+|  [subscription](./rstream.subscription.md) | Creates a new [Subscription](./rstream.subscription.md) instance, the fundamental datatype &amp; building block provided by this package ([Stream](./rstream.stream.md)<!-- -->s are [Subscription](./rstream.subscription.md)<!-- -->s too). Subscriptions can be:<!-- -->- linked into directed graphs (if async, not necessarily DAGs) - transformed using transducers (incl. early termination) - can have any number of subscribers (optionally each w/ their own transducer) - recursively unsubscribe themselves from parent after their last subscriber unsubscribed - will go into a non-recoverable error state if NONE of the subscribers has an error handler itself - implement the [IDeref](./api.ideref.md) interface
 ```
 // as reactive value mechanism (same as with stream() above)
 s = rs.subscription();
@@ -348,61 +164,12 @@ s.next(42);
 
 ```
  |
-|  [sync](./rstream.sync.md) | Similar to <code>StreamMerge</code>, but with extra synchronization of inputs. Before emitting any new values, <code>StreamSync</code> collects values until at least one has been received from \*all\* inputs. Once that's the case, the collected values are sent as labeled tuple object to downstream subscribers. Each value in the emitted tuple objects is stored under their input stream's ID. Only the last value received from each input is passed on. After the initial tuple has been emitted, you can choose from two possible behaviors:<!-- -->1) Any future change in any input will produce a new result tuple. These tuples will retain the most recently read values from other inputs. This behavior is the default and illustrated in the above schematic. 2) If the <code>reset</code> option is <code>true</code>, every input will have to provide at least one new value again until another result tuple is produced.<!-- -->Any done inputs are automatically removed. By default, <code>StreamSync</code> calls <code>done()</code> when the last active input is done, but this behavior can be overridden via the <code>close</code> constructor option.
-```ts
-const a = rs.stream();
-const b = rs.stream();
-s = sync({ src: { a, b } }).subscribe(trace("result: "));
-a.next(1);
-b.next(2);
-// result: { a: 1, b: 2 }
-
-```
-Input streams can be added and removed dynamically and the emitted tuple size adjusts to the current number of inputs (the next time a value is received from any input).<!-- -->If the <code>reset</code> option is enabled, the last emitted tuple is allowed to be incomplete, by default. To only allow complete tuples, also set the <code>all</code> option to <code>false</code>.<!-- -->The synchronization is done via the <code>partitionSync()</code> transducer from the  package. See this function's docs for further details.[StreamSyncOpts](./rstream.streamsyncopts.md) |
+|  [sync](./rstream.sync.md) | Similar to [StreamMerge](./rstream.streammerge.md)<!-- -->, but with extra synchronization of inputs. Before emitting any new values, [StreamSync](./rstream.streamsync.md) collects values until at least one has been received from \*all\* inputs. Once that's the case, the collected values are sent as labeled tuple object to downstream subscribers. Each value in the emitted tuple objects is stored under their input stream's ID. Only the last value received from each input is passed on. After the initial tuple has been emitted, you can choose from two possible behaviors:<!-- -->1) Any future change in any input will produce a new result tuple. These tuples will retain the most recently read values from other inputs. This behavior is the default and illustrated in the above schematic. 2) If the <code>reset</code> option is <code>true</code>, every input will have to provide at least one new value again until another result tuple is produced.<!-- -->Any done inputs are automatically removed. By default, [StreamSync](./rstream.streamsync.md) calls <code>done()</code> when the last active input is done, but this behavior can be overridden via the <code>close</code> constructor option. |
 |  [trace](./rstream.trace.md) | Helper subscriber for inspection / debugging purposes. Simply logs received values to console, optionally with given <code>prefix</code>. |
-|  [transduce](./rstream.transduce.md) | Returns a promise which subscribes to given input and transforms incoming values using given transducer <code>xform</code> and reducer <code>rfn</code>. Once the input is done the promise will resolve with the final reduced result (or fail with error).
-```ts
-rs.transduce(
-  rs.fromIterable(tx.range(10)),
-  tx.map((x) => x * 10),
-  tx.add()
-).then((x) => console.log("result", x))
-
-// result 450
-
-```
- |
-|  [tunnel](./rstream.tunnel.md) | Creates a new worker <code>Tunnel</code> instance with given options. This subscription type processes received values via the configured worker(s) and then passes any values received back from the worker(s) on to downstream subscriptions, thereby allowing workers to be used transparently for stream processing. Multiple worker instances are supported for processing. See the <code>maxWorkers</code> option for details. |
-|  [tween](./rstream.tween.md) | Takes an existing stream/subscription <code>src</code> and attaches new subscription which interpolates between incoming values from <code>src</code> using the given <code>mix</code> function. The returned construct produces values at a rate controlled by the <code>clock</code> stream or frequency. If omitted, <code>clock</code> defaults to <code>fromRAF()</code> (\~60Hz). If given as number, creates a <code>fromInterval(clock)</code> or else uses the given <code>clock</code> stream directly. In general, the frequency of the <code>clock</code> should always be higher than that of <code>src</code>.<!-- -->If <code>stop</code> is given as well, no values will be passed downstream if that function returns true. This can be used to limit traffic once the tween target value has been reached.<!-- -->The returned subscription closes automatically when either <code>src</code> or <code>clock</code> is exhausted.
-```ts
-val = stream();
-
-rs.tween(
-  // consume from `val` stream
-  val,
-  // initial start value to interpolate from
-  0,
-  // interpolation fn (LERP)
-  (a, b) => a + (b - a) * 0.5,
-  // stop emitting values if difference to previous result < 0.01
-  (a, b) => Math.abs(a - b) < 0.01
-).subscribe(rs.trace("tweened"))
-
-a.next(10)
-// 5
-// 7.5
-// ...
-// 9.98046875
-
-a.next(100)
-// 55
-// 77.5
-// ...
-// 99.989013671875
-
-```
- |
-|  [tweenNumber](./rstream.tweennumber.md) | Convenience version of <code>tween</code> for its most common use case, tweening of numeric streams. |
+|  [transduce](./rstream.transduce.md) | Returns a promise which subscribes to given input and transforms incoming values using given transducer <code>xform</code> and reducer <code>rfn</code>. Once the input is done the promise will resolve with the final reduced result (or fail with error). |
+|  [tunnel](./rstream.tunnel.md) | Creates a new worker [Tunnel](./rstream.tunnel.md) instance with given options. This subscription type processes received values via the configured worker(s) and then passes any values received back from the worker(s) on to downstream subscriptions, thereby allowing workers to be used transparently for stream processing. Multiple worker instances are supported for processing. See the <code>maxWorkers</code> option for details. |
+|  [tween](./rstream.tween.md) | Takes an existing stream/subscription <code>src</code> and attaches new subscription which interpolates between incoming values from <code>src</code> using the given <code>mix</code> function. The returned construct produces values at a rate controlled by the <code>clock</code> stream or frequency. If omitted, <code>clock</code> defaults to [fromRAF](./rstream.fromraf.md) (\~60Hz). If given as number, creates a <code>fromInterval(clock)</code> or else uses the given <code>clock</code> stream directly. In general, the frequency of the <code>clock</code> should always be higher than that of <code>src</code>.<!-- -->If <code>stop</code> is given as well, no values will be passed downstream if that function returns true. This can be used to limit traffic once the tween target value has been reached.<!-- -->The returned subscription closes automatically when either <code>src</code> or <code>clock</code> is exhausted. |
+|  [tweenNumber](./rstream.tweennumber.md) | Convenience version of [tween](./rstream.tween.md) for its most common use case, tweening of numeric streams. |
 
 ## Type Aliases
 

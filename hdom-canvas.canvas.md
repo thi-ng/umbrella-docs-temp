@@ -10,7 +10,7 @@ The canvas component automatically adjusts its size for HDPI displays by adding 
 
 Shape components are expressed in standard hiccup syntax, however with the following restrictions:
 
-- Shape component objects with life cycle methods are only partially supported, i.e. only the `render` &amp; `release` methods are used (Note, for performance reasons `release` methods are ignored by default. If your shape tree contains stateful components which use the `release` life cycle method, you'll need to explicitly enable the canvas component's `__release` attribute by setting it to `true`<!-- -->). - Currently no event listeners can be assigned to shapes (ignored), though this is planned for a future version. The canvas element itself can of course have event handlers as usual.
+- Shape component objects with life cycle methods are only partially supported, i.e. only the [ILifecycle.render()](./hdom.ilifecycle.render.md) &amp; [ILifecycle.release()](./hdom.ilifecycle.release.md) methods are used (Note, for performance reasons `release` methods are ignored by default. If your shape tree contains stateful components which use the `release` life cycle method, you'll need to explicitly enable the canvas component's `__release` attribute by setting it to `true`<!-- -->). - Currently no event listeners can be assigned to shapes (ignored), though this is planned for a future version. The canvas element itself can of course have event handlers as usual.
 
 All embedded component functions receive the user context object just like normal hdom components.
 

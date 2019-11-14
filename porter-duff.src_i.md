@@ -6,7 +6,7 @@
 
 Porter-Duff operator for packed ints. Always results in `src` color, `dest` ignored.
 
- porterDuff
+[porterDuff](./porter-duff.porterduff.md)
 
 <b>Signature:</b>
 

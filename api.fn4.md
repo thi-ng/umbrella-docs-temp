@@ -4,7 +4,7 @@
 
 ## Fn4 type
 
-A 4-arg function from A,B,C,D =<!-- -->&gt; E.
+A 4-arg function from A,B,C,D to E.
 
 <b>Signature:</b>
 

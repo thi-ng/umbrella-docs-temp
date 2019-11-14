@@ -195,9 +195,9 @@
 |  [bitXorU2](./vectors.bitxoru2.md) |  |
 |  [bitXorU3](./vectors.bitxoru3.md) |  |
 |  [bitXorU4](./vectors.bitxoru4.md) |  |
-|  [cartesian](./vectors.cartesian.md) | Converts polar vector <code>v</code> to cartesian coordinates and adds optional <code>offset</code>. See <code>polar()</code> for reverse operation. If <code>out</code> is null, modifies <code>v</code> in place. |
-|  [cartesian2](./vectors.cartesian2.md) | Converts 2D polar vector <code>v</code> to cartesian coordinates and adds optional <code>offset</code>. See <code>polar()</code> for reverse operation. If <code>out</code> is null, modifies <code>v</code> in place. |
-|  [cartesian3](./vectors.cartesian3.md) | Converts 3D polar vector <code>v</code> to cartesian coordinates and adds optional <code>offset</code>. See <code>polar()</code> for reverse operation. If <code>out</code> is null, modifies <code>v</code> in place. |
+|  [cartesian](./vectors.cartesian.md) | Converts polar vector <code>v</code> to cartesian coordinates and adds optional <code>offset</code>. See [polar](./vectors.polar.md) for reverse operation. If <code>out</code> is null, modifies <code>v</code> in place. |
+|  [cartesian2](./vectors.cartesian2.md) | Converts 2D polar vector <code>v</code> to cartesian coordinates and adds optional <code>offset</code>. See [polar](./vectors.polar.md) for reverse operation. If <code>out</code> is null, modifies <code>v</code> in place. |
+|  [cartesian3](./vectors.cartesian3.md) | Converts 3D polar vector <code>v</code> to cartesian coordinates and adds optional <code>offset</code>. See [polar](./vectors.polar.md) for reverse operation. If <code>out</code> is null, modifies <code>v</code> in place. |
 |  [ceil](./vectors.ceil.md) |  |
 |  [ceil2](./vectors.ceil2.md) |  |
 |  [ceil3](./vectors.ceil3.md) |  |
@@ -228,7 +228,7 @@
 |  [compileHOF](./vectors.compilehof.md) |  |
 |  [copy](./vectors.copy.md) |  |
 |  [copyVectors](./vectors.copyvectors.md) |  |
-|  [corner2](./vectors.corner2.md) | Syntax sugar for <code>sign(signedArea2(a, b, c))</code>. thi.ng/math/sign  signedArea2 |
+|  [corner2](./vectors.corner2.md) | Syntax sugar for <code>sign(signedArea2(a, b, c))</code>.<!-- -->- [sign](./math.sign.md) - [signedArea2](./vectors.signedarea2.md) |
 |  [cos](./vectors.cos.md) |  |
 |  [cos2](./vectors.cos2.md) |  |
 |  [cos3](./vectors.cos3.md) |  |
@@ -324,7 +324,7 @@
 |  [eqDelta3](./vectors.eqdelta3.md) |  |
 |  [eqDelta4](./vectors.eqdelta4.md) |  |
 |  [eqDeltaArray](./vectors.eqdeltaarray.md) |  |
-|  [eqDeltaS](./vectors.eqdeltas.md) | Similar to <code>equiv()</code>, but takes tolerance <code>eps</code> into account for equality checks. |
+|  [eqDeltaS](./vectors.eqdeltas.md) | Similar to [eq](./vectors.eq.md)<!-- -->, but takes tolerance <code>eps</code> into account for equality checks. |
 |  [every](./vectors.every.md) | Returns returns true if all vector components in <code>v</code> are truthy. |
 |  [every2](./vectors.every2.md) |  |
 |  [every3](./vectors.every3.md) |  |
@@ -338,18 +338,7 @@
 |  [exp3](./vectors.exp3.md) |  |
 |  [exp4](./vectors.exp4.md) |  |
 |  [faceForward](./vectors.faceforward.md) |  |
-|  [fill](./vectors.fill.md) | Fills Vec2/3/4 view based buffer, supporting arbitrary component and element layouts of both the input and output buffers. The <code>out</code> vector is used as write cursor over the underlying buffer and will be filled with the components of vector <code>v</code>.
-```ts
-fill(
-  new Vec2(new Float32Array(12)),
-  new Vec2([1, 2]),
-  3, // num elements
-  4  // stride
-)
-// Float32Array [1, 2, 0, 0, 1, 2, 0, 0, 1, 2, 0, 0]
-
-```
- |
+|  [fill](./vectors.fill.md) | Fills Vec2/3/4 view based buffer, supporting arbitrary component and element layouts of both the input and output buffers. The <code>out</code> vector is used as write cursor over the underlying buffer and will be filled with the components of vector <code>v</code>. |
 |  [fit](./vectors.fit.md) |  |
 |  [fit01\_2](./vectors.fit01_2.md) |  |
 |  [fit01\_3](./vectors.fit01_3.md) |  |
@@ -394,7 +383,7 @@ fill(
 |  [gte2](./vectors.gte2.md) |  |
 |  [gte3](./vectors.gte3.md) |  |
 |  [gte4](./vectors.gte4.md) |  |
-|  [gvec](./vectors.gvec.md) | Wrapper for strided, arbitrary length vectors. Wraps given buffer in ES6 <code>Proxy</code> with custom property getters/setters and implements the following interfaces:<!-- -->- <code>Iterable</code> (ES6) - <code>ICopy</code> - <code>IEmpty</code> - <code>IEqualsDelta</code> - <code>IVector</code> - <code>Object.toString()</code>Read/write access for the following properties:<!-- -->- array indices in the \[0 .. <code>size</code>) interval - <code>offset</code> - start index - <code>stride</code> - component stride - <code>buf</code> - backing buffer (readonly) - <code>length</code> - vector size<!-- -->Array index access uses bounds checking against the \[0 .. <code>size</code>) interval, but, for performance reasons, \*\*not\*\* against the actual wrapped buffer.<!-- -->Note: ES6 proxies are \~10x slower than standard array accesses. If several computations are to be performed on such vectors it will be much more efficient to first copy them to compact arrays and then copy result back if needed.
+|  [gvec](./vectors.gvec.md) | Wrapper for strided, arbitrary length vectors. Wraps given buffer in ES6 <code>Proxy</code> with custom property getters/setters and implements the following interfaces:<!-- -->- <code>Iterable</code> (ES6) - [ICopy](./api.icopy.md) - [IEmpty](./api.iempty.md) - [IEqualsDelta](./api.iequalsdelta.md) - [IVector](./vectors.ivector.md) - <code>Object.toString()</code>Read/write access for the following properties:<!-- -->- array indices in the \[0 .. <code>size</code>) interval - <code>offset</code> - start index - <code>stride</code> - component stride - <code>buf</code> - backing buffer (readonly) - <code>length</code> - vector size<!-- -->Array index access uses bounds checking against the \[0 .. <code>size</code>) interval, but, for performance reasons, \*\*not\*\* against the actual wrapped buffer.<!-- -->Note: ES6 proxies are \~10x slower than standard array accesses. If several computations are to be performed on such vectors it will be much more efficient to first copy them to compact arrays and then copy result back if needed.
 ```
 // 3D vector w/ stride length of 4
 a = gvec([1,0,0,0,2,0,0,0,3,0,0,0], 3, 0, 4);
@@ -449,15 +438,15 @@ uniq = tx.transduce(
 
 ```
 - [https://github.com/thi-ng/c-thing/blob/master/src/math/hashfn.c](https://github.com/thi-ng/c-thing/blob/master/src/math/hashfn.c) -  for Z-curve ordered hashing |
-|  [heading](./vectors.heading.md) | Same as <code>headingXY</code> |
-|  [headingSegment](./vectors.headingsegment.md) | Same as <code>headingSegmentXY</code>. |
+|  [heading](./vectors.heading.md) | Same as [headingXY](./vectors.headingxy.md) |
+|  [headingSegment](./vectors.headingsegment.md) | Same as [headingSegmentXY](./vectors.headingsegmentxy.md)<!-- -->. |
 |  [headingSegmentXY](./vectors.headingsegmentxy.md) | Computes direction angle (in radians) of line segment <code>a</code> -<!-- -->&gt; <code>b</code> in XY plane. |
 |  [headingSegmentXZ](./vectors.headingsegmentxz.md) | Computes direction angle (in radians) of line segment <code>a</code> -<!-- -->&gt; <code>b</code> in XZ plane. |
 |  [headingSegmentYZ](./vectors.headingsegmentyz.md) | Computes direction angle (in radians) of line segment <code>a</code> -<!-- -->&gt; <code>b</code> in ZY plane. |
 |  [headingXY](./vectors.headingxy.md) | Returns orientation angle (in radians) of vector <code>a</code> in XY plane. |
 |  [headingXZ](./vectors.headingxz.md) | Returns orientation angle (in radians) of vector <code>a</code> in XZ plane. |
 |  [headingYZ](./vectors.headingyz.md) | Returns orientation angle (in radians) of vector <code>a</code> in ZY plane. |
-|  [intoBuffer](./vectors.intobuffer.md) | Writes given <code>src</code> vector values into mapped <code>ArrayBuffer</code> of stated <code>type</code> and from given offset &amp; stride/spacing. mapBuffer |
+|  [intoBuffer](./vectors.intobuffer.md) | Writes given <code>src</code> vector values into mapped <code>ArrayBuffer</code> of stated <code>type</code> and from given offset &amp; stride/spacing.[mapBuffer](./vectors.mapbuffer.md) |
 |  [intoStridedBuffer](./vectors.intostridedbuffer.md) |  |
 |  [invert](./vectors.invert.md) |  |
 |  [invert2](./vectors.invert2.md) |  |
@@ -559,20 +548,9 @@ uniq = tx.transduce(
 |  [major2](./vectors.major2.md) |  |
 |  [major3](./vectors.major3.md) |  |
 |  [major4](./vectors.major4.md) |  |
-|  [mapBuffer](./vectors.mapbuffer.md) | Takes an <code>ArrayBuffer</code> and creates a number of typed array vector views of <code>type</code> with given <code>size</code> (number of elements per vector) and spacing. <code>byteOffset</code> defines the start offset for the first vector and <code>byteStride</code> the number of bytes between resulting vectors (defaults to <code>size * SIZEOF[type]</code>). It's user's responsibility to ensure these two values are compatible with the chosen array type (i.e. for <code>Type.F32</code>, these MUST be multiples of 4).
-```ts
-mapBuffer(Type.F32, new ArrayBuffer(32), 4, 2)
-// [
-//   Float32Array [ 0, 0 ],
-//   Float32Array [ 0, 0 ],
-//   Float32Array [ 0, 0 ],
-//   Float32Array [ 0, 0 ]
-// ]
-
-```
- |
+|  [mapBuffer](./vectors.mapbuffer.md) | Takes an <code>ArrayBuffer</code> and creates a number of typed array vector views of <code>type</code> with given <code>size</code> (number of elements per vector) and spacing. <code>byteOffset</code> defines the start offset for the first vector and <code>byteStride</code> the number of bytes between resulting vectors (defaults to <code>size * SIZEOF[type]</code>). It's user's responsibility to ensure these two values are compatible with the chosen array type (i.e. for <code>Type.F32</code>, these MUST be multiples of 4). |
 |  [mapStridedBuffer](./vectors.mapstridedbuffer.md) |  |
-|  [mapV](./vectors.mapv.md) | Like <code>mapVV</code>, but for <code>VecOpV</code> type ops and hence only using single input.
+|  [mapV](./vectors.mapv.md) | Like [mapVV](./vectors.mapvv.md)<!-- -->, but for [VecOpV](./vectors.vecopv.md) type ops and hence only using single input.
 ```
 // 4x 2D vectors in SOA layout
 // i.e. [x1, x2, x3, x4, y1, y2, y3, y4]
@@ -588,8 +566,8 @@ res = mapV(swapXY, new Vec2(), new Vec2(buf, 0, 4), 4, 2, 1);
 
 ```
  |
-|  [mapVN](./vectors.mapvn.md) | Like <code>mapVV</code>, but for <code>VecOpVN</code> type ops and hence using a single vector input buffer <code>a</code> and a scalar <code>n</code>. |
-|  [mapVV](./vectors.mapvv.md) | Vec2/3/4 view based buffer transformation for <code>VecOpVV</code> type ops and supporting arbitrary component and element layouts of all input and output buffers. The given pre-initialized vectors MUST be separate instances, are used as sliding cursors / views of their respective backing buffers and will be modified as part of the transformation process (though the input buffers themselves are treated as immutable, unless <code>out</code> is configured to use one of the input buffers).<!-- -->In each iteration <code>op</code> is called via <code>op(out, a, b)</code>, followed by cursor updates to process the next vector view. No bounds checking is performed.<!-- -->This function returns <code>out</code>'s backing buffer.
+|  [mapVN](./vectors.mapvn.md) | Like [mapVV](./vectors.mapvv.md)<!-- -->, but for [VecOpVN](./vectors.vecopvn.md) type ops and hence using a single vector input buffer <code>a</code> and a scalar <code>n</code>. |
+|  [mapVV](./vectors.mapvv.md) | Vec2/3/4 view based buffer transformation for [VecOpVV](./vectors.vecopvv.md) type ops and supporting arbitrary component and element layouts of all input and output buffers. The given pre-initialized vectors MUST be separate instances, are used as sliding cursors / views of their respective backing buffers and will be modified as part of the transformation process (though the input buffers themselves are treated as immutable, unless <code>out</code> is configured to use one of the input buffers).<!-- -->In each iteration <code>op</code> is called via <code>op(out, a, b)</code>, followed by cursor updates to process the next vector view. No bounds checking is performed.<!-- -->This function returns <code>out</code>'s backing buffer.
 ```
 // each input buffer contains 2 2D vectors, but using
 // different strided data layouts
@@ -629,8 +607,8 @@ out
 
 ```
  |
-|  [mapVVN](./vectors.mapvvn.md) | Like <code>mapVV</code>, but for <code>VecOpVVN</code> type ops and hence using two vector input buffers <code>a</code>, <code>b</code> and a scalar <code>n</code>. |
-|  [mapVVV](./vectors.mapvvv.md) | Like <code>mapVV</code>, but for <code>VecOpVVV</code> type ops and hence using three vector input buffers <code>a</code>, <code>b</code>, <code>c</code>. |
+|  [mapVVN](./vectors.mapvvn.md) | Like [mapVV](./vectors.mapvv.md)<!-- -->, but for [VecOpVVN](./vectors.vecopvvn.md) type ops and hence using two vector input buffers <code>a</code>, <code>b</code> and a scalar <code>n</code>. |
+|  [mapVVV](./vectors.mapvvv.md) | Like [mapVV](./vectors.mapvv.md)<!-- -->, but for [VecOpVVV](./vectors.vecopvvv.md) type ops and hence using three vector input buffers <code>a</code>, <code>b</code>, <code>c</code>. |
 |  [MATH\_N](./vectors.math_n.md) |  |
 |  [MATH](./vectors.math.md) |  |
 |  [MATH2\_N](./vectors.math2_n.md) |  |
@@ -665,9 +643,9 @@ out
 |  [mixBilinear3](./vectors.mixbilinear3.md) |  |
 |  [mixBilinear4](./vectors.mixbilinear4.md) |  |
 |  [mixCubic](./vectors.mixcubic.md) |  |
-|  [mixCubicHermite](./vectors.mixcubichermite.md) | Vector version of thi.ng/math <code>mixCubicHermite</code>. |
-|  [mixHermiteCardinal](./vectors.mixhermitecardinal.md) | Convenience version of <code>mixCubicHermite</code>, using 4 input points and <code>tangentCardinal</code> to compute the tangents for points <code>b</code> and <code>c</code> (with optional <code>scale</code>, default 0.5). Interpolated result point is that of <code>b</code> and <code>c</code>, with <code>a</code> and <code>d</code> only being used for tangent calculations.<!-- -->If <code>out</code> is null, stores result in <code>b</code>. |
-|  [mixHermiteDiff3](./vectors.mixhermitediff3.md) | Convenience version of <code>mixCubicHermite</code>, using 4 input points and <code>tangentDiff3</code> to compute the tangents for points <code>b</code> and <code>c</code>. Interpolated result point is that of <code>b</code> and <code>c</code>, with <code>a</code> and <code>d</code> only being used for tangent calculations.<!-- -->If <code>out</code> is null, stores result in <code>b</code>. |
+|  [mixCubicHermite](./vectors.mixcubichermite.md) | Vector version of thi.ng/math [mixCubicHermite](./vectors.mixcubichermite.md)<!-- -->. |
+|  [mixHermiteCardinal](./vectors.mixhermitecardinal.md) | Convenience version of [mixCubicHermite](./vectors.mixcubichermite.md)<!-- -->, using 4 input points and [tangentCardinal](./vectors.tangentcardinal.md) to compute the tangents for points <code>b</code> and <code>c</code> (with optional <code>scale</code>, default 0.5). Interpolated result point is that of <code>b</code> and <code>c</code>, with <code>a</code> and <code>d</code> only being used for tangent calculations.<!-- -->If <code>out</code> is null, stores result in <code>b</code>. |
+|  [mixHermiteDiff3](./vectors.mixhermitediff3.md) | Convenience version of [mixCubicHermite](./vectors.mixcubichermite.md)<!-- -->, using 4 input points and [tangentDiff3](./vectors.tangentdiff3.md) to compute the tangents for points <code>b</code> and <code>c</code>. Interpolated result point is that of <code>b</code> and <code>c</code>, with <code>a</code> and <code>d</code> only being used for tangent calculations.<!-- -->If <code>out</code> is null, stores result in <code>b</code>. |
 |  [mixN](./vectors.mixn.md) |  |
 |  [mixN2](./vectors.mixn2.md) |  |
 |  [mixN3](./vectors.mixn3.md) |  |
@@ -748,18 +726,12 @@ out
 |  [ONE3](./vectors.one3.md) |  |
 |  [ONE4](./vectors.one4.md) |  |
 |  [ones](./vectors.ones.md) |  |
-|  [orthoNormal3](./vectors.orthonormal3.md) | Produces a vector which is perpendicular/normal to the plane spanned by given 3 input vectors. If <code>normalize</code> is true (default), the result vector will be normalized.
-```ts
-orthoNormal3([], [0, 0, 0], [1, 0, 0], [0, 1, 0])
-// [0, 0, 1]
-
-```
- |
+|  [orthoNormal3](./vectors.orthonormal3.md) | Produces a vector which is perpendicular/normal to the plane spanned by given 3 input vectors. If <code>normalize</code> is true (default), the result vector will be normalized. |
 |  [perpendicularCCW](./vectors.perpendicularccw.md) | 2D only. Produces a perpendicular vector to <code>v</code>, i.e. <code>[-y,x]</code>. Assumes positive Y-up. |
 |  [perpendicularCW](./vectors.perpendicularcw.md) | 2D only. Produces a clockwise perpendicular vector to <code>v</code>, i.e. <code>[y,-x]</code>. Assumes positive Y-up. |
-|  [polar](./vectors.polar.md) | Converts cartesian vector <code>v</code> to polar coordinates. See <code>cartesian()</code> for reverse operation. If <code>out</code> is null, modifies <code>v</code> in place. |
-|  [polar2](./vectors.polar2.md) | Converts 2D cartesian vector <code>v</code> to polar coordinates, i.e. <code>[r,θ]</code> (angle in radians). See <code>cartesian()</code> for reverse operation. If <code>out</code> is null, modifies <code>v</code> in place. |
-|  [polar3](./vectors.polar3.md) | Converts 3D cartesian vector <code>v</code> to spherical coordinates, i.e. <code>[r,θ,ϕ]</code> (angles in radians). See <code>cartesian()</code> for reverse operation. If <code>out</code> is null, modifies <code>v</code> in place. |
+|  [polar](./vectors.polar.md) | Converts cartesian vector <code>v</code> to polar coordinates. See [cartesian](./vectors.cartesian.md) for reverse operation. If <code>out</code> is null, modifies <code>v</code> in place. |
+|  [polar2](./vectors.polar2.md) | Converts 2D cartesian vector <code>v</code> to polar coordinates, i.e. <code>[r,θ]</code> (angle in radians). See [cartesian](./vectors.cartesian.md) for reverse operation. If <code>out</code> is null, modifies <code>v</code> in place. |
+|  [polar3](./vectors.polar3.md) | Converts 3D cartesian vector <code>v</code> to spherical coordinates, i.e. <code>[r,θ,ϕ]</code> (angles in radians). See [cartesian](./vectors.cartesian.md) for reverse operation. If <code>out</code> is null, modifies <code>v</code> in place. |
 |  [pow](./vectors.pow.md) |  |
 |  [pow2](./vectors.pow2.md) |  |
 |  [pow3](./vectors.pow3.md) |  |
@@ -780,8 +752,8 @@ orthoNormal3([], [0, 0, 0], [1, 0, 0], [0, 1, 0])
 |  [randMinMaxS2](./vectors.randminmaxs2.md) |  |
 |  [randMinMaxS3](./vectors.randminmaxs3.md) |  |
 |  [randMinMaxS4](./vectors.randminmaxs4.md) |  |
-|  [randNorm](./vectors.randnorm.md) | Sets <code>v</code> to random vector, normalized to length <code>n</code> (default: 1). If no <code>rnd</code> instance is given, uses <code>SYSTEM</code>, i.e. <code>Math.random</code>. |
-|  [randNormS2](./vectors.randnorms2.md) | Sets <code>v</code> to random vector, normalized to length <code>n</code> (default: 1). If no <code>rnd</code> instance is given, uses <code>SYSTEM</code>, i.e. <code>Math.random</code>. |
+|  [randNorm](./vectors.randnorm.md) | Sets <code>v</code> to random vector, normalized to length <code>n</code> (default: 1). If no <code>rnd</code> instance is given, uses [SYSTEM](./random.system.md)<!-- -->, i.e. <code>Math.random</code>. |
+|  [randNormS2](./vectors.randnorms2.md) | Sets <code>v</code> to random vector, normalized to length <code>n</code> (default: 1). If no <code>rnd</code> instance is given, uses [SYSTEM](./random.system.md)<!-- -->, i.e. <code>Math.random</code>. |
 |  [randNormS3](./vectors.randnorms3.md) |  |
 |  [randNormS4](./vectors.randnorms4.md) |  |
 |  [random](./vectors.random.md) |  |
@@ -793,7 +765,7 @@ orthoNormal3([], [0, 0, 0], [1, 0, 0], [0, 1, 0])
 |  [randomS4](./vectors.randoms4.md) |  |
 |  [reflect](./vectors.reflect.md) |  |
 |  [refract](./vectors.refract.md) |  |
-|  [rotate](./vectors.rotate.md) | Alias for <code>rotateZ</code> (e.g. for 2D use cases) |
+|  [rotate](./vectors.rotate.md) | Alias for [rotateZ](./vectors.rotatez.md) (e.g. for 2D use cases) |
 |  [rotateAroundAxis3](./vectors.rotatearoundaxis3.md) |  |
 |  [rotateAroundPoint2](./vectors.rotatearoundpoint2.md) |  |
 |  [rotateS2](./vectors.rotates2.md) |  |
@@ -873,8 +845,8 @@ orthoNormal3([], [0, 0, 0], [1, 0, 0], [0, 1, 0])
 |  [sign4](./vectors.sign4.md) |  |
 |  [SIGNED\_N](./vectors.signed_n.md) |  |
 |  [SIGNED](./vectors.signed.md) |  |
-|  [signedArea2](./vectors.signedarea2.md) | Returns area \* 2 of the 2D triangle defined by the input vectors. This is a useful classifier for many geometry processing tasks. In addition to the triangle area, the result can also be interpreted as follows:<!-- -->- <code>&gt; 0</code>: points are ordered counterclockwise - <code>&lt; 0</code>: points are ordered clockwise - <code>0</code>: points are co-linear<!-- -->Same as: <code>cross2(sub2([], b, a), sub2([], c, a))</code> corner2  clockwise2  cross2 |
-|  [signedAreaC2](./vectors.signedareac2.md) | Same as <code>signedArea2</code>, but expects individual vector component args, instead of vectors. |
+|  [signedArea2](./vectors.signedarea2.md) | Returns area \* 2 of the 2D triangle defined by the input vectors. This is a useful classifier for many geometry processing tasks. In addition to the triangle area, the result can also be interpreted as follows:<!-- -->- <code>&gt; 0</code>: points are ordered counterclockwise - <code>&lt; 0</code>: points are ordered clockwise - <code>0</code>: points are co-linear<!-- -->Same as: <code>cross2(sub2([], b, a), sub2([], c, a))</code>- [corner2](./vectors.corner2.md) - [clockwise2](./vectors.clockwise2.md) - [cross2](./vectors.cross2.md) |
+|  [signedAreaC2](./vectors.signedareac2.md) | Same as [signedArea2](./vectors.signedarea2.md)<!-- -->, but expects individual vector component args, instead of vectors. |
 |  [sin](./vectors.sin.md) |  |
 |  [sin2](./vectors.sin2.md) |  |
 |  [sin3](./vectors.sin3.md) |  |
@@ -957,8 +929,8 @@ orthoNormal3([], [0, 0, 0], [1, 0, 0], [0, 1, 0])
 |  [tan2](./vectors.tan2.md) |  |
 |  [tan3](./vectors.tan3.md) |  |
 |  [tan4](./vectors.tan4.md) |  |
-|  [tangentCardinal](./vectors.tangentcardinal.md) | Vector version of thi.ng/math <code>tangentCardinal</code>. |
-|  [tangentDiff3](./vectors.tangentdiff3.md) | Vector version of thi.ng/math <code>tangentDiff3</code>. |
+|  [tangentCardinal](./vectors.tangentcardinal.md) | Vector version of thi.ng/math [tangentCardinal](./vectors.tangentcardinal.md)<!-- -->. |
+|  [tangentDiff3](./vectors.tangentdiff3.md) | Vector version of thi.ng/math [tangentDiff3](./vectors.tangentdiff3.md)<!-- -->. |
 |  [tanh](./vectors.tanh.md) |  |
 |  [tanh2](./vectors.tanh2.md) |  |
 |  [tanh3](./vectors.tanh3.md) |  |

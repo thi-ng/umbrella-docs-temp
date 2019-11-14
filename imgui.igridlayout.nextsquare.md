@@ -4,7 +4,7 @@
 
 ## IGridLayout.nextSquare() method
 
-Returns a squared `LayoutBox` based on this layout's column width. This box will consume `ceil(columnWidth / rowHeight)` rows, but the returned box height might be less to satisfy the square constraint.
+Returns a squared [LayoutBox](./imgui.layoutbox.md) based on this layout's column width. This box will consume `ceil(columnWidth / rowHeight)` rows, but the returned box height might be less to satisfy the square constraint.
 
 <b>Signature:</b>
 

@@ -4,7 +4,7 @@
 
 ## addNode variable
 
-Compiles given `NodeSpec` and adds it to graph. Returns compiled `Node` object for the given spec. Throws error if the graph already contains a node with given `id`<!-- -->.
+Compiles given [NodeSpec](./rstream-graph.nodespec.md) and adds it to graph. Returns compiled [Node](./rstream-graph.node.md) object for the given spec. Throws error if the graph already contains a node with given `id`<!-- -->.
 
 <b>Signature:</b>
 

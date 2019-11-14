@@ -330,7 +330,7 @@
 |  [acos](./shader-ast.acos.md) |  |
 |  [addm](./shader-ast.addm.md) | Add-multiply: (a + b) \* c. All must be of same type. |
 |  [all](./shader-ast.all.md) |  |
-|  [allChildren](./shader-ast.allchildren.md) | Helper function for <code>walk()</code>. Returns an array of all child nodes for a given term (if any). scopedChildren |
+|  [allChildren](./shader-ast.allchildren.md) | Helper function for [walk](./shader-ast.walk.md)<!-- -->. Returns an array of all child nodes for a given term (if any).[scopedChildren](./shader-ast.scopedchildren.md) |
 |  [and](./shader-ast.and.md) |  |
 |  [arraySym](./shader-ast.arraysym.md) | Defines a new symbol with optional initial array values.<!-- -->Important: Array initializers are UNSUPPORTED in GLSL ES v1 (WebGL), any code using such initializers will only work under WebGL2 or other targets. |
 |  [asin](./shader-ast.asin.md) |  |
@@ -342,32 +342,7 @@
 |  [builtinCall](./shader-ast.builtincall.md) |  |
 |  [ceil](./shader-ast.ceil.md) |  |
 |  [clamp](./shader-ast.clamp.md) |  |
-|  [constantFolding](./shader-ast.constantfolding.md) | Traverses given AST and applies constant folding optimizations where possible. Returns possibly updated tree (mutates original). Currently, only scalar operations are supported / considered.
-```ts
-const foo = defn("float", "foo", ["float"], (x) => [
-  ret(mul(x, add(neg(float(10)), float(42))))]
-)
-
-const prog = scope([foo, foo(add(float(1), float(2)))], true);
-
-// serialized (GLSL)
-glsl(prog);
-
-// float foo(in float _sym0) {
-//   return (_sym0 * (-10.0 + 42.0));
-// };
-// foo((1.0 + 2.0));
-
-// with constant folding
-glsl(constantFolding(prog))
-
-// float foo(in float _sym0) {
-//   return (_sym0 * 32.0);
-// };
-// foo(3.0);
-
-```
- |
+|  [constantFolding](./shader-ast.constantfolding.md) | Traverses given AST and applies constant folding optimizations where possible. Returns possibly updated tree (mutates original). Currently, only scalar operations are supported / considered. |
 |  [constSym](./shader-ast.constsym.md) |  |
 |  [cont](./shader-ast.cont.md) |  |
 |  [cos](./shader-ast.cos.md) |  |
@@ -375,7 +350,7 @@ glsl(constantFolding(prog))
 |  [dec](./shader-ast.dec.md) |  |
 |  [decl](./shader-ast.decl.md) |  |
 |  [defMain](./shader-ast.defmain.md) | Syntax sugar for defining <code>void main()</code> functions. |
-|  [defTarget](./shader-ast.deftarget.md) | Takes an object of code generator functions and returns a new code generator / compile target function which serializes a given AST using the provided node type implementations. |
+|  [defTarget](./shader-ast.deftarget.md) | Takes an object of code generator functions and returns a new code generator / compile target function which serializes a given AST using the provided node type implementations.[targetGLSL](./shader-ast-glsl.targetglsl.md) |
 |  [degrees](./shader-ast.degrees.md) |  |
 |  [dFdx](./shader-ast.dfdx.md) |  |
 |  [dFdy](./shader-ast.dfdy.md) |  |
@@ -417,12 +392,7 @@ glsl(constantFolding(prog))
 |  [isMat](./shader-ast.ismat.md) | Returns true, if given term evaluates to a matrix value. |
 |  [isUint](./shader-ast.isuint.md) | Returns true, if given term evaluates to an unsigned integer value. |
 |  [isVec](./shader-ast.isvec.md) | Returns true, if given term evaluates to a vector value (vec, ivec, bvec). |
-|  [itemType](./shader-ast.itemtype.md) | Returns base type for given term. Used for array ops.
-```ts
-itemType("vec2[]") => "vec2"
-
-```
- |
+|  [itemType](./shader-ast.itemtype.md) | Returns base type for given term. Used for array ops. |
 |  [length](./shader-ast.length.md) | Returns length / magnitude of given vector. |
 |  [lit](./shader-ast.lit.md) |  |
 |  [log](./shader-ast.log.md) |  |
@@ -448,12 +418,12 @@ itemType("vec2[]") => "vec2"
 |  [PI](./shader-ast.pi.md) |  |
 |  [pow](./shader-ast.pow.md) |  |
 |  [powf](./shader-ast.powf.md) |  |
-|  [program](./shader-ast.program.md) | Takes an array of global sym/var definitions (<code>input()</code>, <code>output()</code>, <code>uniform()</code>) and functions defined via <code>defn()</code>. Constructs the call graph of all transitively used functions and bundles everything in topological order within a global scope object, which is then returned to the user and can be passed to a target codegen for full program output. scope  input  output  uniform |
+|  [program](./shader-ast.program.md) | Takes an array of global sym/var definitions ([input](./shader-ast.input.md)<!-- -->, [output](./shader-ast.output.md)<!-- -->, [uniform](./shader-ast.uniform.md)<!-- -->) and functions defined via . Constructs the call graph of all transitively used functions and bundles everything in topological order within a global scope object, which is then returned to the user and can be passed to a target codegen for full program output.<!-- -->- [scope](./shader-ast.scope.md) - [input](./shader-ast.input.md) - [output](./shader-ast.output.md) - [uniform](./shader-ast.uniform.md) |
 |  [radians](./shader-ast.radians.md) |  |
 |  [reflect](./shader-ast.reflect.md) |  |
 |  [refract](./shader-ast.refract.md) |  |
 |  [scope](./shader-ast.scope.md) | Wraps the given AST node array in <code>scope</code> node, optionally as global scope (default false). The interpretation of the global flag is dependent on the target code gen. I.e. for GLSL / JS, the flag disables wrapping the scope's body in <code>{}</code>, but else has no difference. In general this node type only serves as internal mechanism for various control flow AST nodes and should not need to be used directly from user land code (though might be useful to create custom / higher level control flow nodes). |
-|  [scopedChildren](./shader-ast.scopedchildren.md) | Helper function for <code>walk()</code>. Returns child nodes for any control flow nodes containing a child scope. allChildren |
+|  [scopedChildren](./shader-ast.scopedchildren.md) | Helper function for [walk](./shader-ast.walk.md)<!-- -->. Returns child nodes for any control flow nodes containing a child scope.[allChildren](./shader-ast.allchildren.md) |
 |  [sign](./shader-ast.sign.md) |  |
 |  [sin](./shader-ast.sin.md) |  |
 |  [smoothstep](./shader-ast.smoothstep.md) |  |
@@ -468,7 +438,7 @@ itemType("vec2[]") => "vec2"
 |  [UINT0](./shader-ast.uint0.md) |  |
 |  [UINT1](./shader-ast.uint1.md) |  |
 |  [uniform](./shader-ast.uniform.md) |  |
-|  [walk](./shader-ast.walk.md) | Traverses given AST in depth-first order and applies <code>visit</code> and <code>children</code> fns to each node. Descends only further if <code>children</code> returns an array of child nodes. The <code>visit</code> function must accept 2 args: the accumulator (<code>acc</code>) given to <code>walk</code> and a tree node. The return value of <code>visit</code> becomes the new <code>acc</code> value, much like in a reduce operation. <code>walk</code> itself returns the final <code>acc</code>.<!-- -->If <code>pre</code> is true (default), the <code>visit</code> function will be called prior to visiting a node's children. If false, the visitor is called on the way back up. |
+|  [walk](./shader-ast.walk.md) | Traverses given AST in depth-first order and applies <code>visit</code> and <code>children</code> fns to each node. Descends only further if <code>children</code> returns an array of child nodes. The <code>visit</code> function must accept 2 args: the accumulator (<code>acc</code>) given to [walk](./shader-ast.walk.md) and a tree node. The return value of <code>visit</code> becomes the new <code>acc</code> value, much like in a reduce operation. [walk](./shader-ast.walk.md) itself returns the final <code>acc</code>.<!-- -->If <code>pre</code> is true (default), the <code>visit</code> function will be called prior to visiting a node's children. If false, the visitor is called on the way back up. |
 |  [whileLoop](./shader-ast.whileloop.md) |  |
 |  [wrapBool](./shader-ast.wrapbool.md) | Takes a plain number or numeric term and wraps it as boolean literal if needed. |
 |  [wrapFloat](./shader-ast.wrapfloat.md) | Takes a plain number or numeric term and wraps it as float literal if needed. |

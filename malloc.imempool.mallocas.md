@@ -4,7 +4,7 @@
 
 ## IMemPool.mallocAs() method
 
-Takes a `Type` enum and element count `num` (in units of given type), calls `malloc()` and if successful wraps allocated block as typed array of given `type`<!-- -->. Returns undefined if allocation failed.
+Takes a [Type](./api.type.md) enum and element count `num` (in units of given type), calls [IMemPool.malloc()](./malloc.imempool.malloc.md) and if successful wraps allocated block as typed array of given `type`<!-- -->. Returns undefined if allocation failed.
 
 <b>Signature:</b>
 

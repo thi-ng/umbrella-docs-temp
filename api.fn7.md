@@ -4,7 +4,7 @@
 
 ## Fn7 type
 
-A 7-arg function from A,B,C,D,E,F,G =<!-- -->&gt; H.
+A 7-arg function from A,B,C,D,E,F,G to H.
 
 <b>Signature:</b>
 

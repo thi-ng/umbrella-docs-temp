@@ -4,7 +4,7 @@
 
 ## polar2 variable
 
-Converts 2D cartesian vector `v` to polar coordinates, i.e. `[r,θ]` (angle in radians). See `cartesian()` for reverse operation. If `out` is null, modifies `v` in place.
+Converts 2D cartesian vector `v` to polar coordinates, i.e. `[r,θ]` (angle in radians). See [cartesian](./vectors.cartesian.md) for reverse operation. If `out` is null, modifies `v` in place.
 
 <b>Signature:</b>
 

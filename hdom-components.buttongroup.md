@@ -6,9 +6,9 @@
 
 Higher order function to create a new stateless button group component, pre-configured via user supplied options. The returned component function accepts the following arguments:
 
-- hdom context object (unused) - partial `ButtonGroupArgs` object (extra attribs, disabled flag) - button group items (varargs)
+- hdom context object (unused) - partial [ButtonGroupArgs](./hdom-components.buttongroupargs.md) object (extra attribs, disabled flag) - button group items (varargs)
 
-Any `attribs` provided as arg via `ButtonGroupArgs` are merged with the default options provided to the HOF. If `disabled` is true, ALL buttons in the group will be disabled, regardless of their individual settings. The group can have any number of elements, given as varargs.
+Any `attribs` provided as arg via [ButtonGroupArgs](./hdom-components.buttongroupargs.md) are merged with the default options provided to the HOF. If `disabled` is true, ALL buttons in the group will be disabled, regardless of their individual settings. The group can have any number of elements, given as varargs.
 
 <b>Signature:</b>
 

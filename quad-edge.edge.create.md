@@ -4,9 +4,9 @@
 
 ## Edge.create() method
 
-Main edge / quadedge factory function. Use this in preference of direct invocation of the `Edge` constructor.
+Main edge / quadedge factory function. Use this in preference of direct invocation of the [Edge](./quad-edge.edge.md) constructor.
 
-Creates new `QuadEdge` with 4 child edges and returns the first child/primary edge. If `src` and `dest` are not `null`<!-- -->ish, the given args will be associated with that new edge as end points.
+Creates new [QuadEdge](./quad-edge.quadedge.md) with 4 child edges and returns the first child/primary edge. If `src` and `dest` are not `null`<!-- -->ish, the given args will be associated with that new edge as end points.
 
 <b>Signature:</b>
 

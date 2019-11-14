@@ -4,7 +4,7 @@
 
 ## Vec4.intoBuffer() method
 
-Merges given `src` iterable of `Vec4`<!-- -->s into single array `buf`<!-- -->. Vectors will be arranged according to given component and element strides, starting at `start` index. It's the user's responsibility to ensure the target buffer has sufficient capacity to hold the input vectors. See `Vec4.mapBuffer` for the inverse operation. Returns `buf`<!-- -->.
+Merges given `src` iterable of [Vec4](./vectors.vec4.md)<!-- -->s into single array `buf`<!-- -->. Vectors will be arranged according to given component and element strides, starting at `start` index. It's the user's responsibility to ensure the target buffer has sufficient capacity to hold the input vectors. See `Vec4.mapBuffer` for the inverse operation. Returns `buf`<!-- -->.
 
 <b>Signature:</b>
 

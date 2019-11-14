@@ -6,7 +6,7 @@
 
 Specification for a single input, which can be given in different ways:
 
-1) Create a stream for given path in state atom (passed to `initGraph`<!-- -->):
+1) Create a stream for given path in state atom (passed to [initGraph](./rstream-graph.initgraph.md)<!-- -->):
 
 ```
 { path: "nested.src.path" }

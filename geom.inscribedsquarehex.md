@@ -4,7 +4,7 @@
 
 ## inscribedSquareHex() function
 
-Returns square inscribed in given (unrotated) hexagon. The hexagon can be given as `Polygon` or centroid and edge length.
+Returns square inscribed in given (unrotated) hexagon. The hexagon can be given as [Polygon](./geom.polygon.md) or centroid and edge length.
 
 <b>Signature:</b>
 

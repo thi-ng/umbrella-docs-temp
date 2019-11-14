@@ -4,7 +4,7 @@
 
 ## CanvasHandlers interface
 
-User provided canvas life cycle methods. These differ from the usual  @<!-- -->thi.ng/hdom\#ILifeCycle<!-- -->} methods and are always passed at least the canvas DOM element, canvas context and hdom user context. Not all handlers need to be implemented.
+User provided canvas life cycle methods. These differ from the usual [ILifecycle](./hdom.ilifecycle.md) methods and are always passed at least the canvas DOM element, canvas context and hdom user context. Not all handlers need to be implemented.
 
 <b>Signature:</b>
 
@@ -16,7 +16,7 @@ export interface CanvasHandlers<T extends CanvasContext>
 
 |  Method | Description |
 |  --- | --- |
-|  [init(el, ctx, hctx, args)](./hdom-components.canvashandlers.init.md) | user init handler (called only once when canvas first) |
+|  [init(el, ctx, hctx, args)](./hdom-components.canvashandlers.init.md) | User init handler (called only once when canvas first) |
 |  [release(el, ctx, hctx, args)](./hdom-components.canvashandlers.release.md) | release handler (called only once when canvas element is removed from DOM) |
-|  [update(el, ctx, hctx, time, frame, args)](./hdom-components.canvashandlers.update.md) | update handler (called for each hdom update iteration) |
+|  [update(el, ctx, hctx, time, frame, args)](./hdom-components.canvashandlers.update.md) | Update handler (called for each hdom update iteration) |
 

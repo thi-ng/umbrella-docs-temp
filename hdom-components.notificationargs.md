@@ -17,5 +17,5 @@ export interface NotificationArgs
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [attribs](./hdom-components.notificationargs.attribs.md) | <code>IObjectOf&lt;any&gt;</code> | Extra attribs to merge with (or override) configured default attribs. |
-|  [onclose](./hdom-components.notificationargs.onclose.md) | <code>EventListener</code> | Event handler called when user closes notification. Only used if <code>NotificationOpts</code> has <code>close</code> option configured. |
+|  [onclose](./hdom-components.notificationargs.onclose.md) | <code>EventListener</code> | Event handler called when user closes notification. Only used if [NotificationOpts](./hdom-components.notificationopts.md) has <code>close</code> option configured. |
 

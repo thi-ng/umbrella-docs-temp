@@ -4,27 +4,7 @@
 
 ## quickSort() function
 
-In-place quicksort implementation with optional comparator &amp; index based swap function, useful for sorting multiple related arrays in parallel, based on a single sort criteria. Supports sorting of sub-ranges only, via optionally given `start`<!-- -->/`end` indices (both inclusive).
-
-Uses Hoare partitioning scheme. [compare](./compare.compare.md) is used as default comparator and [swap](./arrays.swap.md) from this package as default swap function.
-
-[https://en.wikipedia.org/wiki/Quicksort\#Hoare\_partition\_scheme](https://en.wikipedia.org/wiki/Quicksort#Hoare_partition_scheme)
-
-```ts
-a = [4, 3, 1, 8, 5]
-b = [40, 30, 10, 80, 50]
-c = [-4, -3, -1, -8, -5]
-
-// use `multiSwap` to sort extra arrays based on sort order of `a`
-quickSort(a, undefined, multiSwap(b, c))
-// [ 1, 3, 4, 5, 8 ] (a)
-
-b
-// [ 10, 30, 40, 50, 80 ]
-c
-// [ -1, -3, -4, -5, -8 ]
-
-```
+In-place quicksort implementation with optional comparator &amp; index based swap function, useful for sorting multiple related arrays in parallel, based on a single sort criteria.
 
 <b>Signature:</b>
 
@@ -45,4 +25,31 @@ export declare function quickSort<T>(arr: T[], _cmp?: Comparator<T>, _swap?: Fn3
 <b>Returns:</b>
 
 `T[]`
+
+## Remarks
+
+Supports sorting of sub-ranges only, via optionally given `start`<!-- -->/`end` indices (both inclusive).
+
+Uses Hoare partitioning scheme. [compare](./compare.compare.md) is used as default comparator and [swap](./arrays.swap.md) from this package as default swap function. Also see [multiSwap](./arrays.multiswap.md)<!-- -->.
+
+[https://en.wikipedia.org/wiki/Quicksort\#Hoare\_partition\_scheme](https://en.wikipedia.org/wiki/Quicksort#Hoare_partition_scheme)
+
+## Example
+
+
+```ts
+a = [4, 3, 1, 8, 5]
+b = [40, 30, 10, 80, 50]
+c = [-4, -3, -1, -8, -5]
+
+// use `multiSwap` to sort extra arrays based on sort order of `a`
+quickSort(a, undefined, multiSwap(b, c))
+// [ 1, 3, 4, 5, 8 ] (a)
+
+b
+// [ 10, 30, 40, 50, 80 ]
+c
+// [ -1, -3, -4, -5, -8 ]
+
+```
 

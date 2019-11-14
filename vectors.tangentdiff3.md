@@ -4,7 +4,7 @@
 
 ## tangentDiff3 variable
 
-Vector version of thi.ng/math `tangentDiff3`<!-- -->.
+Vector version of thi.ng/math [tangentDiff3](./vectors.tangentdiff3.md)<!-- -->.
 
 <b>Signature:</b>
 

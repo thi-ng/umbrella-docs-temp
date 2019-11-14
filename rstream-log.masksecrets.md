@@ -4,7 +4,16 @@
 
 ## maskSecrets variable
 
-Takes an array of regex patterns and optional `mask` string. Returns transducer which replaces all found pattern occurrences with `mask`<!-- -->. Intended to be used in combination / after `formatString()` to avoid leaking of sensitive information via logged messages.
+Takes an array of regex patterns and optional `mask` string. Returns transducer which replaces all found pattern occurrences with `mask`<!-- -->. Intended to be used in combination / after [formatString](./rstream-log.formatstring.md) to avoid leaking of sensitive information via logged messages.
+
+<b>Signature:</b>
+
+```typescript
+maskSecrets: (patterns: RegExp[], mask?: string) => Transducer<string, string>
+```
+
+## Example
+
 
 ```ts
 logger.transform(
@@ -19,8 +28,3 @@ logger.info("logged in USER=toxi, using TOKEN=123456");
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-maskSecrets: (patterns: RegExp[], mask?: string) => Transducer<string, string>
-```

@@ -6,6 +6,15 @@
 
 Traverses given AST and applies constant folding optimizations where possible. Returns possibly updated tree (mutates original). Currently, only scalar operations are supported / considered.
 
+<b>Signature:</b>
+
+```typescript
+constantFolding: (tree: Term<any>) => Term<any>
+```
+
+## Example
+
+
 ```ts
 const foo = defn("float", "foo", ["float"], (x) => [
   ret(mul(x, add(neg(float(10)), float(42))))]
@@ -31,8 +40,3 @@ glsl(constantFolding(prog))
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-constantFolding: (tree: Term<any>) => Term<any>
-```

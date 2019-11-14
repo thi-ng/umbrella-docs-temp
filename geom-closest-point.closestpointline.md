@@ -4,9 +4,9 @@
 
 ## closestPointLine variable
 
-Returns closest point to `p` on infinite line defined by points `a` and `b`<!-- -->. Use `closestPointSegment` to only consider the actual line segment between these two points.
+Returns closest point to `p` on infinite line defined by points `a` and `b`<!-- -->. Use [closestPointSegment](./geom-closest-point.closestpointsegment.md) to only consider the actual line segment between these two points.
 
- closestPointSegment
+[closestPointSegment](./geom-closest-point.closestpointsegment.md)
 
 <b>Signature:</b>
 

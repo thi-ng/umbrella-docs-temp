@@ -6,7 +6,7 @@
 
 Writes given `src` vector values into mapped `ArrayBuffer` of stated `type` and from given offset &amp; stride/spacing.
 
- mapBuffer
+[mapBuffer](./vectors.mapbuffer.md)
 
 <b>Signature:</b>
 

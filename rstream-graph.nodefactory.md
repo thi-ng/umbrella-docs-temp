@@ -4,7 +4,7 @@
 
 ## NodeFactory type
 
-A function which constructs and returns an `ISubscribable` using given object of inputs and node ID. See `node()` and `node1()`<!-- -->.
+A function which constructs and returns an [ISubscribable](./rstream.isubscribable.md) using given object of inputs and node ID. See `node()` and `node1()`<!-- -->.
 
 <b>Signature:</b>
 

@@ -8,7 +8,7 @@
 
 |  Interface | Description |
 |  --- | --- |
-|  [PoissonOpts](./poisson.poissonopts.md) | Options for <code>samplePoisson()</code>. |
+|  [PoissonOpts](./poisson.poissonopts.md) | Options for [samplePoisson](./poisson.samplepoisson.md)<!-- -->. |
 
 ## Variables
 

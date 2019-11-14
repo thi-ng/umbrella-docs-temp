@@ -8,125 +8,19 @@
 
 |  Variable | Description |
 |  --- | --- |
-|  [deleteIn](./paths.deletein.md) | Uses <code>updateIn()</code> and returns updated state with key for given path removed. Does not modify original state.<!-- -->Returns <code>undefined</code> if <code>path</code> is an empty string or array.
-```ts
-deleteIn({a:{b:{c: 23}}}, "a.b.c");
-// {a: {b: {}}}
-
-```
- |
+|  [deleteIn](./paths.deletein.md) | Uses [updateIn](./paths.updatein.md) and returns updated state with key for given path removed. Does not modify original state.<!-- -->Returns <code>undefined</code> if <code>path</code> is an empty string or array. |
 |  [exists](./paths.exists.md) | Takes an arbitrary object and lookup path. Descends into object along path and returns true if the full path exists (even if final leaf value is <code>null</code> or <code>undefined</code>). Checks are performed using <code>hasOwnProperty()</code>. |
-|  [getIn](./paths.getin.md) | Immediate use getter, i.e. same as: <code>getter(path)(state)</code>.
-```ts
-getIn({a: {b: {c: 23}}}, "a.b.c");
-// 23
-
-```
- |
-|  [getter](./paths.getter.md) | Composes a getter function for given nested lookup path. Optimized fast execution paths are provided for path lengths less than 5. Supports any <code>[]</code>-indexable data structure (arrays, objects, strings).<!-- -->If <code>path</code> is given as string, it will be split using <code>.</code>. Returns function which accepts single object and when called, returns value at given path.<!-- -->If any intermediate key is not present in the given obj, descent stops and the function returns <code>undefined</code>.<!-- -->If <code>path</code> is an empty string or array, the returned getter will simply return the given state arg (identity function).<!-- -->Also see: <code>getIn()</code>
-```ts
-g = getter("a.b.c");
-// or
-g = getter(["a","b","c"]);
-
-g({a: {b: {c: 23}}}) // 23
-g({x: 23}) // undefined
-g() // undefined
-
-```
- |
-|  [mutator](./paths.mutator.md) | Higher-order function, similar to <code>setter()</code>. Returns function which when called mutates given object/array at given path location and bails if any intermediate path values are non-indexable (only the very last path element can be missing in the actual object structure). If successful, returns original (mutated) object, else <code>undefined</code>. This function provides optimized versions for path lengths &lt;<!-- -->= 4. |
-|  [mutIn](./paths.mutin.md) | Immediate use mutator, i.e. same as: <code>mutator(path)(state, val)</code>.
-```ts
-mutIn({ a: { b: [10, 20] } }, "a.b.1", 23);
-// { a: { b: [ 10, 23 ] } }
-
-// fails (see `mutator` docs)
-mutIn({}, "a.b.c", 23);
-// undefined
-
-```
- |
-|  [mutInMany](./paths.mutinmany.md) | Like <code>mutIn()</code>, but takes any number of path-value pairs and applies them in sequence. All key paths must already be present in the given data structure until their penultimate key.
-```ts
-mutInMany({a: {b: 1}, x: {y: {z: 2}}}, "a.b", 10, "x.y.z", 20)
-// { a: { b: 10 }, x: { y: { z: 20 } } }
-
-```
- |
-|  [setIn](./paths.setin.md) | Immediate use setter, i.e. same as: <code>setter(path)(state, val)</code>.
-```ts
-setIn({}, "a.b.c", 23);
-// {a: {b: {c: 23}}}
-
-```
- |
-|  [setInMany](./paths.setinmany.md) | Like <code>setIn()</code>, but takes any number of path-value pairs and applies them in sequence by calling <code>setIn()</code> for each. Any key paths missing in the data structure will be created. Does \*not\* mutate original (instead use <code>mutInMany()</code> for this purpose).
-```ts
-setInMany({}, "a.b", 10, "x.y.z", 20)
-// { a: { b: 10 }, x: { y: { z: 20 } } }
-
-```
- |
-|  [setter](./paths.setter.md) | Composes a setter function for given nested update path. Optimized fast execution paths are provided for path lengths less up to 4. Supports both arrays and objects and creates intermediate shallow copies at each level of the path. Thus provides structural sharing with the original data for any branches not being updated by the setter.<!-- -->If <code>path</code> is given as string, it will be split using <code>.</code>. Returns function which accepts single object and when called, \*\*immutably\*\* updates value at given path, i.e. produces a partial deep copy of obj up until given path.<!-- -->If any intermediate key is not present in the given obj, creates a plain empty object for that key and descends further.<!-- -->If <code>path</code> is an empty string or array, the returned setter will simply return the new value.<!-- -->Also see: <code>setIn()</code>, <code>updateIn()</code>, <code>deleteIn()</code>
-```ts
-s = setter("a.b.c");
-// or
-s = setter(["a","b","c"]);
-
-s({a: {b: {c: 23}}}, 24)
-// {a: {b: {c: 24}}}
-
-s({x: 23}, 24)
-// { x: 23, a: { b: { c: 24 } } }
-
-s(null, 24)
-// { a: { b: { c: 24 } } }
-
-```
-Only keys in the path will be modified, all other keys present in the given object retain their original values to provide efficient structural sharing / re-use.
-```ts
-s = setter("a.b.c");
-
-a = {x: {y: {z: 1}}};
-b = s(a, 2);
-// { x: { y: { z: 1 } }, a: { b: { c: 2 } } }
-
-a.x === b.x // true
-a.x.y === b.x.y // true
-
-```
- |
-|  [toPath](./paths.topath.md) | Converts the given key path to canonical form (array).
-```ts
-toPath("a.b.c");
-// ["a", "b", "c"]
-
-toPath(0)
-// [0]
-
-toPath(["a", "b", "c"])
-// ["a", "b", "c"]
-
-```
- |
-|  [updateIn](./paths.updatein.md) | Similar to <code>setIn()</code>, but applies given function to current path value (incl. any additional/optional arguments passed to <code>updateIn</code>) and uses result as new value. Does not modify original state (unless given function does so itself).
-```ts
-add = (x, y) => x + y;
-updateIn({a: {b: {c: 23}}}, "a.b.c", add, 10);
-// {a: {b: {c: 33}}}
-
-```
- |
-|  [updater](./paths.updater.md) | Similar to <code>setter()</code>, returns a function to update values at given <code>path</code> using provided update <code>fn</code>. The returned function accepts a single object / array and applies <code>fn</code> to current path value (incl. any additional/optional arguments passed) and uses result as new value. Does not modify original state (unless given function does so itself).
-```ts
-add = updater("a.b", (x, n) => x + n);
-
-add({a: {b: 10}}, 13);
-// { a: { b: 23 } }
-
-```
- |
+|  [getIn](./paths.getin.md) | Immediate use getter, i.e. same as: <code>getter(path)(state)</code>. |
+|  [getter](./paths.getter.md) | Composes a getter function for given nested lookup path. Optimized fast execution paths are provided for path lengths less than 5. Supports any <code>[]</code>-indexable data structure (arrays, objects, strings). |
+|  [mutator](./paths.mutator.md) | Higher-order function, similar to [setter](./paths.setter.md)<!-- -->. Returns function which when called mutates given object/array at given path location and bails if any intermediate path values are non-indexable (only the very last path element can be missing in the actual object structure). If successful, returns original (mutated) object, else <code>undefined</code>. This function provides optimized versions for path lengths &lt;<!-- -->= 4. |
+|  [mutIn](./paths.mutin.md) | Immediate use mutator, i.e. same as: <code>mutator(path)(state, val)</code>. |
+|  [mutInMany](./paths.mutinmany.md) | Like [mutIn](./paths.mutin.md)<!-- -->, but takes any number of path-value pairs and applies them in sequence. All key paths must already be present in the given data structure until their penultimate key. |
+|  [setIn](./paths.setin.md) | Immediate use setter, i.e. same as: <code>setter(path)(state, val)</code>. |
+|  [setInMany](./paths.setinmany.md) | Like [setIn](./paths.setin.md)<!-- -->, but takes any number of path-value pairs and applies them in sequence by calling [setIn](./paths.setin.md) for each. Any key paths missing in the data structure will be created. Does \*not\* mutate original (instead use [mutInMany](./paths.mutinmany.md) for this purpose). |
+|  [setter](./paths.setter.md) | Composes a setter function for given nested update path. Optimized fast execution paths are provided for path lengths less up to 4. Supports both arrays and objects and creates intermediate shallow copies at each level of the path. Thus provides structural sharing with the original data for any branches not being updated by the setter.<!-- -->If <code>path</code> is given as string, it will be split using <code>.</code>. Returns function which accepts single object and when called, \*\*immutably\*\* updates value at given path, i.e. produces a partial deep copy of obj up until given path.<!-- -->If any intermediate key is not present in the given obj, creates a plain empty object for that key and descends further.<!-- -->If <code>path</code> is an empty string or array, the returned setter will simply return the new value.<!-- -->Also see: [setIn](./paths.setin.md)<!-- -->, [updateIn](./paths.updatein.md)<!-- -->, [deleteIn](./paths.deletein.md) |
+|  [toPath](./paths.topath.md) | Converts the given key path to canonical form (array). |
+|  [updateIn](./paths.updatein.md) | Similar to [setIn](./paths.setin.md)<!-- -->, but applies given function to current path value (incl. any additional/optional arguments passed to [updateIn](./paths.updatein.md)<!-- -->) and uses result as new value. Does not modify original state (unless given function does so itself). |
+|  [updater](./paths.updater.md) | Similar to [setter](./paths.setter.md)<!-- -->, returns a function to update values at given <code>path</code> using provided update <code>fn</code>. The returned function accepts a single object / array and applies <code>fn</code> to current path value (incl. any additional/optional arguments passed) and uses result as new value. Does not modify original state (unless given function does so itself). |
 
 ## Type Aliases
 

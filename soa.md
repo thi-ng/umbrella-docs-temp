@@ -23,24 +23,12 @@
 
 |  Variable | Description |
 |  --- | --- |
-|  [aos](./soa.aos.md) | Constructs SOA instance from given attrib specs and optional ArrayBuffer (w/ optional start address / byte offset, which MUST be properly pre-aligned). The resulting layout will be an underlying interleaved AOS buffer with each attrib configured to map that same array buffer relative to the given <code>byteOffset</code> (default: 0). If no array buffer is given, a properly sized one will be created.<!-- -->First computes attrib offsets, alignments and the overall struct size, then configures buffer views and strides for each attrib. This is to ensure each attrib is correctly mapped in its buffer view (e.g. float values need to be aligned to 4-byte boundaries). The overall inter-struct packing/stride length is dependent on the largest attrib type used. E.g. the following specs will cause a stride length of 16 bytes between each resulting SOA element, even though the actual struct size is only 13 bytes:
-```ts
-aos(
-  1024,
-  {
-    a: { type: Type.U16, size: 1 }, // 2 bytes, align 2, offset 0
-    b: { type: Type.F32, size: 2 }, // 8 bytes, align 4, offset 4
-    c: { type: Type.U8, size: 1 },  // 1 byte,  align 1, offset 12
-  }
-);
-
-```
- |
+|  [aos](./soa.aos.md) | Constructs SOA instance from given attrib specs and optional ArrayBuffer (w/ optional start address / byte offset, which MUST be properly pre-aligned). The resulting layout will be an underlying interleaved AOS buffer with each attrib configured to map that same array buffer relative to the given <code>byteOffset</code> (default: 0). If no array buffer is given, a properly sized one will be created.<!-- -->First computes attrib offsets, alignments and the overall struct size, then configures buffer views and strides for each attrib. This is to ensure each attrib is correctly mapped in its buffer view (e.g. float values need to be aligned to 4-byte boundaries). The overall inter-struct packing/stride length is dependent on the largest attrib type used. E.g. the following specs will cause a stride length of 16 bytes between each resulting SOA element, even though the actual struct size is only 13 bytes: |
 |  [ident](./soa.ident.md) | Identity serializer pair (no op). |
 |  [scalar](./soa.scalar.md) | Serializer pair for scalars. |
 |  [serializer](./soa.serializer.md) |  |
 |  [soa](./soa.soa.md) |  |
-|  [utf8z](./soa.utf8z.md) | Zero-terminated UTF-8 string serializer pair for given max length (incl. final \\<!-- -->0 char).<code>write()</code> throws error if resulting byte sequence is larger than configured <code>maxLen</code>. |
+|  [utf8z](./soa.utf8z.md) | Zero-terminated UTF-8 string serializer pair for given max length (incl. final \\<!-- -->0 char).[SerializerPair.encode](./soa.serializerpair.encode.md) throws error if resulting byte sequence is larger than configured <code>maxLen</code>. |
 
 ## Type Aliases
 
@@ -51,5 +39,5 @@ aos(
 |  [SerializedType](./soa.serializedtype.md) |  |
 |  [SerializerSpecs](./soa.serializerspecs.md) |  |
 |  [SOASpecs](./soa.soaspecs.md) | Alias for main config object of attribute specs. Declares an object of partial SOAAttribSpec values (i.e. every item is made optional) |
-|  [SOATuple](./soa.soatuple.md) | Mapped type for index lookups. Declares an object with all keys from given <code>AttribSpecs</code> and each value a <code>Vec</code>. |
+|  [SOATuple](./soa.soatuple.md) | Mapped type for index lookups. Declares an object with all keys from given [SOAAttribSpec](./soa.soaattribspec.md) and each value a [Vec](./vectors.vec.md)<!-- -->. |
 

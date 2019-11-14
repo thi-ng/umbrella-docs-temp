@@ -4,7 +4,7 @@
 
 ## MultiFnBase.ancestors() method
 
-Similar to `parents()`<!-- -->, but includes all transitive parent dispatch values for given dispatch value `id`<!-- -->.
+Similar to [MultiFnBase.parents()](./defmulti.multifnbase.parents.md)<!-- -->, but includes all transitive parent dispatch values for given dispatch value `id`<!-- -->.
 
 <b>Signature:</b>
 

@@ -4,7 +4,16 @@
 
 ## fromDOMEvent variable
 
-Same as `fromEvent`<!-- -->, however only supports well-known DOM event names. Returned stream instance will use corresponding concrete event type in its type signature, whereas `fromEvent` will only use the generic `Event`<!-- -->.
+Same as [fromEvent](./rstream.fromevent.md)<!-- -->, however only supports well-known DOM event names. Returned stream instance will use corresponding concrete event type in its type signature, whereas [fromEvent](./rstream.fromevent.md) will only use the generic `Event`<!-- -->.
+
+<b>Signature:</b>
+
+```typescript
+fromDOMEvent: <K extends "waiting" | "error" | "abort" | "cancel" | "progress" | "ended" | "change" | "input" | "select" | "animationcancel" | "animationend" | "animationiteration" | "animationstart" | "auxclick" | "blur" | "canplay" | "canplaythrough" | "click" | "close" | "contextmenu" | "cuechange" | "dblclick" | "drag" | "dragend" | "dragenter" | "dragexit" | "dragleave" | "dragover" | "dragstart" | "drop" | "durationchange" | "emptied" | "focus" | "focusin" | "focusout" | "gotpointercapture" | "invalid" | "keydown" | "keypress" | "keyup" | "load" | "loadeddata" | "loadedmetadata" | "loadend" | "loadstart" | "lostpointercapture" | "mousedown" | "mouseenter" | "mouseleave" | "mousemove" | "mouseout" | "mouseover" | "mouseup" | "pause" | "play" | "playing" | "pointercancel" | "pointerdown" | "pointerenter" | "pointerleave" | "pointermove" | "pointerout" | "pointerover" | "pointerup" | "ratechange" | "reset" | "resize" | "scroll" | "securitypolicyviolation" | "seeked" | "seeking" | "selectionchange" | "selectstart" | "stalled" | "submit" | "suspend" | "timeupdate" | "toggle" | "touchcancel" | "touchend" | "touchmove" | "touchstart" | "transitioncancel" | "transitionend" | "transitionrun" | "transitionstart" | "volumechange" | "wheel">(src: EventTarget, name: K, opts?: boolean | AddEventListenerOptions) => Stream<GlobalEventHandlersEventMap[K]>
+```
+
+## Example
+
 
 ```ts
 fromDOMEvent(document.body, "mousemove"); // Stream<MouseEvent>
@@ -12,8 +21,3 @@ fromEvent(document.body, "mousemove"); // Stream<Event>
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-fromDOMEvent: <K extends "waiting" | "error" | "abort" | "cancel" | "progress" | "ended" | "change" | "input" | "select" | "animationcancel" | "animationend" | "animationiteration" | "animationstart" | "auxclick" | "blur" | "canplay" | "canplaythrough" | "click" | "close" | "contextmenu" | "cuechange" | "dblclick" | "drag" | "dragend" | "dragenter" | "dragexit" | "dragleave" | "dragover" | "dragstart" | "drop" | "durationchange" | "emptied" | "focus" | "focusin" | "focusout" | "gotpointercapture" | "invalid" | "keydown" | "keypress" | "keyup" | "load" | "loadeddata" | "loadedmetadata" | "loadend" | "loadstart" | "lostpointercapture" | "mousedown" | "mouseenter" | "mouseleave" | "mousemove" | "mouseout" | "mouseover" | "mouseup" | "pause" | "play" | "playing" | "pointercancel" | "pointerdown" | "pointerenter" | "pointerleave" | "pointermove" | "pointerout" | "pointerover" | "pointerup" | "ratechange" | "reset" | "resize" | "scroll" | "securitypolicyviolation" | "seeked" | "seeking" | "selectionchange" | "selectstart" | "stalled" | "submit" | "suspend" | "timeupdate" | "toggle" | "touchcancel" | "touchend" | "touchmove" | "touchstart" | "transitioncancel" | "transitionend" | "transitionrun" | "transitionstart" | "volumechange" | "wheel">(src: EventTarget, name: K, opts?: boolean | AddEventListenerOptions) => Stream<GlobalEventHandlersEventMap[K]>
-```

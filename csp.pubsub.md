@@ -34,7 +34,7 @@ export declare class PubSub<T> implements IWriteableChannel<T>
 |  [channel()](./csp.pubsub.channel.md) |  |  |
 |  [close(flush)](./csp.pubsub.close.md) |  |  |
 |  [process()](./csp.pubsub.process.md) |  |  |
-|  [sub(id, tx)](./csp.pubsub.sub.md) |  | Creates a new topic subscription channel and returns it. Each topic is managed by its own <code>Mult</code> and can have arbitrary number of subscribers. If the optional transducer is given, it will only be applied to the new subscription channel.<!-- -->The special "\*" topic can be used to subscribe to all messages and acts as multiplexed pass-through of the source channel. |
+|  [sub(id, tx)](./csp.pubsub.sub.md) |  | Creates a new topic subscription channel and returns it. Each topic is managed by its own [Mult](./csp.mult.md) and can have arbitrary number of subscribers. If the optional transducer is given, it will only be applied to the new subscription channel.<!-- -->The special "\*" topic can be used to subscribe to all messages and acts as multiplexed pass-through of the source channel. |
 |  [unsub(id, ch)](./csp.pubsub.unsub.md) |  |  |
 |  [unsubAll(id, close)](./csp.pubsub.unsuball.md) |  |  |
 |  [write(val)](./csp.pubsub.write.md) |  |  |

@@ -4,9 +4,7 @@
 
 ## until variable
 
-Generic array version of `untilStr()`<!-- -->.
-
- untilStr
+Generic array version of [untilStr](./fsm.untilstr.md)<!-- -->.
 
 <b>Signature:</b>
 

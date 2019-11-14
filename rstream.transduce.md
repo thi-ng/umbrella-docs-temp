@@ -6,6 +6,15 @@
 
 Returns a promise which subscribes to given input and transforms incoming values using given transducer `xform` and reducer `rfn`<!-- -->. Once the input is done the promise will resolve with the final reduced result (or fail with error).
 
+<b>Signature:</b>
+
+```typescript
+transduce: <A, B, C>(src: Subscription<any, A>, xform: Transducer<A, B>, rfn: Reducer<C, B>, init?: C | undefined) => Promise<C>
+```
+
+## Example
+
+
 ```ts
 rs.transduce(
   rs.fromIterable(tx.range(10)),
@@ -17,8 +26,3 @@ rs.transduce(
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-transduce: <A, B, C>(src: Subscription<any, A>, xform: Transducer<A, B>, rfn: Reducer<C, B>, init?: C | undefined) => Promise<C>
-```

@@ -6,14 +6,18 @@
 
 Produces a vector which is perpendicular/normal to the plane spanned by given 3 input vectors. If `normalize` is true (default), the result vector will be normalized.
 
+<b>Signature:</b>
+
+```typescript
+orthoNormal3: (out: Vec | null, a: import("@thi.ng/api").ArrayLikeIterable<number>, b: import("@thi.ng/api").ArrayLikeIterable<number>, c: import("@thi.ng/api").ArrayLikeIterable<number>, doNormalize?: boolean) => Vec
+```
+
+## Example
+
+
 ```ts
 orthoNormal3([], [0, 0, 0], [1, 0, 0], [0, 1, 0])
 // [0, 0, 1]
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-orthoNormal3: (out: Vec | null, a: import("@thi.ng/api").ArrayLikeIterable<number>, b: import("@thi.ng/api").ArrayLikeIterable<number>, c: import("@thi.ng/api").ArrayLikeIterable<number>, doNormalize?: boolean) => Vec
-```

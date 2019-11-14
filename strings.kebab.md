@@ -10,14 +10,18 @@ TODO: Switch back to currently broken Regex w/ positive lookbehind, once avail i
 
 [https://github.com/tc39/proposal-regexp-lookbehind](https://github.com/tc39/proposal-regexp-lookbehind)
 
+<b>Signature:</b>
+
+```typescript
+kebab: Stringer<string>
+```
+
+## Example
+
+
 ```ts
 kebab("FooBar23Baz");
 // "foo-bar23-baz"
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-kebab: Stringer<string>
-```

@@ -16,10 +16,10 @@ export interface PagerOpts
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [labelFirst](./hdom-components.pageropts.labelfirst.md) | <code>any</code> | Label for "first page" button. Default: "<!-- -->&lt;<!-- -->&lt;<!-- -->" |
-|  [labelLast](./hdom-components.pageropts.labellast.md) | <code>any</code> | Label for "last page" button. Default: "<!-- -->&gt;<!-- -->&gt;<!-- -->" |
-|  [labelNext](./hdom-components.pageropts.labelnext.md) | <code>any</code> | Label for "next page" button. Default: "<!-- -->&gt;<!-- -->" |
-|  [labelPrev](./hdom-components.pageropts.labelprev.md) | <code>any</code> | Label for "prev page" button. Default: "<!-- -->&lt;<!-- -->" |
+|  [labelFirst](./hdom-components.pageropts.labelfirst.md) | <code>any</code> | Label for "first page" button. Default: <code>&quot;&lt;&lt;&quot;&quot;</code> |
+|  [labelLast](./hdom-components.pageropts.labellast.md) | <code>any</code> | Label for "last page" button. Default: <code>&quot;&gt;&gt;&quot;</code> |
+|  [labelNext](./hdom-components.pageropts.labelnext.md) | <code>any</code> | Label for "next page" button. Default: <code>&quot;&gt;&quot;</code> |
+|  [labelPrev](./hdom-components.pageropts.labelprev.md) | <code>any</code> | Label for "prev page" button. Default: <code>&quot;&lt;&quot;</code> |
 |  [navStep](./hdom-components.pageropts.navstep.md) | <code>number</code> | Page increment for prev / next page buttons. Default: 1 |
 
 ## Methods

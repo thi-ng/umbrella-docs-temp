@@ -6,13 +6,13 @@
 
 Returns hermite interpolation of `a, b, c, d` at normalized position `t`<!-- -->, where `a` and `d` are used as predecessor/successor of `b` / `c` and only inform the tangent of the interpolation curve. The interpolated result is that of `b` and `c`<!-- -->.
 
-Assumes all inputs are uniformly spaced. If that's not the case, use `mixCubicHermite()` with one of the tangent generators supporting non-uniform spacing of points.
+Assumes all inputs are uniformly spaced. If that's not the case, use [mixCubicHermite](./math.mixcubichermite.md) with one of the tangent generators supporting non-uniform spacing of points.
 
 See: [https://www.desmos.com/calculator/j4gf8g9vkr](https://www.desmos.com/calculator/j4gf8g9vkr)
 
 Source: [https://www.musicdsp.org/en/latest/Other/93-hermite-interpollation.html](https://www.musicdsp.org/en/latest/Other/93-hermite-interpollation.html)
 
- mixCubicHermite  tangentCardinal  tangentDiff3
+- [mixCubicHermite](./math.mixcubichermite.md) - [tangentCardinal](./math.tangentcardinal.md) - [tangentDiff3](./math.tangentdiff3.md)
 
 <b>Signature:</b>
 

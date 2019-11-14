@@ -4,7 +4,20 @@
 
 ## isSorted variable
 
-Returns true if the given array and its elements in the selected index range (entire array, by default) are in the order defined by the given comparator ([compare](./compare.compare.md) by default). Always returns true, if effective index range (or array length) has less than two elements. No bounds checking.
+Returns true if the given array and its elements in the selected index range (entire array, by default) are in the order defined by the given comparator ([compare](./compare.compare.md) by default).
+
+<b>Signature:</b>
+
+```typescript
+isSorted: <T>(arr: ArrayLike<T>, cmp?: import("@thi.ng/api").Fn2<T, T, number>, start?: number, end?: number) => boolean
+```
+
+## Remarks
+
+Always returns true, if effective index range (or array length) has less than two elements. No bounds checking.
+
+## Example
+
 
 ```ts
 isSorted([3, 2, 1])
@@ -16,8 +29,3 @@ isSorted([3, 2, 1], (a, b) => b - a)
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-isSorted: <T>(arr: ArrayLike<T>, cmp?: import("@thi.ng/api").Fn2<T, T, number>, start?: number, end?: number) => boolean
-```

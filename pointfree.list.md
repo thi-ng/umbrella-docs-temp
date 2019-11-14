@@ -4,7 +4,7 @@
 
 ## list variable
 
-Pushes a new empty array on the d-stack. While it's easily possible to use `[]` as part of a stack program, the `list` word is intended to be used as part of re-usuable `word()` definitions to ensure a new array is being created for every single invocation of the word (else only a single instance is created due to the mutable nature of JS arrays).
+Pushes a new empty array on the d-stack. While it's easily possible to use `[]` as part of a stack program, the `list` word is intended to be used as part of re-usuable [word](./pointfree.word.md) definitions to ensure a new array is being created for every single invocation of the word (else only a single instance is created due to the mutable nature of JS arrays).
 
 Compare:
 

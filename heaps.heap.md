@@ -6,6 +6,15 @@
 
 Generic binary heap / priority queue with customizable ordering via user-supplied comparator. By default, implements min-heap ordering and uses @<!-- -->thi.ng/compare.
 
+<b>Signature:</b>
+
+```typescript
+export declare class Heap<T> implements ICopy<Heap<T>>, IEmpty<Heap<T>>, ILength, IStack<T, T, Heap<T>> 
+```
+
+## Example
+
+
 ```ts
 h = new Heap([20, 5, 10]);
 h.push(15);
@@ -16,12 +25,6 @@ h.pop(); // 15
 h.pop(); // 20
 h.pop(); // undefined
 
-```
-
-<b>Signature:</b>
-
-```typescript
-export declare class Heap<T> implements ICopy<Heap<T>>, IEmpty<Heap<T>>, ILength, IStack<T, T, Heap<T>> 
 ```
 
 ## Constructors
@@ -61,6 +64,6 @@ export declare class Heap<T> implements ICopy<Heap<T>>, IEmpty<Heap<T>>, ILength
 |  [pop()](./heaps.heap.pop.md) |  |  |
 |  [push(val)](./heaps.heap.push.md) |  |  |
 |  [pushPop(val, vals)](./heaps.heap.pushpop.md) |  |  |
-|  [pushPopAll(vals)](./heaps.heap.pushpopall.md) |  | Calls <code>pushPop()</code> for each given value in <code>vals</code> and returns last result (i.e. the smallest value in heap after processing all <code>vals</code>). |
+|  [pushPopAll(vals)](./heaps.heap.pushpopall.md) |  | Calls [Heap.pushPop()](./heaps.heap.pushpop.md) for each given value in <code>vals</code> and returns last result (i.e. the smallest value in heap after processing all <code>vals</code>). |
 |  [replaceHead(val)](./heaps.heap.replacehead.md) |  |  |
 

@@ -4,7 +4,7 @@
 
 ## subscription variable
 
-Creates a new `Subscription` instance, the fundamental datatype &amp; building block provided by this package (`Stream`<!-- -->s are `Subscription`<!-- -->s too). Subscriptions can be:
+Creates a new [Subscription](./rstream.subscription.md) instance, the fundamental datatype &amp; building block provided by this package ([Stream](./rstream.stream.md)<!-- -->s are [Subscription](./rstream.subscription.md)<!-- -->s too). Subscriptions can be:
 
 - linked into directed graphs (if async, not necessarily DAGs) - transformed using transducers (incl. early termination) - can have any number of subscribers (optionally each w/ their own transducer) - recursively unsubscribe themselves from parent after their last subscriber unsubscribed - will go into a non-recoverable error state if NONE of the subscribers has an error handler itself - implement the [IDeref](./api.ideref.md) interface
 

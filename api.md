@@ -14,15 +14,15 @@
 
 |  Enumeration | Description |
 |  --- | --- |
-|  [GLType](./api.gltype.md) | WebGL numeric type constants. Use <code>GL2TYPE</code> to convert, if needed. Type  GL2TYPE  TYPE2GL |
+|  [GLType](./api.gltype.md) | WebGL numeric type constants. Use [GL2TYPE](./api.gl2type.md) to convert, if needed.[Type](./api.type.md) [GL2TYPE](./api.gl2type.md) [TYPE2GL](./api.type2gl.md) |
 |  [LogLevel](./api.loglevel.md) |  |
-|  [Type](./api.type.md) | Type enums for Typedarray-backed buffers. GLType  GL2TYPE  TYPE2GL |
+|  [Type](./api.type.md) | Type enums for Typedarray-backed buffers.[GLType](./api.gltype.md) [GL2TYPE](./api.gl2type.md) [TYPE2GL](./api.type2gl.md) |
 
 ## Functions
 
 |  Function | Description |
 |  --- | --- |
-|  [typedArray(type, length)](./api.typedarray.md) | Constructs new typed array of given <code>Type</code>/<code>GLType</code>. Supports all arities of standard typed array ctors. |
+|  [typedArray(type, length)](./api.typedarray.md) | Constructs new typed array of given [Type](./api.type.md)<!-- -->/[GLType](./api.gltype.md)<!-- -->. Supports all arities of standard typed array ctors. |
 |  [typedArray(type, src)](./api.typedarray_1.md) |  |
 |  [typedArray(type, buf, byteOffset, length)](./api.typedarray_2.md) |  |
 
@@ -74,8 +74,8 @@
 |  [EVENT\_ALL](./api.event_all.md) |  |
 |  [EVENT\_DISABLE](./api.event_disable.md) |  |
 |  [EVENT\_ENABLE](./api.event_enable.md) |  |
-|  [GL2TYPE](./api.gl2type.md) | Conversion from <code>GLType</code> to <code>Type</code> enums. |
-|  [IEnableMixin](./api.ienablemixin.md) | Mixin class decorator, injects IEnable default implementation, incl. a <code>_enabled</code> property. If the target also implements the <code>INotify</code> interface, <code>enable()</code> and <code>disable()</code> will automatically emit the respective events. |
+|  [GL2TYPE](./api.gl2type.md) | Conversion from [GLType](./api.gltype.md) to [Type](./api.type.md) enums. |
+|  [IEnableMixin](./api.ienablemixin.md) | Mixin class decorator, injects IEnable default implementation, incl. a <code>_enabled</code> property. If the target also implements the [INotify](./api.inotify.md) interface, [IEnable.enable()](./api.ienable.enable.md) and [IEnable.disable()](./api.ienable.disable.md) will automatically emit the respective events. |
 |  [inotify\_dispatch](./api.inotify_dispatch.md) |  |
 |  [INotifyMixin](./api.inotifymixin.md) | Mixin class decorator, injects INotify default implementation, incl. a lazily instantiated <code>_listeners</code> property object, storing registered listeners. |
 |  [intType](./api.inttype.md) | Returns the smallest possible \*signed\* int type enum for given <code>x</code>. E.g. if <code>x &gt;= -128 &amp;&amp; x &lt; 128</code>, the function returns <code>Type.I8</code>. |
@@ -87,8 +87,8 @@
 |  [NULL\_LOGGER](./api.null_logger.md) |  |
 |  [sealed](./api.sealed.md) | Class decorator. Seals both constructor and prototype. |
 |  [SEMAPHORE](./api.semaphore.md) | Internal use only. \*\*Do NOT use in user land code!\*\* |
-|  [SIZEOF](./api.sizeof.md) | Size information (in bytes) for <code>Type</code> enums. For <code>GLType</code>, use this form, e.g. <code>SIZEOF[GL2TYPE[GLType.F32]]</code> |
-|  [TYPE2GL](./api.type2gl.md) | Potentially lossy conversion from <code>Type</code> to <code>GLType</code> enums.<!-- -->Not all enums are mappable:<!-- -->- <code>F64</code> maps to <code>undefined</code>, since unsupported by WebGL - <code>U8C</code> maps to U8 |
+|  [SIZEOF](./api.sizeof.md) | Size information (in bytes) for [Type](./api.type.md) enums. For [GLType](./api.gltype.md)<!-- -->, use this form, e.g. <code>SIZEOF[GL2TYPE[GLType.F32]]</code> |
+|  [TYPE2GL](./api.type2gl.md) | Potentially lossy conversion from [Type](./api.type.md) to [GLType](./api.gltype.md) enums.<!-- -->Not all enums are mappable:<!-- -->- <code>F64</code> maps to <code>undefined</code>, since unsupported by WebGL - <code>U8C</code> maps to U8 |
 |  [TYPEDARRAY\_CTORS](./api.typedarray_ctors.md) |  |
 |  [uintType](./api.uinttype.md) | Returns the smallest possible \*unsigned\* int type enum for given <code>x</code>. E.g. if <code>x &lt;= 256</code>, the function returns <code>Type.U8</code>. |
 
@@ -100,19 +100,19 @@
 |  [Comparator](./api.comparator.md) | Generic 2-element comparator function type alias. Must follow this contract and return:<!-- -->- negative if <code>a &lt; b</code> - zero if <code>a == b</code> - positive if <code>a &gt; b</code> |
 |  [FloatArray](./api.floatarray.md) |  |
 |  [FloatType](./api.floattype.md) |  |
-|  [Fn](./api.fn.md) | A single arg function from A =<!-- -->&gt; B. |
+|  [Fn](./api.fn.md) | A single arg function from A to B. |
 |  [Fn0](./api.fn0.md) | A no-arg function, returning T. |
-|  [Fn10](./api.fn10.md) | A 10-arg function from A,B,C,D,E,F,G,H,I,J =<!-- -->&gt; K. |
-|  [Fn2](./api.fn2.md) | A 2-arg function from A,B =<!-- -->&gt; C. |
-|  [Fn3](./api.fn3.md) | A 3-arg function from A,B,C =<!-- -->&gt; D. |
-|  [Fn4](./api.fn4.md) | A 4-arg function from A,B,C,D =<!-- -->&gt; E. |
-|  [Fn5](./api.fn5.md) | A 5-arg function from A,B,C,D,E =<!-- -->&gt; F. |
-|  [Fn6](./api.fn6.md) | A 6-arg function from A,B,C,D,E,F =<!-- -->&gt; G. |
-|  [Fn7](./api.fn7.md) | A 7-arg function from A,B,C,D,E,F,G =<!-- -->&gt; H. |
-|  [Fn8](./api.fn8.md) | A 8-arg function from A,B,C,D,E,F,G,H =<!-- -->&gt; I. |
-|  [Fn9](./api.fn9.md) | A 9-arg function from A,B,C,D,E,F,G,H,I =<!-- -->&gt; J. |
+|  [Fn10](./api.fn10.md) | A 10-arg function from A,B,C,D,E,F,G,H,I,J to K. |
+|  [Fn2](./api.fn2.md) | A 2-arg function from A,B to C. |
+|  [Fn3](./api.fn3.md) | A 3-arg function from A,B,C to D. |
+|  [Fn4](./api.fn4.md) | A 4-arg function from A,B,C,D to E. |
+|  [Fn5](./api.fn5.md) | A 5-arg function from A,B,C,D,E to F. |
+|  [Fn6](./api.fn6.md) | A 6-arg function from A,B,C,D,E,F to G. |
+|  [Fn7](./api.fn7.md) | A 7-arg function from A,B,C,D,E,F,G to H. |
+|  [Fn8](./api.fn8.md) | A 8-arg function from A,B,C,D,E,F,G,H to I. |
+|  [Fn9](./api.fn9.md) | A 9-arg function from A,B,C,D,E,F,G,H,I to J. |
 |  [FnAny](./api.fnany.md) | An untyped vararg arg function to type T. |
-|  [FnAnyT](./api.fnanyt.md) | A typed vararg arg function from A =<!-- -->&gt; B. |
+|  [FnAnyT](./api.fnanyt.md) | A typed vararg arg function from A to B. |
 |  [FnO](./api.fno.md) |  |
 |  [FnO10](./api.fno10.md) |  |
 |  [FnO2](./api.fno2.md) |  |
@@ -159,8 +159,8 @@
 |  [Select2](./api.select2.md) |  |
 |  [Select3](./api.select3.md) |  |
 |  [Select4](./api.select4.md) |  |
-|  [StatefulPredicate](./api.statefulpredicate.md) | Higher order <code>Predicate</code> builder. Possibly stateful. |
-|  [StatefulPredicate2](./api.statefulpredicate2.md) | Higher order <code>Predicate2</code> builder. Possibly stateful. |
+|  [StatefulPredicate](./api.statefulpredicate.md) | Higher order [Predicate](./api.predicate.md) builder. Possibly stateful. |
+|  [StatefulPredicate2](./api.statefulpredicate2.md) | Higher order [Predicate2](./api.predicate2.md) builder. Possibly stateful. |
 |  [Tuple](./api.tuple.md) |  |
 |  [TypedArray](./api.typedarray.md) |  |
 |  [TypedArrayConstructor](./api.typedarrayconstructor.md) |  |
@@ -171,5 +171,5 @@
 |  [Val3](./api.val3.md) |  |
 |  [Val4](./api.val4.md) |  |
 |  [Val5](./api.val5.md) |  |
-|  [Watch](./api.watch.md) | Observer function for <code>IWatch</code> implementations. |
+|  [Watch](./api.watch.md) | Observer function for [IWatch](./api.iwatch.md) implementations. |
 

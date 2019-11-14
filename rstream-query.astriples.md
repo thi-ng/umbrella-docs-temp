@@ -8,6 +8,15 @@ Converts given object into an iterable of triples, with the following conversion
 
 - Toplevel object keys are used as subjects and MUST each have a plain object as value, where its keys are used as predicates and values as objects (in the SPO sense). - Plain objects in SPO object position are translated into unique IDs in order to allow the nested map to become a subject itself. In RDF terms, this is equivalent to BNodes. - Arrays in SPO object position cause multiple triples with same subject &amp; predicate to be emitted. If any of the items in the array is a plain object, it will be treated as BNode and transformed as described in the previous rule
 
+<b>Signature:</b>
+
+```typescript
+asTriples: (obj: any, subject?: any) => IterableIterator<any[]>
+```
+
+## Example
+
+
 ```ts
 src = {
   "@thi.ng/rstream-query": {
@@ -40,8 +49,3 @@ src = {
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-asTriples: (obj: any, subject?: any) => IterableIterator<any[]>
-```

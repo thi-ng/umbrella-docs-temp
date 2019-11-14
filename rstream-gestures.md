@@ -15,7 +15,7 @@
 |  Interface | Description |
 |  --- | --- |
 |  [GestureEvent](./rstream-gestures.gestureevent.md) |  |
-|  [GestureInfo](./rstream-gestures.gestureinfo.md) | Reverse lookup for <code>GestureType</code> enums |
+|  [GestureInfo](./rstream-gestures.gestureinfo.md) | Reverse lookup for [GestureType](./rstream-gestures.gesturetype.md) enums |
 |  [GestureStreamOpts](./rstream-gestures.gesturestreamopts.md) |  |
 
 ## Variables
@@ -27,10 +27,5 @@
 [type, {pos, click?, delta?, zoom}]
 
 ```
-The <code>click</code> and <code>delta</code> values are only present if <code>type == GestureType.DRAG</code>. Both (and <code>pos</code> too) are 2-element arrays of <code>[x,y]</code> coordinates.<!-- -->The <code>zoom</code> value is always present, but is only updated with wheel events. The value will be constrained to <code>minZoom</code> ... <code>maxZoom</code> interval (provided via options object).<!-- -->Note: If using <code>preventDefault</code> and attaching the event stream to <code>document.body</code>, the following event listener options SHOULD be used:
-```ts
-eventOpts: { passive: false }
-
-```
-[https://www.chromestatus.com/features/5093566007214080](https://www.chromestatus.com/features/5093566007214080) |
+The <code>click</code> and <code>delta</code> values are only present if <code>type == GestureType.DRAG</code>. Both (and <code>pos</code> too) are 2-element arrays of <code>[x,y]</code> coordinates.<!-- -->The <code>zoom</code> value is always present, but is only updated with wheel events. The value will be constrained to <code>minZoom</code> ... <code>maxZoom</code> interval (provided via options object).<!-- -->Note: If using <code>preventDefault</code> and attaching the event stream to <code>document.body</code>, the following event listener options SHOULD be used: |
 

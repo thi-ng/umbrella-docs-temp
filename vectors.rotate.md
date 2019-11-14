@@ -4,7 +4,7 @@
 
 ## rotate variable
 
-Alias for `rotateZ` (e.g. for 2D use cases)
+Alias for [rotateZ](./vectors.rotatez.md) (e.g. for 2D use cases)
 
 <b>Signature:</b>
 

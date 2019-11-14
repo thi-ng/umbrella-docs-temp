@@ -4,7 +4,7 @@
 
 ## PagerOpts.labelFirst property
 
-Label for "first page" button. Default: "<!-- -->&lt;<!-- -->&lt;<!-- -->"
+Label for "first page" button. Default: `"<<""`
 
 <b>Signature:</b>
 

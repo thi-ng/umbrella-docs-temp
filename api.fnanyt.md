@@ -4,7 +4,7 @@
 
 ## FnAnyT type
 
-A typed vararg arg function from A =<!-- -->&gt; B.
+A typed vararg arg function from A to B.
 
 <b>Signature:</b>
 

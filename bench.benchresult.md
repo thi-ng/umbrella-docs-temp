@@ -4,7 +4,7 @@
 
 ## benchResult variable
 
-Similar to `bench()`<!-- -->, but produces no output and instead returns tuple of `fn`<!-- -->'s last result and the grand total time measurement.
+Similar to [bench](./bench.bench.md)<!-- -->, but produces no output and instead returns tuple of `fn`<!-- -->'s last result and the grand total time measurement.
 
 <b>Signature:</b>
 

@@ -4,7 +4,7 @@
 
 ## DisjointSet.subsets() method
 
-Returns a `Map` of all subsets (connected components) with their canonical tree root IDs as keys and arrays of node IDs as values. If only the number of subsets is required, use the `count` property of this class instance instead (O(1), updated with each call to `union()`<!-- -->).
+Returns a `Map` of all subsets (connected components) with their canonical tree root IDs as keys and arrays of node IDs as values. If only the number of subsets is required, use the `count` property of this class instance instead (O(1), updated with each call to [DisjointSet.union()](./adjacency.disjointset.union.md)<!-- -->).
 
 <b>Signature:</b>
 

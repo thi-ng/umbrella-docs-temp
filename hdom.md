@@ -23,13 +23,13 @@
 |  [cloneWithNewAttribs](./hdom.clonewithnewattribs.md) |  |
 |  [createElement](./hdom.createelement.md) | Creates a new DOM element of type <code>tag</code> with optional <code>attribs</code>. If <code>parent</code> is not <code>null</code>, the new element will be inserted as child at given <code>insert</code> index. If <code>insert</code> is missing, the element will be appended to the <code>parent</code>'s list of children. Returns new DOM node.<!-- -->If <code>tag</code> is a known SVG element name, the new element will be created with the proper SVG XML namespace. |
 |  [createTextElement](./hdom.createtextelement.md) |  |
-|  [createTree](./hdom.createtree.md) | See <code>HDOMImplementation</code> interface for further details. |
+|  [createTree](./hdom.createtree.md) | See [HDOMImplementation](./hdom.hdomimplementation.md) interface for further details. |
 |  [DEFAULT\_IMPL](./hdom.default_impl.md) | Default target implementation to manipulate browser DOM. |
-|  [diffAttributes](./hdom.diffattributes.md) | Helper function for <code>diffTree()</code> to compute &amp; apply the difference between a node's <code>prev</code> and <code>curr</code> attributes. |
-|  [diffTree](./hdom.difftree.md) | See <code>HDOMImplementation</code> interface for further details. |
+|  [diffAttributes](./hdom.diffattributes.md) | Helper function for [diffTree](./hdom.difftree.md) to compute &amp; apply the difference between a node's <code>prev</code> and <code>curr</code> attributes. |
+|  [diffTree](./hdom.difftree.md) | See [HDOMImplementation](./hdom.hdomimplementation.md) interface for further details. |
 |  [equiv](./hdom.equiv.md) | Customized version [equiv](./equiv.equiv.md) which takes <code>__diff</code> attributes into account (at any nesting level). If an hdom element's attribute object contains <code>__diff: false</code>, the object will ALWAYS be considered unequal, even if all other attributes in the object are equivalent. |
 |  [getChild](./hdom.getchild.md) |  |
-|  [hydrateTree](./hdom.hydratetree.md) | See <code>HDOMImplementation</code> interface for further details. |
+|  [hydrateTree](./hdom.hydratetree.md) | See [HDOMImplementation](./hdom.hdomimplementation.md) interface for further details. |
 |  [LOGGER](./hdom.logger.md) |  |
 |  [normalizeElement](./hdom.normalizeelement.md) | Expands single hiccup element/component into its canonical form:
 ```
@@ -47,15 +47,15 @@ If both Emmet-style classes AND a <code>class</code> attrib exists, the former a
 
 ```
 Elements with <code>__skip</code> attrib enabled and no children, will have an empty text child element injected. |
-|  [normalizeTree](./hdom.normalizetree.md) | See <code>HDOMImplementation</code> interface for further details. |
-|  [releaseTree](./hdom.releasetree.md) | Recursively attempts to call the <code>release</code> lifecycle method on every element in given tree (branch), using depth-first descent. Each element is checked for the presence of the <code>__release</code> control attribute. If (and only if) it is set to <code>false</code>, further descent into that element's branch is skipped. |
+|  [normalizeTree](./hdom.normalizetree.md) | See [HDOMImplementation](./hdom.hdomimplementation.md) interface for further details. |
+|  [releaseTree](./hdom.releasetree.md) | Recursively attempts to call the [ILifecycle.release()](./hdom.ilifecycle.release.md) lifecycle method on every element in given tree (branch), using depth-first descent. Each element is checked for the presence of the <code>__release</code> control attribute. If (and only if) it is set to <code>false</code>, further descent into that element's branch is skipped. |
 |  [removeAttribs](./hdom.removeattribs.md) |  |
 |  [removeChild](./hdom.removechild.md) |  |
 |  [removeListener](./hdom.removelistener.md) | Removes event listener (possibly with options). |
-|  [renderOnce](./hdom.renderonce.md) | One-off hdom tree conversion &amp; target DOM application. Takes same options as <code>start()</code>, but performs no diffing and only creates or hydrates target once. The given tree is first normalized and if result is <code>null</code> or <code>undefined</code> no further action will be taken. |
+|  [renderOnce](./hdom.renderonce.md) | One-off hdom tree conversion &amp; target DOM application. Takes same options as [start](./hdom.start.md)<!-- -->, but performs no diffing and only creates or hydrates target once. The given tree is first normalized and if result is <code>null</code> or <code>undefined</code> no further action will be taken. |
 |  [replaceChild](./hdom.replacechild.md) |  |
 |  [resolveRoot](./hdom.resolveroot.md) |  |
-|  [setAttrib](./hdom.setattrib.md) | Sets a single attribute on given element. If attrib name is NOT an event name (prefix: "on") and its value is a function, it is called with given <code>attribs</code> object (usually the full attrib object passed to <code>setAttribs</code>) and the function's return value is used as the actual attrib value.<!-- -->Special rules apply for certain attributes:<!-- -->- "style": delegated to <code>setStyle()</code> - "value": delegated to <code>updateValueAttrib()</code> - attrib IDs starting with "on" are treated as event listeners<!-- -->If the given (or computed) attrib value is <code>false</code> or <code>undefined</code> the attrib is removed from the element. |
+|  [setAttrib](./hdom.setattrib.md) | Sets a single attribute on given element. If attrib name is NOT an event name (prefix: "on") and its value is a function, it is called with given <code>attribs</code> object (usually the full attrib object passed to [setAttribs](./hdom.setattribs.md)<!-- -->) and the function's return value is used as the actual attrib value.<!-- -->Special rules apply for certain attributes:<!-- -->- "style": delegated to [setStyle](./hdom.setstyle.md) - "value": delegated to [updateValueAttrib](./hdom.updatevalueattrib.md) - attrib IDs starting with "on" are treated as event listeners<!-- -->If the given (or computed) attrib value is <code>false</code> or <code>undefined</code> the attrib is removed from the element. |
 |  [setAttribs](./hdom.setattribs.md) |  |
 |  [setContent](./hdom.setcontent.md) |  |
 |  [setListener](./hdom.setlistener.md) | Adds event listener (possibly with options). |

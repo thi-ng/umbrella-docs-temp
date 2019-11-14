@@ -4,7 +4,7 @@
 
 ## TYPE2GL variable
 
-Potentially lossy conversion from `Type` to `GLType` enums.
+Potentially lossy conversion from [Type](./api.type.md) to [GLType](./api.gltype.md) enums.
 
 Not all enums are mappable:
 

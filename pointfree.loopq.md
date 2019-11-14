@@ -4,7 +4,7 @@
 
 ## loopq variable
 
-Non-HOF version of `loop`<!-- -->. Expects test result and body quotation / word on d-stack.
+Non-HOF version of [loop](./pointfree.loop.md)<!-- -->. Expects test result and body quotation / word on d-stack.
 
 ( testq bodyq -- ? )
 

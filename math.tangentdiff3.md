@@ -4,9 +4,9 @@
 
 ## tangentDiff3 variable
 
-Helper function for `mixCubicHermite()`<!-- -->. Computes tangent for `curr`<!-- -->, based on 3-point finite difference, where `prev` &amp; `next` are `curr`<!-- -->'s neighbors and the `tX` the three points' respective time values. The latter are equally spaced by default (each 1.0 apart).
+Helper function for [mixCubicHermite](./math.mixcubichermite.md)<!-- -->. Computes tangent for `curr`<!-- -->, based on 3-point finite difference, where `prev` &amp; `next` are `curr`<!-- -->'s neighbors and the `tX` the three points' respective time values. The latter are equally spaced by default (each 1.0 apart).
 
-Using this function with equal spacing of 1.0 and together with `mixCubicHermite()` will produce same results as the somewhat optimized variant `mixHermite()`<!-- -->.
+Using this function with equal spacing of 1.0 and together with [mixCubicHermite](./math.mixcubichermite.md) will produce same results as the somewhat optimized variant [mixHermite](./math.mixhermite.md)<!-- -->.
 
 [https://en.wikipedia.org/wiki/Cubic\_Hermite\_spline\#Finite\_difference](https://en.wikipedia.org/wiki/Cubic_Hermite_spline#Finite_difference)
 

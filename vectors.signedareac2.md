@@ -4,7 +4,7 @@
 
 ## signedAreaC2 variable
 
-Same as `signedArea2`<!-- -->, but expects individual vector component args, instead of vectors.
+Same as [signedArea2](./vectors.signedarea2.md)<!-- -->, but expects individual vector component args, instead of vectors.
 
 <b>Signature:</b>
 

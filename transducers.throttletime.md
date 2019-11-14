@@ -4,9 +4,9 @@
 
 ## throttleTime() function
 
-Time-based version of `throttle`<!-- -->. Ignores any new values in the `delay` interval since the last accepted value.
+Time-based version of . Ignores any new values in the `delay` interval since the last accepted value.
 
-\*\*Only to be used in async contexts and NOT with `transduce` directly.\*\*
+\*\*Only to be used in async contexts and NOT with  directly.\*\*
 
 Also see:  and  packages.
 

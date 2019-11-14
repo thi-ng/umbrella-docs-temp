@@ -4,7 +4,7 @@
 
 ## Fn9 type
 
-A 9-arg function from A,B,C,D,E,F,G,H,I =<!-- -->&gt; J.
+A 9-arg function from A,B,C,D,E,F,G,H,I to J.
 
 <b>Signature:</b>
 

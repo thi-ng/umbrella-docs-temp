@@ -4,7 +4,7 @@
 
 ## runE variable
 
-Like `run`<!-- -->, but returns resulting env object only.
+Like [run](./pointfree-lang.run.md)<!-- -->, but returns resulting env object only.
 
 <b>Signature:</b>
 

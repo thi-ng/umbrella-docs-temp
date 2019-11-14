@@ -4,7 +4,7 @@
 
 ## area variable
 
-Returns the possibly signed (unsigned by default) surface area of given `shape`<!-- -->. For groups calls `area()` for each child and returns sum of unsigned areas.
+Returns the possibly signed (unsigned by default) surface area of given `shape`<!-- -->. For groups calls [area](./geom.area.md) for each child and returns sum of unsigned areas.
 
 In general, for polygons and triangles, the sign of the result can be used as indication of the shapes orientation (clockwise / counterclockwise).
 

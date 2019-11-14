@@ -6,7 +6,7 @@
 
 Porter-Duff operator for packed ints. The destination that overlaps the source is composited with the source and replaces the destination.
 
- porterDuff
+[porterDuff](./porter-duff.porterduff.md)
 
 <b>Signature:</b>
 

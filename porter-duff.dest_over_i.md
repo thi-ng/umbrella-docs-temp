@@ -6,7 +6,7 @@
 
 Porter-Duff operator for packed ints. The destination color is placed over the source color.
 
- porterDuff
+[porterDuff](./porter-duff.porterduff.md)
 
 <b>Signature:</b>
 

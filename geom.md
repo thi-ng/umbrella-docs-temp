@@ -50,7 +50,7 @@
 |  [inscribedAABB(pos, r)](./geom.inscribedaabb_1.md) |  |
 |  [inscribedSquare(circle)](./geom.inscribedsquare.md) | Returns square inscribed in given circle instance. The circle can also be given as centroid &amp; radius. |
 |  [inscribedSquare(pos, r)](./geom.inscribedsquare_1.md) |  |
-|  [inscribedSquareHex(hex)](./geom.inscribedsquarehex.md) | Returns square inscribed in given (unrotated) hexagon. The hexagon can be given as <code>Polygon</code> or centroid and edge length. |
+|  [inscribedSquareHex(hex)](./geom.inscribedsquarehex.md) | Returns square inscribed in given (unrotated) hexagon. The hexagon can be given as [Polygon](./geom.polygon.md) or centroid and edge length. |
 |  [inscribedSquareHex(pos, len)](./geom.inscribedsquarehex_1.md) |  |
 |  [line(a, b, attribs)](./geom.line.md) |  |
 |  [line(pts, attribs)](./geom.line_1.md) |  |
@@ -73,8 +73,8 @@
 |  [aabbFromMinMax](./geom.aabbfromminmax.md) |  |
 |  [arc](./geom.arc.md) |  |
 |  [arcFrom2Points](./geom.arcfrom2points.md) |  |
-|  [arcLength](./geom.arclength.md) | Returns the arc length / perimeter / circumference of the given shape. For groups calls <code>arcLength()</code> for each child and returns the sum of results.<!-- -->Implemented for:<!-- -->- Circle - Ellipse - Group - Line - Polygon - Polyline - Quad - Rect - Triangle |
-|  [area](./geom.area.md) | Returns the possibly signed (unsigned by default) surface area of given <code>shape</code>. For groups calls <code>area()</code> for each child and returns sum of unsigned areas.<!-- -->In general, for polygons and triangles, the sign of the result can be used as indication of the shapes orientation (clockwise / counterclockwise).<!-- -->For curves, lines, point clouds and rays the function returns 0.<!-- -->Implemented for:<!-- -->- AABB - Circle - Cubic - Ellipse - Group - Line - Plane - Points - Polygon - Polyline - Quad - Quadratic - Ray - Rect - Sphere - Triangle |
+|  [arcLength](./geom.arclength.md) | Returns the arc length / perimeter / circumference of the given shape. For groups calls [arcLength](./geom.arclength.md) for each child and returns the sum of results.<!-- -->Implemented for:<!-- -->- Circle - Ellipse - Group - Line - Polygon - Polyline - Quad - Rect - Triangle |
+|  [area](./geom.area.md) | Returns the possibly signed (unsigned by default) surface area of given <code>shape</code>. For groups calls [area](./geom.area.md) for each child and returns sum of unsigned areas.<!-- -->In general, for polygons and triangles, the sign of the result can be used as indication of the shapes orientation (clockwise / counterclockwise).<!-- -->For curves, lines, point clouds and rays the function returns 0.<!-- -->Implemented for:<!-- -->- AABB - Circle - Cubic - Ellipse - Group - Line - Plane - Points - Polygon - Polyline - Quad - Quadratic - Ray - Rect - Sphere - Triangle |
 |  [asCubic](./geom.ascubic.md) |  |
 |  [asPath](./geom.aspath.md) |  |
 |  [asPolygon](./geom.aspolygon.md) |  |
@@ -89,7 +89,7 @@
 |  [clipConvex](./geom.clipconvex.md) |  |
 |  [clippedLine](./geom.clippedline.md) |  |
 |  [closestPoint](./geom.closestpoint.md) |  |
-|  [collBounds](./geom.collbounds.md) | Computes the total bounds for the given shape collection, which should either contain only 2D or 3D types. No mixed dimensions are allowed! Currently the <code>bounds</code> function must be passed in as arg to avoid circular module dependencies. |
+|  [collBounds](./geom.collbounds.md) | Computes the total bounds for the given shape collection, which should either contain only 2D or 3D types. No mixed dimensions are allowed! Currently the [bounds](./geom.bounds.md) function must be passed in as arg to avoid circular module dependencies. |
 |  [convexHull](./geom.convexhull.md) |  |
 |  [copyAttribs](./geom.copyattribs.md) |  |
 |  [copyShape](./geom.copyshape.md) |  |
@@ -130,7 +130,7 @@
 |  [simplify](./geom.simplify.md) |  |
 |  [splitAt](./geom.splitat.md) |  |
 |  [splitLine](./geom.splitline.md) |  |
-|  [splitNearPoint](./geom.splitnearpoint.md) | Similar to <code>splitAt</code>, but instead of taking a normalized parametric split position, splits the given curve at the closest point to <code>p</code>. Returns tuple of split shapes of same type as <code>shape</code>.<!-- -->Implemented for:<!-- -->- Cubic - Line - Polyline - Quadratic splitAt |
+|  [splitNearPoint](./geom.splitnearpoint.md) | Similar to [splitAt](./geom.splitat.md)<!-- -->, but instead of taking a normalized parametric split position, splits the given curve at the closest point to <code>p</code>. Returns tuple of split shapes of same type as <code>shape</code>.<!-- -->Implemented for:<!-- -->- Cubic - Line - Polyline - Quadratic |
 |  [star](./geom.star.md) |  |
 |  [subdivCurve](./geom.subdivcurve.md) |  |
 |  [svgDoc](./geom.svgdoc.md) |  |
@@ -144,8 +144,8 @@
 |  [translatedPoints](./geom.translatedpoints.md) |  |
 |  [translatedShape](./geom.translatedshape.md) |  |
 |  [union](./geom.union.md) |  |
-|  [unionBounds](./geom.unionbounds.md) | Takes the position and size vectors of 2 <code>AABBLike</code>s and returns 2-tuple of <code>[pos,size]</code> of their union bounds. |
-|  [unmapPoint](./geom.unmappoint.md) | Projects given point <code>uv</code> (normalized coords) into the target space defined by <code>shape</code> and writes result to <code>out</code> (or returns new vector). See <code>mapPoint</code> for reverse operation. Both functions together can be used to warp points from one shape into another.<!-- -->Currently only implemented for these shape types:<!-- -->- AABB - Quad - Rect |
+|  [unionBounds](./geom.unionbounds.md) | Takes the position and size vectors of 2 [AABBLike](./geom-api.aabblike.md)<!-- -->s and returns 2-tuple of <code>[pos,size]</code> of their union bounds. |
+|  [unmapPoint](./geom.unmappoint.md) | Projects given point <code>uv</code> (normalized coords) into the target space defined by <code>shape</code> and writes result to <code>out</code> (or returns new vector). See [mapPoint](./geom.mappoint.md) for reverse operation. Both functions together can be used to warp points from one shape into another.<!-- -->Currently only implemented for these shape types:<!-- -->- AABB - Quad - Rect |
 |  [vertices](./geom.vertices.md) |  |
 |  [volume](./geom.volume.md) | Returns the volume of given 3D shape. Returns 0 for all others.<!-- -->Currently only implemented for:<!-- -->- AABB - Sphere |
 |  [warpPoints](./geom.warppoints.md) |  |

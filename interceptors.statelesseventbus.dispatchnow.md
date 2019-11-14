@@ -4,7 +4,7 @@
 
 ## StatelessEventBus.dispatchNow() method
 
-Adds given events to whatever is the current event queue. If triggered via the `FX_DISPATCH_NOW` side effect from an event handler / interceptor, the event will still be executed in the currently active batch / frame. If called from elsewhere, the result is the same as calling `dispatch()`<!-- -->.
+Adds given events to whatever is the current event queue. If triggered via the `FX_DISPATCH_NOW` side effect from an event handler / interceptor, the event will still be executed in the currently active batch / frame. If called from elsewhere, the result is the same as calling [dispatch](./interceptors.dispatch.md)<!-- -->.
 
 <b>Signature:</b>
 

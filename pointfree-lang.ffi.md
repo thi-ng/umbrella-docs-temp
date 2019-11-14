@@ -4,7 +4,7 @@
 
 ## ffi variable
 
-Takes an environment object and injects given custom word definitions. `words` is an object with keys representing word names and their values `StackFn`<!-- -->s. See  package for more details about stack functions.
+Takes an environment object and injects given custom word definitions. `words` is an object with keys representing word names and their values [StackFn](./pointfree.stackfn.md)<!-- -->s. See  package for more details about stack functions.
 
 <b>Signature:</b>
 

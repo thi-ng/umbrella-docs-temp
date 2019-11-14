@@ -4,7 +4,7 @@
 
 ## runWordE variable
 
-Like `runWord()`<!-- -->, but returns resulting env object only.
+Like [runWord](./pointfree-lang.runword.md)<!-- -->, but returns resulting env object only.
 
 <b>Signature:</b>
 

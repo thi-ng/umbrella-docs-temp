@@ -4,7 +4,7 @@
 
 ## alphaNum variable
 
-Combination of `digit()` and `alpha()`<!-- -->.
+Combination of [digit](./fsm.digit.md) and [alpha](./fsm.alpha.md)<!-- -->.
 
 <b>Signature:</b>
 

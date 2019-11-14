@@ -12,7 +12,16 @@ If any intermediate key is not present in the given obj, creates a plain empty o
 
 If `path` is an empty string or array, the returned setter will simply return the new value.
 
-Also see: `setIn()`<!-- -->, `updateIn()`<!-- -->, `deleteIn()`
+Also see: [setIn](./paths.setin.md)<!-- -->, [updateIn](./paths.updatein.md)<!-- -->, [deleteIn](./paths.deletein.md)
+
+<b>Signature:</b>
+
+```typescript
+setter: (path: Path) => (s: any, v: any) => any
+```
+
+## Example 1
+
 
 ```ts
 s = setter("a.b.c");
@@ -31,6 +40,9 @@ s(null, 24)
 ```
 Only keys in the path will be modified, all other keys present in the given object retain their original values to provide efficient structural sharing / re-use.
 
+## Example 2
+
+
 ```ts
 s = setter("a.b.c");
 
@@ -43,8 +55,3 @@ a.x.y === b.x.y // true
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-setter: (path: Path) => (s: any, v: any) => any
-```

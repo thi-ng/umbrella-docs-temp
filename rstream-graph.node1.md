@@ -4,7 +4,7 @@
 
 ## node1 variable
 
-Similar to `node()`<!-- -->, but optimized for nodes using only a single input. Uses "src" as default input ID.
+Similar to [node](./rstream-graph.node.md)<!-- -->, but optimized for nodes using only a single input. Uses "src" as default input ID.
 
 <b>Signature:</b>
 

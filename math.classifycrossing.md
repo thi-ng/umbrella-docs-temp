@@ -4,9 +4,9 @@
 
 ## classifyCrossing variable
 
-Returns `Crossing` classifier indicating the relationship of line A to line B. The optional epsilon value is used to determine if both lines are considered equal or flat.
+Returns [Crossing](./math.crossing.md) classifier indicating the relationship of line A to line B. The optional epsilon value is used to determine if both lines are considered equal or flat.
 
- isCrossUp  isCrossDown  Crossing
+- [isCrossOver](./math.iscrossover.md) - [isCrossUnder](./math.iscrossunder.md) - [Crossing](./math.crossing.md)
 
 <b>Signature:</b>
 

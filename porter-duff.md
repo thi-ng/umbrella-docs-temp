@@ -16,20 +16,20 @@
 |  --- | --- |
 |  [A](./porter-duff.a.md) |  |
 |  [B](./porter-duff.b.md) |  |
-|  [CLEAR\_F](./porter-duff.clear_f.md) | Porter-Duff operator. None of the terms are used. Always results in \[0, 0, 0, 0\]. porterDuff |
+|  [CLEAR\_F](./porter-duff.clear_f.md) | Porter-Duff operator. None of the terms are used. Always results in \[0, 0, 0, 0\].[porterDuff](./porter-duff.porterduff.md) |
 |  [CLEAR\_I](./porter-duff.clear_i.md) |  |
 |  [darken](./porter-duff.darken.md) | Porter-Duff darken modifier. Multiplies RGB components of <code>src</code> with <code>t</code>. Alpha remains unchanged. Writes results to <code>out</code>, or if <code>null</code> modifies <code>src</code> in-place. |
 |  [darkenInt](./porter-duff.darkenint.md) | Porter-Duff darken modifier for packed ints. Multiplies RGB components of <code>src</code> with <code>t</code> (\[0..1\] range). |
-|  [DEST\_ATOP\_F](./porter-duff.dest_atop_f.md) | Porter-Duff operator. The destination that overlaps the source is composited with the source and replaces the destination. porterDuff |
-|  [DEST\_ATOP\_I](./porter-duff.dest_atop_i.md) | Porter-Duff operator for packed ints. The destination that overlaps the source is composited with the source and replaces the destination. porterDuff |
-|  [DEST\_F](./porter-duff.dest_f.md) | Porter-Duff operator. Always results in <code>dest</code> color, <code>src</code> ignored. porterDuff |
-|  [DEST\_I](./porter-duff.dest_i.md) | Porter-Duff operator for packed ints. Always results in <code>dest</code> color, <code>src</code> ignored. porterDuff |
-|  [DEST\_IN\_F](./porter-duff.dest_in_f.md) | Porter-Duff operator. The destination that overlaps the source, replaces the source. porterDuff |
-|  [DEST\_IN\_I](./porter-duff.dest_in_i.md) | Porter-Duff operator for packed ints. The destination that overlaps the source, replaces the source. porterDuff |
-|  [DEST\_OUT\_F](./porter-duff.dest_out_f.md) | Porter-Duff operator. The destination that does not overlap the source replaces the source. porterDuff |
-|  [DEST\_OUT\_I](./porter-duff.dest_out_i.md) | Porter-Duff operator for packed ints. The destination that does not overlap the source replaces the source. porterDuff |
-|  [DEST\_OVER\_F](./porter-duff.dest_over_f.md) | Porter-Duff operator. The destination color is placed over the source color. porterDuff |
-|  [DEST\_OVER\_I](./porter-duff.dest_over_i.md) | Porter-Duff operator for packed ints. The destination color is placed over the source color. porterDuff |
+|  [DEST\_ATOP\_F](./porter-duff.dest_atop_f.md) | Porter-Duff operator. The destination that overlaps the source is composited with the source and replaces the destination.[porterDuff](./porter-duff.porterduff.md) |
+|  [DEST\_ATOP\_I](./porter-duff.dest_atop_i.md) | Porter-Duff operator for packed ints. The destination that overlaps the source is composited with the source and replaces the destination.[porterDuff](./porter-duff.porterduff.md) |
+|  [DEST\_F](./porter-duff.dest_f.md) | Porter-Duff operator. Always results in <code>dest</code> color, <code>src</code> ignored.[porterDuff](./porter-duff.porterduff.md) |
+|  [DEST\_I](./porter-duff.dest_i.md) | Porter-Duff operator for packed ints. Always results in <code>dest</code> color, <code>src</code> ignored.[porterDuff](./porter-duff.porterduff.md) |
+|  [DEST\_IN\_F](./porter-duff.dest_in_f.md) | Porter-Duff operator. The destination that overlaps the source, replaces the source.[porterDuff](./porter-duff.porterduff.md) |
+|  [DEST\_IN\_I](./porter-duff.dest_in_i.md) | Porter-Duff operator for packed ints. The destination that overlaps the source, replaces the source.[porterDuff](./porter-duff.porterduff.md) |
+|  [DEST\_OUT\_F](./porter-duff.dest_out_f.md) | Porter-Duff operator. The destination that does not overlap the source replaces the source.[porterDuff](./porter-duff.porterduff.md) |
+|  [DEST\_OUT\_I](./porter-duff.dest_out_i.md) | Porter-Duff operator for packed ints. The destination that does not overlap the source replaces the source.[porterDuff](./porter-duff.porterduff.md) |
+|  [DEST\_OVER\_F](./porter-duff.dest_over_f.md) | Porter-Duff operator. The destination color is placed over the source color.[porterDuff](./porter-duff.porterduff.md) |
+|  [DEST\_OVER\_I](./porter-duff.dest_over_i.md) | Porter-Duff operator for packed ints. The destination color is placed over the source color.[porterDuff](./porter-duff.porterduff.md) |
 |  [dissolve](./porter-duff.dissolve.md) | Porter-Duff dissolve modifier. Multiplies all components of <code>src</code> with <code>t</code>. Clamps alpha to \[0..1\] range, RGB unclamped. Writes results to <code>out</code>, or if <code>null</code> modifies <code>src</code> in-place. |
 |  [dissolveInt](./porter-duff.dissolveint.md) | Porter-Duff dissolve modifier for packed ints. Multiplies all components of <code>src</code> with <code>t</code> (\[0..1\] range). |
 |  [isPremultiplied](./porter-duff.ispremultiplied.md) | Returns true if RGBA float color vector is premultiplied. |
@@ -41,26 +41,26 @@
 |  [opacityInt](./porter-duff.opacityint.md) | Porter-Duff opacity modifier for packed ints. Multiplies alpha component of <code>src</code> with <code>t</code> (\[0..1\] range). |
 |  [PLUS\_F](./porter-duff.plus_f.md) | Porter-Duff operator. Source &amp; destination regions are added. |
 |  [PLUS\_I](./porter-duff.plus_i.md) | Porter-Duff operator for packed ints. Source &amp; destination regions are added. |
-|  [porterDuff](./porter-duff.porterduff.md) | General Porter-Duff HOF operator for \*\*pre-multiplied\*\* RGBA. Use <code>porderDiffP</code> for applying pre &amp; post multiplication of input and output colors. The returned function takes 3 arguments:<!-- -->- <code>out</code> color (if <code>null</code> or <code>undefined</code> writes to <code>dest</code>) - <code>src</code> color (background) - <code>dest</code> color (foreground)<!-- -->Unlike the packed int version, here only the alpha channel of the result color will be clamped. RGB components can potentially go out of \[0..1\] range (depending on coefficient functions used).<!-- -->Reference: [https://keithp.com/\~keithp/porterduff/p253-porter.pdf](https://keithp.com/~keithp/porterduff/p253-porter.pdf) |
+|  [porterDuff](./porter-duff.porterduff.md) | General Porter-Duff HOF operator for \*\*pre-multiplied\*\* RGBA. Use [porterDuffP](./porter-duff.porterduffp.md) for applying pre &amp; post multiplication of input and output colors. The returned function takes 3 arguments:<!-- -->- <code>out</code> color (if <code>null</code> or <code>undefined</code> writes to <code>dest</code>) - <code>src</code> color (background) - <code>dest</code> color (foreground)<!-- -->Unlike the packed int version, here only the alpha channel of the result color will be clamped. RGB components can potentially go out of \[0..1\] range (depending on coefficient functions used).<!-- -->Reference: [https://keithp.com/\~keithp/porterduff/p253-porter.pdf](https://keithp.com/~keithp/porterduff/p253-porter.pdf) |
 |  [porterDuffInt](./porter-duff.porterduffint.md) |  |
 |  [porterDuffP](./porter-duff.porterduffp.md) | Higher order function. Takes existing PD operator and returns function which accepts same args as the operator, but pre-multiplies alpha for both input colors and then returns post-multiplied alpha output. |
-|  [porterDuffPInt](./porter-duff.porterduffpint.md) | Like <code>porterDuffP</code>, but for packed integers. |
-|  [postmultiply](./porter-duff.postmultiply.md) | Reverse operation of <code>premultiply</code>. Divides RGB channels by alpha, unless alpha is zero. Does NOT clamp result. |
-|  [postmultiplyInt](./porter-duff.postmultiplyint.md) | Reverse op of <code>premultiplyInt</code>. Assumes 8bits/channel and alpha in MSB lane. Divides RGB channels by alpha (unless zero) and DOES clamp result to avoid overflows. |
+|  [porterDuffPInt](./porter-duff.porterduffpint.md) | Like [porterDuffP](./porter-duff.porterduffp.md)<!-- -->, but for packed integers. |
+|  [postmultiply](./porter-duff.postmultiply.md) | Reverse operation of [premultiply](./porter-duff.premultiply.md)<!-- -->. Divides RGB channels by alpha, unless alpha is zero. Does NOT clamp result. |
+|  [postmultiplyInt](./porter-duff.postmultiplyint.md) | Reverse op of [premultiplyInt](./porter-duff.premultiplyint.md)<!-- -->. Assumes 8bits/channel and alpha in MSB lane. Divides RGB channels by alpha (unless zero) and DOES clamp result to avoid overflows. |
 |  [premultiply](./porter-duff.premultiply.md) | Multiplies RGB channels w/ alpha channel. Assumes alpha is in last vector component and \[0..1\] interval. Does NOT clamp result. |
 |  [premultiplyInt](./porter-duff.premultiplyint.md) | Multiplies RGB channels of packed int with alpha channel. Assumes 8bits/channel and alpha in MSB lane. |
-|  [SRC\_ATOP\_F](./porter-duff.src_atop_f.md) | Porter-Duff operator. The source that overlaps the destination is composited with the destination. porterDuff |
-|  [SRC\_ATOP\_I](./porter-duff.src_atop_i.md) | Porter-Duff operator for packed ints. The source that overlaps the destination is composited with the destination. porterDuff |
-|  [SRC\_F](./porter-duff.src_f.md) | Porter-Duff operator. Always results in <code>src</code> color, <code>dest</code> ignored. porterDuff |
-|  [SRC\_I](./porter-duff.src_i.md) | Porter-Duff operator for packed ints. Always results in <code>src</code> color, <code>dest</code> ignored. porterDuff |
-|  [SRC\_IN\_F](./porter-duff.src_in_f.md) | Porter-Duff operator. The source that overlaps the destination, replaces the destination. porterDuff |
-|  [SRC\_IN\_I](./porter-duff.src_in_i.md) | Porter-Duff operator for packed ints. The source that overlaps the destination, replaces the destination. porterDuff |
-|  [SRC\_OUT\_F](./porter-duff.src_out_f.md) | Porter-Duff operator. The source that does not overlap the destination replaces the destination. porterDuff |
-|  [SRC\_OUT\_I](./porter-duff.src_out_i.md) | Porter-Duff operator for packed ints. The source that does not overlap the destination replaces the destination. porterDuff |
-|  [SRC\_OVER\_F](./porter-duff.src_over_f.md) | Porter-Duff operator. The source color is placed over the destination color. porterDuff |
-|  [SRC\_OVER\_I](./porter-duff.src_over_i.md) | Porter-Duff operator for packed ints. The source color is placed over the destination color. porterDuff |
-|  [XOR\_F](./porter-duff.xor_f.md) | Porter-Duff operator. The non-overlapping regions of source and destination are combined. porterDuff |
-|  [XOR\_I](./porter-duff.xor_i.md) | Porter-Duff operator for packed ints. The non-overlapping regions of source and destination are combined. porterDuff |
+|  [SRC\_ATOP\_F](./porter-duff.src_atop_f.md) | Porter-Duff operator. The source that overlaps the destination is composited with the destination.[porterDuff](./porter-duff.porterduff.md) |
+|  [SRC\_ATOP\_I](./porter-duff.src_atop_i.md) | Porter-Duff operator for packed ints. The source that overlaps the destination is composited with the destination.[porterDuff](./porter-duff.porterduff.md) |
+|  [SRC\_F](./porter-duff.src_f.md) | Porter-Duff operator. Always results in <code>src</code> color, <code>dest</code> ignored.[porterDuff](./porter-duff.porterduff.md) |
+|  [SRC\_I](./porter-duff.src_i.md) | Porter-Duff operator for packed ints. Always results in <code>src</code> color, <code>dest</code> ignored.[porterDuff](./porter-duff.porterduff.md) |
+|  [SRC\_IN\_F](./porter-duff.src_in_f.md) | Porter-Duff operator. The source that overlaps the destination, replaces the destination.[porterDuff](./porter-duff.porterduff.md) |
+|  [SRC\_IN\_I](./porter-duff.src_in_i.md) | Porter-Duff operator for packed ints. The source that overlaps the destination, replaces the destination.[porterDuff](./porter-duff.porterduff.md) |
+|  [SRC\_OUT\_F](./porter-duff.src_out_f.md) | Porter-Duff operator. The source that does not overlap the destination replaces the destination.[porterDuff](./porter-duff.porterduff.md) |
+|  [SRC\_OUT\_I](./porter-duff.src_out_i.md) | Porter-Duff operator for packed ints. The source that does not overlap the destination replaces the destination.[porterDuff](./porter-duff.porterduff.md) |
+|  [SRC\_OVER\_F](./porter-duff.src_over_f.md) | Porter-Duff operator. The source color is placed over the destination color.[porterDuff](./porter-duff.porterduff.md) |
+|  [SRC\_OVER\_I](./porter-duff.src_over_i.md) | Porter-Duff operator for packed ints. The source color is placed over the destination color.[porterDuff](./porter-duff.porterduff.md) |
+|  [XOR\_F](./porter-duff.xor_f.md) | Porter-Duff operator. The non-overlapping regions of source and destination are combined.[porterDuff](./porter-duff.porterduff.md) |
+|  [XOR\_I](./porter-duff.xor_i.md) | Porter-Duff operator for packed ints. The non-overlapping regions of source and destination are combined.[porterDuff](./porter-duff.porterduff.md) |
 |  [ZERO](./porter-duff.zero.md) |  |
 
 ## Type Aliases

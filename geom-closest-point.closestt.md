@@ -6,16 +6,20 @@
 
 Computes the parametric distance `t` of point `p` projected onto line `a` -<!-- -->&gt; `b`<!-- -->, relative to `a`<!-- -->. I.e. the projection of `p` can then be computed like so:
 
+<b>Signature:</b>
+
+```typescript
+closestT: (p: import("@thi.ng/api").ArrayLikeIterable<number>, a: import("@thi.ng/api").ArrayLikeIterable<number>, b: import("@thi.ng/api").ArrayLikeIterable<number>) => number | undefined
+```
+
+## Example
+
+
 ```ts
 mixN([], a, b, closestT(p, a, b))
 
 ```
 If the return value is outside the closed \[0,1\] interval, the projected point lies outside the line segment. Returns `undefined` if `a` and `b` are coincident.
 
- closestPointLine  closestPointSegment
+- [closestPointLine](./geom-closest-point.closestpointline.md) - [closestPointSegment](./geom-closest-point.closestpointsegment.md)
 
-<b>Signature:</b>
-
-```typescript
-closestT: (p: import("@thi.ng/api").ArrayLikeIterable<number>, a: import("@thi.ng/api").ArrayLikeIterable<number>, b: import("@thi.ng/api").ArrayLikeIterable<number>) => number | undefined
-```

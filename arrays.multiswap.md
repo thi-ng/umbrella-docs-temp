@@ -4,7 +4,21 @@
 
 ## multiSwap variable
 
-Higher-order version of `swap` for swapping elements in multiple arrays at once. The returned function takes the same args as `swap`<!-- -->, and when called swaps 2 elements in the array given to that function AND in the arrays given to `multiSwap` itself. Provides fast routes for up to 3 extra arrays, then falls back to a loop-based approach.
+Higher-order version of [swap](./arrays.swap.md) for swapping elements in multiple arrays at once and hence useful for sorting multiple arrays based on a single criteria.
+
+<b>Signature:</b>
+
+```typescript
+multiSwap: (...xs: AnyArray[]) => import("@thi.ng/api").Fn3<AnyArray, number, number, void>
+```
+
+## Remarks
+
+The returned function takes the same args as `swap`<!-- -->, and when called swaps 2 elements in the array given to that function AND in the arrays given to [multiSwap](./arrays.multiswap.md) itself. Provides fast routes for up to 3 extra arrays, then falls back to a loop-based approach.
+
+
+## Example
+
 
 ```ts
 a = [2, 1];
@@ -20,8 +34,3 @@ ms(a, 0, 1);
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-multiSwap: (...xs: AnyArray[]) => import("@thi.ng/api").Fn3<AnyArray, number, number, void>
-```

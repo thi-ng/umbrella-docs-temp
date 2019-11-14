@@ -20,5 +20,5 @@
 
 |  Type Alias | Description |
 |  --- | --- |
-|  [QuadEdge](./quad-edge.quadedge.md) | Type alias for a 4-tuple of <code>Edge</code> instances. |
+|  [QuadEdge](./quad-edge.quadedge.md) | Type alias for a 4-tuple of [Edge](./quad-edge.edge.md) instances. |
 

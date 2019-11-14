@@ -4,7 +4,7 @@
 
 ## wrap variable
 
-Returns a `Stringer` which wrap inputs with given `pad` string on both sides.
+Returns a [Stringer](./strings.stringer.md) which wrap inputs with given `pad` string on both sides.
 
 <b>Signature:</b>
 

@@ -4,7 +4,7 @@
 
 ## never variable
 
-Returns a matcher which always fails (produces a `Match.FAIL` result) for any given input. Use `always()` for the opposite effect.
+Returns a matcher which always fails (produces a `Match.FAIL` result) for any given input. Use [always](./fsm.always.md) for the opposite effect.
 
 <b>Signature:</b>
 

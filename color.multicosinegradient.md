@@ -6,6 +6,15 @@
 
 Multi-color cosine gradient generator using RGBA color stops. Returns an array of `n+1` color samples.
 
+<b>Signature:</b>
+
+```typescript
+multiCosineGradient: (num: number, ...stops: [number, import("@thi.ng/api").ArrayLikeIterable<number>][]) => import("@thi.ng/vectors").Vec[]
+```
+
+## Example
+
+
 ```ts
 multiCosineGradient(
   // num colors to produce
@@ -17,8 +26,3 @@ multiCosineGradient(
 ```
 [tween()](./transducers.tween.md)
 
-<b>Signature:</b>
-
-```typescript
-multiCosineGradient: (num: number, ...stops: [number, import("@thi.ng/api").ArrayLikeIterable<number>][]) => import("@thi.ng/vectors").Vec[]
-```

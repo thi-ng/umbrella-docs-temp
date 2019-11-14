@@ -4,9 +4,9 @@
 
 ## program variable
 
-Takes an array of global sym/var definitions (`input()`<!-- -->, `output()`<!-- -->, `uniform()`<!-- -->) and functions defined via `defn()`<!-- -->. Constructs the call graph of all transitively used functions and bundles everything in topological order within a global scope object, which is then returned to the user and can be passed to a target codegen for full program output.
+Takes an array of global sym/var definitions ([input](./shader-ast.input.md)<!-- -->, [output](./shader-ast.output.md)<!-- -->, [uniform](./shader-ast.uniform.md)<!-- -->) and functions defined via . Constructs the call graph of all transitively used functions and bundles everything in topological order within a global scope object, which is then returned to the user and can be passed to a target codegen for full program output.
 
- scope  input  output  uniform
+- [scope](./shader-ast.scope.md) - [input](./shader-ast.input.md) - [output](./shader-ast.output.md) - [uniform](./shader-ast.uniform.md)
 
 <b>Signature:</b>
 

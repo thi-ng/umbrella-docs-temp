@@ -4,7 +4,7 @@
 
 ## History.swap() method
 
-`IAtom.swap()` implementation. Delegates to wrapped atom/cursor, but too applies `changed` predicate to determine if there was a change and if the previous value should be recorded.
+`ISwap.swap()` implementation. Delegates to wrapped atom/cursor, but too applies `changed` predicate to determine if there was a change and if the previous value should be recorded.
 
 <b>Signature:</b>
 

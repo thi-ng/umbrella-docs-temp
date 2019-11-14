@@ -6,12 +6,21 @@
 
 > Warning: This API is now obsolete.
 > 
-> renamed to `zip`
+> renamed to 
 > 
 
 Zip function accepts a list of iterables, and combines them by merging each value of each iterable, Such as the first yield element contains the first elements of the given iterables, the second of which contains the second elements of the given iterables, and so on.
 
 The returned iterable is truncated in length to the length of the shortest argument sequence. With a single sequence argument, it yields a list of 1-tuples.
+
+<b>Signature:</b>
+
+```typescript
+tuples: typeof zip
+```
+
+## Example
+
 
 ```ts
 tx.zip([1, 2, 3], [3, 4, 5, 0, 9])
@@ -22,8 +31,3 @@ tx.zip([1, 2, 3])
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-tuples: typeof zip
-```

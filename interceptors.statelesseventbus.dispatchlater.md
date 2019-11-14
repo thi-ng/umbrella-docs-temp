@@ -4,7 +4,7 @@
 
 ## StatelessEventBus.dispatchLater() method
 
-Dispatches given event after `delay` milliseconds (by default 17). Note: Since events are only processed by calling `processQueue()`<!-- -->, it's the user's responsibility to call that latter function repeatedly in a timely manner, preferably via `requestAnimationFrame()` or similar.
+Dispatches given event after `delay` milliseconds (by default 17).
 
 <b>Signature:</b>
 
@@ -22,4 +22,8 @@ dispatchLater(e: Event, delay?: number): void;
 <b>Returns:</b>
 
 `void`
+
+## Remarks
+
+Since events are only processed by calling [StatelessEventBus.processQueue()](./interceptors.statelesseventbus.processqueue.md)<!-- -->, it's the user's responsibility to call that latter function repeatedly in a timely manner, preferably via `requestAnimationFrame()` or similar.
 

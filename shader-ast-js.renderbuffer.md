@@ -4,7 +4,7 @@
 
 ## renderBuffer variable
 
-Takes a `PackedBuffer` pixel buffer from thi.ng/pixel w/ `ABGR8888` format, an optional buffer local region defined by `x`<!-- -->, `y`<!-- -->, `w`<!-- -->, `h` and applies shader function `fn` to each pixel in that region (or full buffer by default).
+Takes a [PackedBuffer](./pixel.packedbuffer.md) pixel buffer from thi.ng/pixel w/ [ABGR8888](./pixel.abgr8888.md) format, an optional buffer local region defined by `x`<!-- -->, `y`<!-- -->, `w`<!-- -->, `h` and applies shader function `fn` to each pixel in that region (or full buffer by default).
 
 In case the buffer only defines a sub-region of a larger image, `bufOffsetX`<!-- -->, `bufOffsetY` and `imgH` can be given to configure the location and full image height.
 

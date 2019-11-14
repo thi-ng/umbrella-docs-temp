@@ -6,6 +6,15 @@
 
 Takes an `init` value and a number of functions and/or function tuples, consisting of: `[fn, ...args]`<!-- -->. Executes each function (or tuple) with the return value of the previous expression inserted as first argument, using `init` for the first expression.
 
+<b>Signature:</b>
+
+```typescript
+threadFirst: (init: any, ...fns: (FnAny<any> | [FnAny<any>, ...any[]])[]) => any
+```
+
+## Example
+
+
 ```ts
 const neg = (x) => -x;
 const sub = (a, b) => a - b;
@@ -21,10 +30,5 @@ threadFirst(
 // -2.5
 
 ```
- threadLast
+[threadLast](./compose.threadlast.md)
 
-<b>Signature:</b>
-
-```typescript
-threadFirst: (init: any, ...fns: (FnAny<any> | [FnAny<any>, ...any[]])[]) => any
-```

@@ -4,7 +4,7 @@
 
 ## polar variable
 
-Converts cartesian vector `v` to polar coordinates. See `cartesian()` for reverse operation. If `out` is null, modifies `v` in place.
+Converts cartesian vector `v` to polar coordinates. See [cartesian](./vectors.cartesian.md) for reverse operation. If `out` is null, modifies `v` in place.
 
 <b>Signature:</b>
 

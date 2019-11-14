@@ -6,7 +6,7 @@
 
 Inline function. Computes 2D cross product of given vectors.
 
- crossC2
+[crossC2](./shader-ast-stdlib.crossc2.md)
 
 <b>Signature:</b>
 

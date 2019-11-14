@@ -6,9 +6,18 @@
 
 Creates a bottom-up, unbalanced binary tree of desired depth and choice of data structures. Any value can be indexed, as long as a numeric representation (key) can be obtained. This numeric key is produced by the supplied `key` function. IMPORTANT: the returned values MUST be unsigned and less than the provided bit length (i.e. `0 .. (2^bits) - 1` range).
 
-By default the tree is constructed using plain objects for branches, with left branches stored as "l" and right ones as "r". The original values are stored at the lowest tree level using a customizable nested reducer. By default leaves are collected in arrays (using the `push()` reducer), but any suitable reducer can be used (e.g. `conj()` to collect values into sets).
+By default the tree is constructed using plain objects for branches, with left branches stored as "l" and right ones as "r". The original values are stored at the lowest tree level using a customizable nested reducer. By default leaves are collected in arrays (using the  reducer), but any suitable reducer can be used (e.g.  to collect values into sets).
 
 Index by lowest 4-bits of ID value:
+
+<b>Signature:</b>
+
+```typescript
+groupBinary: <T>(bits: number, key: Fn<T, number>, branch?: Fn0<IObjectOf<T[]>> | undefined, leaf?: Reducer<any, T> | undefined, left?: string | number | symbol, right?: string | number | symbol) => Reducer<any, T>
+```
+
+## Example 1
+
 
 ```ts
 tree = reduce(
@@ -26,6 +35,9 @@ tree.l.l.r.r
 ```
 Collecting as array:
 
+## Example 2
+
+
 ```ts
 tree = reduce(
   groupBinary(4, identity, ()=>[], push(), 0, 1),
@@ -39,7 +51,10 @@ tree[0][1][1]    // 011* == branch
 // [ [ 6 ], [ 7 ] ]
 
 ```
-Using `frequencies` as leaf reducer:
+Using  as leaf reducer:
+
+## Example 3
+
 
 ```ts
 tree = reduce(
@@ -57,8 +72,3 @@ tree[0][1][1]
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-groupBinary: <T>(bits: number, key: Fn<T, number>, branch?: Fn0<IObjectOf<T[]>> | undefined, leaf?: Reducer<any, T> | undefined, left?: string | number | symbol, right?: string | number | symbol) => Reducer<any, T>
-```

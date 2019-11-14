@@ -19,7 +19,7 @@ concat(repeat(x, numLeft), src)
 concat(src, repeat(x, numRight))
 
 ```
- extendsSides  wrapSides
+- [extendSides()](./transducers.extendsides.md) - [wrapSides()](./transducers.wrapsides.md)
 
 <b>Signature:</b>
 

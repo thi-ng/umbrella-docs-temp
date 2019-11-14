@@ -4,7 +4,7 @@
 
 ## eqDeltaS variable
 
-Similar to `equiv()`<!-- -->, but takes tolerance `eps` into account for equality checks.
+Similar to [eq](./vectors.eq.md)<!-- -->, but takes tolerance `eps` into account for equality checks.
 
 <b>Signature:</b>
 

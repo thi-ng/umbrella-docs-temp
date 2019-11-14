@@ -4,7 +4,7 @@
 
 ## solveCubic variable
 
-Computes solutions for quadratic equation: `ax^3 + bx^2 + c*x + d = 0`<!-- -->. Returns array of solutions, both real &amp; imaginary. Note: `a` MUST NOT be zero. If the cubic term is missing (i.e. zero), use `solveQuadratic` or `solveLinear` instead.
+Computes solutions for quadratic equation: `ax^3 + bx^2 + c*x + d = 0`<!-- -->. Returns array of solutions, both real &amp; imaginary. Note: `a` MUST NOT be zero. If the cubic term is missing (i.e. zero), use [solveQuadratic](./math.solvequadratic.md) or [solveLinear](./math.solvelinear.md) instead.
 
 [https://en.wikipedia.org/wiki/Cubic\_function](https://en.wikipedia.org/wiki/Cubic_function)
 

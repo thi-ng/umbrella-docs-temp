@@ -4,7 +4,7 @@
 
 ## Fn3 type
 
-A 3-arg function from A,B,C =<!-- -->&gt; D.
+A 3-arg function from A,B,C to D.
 
 <b>Signature:</b>
 

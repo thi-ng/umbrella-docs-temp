@@ -6,6 +6,15 @@
 
 Creates a new subscription which receives promises, buffers them and then passes their resolved values downstream. If the optional `fail` handler is provided, it'll be called with the error of each failed promise. If none is provided, the sub's `error()` handler is called, which then stops the sub from receiving further values.
 
+<b>Signature:</b>
+
+```typescript
+resolve: <T>(opts?: Partial<ResolverOpts> | undefined) => Resolver<T>
+```
+
+## Example
+
+
 ```ts
 fromIterable([1, 2, 3], 100)
   .transform(tx.delayed(1000))
@@ -18,8 +27,3 @@ fromIterable([1, 2, 3], 100)
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-resolve: <T>(opts?: Partial<ResolverOpts> | undefined) => Resolver<T>
-```

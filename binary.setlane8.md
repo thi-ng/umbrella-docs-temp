@@ -6,7 +6,7 @@
 
 Sets 8-bit `lane` with value`y` in `x`<!-- -->.
 
- lane8
+[lane8](./binary.lane8.md)
 
 <b>Signature:</b>
 

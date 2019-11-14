@@ -6,10 +6,6 @@
 
 Triggers processing of current event queue and returns `true` if any events have been processed.
 
-If an event handler triggers the `FX_DISPATCH_NOW` side effect, the new event will be added to the currently processed batch and therefore executed in the same frame. Also see `dispatchNow()`<!-- -->.
-
-An optional `ctx` (context) object can be provided, which is used to collect any side effect definitions during processing. This can be useful for debugging, inspection or post-processing purposes.
-
 <b>Signature:</b>
 
 ```typescript
@@ -25,4 +21,10 @@ processQueue(ctx?: InterceptorContext): boolean;
 <b>Returns:</b>
 
 `boolean`
+
+## Remarks
+
+If an event handler triggers the `FX_DISPATCH_NOW` side effect, the new event will be added to the currently processed batch and therefore executed in the same frame. Also see [dispatchNow](./interceptors.dispatchnow.md)<!-- -->.
+
+An optional `ctx` (context) object can be provided, which is used to collect any side effect definitions during processing. This can be useful for debugging, inspection or post-processing purposes.
 

@@ -4,7 +4,7 @@
 
 ## Route.title property
 
-Optional route title (passed to `RouteMatch`<!-- -->)
+Optional route title (passed to [RouteMatch](./router.routematch.md)<!-- -->)
 
 <b>Signature:</b>
 

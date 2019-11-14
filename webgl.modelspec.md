@@ -14,13 +14,13 @@ export interface ModelSpec
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [attribPool](./webgl.modelspec.attribpool.md) | <code>AttribPool</code> | Geometry attributes given as <code>AttribPool</code> instance. |
+|  [attribPool](./webgl.modelspec.attribpool.md) | <code>AttribPool</code> | Geometry attributes given as [AttribPool](./vector-pools.attribpool.md) instance. |
 |  [attribs](./webgl.modelspec.attribs.md) | <code>ModelAttributeSpecs</code> | GLSL attribute declarations |
 |  [indices](./webgl.modelspec.indices.md) | <code>IndexBufferSpec</code> | Buffer spec for indexed geometry |
 |  [instances](./webgl.modelspec.instances.md) | <code>InstancingSpec</code> | Extra configuration for instanced geometry |
 |  [mode](./webgl.modelspec.mode.md) | <code>GLenum</code> | WebGL draw mode. Defaults to <code>TRIANGLES</code> |
 |  [num](./webgl.modelspec.num.md) | <code>number</code> | Number of vertices/indices to draw |
-|  [shader](./webgl.modelspec.shader.md) | <code>IShader</code> | Initialized <code>IShader</code> instance |
-|  [textures](./webgl.modelspec.textures.md) | <code>ITexture[]</code> | Array of initialized <code>ITexture</code> instances. Each non-null item will be auto-bound to its respective texture unit, each time the model is drawn via <code>draw()</code> |
+|  [shader](./webgl.modelspec.shader.md) | <code>IShader</code> | Initialized [IShader](./webgl.ishader.md) instance |
+|  [textures](./webgl.modelspec.textures.md) | <code>ITexture[]</code> | Array of initialized [ITexture](./webgl.itexture.md) instances. Each non-null item will be auto-bound to its respective texture unit, each time the model is drawn via [draw](./webgl.draw.md) |
 |  [uniforms](./webgl.modelspec.uniforms.md) | <code>UniformValues</code> | GLSL uniform value overrides |
 

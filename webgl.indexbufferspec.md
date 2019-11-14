@@ -14,6 +14,6 @@ export interface IndexBufferSpec
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [buffer](./webgl.indexbufferspec.buffer.md) | <code>IWebGLBuffer&lt;IndexBufferData&gt;</code> | Backing <code>WebGLBuffer</code> instance. Usually this will be auto-initialized by <code>makeBuffersInSpec()</code> |
+|  [buffer](./webgl.indexbufferspec.buffer.md) | <code>IWebGLBuffer&lt;IndexBufferData&gt;</code> | Backing WebGLBuffer instance. Usually this will be auto-initialized by <code>makeBuffersInSpec</code> |
 |  [data](./webgl.indexbufferspec.data.md) | <code>IndexBufferData</code> | Raw attribute data from which <code>buffer</code> will be initialized |
 

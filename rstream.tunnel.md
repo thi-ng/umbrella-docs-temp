@@ -4,7 +4,7 @@
 
 ## tunnel variable
 
-Creates a new worker `Tunnel` instance with given options. This subscription type processes received values via the configured worker(s) and then passes any values received back from the worker(s) on to downstream subscriptions, thereby allowing workers to be used transparently for stream processing. Multiple worker instances are supported for processing. See the `maxWorkers` option for details.
+Creates a new worker [Tunnel](./rstream.tunnel.md) instance with given options. This subscription type processes received values via the configured worker(s) and then passes any values received back from the worker(s) on to downstream subscriptions, thereby allowing workers to be used transparently for stream processing. Multiple worker instances are supported for processing. See the `maxWorkers` option for details.
 
 <b>Signature:</b>
 

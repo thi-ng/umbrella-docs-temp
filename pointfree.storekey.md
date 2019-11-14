@@ -4,7 +4,7 @@
 
 ## storekey variable
 
-Higher order word. Similar to `store`<!-- -->, but always uses given preconfigure `key` instead of reading it from d-stack at runtime (also slightly faster).
+Higher order word. Similar to [store](./pointfree.store.md)<!-- -->, but always uses given preconfigure `key` instead of reading it from d-stack at runtime (also slightly faster).
 
 ( val -- )
 

@@ -4,7 +4,7 @@
 
 ## Fn8 type
 
-A 8-arg function from A,B,C,D,E,F,G,H =<!-- -->&gt; I.
+A 8-arg function from A,B,C,D,E,F,G,H to I.
 
 <b>Signature:</b>
 

@@ -4,7 +4,16 @@
 
 ## bisect variable
 
-Returns a new `PubSub` instance using given predicate `pred` as boolean topic function and `a` &amp; `b` as subscribers for truthy (`a`<!-- -->) and falsy `b` values.
+Returns a new [PubSub](./rstream.pubsub.md) instance using given predicate `pred` as boolean topic function and `a` &amp; `b` as subscribers for truthy (`a`<!-- -->) and falsy `b` values.
+
+<b>Signature:</b>
+
+```typescript
+bisect: <T>(pred: import("@thi.ng/api").Fn<T, boolean>, a?: ISubscriber<T> | undefined, b?: ISubscriber<T> | undefined) => PubSub<T, T>
+```
+
+## Example 1
+
 
 ```ts
 rs.fromIterable([1, 2, 3, 4]).subscribe(
@@ -22,7 +31,10 @@ rs.fromIterable([1, 2, 3, 4]).subscribe(
 // even done
 
 ```
-If `a` or `b` need to be subscribed to directly, then `a` / `b` MUST be first created as `Subscription` (if not already) and a reference kept prior to calling `bisect()`<!-- -->.
+If `a` or `b` need to be subscribed to directly, then `a` / `b` MUST be first created as [Subscription](./rstream.subscription.md) (if not already) and a reference kept prior to calling `bisect()`<!-- -->.
+
+## Example 2
+
 
 ```ts
 const odd = rs.subscription();
@@ -37,8 +49,3 @@ rs.fromIterable([1, 2, 3, 4]).subscribe(
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-bisect: <T>(pred: import("@thi.ng/api").Fn<T, boolean>, a?: ISubscriber<T> | undefined, b?: ISubscriber<T> | undefined) => PubSub<T, T>
-```

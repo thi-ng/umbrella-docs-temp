@@ -4,7 +4,7 @@
 
 ## rdec variable
 
-Like `dec`<!-- -->, but applies to r-stack TOS.
+Like [dec](./pointfree.dec.md)<!-- -->, but applies to r-stack TOS.
 
 <b>Signature:</b>
 

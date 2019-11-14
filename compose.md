@@ -25,7 +25,7 @@
 |  [comp(a, b, c, d, e, f, g)](./compose.comp_6.md) |  |
 |  [comp(a, b, c, d, e, f, g, h)](./compose.comp_7.md) |  |
 |  [comp(a, b, c, d, e, f, g, h, i)](./compose.comp_8.md) |  |
-|  [compL(a)](./compose.compl.md) | Similar to <code>comp()</code>, but composes given functions in left-to-right order. |
+|  [compL(a)](./compose.compl.md) | Similar to , but composes given functions in left-to-right order. |
 |  [compL(a, b, c, d, e, f, g, h, i, j)](./compose.compl_9.md) |  |
 |  [compL(a, b, c, d, e, f, g, h, i, j, xs)](./compose.compl_10.md) |  |
 |  [compL(a, b)](./compose.compl_1.md) |  |
@@ -74,53 +74,7 @@
 |  [foo](./compose.foo.md) |  |
 |  [identity](./compose.identity.md) |  |
 |  [ifDef](./compose.ifdef.md) | Returns f(x) iff <code>x</code> is not null or undefined. |
-|  [threadFirst](./compose.threadfirst.md) | Takes an <code>init</code> value and a number of functions and/or function tuples, consisting of: <code>[fn, ...args]</code>. Executes each function (or tuple) with the return value of the previous expression inserted as first argument, using <code>init</code> for the first expression.
-```ts
-const neg = (x) => -x;
-const sub = (a, b) => a - b;
-const div = (a, b) => a / b;
-
-threadFirst(
-  5,
-  neg,       // -5
-  [sub, 20], // -5 - 20 = -25
-  [div, 10]  // -25 / 10 = -2.5
-);
-
-// -2.5
-
-```
- threadLast |
-|  [threadLast](./compose.threadlast.md) | Takes an <code>init</code> value and a number of functions and/or function tuples, consisting of: <code>[fn, ...args]</code>. Executes each function (or tuple) with the return value of the previous expression inserted as last argument, using <code>init</code> for the first expression.
-```ts
-const neg = (x) => -x;
-const sub = (a, b) => a - b;
-const div = (a, b) => a / b;
-
-threadLast(
-  5,
-  neg,       // -5
-  [sub, 10], // 20 - (-5) = 25
-  [div, 10]  // 10 / 25 = 0.4
-);
-
-// 0.4
-
-```
- threadFirst |
-|  [trampoline](./compose.trampoline.md) | Takes a function returning either a no-arg function (thunk) or its already realized (non-function) result. Re-executes thunk for as long as it returns another function/thunk. Once a non-function result has been produced, <code>trampoline</code> returns that value itself. If the final result should be function, it needs to wrapped (e.g. as a 1-elem array).<!-- -->This function should be used for non-stack consuming recursion. I.e. a trampoline is a form of continuation passing style and only ever consumes max. 2 extra stack frames, independent from recursion depth.
-```ts
-const countdown = (acc, x) =>
-  x >= 0 ?
-    () => (acc.push(x), countdown(acc, x-1)) :
-    acc;
-
-trampoline(countdown([], 4))
-// [ 4, 3, 2, 1, 0 ]
-
-trampoline(countdown([], -1))
-// []
-
-```
- |
+|  [threadFirst](./compose.threadfirst.md) | Takes an <code>init</code> value and a number of functions and/or function tuples, consisting of: <code>[fn, ...args]</code>. Executes each function (or tuple) with the return value of the previous expression inserted as first argument, using <code>init</code> for the first expression. |
+|  [threadLast](./compose.threadlast.md) | Takes an <code>init</code> value and a number of functions and/or function tuples, consisting of: <code>[fn, ...args]</code>. Executes each function (or tuple) with the return value of the previous expression inserted as last argument, using <code>init</code> for the first expression. |
+|  [trampoline](./compose.trampoline.md) | Takes a function returning either a no-arg function (thunk) or its already realized (non-function) result. Re-executes thunk for as long as it returns another function/thunk. Once a non-function result has been produced, <code>trampoline</code> returns that value itself. If the final result should be function, it needs to wrapped (e.g. as a 1-elem array).<!-- -->This function should be used for non-stack consuming recursion. I.e. a trampoline is a form of continuation passing style and only ever consumes max. 2 extra stack frames, independent from recursion depth. |
 

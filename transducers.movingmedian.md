@@ -4,7 +4,7 @@
 
 ## movingMedian() function
 
-Transducer. Similar to `movingAverage()`<!-- -->, but yields median of sliding window and supports non-numeric inputs. The optional `key` and `cmp` function args can be used to select / compute a sortable value and change sorting behavior.
+Transducer. Similar to , but yields median of sliding window and supports non-numeric inputs. The optional `key` and `cmp` function args can be used to select / compute a sortable value and change sorting behavior.
 
 <b>Signature:</b>
 

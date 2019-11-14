@@ -4,7 +4,7 @@
 
 ## SamplingOpts.num property
 
-Number of points to sample &amp; return. Defaults to the implementing type's `DEFAULT_RES` if neither this nor `theta` option is given.
+Number of points to sample &amp; return. Defaults to the implementing type's default samples if neither this nor `theta` option is given.
 
 <b>Signature:</b>
 

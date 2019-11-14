@@ -33,17 +33,11 @@
 |  [clz32](./binary.clz32.md) | Math.clz32() polyfill (corrected).[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Math/clz32$revision/1426816](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/clz32$revision/1426816) |
 |  [ctz32](./binary.ctz32.md) |  |
 |  [decodeGray32](./binary.decodegray32.md) | Converts 32bit Gray code to binary / unsigned int.[https://en.wikipedia.org/wiki/Gray\_code](https://en.wikipedia.org/wiki/Gray_code) |
-|  [defMask](./binary.defmask.md) | Creates bit mask by enabling bit <code>a</code> to bit <code>b-1</code>, both in range 0-32. <code>b</code> MUST be &gt;<!-- -->= <code>a</code>.
-```ts
-defMask(1,31).toString(16) // 7ffffffe
-defMask(3,8).toString(16)  // f8
-
-```
- |
+|  [defMask](./binary.defmask.md) | Creates bit mask by enabling bit <code>a</code> to bit <code>b-1</code>, both in range 0-32. <code>b</code> MUST be &gt;<!-- -->= <code>a</code>. |
 |  [encodeGray32](./binary.encodegray32.md) | Converts 32bit unsigned int to Gray code (reflected binary). Gray codes of successive values always have a Hamming distance of 1 (i.e. only 1 bit changes at a time).[https://en.wikipedia.org/wiki/Gray\_code](https://en.wikipedia.org/wiki/Gray_code) |
 |  [flipBytes](./binary.flipbytes.md) | Same as <code>swizzle8(x, 3, 2, 1, 0)</code>, but faster. |
 |  [floatToIntBits](./binary.floattointbits.md) |  |
-|  [floatToSortableInt](./binary.floattosortableint.md) | Converts given float into a sortable integer representation, using raw bitwise conversion via <code>floatToIntBits()</code>.[https://github.com/tzaeschke/phtree/blob/master/PhTreeRevisited.pdf](https://github.com/tzaeschke/phtree/blob/master/PhTreeRevisited.pdf) (page 3) |
+|  [floatToSortableInt](./binary.floattosortableint.md) | Converts given float into a sortable integer representation, using raw bitwise conversion via [floatToIntBits](./binary.floattointbits.md)<!-- -->.[https://github.com/tzaeschke/phtree/blob/master/PhTreeRevisited.pdf](https://github.com/tzaeschke/phtree/blob/master/PhTreeRevisited.pdf) (page 3) |
 |  [floatToUintBits](./binary.floattouintbits.md) |  |
 |  [floorPow2](./binary.floorpow2.md) |  |
 |  [hammingDist](./binary.hammingdist.md) | [https://en.wikipedia.org/wiki/Hamming\_distance](https://en.wikipedia.org/wiki/Hamming_distance) |
@@ -61,23 +55,16 @@ defMask(3,8).toString(16)  // f8
 |  [rotateRight](./binary.rotateright.md) | Rotates <code>x</code> <code>n</code> bits to the right. |
 |  [same4](./binary.same4.md) | Returns true if bits 0-3 are same as bits 4-7. |
 |  [same8](./binary.same8.md) | Returns true if bits 0-7 are same as bits 8-15. |
-|  [setLane2](./binary.setlane2.md) | Sets 2-bit <code>lane</code> with value <code>y</code> in <code>x</code>. lane2 |
-|  [setLane4](./binary.setlane4.md) | Sets 4-bit <code>lane</code> with value <code>y</code> in <code>x</code>. lane4 |
-|  [setLane8](./binary.setlane8.md) | Sets 8-bit <code>lane</code> with value<code>y</code> in <code>x</code>. lane8 |
+|  [setLane2](./binary.setlane2.md) | Sets 2-bit <code>lane</code> with value <code>y</code> in <code>x</code>.[lane2](./binary.lane2.md) |
+|  [setLane4](./binary.setlane4.md) | Sets 4-bit <code>lane</code> with value <code>y</code> in <code>x</code>.[lane4](./binary.lane4.md) |
+|  [setLane8](./binary.setlane8.md) | Sets 8-bit <code>lane</code> with value<code>y</code> in <code>x</code>.[lane8](./binary.lane8.md) |
 |  [splat16\_32](./binary.splat16_32.md) | Repeats lowest 16bit of <code>x</code> as 32 bit uint. |
 |  [splat4\_24](./binary.splat4_24.md) | Repeats lowest nibble of <code>x</code> as 24 bit uint. |
 |  [splat4\_32](./binary.splat4_32.md) | Repeats lowest nibble of <code>x</code> as 32 bit uint. |
 |  [splat8\_24](./binary.splat8_24.md) | Repeats lowest byte of <code>x</code> as 24 bit uint. |
 |  [splat8\_32](./binary.splat8_32.md) | Repeats lowest byte of <code>x</code> as 32 bit uint. |
 |  [swizzle4](./binary.swizzle4.md) |  |
-|  [swizzle8](./binary.swizzle8.md) | Re-orders byte lanes in given order (MSB).
-```ts
-swizzle(0x12345678, 3, 2, 1, 0) // 0x78563412
-swizzle(0x12345678, 1, 0, 3, 2) // 0x34127856
-swizzle(0x12345678, 2, 2, 0, 0) // 0x56561212
-
-```
- |
+|  [swizzle8](./binary.swizzle8.md) | Re-orders byte lanes in given order (MSB). |
 |  [uintBitsToFloat](./binary.uintbitstofloat.md) |  |
 
 ## Type Aliases

@@ -6,19 +6,26 @@
 
 Higher-order interceptor. Returns new interceptor to update state value at provided path with given function. This allows for dedicated events to update state values more concisely, e.g. given this event definition:
 
+<b>Signature:</b>
+
+```typescript
+valueUpdater: <T>(path: Path, fn: FnO<T, T>) => InterceptorFn
+```
+
+## Example 1
+
+
 ```ts
 incFoo: valueUpdater("foo.bar", (x, y) => x + y)
 
 ```
 ...the `incFoo` event then can be triggered like so to update the state value at `foo.bar` (where `1` is the extra arg provided to the update fn:
 
+## Example 2
+
+
 ```ts
 bus.dispatch(["incFoo", 1]) // results in value = value + 1
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-valueUpdater: <T>(path: Path, fn: FnO<T, T>) => InterceptorFn
-```

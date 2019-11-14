@@ -74,11 +74,11 @@
 |  [BLACK](./color.black.md) |  |
 |  [BLUE](./color.blue.md) |  |
 |  [brightness](./color.brightness.md) | Returns a transformation matrix which adds the given constant offset <code>x</code> to RGB channels. Does NOT modify alpha channel.<!-- -->If <code>x &lt; 0</code> results in darker color. If <code>x &gt; 0</code> results in brighter color. |
-|  [clamp](./color.clamp.md) | Clamps all color channels to \[0,1\] interval and calls <code>ensureAlpha()</code> to ensure alpha channel is defined (if missing sets it to <code>alpha</code>, default: 1). |
-|  [clampH](./color.clamph.md) | Similar to <code>clamp</code>, but calls <code>ensureHue()</code> to fold (instead of clamping) the hue into \[0,1\] interval. |
-|  [closestHue](./color.closesthue.md) | Returns the <code>Hue</code> constant of the closest of 12 defined hues. |
-|  [closestPrimaryHue](./color.closestprimaryhue.md) | Returns the <code>Hue</code> constant of the closest primary or secondary hue. |
-|  [concat](./color.concat.md) | Concatenates given color matrices by pairwise multiplying them in left-right order. Returns combined result matrix to be used with <code>transform()</code>.<!-- -->Note: Using <code>concat()</code> is the recommended way when applying multiple color transformations in sequence. Since the transforms are combined into a single matrix, it is faster than multiple, individual <code>transform()</code> calls and will also produce more correct results, since result color clamping is only applied once at the end (by default, unless disabled). transform |
+|  [clamp](./color.clamp.md) | Clamps all color channels to \[0,1\] interval and calls <code>ensureAlpha</code> to ensure alpha channel is defined (if missing sets it to <code>alpha</code>, default: 1). |
+|  [clampH](./color.clamph.md) | Similar to [clamp](./color.clamp.md)<!-- -->, but calls <code>ensureHue</code> to fold (instead of clamping) the hue into \[0,1\] interval. |
+|  [closestHue](./color.closesthue.md) | Returns the [Hue](./color.hue.md) constant of the closest of 12 defined hues. |
+|  [closestPrimaryHue](./color.closestprimaryhue.md) | Returns the [Hue](./color.hue.md) constant of the closest primary or secondary hue. |
+|  [concat](./color.concat.md) | Concatenates given color matrices by pairwise multiplying them in left-right order. Returns combined result matrix to be used with [transform](./color.transform.md)<!-- -->.<!-- -->Note: Using [concat](./color.concat.md) is the recommended way when applying multiple color transformations in sequence. Since the transforms are combined into a single matrix, it is faster than multiple, individual [transform](./color.transform.md) calls and will also produce more correct results, since result color clamping is only applied once at the end (by default, unless disabled). |
 |  [contrast](./color.contrast.md) |  |
 |  [convert](./color.convert.md) |  |
 |  [cosineCoeffs](./color.cosinecoeffs.md) | Returns coefficients to produce a cosine gradient between the two given RGBA colors. |
@@ -103,10 +103,10 @@
 |  [hueRgba](./color.huergba.md) | Converts a normalized hue to RGBA with given optional <code>alpha</code> value (default: 1). |
 |  [hueRotate](./color.huerotate.md) |  |
 |  [IDENTITY](./color.identity.md) |  |
-|  [int24](./color.int24.md) | Returns new <code>Int32</code> wrapping given 24bit RGB color and setting alpha channel set to 100% opaque. |
+|  [int24](./color.int24.md) | Returns new [Int32](./color.int32.md) wrapping given 24bit RGB color and setting alpha channel set to 100% opaque. |
 |  [int24Css](./color.int24css.md) |  |
 |  [int24Rgba](./color.int24rgba.md) |  |
-|  [int32](./color.int32.md) | Returns new <code>Int32</code> wrapping given ARGB int. |
+|  [int32](./color.int32.md) | Returns new [Int32](./color.int32.md) wrapping given ARGB int. |
 |  [int32Css](./color.int32css.md) |  |
 |  [int32Rgba](./color.int32rgba.md) |  |
 |  [INV8BIT](./color.inv8bit.md) |  |
@@ -121,17 +121,7 @@
 |  [MAGENTA](./color.magenta.md) |  |
 |  [mix](./color.mix.md) |  |
 |  [mixAlpha](./color.mixalpha.md) |  |
-|  [multiCosineGradient](./color.multicosinegradient.md) | Multi-color cosine gradient generator using RGBA color stops. Returns an array of <code>n+1</code> color samples.
-```ts
-multiCosineGradient(
-  // num colors to produce
-  10,
-  // gradient stops (normalized positions)
-  [0.1, [1, 0, 0, 1]], [0.5, [0, 1, 0, 1]], [0.9, [0, 0, 1, 1]]
-)
-
-```
-[tween()](./transducers.tween.md) |
+|  [multiCosineGradient](./color.multicosinegradient.md) | Multi-color cosine gradient generator using RGBA color stops. Returns an array of <code>n+1</code> color samples. |
 |  [namedHueRgba](./color.namedhuergba.md) |  |
 |  [parseCss](./color.parsecss.md) |  |
 |  [parseHex](./color.parsehex.md) |  |

@@ -4,7 +4,7 @@
 
 ## canvasWebGL2 variable
 
-Same as `canvasWebGL` but targets WebGL2.
+Same as [canvasWebGL](./hdom-components.canvaswebgl.md) but targets WebGL2.
 
 <b>Signature:</b>
 

@@ -4,7 +4,7 @@
 
 ## reducer variable
 
-Convenience helper for building a full `Reducer` using the identity function (i.e. `(x) => x`<!-- -->) as completion step (true for 90% of all bundled transducers).
+Convenience helper for building a full [Reducer](./transducers.reducer.md) using the identity function (i.e. `(x) => x`<!-- -->) as completion step (true for 90% of all bundled transducers).
 
 <b>Signature:</b>
 

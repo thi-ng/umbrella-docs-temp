@@ -4,7 +4,7 @@
 
 ## PubSub.sub() method
 
-Creates a new topic subscription channel and returns it. Each topic is managed by its own `Mult` and can have arbitrary number of subscribers. If the optional transducer is given, it will only be applied to the new subscription channel.
+Creates a new topic subscription channel and returns it. Each topic is managed by its own [Mult](./csp.mult.md) and can have arbitrary number of subscribers. If the optional transducer is given, it will only be applied to the new subscription channel.
 
 The special "\*" topic can be used to subscribe to all messages and acts as multiplexed pass-through of the source channel.
 

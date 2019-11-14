@@ -4,7 +4,7 @@
 
 ## mixHermiteDiff3 variable
 
-Convenience version of `mixCubicHermite`<!-- -->, using 4 input points and `tangentDiff3` to compute the tangents for points `b` and `c`<!-- -->. Interpolated result point is that of `b` and `c`<!-- -->, with `a` and `d` only being used for tangent calculations.
+Convenience version of [mixCubicHermite](./vectors.mixcubichermite.md)<!-- -->, using 4 input points and [tangentDiff3](./vectors.tangentdiff3.md) to compute the tangents for points `b` and `c`<!-- -->. Interpolated result point is that of `b` and `c`<!-- -->, with `a` and `d` only being used for tangent calculations.
 
 If `out` is null, stores result in `b`<!-- -->.
 

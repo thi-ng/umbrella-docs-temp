@@ -4,7 +4,7 @@
 
 ## oai21 variable
 
-Complement logic of `aoi21`<!-- -->.
+Complement logic of [aoi21](./dlogic.aoi21.md)<!-- -->.
 
 `q = nand(a, or(b, c))`
 

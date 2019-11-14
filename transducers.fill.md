@@ -4,7 +4,7 @@
 
 ## fill() function
 
-Reducer which starts filling array with results from given `start` index (default: 0). Use `fillN()` for typed array targets (same impl, but provides correct result type).
+Reducer which starts filling array with results from given `start` index (default: 0). Use  for typed array targets (same impl, but provides correct result type).
 
 <b>Signature:</b>
 

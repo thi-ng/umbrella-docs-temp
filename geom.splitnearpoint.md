@@ -4,13 +4,11 @@
 
 ## splitNearPoint variable
 
-Similar to `splitAt`<!-- -->, but instead of taking a normalized parametric split position, splits the given curve at the closest point to `p`<!-- -->. Returns tuple of split shapes of same type as `shape`<!-- -->.
+Similar to [splitAt](./geom.splitat.md)<!-- -->, but instead of taking a normalized parametric split position, splits the given curve at the closest point to `p`<!-- -->. Returns tuple of split shapes of same type as `shape`<!-- -->.
 
 Implemented for:
 
 - Cubic - Line - Polyline - Quadratic
-
- splitAt
 
 <b>Signature:</b>
 

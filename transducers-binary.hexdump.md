@@ -4,17 +4,7 @@
 
 ## hexDump() function
 
-Transforms bytes into a sequence of hexdump lines with configurable number of `columns` and `address` offset. Uses `partition()` internally, so new lines are only produced once filled. If the input hasn't an exact multiple of `cols` bytes, the last line will be padded with zeroes.
-
-```ts
-src = [65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 33, 48, 49, 50, 51, 126, 122, 121, 120]
-
-[...hexDump({ cols: 8, address: 0x400 }, src)]
-// [ '00000400 | 41 42 43 44 45 46 47 48 | ABCDEFGH',
-//   '00000408 | 49 4a 21 30 31 32 33 7e | IJ!0123~',
-//   '00000410 | 7a 79 78 00 00 00 00 00 | zyx.....' ]
-
-```
+Transforms bytes into a sequence of hexdump lines with configurable number of `columns` and `address` offset. Uses  internally, so new lines are only produced once filled. If the input hasn't an exact multiple of `cols` bytes, the last line will be padded with zeroes.
 
 <b>Signature:</b>
 
@@ -31,4 +21,17 @@ export declare function hexDump(opts?: Partial<HexDumpOpts>): Transducer<number,
 <b>Returns:</b>
 
 `Transducer<number, string>`
+
+## Example
+
+
+```ts
+src = [65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 33, 48, 49, 50, 51, 126, 122, 121, 120]
+
+[...hexDump({ cols: 8, address: 0x400 }, src)]
+// [ '00000400 | 41 42 43 44 45 46 47 48 | ABCDEFGH',
+//   '00000408 | 49 4a 21 30 31 32 33 7e | IJ!0123~',
+//   '00000410 | 7a 79 78 00 00 00 00 00 | zyx.....' ]
+
+```
 

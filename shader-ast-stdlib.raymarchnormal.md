@@ -4,7 +4,7 @@
 
 ## raymarchNormal variable
 
-Higher order function producing a function to compute the raymarched scene normal for a given scene function and intersection position. Like `raymarch()`<!-- -->, this function takes an existing scene function as argument.
+Higher order function producing a function to compute the raymarched scene normal for a given scene function and intersection position. Like [raymarchScene](./shader-ast-stdlib.raymarchscene.md)<!-- -->, this function takes an existing scene function as argument.
 
 <b>Signature:</b>
 

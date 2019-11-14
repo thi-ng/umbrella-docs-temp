@@ -4,7 +4,7 @@
 
 ## indexToCoord variable
 
-Inline function. Similar to `indexToUV()`<!-- -->, but returns uvec2 in pixel coords. Not compatible with WebGL1.
+Inline function. Similar to [indexToUV](./shader-ast-stdlib.indextouv.md)<!-- -->, but returns uvec2 in pixel coords. Not compatible with WebGL1.
 
 <b>Signature:</b>
 

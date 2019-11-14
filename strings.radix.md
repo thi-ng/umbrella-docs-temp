@@ -4,7 +4,7 @@
 
 ## radix variable
 
-Returns a `Stringer` which formats given numbers to `radix`<!-- -->, `len` and with optional prefix (not included in `len`<!-- -->).
+Returns a [Stringer](./strings.stringer.md) which formats given numbers to `radix`<!-- -->, `len` and with optional prefix (not included in `len`<!-- -->).
 
 <b>Signature:</b>
 

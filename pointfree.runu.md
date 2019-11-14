@@ -4,7 +4,7 @@
 
 ## runU variable
 
-Like `run()`<!-- -->, but returns unwrapped result. Syntax sugar for: `unwrap(run(...),n)`
+Like [run](./pointfree.run.md)<!-- -->, but returns unwrapped result. Syntax sugar for: `unwrap(run(...),n)`
 
 <b>Signature:</b>
 

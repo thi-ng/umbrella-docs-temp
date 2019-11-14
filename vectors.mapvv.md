@@ -4,7 +4,7 @@
 
 ## mapVV variable
 
-Vec2/3/4 view based buffer transformation for `VecOpVV` type ops and supporting arbitrary component and element layouts of all input and output buffers. The given pre-initialized vectors MUST be separate instances, are used as sliding cursors / views of their respective backing buffers and will be modified as part of the transformation process (though the input buffers themselves are treated as immutable, unless `out` is configured to use one of the input buffers).
+Vec2/3/4 view based buffer transformation for [VecOpVV](./vectors.vecopvv.md) type ops and supporting arbitrary component and element layouts of all input and output buffers. The given pre-initialized vectors MUST be separate instances, are used as sliding cursors / views of their respective backing buffers and will be modified as part of the transformation process (though the input buffers themselves are treated as immutable, unless `out` is configured to use one of the input buffers).
 
 In each iteration `op` is called via `op(out, a, b)`<!-- -->, followed by cursor updates to process the next vector view. No bounds checking is performed.
 

@@ -4,7 +4,7 @@
 
 ## TripleStore.addJoin() method
 
-Like `addMultiJoin()`<!-- -->, but optimized for only two input queries. Returns a rstream subscription computing the natural join of the given input query results.
+Like [TripleStore.addMultiJoin()](./rstream-query.triplestore.addmultijoin.md)<!-- -->, but optimized for only two input queries. Returns a rstream subscription computing the natural join of the given input query results.
 
 <b>Signature:</b>
 

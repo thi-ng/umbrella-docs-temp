@@ -4,7 +4,7 @@
 
 ## IMemPool.reallocArray() method
 
-Similar to `realloc()`<!-- -->, but takes a typed array (one previously allocated with `mallocAs()` or `callocAs()`<!-- -->) and if successul returns new typed array of same type. Returns undefined on failure.
+Similar to [IMemPool.realloc()](./malloc.imempool.realloc.md)<!-- -->, but takes a typed array (one previously allocated with [IMemPool.mallocAs()](./malloc.imempool.mallocas.md) or [IMemPool.callocAs()](./malloc.imempool.callocas.md)<!-- -->) and if successul returns new typed array of same type. Returns undefined on failure.
 
 <b>Signature:</b>
 

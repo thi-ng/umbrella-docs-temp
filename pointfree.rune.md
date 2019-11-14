@@ -4,7 +4,7 @@
 
 ## runE variable
 
-Like `run()`<!-- -->, but returns result environment. Syntax sugar for: `run(...)[2]`
+Like [run](./pointfree.run.md)<!-- -->, but returns result environment. Syntax sugar for: `run(...)[2]`
 
 <b>Signature:</b>
 

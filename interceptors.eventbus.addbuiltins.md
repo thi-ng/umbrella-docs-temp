@@ -10,7 +10,7 @@ Adds same built-in event &amp; side effect handlers as in `StatelessEventBus.add
 
 \#\#\#\# `EV_SET_VALUE`
 
-Resets state path to provided value. See `setIn()`<!-- -->.
+Resets state path to provided value. See [setIn](./paths.setin.md)<!-- -->.
 
 Example event definition:
 
@@ -20,7 +20,7 @@ Example event definition:
 ```
 \#\#\#\# `EV_UPDATE_VALUE`
 
-Updates a state path's value with provided function and optional extra arguments. See `updateIn()`<!-- -->.
+Updates a state path's value with provided function and optional extra arguments. See [updateIn](./paths.updatein.md)<!-- -->.
 
 Example event definition:
 

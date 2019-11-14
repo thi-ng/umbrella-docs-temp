@@ -4,7 +4,7 @@
 
 ## takeWhile() function
 
-Transducer which applies predicate `pred` to each input and only yields values as long as the predicate returned a truthy result. Once the result is falsy, transformation is terminated (by emitting a `reduced()` value).
+Transducer which applies predicate `pred` to each input and only yields values as long as the predicate returned a truthy result. Once the result is falsy, transformation is terminated (by emitting a [reduced](./transducers.reduced.md) value).
 
 ```
 [...takeWhile((x) => x < 5, range(10))]

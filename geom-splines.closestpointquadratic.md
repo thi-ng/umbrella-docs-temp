@@ -6,7 +6,7 @@
 
 Performs recursive search for closest point to `p` on quadratic curve defined by control points `a`<!-- -->,`b`<!-- -->,`c`<!-- -->. The `res` and `recur` params are used to control the recursion behavior. If `eps` is given, the search is terminated as soon as a point with a shorter \*squared\* distance than `eps` is found.
 
- thi.ng/math/minError
+[minError](./math.minerror.md)
 
 <b>Signature:</b>
 

@@ -4,7 +4,7 @@
 
 ## gridLayout variable
 
-Syntax sugar for `GridLayout` ctor. By default creates a single-column layout at given position and width.
+Syntax sugar for [GridLayout](./imgui.gridlayout.md) ctor. By default creates a single-column layout at given position and width.
 
 <b>Signature:</b>
 

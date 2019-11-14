@@ -4,7 +4,7 @@
 
 ## fillN() function
 
-Like `fill()` reducer, but for numeric arrays (incl. typed arrays).
+Like  reducer, but for numeric arrays (incl. typed arrays).
 
 <b>Signature:</b>
 

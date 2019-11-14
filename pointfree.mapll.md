@@ -4,9 +4,18 @@
 
 ## mapll variable
 
-Similar to `mapl()`<!-- -->, but produces new array of transformed values.
+Similar to [mapl](./pointfree.mapl.md)<!-- -->, but produces new array of transformed values.
 
 ( arr q -- arr )
+
+<b>Signature:</b>
+
+```typescript
+mapll: (ctx: StackContext) => StackContext
+```
+
+## Example
+
 
 ```ts
 runU([[1, 2, 3, 4], [10, mul], mapll])
@@ -22,8 +31,3 @@ run([[1, 2, 3, 4], [dup, even, cond(drop, dup)], mapll])
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-mapll: (ctx: StackContext) => StackContext
-```

@@ -4,7 +4,7 @@
 
 ## GestureStreamOpts.eventOpts property
 
-Event listener options (see standard `addEventListener()`<!-- -->) Default: false
+Event listener options (see standard `addEventListener`<!-- -->). Default: false
 
 <b>Signature:</b>
 

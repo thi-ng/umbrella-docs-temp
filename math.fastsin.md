@@ -4,7 +4,7 @@
 
 ## fastSin variable
 
- fastCos
+[fastCos](./math.fastcos.md)
 
 <b>Signature:</b>
 

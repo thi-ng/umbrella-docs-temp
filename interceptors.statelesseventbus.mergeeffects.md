@@ -6,28 +6,6 @@
 
 Merges the new side effects returned from an interceptor into the internal effect accumulator.
 
-Any events assigned to the `FX_DISPATCH_NOW` effect key are immediately added to the currently active event batch.
-
-If an interceptor wishes to cause multiple invocations of a single side effect type (e.g. dispatch multiple other events), it MUST return an array of these values. The only exceptions to this are the following effects, which for obvious reasons can only accept a single value.
-
-\*\*Note:\*\* the `FX_STATE` effect is not actually defined by this class here, but is supported to avoid code duplication in `StatefulEventBus`<!-- -->.
-
-- `FX_CANCEL` - `FX_STATE`
-
-Because of this support (multiple values), the value of a single side effect MUST NOT be a nested array itself, or rather its first item can't be an array.
-
-For example:
-
-```
-// interceptor result map to dispatch a single event
-{ [FX_DISPATCH]: ["foo", "bar"]}
-
-// result map format to dispatch multiple events
-{ [FX_DISPATCH]: [ ["foo", "bar"], ["baz", "beep"] ]}
-
-```
-Any `null` / `undefined` values directly assigned to a side effect are ignored and will not trigger the effect.
-
 <b>Signature:</b>
 
 ```typescript
@@ -44,4 +22,28 @@ protected mergeEffects(ctx: InterceptorContext, ret: any): void;
 <b>Returns:</b>
 
 `void`
+
+## Remarks
+
+Any events assigned to the `FX_DISPATCH_NOW` effect key are immediately added to the currently active event batch.
+
+If an interceptor wishes to cause multiple invocations of a single side effect type (e.g. dispatch multiple other events), it MUST return an array of these values. The only exceptions to this are the following effects, which for obvious reasons can only accept a single value.
+
+\*\*Note:\*\* the `FX_STATE` effect is not actually defined by this class here, but is supported to avoid code duplication in [EventBus](./interceptors.eventbus.md)<!-- -->.
+
+- `FX_CANCEL` - `FX_STATE`
+
+Because of this support (multiple values), the value of a single side effect MUST NOT be a nested array itself, or rather its first item can't be an array.
+
+For example:
+
+```
+// interceptor result map to dispatch a single event
+{ [FX_DISPATCH]: ["foo", "bar"]}
+
+// result map format to dispatch multiple events
+{ [FX_DISPATCH]: [ ["foo", "bar"], ["baz", "beep"] ]}
+
+```
+Any `null` / `undefined` values directly assigned to a side effect are ignored and will not trigger the effect.
 

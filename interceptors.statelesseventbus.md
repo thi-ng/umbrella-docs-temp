@@ -6,6 +6,14 @@
 
 Batched event processor for using composable interceptors for event handling and side effects to execute the result of handled events.
 
+<b>Signature:</b>
+
+```typescript
+export declare class StatelessEventBus implements IDispatch 
+```
+
+## Remarks
+
 Events processed by this class are simple 2-element tuples/arrays of this form: `["event-id", payload?]`<!-- -->, where the `payload` is optional and can be of any type.
 
 Events are processed by registered handlers which transform each event into a number of side effect descriptions to be executed later. This separation ensures event handlers themselves are pure functions and leads to more efficient reuse of side effecting operations. The pure data nature until the last stage of processing (the application side effects) too means that event flow can be much easier inspected and debugged.
@@ -16,23 +24,17 @@ Side effects are only processed after all event handlers have run. Furthermore, 
 
 See for further details:
 
-- `processQueue()` - `processEvent()` - `processEffects()` - `mergeEffects()`
+- [StatelessEventBus.processQueue()](./interceptors.statelesseventbus.processqueue.md) - [StatelessEventBus.processEvent()](./interceptors.statelesseventbus.processevent.md) - [StatelessEventBus.processEffects()](./interceptors.statelesseventbus.processeffects.md) - [StatelessEventBus.mergeEffects()](./interceptors.statelesseventbus.mergeeffects.md)
 
 The overall approach of this type of event processing is heavily based on the pattern initially pioneered by @<!-- -->Day8/re-frame, with the following differences:
 
-- stateless (see `EventBus` for the more common stateful alternative) - standalone implementation (no assumptions about surrounding context/framework) - manual control over event queue processing - supports event cancellation (via FX\_CANCEL side effect) - side effect collection (multiple side effects for same effect type per frame) - side effect priorities (to control execution order) - dynamic addition/removal of handlers &amp; effects
-
-<b>Signature:</b>
-
-```typescript
-export declare class StatelessEventBus implements IDispatch 
-```
+- stateless (see [EventBus](./interceptors.eventbus.md) for the more common stateful alternative) - standalone implementation (no assumptions about surrounding context/framework) - manual control over event queue processing - supports event cancellation (via FX\_CANCEL side effect) - side effect collection (multiple side effects for same effect type per frame) - side effect priorities (to control execution order) - dynamic addition/removal of handlers &amp; effects
 
 ## Constructors
 
 |  Constructor | Modifiers | Description |
 |  --- | --- | --- |
-|  [(constructor)(handlers, effects)](./interceptors.statelesseventbus._constructor_.md) |  | Creates a new event bus instance with given handler and effect definitions (all optional).<!-- -->In addition to the user provided handlers &amp; effects, a number of built-ins are added automatically. See <code>addBuiltIns()</code>. User handlers can override built-ins. |
+|  [(constructor)(handlers, effects)](./interceptors.statelesseventbus._constructor_.md) |  | Creates a new event bus instance with given handler and effect definitions (all optional). |
 
 ## Properties
 
@@ -50,44 +52,23 @@ export declare class StatelessEventBus implements IDispatch
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
-|  [addBuiltIns()](./interceptors.statelesseventbus.addbuiltins.md) |  | Adds built-in event &amp; side effect handlers. Also see additional built-ins defined by the stateful <code>EventBus</code> extension of this class, as well as comments for these class methods:<!-- -->- <code>mergeEffects()</code> - <code>processEvent()</code>\#\#\# Handlers<!-- -->currently none...<!-- -->\#\#\# Side effects<!-- -->\#\#\#\# <code>FX_CANCEL</code>If assigned <code>true</code>, cancels processing of current event, though still applies any side effects already accumulated.<!-- -->\#\#\#\# <code>FX_DISPATCH</code>Dispatches assigned events to be processed in next frame.<!-- -->\#\#\#\# <code>FX_DISPATCH_ASYNC</code>Async wrapper for promise based side effects.<!-- -->\#\#\#\# <code>FX_DISPATCH_NOW</code>Dispatches assigned events as part of currently processed event queue (no delay).<!-- -->\#\#\#\# <code>FX_DELAY</code>Async side effect. Only to be used in conjunction with <code>FX_DISPATCH_ASYNC</code>. Triggers given event after <code>x</code> milliseconds.
-```
-// this triggers `[EV_SUCCESS, "ok"]` event after 1000 ms
-{ [FX_DISPATCH_ASYNC]: [FX_DELAY, [1000, "ok"], EV_SUCCESS, EV_ERROR] }
-
-```
-\#\#\#\# <code>FX_FETCH</code>Async side effect. Only to be used in conjunction with <code>FX_DISPATCH_ASYNC</code>. Performs <code>fetch()</code> HTTP request and triggers success with received response, or if there was an error with response's <code>statusText</code>. The error event is only triggered if the fetched response's <code>ok</code> field is non-truthy.<!-- -->- [https://developer.mozilla.org/en-US/docs/Web/API/Response/ok](https://developer.mozilla.org/en-US/docs/Web/API/Response/ok) - [https://developer.mozilla.org/en-US/docs/Web/API/Response/statusText](https://developer.mozilla.org/en-US/docs/Web/API/Response/statusText)
-```
-// fetches "foo.json" and then dispatches EV_SUCCESS or EV_ERROR event
-{ [FX_DISPATCH_ASYNC]: [FX_FETCH, "foo.json", EV_SUCCESS, EV_ERROR] }
-
-```
- |
+|  [addBuiltIns()](./interceptors.statelesseventbus.addbuiltins.md) |  | Adds built-in event &amp; side effect handlers. |
 |  [addEffect(id, fx, priority)](./interceptors.statelesseventbus.addeffect.md) |  |  |
 |  [addEffects(specs)](./interceptors.statelesseventbus.addeffects.md) |  |  |
 |  [addHandler(id, spec)](./interceptors.statelesseventbus.addhandler.md) |  |  |
 |  [addHandlers(specs)](./interceptors.statelesseventbus.addhandlers.md) |  |  |
 |  [context()](./interceptors.statelesseventbus.context.md) |  | If called during event processing, returns current side effect accumulator / interceptor context. Otherwise returns nothing. |
-|  [dispatch(e)](./interceptors.statelesseventbus.dispatch.md) |  | Adds given events to event queue to be processed by <code>processQueue()</code> later on. It's the user's responsibility to call that latter function repeatedly in a timely manner, preferably via <code>requestAnimationFrame()</code> or similar. |
-|  [dispatchLater(e, delay)](./interceptors.statelesseventbus.dispatchlater.md) |  | Dispatches given event after <code>delay</code> milliseconds (by default 17). Note: Since events are only processed by calling <code>processQueue()</code>, it's the user's responsibility to call that latter function repeatedly in a timely manner, preferably via <code>requestAnimationFrame()</code> or similar. |
-|  [dispatchNow(e)](./interceptors.statelesseventbus.dispatchnow.md) |  | Adds given events to whatever is the current event queue. If triggered via the <code>FX_DISPATCH_NOW</code> side effect from an event handler / interceptor, the event will still be executed in the currently active batch / frame. If called from elsewhere, the result is the same as calling <code>dispatch()</code>. |
+|  [dispatch(e)](./interceptors.statelesseventbus.dispatch.md) |  | Adds given events to event queue to be processed by [StatelessEventBus.processQueue()](./interceptors.statelesseventbus.processqueue.md) later on. |
+|  [dispatchLater(e, delay)](./interceptors.statelesseventbus.dispatchlater.md) |  | Dispatches given event after <code>delay</code> milliseconds (by default 17). |
+|  [dispatchNow(e)](./interceptors.statelesseventbus.dispatchnow.md) |  | Adds given events to whatever is the current event queue. If triggered via the <code>FX_DISPATCH_NOW</code> side effect from an event handler / interceptor, the event will still be executed in the currently active batch / frame. If called from elsewhere, the result is the same as calling [dispatch](./interceptors.dispatch.md)<!-- -->. |
 |  [instrumentWith(inject, ids)](./interceptors.statelesseventbus.instrumentwith.md) |  | Prepends given interceptors (or interceptor functions) to selected handlers. If no handler IDs are given, applies instrumentation to all currently registered handlers. |
 |  [interceptorsFromSpec(spec)](./interceptors.statelesseventbus.interceptorsfromspec.md) |  |  |
-|  [mergeEffects(ctx, ret)](./interceptors.statelesseventbus.mergeeffects.md) |  | Merges the new side effects returned from an interceptor into the internal effect accumulator.<!-- -->Any events assigned to the <code>FX_DISPATCH_NOW</code> effect key are immediately added to the currently active event batch.<!-- -->If an interceptor wishes to cause multiple invocations of a single side effect type (e.g. dispatch multiple other events), it MUST return an array of these values. The only exceptions to this are the following effects, which for obvious reasons can only accept a single value.<!-- -->\*\*Note:\*\* the <code>FX_STATE</code> effect is not actually defined by this class here, but is supported to avoid code duplication in <code>StatefulEventBus</code>.<!-- -->- <code>FX_CANCEL</code> - <code>FX_STATE</code>Because of this support (multiple values), the value of a single side effect MUST NOT be a nested array itself, or rather its first item can't be an array.<!-- -->For example:
-```
-// interceptor result map to dispatch a single event
-{ [FX_DISPATCH]: ["foo", "bar"]}
-
-// result map format to dispatch multiple events
-{ [FX_DISPATCH]: [ ["foo", "bar"], ["baz", "beep"] ]}
-
-```
-Any <code>null</code> / <code>undefined</code> values directly assigned to a side effect are ignored and will not trigger the effect. |
+|  [mergeEffects(ctx, ret)](./interceptors.statelesseventbus.mergeeffects.md) |  | Merges the new side effects returned from an interceptor into the internal effect accumulator. |
 |  [processEffect(ctx, effects, id, val)](./interceptors.statelesseventbus.processeffect.md) |  |  |
 |  [processEffects(ctx)](./interceptors.statelesseventbus.processeffects.md) |  | Takes a collection of side effects generated during event processing and applies them in order of configured priorities. |
-|  [processEvent(ctx, e)](./interceptors.statelesseventbus.processevent.md) |  | Processes a single event using its configured handler/interceptor chain. Logs warning message and skips processing if no handler is available for the event type.<!-- -->The array of interceptors is processed in bi-directional order. First any <code>pre</code> interceptors are processed in forward order. Then <code>post</code> interceptors are processed in reverse.<!-- -->Each interceptor can return a result object of side effects, which are being merged and collected for <code>processEffects()</code>.<!-- -->Any interceptor can trigger zero or more known side effects, each (side effect) will be collected in an array to support multiple invocations of the same effect type per frame. If no side effects are requested, an interceptor can return <code>undefined</code>.<!-- -->Processing of the current event stops immediately, if an interceptor sets the <code>FX_CANCEL</code> side effect key to <code>true</code>. However, the results of any previous interceptors (incl. the one which cancelled) are kept and processed further as usual. |
+|  [processEvent(ctx, e)](./interceptors.statelesseventbus.processevent.md) |  | Processes a single event using its configured handler/interceptor chain. Logs warning message and skips processing if no handler is available for the event type. |
 |  [processForward(ctx, iceps, e)](./interceptors.statelesseventbus.processforward.md) |  |  |
-|  [processQueue(ctx)](./interceptors.statelesseventbus.processqueue.md) |  | Triggers processing of current event queue and returns <code>true</code> if any events have been processed.<!-- -->If an event handler triggers the <code>FX_DISPATCH_NOW</code> side effect, the new event will be added to the currently processed batch and therefore executed in the same frame. Also see <code>dispatchNow()</code>.<!-- -->An optional <code>ctx</code> (context) object can be provided, which is used to collect any side effect definitions during processing. This can be useful for debugging, inspection or post-processing purposes. |
+|  [processQueue(ctx)](./interceptors.statelesseventbus.processqueue.md) |  | Triggers processing of current event queue and returns <code>true</code> if any events have been processed. |
 |  [processReverse(ctx, iceps, e)](./interceptors.statelesseventbus.processreverse.md) |  |  |
 |  [removeEffect(id)](./interceptors.statelesseventbus.removeeffect.md) |  |  |
 |  [removeEffects(ids)](./interceptors.statelesseventbus.removeeffects.md) |  |  |

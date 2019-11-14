@@ -4,7 +4,7 @@
 
 ## tangentCardinal variable
 
-Vector version of thi.ng/math `tangentCardinal`<!-- -->.
+Vector version of thi.ng/math [tangentCardinal](./vectors.tangentcardinal.md)<!-- -->.
 
 <b>Signature:</b>
 

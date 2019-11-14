@@ -4,6 +4,15 @@
 
 ## mixBilinear variable
 
+<b>Signature:</b>
+
+```typescript
+mixBilinear: (a: number, b: number, c: number, d: number, u: number, v: number) => number
+```
+
+## Example
+
+
 ```ts
 c    d
 +----+
@@ -13,8 +22,3 @@ a    b
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-mixBilinear: (a: number, b: number, c: number, d: number, u: number, v: number) => number
-```

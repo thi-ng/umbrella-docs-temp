@@ -4,7 +4,7 @@
 
 ## transform44 variable
 
-Creates 4x4 TRS transformation matrix from given translation vector, rotation angles (given as 3D vector) and scale factor/vector. Internally, uses a quaternion for constructing the rotation matrix part. The quaternion is created via `quatFromEuler()` with ZYX ordering.
+Creates 4x4 TRS transformation matrix from given translation vector, rotation angles (given as 3D vector) and scale factor/vector. Internally, uses a quaternion for constructing the rotation matrix part. The quaternion is created via [quatFromEuler](./matrices.quatfromeuler.md) with ZYX ordering.
 
 <b>Signature:</b>
 

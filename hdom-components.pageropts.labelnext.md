@@ -4,7 +4,7 @@
 
 ## PagerOpts.labelNext property
 
-Label for "next page" button. Default: "<!-- -->&gt;<!-- -->"
+Label for "next page" button. Default: `">"`
 
 <b>Signature:</b>
 

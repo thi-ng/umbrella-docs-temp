@@ -4,7 +4,7 @@
 
 ## walk variable
 
-Traverses given AST in depth-first order and applies `visit` and `children` fns to each node. Descends only further if `children` returns an array of child nodes. The `visit` function must accept 2 args: the accumulator (`acc`<!-- -->) given to `walk` and a tree node. The return value of `visit` becomes the new `acc` value, much like in a reduce operation. `walk` itself returns the final `acc`<!-- -->.
+Traverses given AST in depth-first order and applies `visit` and `children` fns to each node. Descends only further if `children` returns an array of child nodes. The `visit` function must accept 2 args: the accumulator (`acc`<!-- -->) given to [walk](./shader-ast.walk.md) and a tree node. The return value of `visit` becomes the new `acc` value, much like in a reduce operation. [walk](./shader-ast.walk.md) itself returns the final `acc`<!-- -->.
 
 If `pre` is true (default), the `visit` function will be called prior to visiting a node's children. If false, the visitor is called on the way back up.
 

@@ -4,9 +4,9 @@
 
 ## interpolateLinear() function
 
-Pre-configured version of `interpolate()` for numeric values and using pairwise linear interpolation. The number of samples per interval is configurable. No values will be produced if there're less than 2 inputs.
+Pre-configured version of  for numeric values and using pairwise linear interpolation. The number of samples per interval is configurable. No values will be produced if there're less than 2 inputs.
 
- interpolate  interpolateHermit
+-  - 
 
 <b>Signature:</b>
 

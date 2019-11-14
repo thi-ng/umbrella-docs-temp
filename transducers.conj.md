@@ -4,7 +4,7 @@
 
 ## conj() function
 
-Reducer. Like `push()`<!-- -->, but for ES6 Sets.
+Reducer. Like , but for ES6 Sets.
 
 <b>Signature:</b>
 

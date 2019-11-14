@@ -4,7 +4,7 @@
 
 ## random2d() function
 
-Yields 2D grid coordinates in random order w/ support for optional `IRandom` implementation (default: [SYSTEM](./random.system.md) aka `Math.random`<!-- -->).
+Yields 2D grid coordinates in random order w/ support for optional [IRandom](./random.irandom.md) implementation (default: [SYSTEM](./random.system.md) aka `Math.random`<!-- -->).
 
 <b>Signature:</b>
 

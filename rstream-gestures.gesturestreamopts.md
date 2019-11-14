@@ -15,7 +15,7 @@ export interface GestureStreamOpts extends IID<string>
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [absZoom](./rstream-gestures.gesturestreamopts.abszoom.md) | <code>boolean</code> | If true, the produced <code>zoom</code> values are considered absolute and will be constrained to the <code>minZoom .. maxZoom</code> interval. If <code>false</code>, the zoom values are relative and simply the result of <code>event.deltaY * smooth</code>.<!-- -->Default: true |
-|  [eventOpts](./rstream-gestures.gesturestreamopts.eventopts.md) | <code>boolean &#124; AddEventListenerOptions</code> | Event listener options (see standard <code>addEventListener()</code>) Default: false |
+|  [eventOpts](./rstream-gestures.gesturestreamopts.eventopts.md) | <code>boolean &#124; AddEventListenerOptions</code> | Event listener options (see standard <code>addEventListener</code>). Default: false |
 |  [local](./rstream-gestures.gesturestreamopts.local.md) | <code>boolean</code> | Local coordinate flag. If true (default), the elements position offset is subtracted. |
 |  [maxZoom](./rstream-gestures.gesturestreamopts.maxzoom.md) | <code>number</code> | Max zoom value. Default: 4 |
 |  [minZoom](./rstream-gestures.gesturestreamopts.minzoom.md) | <code>number</code> | Min zoom value. Default: 0.25 |

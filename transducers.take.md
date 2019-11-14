@@ -4,7 +4,7 @@
 
 ## take() function
 
-Transducer which only yields the first `n` values and then terminates transformation (by emitting a `reduced()` value).
+Transducer which only yields the first `n` values and then terminates transformation (by emitting a [reduced](./transducers.reduced.md) value).
 
 ```
 [...iterator(comp(take(5), map((x) => x * 10)), range(10))]

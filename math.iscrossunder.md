@@ -6,6 +6,15 @@
 
 Returns true if line A rises up over B.
 
+<b>Signature:</b>
+
+```typescript
+isCrossUnder: (a1: number, a2: number, b1: number, b2: number) => boolean
+```
+
+## Example
+
+
 ```ts
 a1  b2
   \/
@@ -14,8 +23,3 @@ b1  a2
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-isCrossUnder: (a1: number, a2: number, b1: number, b2: number) => boolean
-```

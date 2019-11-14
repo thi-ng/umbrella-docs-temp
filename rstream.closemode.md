@@ -4,7 +4,7 @@
 
 ## CloseMode enum
 
-Closing behavior for `StreamMerge` and `StreamSync`<!-- -->.
+Closing behavior for [StreamMerge](./rstream.streammerge.md) and [StreamSync](./rstream.streamsync.md)<!-- -->.
 
 <b>Signature:</b>
 

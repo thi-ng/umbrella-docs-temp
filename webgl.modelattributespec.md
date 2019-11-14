@@ -16,7 +16,7 @@ export interface ModelAttributeSpec
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [buffer](./webgl.modelattributespec.buffer.md) | <code>IWebGLBuffer&lt;AttribBufferData&gt;</code> | Backing <code>WebGLArrayBuffer</code> instance. Usually this will be auto-initialized by <code>compileBuffers()</code> |
+|  [buffer](./webgl.modelattributespec.buffer.md) | <code>IWebGLBuffer&lt;AttribBufferData&gt;</code> | Backing [WebGLArrayBuffer](./webgl.webglarraybuffer.md) instance. Usually this will be auto-initialized by  |
 |  [data](./webgl.modelattributespec.data.md) | <code>AttribBufferData</code> | Raw attribute data from which <code>buffer</code> will be initialized |
 |  [divisor](./webgl.modelattributespec.divisor.md) | <code>number</code> | Only used for instanced attributes. See: [https://www.khronos.org/registry/OpenGL/extensions/ANGLE/ANGLE\_instanced\_arrays.txt](https://www.khronos.org/registry/OpenGL/extensions/ANGLE/ANGLE_instanced_arrays.txt) |
 |  [normalized](./webgl.modelattributespec.normalized.md) | <code>boolean</code> | Auto-normalization flag when writing buffer data. Default: false |

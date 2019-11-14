@@ -4,7 +4,7 @@
 
 ## arcLength variable
 
-Returns the arc length / perimeter / circumference of the given shape. For groups calls `arcLength()` for each child and returns the sum of results.
+Returns the arc length / perimeter / circumference of the given shape. For groups calls [arcLength](./geom.arclength.md) for each child and returns the sum of results.
 
 Implemented for:
 

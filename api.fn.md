@@ -4,7 +4,7 @@
 
 ## Fn type
 
-A single arg function from A =<!-- -->&gt; B.
+A single arg function from A to B.
 
 <b>Signature:</b>
 

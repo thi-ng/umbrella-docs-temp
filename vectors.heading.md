@@ -4,7 +4,7 @@
 
 ## heading variable
 
-Same as `headingXY`
+Same as [headingXY](./vectors.headingxy.md)
 
 <b>Signature:</b>
 

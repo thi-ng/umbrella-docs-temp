@@ -4,7 +4,7 @@
 
 ## unionBounds variable
 
-Takes the position and size vectors of 2 `AABBLike`<!-- -->s and returns 2-tuple of `[pos,size]` of their union bounds.
+Takes the position and size vectors of 2 [AABBLike](./geom-api.aabblike.md)<!-- -->s and returns 2-tuple of `[pos,size]` of their union bounds.
 
 <b>Signature:</b>
 

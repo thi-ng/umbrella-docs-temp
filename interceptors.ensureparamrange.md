@@ -4,7 +4,7 @@
 
 ## ensureParamRange variable
 
-Specialization of `ensurePred()` to ensure an event's payload value is within given `min` / `max` closed interval. By default, assumes event format like: `[event-id, value]`<!-- -->. However if `value` is given, the provided function can be used to extract the value to be validated from any event. If the value is outside the given interval, triggers `FX_CANCEL` side effect and if `err` is given, the error interceptor can return any number of other side effects and so be used to dispatch alternative events instead.
+Specialization of [ensurePred](./interceptors.ensurepred.md) to ensure an event's payload value is within given `min` / `max` closed interval. By default, assumes event format like: `[event-id, value]`<!-- -->. However if `value` is given, the provided function can be used to extract the value to be validated from any event. If the value is outside the given interval, triggers `FX_CANCEL` side effect and if `err` is given, the error interceptor can return any number of other side effects and so be used to dispatch alternative events instead.
 
 <b>Signature:</b>
 

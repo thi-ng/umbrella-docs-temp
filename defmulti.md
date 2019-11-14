@@ -54,68 +54,8 @@
 |  Variable | Description |
 |  --- | --- |
 |  [DEFAULT](./defmulti.default.md) |  |
-|  [defmultiN](./defmulti.defmultin.md) | Returns a multi-dispatch function which delegates to one of the provided implementations, based on the arity (number of args) when the function is called. Internally uses <code>defmulti</code>, so new arities can be dynamically added (or removed) at a later time. If no <code>fallback</code> is provided, <code>defmultiN</code> also registers a <code>DEFAULT</code> implementation which simply throws an <code>IllegalArityError</code> when invoked.<!-- -->\*\*Note:\*\* Unlike <code>defmulti</code> no argument type checking is supported, however you can specify the return type for the generated function.
-```ts
-const foo = defmultiN<string>({
-  0: () => "zero",
-  1: (x) => `one: ${x}`,
-  3: (x, y, z) => `three: ${x}, ${y}, ${z}`
-});
-
-foo();
-// zero
-foo(23);
-// one: 23
-foo(1, 2, 3);
-// three: 1, 2, 3
-foo(1, 2);
-// Error: illegal arity: 2
-
-foo.add(2, (x, y) => `two: ${x}, ${y}`);
-foo(1, 2);
-// two: 1, 2
-
-```
- |
-|  [implementations](./defmulti.implementations.md) | Syntax-sugar intended for sets of multi-methods sharing same dispatch values / logic. Takes a dispatch value, an object of "is-a" relationships and a number of multi-methods, each with an implementation for the given dispatch value.<!-- -->The relations object has dispatch values (parents) as keys and arrays of multi-methods as their values. For each multi-method associates the given <code>type</code> with the related parent dispatch value to delegate to its implementation.<!-- -->The remaining implementations are associated with their related multi-method and the given <code>type</code> dispatch value.
-```ts
-foo = defmulti((x) => x.id);
-bar = defmulti((x) => x.id);
-bax = defmulti((x) => x.id);
-baz = defmulti((x) => x.id);
-
-// define impls for dispatch value `a`
-implementations(
-  "a",
-
-  // delegate bax & baz impls to dispatch val `b`
-  {
-     b: [bax, baz]
-  },
-
-  // concrete multi-fn impls
-  foo,
-  (x) => `foo: ${x.val}`,
-
-  bar,
-  (x) => `bar: ${x.val.toUpperCase()}`
-);
-
-// add parent impls
-bax.add("b", (x) => `bax: ${x.id}`);
-baz.add("c", (x) => `baz: ${x.id}`);
-// use "c" impl for "b"
-baz.isa("b", "c");
-
-foo({ id: "a", val: "alice" }); // "foo: alice"
-bar({ id: "a", val: "alice" }); // "bar: ALICE"
-bax({ id: "a", val: "alice" }); // "bax: a"
-baz({ id: "a", val: "alice" }); // "baz: a"
-
-baz.impls(); // Set { "c", "a", "b" }
-
-```
- |
+|  [defmultiN](./defmulti.defmultin.md) | Returns a multi-dispatch function which delegates to one of the provided implementations, based on the arity (number of args) when the function is called. Internally uses , so new arities can be dynamically added (or removed) at a later time. If no <code>fallback</code> is provided, <code>defmultiN</code> also registers a [DEFAULT](./defmulti.default.md) implementation which simply throws an [IllegalArityError](./errors.illegalarityerror.md) when invoked.<!-- -->\*\*Note:\*\* Unlike  no argument type checking is supported, however you can specify the return type for the generated function. |
+|  [implementations](./defmulti.implementations.md) | Syntax-sugar intended for sets of multi-methods sharing same dispatch values / logic. Takes a dispatch value, an object of "is-a" relationships and a number of multi-methods, each with an implementation for the given dispatch value.<!-- -->The relations object has dispatch values (parents) as keys and arrays of multi-methods as their values. For each multi-method associates the given <code>type</code> with the related parent dispatch value to delegate to its implementation.<!-- -->The remaining implementations are associated with their related multi-method and the given <code>type</code> dispatch value. |
 |  [LOGGER](./defmulti.logger.md) |  |
 |  [setLogger](./defmulti.setlogger.md) |  |
 

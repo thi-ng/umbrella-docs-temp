@@ -4,7 +4,7 @@
 
 ## condq variable
 
-Non-HOF version of `cond`<!-- -->, expects `test` result and both branches on d-stack. Executes `thenq` word/quotation if `test` is truthy, else runs `elseq`<!-- -->.
+Non-HOF version of [cond](./pointfree.cond.md)<!-- -->, expects `test` result and both branches on d-stack. Executes `thenq` word/quotation if `test` is truthy, else runs `elseq`<!-- -->.
 
 ( test thenq elseq -- ? )
 

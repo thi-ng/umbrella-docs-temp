@@ -4,7 +4,7 @@
 
 ## polar2 variable
 
-Converts 2D cartesian vector `v` to polar coordinates, i.e. `[r,θ]` (angle in radians). See `cartesian2()` for reverse operation.
+Converts 2D cartesian vector `v` to polar coordinates, i.e. `[r,θ]` (angle in radians). See [cartesian2](./shader-ast-stdlib.cartesian2.md) for reverse operation.
 
 <b>Signature:</b>
 

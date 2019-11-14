@@ -6,7 +6,7 @@
 
 Porter-Duff operator for packed ints. The non-overlapping regions of source and destination are combined.
 
- porterDuff
+[porterDuff](./porter-duff.porterduff.md)
 
 <b>Signature:</b>
 

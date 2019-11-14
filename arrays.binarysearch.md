@@ -4,19 +4,28 @@
 
 ## binarySearch variable
 
-Returns the supposed index of `x` in pre-sorted array-like collection `buf`<!-- -->. If `x` can't be found, returns `-index-1`<!-- -->, representing the negative of the index, were `x` to be inserted into `buf`<!-- -->. E.g if the return value is -3, `x` would appear/insert at index 2.
-
-```ts
-binarySearch([2, 4, 6], 5);
-// -3
-
-```
-The optional `key` function is used to obtain the actual sort value of `x` and each array item (default: identity).
-
-The optional `cmp` comparator (default: [compare](./compare.compare.md)<!-- -->) is then used to identify the index of `x`<!-- -->. The sort order of `buf` MUST be compatible with that of `cmp`<!-- -->.
+Returns the supposed index of `x` in pre-sorted array-like collection `buf`<!-- -->.
 
 <b>Signature:</b>
 
 ```typescript
 binarySearch: <A, B>(buf: ArrayLike<A>, x: A, key?: Fn<A, B>, cmp?: import("@thi.ng/api").Fn2<B, B, number>) => number
 ```
+
+## Remarks
+
+If `x` can't be found, returns `-index-1`<!-- -->, representing the negative of the index, were `x` to be inserted into `buf`<!-- -->. E.g if the return value is -3, `x` would appear/insert at index 2.
+
+The optional `key` function is used to obtain the actual sort value of `x` and each array item (default: identity).
+
+The optional `cmp` comparator (default: [compare](./compare.compare.md)<!-- -->) is then used to identify the index of `x`<!-- -->. The sort order of `buf` MUST be compatible with that of `cmp`<!-- -->.
+
+## Example
+
+
+```ts
+binarySearch([2, 4, 6], 5);
+// -3
+
+```
+

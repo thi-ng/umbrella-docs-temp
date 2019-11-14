@@ -4,7 +4,7 @@
 
 ## GestureInfo interface
 
-Reverse lookup for `GestureType` enums
+Reverse lookup for [GestureType](./rstream-gestures.gesturetype.md) enums
 
 <b>Signature:</b>
 

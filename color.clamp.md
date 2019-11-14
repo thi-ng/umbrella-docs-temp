@@ -4,7 +4,7 @@
 
 ## clamp variable
 
-Clamps all color channels to \[0,1\] interval and calls `ensureAlpha()` to ensure alpha channel is defined (if missing sets it to `alpha`<!-- -->, default: 1).
+Clamps all color channels to \[0,1\] interval and calls `ensureAlpha` to ensure alpha channel is defined (if missing sets it to `alpha`<!-- -->, default: 1).
 
 <b>Signature:</b>
 

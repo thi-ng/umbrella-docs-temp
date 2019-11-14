@@ -4,7 +4,7 @@
 
 ## obj variable
 
-Pushes new empty JS object on d-stack. Same reasoning as for `list`<!-- -->.
+Pushes new empty JS object on d-stack. Same reasoning as for [list](./pointfree.list.md)<!-- -->.
 
 ( -- {<!-- -->} )
 

@@ -4,7 +4,7 @@
 
 ## Fn10 type
 
-A 10-arg function from A,B,C,D,E,F,G,H,I,J =<!-- -->&gt; K.
+A 10-arg function from A,B,C,D,E,F,G,H,I,J to K.
 
 <b>Signature:</b>
 

@@ -6,6 +6,15 @@
 
 Defines new `@keyframes` with given `id` and creates related class of same name to configure given animation `opts`<!-- -->. Only the `duration` option is given a default value (250ms), all others are optional.
 
+<b>Signature:</b>
+
+```typescript
+animation: (id: string, opts: Partial<AnimationOpts>, ...keyframes: any) => (any[] | import("./api").RuleFn)[]
+```
+
+## Example
+
+
 ```ts
 css(
   animation(
@@ -36,8 +45,3 @@ css(
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-animation: (id: string, opts: Partial<AnimationOpts>, ...keyframes: any) => (any[] | import("./api").RuleFn)[]
-```

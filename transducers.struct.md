@@ -6,6 +6,25 @@
 
 Higher-order transducer to converts linear input into structured objects using given field specs and ordering. A single field spec is an array of 2 or 3 items: `[name, size, transform?]`<!-- -->. If `transform` is given, it will be used to produce the final value for this field. In the example below, it is used to unwrap the ID field values, e.g. from `[123] => 123`
 
+<b>Signature:</b>
+
+```typescript
+export declare function struct<T>(fields: StructField[]): Transducer<any, T>;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  fields | <code>StructField[]</code> |  |
+
+<b>Returns:</b>
+
+`Transducer<any, T>`
+
+## Example
+
+
 ```ts
 tx.transduce(
     tx.struct([["id", 1, (id) => id[0]], ["pos", 2], ["vel", 2], ["color", 4]]),
@@ -22,20 +41,4 @@ tx.transduce(
 //     id: 1 } ]
 
 ```
-
-<b>Signature:</b>
-
-```typescript
-export declare function struct<T>(fields: StructField[]): Transducer<any, T>;
-```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  fields | <code>StructField[]</code> |  |
-
-<b>Returns:</b>
-
-`Transducer<any, T>`
 

@@ -8,7 +8,7 @@ Injects default mouse &amp; touch event handlers into `gui.attribs` and attaches
 
 This method should only be used if the IMGUI is to be updated via a RAF loop or other non-reactive situation. For on-demand updates / rendering event handling and IMGUI mouse/key state preparation is left to the user.
 
- IMGUI.setMouse()  IMGUI.setKey()
+- [IMGUI.setMouse()](./imgui.imgui.setmouse.md) - [IMGUI.setKey()](./imgui.imgui.setkey.md)
 
 <b>Signature:</b>
 

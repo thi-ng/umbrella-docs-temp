@@ -26,22 +26,6 @@ The given keyframe times can lie outside the `min`<!-- -->/`max` range and also 
 ```
 Using easing functions (e.g. from thi.ng/math), non-linear interpolation within each keyframe interval can be achieved:
 
-```ts
-import { mix, smoothStep } from "@thi.ng/math"
-
-[...tween({
-  num: 10,
-  min: 0,
-  max: 100,
-  init: (a, b) => [a, b],
-  mix: ([a, b], t) => Math.floor(mix(a, b, smoothStep(0.1, 0.9, t))),
-  stops: [[20, 100], [50, 200], [80, 0]]
-})]
-// [ 100, 100, 100, 120, 179, 200, 158, 41, 0, 0, 0 ]
-
-```
- TweenOpts  interpolate  interpolateHermite  interpolateLinear
-
 <b>Signature:</b>
 
 ```typescript
@@ -57,4 +41,23 @@ export declare function tween<A, B, C>(opts: TweenOpts<A, B, C>): IterableIterat
 <b>Returns:</b>
 
 `IterableIterator<C>`
+
+## Example
+
+
+```ts
+import { mix, smoothStep } from "@thi.ng/math"
+
+[...tween({
+  num: 10,
+  min: 0,
+  max: 100,
+  init: (a, b) => [a, b],
+  mix: ([a, b], t) => Math.floor(mix(a, b, smoothStep(0.1, 0.9, t))),
+  stops: [[20, 100], [50, 200], [80, 0]]
+})]
+// [ 100, 100, 100, 120, 179, 200, 158, 41, 0, 0, 0 ]
+
+```
+- [TweenOpts](./transducers.tweenopts.md) -  -  - 
 

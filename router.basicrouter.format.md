@@ -4,7 +4,7 @@
 
 ## BasicRouter.format() method
 
-Returns a formatted version of given `RouteMatch`<!-- -->, incl. any params. Throw an error if an invalid route `id` is provided.
+Returns a formatted version of given [RouteMatch](./router.routematch.md)<!-- -->, incl. any params. Throw an error if an invalid route `id` is provided.
 
 <b>Signature:</b>
 

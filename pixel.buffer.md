@@ -4,7 +4,7 @@
 
 ## buffer variable
 
-Syntax sugar for `PackedBuffer` ctor.
+Syntax sugar for [PackedBuffer](./pixel.packedbuffer.md) ctor.
 
 <b>Signature:</b>
 

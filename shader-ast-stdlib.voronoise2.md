@@ -10,7 +10,7 @@ IQ's parametric 2D voronoise. Depending on `u` and `v`<!-- -->, this function pr
 
 [http://www.iquilezles.org/www/articles/voronoise/voronoise.htm](http://www.iquilezles.org/www/articles/voronoise/voronoise.htm)
 
-Note: This implementation uses the improved `hash32` by Dave Hoskins instead of iq's original `hash3`<!-- -->.
+Note: This implementation uses the improved [hash32](./shader-ast-stdlib.hash32.md) by Dave Hoskins instead of iq's original [hash3](./shader-ast-stdlib.hash3.md)<!-- -->.
 
 <b>Signature:</b>
 

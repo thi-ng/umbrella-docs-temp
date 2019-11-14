@@ -4,9 +4,9 @@
 
 ## shuffle variable
 
-Applies `shuffleRange()` to the given array. If `n` is given, only the first `n` items are shuffled. Mutates original array.
+Applies [shuffleRange](./arrays.shufflerange.md) to the given array. If `n` is given, only the first `n` items are shuffled. Mutates original array.
 
- shuffleRange
+[shuffleRange](./arrays.shufflerange.md)
 
 <b>Signature:</b>
 

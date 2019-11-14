@@ -8,39 +8,7 @@
 
 |  Function | Description |
 |  --- | --- |
-|  [at\_keyframes(id, stops)](./hiccup-css.at_keyframes.md) | Rule function for <code>@keyframes</code>. If a single declaration object is given, it's keys are used as keyframe stops and their values as their declarations objects. This way any number of stops can be specified.
-```ts
-css(at_keyframes("fadein", {0: {opacity: 0}, 100: {opacity: 1}}))
-// @keyframes fadein {
-//
-//     0% {
-//         opacity: 0;
-//     }
-//
-//     100% {
-//         opacity: 1;
-//     }
-//
-// }
-
-```
-If called with two objects, the first one provides the declarations for the 0% keyframe and the 2nd for the 100% keyframe.
-```ts
-css(at_keyframes("fadein", {opacity: 0}, {opacity: 1}));
-// @keyframes fadein {
-//
-//     0% {
-//         opacity: 0;
-//     }
-//
-//     100% {
-//         opacity: 1;
-//     }
-//
-// }
-
-```
- |
+|  [at\_keyframes(id, stops)](./hiccup-css.at_keyframes.md) | Rule function for <code>@keyframes</code>. If a single declaration object is given, it's keys are used as keyframe stops and their values as their declarations objects. This way any number of stops can be specified. |
 |  [at\_keyframes(id, from, to)](./hiccup-css.at_keyframes_1.md) |  |
 |  [at\_namespace(url)](./hiccup-css.at_namespace.md) |  |
 |  [at\_namespace(prefix, url)](./hiccup-css.at_namespace_1.md) |  |
@@ -50,43 +18,14 @@ css(at_keyframes("fadein", {opacity: 0}, {opacity: 1}));
 |  Interface | Description |
 |  --- | --- |
 |  [AnimationOpts](./hiccup-css.animationopts.md) |  |
-|  [CSSOpts](./hiccup-css.cssopts.md) | Config options supported by <code>css()</code> and its helper functions. |
+|  [CSSOpts](./hiccup-css.cssopts.md) | Config options supported by [css](./hiccup-css.css.md) and its helper functions. |
 |  [Format](./hiccup-css.format.md) | Format |
 
 ## Variables
 
 |  Variable | Description |
 |  --- | --- |
-|  [animation](./hiccup-css.animation.md) | Defines new <code>@keyframes</code> with given <code>id</code> and creates related class of same name to configure given animation <code>opts</code>. Only the <code>duration</code> option is given a default value (250ms), all others are optional.
-```ts
-css(
-  animation(
-    "fadein",
-    { delay: "0.5s" },
-    { opacity: 0 },
-    { opacity: 1 }
-  )
-);
-
-```
-```css
-@keyframes fadein {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.fadein {
-    animation-duration: 250ms;
-    animation-name: fadein;
-    animation-delay: 0.5s;
-}
-
-```
- |
+|  [animation](./hiccup-css.animation.md) | Defines new <code>@keyframes</code> with given <code>id</code> and creates related class of same name to configure given animation <code>opts</code>. Only the <code>duration</code> option is given a default value (250ms), all others are optional. |
 |  [at\_import](./hiccup-css.at_import.md) |  |
 |  [at\_media](./hiccup-css.at_media.md) |  |
 |  [at\_supports](./hiccup-css.at_supports.md) |  |
@@ -96,7 +35,7 @@ css(
 |  [attribPrefix](./hiccup-css.attribprefix.md) | Returns attrib selector <code>[id^=x]</code> |
 |  [attribSuffix](./hiccup-css.attribsuffix.md) | Returns attrib selector <code>[id$=x]</code> |
 |  [comment](./hiccup-css.comment.md) |  |
-|  [COMPACT](./hiccup-css.compact.md) | Default format config used by <code>css()</code> function. Forms "minimized" CSS without obsolete white space and omits comments unless they were forced. |
+|  [COMPACT](./hiccup-css.compact.md) | Default format config used by [css](./hiccup-css.css.md) function. Forms "minimized" CSS without obsolete white space and omits comments unless they were forced. |
 |  [conditional](./hiccup-css.conditional.md) |  |
 |  [css](./hiccup-css.css.md) |  |
 |  [DEFAULT\_VENDORS](./hiccup-css.default_vendors.md) |  |
@@ -121,6 +60,6 @@ css(
 
 |  Type Alias | Description |
 |  --- | --- |
-|  [Conditional](./hiccup-css.conditional.md) | Configuration type for conditional rule functions (i.e. <code>at_media()</code>, <code>at_supports()</code>) |
+|  [Conditional](./hiccup-css.conditional.md) | Configuration type for conditional rule functions (i.e. [at\_media](./hiccup-css.at_media.md)<!-- -->, [at\_supports](./hiccup-css.at_supports.md)<!-- -->) |
 |  [RuleFn](./hiccup-css.rulefn.md) | Function type used by <code>at_xxx()</code> functions or any other function in the head position of a rule scope array.<!-- -->These fns have special behavior and are resonsible to append their results to the CSS output string accumulator directly. |
 

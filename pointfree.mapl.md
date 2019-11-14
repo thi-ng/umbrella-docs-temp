@@ -32,16 +32,28 @@ runU([0, [1, 2, 3, 4], [add], mapl])
 // 10
 
 ```
-\*\*Important\*\*: `mapl` does not produce a result array. However, there're several options to collect results as array, e.g.
+\*\*Important\*\*: [mapl](./pointfree.mapl.md) does not produce a result array. However, there're several options to collect results as array, e.g.
 
-Use `mapll()` to transform:
+Use [mapll](./pointfree.mapll.md) to transform:
+
+<b>Signature:</b>
+
+```typescript
+mapl: (ctx: StackContext) => StackContext
+```
+
+## Example 1
+
 
 ```ts
 runU([[1, 2, 3, 4], [10, mul], mapll])
 // [ 10, 20, 30, 40]
 
 ```
-Collecting results as array is a form of reduction, so we can use `list` to produce an initial new array and `pushr` to push each new interim value into the result:
+Collecting results as array is a form of reduction, so we can use [list](./pointfree.list.md) to produce an initial new array and [pushr](./pointfree.pushr.md) to push each new interim value into the result:
+
+## Example 2
+
 
 ```ts
 runU([list, [1, 2, 3, 4], [10, mul, pushr], mapl])
@@ -50,14 +62,12 @@ runU([list, [1, 2, 3, 4], [10, mul, pushr], mapl])
 ```
 If the array size is known &amp; not changed by transformation:
 
+## Example 3
+
+
 ```ts
 runU([[1, 2, 3, 4], [10, mul], mapl, 4, collect])
 // [ 10, 20, 30, 40 ]
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-mapl: (ctx: StackContext) => StackContext
-```

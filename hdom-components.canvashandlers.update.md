@@ -4,7 +4,7 @@
 
 ## CanvasHandlers.update() method
 
-update handler (called for each hdom update iteration)
+Update handler (called for each hdom update iteration)
 
 <b>Signature:</b>
 

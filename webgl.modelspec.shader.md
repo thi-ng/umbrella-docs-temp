@@ -4,7 +4,7 @@
 
 ## ModelSpec.shader property
 
-Initialized `IShader` instance
+Initialized [IShader](./webgl.ishader.md) instance
 
 <b>Signature:</b>
 

@@ -8,6 +8,15 @@ Higher order word. Takes a `test` and `body` stack program. Applies test to copy
 
 ( -- ? )
 
+<b>Signature:</b>
+
+```typescript
+loop: (test: StackProc, body: StackProc) => (ctx: StackContext) => StackContext
+```
+
+## Example
+
+
 ```ts
 run([loop([dup, ispos], [dup, print, dec])], [[3]])
 // 3
@@ -17,8 +26,3 @@ run([loop([dup, ispos], [dup, print, dec])], [[3]])
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-loop: (test: StackProc, body: StackProc) => (ctx: StackContext) => StackContext
-```

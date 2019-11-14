@@ -86,12 +86,12 @@ gui.end();
 |  [isShiftDown()](./imgui.imgui.isshiftdown.md) |  |  |
 |  [registerID(id, hash)](./imgui.imgui.registerid.md) |  | Marks given component ID as used and checks <code>hash</code> to determine if the component's resource cache should be cleared. This hash value should be based on any values (e.g. layout info) which might invalidate cached resources. |
 |  [requestFocus(id)](./imgui.imgui.requestfocus.md) |  | Sets <code>focusID</code> to given <code>id</code> if the component can receive focus. Returns true if component is focused. |
-|  [resource(id, hash, ctor)](./imgui.imgui.resource.md) |  | Attempts to retrieve cached resource for given component <code>id</code> and resource <code>hash</code>. If unsuccessful, calls resource <code>ctor</code> function to create it, caches result and returns it. IMGUI.registerID() |
+|  [resource(id, hash, ctor)](./imgui.imgui.resource.md) |  | Attempts to retrieve cached resource for given component <code>id</code> and resource <code>hash</code>. If unsuccessful, calls resource <code>ctor</code> function to create it, caches result and returns it.[IMGUI.registerID()](./imgui.imgui.registerid.md) |
 |  [setCursor(id)](./imgui.imgui.setcursor.md) |  | Sets cursor property to given <code>id</code>. This setting is cleared at the beginning of each frame (default value: "default"). |
 |  [setKey(e)](./imgui.imgui.setkey.md) |  | Sets internal key state from given key event details. |
 |  [setMouse(p, buttons)](./imgui.imgui.setmouse.md) |  | Sets mouse position and current mouse button flags (i.e. <code>MouseEvent.buttons</code>). |
 |  [setState(id, state)](./imgui.imgui.setstate.md) |  | Stores / overrides given local state value for component <code>id</code> in cache. |
-|  [setTheme(theme)](./imgui.imgui.settheme.md) |  | Merges given theme settings with <code>DEFAULT_THEME</code> and resets theme stack. |
+|  [setTheme(theme)](./imgui.imgui.settheme.md) |  | Merges given theme settings with [DEFAULT\_THEME](./imgui.default_theme.md) and resets theme stack. |
 |  [state(id, ctor)](./imgui.imgui.state.md) |  | Attempts to retrieve cached component state for given <code>id</code>. If unsuccessful, calls state <code>ctor</code> function, caches result and returns it. |
 |  [switchFocus()](./imgui.imgui.switchfocus.md) |  | Attempts to switch focus to next, or if Shift is pressed, to previous component. This is meant be called ONLY from component key handlers. |
 |  [textColor(hover)](./imgui.imgui.textcolor.md) |  |  |

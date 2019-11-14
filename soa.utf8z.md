@@ -6,7 +6,7 @@
 
 Zero-terminated UTF-8 string serializer pair for given max length (incl. final \\<!-- -->0 char).
 
-`write()` throws error if resulting byte sequence is larger than configured `maxLen`<!-- -->.
+[SerializerPair.encode](./soa.serializerpair.encode.md) throws error if resulting byte sequence is larger than configured `maxLen`<!-- -->.
 
 <b>Signature:</b>
 

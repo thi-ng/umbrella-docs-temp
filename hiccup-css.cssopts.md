@@ -4,7 +4,7 @@
 
 ## CSSOpts interface
 
-Config options supported by `css()` and its helper functions.
+Config options supported by [css](./hiccup-css.css.md) and its helper functions.
 
 <b>Signature:</b>
 

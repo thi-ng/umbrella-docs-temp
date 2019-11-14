@@ -6,7 +6,7 @@
 
 Porter-Duff operator. The source that does not overlap the destination replaces the destination.
 
- porterDuff
+[porterDuff](./porter-duff.porterduff.md)
 
 <b>Signature:</b>
 

@@ -4,7 +4,7 @@
 
 ## eqDeltaFixed variable
 
-Similar to `eqDelta()`<!-- -->, but used given `eps` as is.
+Similar to [eqDelta](./math.eqdelta.md)<!-- -->, but used given `eps` as is.
 
 <b>Signature:</b>
 

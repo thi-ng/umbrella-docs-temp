@@ -10,7 +10,7 @@ Returns area \* 2 of the 2D triangle defined by the input vectors. This is a use
 
 Same as: `cross2(sub2([], b, a), sub2([], c, a))`
 
- corner2  clockwise2  cross2
+- [corner2](./vectors.corner2.md) - [clockwise2](./vectors.clockwise2.md) - [cross2](./vectors.cross2.md)
 
 <b>Signature:</b>
 

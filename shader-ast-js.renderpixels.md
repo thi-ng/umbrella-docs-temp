@@ -4,7 +4,7 @@
 
 ## renderPixels variable
 
-Low-level function used by `canvasRenderer()` and `renderToBuffer()`<!-- -->. Applies shader function `fn` to each pixel in the given region of the `u32` raw ABGR buffer (a `Uint32Array`<!-- -->). The region is defined by the top-left `x`<!-- -->, `y` coords and `w`<!-- -->, `h` dimensions. The remaining parameters `bufW`<!-- -->, `bufH`<!-- -->, `bufOffsetX`<!-- -->, `bufOffsetY` and `imgH` are used to define the actual location of the given buffer in the full image to be computed and to support use cases where the target array only defines a sub-region of the full image (e.g. when splitting rendering over multiple workers, each with their own buffer).
+Low-level function used by [canvasRenderer](./shader-ast-js.canvasrenderer.md) and [renderBuffer](./shader-ast-js.renderbuffer.md)<!-- -->. Applies shader function `fn` to each pixel in the given region of the `u32` raw ABGR buffer (a `Uint32Array`<!-- -->). The region is defined by the top-left `x`<!-- -->, `y` coords and `w`<!-- -->, `h` dimensions. The remaining parameters `bufW`<!-- -->, `bufH`<!-- -->, `bufOffsetX`<!-- -->, `bufOffsetY` and `imgH` are used to define the actual location of the given buffer in the full image to be computed and to support use cases where the target array only defines a sub-region of the full image (e.g. when splitting rendering over multiple workers, each with their own buffer).
 
 <b>Signature:</b>
 

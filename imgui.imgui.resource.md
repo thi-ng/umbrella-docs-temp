@@ -6,7 +6,7 @@
 
 Attempts to retrieve cached resource for given component `id` and resource `hash`<!-- -->. If unsuccessful, calls resource `ctor` function to create it, caches result and returns it.
 
- IMGUI.registerID()
+[IMGUI.registerID()](./imgui.imgui.registerid.md)
 
 <b>Signature:</b>
 

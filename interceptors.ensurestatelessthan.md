@@ -4,7 +4,7 @@
 
 ## ensureStateLessThan variable
 
-Specialization of `ensurePred()` to ensure a state value is less than given max at the time when the event is being processed. The optional `path` fn is used to extract or produce the path for the state value to be validated. If omitted, the event's payload item is interpreted as the value path.
+Specialization of [ensurePred](./interceptors.ensurepred.md) to ensure a state value is less than given max at the time when the event is being processed. The optional `path` fn is used to extract or produce the path for the state value to be validated. If omitted, the event's payload item is interpreted as the value path.
 
 For example, without a provided `path` function and for an event of this form: `["event-id", "foo.bar"]`<!-- -->, the term `"foo.bar"` would be interpreted as path.
 

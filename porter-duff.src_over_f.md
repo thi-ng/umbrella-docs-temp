@@ -6,7 +6,7 @@
 
 Porter-Duff operator. The source color is placed over the destination color.
 
- porterDuff
+[porterDuff](./porter-duff.porterduff.md)
 
 <b>Signature:</b>
 

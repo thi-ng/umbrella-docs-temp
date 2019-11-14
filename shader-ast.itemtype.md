@@ -6,13 +6,17 @@
 
 Returns base type for given term. Used for array ops.
 
-```ts
-itemType("vec2[]") => "vec2"
-
-```
-
 <b>Signature:</b>
 
 ```typescript
 itemType: (type: Type) => Type
 ```
+
+## Example
+
+
+```ts
+itemType("vec2[]") => "vec2"
+
+```
+

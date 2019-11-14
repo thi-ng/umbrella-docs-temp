@@ -4,13 +4,22 @@
 
 ## fromView variable
 
-Similar to `fromAtom()`<!-- -->, but creates an eager derived view for a nested value in atom / cursor and yields stream of its value changes. Views are readonly versions of Cursors and more lightweight. The view checks for value changes with given `equiv` predicate (`@thi.ng/equiv` by default). If the predicate returns a falsy result, the new value is emitted on the stream. The first value emitted is always the (possibly transformed) current value at the stream's start time (i.e. when the first subscriber attaches).
+Similar to [fromAtom](./rstream.fromatom.md)<!-- -->, but creates an eager derived view for a nested value in atom / cursor and yields stream of its value changes. Views are readonly versions of Cursors and more lightweight. The view checks for value changes with given `equiv` predicate (`@thi.ng/equiv` by default). If the predicate returns a falsy result, the new value is emitted on the stream. The first value emitted is always the (possibly transformed) current value at the stream's start time (i.e. when the first subscriber attaches).
 
 If the optional `tx` is given, the raw value is first passed to this transformer function and its result emitted on the stream.
 
 When the stream is cancelled the view is destroyed as well.
 
-See: - fromAtom() - @<!-- -->thi.ng/atom
+See: - [fromAtom](./rstream.fromatom.md) - 
+
+<b>Signature:</b>
+
+```typescript
+fromView: <T>(atom: ReadonlyAtom<any>, path: Path, tx?: ViewTransform<T> | undefined, equiv?: import("@thi.ng/api").Fn2<any, any, boolean> | undefined, id?: string | undefined) => Stream<T>
+```
+
+## Example
+
 
 ```ts
 db = new Atom({a: 1, b: {c: 2}});
@@ -26,8 +35,3 @@ db.reset({a: 10});
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-fromView: <T>(atom: ReadonlyAtom<any>, path: Path, tx?: ViewTransform<T> | undefined, equiv?: import("@thi.ng/api").Fn2<any, any, boolean> | undefined, id?: string | undefined) => Stream<T>
-```

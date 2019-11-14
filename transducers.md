@@ -8,7 +8,7 @@
 
 |  Class | Description |
 |  --- | --- |
-|  [Range](./transducers.range.md) | Simple class wrapper around given range interval and implementing <code>Iterable</code> and <code>IReducible</code> interfaces, the latter is used to accelerate use with <code>reduce</code>. |
+|  [Range](./transducers.range.md) | Simple class wrapper around given range interval and implementing <code>Iterable</code> and [IReducible](./transducers.ireducible.md) interfaces, the latter is used to accelerate use with . |
 |  [Reduced](./transducers.reduced.md) |  |
 
 ## Functions
@@ -57,9 +57,9 @@ rstream
 
 ```
  |
-|  [conj()](./transducers.conj.md) | Reducer. Like <code>push()</code>, but for ES6 Sets. |
+|  [conj()](./transducers.conj.md) | Reducer. Like , but for ES6 Sets. |
 |  [conj(xs)](./transducers.conj_1.md) |  |
-|  [converge(pred)](./transducers.converge.md) | Transducer which for each input <code>x</code> (apart from the very first one) applies given predicate <code>pred</code> to previous input and <code>x</code>. Only passes values downstream as long as the predicate returns a falsy result. Once the result is truthy, <code>x</code> is considered converged and the transformation is terminated (by emitting a <code>reduced()</code> value).<!-- -->This can be used to limit processing of inputs only as long as there're noticeable changes (according to the predicate) and then stop the transducer pipeline once results have converged.
+|  [converge(pred)](./transducers.converge.md) | Transducer which for each input <code>x</code> (apart from the very first one) applies given predicate <code>pred</code> to previous input and <code>x</code>. Only passes values downstream as long as the predicate returns a falsy result. Once the result is truthy, <code>x</code> is considered converged and the transformation is terminated (by emitting a [reduced](./transducers.reduced.md) value).<!-- -->This can be used to limit processing of inputs only as long as there're noticeable changes (according to the predicate) and then stop the transducer pipeline once results have converged.
 ```
 // process as long as difference to prev value is >= 0.01
 [...converge(
@@ -71,7 +71,7 @@ rstream
 // [ 0, 0.5, 0.75, 0.875, 0.9375, 0.96875, 0.984375, 0.9921875 ]
 
 ```
- takeWhile |
+ |
 |  [converge(pred, src)](./transducers.converge_1.md) |  |
 |  [convolve1d(opts)](./transducers.convolve1d.md) |  |
 |  [convolve1d(opts, indices)](./transducers.convolve1d_1.md) |  |
@@ -105,13 +105,7 @@ rstream
 |  [dropWhile(pred, src)](./transducers.dropwhile_2.md) |  |
 |  [duplicate(n)](./transducers.duplicate.md) |  |
 |  [duplicate(n, src)](./transducers.duplicate_1.md) |  |
-|  [every(pred)](./transducers.every.md) | Reducer which applies optional <code>pred</code> function to each value and terminates early if the predicate returned a falsy result. If no predicate is given the values are checked via JS native truthiness rules (i.e. 0, "", false, null, undefined are all falsy).<!-- -->Returns true if \*all\* values passed test.
-```ts
-reduce(every((x)=> x > 0), [1,2,-1,3]);
-// false
-
-```
- |
+|  [every(pred)](./transducers.every.md) | Reducer which applies optional <code>pred</code> function to each value and terminates early if the predicate returned a falsy result. If no predicate is given the values are checked via JS native truthiness rules (i.e. 0, "", false, null, undefined are all falsy).<!-- -->Returns true if \*all\* values passed test. |
 |  [every(xs)](./transducers.every_1.md) |  |
 |  [every(pred, xs)](./transducers.every_2.md) |  |
 |  [extendSides(src, numLeft, numRight)](./transducers.extendsides.md) | Yields iterator of given iterable which repeats the first and/or last value(s) <code>numLeft</code>/<code>numRight</code> times (default: 1). By default both sides are repeated, but can be adjusted by setting either of them to zero. <code>numRight</code> defaults to same value as <code>numLeft</code>.
@@ -126,16 +120,16 @@ reduce(every((x)=> x > 0), [1,2,-1,3]);
 // [ 1, 2, 3,  3, 3, 3 ]
 
 ```
- padSides  wrapSides |
-|  [fill(start)](./transducers.fill.md) | Reducer which starts filling array with results from given <code>start</code> index (default: 0). Use <code>fillN()</code> for typed array targets (same impl, but provides correct result type). |
+- [padSides](./transducers.padsides.md) - [wrapSides()](./transducers.wrapsides.md) |
+|  [fill(start)](./transducers.fill.md) | Reducer which starts filling array with results from given <code>start</code> index (default: 0). Use  for typed array targets (same impl, but provides correct result type). |
 |  [fill(xs)](./transducers.fill_1.md) |  |
 |  [fill(start, xs)](./transducers.fill_2.md) |  |
-|  [fillN(start)](./transducers.filln.md) | Like <code>fill()</code> reducer, but for numeric arrays (incl. typed arrays). |
+|  [fillN(start)](./transducers.filln.md) | Like  reducer, but for numeric arrays (incl. typed arrays). |
 |  [fillN(xs)](./transducers.filln_1.md) |  |
 |  [fillN(start, xs)](./transducers.filln_2.md) |  |
 |  [filter(pred)](./transducers.filter.md) |  |
 |  [filter(pred, src)](./transducers.filter_1.md) |  |
-|  [filterFuzzy(query, opts)](./transducers.filterfuzzy.md) | Returns transducer which calls <code>fuzzyMatch()</code> for each value and discards all non-matching values. The optional <code>key</code> fn can be used to extract/produce the actual value used for the search. The optional <code>eq</code> predicate can be used to customize item equality checking. Uses @<!-- -->thi.ng/equiv by default.
+|  [filterFuzzy(query, opts)](./transducers.filterfuzzy.md) | Returns transducer which calls [fuzzyMatch](./arrays.fuzzymatch.md) for each value and discards all non-matching values. The optional <code>key</code> fn can be used to extract/produce the actual value used for the search. The optional <code>eq</code> predicate can be used to customize item equality checking. Uses @<!-- -->thi.ng/equiv by default.
 ```
 [...filterFuzzy("ho", ["hello", "hallo", "hey", "heyoka"])]
 // ["hello", "hallo", "heyoka"]
@@ -163,7 +157,7 @@ reduce(every((x)=> x > 0), [1,2,-1,3]);
 |  [indexed(from, src)](./transducers.indexed_2.md) |  |
 |  [interleave(sep)](./transducers.interleave.md) |  |
 |  [interleave(sep, src)](./transducers.interleave_1.md) |  |
-|  [interpolate(fn, window, n)](./transducers.interpolate.md) | Higher order interpolation transducer. The resulting transducer forms a sliding window and calls <code>fn</code> (the given interpolation function) <code>n</code> times with the current window and a normalized time value to produce the requested number of interpolated values per interval. If the optional <code>src</code> iterable is given, <code>interpolate</code> returns an iterator of interpolated values. No values will be produced if the number of inputs is less than given <code>window</code> size.<!-- -->Note: The \*very last\* input value can never be fully reached and might need to be explicitly duplicated in the input, e.g. via the <code>extendSides()</code> iterator...
+|  [interpolate(fn, window, n)](./transducers.interpolate.md) | Higher order interpolation transducer. The resulting transducer forms a sliding window and calls <code>fn</code> (the given interpolation function) <code>n</code> times with the current window and a normalized time value to produce the requested number of interpolated values per interval. If the optional <code>src</code> iterable is given, <code>interpolate</code> returns an iterator of interpolated values. No values will be produced if the number of inputs is less than given <code>window</code> size.<!-- -->Note: The \*very last\* input value can never be fully reached and might need to be explicitly duplicated in the input, e.g. via the [extendSides()](./transducers.extendsides.md) iterator...
 ```
 [...interpolate(
   ([a, b], t) => a + (b - a) * t,
@@ -177,11 +171,11 @@ reduce(every((x)=> x > 0), [1,2,-1,3]);
 //  0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75 ]
 
 ```
- interpolateHermite  interpolateLinear  extendSides |
+-  -  - [extendSides()](./transducers.extendsides.md) |
 |  [interpolate(fn, window, n, src)](./transducers.interpolate_1.md) |  |
-|  [interpolateHermite(n)](./transducers.interpolatehermite.md) | Pre-configured version of <code>interpolate()</code> for numeric values and using cubic hermite interpolation. The number of samples per interval is configurable. No values will be produced if there're less than 4 inputs.<!-- -->Note: Due to the nature of hermite interpolation, the very first and last input are only used to compute the curve tangents, but will not appear in the output. Use the <code>extendSides()</code> iterator to transform the input so that these values are duplicated and so are used as part of an interpolation interval. interpolate  interpolateLinear  extendSides |
+|  [interpolateHermite(n)](./transducers.interpolatehermite.md) | Pre-configured version of  for numeric values and using cubic hermite interpolation. The number of samples per interval is configurable. No values will be produced if there're less than 4 inputs.<!-- -->Note: Due to the nature of hermite interpolation, the very first and last input are only used to compute the curve tangents, but will not appear in the output. Use the [extendSides()](./transducers.extendsides.md) iterator to transform the input so that these values are duplicated and so are used as part of an interpolation interval.<!-- -->-  -  - [extendSides()](./transducers.extendsides.md) |
 |  [interpolateHermite(n, src)](./transducers.interpolatehermite_1.md) |  |
-|  [interpolateLinear(n)](./transducers.interpolatelinear.md) | Pre-configured version of <code>interpolate()</code> for numeric values and using pairwise linear interpolation. The number of samples per interval is configurable. No values will be produced if there're less than 2 inputs. interpolate  interpolateHermit |
+|  [interpolateLinear(n)](./transducers.interpolatelinear.md) | Pre-configured version of  for numeric values and using pairwise linear interpolation. The number of samples per interval is configurable. No values will be produced if there're less than 2 inputs.<!-- -->-  -  |
 |  [interpolateLinear(n, src)](./transducers.interpolatelinear_1.md) |  |
 |  [interpose(sep)](./transducers.interpose.md) |  |
 |  [interpose(sep, src)](./transducers.interpose_1.md) |  |
@@ -196,14 +190,8 @@ reduce(every((x)=> x > 0), [1,2,-1,3]);
 ```
  |
 |  [iterator(xform, xs)](./transducers.iterator.md) | Takes a transducer and input iterable. Returns iterator of transformed results. |
-|  [iterator1(xform, xs)](./transducers.iterator1.md) | Optimized version of <code>iterator()</code> for transducers which are guaranteed to:<!-- -->1) Only produce none or a single result per input 2) Do not require a <code>completion</code> reduction step |
-|  [juxtR(r1)](./transducers.juxtr.md) | Composes a new reducer from the ones given, in order to produce multiple reductions in parallel from the same input. The returned reducer produces a result tuple of reduction results, one per reducer. If any of the reducers returns a <code>reduced()</code> result, the reduction process stops for all others too. <code>juxtR</code> produces optimized versions for up to 3 reducer args, but can support any number of reducers.
-```ts
-reduce(juxtR(add(), reductions(add()), str("-")), [1, 2, 3, 4]);
-// [ 10, [ 0, 1, 3, 6, 10 ], [ 1, 2, 3, 4 ] ]
-
-```
- |
+|  [iterator1(xform, xs)](./transducers.iterator1.md) | Optimized version of [iterator()](./transducers.iterator.md) for transducers which are guaranteed to:<!-- -->1) Only produce none or a single result per input 2) Do not require a <code>completion</code> reduction step |
+|  [juxtR(r1)](./transducers.juxtr.md) | Composes a new reducer from the ones given, in order to produce multiple reductions in parallel from the same input. The returned reducer produces a result tuple of reduction results, one per reducer. If any of the reducers returns a [reduced](./transducers.reduced.md) result, the reduction process stops for all others too.  produces optimized versions for up to 3 reducer args, but can support any number of reducers. |
 |  [juxtR(r1, r2)](./transducers.juxtr_1.md) |  |
 |  [juxtR(r1, r2, r3)](./transducers.juxtr_2.md) |  |
 |  [juxtR(r1, r2, r3, rs)](./transducers.juxtr_3.md) |  |
@@ -223,21 +211,11 @@ reduce(juxtR(add(), reductions(add()), str("-")), [1, 2, 3, 4]);
 ```
  |
 |  [map(fn, src)](./transducers.map_1.md) |  |
-|  [mapcat(fn)](./transducers.mapcat.md) | Transducer. Similar to <code>map</code>, but expects the given mapping function <code>fn</code> to return an iterable result (or <code>null</code>) and then emits each value of the result individually downstream. <code>null</code> or <code>undefined</code> result values will be skipped / omitted. |
+|  [mapcat(fn)](./transducers.mapcat.md) | Transducer. Similar to , but expects the given mapping function <code>fn</code> to return an iterable result (or <code>null</code>) and then emits each value of the result individually downstream. <code>null</code> or <code>undefined</code> result values will be skipped / omitted. |
 |  [mapcat(fn, src)](./transducers.mapcat_1.md) |  |
-|  [mapDeep(spec)](./transducers.mapdeep.md) | Transducer. Same as <code>map(deepTransform(spec))</code>See <code>deepTransform()</code> for details. |
+|  [mapDeep(spec)](./transducers.mapdeep.md) | Transducer. Same as <code>map(deepTransform(spec))</code>See [deepTransform](./transducers.deeptransform.md) for details. |
 |  [mapDeep(spec, src)](./transducers.mapdeep_1.md) |  |
-|  [mapIndexed(fn, offset)](./transducers.mapindexed.md) | Transducer. Similar to <code>map</code>, but given <code>fn</code> takes two arguments: <code>index</code> and <code>value</code> to transform. An optional start index <code>offset</code> can be provided (default 0).
-```ts
-transduce(
-  mapIndexed((i, x) => ["id" + i, x * 10], 42),
-  assocObj(),
-  [1, 2, 3]
-)
-// { id42: 10, id43: 20, id44: 30 }
-
-```
- |
+|  [mapIndexed(fn, offset)](./transducers.mapindexed.md) | Transducer. Similar to , but given <code>fn</code> takes two arguments: <code>index</code> and <code>value</code> to transform. An optional start index <code>offset</code> can be provided (default 0). |
 |  [mapIndexed(fn, src)](./transducers.mapindexed_1.md) |  |
 |  [mapIndexed(fn, offset, src)](./transducers.mapindexed_2.md) |  |
 |  [mapKeys(keys, copy)](./transducers.mapkeys.md) | Takes a <code>keys</code> object of transformation functions and returns a transducer which expects object values. For each input <code>x</code> then calls transformation functions for each key <code>k</code> in <code>keys</code>. I.e. executes <code>keys[k](x[k])</code> and reassigns result. By default creates a shallow copy of each <code>x</code>.
@@ -255,7 +233,7 @@ transduce(
  |
 |  [mapKeys(keys, src)](./transducers.mapkeys_1.md) |  |
 |  [mapKeys(keys, copy, src)](./transducers.mapkeys_2.md) |  |
-|  [mapNth(n, fn)](./transducers.mapnth.md) | Transducer. Similar to <code>map</code>, but only transforms every <code>n</code>-th input value and passes intermediate values unchanged downstream. The optional <code>offset</code> arg can be used to adjust the number of inputs before the first transformation occurs (default 0).
+|  [mapNth(n, fn)](./transducers.mapnth.md) | Transducer. Similar to , but only transforms every <code>n</code>-th input value and passes intermediate values unchanged downstream. The optional <code>offset</code> arg can be used to adjust the number of inputs before the first transformation occurs (default 0).
 ```
 [...mapNth(3, (x) => x * 10, range(1,10))]
 // [ 10, 2, 3, 40, 5, 6, 70, 8, 9 ]
@@ -269,7 +247,7 @@ transduce(
 |  [mapNth(n, offset, fn)](./transducers.mapnth_1.md) |  |
 |  [mapNth(n, fn, src)](./transducers.mapnth_2.md) |  |
 |  [mapNth(n, offset, fn, src)](./transducers.mapnth_3.md) |  |
-|  [mapVals(fn, copy)](./transducers.mapvals.md) | Transducer. Similar to <code>map</code>, but expects object values and the given function <code>fn</code> is applied to each enumerable property value and the results reassigned to their original keys. By default, a shallow copy of the source object is created. The resulting object is then used as the result of this transducer.
+|  [mapVals(fn, copy)](./transducers.mapvals.md) | Transducer. Similar to , but expects object values and the given function <code>fn</code> is applied to each enumerable property value and the results reassigned to their original keys. By default, a shallow copy of the source object is created. The resulting object is then used as the result of this transducer.
 ```
 [...mapVals((x)=> x * 10, [{a: 1, b: 2}, {c: 3, d: 4}])]
 // [ { a: 10, b: 20 }, { c: 30, d: 40 } ]
@@ -278,51 +256,9 @@ transduce(
  |
 |  [mapVals(fn, src)](./transducers.mapvals_1.md) |  |
 |  [mapVals(fn, copy, src)](./transducers.mapvals_2.md) |  |
-|  [matchFirst(pred)](./transducers.matchfirst.md) | Transducer composition / syntax sugar for:
-```ts
-comp(filter(pred), take(1))
-
-```
-Yields none or only the first value which passed the predicate check and then causes early termination. If <code>src</code> input is given, returns first match found (or <code>undefined</code>). Also see <code>matchLast()</code>.
-```ts
-matchFirst((x) => x >= 5, [3, 1, 4, 2, 6, 5])
-// 6
-
-transduce(
-  comp(
-    matchFirst((x) => x >= 5),
-    map((x) => x * 10)
-  ),
-  last(),
-  [3, 1, 4, 2, 6, 5]
-)
-// 60
-
-```
- |
+|  [matchFirst(pred)](./transducers.matchfirst.md) | Transducer composition / syntax sugar for: |
 |  [matchFirst(pred, src)](./transducers.matchfirst_1.md) |  |
-|  [matchLast(pred)](./transducers.matchlast.md) | Transducer composition / syntax sugar for:
-```ts
-comp(filter(pred), takeLast(1))
-
-```
-Yields none or only the last value which passed the predicate check. If <code>src</code> input is given, returns last match found (or <code>undefined</code>).
-```ts
-matchLast((x) => x >= 5, [3, 1, 6, 5, 4, 2])
-// 5
-
-transduce(
-  comp(
-    matchLast((x) => x >= 5),
-    map((x) => x * 10)
-  ),
-  last(),
-  [3, 1, 4, 2, 6, 5]
-)
-// 50
-
-```
- |
+|  [matchLast(pred)](./transducers.matchlast.md) | Transducer composition / syntax sugar for: |
 |  [matchLast(pred, src)](./transducers.matchlast_1.md) |  |
 |  [max()](./transducers.max.md) |  |
 |  [max(xs)](./transducers.max_1.md) |  |
@@ -338,13 +274,13 @@ transduce(
 |  [minCompare(init, cmp, xs)](./transducers.mincompare_2.md) |  |
 |  [movingAverage(period)](./transducers.movingaverage.md) | Computes the Simple Moving Average of given period. [https://en.wikipedia.org/wiki/Moving\_average\#Simple\_moving\_average](https://en.wikipedia.org/wiki/Moving_average#Simple_moving_average)<!-- -->Note: the number of results will be <code>period-1</code> less than the number of processed inputs and no outputs will be produced if there were less than <code>period</code> input values.<!-- -->Also see the  package for more optimized and alternative MAs. |
 |  [movingAverage(period, src)](./transducers.movingaverage_1.md) |  |
-|  [movingMedian(n, opts)](./transducers.movingmedian.md) | Transducer. Similar to <code>movingAverage()</code>, but yields median of sliding window and supports non-numeric inputs. The optional <code>key</code> and <code>cmp</code> function args can be used to select / compute a sortable value and change sorting behavior. |
+|  [movingMedian(n, opts)](./transducers.movingmedian.md) | Transducer. Similar to , but yields median of sliding window and supports non-numeric inputs. The optional <code>key</code> and <code>cmp</code> function args can be used to select / compute a sortable value and change sorting behavior. |
 |  [movingMedian(n, src)](./transducers.movingmedian_1.md) |  |
 |  [movingMedian(n, opts, src)](./transducers.movingmedian_2.md) |  |
 |  [mul(init)](./transducers.mul.md) | Reducer to compute product of values with optional <code>init</code> value (default: 1). |
 |  [mul(xs)](./transducers.mul_1.md) |  |
 |  [mul(init, xs)](./transducers.mul_2.md) |  |
-|  [multiplex(a)](./transducers.multiplex.md) | Yields a new transducer which applies given transducers in parallel (using <code>juxt()</code> &amp; <code>step()</code>) and produces tuples of results.<!-- -->Tip: Use <code>noop()</code> transducer for lanes which should retain the original input values.
+|  [multiplex(a)](./transducers.multiplex.md) | Yields a new transducer which applies given transducers in parallel (using  &amp; [step](./transducers.step.md)<!-- -->) and produces tuples of results.<!-- -->Tip: Use [noop](./transducers.noop.md) transducer for lanes which should retain the original input values.
 ```
 [...iterator(
   multiplex(
@@ -365,7 +301,7 @@ transduce(
 |  [multiplex(a, b, c, d, e, f)](./transducers.multiplex_5.md) |  |
 |  [multiplex(a, b, c, d, e, f, g)](./transducers.multiplex_6.md) |  |
 |  [multiplex(a, b, c, d, e, f, g, h)](./transducers.multiplex_7.md) |  |
-|  [multiplexObj(xforms, rfn)](./transducers.multiplexobj.md) | Transducer. Similar to (and building on) <code>multiplex()</code>, but takes an object of transducers and produces a result object for each input.
+|  [multiplexObj(xforms, rfn)](./transducers.multiplexobj.md) | Transducer. Similar to (and building on) , but takes an object of transducers and produces a result object for each input.
 ```
 [...multiplexObj(
   {
@@ -411,7 +347,7 @@ transduce(
 ```
  |
 |  [padLast(n, fill, src)](./transducers.padlast_1.md) |  |
-|  [page(page, pageLen)](./transducers.page.md) | Pagination helper. Returns transducer which extracts only items for given page number (and page length, default 10). When composing with other transducers, it's most efficient if <code>page()</code> is used prior to any heavy processing steps.
+|  [page(page, pageLen)](./transducers.page.md) | Pagination helper. Returns transducer which extracts only items for given page number (and page length, default 10). When composing with other transducers, it's most efficient if  is used prior to any heavy processing steps.
 ```
 [...page(0, 5, range(12))]
 // [ 0, 1, 2, 3, 4 ]
@@ -480,7 +416,7 @@ transduce(
 ```
  |
 |  [partitionOf(sizes, src)](./transducers.partitionof_1.md) |  |
-|  [partitionSort(n, opts)](./transducers.partitionsort.md) | Transducer. Composition of <code>partition</code> and <code>mapcat</code> which yields a \*\*partially\*\* sorted sequence of input values. Sorting is performed on sliding / non-overlapping chunks of <code>n</code> inputs. The optional <code>key</code> and <code>cmp</code> function args can be used to select / compute a sortable value and change sorting behavior.
+|  [partitionSort(n, opts)](./transducers.partitionsort.md) | Transducer. Composition of  and  which yields a \*\*partially\*\* sorted sequence of input values. Sorting is performed on sliding / non-overlapping chunks of <code>n</code> inputs. The optional <code>key</code> and <code>cmp</code> function args can be used to select / compute a sortable value and change sorting behavior.
 ```
 [...partitionSort(4, [5,9,2,6,4,1,3,8,7,0])]
 // [ 2, 5, 6, 9, 1, 3, 4, 8, 0, 7 ]
@@ -499,21 +435,7 @@ transduce(
  |
 |  [partitionSort(n, src)](./transducers.partitionsort_1.md) |  |
 |  [partitionSort(n, opts, src)](./transducers.partitionsort_2.md) |  |
-|  [partitionSync(keys, opts)](./transducers.partitionsync.md) | This transducer is intended for synchronization and provenance tracking of possibly previously merged inputs. It partitions the input into labeled tuple objects with the object keys obtained from the user provided <code>keyfn</code> (which is applied to each input value).<!-- -->By default, a new result is only produced once values from \*\*all\*\* given labeled sources have been received. Only labels contained in the provided key set are used, others are skipped. The result tuples will contain the most recent consumed value from each labeled input. In dataflow scenarios this can be used to ensure a subsequent operation consuming these tuples has all necessary inputs, regardless of the individual rates of change of each original (pre-merge) input.<!-- -->If the <code>mergeOnly</code> option is set to true (default: false), \*\*no\*\* synchronization (waiting) of inputs is applied and potentially partially populated tuple objects will be emitted for each received input value, however as with the default behavior, tuples will retain the most recent consumed value from other inputs.
-```ts
-src = [
-  ["a", 1], ["a", 2], ["d", 100], ["b", 10],
-  ["b", 11], ["c", 0], ["a", 3]
-];
-
-// form tuples for values only from sources "a" & "b"
-// here the label is the first element of each input item
-[...partitionSync(["a", "b"], { key: (x) => x[0] }, src)]
-// [ { a: ["a", 2], b: ["b", 10] },
-//   { b: ["b", 11], a: ["a", 3] } ]
-
-```
-In addition to the default mode of operation, i.e. waiting for new values from \*all\* named inputs before a new tuple is produced, the behavior for \*all but the first tuple\* can be changed to emit new tuples as soon as a new value with a qualifying label has become available (with other values in the tuple remaining). Compare with above example:<!-- -->\`\`\` // passing <code>false</code> to disable tuple reset \[...partitionSync( \["a", "b"\], { key: (x) =<!-- -->&gt; x\[0\], reset: false }<!-- -->, src )\] // \[ { a: \["a", 2\], b: \["b", 10\] }<!-- -->, // { a: \["a", 2\], b: \["b", 11\] }<!-- -->, // { a: \["a", 3\], b: \["b", 11\] } \]<!-- -->By default, the last emitted tuple is allowed to be incomplete (in case the input closed). To only allow complete tuples, set the optional <code>all</code> arg to false.<!-- -->Note: If the <code>keys</code> set of allowed labels is modified externally, the tuple size will adjust accordingly (only if given as set, will not work if keys are provided as array). |
+|  [partitionSync(keys, opts)](./transducers.partitionsync.md) | This transducer is intended for synchronization and provenance tracking of possibly previously merged inputs. It partitions the input into labeled tuple objects with the object keys obtained from the user provided <code>keyfn</code> (which is applied to each input value).<!-- -->By default, a new result is only produced once values from \*\*all\*\* given labeled sources have been received. Only labels contained in the provided key set are used, others are skipped. The result tuples will contain the most recent consumed value from each labeled input. In dataflow scenarios this can be used to ensure a subsequent operation consuming these tuples has all necessary inputs, regardless of the individual rates of change of each original (pre-merge) input.<!-- -->If the <code>mergeOnly</code> option is set to true (default: false), \*\*no\*\* synchronization (waiting) of inputs is applied and potentially partially populated tuple objects will be emitted for each received input value, however as with the default behavior, tuples will retain the most recent consumed value from other inputs. |
 |  [partitionSync(keys, src)](./transducers.partitionsync_1.md) |  |
 |  [partitionSync(keys, opts, src)](./transducers.partitionsync_2.md) |  |
 |  [permutations(a)](./transducers.permutations.md) | Iterator yielding the Cartesian Product of the given iterables. All iterables MUST be finite! If any of the given iterables is empty the iterator yields no values.
@@ -571,7 +493,7 @@ In addition to the default mode of operation, i.e. waiting for new values from \
 
 ```
  |
-|  [run(tx, xs)](./transducers.run.md) | Transforms <code>xs</code> with given transducer and optional side effect without any reduction step. If <code>fx</code> is given it will be called with every value produced by the transducer. If <code>fx</code> is \*not\* given, the transducer is assumed to include at least one <code>sideEffect()</code> step itself. Returns nothing. |
+|  [run(tx, xs)](./transducers.run.md) | Transforms <code>xs</code> with given transducer and optional side effect without any reduction step. If <code>fx</code> is given it will be called with every value produced by the transducer. If <code>fx</code> is \*not\* given, the transducer is assumed to include at least one [sideEffect](./transducers.sideeffect.md) step itself. Returns nothing. |
 |  [run(tx, xs)](./transducers.run_1.md) |  |
 |  [run(tx, fx, xs)](./transducers.run_2.md) |  |
 |  [run(tx, fx, xs)](./transducers.run_3.md) |  |
@@ -597,7 +519,7 @@ In addition to the default mode of operation, i.e. waiting for new values from \
 ```
  |
 |  [scan(rfn, init, src)](./transducers.scan_1.md) |  |
-|  [selectKeys(keys)](./transducers.selectkeys.md) | Transducer which yields sequence of transformed objects, each only only containing the given <code>keys</code>. If a key's value is <code>undefined</code> (or missing entirely) it will be omitted in the result.<!-- -->Note: For single key extraction <code>pluck()</code> is a faster alternative.
+|  [selectKeys(keys)](./transducers.selectkeys.md) | Transducer which yields sequence of transformed objects, each only only containing the given <code>keys</code>. If a key's value is <code>undefined</code> (or missing entirely) it will be omitted in the result.<!-- -->Note: For single key extraction  is a faster alternative.
 ```
 [...selectKeys(
   ["id", "age"],
@@ -624,7 +546,7 @@ In addition to the default mode of operation, i.e. waiting for new values from \
  |
 |  [slidingWindow(size, src)](./transducers.slidingwindow_1.md) |  |
 |  [slidingWindow(size, partial, src)](./transducers.slidingwindow_2.md) |  |
-|  [some(pred)](./transducers.some.md) | Similar to <code>every()</code> reducer, but only requires at least 1 value to succeed predicate test (and then immediately terminates with <code>true</code> as result). |
+|  [some(pred)](./transducers.some.md) | Similar to  reducer, but only requires at least 1 value to succeed predicate test (and then immediately terminates with <code>true</code> as result). |
 |  [some(xs)](./transducers.some_1.md) |  |
 |  [some(pred, xs)](./transducers.some_2.md) |  |
 |  [str(sep)](./transducers.str.md) |  |
@@ -638,7 +560,7 @@ In addition to the default mode of operation, i.e. waiting for new values from \
  |
 |  [streamShuffle(n, src)](./transducers.streamshuffle_1.md) |  |
 |  [streamShuffle(n, maxSwaps, src)](./transducers.streamshuffle_2.md) |  |
-|  [streamSort(n, opts)](./transducers.streamsort.md) | Transducer. Similar to <code>partitionSort()</code>, however uses proper sliding window and insertion sort instead of fully sorting window as done by <code>partitionSort()</code>.
+|  [streamSort(n, opts)](./transducers.streamsort.md) | Transducer. Similar to , however uses proper sliding window and insertion sort instead of fully sorting window as done by .
 ```
 [...streamSort(4, [5,9,2,6,4,1,3,8,7,0])]
 // [ 2, 4, 1, 3, 5, 6, 0, 7, 8, 9 ]
@@ -647,24 +569,7 @@ In addition to the default mode of operation, i.e. waiting for new values from \
  |
 |  [streamSort(n, src)](./transducers.streamsort_1.md) |  |
 |  [streamSort(n, opts, src)](./transducers.streamsort_2.md) |  |
-|  [struct(fields)](./transducers.struct.md) | Higher-order transducer to converts linear input into structured objects using given field specs and ordering. A single field spec is an array of 2 or 3 items: <code>[name, size, transform?]</code>. If <code>transform</code> is given, it will be used to produce the final value for this field. In the example below, it is used to unwrap the ID field values, e.g. from <code>[123] =&gt; 123</code>
-```ts
-tx.transduce(
-    tx.struct([["id", 1, (id) => id[0]], ["pos", 2], ["vel", 2], ["color", 4]]),
-    tx.push(),
-    [0, 100, 200, -1, 0, 1, 0.5, 0, 1, 1, 0, 0, 5, 4, 0, 0, 1, 1]
-)
-// [ { color: [ 1, 0.5, 0, 1 ],
-//     vel: [ -1, 0 ],
-//     pos: [ 100, 200 ],
-//     id: 0 },
-//   { color: [ 0, 0, 1, 1 ],
-//     vel: [ 5, 4 ],
-//     pos: [ 0, 0 ],
-//     id: 1 } ]
-
-```
- |
+|  [struct(fields)](./transducers.struct.md) | Higher-order transducer to converts linear input into structured objects using given field specs and ordering. A single field spec is an array of 2 or 3 items: <code>[name, size, transform?]</code>. If <code>transform</code> is given, it will be used to produce the final value for this field. In the example below, it is used to unwrap the ID field values, e.g. from <code>[123] =&gt; 123</code> |
 |  [struct(fields, src)](./transducers.struct_1.md) |  |
 |  [sub(init)](./transducers.sub.md) | Reducer to successively subtract values from optional <code>init</code> value (default: 0). |
 |  [sub(xs)](./transducers.sub_1.md) |  |
@@ -690,7 +595,7 @@ tx.transduce(
 
 ```
  |
-|  [take(n)](./transducers.take.md) | Transducer which only yields the first <code>n</code> values and then terminates transformation (by emitting a <code>reduced()</code> value).
+|  [take(n)](./transducers.take.md) | Transducer which only yields the first <code>n</code> values and then terminates transformation (by emitting a [reduced](./transducers.reduced.md) value).
 ```
 [...iterator(comp(take(5), map((x) => x * 10)), range(10))]
 // [ 0, 10, 20, 30, 40 ]
@@ -714,7 +619,7 @@ tx.transduce(
 ```
  |
 |  [takeNth(n, src)](./transducers.takenth_1.md) |  |
-|  [takeWhile(pred)](./transducers.takewhile.md) | Transducer which applies predicate <code>pred</code> to each input and only yields values as long as the predicate returned a truthy result. Once the result is falsy, transformation is terminated (by emitting a <code>reduced()</code> value).
+|  [takeWhile(pred)](./transducers.takewhile.md) | Transducer which applies predicate <code>pred</code> to each input and only yields values as long as the predicate returned a truthy result. Once the result is falsy, transformation is terminated (by emitting a [reduced](./transducers.reduced.md) value).
 ```
 [...takeWhile((x) => x < 5, range(10))]
 // [ 0, 1, 2, 3, 4 ]
@@ -723,9 +628,9 @@ tx.transduce(
  |
 |  [takeWhile(src)](./transducers.takewhile_1.md) |  |
 |  [takeWhile(pred, src)](./transducers.takewhile_2.md) |  |
-|  [throttle(pred)](./transducers.throttle.md) | Similar to <code>filter</code>, but works with possibly stateful predicates to achieve rate limiting capabilities. Emits only values when predicate returns a truthy value.<!-- -->To support multiple instances of stateful predicates, the predicate itself must be wrapped in a no-arg function, which is called when the transducer initializes. Any stateful initialization of the predicate MUST be done in this function and the function MUST return a 1-arg function, the actual predicate applied to each value.<!-- -->Also see: <code>throttleTime()</code>. |
+|  [throttle(pred)](./transducers.throttle.md) | Similar to , but works with possibly stateful predicates to achieve rate limiting capabilities. Emits only values when predicate returns a truthy value.<!-- -->To support multiple instances of stateful predicates, the predicate itself must be wrapped in a no-arg function, which is called when the transducer initializes. Any stateful initialization of the predicate MUST be done in this function and the function MUST return a 1-arg function, the actual predicate applied to each value.<!-- -->Also see: . |
 |  [throttle(pred, src)](./transducers.throttle_1.md) |  |
-|  [throttleTime(delay)](./transducers.throttletime.md) | Time-based version of <code>throttle</code>. Ignores any new values in the <code>delay</code> interval since the last accepted value.<!-- -->\*\*Only to be used in async contexts and NOT with <code>transduce</code> directly.\*\*<!-- -->Also see:  and  packages. |
+|  [throttleTime(delay)](./transducers.throttletime.md) | Time-based version of . Ignores any new values in the <code>delay</code> interval since the last accepted value.<!-- -->\*\*Only to be used in async contexts and NOT with  directly.\*\*<!-- -->Also see:  and  packages. |
 |  [throttleTime(delay, src)](./transducers.throttletime_1.md) |  |
 |  [toggle(on, off, initial)](./transducers.toggle.md) | Stateful transducer which accepts any input and flips between given <code>on</code> / <code>off</code> values for every value received. The <code>initial</code> state can be optionally provided (default: false) and must be given if used as an iterator.
 ```
@@ -756,27 +661,12 @@ tx.transduce(
 // [ 100, 100, 100, 133, 166, 200, 133, 66, 0, 0, 0 ]
 
 ```
-Using easing functions (e.g. from thi.ng/math), non-linear interpolation within each keyframe interval can be achieved:
-```ts
-import { mix, smoothStep } from "@thi.ng/math"
-
-[...tween({
-  num: 10,
-  min: 0,
-  max: 100,
-  init: (a, b) => [a, b],
-  mix: ([a, b], t) => Math.floor(mix(a, b, smoothStep(0.1, 0.9, t))),
-  stops: [[20, 100], [50, 200], [80, 0]]
-})]
-// [ 100, 100, 100, 120, 179, 200, 158, 41, 0, 0, 0 ]
-
-```
- TweenOpts  interpolate  interpolateHermite  interpolateLinear |
+Using easing functions (e.g. from thi.ng/math), non-linear interpolation within each keyframe interval can be achieved: |
 |  [vals(x)](./transducers.vals.md) |  |
 |  [wordWrap(lineLength, opts)](./transducers.wordwrap.md) | Returns transducer partitioning words into variable sized arrays based on given <code>lineLength</code> (default 80). The optional <code>delim</code> and <code>always</code> args can be used to adjust the length and usage of delimiters between each word. If <code>always</code> is true, the delimiter length is added to each word, even near line endings. If false (default), the last word on each line can still fit even if there's no space for the delimiter. |
 |  [wordWrap(lineLength, src)](./transducers.wordwrap_1.md) |  |
 |  [wordWrap(lineLength, opts, src)](./transducers.wordwrap_2.md) |  |
-|  [wrapSides(src, numLeft, numRight)](./transducers.wrapsides.md) | Yields iterator of <code>src</code> with the last <code>numLeft</code> values of <code>src</code> prepended at the beginning and/or the first <code>numRight</code> values appended at the end. <code>numLeft</code> defaults to 1 and <code>numRight</code> defaults to same value as <code>numLeft</code>, therefore wraps both sides by default and throws error if either <code>nXXX</code> &lt; 0 or larger than <code>src.length</code>. extendSides  padSides |
+|  [wrapSides(src, numLeft, numRight)](./transducers.wrapsides.md) | Yields iterator of <code>src</code> with the last <code>numLeft</code> values of <code>src</code> prepended at the beginning and/or the first <code>numRight</code> values appended at the end. <code>numLeft</code> defaults to 1 and <code>numRight</code> defaults to same value as <code>numLeft</code>, therefore wraps both sides by default and throws error if either <code>nXXX</code> &lt; 0 or larger than <code>src.length</code>.<!-- -->- [extendSides()](./transducers.extendsides.md) - [padSides](./transducers.padsides.md) |
 |  [zip(a)](./transducers.zip.md) |  |
 |  [zip(a, b)](./transducers.zip_1.md) |  |
 |  [zip(a, b, c)](./transducers.zip_2.md) |  |
@@ -810,10 +700,10 @@ import { mix, smoothStep } from "@thi.ng/math"
 |  Variable | Description |
 |  --- | --- |
 |  [$$reduce](./transducers.__reduce.md) |  |
-|  [$iter](./transducers._iter.md) | Helper function used by various transducers to wrap themselves as transforming iterators. Delegates to <code>iterator1()</code> by default. |
+|  [$iter](./transducers._iter.md) | Helper function used by various transducers to wrap themselves as transforming iterators. Delegates to [iterator1()](./transducers.iterator1.md) by default. |
 |  [buildKernel1d](./transducers.buildkernel1d.md) |  |
 |  [buildKernel2d](./transducers.buildkernel2d.md) |  |
-|  [cat](./transducers.cat.md) | Transducer to concatenate iterable values. Iterates over each input and emits individual values down stream, therefore removing one level of nesting from the input. If, during processing, the transducer is given a wrapped <code>reduced()</code> input iterable, it will still be processed as normal, but then immediately triggers early termination by wrapping its own result in <code>reduced()</code>. E.g. this behavior allows a <code>mapcat()</code> user functions to benefit from <code>reduced</code> results.
+|  [cat](./transducers.cat.md) | Transducer to concatenate iterable values. Iterates over each input and emits individual values down stream, therefore removing one level of nesting from the input. If, during processing, the transducer is given a wrapped [reduced](./transducers.reduced.md) input iterable, it will still be processed as normal, but then immediately triggers early termination by wrapping its own result in [reduced](./transducers.reduced.md)<!-- -->. E.g. this behavior allows a  user functions to benefit from [reduced](./transducers.reduced.md) results.
 ```
 [...iterator(comp(map((x) => [x, x]), cat()), [1, 2, 3, 4])]
 // [ 1, 1, 2, 2, 3, 3, 4, 4 ]
@@ -832,14 +722,8 @@ import { mix, smoothStep } from "@thi.ng/math"
 // [ 1, 1, 2, 2 ]
 
 ```
- thi.ng/transducers/iter/concat  thi.ng/transducers/xform/mapcat |
-|  [choices](./transducers.choices.md) | Returns an infinite iterator of random choices and their (optional) weights. If <code>weights</code> is given, it must have at least the same size as <code>choices</code>. If omitted, each choice will have same probability.
-```ts
-transduce(take(1000), frequencies(), choices("abcd", [1, 0.5, 0.25, 0.125]))
-// Map { 'c' => 132, 'a' => 545, 'b' => 251, 'd' => 72 }
-
-```
- weightedRandom |
+- [concat()](./transducers.concat.md) -  |
+|  [choices](./transducers.choices.md) | Returns an infinite iterator of random choices and their (optional) weights. If <code>weights</code> is given, it must have at least the same size as <code>choices</code>. If omitted, each choice will have same probability. |
 |  [compR](./transducers.compr.md) | Reducer composition helper. Takes existing reducer <code>rfn</code> (a 3-tuple) and a reducing function <code>fn</code>. Returns a new reducer tuple of this form:
 ```
 [rfn[0], rfn[1], fn]
@@ -894,54 +778,9 @@ deepTransform(spec)(src);
 
 ```
  |
-|  [delayed](./transducers.delayed.md) | Yields transducer which wraps incoming values in promises, which each resolve after specified delay time (in ms).<!-- -->\*\*Only to be used in async contexts and NOT with <code>transduce</code> directly.\*\* |
+|  [delayed](./transducers.delayed.md) | Yields transducer which wraps incoming values in promises, which each resolve after specified delay time (in ms).<!-- -->\*\*Only to be used in async contexts and NOT with  directly.\*\* |
 |  [ensureReduced](./transducers.ensurereduced.md) |  |
-|  [groupBinary](./transducers.groupbinary.md) | Creates a bottom-up, unbalanced binary tree of desired depth and choice of data structures. Any value can be indexed, as long as a numeric representation (key) can be obtained. This numeric key is produced by the supplied <code>key</code> function. IMPORTANT: the returned values MUST be unsigned and less than the provided bit length (i.e. <code>0 .. (2^bits) - 1</code> range).<!-- -->By default the tree is constructed using plain objects for branches, with left branches stored as "l" and right ones as "r". The original values are stored at the lowest tree level using a customizable nested reducer. By default leaves are collected in arrays (using the <code>push()</code> reducer), but any suitable reducer can be used (e.g. <code>conj()</code> to collect values into sets).<!-- -->Index by lowest 4-bits of ID value:
-```ts
-tree = reduce(
-  groupBinary(4, x => x.id & 0xf),
-  [{id: 3}, {id: 8}, {id: 15}, {id: 0}]
-)
-
-tree.l.l.l.l
-// [ { id: 0 } ]
-tree.r.r.r.r
-// [ { id: 15 } ]
-tree.l.l.r.r
-// [ { id: 3 } ]
-
-```
-Collecting as array:
-```ts
-tree = reduce(
-  groupBinary(4, identity, ()=>[], push(), 0, 1),
-  [1,2,3,4,5,6,7]
-)
-
-tree[0][1][0][1] // 0101 == 5 in binary
-// [ 5 ]
-
-tree[0][1][1]    // 011* == branch
-// [ [ 6 ], [ 7 ] ]
-
-```
-Using <code>frequencies</code> as leaf reducer:
-```ts
-tree = reduce(
-  groupBinary(3, (x: string) => x.length, null, frequencies()),
-  "aa bbb dddd ccccc bbb eeee fff".split(" ")
-)
-// [ [ undefined,
-//     [ Map { 'aa' => 1 },
-//       Map { 'bbb' => 2, 'fff' => 1 } ] ],
-//   [ [ Map { 'dddd' => 1, 'eeee' => 1 },
-//       Map { 'ccccc' => 1 } ] ] ]
-
-tree[0][1][1]
-// Map { 'bbb' => 2, 'fff' => 1 }
-
-```
- |
+|  [groupBinary](./transducers.groupbinary.md) | Creates a bottom-up, unbalanced binary tree of desired depth and choice of data structures. Any value can be indexed, as long as a numeric representation (key) can be obtained. This numeric key is produced by the supplied <code>key</code> function. IMPORTANT: the returned values MUST be unsigned and less than the provided bit length (i.e. <code>0 .. (2^bits) - 1</code> range).<!-- -->By default the tree is constructed using plain objects for branches, with left branches stored as "l" and right ones as "r". The original values are stored at the lowest tree level using a customizable nested reducer. By default leaves are collected in arrays (using the  reducer), but any suitable reducer can be used (e.g.  to collect values into sets).<!-- -->Index by lowest 4-bits of ID value: |
 |  [isReduced](./transducers.isreduced.md) |  |
 |  [keySelector](./transducers.keyselector.md) |  |
 |  [lookup1d](./transducers.lookup1d.md) | Returns function accepting a single index arg used to lookup value in given array. No bounds checks are done.
@@ -958,8 +797,8 @@ tree[0][1][1]
 
 ```
  |
-|  [lookup3d](./transducers.lookup3d.md) | Same as <code>lookup2d()</code>, but for 3D data. The index ordering of the source data MUST be in Z, Y, X order (i.e. a stack of row major 2D slices). No bounds checks are done. |
-|  [noop](./transducers.noop.md) | No-op / pass-through transducer, essentially the same as: <code>map(identity)</code>, but faster. Useful for testing and / or to keep existing values in a <code>multiplex()</code> tuple lane. |
+|  [lookup3d](./transducers.lookup3d.md) | Same as [lookup2d](./transducers.lookup2d.md)<!-- -->, but for 3D data. The index ordering of the source data MUST be in Z, Y, X order (i.e. a stack of row major 2D slices). No bounds checks are done. |
+|  [noop](./transducers.noop.md) | No-op / pass-through transducer, essentially the same as: <code>map(identity)</code>, but faster. Useful for testing and / or to keep existing values in a  tuple lane. |
 |  [padSides](./transducers.padsides.md) | Returns iterator of <code>src</code> padded with value <code>x</code>, repeated <code>numLeft</code>/<code>numRight</code> times (default: 1). By default both sides are padded, but can be adjusted by setting either of them to zero. <code>numRight</code> defaults to same value as <code>numLeft</code>.<!-- -->Essentially, syntax sugar for:
 ```
 // default
@@ -972,7 +811,7 @@ concat(repeat(x, numLeft), src)
 concat(src, repeat(x, numRight))
 
 ```
- extendsSides  wrapSides |
+- [extendSides()](./transducers.extendsides.md) - [wrapSides()](./transducers.wrapsides.md) |
 |  [permutationsN](./transducers.permutationsn.md) | Iterator yielding the Cartesian Product for <code>n</code> items of <code>m</code> values each. If <code>m</code> is not given, defaults to value of <code>n</code>. The range of <code>m</code> is <code>0..m-1</code>. The optional <code>offsets</code> array can be used to define start values for each dimension.
 ```
 [...permutationsN(2)]
@@ -990,7 +829,7 @@ concat(src, repeat(x, numRight))
  |
 |  [pushCopy](./transducers.pushcopy.md) |  |
 |  [reduced](./transducers.reduced.md) |  |
-|  [reducer](./transducers.reducer.md) | Convenience helper for building a full <code>Reducer</code> using the identity function (i.e. <code>(x) =&gt; x</code>) as completion step (true for 90% of all bundled transducers). |
+|  [reducer](./transducers.reducer.md) | Convenience helper for building a full [Reducer](./transducers.reducer.md) using the identity function (i.e. <code>(x) =&gt; x</code>) as completion step (true for 90% of all bundled transducers). |
 |  [renamer](./transducers.renamer.md) |  |
 |  [sideEffect](./transducers.sideeffect.md) | Helper transducer. Applies given <code>fn</code> to each input value, presumably for side effects. Discards function's result and yields original inputs. |
 |  [step](./transducers.step.md) | Single-step transducer execution wrapper. Returns array if transducer produces multiple results and undefined if there was no output. Else returns single result value.<!-- -->Likewise, once a transducer has produced a final / reduced value, all further invocations of the stepper function will return undefined.
@@ -1018,16 +857,7 @@ f(1); // undefined
 ```
  |
 |  [trace](./transducers.trace.md) |  |
-|  [tuples](./transducers.tuples.md) | Zip function accepts a list of iterables, and combines them by merging each value of each iterable, Such as the first yield element contains the first elements of the given iterables, the second of which contains the second elements of the given iterables, and so on.<!-- -->The returned iterable is truncated in length to the length of the shortest argument sequence. With a single sequence argument, it yields a list of 1-tuples.
-```ts
-tx.zip([1, 2, 3], [3, 4, 5, 0, 9])
-// [ 1, 3 ] [ 2, 4 ] [ 3, 5 ]
-
-tx.zip([1, 2, 3])
-// [ 1 ] [ 2 ] [ 3 ]
-
-```
- |
+|  [tuples](./transducers.tuples.md) | Zip function accepts a list of iterables, and combines them by merging each value of each iterable, Such as the first yield element contains the first elements of the given iterables, the second of which contains the second elements of the given iterables, and so on.<!-- -->The returned iterable is truncated in length to the length of the shortest argument sequence. With a single sequence argument, it yields a list of 1-tuples. |
 |  [unreduced](./transducers.unreduced.md) |  |
 
 ## Type Aliases

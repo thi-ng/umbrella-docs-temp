@@ -6,7 +6,7 @@
 
 Porter-Duff operator. None of the terms are used. Always results in \[0, 0, 0, 0\].
 
- porterDuff
+[porterDuff](./porter-duff.porterduff.md)
 
 <b>Signature:</b>
 

@@ -4,7 +4,7 @@
 
 ## Fn2 type
 
-A 2-arg function from A,B =<!-- -->&gt; C.
+A 2-arg function from A,B to C.
 
 <b>Signature:</b>
 

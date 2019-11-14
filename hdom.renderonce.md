@@ -4,7 +4,7 @@
 
 ## renderOnce variable
 
-One-off hdom tree conversion &amp; target DOM application. Takes same options as `start()`<!-- -->, but performs no diffing and only creates or hydrates target once. The given tree is first normalized and if result is `null` or `undefined` no further action will be taken.
+One-off hdom tree conversion &amp; target DOM application. Takes same options as [start](./hdom.start.md)<!-- -->, but performs no diffing and only creates or hydrates target once. The given tree is first normalized and if result is `null` or `undefined` no further action will be taken.
 
 <b>Signature:</b>
 

@@ -18,7 +18,7 @@
  |
 |  [ButtonGroupOpts](./hdom-components.buttongroupopts.md) | Button group component config options. |
 |  [ButtonOpts](./hdom-components.buttonopts.md) |  |
-|  [CanvasHandlers](./hdom-components.canvashandlers.md) | User provided canvas life cycle methods. These differ from the usual  @<!-- -->thi.ng/hdom\#ILifeCycle<!-- -->} methods and are always passed at least the canvas DOM element, canvas context and hdom user context. Not all handlers need to be implemented. |
+|  [CanvasHandlers](./hdom-components.canvashandlers.md) | User provided canvas life cycle methods. These differ from the usual [ILifecycle](./hdom.ilifecycle.md) methods and are always passed at least the canvas DOM element, canvas context and hdom user context. Not all handlers need to be implemented. |
 |  [DropDownOption](./hdom-components.dropdownoption.md) |  |
 |  [DropDownOptionGroup](./hdom-components.dropdownoptiongroup.md) |  |
 |  [FpsCounterOpts](./hdom-components.fpscounteropts.md) |  |
@@ -34,29 +34,17 @@
 |  --- | --- |
 |  [adaptDPI](./hdom-components.adaptdpi.md) | Sets the canvas size to given <code>width</code> &amp; <code>height</code> and adjusts style to compensate for HDPI devices. Note: For 2D canvases, this will automatically clear any prior canvas content. |
 |  [appLink](./hdom-components.applink.md) |  |
-|  [button](./hdom-components.button.md) | Higher order function to create a new stateless button component, pre-configured via user supplied options. The returned component function accepts the following arguments:<!-- -->- hdom context object (unused) - partial <code>ButtonArgs</code> object (extra attribs, onclick, disabled) - body content (varargs)<!-- -->Any <code>attribs</code> provided as arg via <code>ButtonArgs</code> are merged with the default options provided to the HOF. The <code>disabled</code> arg decides which button version to create. The button can have any number of body elements (e.g. icon and label), given as varargs. |
-|  [buttonGroup](./hdom-components.buttongroup.md) | Higher order function to create a new stateless button group component, pre-configured via user supplied options. The returned component function accepts the following arguments:<!-- -->- hdom context object (unused) - partial <code>ButtonGroupArgs</code> object (extra attribs, disabled flag) - button group items (varargs)<!-- -->Any <code>attribs</code> provided as arg via <code>ButtonGroupArgs</code> are merged with the default options provided to the HOF. If <code>disabled</code> is true, ALL buttons in the group will be disabled, regardless of their individual settings. The group can have any number of elements, given as varargs. |
-|  [canvas2D](./hdom-components.canvas2d.md) | Similar to <code>canvasWebGL</code>, but targets default 2D drawing context. |
-|  [canvasWebGL](./hdom-components.canvaswebgl.md) | Higher order WebGL canvas component delegating to user provided handlers.<!-- -->Note: Since this is an higher order component, if used within a non-static parent component, this function itself cannot be directly inlined into hdom tree and must be initialized prior/outside, however the returned component can be used as normal.
-```ts
-const glcanvas = canvasWebGL({
-  render(canv, gl, hctx, time, frame, ...args) {
-    const col = 0.5 + 0.5 * Math.sin(time);
-    gl.clearColor(col, col, col, 1);
-  }
-});
-...
-[glcanvas, {id: "foo", width: 640, height: 480}]
-
-```
- |
-|  [canvasWebGL2](./hdom-components.canvaswebgl2.md) | Same as <code>canvasWebGL</code> but targets WebGL2. |
+|  [button](./hdom-components.button.md) | Higher order function to create a new stateless button component, pre-configured via user supplied options. The returned component function accepts the following arguments:<!-- -->- hdom context object (unused) - partial [ButtonArgs](./hdom-components.buttonargs.md) object (extra attribs, onclick, disabled) - body content (varargs)<!-- -->Any <code>attribs</code> provided as arg via [ButtonArgs](./hdom-components.buttonargs.md) are merged with the default options provided to the HOF. The <code>disabled</code> arg decides which button version to create. The button can have any number of body elements (e.g. icon and label), given as varargs. |
+|  [buttonGroup](./hdom-components.buttongroup.md) | Higher order function to create a new stateless button group component, pre-configured via user supplied options. The returned component function accepts the following arguments:<!-- -->- hdom context object (unused) - partial [ButtonGroupArgs](./hdom-components.buttongroupargs.md) object (extra attribs, disabled flag) - button group items (varargs)<!-- -->Any <code>attribs</code> provided as arg via [ButtonGroupArgs](./hdom-components.buttongroupargs.md) are merged with the default options provided to the HOF. If <code>disabled</code> is true, ALL buttons in the group will be disabled, regardless of their individual settings. The group can have any number of elements, given as varargs. |
+|  [canvas2D](./hdom-components.canvas2d.md) | Similar to [canvasWebGL](./hdom-components.canvaswebgl.md)<!-- -->, but targets default 2D drawing context. |
+|  [canvasWebGL](./hdom-components.canvaswebgl.md) | Higher order WebGL canvas component delegating to user provided handlers. |
+|  [canvasWebGL2](./hdom-components.canvaswebgl2.md) | Same as [canvasWebGL](./hdom-components.canvaswebgl.md) but targets WebGL2. |
 |  [dropdown](./hdom-components.dropdown.md) |  |
 |  [fpsCounter](./hdom-components.fpscounter.md) | Customizable FPS counter with sparkline visualization of N previous frames. |
 |  [groupedDropdown](./hdom-components.groupeddropdown.md) |  |
 |  [link](./hdom-components.link.md) |  |
 |  [mergeAttribs](./hdom-components.mergeattribs.md) | Helper function to immutably merge attribs from two sources and concatenate their <code>class</code> values and merge their <code>style</code> maps (if present). Returns merged result object. |
-|  [notification](./hdom-components.notification.md) | Higher order function to create a new stateless notification component, pre-configured via user supplied options. The returned component function accepts the following arguments:<!-- -->- hdom context object (unused) - partial <code>NotificationArgs</code> object (extra attribs, onclose handler) - body content<!-- -->Any <code>attribs</code> provided as arg via <code>NotificationArgs</code> are merged with the default options provided to the HOF. If the notification body consists of multiple elements then they will need to be wrapped in a container element. |
+|  [notification](./hdom-components.notification.md) | Higher order function to create a new stateless notification component, pre-configured via user supplied options. The returned component function accepts the following arguments:<!-- -->- hdom context object (unused) - partial [NotificationArgs](./hdom-components.notificationargs.md) object (extra attribs, onclose handler) - body content<!-- -->Any <code>attribs</code> provided as arg via [NotificationArgs](./hdom-components.notificationargs.md) are merged with the default options provided to the HOF. If the notification body consists of multiple elements then they will need to be wrapped in a container element. |
 |  [optgroup](./hdom-components.optgroup.md) |  |
 |  [option](./hdom-components.option.md) |  |
 |  [pager](./hdom-components.pager.md) | Higher order container component for paged navigation buttons. The returned component function takes these arguments:<!-- -->- <code>ctx</code> - hdom context object - <code>id</code> - current page ID (zero-based) - <code>numItems</code> - current number of items - <code>pageLen</code> - number of items per page (only used for calculation) - <code>maxButtons</code> - number of page buttons to show (default: 5). If zero, only the prev / next and first / last buttons will be shown.<!-- -->If there are more pages than the specified number, only the neighboring page IDs (relative to the current page) are shown. E.g. If there are 10 pages, the current page ID is 5 and 3 visible page buttons then the pager will look like this (the <code>&#124;</code> character here indicates button group boundaries):
@@ -78,17 +66,7 @@ const mypager = pager({
 ```
  |
 |  [sparkline](./hdom-components.sparkline.md) | Customizable, stateless SVG sparkline component. |
-|  [title](./hdom-components.title.md) | Configurable Higher order title with optional subtitle component. The returned component function takes two args: title, subtitle.
-```ts
-const h1 = title();
-const h2 = title({ element: "h2", attribs: { class: "blue" }});
-
-[h1, "Hello world", "Once upon a time..."]
-
-[h2, "Chapter 1", "Once upon a time..."]
-
-```
- |
+|  [title](./hdom-components.title.md) | Configurable Higher order title with optional subtitle component. The returned component function takes two args: title, subtitle. |
 
 ## Type Aliases
 

@@ -4,7 +4,7 @@
 
 ## fromIterable variable
 
-Creates a new `Stream` of given iterable which asynchronously calls `.next()` for each item of the iterable when the first (and in this case the only one) subscriber becomes available. The values are processed via `setInterval()` using the given `delay` value (default: 0). Once the iterable is exhausted (if finite), then calls `.done()` by default, but can be avoided by passing `false` as last argument.
+Creates a new [Stream](./rstream.stream.md) of given iterable which asynchronously calls `.next()` for each item of the iterable when the first (and in this case the only one) subscriber becomes available. The values are processed via `setInterval()` using the given `delay` value (default: 0). Once the iterable is exhausted (if finite), then calls `.done()` by default, but can be avoided by passing `false` as last argument.
 
 <b>Signature:</b>
 

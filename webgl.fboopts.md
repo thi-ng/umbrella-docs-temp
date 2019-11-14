@@ -14,6 +14,6 @@ export interface FboOpts
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [depth](./webgl.fboopts.depth.md) | <code>ITexture &#124; IRenderBuffer</code> | Optional pre-instantiated <code>RenderBuffer</code> to be used as depth buffer for this FBO. |
+|  [depth](./webgl.fboopts.depth.md) | <code>ITexture &#124; IRenderBuffer</code> | Optional pre-instantiated [RBO](./webgl.rbo.md) to be used as depth buffer for this FBO. |
 |  [tex](./webgl.fboopts.tex.md) | <code>ITexture[]</code> | Array of Texture instances to be used as color attachments. Multiple attachments are only allowed if the <code>webgl_draw_buffers</code> extension is available. The texture at <code>[0]</code> will be mapped to <code>COLOR_ATTACHMENT0</code> (or <code>COLOR_ATTACHMENT0_WEBGL</code>), other indices are mapped to their respective attachment IDs. |
 

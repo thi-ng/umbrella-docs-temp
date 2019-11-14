@@ -8,14 +8,18 @@ Returns stringer which pads given input with `ch` (default: space) on both sides
 
 Note: The padding string can contain multiple characters.
 
+<b>Signature:</b>
+
+```typescript
+center: (lineWidth: number, pad?: string | number) => Stringer<any>
+```
+
+## Example
+
+
 ```ts
 center(20, "<>")(wrap(" ")("thi.ng"))
 // "<><><> thi.ng <><><>"
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-center: (lineWidth: number, pad?: string | number) => Stringer<any>
-```

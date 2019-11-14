@@ -43,7 +43,7 @@
 |  [dialRaw](./imgui.dialraw.md) |  |
 |  [dialVal](./imgui.dialval.md) |  |
 |  [dropdown](./imgui.dropdown.md) |  |
-|  [gridLayout](./imgui.gridlayout.md) | Syntax sugar for <code>GridLayout</code> ctor. By default creates a single-column layout at given position and width. |
+|  [gridLayout](./imgui.gridlayout.md) | Syntax sugar for [GridLayout](./imgui.gridlayout.md) ctor. By default creates a single-column layout at given position and width. |
 |  [handleButtonKeys](./imgui.handlebuttonkeys.md) |  |
 |  [handleSlider1Keys](./imgui.handleslider1keys.md) |  |
 |  [handleSlider2Keys](./imgui.handleslider2keys.md) |  |
@@ -77,7 +77,7 @@
 |  [toggle](./imgui.toggle.md) | If <code>square</code> is true, the clickable area will not fill the entire cell, but only a left-aligned square of cell/row height. |
 |  [toggleRaw](./imgui.toggleraw.md) |  |
 |  [tooltipRaw](./imgui.tooltipraw.md) |  |
-|  [useDefaultEventHandlers](./imgui.usedefaulteventhandlers.md) | Injects default mouse &amp; touch event handlers into <code>gui.attribs</code> and attaches keydown/up listeners to <code>window</code>.<!-- -->This method should only be used if the IMGUI is to be updated via a RAF loop or other non-reactive situation. For on-demand updates / rendering event handling and IMGUI mouse/key state preparation is left to the user. IMGUI.setMouse()  IMGUI.setKey() |
+|  [useDefaultEventHandlers](./imgui.usedefaulteventhandlers.md) | Injects default mouse &amp; touch event handlers into <code>gui.attribs</code> and attaches keydown/up listeners to <code>window</code>.<!-- -->This method should only be used if the IMGUI is to be updated via a RAF loop or other non-reactive situation. For on-demand updates / rendering event handling and IMGUI mouse/key state preparation is left to the user.<!-- -->- [IMGUI.setMouse()](./imgui.imgui.setmouse.md) - [IMGUI.setKey()](./imgui.imgui.setkey.md) |
 |  [xyPad](./imgui.xypad.md) | <code>mode</code> interpretation:<!-- -->- -2 = square - -1 = proportional height (snapped to rows) - &gt;<!-- -->0 = fixed row height |
 |  [xyPadRaw](./imgui.xypadraw.md) |  |
 

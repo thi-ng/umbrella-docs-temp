@@ -10,7 +10,16 @@ Before processing the first input, the FSM state is initialized by calling the u
 
 If a state handler needs to "emit" results for downstream processing, it can return an array of values. Any such values are passed on (individually, not as array) to the next reducer in the chain. If a state handler returns `null` or `undefined`<!-- -->, further downstream processing of the current input is skipped.
 
-Regardless of return value, if a state handler has caused a state change to the configured `terminal` state, processing is terminated (by calling `ensureReduced()`<!-- -->) and no further inputs will be consumed.
+Regardless of return value, if a state handler has caused a state change to the configured `terminal` state, processing is terminated (by calling [ensureReduced](./transducers.ensurereduced.md)<!-- -->) and no further inputs will be consumed.
+
+<b>Signature:</b>
+
+```typescript
+fsm: <T extends FSMState, A, B>(opts: FSMOpts<T, A, B[]>) => Transducer<A, B>
+```
+
+## Example
+
 
 ```ts
 testFSM = {
@@ -61,8 +70,3 @@ testFSM = {
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-fsm: <T extends FSMState, A, B>(opts: FSMOpts<T, A, B[]>) => Transducer<A, B>
-```

@@ -4,9 +4,9 @@
 
 ## ensureArrayLike variable
 
-Similar to `ensureArray()`<!-- -->, but for `ArrayLike` types.
+Similar to [ensureArray](./arrays.ensurearray.md)<!-- -->, but for `ArrayLike` types.
 
- ensureArray
+[ensureArray](./arrays.ensurearray.md)
 
 <b>Signature:</b>
 

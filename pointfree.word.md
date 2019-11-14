@@ -6,7 +6,7 @@
 
 Higher order word. Takes a StackProgram and returns it as StackFn to be used like any word. Unknown stack effect.
 
-If the optional `env` is given, uses a shallow copy of that environment (one per invocation) instead of the current one passed by `run()` at runtime. If `mergeEnv` is true (default), the user provided env will be merged with the current env (also shallow copies). This is useful in conjunction with `pushenv()` and `store()` or `storekey()` to save results of sub procedures in the main env.
+If the optional `env` is given, uses a shallow copy of that environment (one per invocation) instead of the current one passed by [run](./pointfree.run.md) at runtime. If `mergeEnv` is true (default), the user provided env will be merged with the current env (also shallow copies). This is useful in conjunction with [pushenv](./pointfree.pushenv.md) and [store](./pointfree.store.md) or `storekey()` to save results of sub procedures in the main env.
 
 Note: The provided (or merged) env is only active within the execution scope of the word.
 

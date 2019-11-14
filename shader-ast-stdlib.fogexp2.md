@@ -4,7 +4,7 @@
 
 ## fogExp2 variable
 
-Similar to `fogExp()`<!-- -->. Computes exponential fog factor \[0..1\], based on given fully saturated fog distance and density. Uses `exp2()` internally.
+Similar to [fogExp](./shader-ast-stdlib.fogexp.md)<!-- -->. Computes exponential fog factor \[0..1\], based on given fully saturated fog distance and density. Uses [exp2](./shader-ast.exp2.md) internally.
 
 <b>Signature:</b>
 

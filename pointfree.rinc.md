@@ -4,7 +4,7 @@
 
 ## rinc variable
 
-Like `inc`<!-- -->, but applies to r-stack TOS.
+Like [inc](./pointfree.inc.md)<!-- -->, but applies to r-stack TOS.
 
 <b>Signature:</b>
 

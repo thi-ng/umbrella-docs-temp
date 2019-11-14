@@ -40,7 +40,7 @@ export declare class TripleStore implements Iterable<Triple>, IToDot
 |  --- | --- | --- |
 |  [\[Symbol.iterator\]()](./rstream-query.triplestore._symbol.iterator_.md) |  |  |
 |  [add(t)](./rstream-query.triplestore.add.md) |  |  |
-|  [addJoin(a, b, id)](./rstream-query.triplestore.addjoin.md) |  | Like <code>addMultiJoin()</code>, but optimized for only two input queries. Returns a rstream subscription computing the natural join of the given input query results. |
+|  [addJoin(a, b, id)](./rstream-query.triplestore.addjoin.md) |  | Like [TripleStore.addMultiJoin()](./rstream-query.triplestore.addmultijoin.md)<!-- -->, but optimized for only two input queries. Returns a rstream subscription computing the natural join of the given input query results. |
 |  [addMultiJoin(queries, keepVars, id)](./rstream-query.triplestore.addmultijoin.md) |  |  |
 |  [addParamQueries(patterns)](./rstream-query.triplestore.addparamqueries.md) |  |  |
 |  [addParamQuery(\[s, p, o\], id)](./rstream-query.triplestore.addparamquery.md) |  | Creates a new parametric query using given pattern with at least 1 query variable. Query vars are strings with <code>?</code> prefix. The rest of the string is considered the variable name.
@@ -58,7 +58,7 @@ Internally, the query pattern is translated into a basic param query with an add
 |  [addPatternQuery(pattern, id)](./rstream-query.triplestore.addpatternquery.md) |  | Creates a new query subscription from given SPO pattern. Any <code>null</code> values in the pattern act as wildcard selectors and any other value as filter for the given triple component. E.g. the pattern <code>[null, &quot;type&quot;, &quot;person&quot;]</code> matches all triples which have <code>&quot;type&quot;</code> as predicate and <code>&quot;person&quot;</code> as object. Likewise the pattern <code>[null, null, null]</code> matches ALL triples in the graph.<!-- -->By default, the returned rstream subscription emits sets of matched triples. If only the raw triple IDs are wanted, set <code>emitTriples</code> arg to <code>false</code>. |
 |  [addPatternQuery(pattern, id, emitTriples)](./rstream-query.triplestore.addpatternquery_1.md) |  |  |
 |  [addPatternQuery(pattern, id, emitTriples)](./rstream-query.triplestore.addpatternquery_2.md) |  |  |
-|  [addQueryFromSpec(spec)](./rstream-query.triplestore.addqueryfromspec.md) |  | Compiles given query spec into a number of sub-queries and result transformations. Returns rstream subscription of final result sets. See <code>QuerySpec</code> docs for further details. |
+|  [addQueryFromSpec(spec)](./rstream-query.triplestore.addqueryfromspec.md) |  | Compiles given query spec into a number of sub-queries and result transformations. Returns rstream subscription of final result sets. See [QuerySpec](./rstream-query.queryspec.md) docs for further details. |
 |  [delete(t)](./rstream-query.triplestore.delete.md) |  |  |
 |  [findTriple(s, p, o, f)](./rstream-query.triplestore.findtriple.md) |  |  |
 |  [get(t, notFound)](./rstream-query.triplestore.get.md) |  |  |

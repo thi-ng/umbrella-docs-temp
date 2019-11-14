@@ -4,7 +4,7 @@
 
 ## binarySearchNumeric variable
 
-Similar to `binarySearch()`<!-- -->, but optimized for numeric arrays and supporting custom comparators (default: [compareNumAsc](./compare.comparenumasc.md)<!-- -->).
+Similar to [binarySearch](./arrays.binarysearch.md)<!-- -->, but optimized for numeric arrays and supporting custom comparators (default: [compareNumAsc](./compare.comparenumasc.md)<!-- -->).
 
 <b>Signature:</b>
 

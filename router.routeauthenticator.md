@@ -4,7 +4,7 @@
 
 ## RouteAuthenticator type
 
-A validation function to for authenticated routes. If this function determines that the user is not allowed to access this route, it should return nothing or a `RouteMatch` object for redirecting (e.g. to a login, home page or other non-protected route). If nothing is returned and no other routes can be matched, the router will eventually return the configure default fallback route.
+A validation function to for authenticated routes. If this function determines that the user is not allowed to access this route, it should return nothing or a [RouteMatch](./router.routematch.md) object for redirecting (e.g. to a login, home page or other non-protected route). If nothing is returned and no other routes can be matched, the router will eventually return the configure default fallback route.
 
 <b>Signature:</b>
 

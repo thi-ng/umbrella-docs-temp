@@ -4,7 +4,7 @@
 
 ## runWordU variable
 
-Like `runWord()`<!-- -->, but returns unwrapped value(s) from result data stack.
+Like [runWord](./pointfree-lang.runword.md)<!-- -->, but returns unwrapped value(s) from result data stack.
 
 <b>Signature:</b>
 

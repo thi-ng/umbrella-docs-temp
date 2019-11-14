@@ -4,7 +4,7 @@
 
 ## NotificationArgs.onclose property
 
-Event handler called when user closes notification. Only used if `NotificationOpts` has `close` option configured.
+Event handler called when user closes notification. Only used if [NotificationOpts](./hdom-components.notificationopts.md) has `close` option configured.
 
 <b>Signature:</b>
 

@@ -4,11 +4,22 @@
 
 ## tween variable
 
-Takes an existing stream/subscription `src` and attaches new subscription which interpolates between incoming values from `src` using the given `mix` function. The returned construct produces values at a rate controlled by the `clock` stream or frequency. If omitted, `clock` defaults to `fromRAF()` (\~60Hz). If given as number, creates a `fromInterval(clock)` or else uses the given `clock` stream directly. In general, the frequency of the `clock` should always be higher than that of `src`<!-- -->.
+Takes an existing stream/subscription `src` and attaches new subscription which interpolates between incoming values from `src` using the given `mix` function. The returned construct produces values at a rate controlled by the `clock` stream or frequency. If omitted, `clock` defaults to [fromRAF](./rstream.fromraf.md) (\~60Hz). If given as number, creates a `fromInterval(clock)` or else uses the given `clock` stream directly. In general, the frequency of the `clock` should always be higher than that of `src`<!-- -->.
 
 If `stop` is given as well, no values will be passed downstream if that function returns true. This can be used to limit traffic once the tween target value has been reached.
 
 The returned subscription closes automatically when either `src` or `clock` is exhausted.
+
+<b>Signature:</b>
+
+```typescript
+tween: <T>(src: ISubscribable<T>, initial: T, mix: Fn2<T, T, T>, stop?: Fn2<T, T, boolean> | undefined, clock?: number | ISubscribable<any> | undefined) => import("./subscription").Subscription<{
+    src: T;
+}, T>
+```
+
+## Example
+
 
 ```ts
 val = stream();
@@ -38,10 +49,3 @@ a.next(100)
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-tween: <T>(src: ISubscribable<T>, initial: T, mix: Fn2<T, T, T>, stop?: Fn2<T, T, boolean> | undefined, clock?: number | ISubscribable<any> | undefined) => import("./subscription").Subscription<{
-    src: T;
-}, T>
-```

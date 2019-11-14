@@ -4,7 +4,7 @@
 
 ## cartesian3 variable
 
-Converts 3D polar vector `v` to cartesian coordinates and adds optional `offset`<!-- -->. See `polar()` for reverse operation. If `out` is null, modifies `v` in place.
+Converts 3D polar vector `v` to cartesian coordinates and adds optional `offset`<!-- -->. See [polar](./vectors.polar.md) for reverse operation. If `out` is null, modifies `v` in place.
 
 <b>Signature:</b>
 

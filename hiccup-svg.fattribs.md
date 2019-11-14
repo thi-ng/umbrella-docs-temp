@@ -10,7 +10,7 @@ Takes an attributes object and converts any `fill`<!-- -->, `stroke` or transfor
 
 If no `transform` is given, the resulting transformation order will always be TRS. Any string values given will be used as-is and therefore need to be complete, e.g. `{ rotate: "rotate(60)" }`
 
-For color related attribs (`fill`<!-- -->, `stroke`<!-- -->), if given value is array-like, a number or an `IColor` instance, it will be converted into a CSS color string using 's .
+For color related attribs (`fill`<!-- -->, `stroke`<!-- -->), if given value is array-like, a number or an [IColor](./color.icolor.md) instance, it will be converted into a CSS color string using .
 
 String color attribs prefixed with `$` are replaced with `url(#...)` refs (used for referencing gradients).
 

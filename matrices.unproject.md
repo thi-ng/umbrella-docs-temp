@@ -4,7 +4,7 @@
 
 ## unproject variable
 
-Reverse operation of `project()`<!-- -->. If `invert` is true (default: false), both `mvp` and `view` matrices will be inverted first (non-destructively), else they're both assumed to be inverted already.
+Reverse operation of [project](./matrices.project.md)<!-- -->. If `invert` is true (default: false), both `mvp` and `view` matrices will be inverted first (non-destructively), else they're both assumed to be inverted already.
 
 <b>Signature:</b>
 

@@ -4,7 +4,7 @@
 
 ## Heap.pushPopAll() method
 
-Calls `pushPop()` for each given value in `vals` and returns last result (i.e. the smallest value in heap after processing all `vals`<!-- -->).
+Calls [Heap.pushPop()](./heaps.heap.pushpop.md) for each given value in `vals` and returns last result (i.e. the smallest value in heap after processing all `vals`<!-- -->).
 
 <b>Signature:</b>
 

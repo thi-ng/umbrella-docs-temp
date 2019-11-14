@@ -26,20 +26,7 @@
 |  [formatObject](./rstream-log.formatobject.md) |  |
 |  [formatString](./rstream-log.formatstring.md) |  |
 |  [isoDate](./rstream-log.isodate.md) |  |
-|  [maskSecrets](./rstream-log.masksecrets.md) | Takes an array of regex patterns and optional <code>mask</code> string. Returns transducer which replaces all found pattern occurrences with <code>mask</code>. Intended to be used in combination / after <code>formatString()</code> to avoid leaking of sensitive information via logged messages.
-```ts
-logger.transform(
-  formatString(),
-  maskSecrets([/(?<=[A-Z0-9_]\=)\w+/g])
-).subscribe(
-  writeConsole()
-);
-
-logger.info("logged in USER=toxi, using TOKEN=123456");
-// [INFO] logger-0: logged in USER=****, using TOKEN=****
-
-```
- |
+|  [maskSecrets](./rstream-log.masksecrets.md) | Takes an array of regex patterns and optional <code>mask</code> string. Returns transducer which replaces all found pattern occurrences with <code>mask</code>. Intended to be used in combination / after [formatString](./rstream-log.formatstring.md) to avoid leaking of sensitive information via logged messages. |
 |  [matchID](./rstream-log.matchid.md) |  |
 |  [maxLevel](./rstream-log.maxlevel.md) |  |
 |  [minLevel](./rstream-log.minlevel.md) |  |

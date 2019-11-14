@@ -4,7 +4,7 @@
 
 ## FboOpts.depth property
 
-Optional pre-instantiated `RenderBuffer` to be used as depth buffer for this FBO.
+Optional pre-instantiated [RBO](./webgl.rbo.md) to be used as depth buffer for this FBO.
 
 <b>Signature:</b>
 

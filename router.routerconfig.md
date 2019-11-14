@@ -4,7 +4,7 @@
 
 ## RouterConfig interface
 
-Configuration object for `Router` instances.
+Configuration object for [BasicRouter](./router.basicrouter.md) and [HTMLRouter](./router.htmlrouter.md) instances.
 
 <b>Signature:</b>
 
@@ -16,10 +16,10 @@ export interface RouterConfig
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [authenticator](./router.routerconfig.authenticator.md) | <code>RouteAuthenticator</code> | Optional route authentication function. See <code>RouteAuthenticator</code> for further details. If no authenticator is given, all matched routes will always succeed, regardless if a rule's <code>auth</code> flag is enabled or not. |
+|  [authenticator](./router.routerconfig.authenticator.md) | <code>RouteAuthenticator</code> | Optional route authentication function. See [RouteAuthenticator](./router.routeauthenticator.md) for further details. If no authenticator is given, all matched routes will always succeed, regardless if a rule's <code>auth</code> flag is enabled or not. |
 |  [defaultRouteID](./router.routerconfig.defaultrouteid.md) | <code>string</code> | Fallback route ID (MUST exist in <code>routes</code>), used if none of the defined routes could be matched against user input, e.g. a home or error page. |
 |  [initialRouteID](./router.routerconfig.initialrouteid.md) | <code>string</code> | Optional initial route to trigger when router starts. If given, this MUST be a route without params. |
-|  [prefix](./router.routerconfig.prefix.md) | <code>string</code> | Route prefix. Default: <code>/</code>. All routes to be parsed by <code>route()</code> are assumed to have this prefix. All routes returned by <code>format()</code> will include this prefix. |
+|  [prefix](./router.routerconfig.prefix.md) | <code>string</code> | Route prefix. Default: <code>/</code>. All routes to be parsed by [BasicRouter.route()](./router.basicrouter.route.md) are assumed to have this prefix. All routes returned by  will include this prefix. |
 |  [routes](./router.routerconfig.routes.md) | <code>Route[]</code> | An array of route specs, which are being attempted to be matched in order of appearance. |
 |  [separator](./router.routerconfig.separator.md) | <code>string</code> | Optional route path component separator. Default: <code>/</code> |
 

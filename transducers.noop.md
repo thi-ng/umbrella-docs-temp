@@ -4,7 +4,7 @@
 
 ## noop variable
 
-No-op / pass-through transducer, essentially the same as: `map(identity)`<!-- -->, but faster. Useful for testing and / or to keep existing values in a `multiplex()` tuple lane.
+No-op / pass-through transducer, essentially the same as: `map(identity)`<!-- -->, but faster. Useful for testing and / or to keep existing values in a  tuple lane.
 
 <b>Signature:</b>
 

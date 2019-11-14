@@ -4,7 +4,7 @@
 
 ## TripleStore.addQueryFromSpec() method
 
-Compiles given query spec into a number of sub-queries and result transformations. Returns rstream subscription of final result sets. See `QuerySpec` docs for further details.
+Compiles given query spec into a number of sub-queries and result transformations. Returns rstream subscription of final result sets. See [QuerySpec](./rstream-query.queryspec.md) docs for further details.
 
 <b>Signature:</b>
 

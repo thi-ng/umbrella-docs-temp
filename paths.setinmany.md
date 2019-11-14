@@ -4,7 +4,16 @@
 
 ## setInMany variable
 
-Like `setIn()`<!-- -->, but takes any number of path-value pairs and applies them in sequence by calling `setIn()` for each. Any key paths missing in the data structure will be created. Does \*not\* mutate original (instead use `mutInMany()` for this purpose).
+Like [setIn](./paths.setin.md)<!-- -->, but takes any number of path-value pairs and applies them in sequence by calling [setIn](./paths.setin.md) for each. Any key paths missing in the data structure will be created. Does \*not\* mutate original (instead use [mutInMany](./paths.mutinmany.md) for this purpose).
+
+<b>Signature:</b>
+
+```typescript
+setInMany: (state: any, ...pairs: any[]) => any
+```
+
+## Example
+
 
 ```ts
 setInMany({}, "a.b", 10, "x.y.z", 20)
@@ -12,8 +21,3 @@ setInMany({}, "a.b", 10, "x.y.z", 20)
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-setInMany: (state: any, ...pairs: any[]) => any
-```

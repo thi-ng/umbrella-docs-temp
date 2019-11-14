@@ -4,7 +4,7 @@
 
 ## IndexBufferSpec.buffer property
 
-Backing `WebGLBuffer` instance. Usually this will be auto-initialized by `makeBuffersInSpec()`
+Backing WebGLBuffer instance. Usually this will be auto-initialized by `makeBuffersInSpec`
 
 <b>Signature:</b>
 

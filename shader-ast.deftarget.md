@@ -6,6 +6,8 @@
 
 Takes an object of code generator functions and returns a new code generator / compile target function which serializes a given AST using the provided node type implementations.
 
+[targetGLSL](./shader-ast-glsl.targetglsl.md)
+
 <b>Signature:</b>
 
 ```typescript

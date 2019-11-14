@@ -4,7 +4,16 @@
 
 ## fromPromises variable
 
-Wraps given promises in `Promise.all()` to yield stream of results in same order as arguments, then closes. If any of the promises rejects, all others do too and calls `error()` in subscribers.
+Wraps given promises in `Promise.all()` to yield stream of results in same order as arguments, then closes. If any of the promises rejects, all others do too and calls [ISubscriber.error](./rstream.isubscriber.error.md) in subscribers.
+
+<b>Signature:</b>
+
+```typescript
+fromPromises: <T>(promises: Iterable<Promise<T>>) => Subscription<T[], T>
+```
+
+## Example 1
+
 
 ```ts
 rs.fromPromises([
@@ -20,6 +29,9 @@ rs.fromPromises([
 ```
 If individual error handling is required, an alternative is below (however this approach provides no ordering guarantees):
 
+## Example 2
+
+
 ```ts
 rs.fromIterable([
     Promise.resolve(1),
@@ -29,8 +41,3 @@ rs.fromIterable([
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-fromPromises: <T>(promises: Iterable<Promise<T>>) => Subscription<T[], T>
-```

@@ -26,13 +26,7 @@
 |  [bi3](./pointfree.bi3.md) | First applies <code>p</code> to the three input values <code>x y z</code>, then applies <code>q</code> to the same values.<!-- -->( x y z p q -- pxyz qxyz ) |
 |  [bia](./pointfree.bia.md) | Applies the quotation <code>q</code> to <code>x</code>, then to <code>y</code>.<!-- -->( x y q -- qx qy ) |
 |  [bia2](./pointfree.bia2.md) | Applies the quotation <code>q</code> to <code>x y</code>, then to <code>z w</code>.<!-- -->( x y z w q -- qxy qzw ) |
-|  [bindkeys](./pointfree.bindkeys.md) | Takes an array of keys and target object, then pops &amp; binds deeper stack values to respective keys in object. Pushes result object back on stack at the end. Throws error if there're less stack values than keys in given array.
-```ts
-runU([1,2,3, ["a","b","c"], {}, bindkeys])
-// { c: 3, b: 2, a: 1 }
-
-```
-(v1 v2 .. \[k1 k2 ..\] obj -- obj ) |
+|  [bindkeys](./pointfree.bindkeys.md) | Takes an array of keys and target object, then pops &amp; binds deeper stack values to respective keys in object. Pushes result object back on stack at the end. Throws error if there're less stack values than keys in given array. |
 |  [bis](./pointfree.bis.md) | Applies <code>p</code> to <code>x</code>, then applies <code>q</code> to <code>y</code>.<!-- -->( x y p q -- px qy ) |
 |  [bis2](./pointfree.bis2.md) | Applies <code>p</code> to <code>a b</code>, then applies <code>q</code> to <code>c d</code>.<!-- -->( a b c d p q -- pab qcd ) |
 |  [bitand](./pointfree.bitand.md) | ( x y -- x&amp;y ) |
@@ -46,7 +40,7 @@ runU([1,2,3, ["a","b","c"], {}, bindkeys])
 |  [ceil](./pointfree.ceil.md) | ( x -- ceil(x) ) |
 |  [collect](./pointfree.collect.md) | Pops TOS (a number) and then forms a tuple of the top <code>n</code> remaining values and pushes it as new TOS. The original collected stack values are removed from d-stack.<!-- -->( ... n \-\-\- ... \[...\] ) |
 |  [cond](./pointfree.cond.md) | Higher order word. Takes two stack programs: truthy and falsey branches, respectively. When executed, pops TOS and runs only one of the branches depending if TOS was truthy or not.<!-- -->Note: Unlike JS <code>if() {...} else {...}</code> constructs, the actual conditional is NOT part of this word.<!-- -->( bool -- ? ) |
-|  [condq](./pointfree.condq.md) | Non-HOF version of <code>cond</code>, expects <code>test</code> result and both branches on d-stack. Executes <code>thenq</code> word/quotation if <code>test</code> is truthy, else runs <code>elseq</code>.<!-- -->( test thenq elseq -- ? ) |
+|  [condq](./pointfree.condq.md) | Non-HOF version of [cond](./pointfree.cond.md)<!-- -->, expects <code>test</code> result and both branches on d-stack. Executes <code>thenq</code> word/quotation if <code>test</code> is truthy, else runs <code>elseq</code>.<!-- -->( test thenq elseq -- ? ) |
 |  [copy](./pointfree.copy.md) | Replaces TOS with its shallow copy. MUST be an array or plain object.<!-- -->( x -- copy ) |
 |  [cos](./pointfree.cos.md) | ( x -- cos(x) ) |
 |  [cpdr](./pointfree.cpdr.md) |  |
@@ -60,26 +54,7 @@ runU([1,2,3, ["a","b","c"], {}, bindkeys])
 |  [dip3](./pointfree.dip3.md) | Removes <code>x y z</code> from d-stack, calls <code>q</code> and restores removed vals to the top of the d-stack after quotation is finished.<!-- -->( x y z q -- x y z ) |
 |  [dip4](./pointfree.dip4.md) | Removes <code>x y z w</code> from d-stack, calls <code>q</code> and restores removed vals to the top of the d-stack after quotation is finished.<!-- -->( x y z w q -- x y z w ) |
 |  [div](./pointfree.div.md) | ( x y -- x/y ) |
-|  [dotimes](./pointfree.dotimes.md) | Executes given <code>body</code> word/quotation <code>n</code> times. In each iteration pushes current counter on d-stack prior to executing body.
-```ts
-pf.run([3, ["i=", pf.swap, pf.add, pf.print], pf.dotimes])
-// i=0
-// i=1
-// i=2
-
-```
-With empty body acts as finite range generator 0 .. n:
-```
-// range gen
-pf.run([3, [], pf.dotimes])
-[ [ 0, 1, 2 ], [], {} ]
-
-// range gen (collect results as array)
-pf.runU([3, pf.cpdr, [], pf.dotimes, pf.movrd, pf.collect])
-// [ 0, 1, 2 ]
-
-```
-( n body -- ? ) |
+|  [dotimes](./pointfree.dotimes.md) | Executes given <code>body</code> word/quotation <code>n</code> times. In each iteration pushes current counter on d-stack prior to executing body. |
 |  [drop](./pointfree.drop.md) | Removes TOS from d-stack.<!-- -->( x -- ) |
 |  [drop2](./pointfree.drop2.md) | Removes top 2 vals from d-stack.<!-- -->( x y -- ) |
 |  [dropif](./pointfree.dropif.md) | If TOS is truthy then drop it:<!-- -->( x -- )<!-- -->Else, no effect:<!-- -->( x -- x ) |
@@ -96,7 +71,7 @@ pf.runU([3, pf.cpdr, [], pf.dotimes, pf.movrd, pf.collect])
 |  [execjs](./pointfree.execjs.md) | Expects TOS to be a quotation with a vanilla JS function as first element. Calls fn with all remaining items in quot as arguments and pushes result back on d-stack (even if fn returned <code>undefined</code>).<!-- -->( \[f ...\] -- f(...) ) |
 |  [exp](./pointfree.exp.md) | ( x -- exp(x) ) |
 |  [floor](./pointfree.floor.md) | ( x -- floor(x) ) |
-|  [foldl](./pointfree.foldl.md) | Convenience wrapper for <code>mapl</code> to provide an alternative stack layout for reduction purposes:<!-- -->( arr q init -- reduction ) |
+|  [foldl](./pointfree.foldl.md) | Convenience wrapper for [mapl](./pointfree.mapl.md) to provide an alternative stack layout for reduction purposes:<!-- -->( arr q init -- reduction ) |
 |  [gt](./pointfree.gt.md) | ( x y -- x<!-- -->&gt;<!-- -->y ) |
 |  [gteq](./pointfree.gteq.md) | ( x y -- x<!-- -->&gt;<!-- -->=y ) |
 |  [hypot](./pointfree.hypot.md) | ( x y -- sqrt(x\*x+y\*y) ) |
@@ -111,7 +86,7 @@ pf.runU([3, pf.cpdr, [], pf.dotimes, pf.movrd, pf.collect])
 |  [keep2](./pointfree.keep2.md) | Call a quotation with two values on the stack, restoring the values after quotation finished.<!-- -->( x y q -- .. x y ) |
 |  [keep3](./pointfree.keep3.md) | Call a quotation with three values on the stack, restoring the values after quotation finished.<!-- -->( x y z q -- .. x y z ) |
 |  [length](./pointfree.length.md) | Pushes length of TOS on d-stack.<!-- -->( x -- x.length ) |
-|  [list](./pointfree.list.md) | Pushes a new empty array on the d-stack. While it's easily possible to use <code>[]</code> as part of a stack program, the <code>list</code> word is intended to be used as part of re-usuable <code>word()</code> definitions to ensure a new array is being created for every single invocation of the word (else only a single instance is created due to the mutable nature of JS arrays).<!-- -->Compare:
+|  [list](./pointfree.list.md) | Pushes a new empty array on the d-stack. While it's easily possible to use <code>[]</code> as part of a stack program, the <code>list</code> word is intended to be used as part of re-usuable [word](./pointfree.word.md) definitions to ensure a new array is being created for every single invocation of the word (else only a single instance is created due to the mutable nature of JS arrays).<!-- -->Compare:
 ```
 // using array literal within word definition
 foo = pf.word([ [], 1, pf.pushl ])
@@ -130,19 +105,10 @@ pf.runU(bar)
 ```
 ( -- \[\] ) |
 |  [load](./pointfree.load.md) | Loads value for <code>key</code> from current env and pushes it on d-stack. Throws error if var doesn't exist.<!-- -->( key -- env\[key\] ) |
-|  [loadkey](./pointfree.loadkey.md) | Higher order word. Similar to <code>load</code>, but always uses given preconfigured <code>key</code> instead of reading it from d-stack at runtime (also slightly faster). Throws error if var doesn't exist.<!-- -->( -- env\[key\] ) |
+|  [loadkey](./pointfree.loadkey.md) | Higher order word. Similar to [load](./pointfree.load.md)<!-- -->, but always uses given preconfigured <code>key</code> instead of reading it from d-stack at runtime (also slightly faster). Throws error if var doesn't exist.<!-- -->( -- env\[key\] ) |
 |  [log](./pointfree.log.md) | ( x -- log(x) ) |
-|  [loop](./pointfree.loop.md) | Higher order word. Takes a <code>test</code> and <code>body</code> stack program. Applies test to copy of TOS and executes body. Repeats while test is truthy.<!-- -->( -- ? )
-```ts
-run([loop([dup, ispos], [dup, print, dec])], [[3]])
-// 3
-// 2
-// 1
-// [ true, [ 0 ], undefined ]
-
-```
- |
-|  [loopq](./pointfree.loopq.md) | Non-HOF version of <code>loop</code>. Expects test result and body quotation / word on d-stack.<!-- -->( testq bodyq -- ? ) |
+|  [loop](./pointfree.loop.md) | Higher order word. Takes a <code>test</code> and <code>body</code> stack program. Applies test to copy of TOS and executes body. Repeats while test is truthy.<!-- -->( -- ? ) |
+|  [loopq](./pointfree.loopq.md) | Non-HOF version of [loop](./pointfree.loop.md)<!-- -->. Expects test result and body quotation / word on d-stack.<!-- -->( testq bodyq -- ? ) |
 |  [lsl](./pointfree.lsl.md) | ( x y -- x<!-- -->&lt;<!-- -->&lt;<!-- -->y ) |
 |  [lsr](./pointfree.lsr.md) | ( x y -- x<!-- -->&gt;<!-- -->&gt;<!-- -->y ) |
 |  [lsru](./pointfree.lsru.md) | ( x y -- x<!-- -->&gt;<!-- -->&gt;<!-- -->&gt;<!-- -->y ) |
@@ -170,39 +136,8 @@ runU([0, [1, 2, 3, 4], [add], mapl])
 // 10
 
 ```
-\*\*Important\*\*: <code>mapl</code> does not produce a result array. However, there're several options to collect results as array, e.g.<!-- -->Use <code>mapll()</code> to transform:
-```ts
-runU([[1, 2, 3, 4], [10, mul], mapll])
-// [ 10, 20, 30, 40]
-
-```
-Collecting results as array is a form of reduction, so we can use <code>list</code> to produce an initial new array and <code>pushr</code> to push each new interim value into the result:
-```ts
-runU([list, [1, 2, 3, 4], [10, mul, pushr], mapl])
-// [ 10, 20, 30, 40 ]
-
-```
-If the array size is known &amp; not changed by transformation:
-```ts
-runU([[1, 2, 3, 4], [10, mul], mapl, 4, collect])
-// [ 10, 20, 30, 40 ]
-
-```
- |
-|  [mapll](./pointfree.mapll.md) | Similar to <code>mapl()</code>, but produces new array of transformed values.<!-- -->( arr q -- arr )
-```ts
-runU([[1, 2, 3, 4], [10, mul], mapll])
-// [ 10, 20, 30, 40]
-
-```
-Filter / mapcat:
-```
-// drop even numbers, duplicate odd ones
-run([[1, 2, 3, 4], [dup, even, cond(drop, dup)], mapll])
-// [ [ [ 1, 1, 3, 3 ] ], [], {} ]
-
-```
- |
+\*\*Important\*\*: [mapl](./pointfree.mapl.md) does not produce a result array. However, there're several options to collect results as array, e.g.<!-- -->Use [mapll](./pointfree.mapll.md) to transform: |
+|  [mapll](./pointfree.mapll.md) | Similar to [mapl](./pointfree.mapl.md)<!-- -->, but produces new array of transformed values.<!-- -->( arr q -- arr ) |
 |  [maptos](./pointfree.maptos.md) | Higher order word. Replaces TOS of d-stack with result of given op.<!-- -->( x -- y ) |
 |  [max](./pointfree.max.md) | ( x y -- max(x,y) ) |
 |  [min](./pointfree.min.md) | ( x y -- min(x,y) ) |
@@ -217,10 +152,10 @@ run([[1, 2, 3, 4], [dup, even, cond(drop, dup)], mapll])
 |  [nip](./pointfree.nip.md) | Removes second topmost item from d-stack.<!-- -->( x y -- y ) |
 |  [nop](./pointfree.nop.md) | Utility word w/ no stack nor side effect. |
 |  [not](./pointfree.not.md) | ( x -- !x ) |
-|  [obj](./pointfree.obj.md) | Pushes new empty JS object on d-stack. Same reasoning as for <code>list</code>.<!-- -->( -- {<!-- -->} ) |
+|  [obj](./pointfree.obj.md) | Pushes new empty JS object on d-stack. Same reasoning as for [list](./pointfree.list.md)<!-- -->.<!-- -->( -- {<!-- -->} ) |
 |  [odd](./pointfree.odd.md) | ( x -- bool ) |
 |  [oneover](./pointfree.oneover.md) | ( x -- 1/x ) |
-|  [op2v](./pointfree.op2v.md) | Similar to <code>op2</code>, but for array operators. Either <code>a</code> or <code>b</code> can be a non-array value, but not both. Creates new array of result values. The result will have the same length as the shortest arg (if <code>a</code> and <code>b</code> have different lengths).<!-- -->- ( a b -- a ), if <code>a</code> is an array - ( a b -- b ), if <code>a</code> is not an array |
+|  [op2v](./pointfree.op2v.md) | Similar to [map2](./pointfree.map2.md)<!-- -->, but for array operators. Either <code>a</code> or <code>b</code> can be a non-array value, but not both. Creates new array of result values. The result will have the same length as the shortest arg (if <code>a</code> and <code>b</code> have different lengths).<!-- -->- ( a b -- a ), if <code>a</code> is an array - ( a b -- b ), if <code>a</code> is not an array |
 |  [or](./pointfree.or.md) | ( x y -- x\|\|y ) |
 |  [over](./pointfree.over.md) | Pushes copy of TOS-1 as new TOS on d-stack.<!-- -->( x y -- x y x ) |
 |  [pick](./pointfree.pick.md) | Uses TOS as index to look up a deeper d-stack value, then places it as new TOS. Throws error if stack depth is &lt; <code>x</code>.<!-- -->( ... x -- ... stack\[x\] ) |
@@ -238,28 +173,28 @@ run([[1, 2, 3, 4], [dup, even, cond(drop, dup)], mapll])
 |  [pushl](./pointfree.pushl.md) | Pushes <code>val</code> on the LHS of array.<!-- -->( val arr -- arr ) |
 |  [pushr](./pointfree.pushr.md) | Pushes <code>val</code> on the RHS of array.<!-- -->( arr val -- arr ) |
 |  [rand](./pointfree.rand.md) | ( -- Math.random() ) |
-|  [rdec](./pointfree.rdec.md) | Like <code>dec</code>, but applies to r-stack TOS. |
+|  [rdec](./pointfree.rdec.md) | Like [dec](./pointfree.dec.md)<!-- -->, but applies to r-stack TOS. |
 |  [rdrop](./pointfree.rdrop.md) | Removes TOS from r-stack.<!-- -->( x -- ) |
 |  [rdrop2](./pointfree.rdrop2.md) | Removes top 2 vals from r-stack.<!-- -->( x y -- ) |
 |  [rdup](./pointfree.rdup.md) | Duplicates TOS on r-stack.<!-- -->( x -- x x ) |
 |  [rdup2](./pointfree.rdup2.md) | Duplicates top 2 vals on r-stack.<!-- -->( x y -- x y x y ) |
 |  [rdup3](./pointfree.rdup3.md) | Duplicates top 3 vals on r-stack.<!-- -->( x y -- x y x y ) |
-|  [rinc](./pointfree.rinc.md) | Like <code>inc</code>, but applies to r-stack TOS. |
+|  [rinc](./pointfree.rinc.md) | Like [inc](./pointfree.inc.md)<!-- -->, but applies to r-stack TOS. |
 |  [rot](./pointfree.rot.md) | Rotates three topmost d-stack items downwards/to the left.<!-- -->( x y z -- y z x ) |
 |  [rover](./pointfree.rover.md) | Pushes copy of TOS-1 as new TOS on r-stack.<!-- -->( x y -- x y x ) |
 |  [rsp](./pointfree.rsp.md) | Pushes current r-stack size on d-stack.<!-- -->( -- n ) |
 |  [rswap](./pointfree.rswap.md) | Swaps the two topmost r-stack items.<!-- -->( x y -- y x ) |
 |  [rswap2](./pointfree.rswap2.md) | Swaps the two topmost d-stack pairs.<!-- -->( a b c d -- c d a b ) |
 |  [run](./pointfree.run.md) | Executes program / quotation with given stack context (initial D/R stacks and optional environment). Returns updated context. |
-|  [runE](./pointfree.rune.md) | Like <code>run()</code>, but returns result environment. Syntax sugar for: <code>run(...)[2]</code> |
-|  [runU](./pointfree.runu.md) | Like <code>run()</code>, but returns unwrapped result. Syntax sugar for: <code>unwrap(run(...),n)</code> |
+|  [runE](./pointfree.rune.md) | Like [run](./pointfree.run.md)<!-- -->, but returns result environment. Syntax sugar for: <code>run(...)[2]</code> |
+|  [runU](./pointfree.runu.md) | Like [run](./pointfree.run.md)<!-- -->, but returns unwrapped result. Syntax sugar for: <code>unwrap(run(...),n)</code> |
 |  [safeMode](./pointfree.safemode.md) |  |
 |  [setat](./pointfree.setat.md) | Writes <code>val</code> at key/index in object/array.<!-- -->( val obj k -- obj ) |
 |  [sin](./pointfree.sin.md) | ( x -- sin(x) ) |
 |  [split](./pointfree.split.md) | Splits vector / array at given index <code>x</code>.<!-- -->( arr x -- \[...\] \[...\] ) |
 |  [sqrt](./pointfree.sqrt.md) | ( x -- sqrt(x) ) |
 |  [store](./pointfree.store.md) | Stores <code>val</code> under <code>key</code> in env.<!-- -->( val key -- ) |
-|  [storekey](./pointfree.storekey.md) | Higher order word. Similar to <code>store</code>, but always uses given preconfigure <code>key</code> instead of reading it from d-stack at runtime (also slightly faster).<!-- -->( val -- ) |
+|  [storekey](./pointfree.storekey.md) | Higher order word. Similar to [store](./pointfree.store.md)<!-- -->, but always uses given preconfigure <code>key</code> instead of reading it from d-stack at runtime (also slightly faster).<!-- -->( val -- ) |
 |  [sub](./pointfree.sub.md) | ( x y -- x-y ) |
 |  [swap](./pointfree.swap.md) | Swaps the two topmost d-stack items.<!-- -->( x y -- y x ) |
 |  [swap2](./pointfree.swap2.md) | Swaps the two topmost d-stack pairs.<!-- -->( a b c d -- c d a b ) |
@@ -274,8 +209,8 @@ run([[1, 2, 3, 4], [dup, even, cond(drop, dup)], mapll])
 |  [tris](./pointfree.tris.md) | Applies <code>p</code> to <code>x</code>, then <code>q</code> to <code>y</code>, and finally <code>r</code> to <code>z</code>.<!-- -->( x y z p q r -- ) |
 |  [tris2](./pointfree.tris2.md) | Applies <code>p</code> to <code>u v</code>, then <code>q</code> to <code>w x</code>, and finally <code>r</code> to <code>y z</code>.<!-- -->( u v w x y z p q r -- puv qwx ryz ) |
 |  [tuck](./pointfree.tuck.md) | Inserts copy of TOS @ TOS-2 in d-stack.<!-- -->( x y -- y x y ) |
-|  [tuple](./pointfree.tuple.md) | Higher order helper word to <code>collect()</code> tuples of pre-defined size <code>n</code>. The size can be given as number or a stack function producing a number.<!-- -->( ... -- \[...\]) |
-|  [unwrap](./pointfree.unwrap.md) | Takes a result tuple returned by <code>run()</code> and unwraps one or more items from result stack. If no <code>n</code> is given, defaults to single value (TOS) and returns it as is. Returns an array for all other <code>n</code>. |
+|  [tuple](./pointfree.tuple.md) | Higher order helper word to [collect](./pointfree.collect.md) tuples of pre-defined size <code>n</code>. The size can be given as number or a stack function producing a number.<!-- -->( ... -- \[...\]) |
+|  [unwrap](./pointfree.unwrap.md) | Takes a result tuple returned by [run](./pointfree.run.md) and unwraps one or more items from result stack. If no <code>n</code> is given, defaults to single value (TOS) and returns it as is. Returns an array for all other <code>n</code>. |
 |  [vadd](./pointfree.vadd.md) |  |
 |  [vdiv](./pointfree.vdiv.md) |  |
 |  [vec2](./pointfree.vec2.md) |  |
@@ -283,8 +218,8 @@ run([[1, 2, 3, 4], [dup, even, cond(drop, dup)], mapll])
 |  [vec4](./pointfree.vec4.md) |  |
 |  [vmul](./pointfree.vmul.md) |  |
 |  [vsub](./pointfree.vsub.md) |  |
-|  [word](./pointfree.word.md) | Higher order word. Takes a StackProgram and returns it as StackFn to be used like any word. Unknown stack effect.<!-- -->If the optional <code>env</code> is given, uses a shallow copy of that environment (one per invocation) instead of the current one passed by <code>run()</code> at runtime. If <code>mergeEnv</code> is true (default), the user provided env will be merged with the current env (also shallow copies). This is useful in conjunction with <code>pushenv()</code> and <code>store()</code> or <code>storekey()</code> to save results of sub procedures in the main env.<!-- -->Note: The provided (or merged) env is only active within the execution scope of the word.<!-- -->( ? -- ? ) |
-|  [wordU](./pointfree.wordu.md) | Like <code>word()</code>, but automatically calls <code>unwrap()</code> on result context to produced unwrapped value/tuple.<!-- -->\*\*Importatant:\*\* Words defined with this function CANNOT be used as part of a larger stack program, only for standalone use. |
+|  [word](./pointfree.word.md) | Higher order word. Takes a StackProgram and returns it as StackFn to be used like any word. Unknown stack effect.<!-- -->If the optional <code>env</code> is given, uses a shallow copy of that environment (one per invocation) instead of the current one passed by [run](./pointfree.run.md) at runtime. If <code>mergeEnv</code> is true (default), the user provided env will be merged with the current env (also shallow copies). This is useful in conjunction with [pushenv](./pointfree.pushenv.md) and [store](./pointfree.store.md) or <code>storekey()</code> to save results of sub procedures in the main env.<!-- -->Note: The provided (or merged) env is only active within the execution scope of the word.<!-- -->( ? -- ? ) |
+|  [wordU](./pointfree.wordu.md) | Like [word](./pointfree.word.md)<!-- -->, but automatically calls [unwrap](./pointfree.unwrap.md) on result context to produced unwrapped value/tuple.<!-- -->\*\*Importatant:\*\* Words defined with this function CANNOT be used as part of a larger stack program, only for standalone use. |
 
 ## Type Aliases
 

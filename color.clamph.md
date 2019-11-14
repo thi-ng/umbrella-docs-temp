@@ -4,7 +4,7 @@
 
 ## clampH variable
 
-Similar to `clamp`<!-- -->, but calls `ensureHue()` to fold (instead of clamping) the hue into \[0,1\] interval.
+Similar to [clamp](./color.clamp.md)<!-- -->, but calls `ensureHue` to fold (instead of clamping) the hue into \[0,1\] interval.
 
 <b>Signature:</b>
 

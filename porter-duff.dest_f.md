@@ -6,7 +6,7 @@
 
 Porter-Duff operator. Always results in `dest` color, `src` ignored.
 
- porterDuff
+[porterDuff](./porter-duff.porterduff.md)
 
 <b>Signature:</b>
 

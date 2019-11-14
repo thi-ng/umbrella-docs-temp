@@ -4,7 +4,7 @@
 
 ## PagerOpts.labelPrev property
 
-Label for "prev page" button. Default: "<!-- -->&lt;<!-- -->"
+Label for "prev page" button. Default: `"<"`
 
 <b>Signature:</b>
 

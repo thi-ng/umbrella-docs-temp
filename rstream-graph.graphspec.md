@@ -4,7 +4,7 @@
 
 ## GraphSpec type
 
-A dataflow graph spec is simply an object where keys are node names and their values are `NodeSpec`<!-- -->s, defining a node's inputs, outputs and the operation to be applied to produce one or more result streams.
+A dataflow graph spec is simply an object where keys are node names and their values are [NodeSpec](./rstream-graph.nodespec.md)<!-- -->s, defining a node's inputs, outputs and the operation to be applied to produce one or more result streams.
 
 <b>Signature:</b>
 

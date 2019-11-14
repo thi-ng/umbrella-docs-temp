@@ -4,9 +4,9 @@
 
 ## scopedChildren variable
 
-Helper function for `walk()`<!-- -->. Returns child nodes for any control flow nodes containing a child scope.
+Helper function for [walk](./shader-ast.walk.md)<!-- -->. Returns child nodes for any control flow nodes containing a child scope.
 
- allChildren
+[allChildren](./shader-ast.allchildren.md)
 
 <b>Signature:</b>
 

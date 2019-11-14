@@ -4,7 +4,7 @@
 
 ## View.changed() method
 
-Returns true, if the view's value has changed since last `deref()`<!-- -->.
+Returns true, if the view's value has changed since last [IDeref.deref()](./api.ideref.deref.md)<!-- -->.
 
 <b>Signature:</b>
 

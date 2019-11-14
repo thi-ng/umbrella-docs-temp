@@ -4,7 +4,7 @@
 
 ## int24 variable
 
-Returns new `Int32` wrapping given 24bit RGB color and setting alpha channel set to 100% opaque.
+Returns new [Int32](./color.int32.md) wrapping given 24bit RGB color and setting alpha channel set to 100% opaque.
 
 <b>Signature:</b>
 

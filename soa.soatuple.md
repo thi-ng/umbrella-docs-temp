@@ -4,7 +4,7 @@
 
 ## SOATuple type
 
-Mapped type for index lookups. Declares an object with all keys from given `AttribSpecs` and each value a `Vec`<!-- -->.
+Mapped type for index lookups. Declares an object with all keys from given [SOAAttribSpec](./soa.soaattribspec.md) and each value a [Vec](./vectors.vec.md)<!-- -->.
 
 <b>Signature:</b>
 

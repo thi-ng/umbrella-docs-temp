@@ -4,7 +4,7 @@
 
 ## randNormS2 variable
 
-Sets `v` to random vector, normalized to length `n` (default: 1). If no `rnd` instance is given, uses `SYSTEM`<!-- -->, i.e. `Math.random`<!-- -->.
+Sets `v` to random vector, normalized to length `n` (default: 1). If no `rnd` instance is given, uses [SYSTEM](./random.system.md)<!-- -->, i.e. `Math.random`<!-- -->.
 
 <b>Signature:</b>
 

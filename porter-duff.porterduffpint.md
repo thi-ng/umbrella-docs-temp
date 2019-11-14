@@ -4,7 +4,7 @@
 
 ## porterDuffPInt variable
 
-Like `porterDuffP`<!-- -->, but for packed integers.
+Like [porterDuffP](./porter-duff.porterduffp.md)<!-- -->, but for packed integers.
 
 <b>Signature:</b>
 

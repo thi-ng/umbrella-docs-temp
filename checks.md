@@ -45,7 +45,7 @@
 |  [isNumber](./checks.isnumber.md) |  |
 |  [isObject](./checks.isobject.md) |  |
 |  [isOdd](./checks.isodd.md) |  |
-|  [isPlainObject](./checks.isplainobject.md) | Similar to <code>isObject()</code>, but also checks if prototype is that of <code>Object</code> (or <code>null</code>). |
+|  [isPlainObject](./checks.isplainobject.md) | Similar to [isObject](./checks.isobject.md)<!-- -->, but also checks if prototype is that of <code>Object</code> (or <code>null</code>). |
 |  [isPosititve](./checks.isposititve.md) |  |
 |  [isPrimitive](./checks.isprimitive.md) |  |
 |  [isPromise](./checks.ispromise.md) |  |

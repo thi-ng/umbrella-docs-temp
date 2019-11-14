@@ -4,7 +4,7 @@
 
 ## SIZEOF variable
 
-Size information (in bytes) for `Type` enums. For `GLType`<!-- -->, use this form, e.g. `SIZEOF[GL2TYPE[GLType.F32]]`
+Size information (in bytes) for [Type](./api.type.md) enums. For [GLType](./api.gltype.md)<!-- -->, use this form, e.g. `SIZEOF[GL2TYPE[GLType.F32]]`
 
 <b>Signature:</b>
 

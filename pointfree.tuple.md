@@ -4,7 +4,7 @@
 
 ## tuple variable
 
-Higher order helper word to `collect()` tuples of pre-defined size `n`<!-- -->. The size can be given as number or a stack function producing a number.
+Higher order helper word to [collect](./pointfree.collect.md) tuples of pre-defined size `n`<!-- -->. The size can be given as number or a stack function producing a number.
 
 ( ... -- \[...\])
 

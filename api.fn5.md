@@ -4,7 +4,7 @@
 
 ## Fn5 type
 
-A 5-arg function from A,B,C,D,E =<!-- -->&gt; F.
+A 5-arg function from A,B,C,D,E to F.
 
 <b>Signature:</b>
 

@@ -4,7 +4,7 @@
 
 ## IGridLayout.nest() method
 
-Requests a `spans` sized cell from this layout (via `.next()`<!-- -->) and creates and returns a new child `GridLayout` for the returned box / grid cell. This child layout is configured to use `cols` columns and shares same `gap` as this (parent) layout. The configured row span only acts as initial minimum vertical space reseervation, but is allowed to grow and if needed will propagate the new space requirements to parent layouts.
+Requests a `spans` sized cell from this layout (via `.next()`<!-- -->) and creates and returns a new child [GridLayout](./imgui.gridlayout.md) for the returned box / grid cell. This child layout is configured to use `cols` columns and shares same `gap` as this (parent) layout. The configured row span only acts as initial minimum vertical space reseervation, but is allowed to grow and if needed will propagate the new space requirements to parent layouts.
 
 Note: this size child-parent size propagation ONLY works until the next cell is requested from any parent. IOW, child layouts MUST be completed/populated first before continuing with siblings/ancestors of this current layout.
 

@@ -4,7 +4,7 @@
 
 ## mapVN variable
 
-Like `mapVV`<!-- -->, but for `VecOpVN` type ops and hence using a single vector input buffer `a` and a scalar `n`<!-- -->.
+Like [mapVV](./vectors.mapvv.md)<!-- -->, but for [VecOpVN](./vectors.vecopvn.md) type ops and hence using a single vector input buffer `a` and a scalar `n`<!-- -->.
 
 <b>Signature:</b>
 

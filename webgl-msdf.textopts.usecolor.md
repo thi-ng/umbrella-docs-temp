@@ -4,7 +4,7 @@
 
 ## TextOpts.useColor property
 
-If true, `text()` will produce color attributes.
+If true, [text](./webgl-msdf.text.md) will produce color attributes.
 
 <b>Signature:</b>
 
