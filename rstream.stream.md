@@ -43,5 +43,5 @@ b.next(42);
 // b2 42
 
 ```
-[Stream](./rstream.stream.md)<!-- -->s (like [Subscription](./rstream.subscription.md)<!-- -->s) implement the [IDeref](./api.ideref.md) interface which provides read access to a stream's last received value. This is useful for various purposes, e.g. in combination with , which supports direct embedding of streams (i.e. their values) into UI components (and will be deref'd automatically). If the stream has not yet emitted a value or if the stream is done, it will deref to `undefined`<!-- -->.
+[Stream](./rstream.stream.md)<!-- -->s (like [Subscription](./rstream.subscription.md)<!-- -->s) implement the [IDeref](./api.ideref.md) interface which provides read access to a stream's last received value. This is useful for various purposes, e.g. in combination with [@thi.ng/hdom](./hdom.md)<!-- -->, which supports direct embedding of streams (i.e. their values) into UI components (and will be deref'd automatically). If the stream has not yet emitted a value or if the stream is done, it will deref to `undefined`<!-- -->.
 

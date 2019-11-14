@@ -4,7 +4,7 @@
 
 ## initGraph variable
 
-Dataflow graph initialization function. Takes a state Atom (or `null` if not needed) and an object of [NodeSpec](./rstream-graph.nodespec.md) values or functions returning [Node](./rstream-graph.node.md) objects. Calls  for each spec and then recursively resolves references via [resolve](./resolve-map.resolve.md)<!-- -->. Returns new initialized graph object of [Node](./rstream-graph.node.md) objects and  stream constructs. Does NOT mutate original [GraphSpec](./rstream-graph.graphspec.md) object.
+Dataflow graph initialization function. Takes a state Atom (or `null` if not needed) and an object of [NodeSpec](./rstream-graph.nodespec.md) values or functions returning [Node](./rstream-graph.node.md) objects. Calls  for each spec and then recursively resolves references via [resolve](./resolve-map.resolve.md)<!-- -->. Returns new initialized graph object of [Node](./rstream-graph.node.md) objects and [@thi.ng/rstream](./rstream.md) stream constructs. Does NOT mutate original [GraphSpec](./rstream-graph.graphspec.md) object.
 
 <b>Signature:</b>
 

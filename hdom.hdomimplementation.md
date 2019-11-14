@@ -4,7 +4,7 @@
 
 ## HDOMImplementation interface
 
-This interface defines the underlying target update operations used by `diffTree()` and `createDOM()`<!-- -->. It allows  to be used as general purpose tree definition &amp; differential update mechanism, rather than being restricted to only work with an HTML DOM. See [DEFAULT\_IMPL](./hdom.default_impl.md) for the default implementations dealing with the latter. Note: Depending on use case and tree configuration, not all of these methods are required.
+This interface defines the underlying target update operations used by `diffTree()` and `createDOM()`<!-- -->. It allows [@thi.ng/hdom](./hdom.md) to be used as general purpose tree definition &amp; differential update mechanism, rather than being restricted to only work with an HTML DOM. See [DEFAULT\_IMPL](./hdom.default_impl.md) for the default implementations dealing with the latter. Note: Depending on use case and tree configuration, not all of these methods are required.
 
 Custom element-local implementations can also be provided via the special `__impl` hdom element/component attribute. In this case the element itself and all of its children will be processed with those custom operations.
 

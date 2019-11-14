@@ -272,7 +272,7 @@ rstream
 |  [minCompare(init, cmp)](./transducers.mincompare.md) |  |
 |  [minCompare(init, xs)](./transducers.mincompare_1.md) |  |
 |  [minCompare(init, cmp, xs)](./transducers.mincompare_2.md) |  |
-|  [movingAverage(period)](./transducers.movingaverage.md) | Computes the Simple Moving Average of given period. [https://en.wikipedia.org/wiki/Moving\_average\#Simple\_moving\_average](https://en.wikipedia.org/wiki/Moving_average#Simple_moving_average)<!-- -->Note: the number of results will be <code>period-1</code> less than the number of processed inputs and no outputs will be produced if there were less than <code>period</code> input values.<!-- -->Also see the  package for more optimized and alternative MAs. |
+|  [movingAverage(period)](./transducers.movingaverage.md) | Computes the Simple Moving Average of given period. [https://en.wikipedia.org/wiki/Moving\_average\#Simple\_moving\_average](https://en.wikipedia.org/wiki/Moving_average#Simple_moving_average)<!-- -->Note: the number of results will be <code>period-1</code> less than the number of processed inputs and no outputs will be produced if there were less than <code>period</code> input values.<!-- -->Also see the [@thi.ng/transducers-stats](./transducers-stats.md) package for more optimized and alternative MAs. |
 |  [movingAverage(period, src)](./transducers.movingaverage_1.md) |  |
 |  [movingMedian(n, opts)](./transducers.movingmedian.md) | Transducer. Similar to , but yields median of sliding window and supports non-numeric inputs. The optional <code>key</code> and <code>cmp</code> function args can be used to select / compute a sortable value and change sorting behavior. |
 |  [movingMedian(n, src)](./transducers.movingmedian_1.md) |  |
@@ -630,7 +630,7 @@ rstream
 |  [takeWhile(pred, src)](./transducers.takewhile_2.md) |  |
 |  [throttle(pred)](./transducers.throttle.md) | Similar to , but works with possibly stateful predicates to achieve rate limiting capabilities. Emits only values when predicate returns a truthy value.<!-- -->To support multiple instances of stateful predicates, the predicate itself must be wrapped in a no-arg function, which is called when the transducer initializes. Any stateful initialization of the predicate MUST be done in this function and the function MUST return a 1-arg function, the actual predicate applied to each value.<!-- -->Also see: . |
 |  [throttle(pred, src)](./transducers.throttle_1.md) |  |
-|  [throttleTime(delay)](./transducers.throttletime.md) | Time-based version of . Ignores any new values in the <code>delay</code> interval since the last accepted value.<!-- -->\*\*Only to be used in async contexts and NOT with  directly.\*\*<!-- -->Also see:  and  packages. |
+|  [throttleTime(delay)](./transducers.throttletime.md) | Time-based version of . Ignores any new values in the <code>delay</code> interval since the last accepted value.<!-- -->\*\*Only to be used in async contexts and NOT with  directly.\*\*<!-- -->Also see: [@thi.ng/rstream](./rstream.md) and [@thi.ng/csp](./csp.md) packages. |
 |  [throttleTime(delay, src)](./transducers.throttletime_1.md) |  |
 |  [toggle(on, off, initial)](./transducers.toggle.md) | Stateful transducer which accepts any input and flips between given <code>on</code> / <code>off</code> values for every value received. The <code>initial</code> state can be optionally provided (default: false) and must be given if used as an iterator.
 ```

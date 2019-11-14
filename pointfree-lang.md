@@ -8,7 +8,7 @@
 
 |  Variable | Description |
 |  --- | --- |
-|  [ffi](./pointfree-lang.ffi.md) | Takes an environment object and injects given custom word definitions. <code>words</code> is an object with keys representing word names and their values [StackFn](./pointfree.stackfn.md)<!-- -->s. See  package for more details about stack functions. |
+|  [ffi](./pointfree-lang.ffi.md) | Takes an environment object and injects given custom word definitions. <code>words</code> is an object with keys representing word names and their values [StackFn](./pointfree.stackfn.md)<!-- -->s. See [@thi.ng/pointfree](./pointfree.md) package for more details about stack functions. |
 |  [LOGGER](./pointfree-lang.logger.md) |  |
 |  [run](./pointfree-lang.run.md) | Main user function. Takes a string w/ DSL source code and optional env and stack. Prepares env using <code>ensureEnv</code>, parses, compiles and executes source, then returns resulting [StackContext](./pointfree.stackcontext.md) tuple. |
 |  [runE](./pointfree-lang.rune.md) | Like [run](./pointfree-lang.run.md)<!-- -->, but returns resulting env object only. |

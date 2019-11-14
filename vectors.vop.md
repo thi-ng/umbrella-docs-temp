@@ -4,7 +4,7 @@
 
 ## vop variable
 
-Specialized / optimized version of  for vector operations. Uses simplified logic to dispatch on length (vector size) of `dispatch` argument.
+Specialized / optimized version of [@thi.ng/defmulti](./defmulti.md) for vector operations. Uses simplified logic to dispatch on length (vector size) of `dispatch` argument.
 
 <b>Signature:</b>
 

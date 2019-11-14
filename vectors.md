@@ -437,7 +437,7 @@ uniq = tx.transduce(
 // 0.0106 %
 
 ```
-- [https://github.com/thi-ng/c-thing/blob/master/src/math/hashfn.c](https://github.com/thi-ng/c-thing/blob/master/src/math/hashfn.c) -  for Z-curve ordered hashing |
+- [https://github.com/thi-ng/c-thing/blob/master/src/math/hashfn.c](https://github.com/thi-ng/c-thing/blob/master/src/math/hashfn.c) - [@thi.ng/morton](./morton.md) for Z-curve ordered hashing |
 |  [heading](./vectors.heading.md) | Same as [headingXY](./vectors.headingxy.md) |
 |  [headingSegment](./vectors.headingsegment.md) | Same as [headingSegmentXY](./vectors.headingsegmentxy.md)<!-- -->. |
 |  [headingSegmentXY](./vectors.headingsegmentxy.md) | Computes direction angle (in radians) of line segment <code>a</code> -<!-- -->&gt; <code>b</code> in XY plane. |
@@ -948,7 +948,7 @@ out
 |  [vec4](./vectors.vec4.md) |  |
 |  [vec4n](./vectors.vec4n.md) |  |
 |  [vecOf](./vectors.vecof.md) | Returns new vector of <code>size</code> with all components set to <code>n</code>. |
-|  [vop](./vectors.vop.md) | Specialized / optimized version of  for vector operations. Uses simplified logic to dispatch on length (vector size) of <code>dispatch</code> argument. |
+|  [vop](./vectors.vop.md) | Specialized / optimized version of [@thi.ng/defmulti](./defmulti.md) for vector operations. Uses simplified logic to dispatch on length (vector size) of <code>dispatch</code> argument. |
 |  [W4](./vectors.w4.md) |  |
 |  [wrap](./vectors.wrap.md) |  |
 |  [wrap2](./vectors.wrap2.md) |  |

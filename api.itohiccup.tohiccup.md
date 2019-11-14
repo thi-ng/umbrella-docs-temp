@@ -4,7 +4,7 @@
 
 ## IToHiccup.toHiccup() method
 
-Returns a  compatible representation. The optional `ctx` arg is an arbitrary user context object passed to all hiccup components during serialization (or during DOM creation / update if used with )
+Returns a [@thi.ng/hiccup](./hiccup.md) compatible representation. The optional `ctx` arg is an arbitrary user context object passed to all hiccup components during serialization (or during DOM creation / update if used with [@thi.ng/hdom](./hdom.md)<!-- -->)
 
 <b>Signature:</b>
 

@@ -32,7 +32,7 @@ Input streams can be added and removed dynamically and the emitted tuple size ad
 
 If the `reset` option is enabled, the last emitted tuple is allowed to be incomplete, by default. To only allow complete tuples, also set the `all` option to `false`<!-- -->.
 
-The synchronization is done via the  transducer fro the  package. See this function's docs for further details.
+The synchronization is done via the  transducer fro the [@thi.ng/transducers](./transducers.md) package. See this function's docs for further details.
 
 [StreamSyncOpts](./rstream.streamsyncopts.md)
 

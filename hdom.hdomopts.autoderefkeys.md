@@ -4,7 +4,7 @@
 
 ## HDOMOpts.autoDerefKeys property
 
-Attempts to auto-expand/deref the given keys in the user supplied context object (`ctx` option) prior to \*each\* tree normalization. All of these values should implement the [IDeref](./api.ideref.md) interface (e.g. atoms, cursors, views, rstreams etc.). This feature can be used to define dynamic contexts linked to the main app state, e.g. using derived views provided by .
+Attempts to auto-expand/deref the given keys in the user supplied context object (`ctx` option) prior to \*each\* tree normalization. All of these values should implement the [IDeref](./api.ideref.md) interface (e.g. atoms, cursors, views, rstreams etc.). This feature can be used to define dynamic contexts linked to the main app state, e.g. using derived views provided by [@thi.ng/atom](./atom.md)<!-- -->.
 
 <b>Signature:</b>
 

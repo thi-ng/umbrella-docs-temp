@@ -8,7 +8,7 @@ Computes the Simple Moving Average of given period. [https://en.wikipedia.org/wi
 
 Note: the number of results will be `period-1` less than the number of processed inputs and no outputs will be produced if there were less than `period` input values.
 
-Also see the  package for more optimized and alternative MAs.
+Also see the [@thi.ng/transducers-stats](./transducers-stats.md) package for more optimized and alternative MAs.
 
 <b>Signature:</b>
 

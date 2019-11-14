@@ -34,7 +34,7 @@ uniq = tx.transduce(
 // 0.0106 %
 
 ```
-- [https://github.com/thi-ng/c-thing/blob/master/src/math/hashfn.c](https://github.com/thi-ng/c-thing/blob/master/src/math/hashfn.c) -  for Z-curve ordered hashing
+- [https://github.com/thi-ng/c-thing/blob/master/src/math/hashfn.c](https://github.com/thi-ng/c-thing/blob/master/src/math/hashfn.c) - [@thi.ng/morton](./morton.md) for Z-curve ordered hashing
 
 <b>Signature:</b>
 

@@ -8,11 +8,11 @@
 
 |  Function | Description |
 |  --- | --- |
-|  [memoize(fn, cache)](./memoize.memoize.md) | Function memoization for arbitrary argument counts. Returns augmented function, which uses the given <code>Map</code> implementation to obtain and store memoized result of given args. Supports generics for up to 4 args (otherwise untyped).<!-- -->\*\*Important:\*\* It only makes sense to use <code>Map</code> types which support value (rather than object) equality, e.g. those provided by . Using a native <code>Map</code> type here will lead to memory leaks! Alternatively, use . |
+|  [memoize(fn, cache)](./memoize.memoize.md) | Function memoization for arbitrary argument counts. Returns augmented function, which uses the given <code>Map</code> implementation to obtain and store memoized result of given args. Supports generics for up to 4 args (otherwise untyped).<!-- -->\*\*Important:\*\* It only makes sense to use <code>Map</code> types which support value (rather than object) equality, e.g. those provided by [@thi.ng/associative](./associative.md)<!-- -->. Using a native <code>Map</code> type here will lead to memory leaks! Alternatively, use . |
 |  [memoize(fn, cache)](./memoize.memoize_1.md) |  |
 |  [memoize(fn, cache)](./memoize.memoize_2.md) |  |
 |  [memoize(fn, cache)](./memoize.memoize_3.md) |  |
-|  [memoize1(fn, cache)](./memoize.memoize1.md) | Optimized memoization for single arg functions. If the function expects args other than strings or numbers, you MUST provide a <code>Map</code> implementation which supports value (rather than object) equality, e.g. one of those provided by . Using a native <code>Map</code> type here will lead to memory leaks! Alternatively, use . |
+|  [memoize1(fn, cache)](./memoize.memoize1.md) | Optimized memoization for single arg functions. If the function expects args other than strings or numbers, you MUST provide a <code>Map</code> implementation which supports value (rather than object) equality, e.g. one of those provided by [@thi.ng/associative](./associative.md)<!-- -->. Using a native <code>Map</code> type here will lead to memory leaks! Alternatively, use . |
 |  [memoizeJ(fn, cache)](./memoize.memoizej.md) | Function memoization for arbitrary argument counts. Returns augmented function, which uses <code>JSON.stringify()</code> to obtain (and store) memoized result for given args. Supports generics for up to 4 args (otherwise untyped).<!-- -->\*\*Important:\*\* If the given args cannot be stringified, the user function will ALWAYS be called (without caching result). |
 |  [memoizeJ(fn, cache)](./memoize.memoizej_1.md) |  |
 |  [memoizeJ(fn, cache)](./memoize.memoizej_2.md) |  |

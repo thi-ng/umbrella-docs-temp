@@ -10,7 +10,7 @@ If the optional `tx` is given, the raw value is first passed to this transformer
 
 When the stream is cancelled the view is destroyed as well.
 
-See: - [fromAtom](./rstream.fromatom.md) - 
+See: - [fromAtom](./rstream.fromatom.md) - [@thi.ng/atom](./atom.md)
 
 <b>Signature:</b>
 

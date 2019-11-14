@@ -4,7 +4,7 @@
 
 ## HDOMBehaviorAttribs.\_\_serialize property
 
-Currently only used by . No relevance for hdom. If `false`<!-- -->, the element and its children will be omitted from the serialized result.
+Currently only used by [@thi.ng/hiccup](./hiccup.md)<!-- -->. No relevance for hdom. If `false`<!-- -->, the element and its children will be omitted from the serialized result.
 
 <b>Signature:</b>
 

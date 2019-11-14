@@ -4,7 +4,7 @@
 
 ## convertTree variable
 
-Takes a normalized hiccup tree of  or  shape definitions and recursively converts it into an hiccup flavor which is compatible for SVG serialization. This conversion also involves translation &amp; reorg of various attributes. Returns new tree. The original remains untouched, as will any unrecognized tree/shape nodes.
+Takes a normalized hiccup tree of [@thi.ng/geom](./geom.md) or [@thi.ng/hdom-canvas](./hdom-canvas.md) shape definitions and recursively converts it into an hiccup flavor which is compatible for SVG serialization. This conversion also involves translation &amp; reorg of various attributes. Returns new tree. The original remains untouched, as will any unrecognized tree/shape nodes.
 
 <b>Signature:</b>
 

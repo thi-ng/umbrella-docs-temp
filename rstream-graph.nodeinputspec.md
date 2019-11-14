@@ -13,7 +13,7 @@ Specification for a single input, which can be given in different ways:
 { path: ["nested", "src", "path"] }
 
 ```
-2) Reference path to another node's output in the GraphSpec object. See  for details.
+2) Reference path to another node's output in the GraphSpec object. See [@thi.ng/resolve-map](./resolve-map.md) for details.
 
 ```
 { stream: "/node-id/node" } // main node output

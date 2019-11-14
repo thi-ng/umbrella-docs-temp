@@ -14,7 +14,7 @@ export interface JSTarget extends Fn<Term<any>, string>
 
 |  Method | Description |
 |  --- | --- |
-|  [compile(tree, env)](./shader-ast-js.jstarget.compile.md) | Compiles given AST to JavaScript, using optional <code>env</code> as backend for various operators / builtins. If <code>env</code> is not given the bundled [JS\_DEFAULT\_ENV](./shader-ast-js.js_default_env.md) is used (based on  and  packages).<!-- -->Any functions defined in the given AST will be exported using their defined name via the returned object.
+|  [compile(tree, env)](./shader-ast-js.jstarget.compile.md) | Compiles given AST to JavaScript, using optional <code>env</code> as backend for various operators / builtins. If <code>env</code> is not given the bundled [JS\_DEFAULT\_ENV](./shader-ast-js.js_default_env.md) is used (based on [@thi.ng/vectors](./vectors.md) and [@thi.ng/matrices](./matrices.md) packages).<!-- -->Any functions defined in the given AST will be exported using their defined name via the returned object.
 ```
 const js = targetJS();
 const module = js.compile(

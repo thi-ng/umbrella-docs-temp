@@ -6,7 +6,7 @@
 
 Yields stream of value changes in given atom / cursor. Attaches watch to atom and checks for value changes with given `changed` predicate (`!==` by default). If the predicate returns truthy result, the new value is emitted on the stream. If `emitFirst` is true (default), also emits atom's current value when first subscriber attaches to stream.
 
-See: - [fromView](./rstream.fromview.md) - 
+See: - [fromView](./rstream.fromview.md) - [@thi.ng/atom](./atom.md)
 
 <b>Signature:</b>
 

@@ -8,7 +8,7 @@ Time-based version of . Ignores any new values in the `delay` interval since the
 
 \*\*Only to be used in async contexts and NOT with  directly.\*\*
 
-Also see:  and  packages.
+Also see: [@thi.ng/rstream](./rstream.md) and [@thi.ng/csp](./csp.md) packages.
 
 <b>Signature:</b>
 
