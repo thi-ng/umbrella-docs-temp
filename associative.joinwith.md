@@ -4,7 +4,16 @@
 
 ## joinWith variable
 
-Similar to `join()`<!-- -->, computes the join between two sets of relations, using the given keys in `kmap` only for joining and ignoring others. `kmap` can also be used to translate join keys in `b` where needed. Else, if no renaming is desired, the values in `kmap` should be the same as their respective keys, e.g. `{id: "id"}`<!-- -->. Returns new set of same type as `a`<!-- -->.
+Similar to [join](./associative.join.md)<!-- -->, computes the join between two sets of relations, using the given keys in `kmap` only for joining and ignoring others. `kmap` can also be used to translate join keys in `b` where needed. Else, if no renaming is desired, the values in `kmap` should be the same as their respective keys, e.g. `{id: "id"}`<!-- -->. Returns new set of same type as `a`<!-- -->.
+
+<b>Signature:</b>
+
+```typescript
+joinWith: <A, B>(a: Set<A>, b: Set<B>, kmap: { [id in keyof A]?: keyof B | undefined; }) => Set<any>
+```
+
+## Example
+
 
 ```ts
 joinWith(
@@ -23,8 +32,3 @@ joinWith(
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-joinWith: <A, B>(a: Set<A>, b: Set<B>, kmap: { [id in keyof A]?: keyof B | undefined; }) => Set<any>
-```

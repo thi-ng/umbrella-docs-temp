@@ -4,7 +4,7 @@
 
 ## commonKeysMap variable
 
-Like `commonKeysObj()`<!-- -->, but for ES6 Maps.
+Like [commonKeysObj](./associative.commonkeysobj.md)<!-- -->, but for ES6 Maps.
 
 <b>Signature:</b>
 

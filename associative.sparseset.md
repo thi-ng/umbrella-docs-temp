@@ -4,7 +4,7 @@
 
 ## sparseSet variable
 
-Creates a new sparse set with given max. capacity (max ID + 1) and chooses most memory efficient implementation, e.g. if `n` &lt;<!-- -->= 256 returns a `SparseSet8` instance.
+Creates a new sparse set with given max. capacity (max ID + 1) and chooses most memory efficient implementation, e.g. if `n` &lt;<!-- -->= 256 returns a [SparseSet8](./associative.sparseset8.md) instance.
 
 <b>Signature:</b>
 

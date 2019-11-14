@@ -4,7 +4,7 @@
 
 ## init variable
 
-Creates a new WASM module instance w/ user supplied memory. The WASM module itself doesn't use any memory itself and the full address space of the given memory instance is freely available for use. The returned object exposes all SIMD functions defined by this package, as well as various views of the provided memory. See `SIMD` interface in api.ts for details.
+Creates a new WASM module instance w/ user supplied memory. The WASM module itself doesn't use any memory itself and the full address space of the given memory instance is freely available for use. The returned object exposes all SIMD functions defined by this package, as well as various views of the provided memory. See [SIMD](./simd.simd.md) interface in api.ts for details.
 
 The initialization method used here is synchronous and the WASM binary is inlined as base64 string in this package (The `binary.ts` file is generated during build time).
 

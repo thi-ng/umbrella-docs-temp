@@ -4,7 +4,7 @@
 
 ## intersectionR() function
 
-Reducer version of `intersection`<!-- -->. If `src` is given returns the reduced intersection of given inputs, else merely returns a reducer to be used with  /  functions.
+Reducer version of [intersection](./associative.intersection.md)<!-- -->. If `src` is given returns the reduced intersection of given inputs, else merely returns a reducer to be used with  /  functions.
 
 <b>Signature:</b>
 

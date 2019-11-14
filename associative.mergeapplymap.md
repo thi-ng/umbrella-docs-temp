@@ -4,7 +4,7 @@
 
 ## mergeApplyMap variable
 
-Similar to `mergeApplyObj()`<!-- -->, but for ES6 Maps instead of plain objects.
+Similar to [mergeApplyObj](./associative.mergeapplyobj.md)<!-- -->, but for ES6 Maps instead of plain objects.
 
 <b>Signature:</b>
 

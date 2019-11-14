@@ -4,9 +4,9 @@
 
 ## tokenize() function
 
-Yields iterator of `Token`<!-- -->s (incl. location info) from `src` string (or from a \*\*characterwise\*\* iterable). Scope and string delimiters and whitespace characters can be configured via given `opts`<!-- -->. By default `DEFAULT_SYNTAX` is used.
+Yields iterator of [Token](./sexpr.token.md)<!-- -->s (incl. location info) from `src` string (or from a \*\*characterwise\*\* iterable). Scope and string delimiters and whitespace characters can be configured via given `opts`<!-- -->. By default [DEFAULT\_SYNTAX](./sexpr.default_syntax.md) is used.
 
- SyntaxOpts  Token
+- [SyntaxOpts](./sexpr.syntaxopts.md) - [Token](./sexpr.token.md)
 
 <b>Signature:</b>
 

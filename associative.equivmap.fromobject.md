@@ -4,7 +4,7 @@
 
 ## EquivMap.fromObject() method
 
-Converts given vanilla object into an `EquivMap` instance with default (or optionally provided) options and returns it. By default uses strict `===` equality check for `equiv` option.
+Converts given vanilla object into an [EquivMap](./associative.equivmap.md) instance with default (or optionally provided) options and returns it. By default uses strict `===` equality check for `equiv` option.
 
 <b>Signature:</b>
 

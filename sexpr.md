@@ -4,11 +4,17 @@
 
 ## sexpr package
 
+## Classes
+
+|  Class | Description |
+|  --- | --- |
+|  [ParseError](./sexpr.parseerror.md) |  |
+
 ## Functions
 
 |  Function | Description |
 |  --- | --- |
-|  [tokenize(src, opts)](./sexpr.tokenize.md) | Yields iterator of <code>Token</code>s (incl. location info) from <code>src</code> string (or from a \*\*characterwise\*\* iterable). Scope and string delimiters and whitespace characters can be configured via given <code>opts</code>. By default <code>DEFAULT_SYNTAX</code> is used. SyntaxOpts  Token |
+|  [tokenize(src, opts)](./sexpr.tokenize.md) | Yields iterator of [Token](./sexpr.token.md)<!-- -->s (incl. location info) from <code>src</code> string (or from a \*\*characterwise\*\* iterable). Scope and string delimiters and whitespace characters can be configured via given <code>opts</code>. By default [DEFAULT\_SYNTAX](./sexpr.default_syntax.md) is used.<!-- -->- [SyntaxOpts](./sexpr.syntaxopts.md) - [Token](./sexpr.token.md) |
 
 ## Interfaces
 
@@ -29,7 +35,7 @@
 |  Variable | Description |
 |  --- | --- |
 |  [DEFAULT\_SYNTAX](./sexpr.default_syntax.md) |  |
-|  [parse](./sexpr.parse.md) | Takes a <code>src</code> string or <code>Token</code> iteratable and parses it into an AST, then returns tree's root node. Throws <code>ParserError</code> if the token order causes illegal nesting. The error includes <code>line</code> and <code>column</code> information of the offending token. |
+|  [parse](./sexpr.parse.md) | Takes a <code>src</code> string or [Token](./sexpr.token.md) iteratable and parses it into an AST, then returns tree's root node. Throws [ParseError](./sexpr.parseerror.md) if the token order causes illegal nesting. The error includes <code>line</code> and <code>column</code> information of the offending token. |
 |  [runtime](./sexpr.runtime.md) |  |
 
 ## Type Aliases

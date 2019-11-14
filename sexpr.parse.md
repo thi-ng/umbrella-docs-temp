@@ -4,7 +4,7 @@
 
 ## parse variable
 
-Takes a `src` string or `Token` iteratable and parses it into an AST, then returns tree's root node. Throws `ParserError` if the token order causes illegal nesting. The error includes `line` and `column` information of the offending token.
+Takes a `src` string or [Token](./sexpr.token.md) iteratable and parses it into an AST, then returns tree's root node. Throws [ParseError](./sexpr.parseerror.md) if the token order causes illegal nesting. The error includes `line` and `column` information of the offending token.
 
 <b>Signature:</b>
 

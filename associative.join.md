@@ -6,6 +6,15 @@
 
 Computes the natural join between the two sets of relations. Each set is assumed to have plain objects as values with at least one of the keys present in both sides. Furthermore the objects in each set are assumed to have the same internal structure (i.e. sets of keys). Returns new set of same type as `a`<!-- -->.
 
+<b>Signature:</b>
+
+```typescript
+join: <A, B>(a: Set<A>, b: Set<B>) => Set<Pick<A, keyof A> & Pick<B, keyof B>>
+```
+
+## Example
+
+
 ```ts
 join(
   new Set([
@@ -23,8 +32,3 @@ join(
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-join: <A, B>(a: Set<A>, b: Set<B>) => Set<Pick<A, keyof A> & Pick<B, keyof B>>
-```

@@ -4,7 +4,7 @@
 
 ## SortedMap.(constructor)
 
-Creates new `SortedMap` instance with optionally given pairs and/or options.
+Creates new [SortedMap](./associative.sortedmap.md) instance with optionally given pairs and/or options.
 
 <b>Signature:</b>
 

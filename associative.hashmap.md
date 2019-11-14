@@ -6,7 +6,16 @@
 
 Configurable hash map implementation w/ ES6 Map API. Uses open addressing / linear probing to resolve key collisions. Supports any key types via mandatory user supplied hash function.
 
-See `HashMapOpts` for further configuration &amp; behavior details.
+See [HashMapOpts](./associative.hashmapopts.md) for further configuration &amp; behavior details.
+
+<b>Signature:</b>
+
+```typescript
+export declare class HashMap<K, V> extends Map<K, V> implements Iterable<Pair<K, V>>, ICopy<HashMap<K, V>>, IEmpty<HashMap<K, V>>, IEquiv 
+```
+
+## Example
+
 
 ```ts
 import { HashMap } from "@thi.ng/associative"
@@ -18,12 +27,6 @@ m.set([3, 4], "b");
 m.set([1, 2], "c");
 // HashMap { [ 1, 2 ] => 'c', [ 3, 4 ] => 'b' }
 
-```
-
-<b>Signature:</b>
-
-```typescript
-export declare class HashMap<K, V> extends Map<K, V> implements Iterable<Pair<K, V>>, ICopy<HashMap<K, V>>, IEmpty<HashMap<K, V>>, IEquiv 
 ```
 
 ## Constructors

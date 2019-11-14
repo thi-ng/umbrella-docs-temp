@@ -4,13 +4,25 @@
 
 ## mergeApplyObj variable
 
-Similar to `mergeObjWith()`<!-- -->, but only supports 2 args and any function values in `xs` will be called with respective value in `src` to produce a new / derived value for that key, i.e.
+Similar to [mergeObjWith](./associative.mergeobjwith.md)<!-- -->, but only supports 2 args and any function values in `xs` will be called with respective value in `src` to produce a new / derived value for that key, i.e.
+
+<b>Signature:</b>
+
+```typescript
+mergeApplyObj: <V>(src: IObjectOf<V>, xs: IObjectOf<V | Fn<V, V>>) => IObjectOf<V>
+```
+
+## Example 1
+
 
 ```ts
 dest[k] = xs[k](src[k])
 
 ```
 Returns new merged object and does not modify any of the inputs.
+
+## Example 2
+
 
 ```ts
 mergeApplyObj(
@@ -21,8 +33,3 @@ mergeApplyObj(
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-mergeApplyObj: <V>(src: IObjectOf<V>, xs: IObjectOf<V | Fn<V, V>>) => IObjectOf<V>
-```

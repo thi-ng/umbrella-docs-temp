@@ -37,7 +37,7 @@ export declare class EquivMap<K, V> extends Map<K, V> implements Iterable<Pair<K
 |  [entries()](./associative.equivmap.entries.md) |  |  |
 |  [equiv(o)](./associative.equivmap.equiv.md) |  |  |
 |  [forEach(fn, thisArg)](./associative.equivmap.foreach.md) |  |  |
-|  [fromObject(obj, opts)](./associative.equivmap.fromobject.md) | <code>static</code> | Converts given vanilla object into an <code>EquivMap</code> instance with default (or optionally provided) options and returns it. By default uses strict <code>===</code> equality check for <code>equiv</code> option. |
+|  [fromObject(obj, opts)](./associative.equivmap.fromobject.md) | <code>static</code> | Converts given vanilla object into an [EquivMap](./associative.equivmap.md) instance with default (or optionally provided) options and returns it. By default uses strict <code>===</code> equality check for <code>equiv</code> option. |
 |  [get(key, notFound)](./associative.equivmap.get.md) |  |  |
 |  [has(key)](./associative.equivmap.has.md) |  |  |
 |  [into(pairs)](./associative.equivmap.into.md) |  |  |

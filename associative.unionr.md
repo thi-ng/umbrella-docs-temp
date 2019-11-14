@@ -4,7 +4,7 @@
 
 ## unionR() function
 
-Reducer version of `union`<!-- -->. If `src` is given returns the reduced union of given inputs, else merely returns a reducer to be used with  /  functions.
+Reducer version of [union](./associative.union.md)<!-- -->. If `src` is given returns the reduced union of given inputs, else merely returns a reducer to be used with  /  functions.
 
 <b>Signature:</b>
 

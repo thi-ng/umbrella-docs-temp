@@ -6,7 +6,7 @@
 
 An alternative set implementation to the native ES6 Set type. Uses customizable equality/equivalence predicate and so is more useful when dealing with structured data. Implements full API of native Set and by the default uses [equiv](./equiv.equiv.md) for equivalence checking.
 
-Additionally, the type also implements the `ICopy`<!-- -->, `IEmpty` and `IEquiv` interfaces itself.
+Additionally, the type also implements the [ICopy](./api.icopy.md)<!-- -->, [IEmpty](./api.iempty.md) and [IEquiv](./api.iequiv.md) interfaces itself.
 
 <b>Signature:</b>
 

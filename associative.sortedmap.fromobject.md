@@ -4,7 +4,7 @@
 
 ## SortedMap.fromObject() method
 
-Creates new `SortedMap` instance from given object's key-value pairs.
+Creates new [SortedMap](./associative.sortedmap.md) instance from given object's key-value pairs.
 
 <b>Signature:</b>
 

@@ -6,14 +6,18 @@
 
 Returns a new object in which the original values are used as keys and original keys as values. If `dest` is given, writes results in that object instead.
 
+<b>Signature:</b>
+
+```typescript
+invertObj: (src: IObjectOf<string | number | symbol>, dest?: IObjectOf<string | number | symbol>) => IObjectOf<string | number | symbol>
+```
+
+## Example
+
+
 ```ts
 invertObj({a: 1, b: 2})
 // { '1': 'a', '2': 'b' }
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-invertObj: (src: IObjectOf<string | number | symbol>, dest?: IObjectOf<string | number | symbol>) => IObjectOf<string | number | symbol>
-```

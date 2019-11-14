@@ -4,11 +4,17 @@
 
 ## simd package
 
+## Interfaces
+
+|  Interface | Description |
+|  --- | --- |
+|  [SIMD](./simd.simd.md) |  |
+
 ## Variables
 
 |  Variable | Description |
 |  --- | --- |
-|  [init](./simd.init.md) | Creates a new WASM module instance w/ user supplied memory. The WASM module itself doesn't use any memory itself and the full address space of the given memory instance is freely available for use. The returned object exposes all SIMD functions defined by this package, as well as various views of the provided memory. See <code>SIMD</code> interface in api.ts for details.<!-- -->The initialization method used here is synchronous and the WASM binary is inlined as base64 string in this package (The <code>binary.ts</code> file is generated during build time).
+|  [init](./simd.init.md) | Creates a new WASM module instance w/ user supplied memory. The WASM module itself doesn't use any memory itself and the full address space of the given memory instance is freely available for use. The returned object exposes all SIMD functions defined by this package, as well as various views of the provided memory. See [SIMD](./simd.simd.md) interface in api.ts for details.<!-- -->The initialization method used here is synchronous and the WASM binary is inlined as base64 string in this package (The <code>binary.ts</code> file is generated during build time).
 ```
 // create instance w/ 1MB memory (16 * 64KB)
 simd = init(new WebAssembly.Memory({ initial: 16 }));

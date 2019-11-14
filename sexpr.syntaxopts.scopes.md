@@ -6,7 +6,7 @@
 
 An array of string pairs defining possible S-expression / scope delimiters \[open, close\]. By default only the classic \["(",")"\] pair is defined. Only single character delimiters are supported.
 
- DEFAULT\_SYNTAX
+[DEFAULT\_SYNTAX](./sexpr.default_syntax.md)
 
 <b>Signature:</b>
 

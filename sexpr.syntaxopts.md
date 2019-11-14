@@ -14,7 +14,7 @@ export interface SyntaxOpts
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [scopes](./sexpr.syntaxopts.scopes.md) | <code>string[][]</code> | An array of string pairs defining possible S-expression / scope delimiters \[open, close\]. By default only the classic \["(",")"\] pair is defined. Only single character delimiters are supported. DEFAULT\_SYNTAX |
+|  [scopes](./sexpr.syntaxopts.scopes.md) | <code>string[][]</code> | An array of string pairs defining possible S-expression / scope delimiters \[open, close\]. By default only the classic \["(",")"\] pair is defined. Only single character delimiters are supported.[DEFAULT\_SYNTAX](./sexpr.default_syntax.md) |
 |  [string](./sexpr.syntaxopts.string.md) | <code>string</code> | Single character string to delineate string values. Default: <code>&quot;</code> |
 |  [whiteSpace](./sexpr.syntaxopts.whitespace.md) | <code>RegExp</code> | Regex to identify whitespace a single whitespace character. Default: space, tab, newline, comma |
 

@@ -6,14 +6,18 @@
 
 Returns array of keys present in both args, i.e. the set intersection of the given objects' key / property sets.
 
+<b>Signature:</b>
+
+```typescript
+commonKeysObj: <A extends any, B extends any>(a: A, b: B, out?: string[]) => (keyof A & keyof B)[]
+```
+
+## Example
+
+
 ```ts
 commonKeys({ a: 1, b: 2 }, { c: 10, b: 20, a: 30 })
 // [ "a", "b" ]
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-commonKeysObj: <A extends any, B extends any>(a: A, b: B, out?: string[]) => (keyof A & keyof B)[]
-```

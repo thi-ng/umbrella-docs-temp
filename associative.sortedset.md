@@ -6,9 +6,9 @@
 
 Sorted set implementation with standard ES6 Set API, customizable value equality and comparison semantics and additional functionality:
 
-- range queries (via `entries`<!-- -->, `keys`<!-- -->, `values`<!-- -->) - multiple value addition/deletion via `into()` and `disj()`
+- range queries (via [SortedSet.entries()](./associative.sortedset.entries.md)<!-- -->, [SortedSet.keys()](./associative.sortedset.keys.md)<!-- -->, [SortedSet.values()](./associative.sortedset.values.md)<!-- -->) - multiple value addition/deletion via [SortedSet.into()](./associative.sortedset.into.md) and [SortedSet.disj()](./associative.sortedset.disj.md)
 
-Furthermore, this class implements the `ICopy`<!-- -->, IEmpty`, `<!-- -->ICompare` and `<!-- -->IEquiv<!-- -->\` interfaces defined by . The latter two allow instances to be used as keys themselves in other data types defined in this (and other) package(s).
+Furthermore, this class implements the [ICopy](./api.icopy.md)<!-- -->, IEmpty<!-- -->\`<!-- -->, [ICompare](./api.icompare.md) and [IEquiv](./api.iequiv.md) interfaces defined by . The latter two allow instances to be used as keys themselves in other data types defined in this (and other) package(s).
 
 This set uses a [SortedMap](./associative.sortedmap.md) as backing store and therefore has the same resizing characteristics.
 

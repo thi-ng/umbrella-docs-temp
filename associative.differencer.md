@@ -4,7 +4,7 @@
 
 ## differenceR() function
 
-Reducer version of `difference`<!-- -->. If `src` is given returns the reduced difference of given inputs, else merely returns a reducer to be used with  /  functions.
+Reducer version of [difference](./associative.difference.md)<!-- -->. If `src` is given returns the reduced difference of given inputs, else merely returns a reducer to be used with  /  functions.
 
 <b>Signature:</b>
 

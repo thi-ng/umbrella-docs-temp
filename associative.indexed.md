@@ -4,7 +4,16 @@
 
 ## indexed variable
 
-Takes an iterable of plain objects and array of indexing keys. Calls `selectKeysObj` on each value and uses returned objects as new keys to group original values. Returns a new `EquivMap` of sets.
+Takes an iterable of plain objects and array of indexing keys. Calls [selectKeysObj](./associative.selectkeysobj.md) on each value and uses returned objects as new keys to group original values. Returns a new [EquivMap](./associative.equivmap.md) of sets.
+
+<b>Signature:</b>
+
+```typescript
+indexed: <T>(records: Iterable<T>, ks: (keyof T)[]) => EquivMap<{ [id in keyof T]?: T[id] | undefined; }, Set<T>>
+```
+
+## Example
+
 
 ```ts
 indexed(
@@ -17,8 +26,3 @@ indexed(
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-indexed: <T>(records: Iterable<T>, ks: (keyof T)[]) => EquivMap<{ [id in keyof T]?: T[id] | undefined; }, Set<T>>
-```

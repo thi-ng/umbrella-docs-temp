@@ -4,9 +4,9 @@
 
 ## LLSet class
 
-Similar to `ArraySet`<!-- -->, this class is an alternative implementation of the native ES6 Set API using a [DCons](./dcons.dcons.md) linked list as backing store and a customizable value equality / equivalence predicate. By the default uses [equiv](./equiv.equiv.md) for equivalence checking.
+Similar to [ArraySet](./associative.arrayset.md)<!-- -->, this class is an alternative implementation of the native ES6 Set API using a [DCons](./dcons.dcons.md) linked list as backing store and a customizable value equality / equivalence predicate. By the default uses [equiv](./equiv.equiv.md) for equivalence checking.
 
-Additionally, the type also implements the `ICopy`<!-- -->, `IEmpty` and `IEquiv` interfaces itself.
+Additionally, the type also implements the [ICopy](./api.icopy.md)<!-- -->, [IEmpty](./api.iempty.md) and [IEquiv](./api.iequiv.md) interfaces itself.
 
 <b>Signature:</b>
 
