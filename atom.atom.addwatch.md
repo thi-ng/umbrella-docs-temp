@@ -7,15 +7,15 @@
 <b>Signature:</b>
 
 ```typescript
-addWatch(_: string, __: Watch<T>): boolean;
+addWatch(id: string, fn: Watch<T>): boolean;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  \_ | <code>string</code> |  |
-|  \_\_ | <code>Watch&lt;T&gt;</code> |  |
+|  id | <code>string</code> |  |
+|  fn | <code>Watch&lt;T&gt;</code> |  |
 
 <b>Returns:</b>
 

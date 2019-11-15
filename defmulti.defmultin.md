@@ -4,9 +4,7 @@
 
 ## defmultiN variable
 
-Returns a multi-dispatch function which delegates to one of the provided implementations, based on the arity (number of args) when the function is called. Internally uses , so new arities can be dynamically added (or removed) at a later time. If no `fallback` is provided, `defmultiN` also registers a [DEFAULT](./defmulti.default.md) implementation which simply throws an [IllegalArityError](./errors.illegalarityerror.md) when invoked.
-
-\*\*Note:\*\* Unlike  no argument type checking is supported, however you can specify the return type for the generated function.
+Returns a multi-dispatch function which delegates to one of the provided implementations, based on the arity (number of args) when the function is called.
 
 <b>Signature:</b>
 
@@ -15,6 +13,12 @@ defmultiN: <T>(impls: {
     [id: number]: import("@thi.ng/api").FnAny<T>;
 }, fallback?: import("@thi.ng/api").FnAny<T> | undefined) => import("./api").MultiFn<T>
 ```
+
+## Remarks
+
+Internally uses , so new arities can be dynamically added (or removed) at a later time. If no `fallback` is provided, `defmultiN` also registers a [DEFAULT](./defmulti.default.md) implementation which simply throws an [IllegalArityError](./errors.illegalarityerror.md) when invoked.
+
+\*\*Note:\*\* Unlike  no argument type checking is supported, however you can specify the return type for the generated function.
 
 ## Example
 

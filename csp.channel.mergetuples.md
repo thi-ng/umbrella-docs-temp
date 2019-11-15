@@ -4,29 +4,7 @@
 
 ## Channel.mergeTuples() method
 
-Takes an array of channels to merge into new channel of tuples. Whereas `Channel.merge()` realizes a sequential merging with no guarantees about ordering of the output, the output channel of this function will collect values from all channels and a new tuple is emitted only once a new value has been read from ALL channels. Therefore the overall throughput is dictated by the slowest of the inputs.
-
-Once any of the inputs closes, the process is terminated and the output channel is closed too (by default).
-
-```
-Channel.mergeTuples([
-  Channel.from([1, 2, 3]),
-  Channel.from([10, 20, 30]),
-  Channel.from([100, 200, 300])
-]).consume();
-
-// chan-0 : [ 1, 10, 100 ]
-// chan-0 : [ 2, 20, 200 ]
-// chan-0 : [ 3, 30, 300 ]
-// chan-0 done
-
-Channel.mergeTuples([
-  Channel.from([1, 2, 3]),
-  Channel.from([10, 20, 30]),
-  Channel.from([100, 200, 300])
-], null, false).consume();
-
-```
+Takes an array of channels to merge into new channel of tuples. Whereas `Channel.merge()` realizes a sequential merging with no guarantees about ordering of the output.
 
 <b>Signature:</b>
 
@@ -46,4 +24,33 @@ static mergeTuples(chans: Channel<any>[], out?: Channel<any>, closeOnFirst?: boo
 <b>Returns:</b>
 
 `Channel<any>`
+
+## Remarks
+
+The output channel of this function will collect values from all channels and a new tuple is emitted only once a new value has been read from ALL channels. Therefore the overall throughput is dictated by the slowest of the inputs.
+
+Once any of the inputs closes, the process is terminated and the output channel is closed too (by default).
+
+## Example
+
+
+```ts
+Channel.mergeTuples([
+  Channel.from([1, 2, 3]),
+  Channel.from([10, 20, 30]),
+  Channel.from([100, 200, 300])
+]).consume();
+
+// chan-0 : [ 1, 10, 100 ]
+// chan-0 : [ 2, 20, 200 ]
+// chan-0 : [ 3, 30, 300 ]
+// chan-0 done
+
+Channel.mergeTuples([
+  Channel.from([1, 2, 3]),
+  Channel.from([10, 20, 30]),
+  Channel.from([100, 200, 300])
+], null, false).consume();
+
+```
 

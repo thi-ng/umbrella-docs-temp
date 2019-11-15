@@ -4,13 +4,19 @@
 
 ## TLRUCache class
 
-Time-aware LRU cache. Extends LRU strategy with TTL (time-to-live) values associated to each entry. [ICache.has()](./cache.icache.has.md) will only return true and [ICache.get()](./cache.icache.get.md) only returns a cached value if its TTL hasn't yet expired. When adding a new value to the cache, first removes expired entries and if still not sufficient space then removes entries in LRU order. [ICache.set()](./cache.icache.set.md) takes an optional entry specific `ttl` arg. If not given, uses the cache instance's default (provided via ctor option arg). If no instance TTL is given, TTL defaults to 1 hour.
+Time-aware LRU cache. Extends LRU strategy with TTL (time-to-live) values associated to each entry.
 
 <b>Signature:</b>
 
 ```typescript
 export declare class TLRUCache<K, V> extends LRUCache<K, V> 
 ```
+
+## Remarks
+
+[ICache.has()](./cache.icache.has.md) will only return true and [ICache.get()](./cache.icache.get.md) only returns a cached value if its TTL hasn't yet expired. When adding a new value to the cache, first removes expired entries and if still not sufficient space then removes entries in LRU order.
+
+[ICache.set()](./cache.icache.set.md) takes an optional entry specific `ttl` arg. If not given, uses the cache instance's default (provided via ctor option arg). If no instance TTL is given, TTL defaults to 1 hour.
 
 ## Constructors
 

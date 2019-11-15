@@ -27,13 +27,13 @@ export declare class BasicRouter implements INotify
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
-|  [addListener(\_, \_\_, \_\_\_)](./router.basicrouter.addlistener.md) |  |  |
+|  [addListener(id, fn, scope)](./router.basicrouter.addlistener.md) |  |  |
 |  [format(id, params, hash)](./router.basicrouter.format.md) |  | Returns a formatted version of given [RouteMatch](./router.routematch.md)<!-- -->, incl. any params. Throw an error if an invalid route <code>id</code> is provided. |
 |  [format(match, hash)](./router.basicrouter.format_1.md) |  |  |
 |  [handleRouteFailure()](./router.basicrouter.handleroutefailure.md) |  |  |
 |  [matchRoute(curr, route)](./router.basicrouter.matchroute.md) |  |  |
-|  [notify(\_)](./router.basicrouter.notify.md) |  |  |
-|  [removeListener(\_, \_\_, \_\_\_)](./router.basicrouter.removelistener.md) |  |  |
+|  [notify(event)](./router.basicrouter.notify.md) |  |  |
+|  [removeListener(id, fn, scope)](./router.basicrouter.removelistener.md) |  |  |
 |  [route(src)](./router.basicrouter.route.md) |  | Main router function. Attempts to match given input string against all configured routes. If none matches, falls back to default route. Before returning, triggers event with return value as well. |
 |  [routeForID(id)](./router.basicrouter.routeforid.md) |  |  |
 |  [start()](./router.basicrouter.start.md) |  |  |

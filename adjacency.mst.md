@@ -4,7 +4,17 @@
 
 ## mst variable
 
-Computes the Minimum Spanning Tree from given weighted `edges`<!-- -->, using Kruskal's algorithm. Edges can be of any type, but requires unsigned integer vertex IDs. The latter can be extracted via the user supplied `verts` function. The edge weights are extracted via the `cost` function.
+Computes the Minimum Spanning Tree from given weighted `edges`<!-- -->, using Kruskal's algorithm.
+
+<b>Signature:</b>
+
+```typescript
+mst: <T>(edges: T[], maxID: number, cost: Fn<T, number>, verts: Fn<T, [number, number]>) => T[]
+```
+
+## Remarks
+
+Edges can be of any type, but requires unsigned integer vertex IDs. The latter can be extracted via the user supplied `verts` function. The edge weights are extracted via the `cost` function.
 
 The `maxID` arg should equal or greater than the largest vertex ID referenced by the given edges.
 
@@ -12,7 +22,10 @@ The function returns a new array of the original edges, satisfying the MST crite
 
 [https://en.wikipedia.org/wiki/Kruskal%27s\_algorithm](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm)
 
-```
+## Example
+
+
+```ts
 // 2D vectors
 verts = [[0,0], [0,1], [1,1], [1,2], [4,2]]
 
@@ -33,8 +46,3 @@ mst(
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-mst: <T>(edges: T[], maxID: number, cost: Fn<T, number>, verts: Fn<T, [number, number]>) => T[]
-```

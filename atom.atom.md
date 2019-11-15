@@ -32,12 +32,12 @@ export declare class Atom<T> implements IAtom<T>, IEquiv
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
 |  [addView(path, tx, lazy)](./atom.atom.addview.md) |  |  |
-|  [addWatch(\_, \_\_)](./atom.atom.addwatch.md) |  |  |
+|  [addWatch(id, fn)](./atom.atom.addwatch.md) |  |  |
 |  [deref()](./atom.atom.deref.md) |  |  |
 |  [equiv(o)](./atom.atom.equiv.md) |  |  |
-|  [notifyWatches(\_, \_\_)](./atom.atom.notifywatches.md) |  |  |
+|  [notifyWatches(old, prev)](./atom.atom.notifywatches.md) |  |  |
 |  [release()](./atom.atom.release.md) |  |  |
-|  [removeWatch(\_)](./atom.atom.removewatch.md) |  |  |
+|  [removeWatch(id)](./atom.atom.removewatch.md) |  |  |
 |  [reset(val)](./atom.atom.reset.md) |  |  |
 |  [resetIn(path, val)](./atom.atom.resetin.md) |  |  |
 |  [swap(fn, args)](./atom.atom.swap.md) |  |  |

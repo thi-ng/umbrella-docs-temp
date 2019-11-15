@@ -4,7 +4,7 @@
 
 ## View.deref() method
 
-Returns view's value. If the view has a transformer, the transformed value is returned. The transformer is only run once per value change. See class comments about difference between lazy/eager behaviors.
+Returns view's value. If the view has a transformer, the transformed value is returned. The transformer is only run once per value change.
 
 <b>Signature:</b>
 
@@ -14,4 +14,8 @@ deref(): T | undefined;
 <b>Returns:</b>
 
 `T | undefined`
+
+## Remarks
+
+See class comments about difference between lazy/eager behaviors.
 

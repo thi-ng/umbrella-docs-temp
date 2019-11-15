@@ -4,6 +4,7 @@
 
 ## MemMappedComponent.notify() method
 
+
 <b>Signature:</b>
 
 ```typescript

@@ -4,14 +4,17 @@
 
 ## diffArray variable
 
-Based on "An O(NP) Sequence Comparison Algorithm"" by Wu, Manber, Myers and Miller
-
-- [http://www.itu.dk/stud/speciale/bepjea/xwebtex/litt/an-onp-sequence-comparison-algorithm.pdf](http://www.itu.dk/stud/speciale/bepjea/xwebtex/litt/an-onp-sequence-comparison-algorithm.pdf) - [https://github.com/cubicdaiya/onp](https://github.com/cubicdaiya/onp)
-
-Various optimizations, fixes &amp; refactorings. By default uses [equiv](./equiv.equiv.md) for equality checks.
+Based on "An O(NP) Sequence Comparison Algorithm"" by Wu, Manber, Myers and Miller.
 
 <b>Signature:</b>
 
 ```typescript
 diffArray: <T>(a: ArrayLike<T> | null | undefined, b: ArrayLike<T> | null | undefined, mode?: DiffMode, equiv?: (a: any, b: any) => boolean) => ArrayDiff<T>
 ```
+
+## Remarks
+
+Various optimizations, fixes &amp; refactorings. By default uses [equiv](./equiv.equiv.md) for equality checks.
+
+- [http://www.itu.dk/stud/speciale/bepjea/xwebtex/litt/an-onp-sequence-comparison-algorithm.pdf](http://www.itu.dk/stud/speciale/bepjea/xwebtex/litt/an-onp-sequence-comparison-algorithm.pdf) - [https://github.com/cubicdaiya/onp](https://github.com/cubicdaiya/onp)
+

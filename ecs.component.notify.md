@@ -4,6 +4,7 @@
 
 ## Component.notify() method
 
+
 <b>Signature:</b>
 
 ```typescript

@@ -4,17 +4,18 @@
 
 ## History.notify() method
 
+
 <b>Signature:</b>
 
 ```typescript
-notify(_: Event): void;
+notify(e: Event): void;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  \_ | <code>Event</code> |  |
+|  e | <code>Event</code> |  |
 
 <b>Returns:</b>
 

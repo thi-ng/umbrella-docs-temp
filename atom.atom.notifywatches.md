@@ -7,15 +7,15 @@
 <b>Signature:</b>
 
 ```typescript
-notifyWatches(_: T, __: T): void;
+notifyWatches(old: T, prev: T): void;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  \_ | <code>T</code> |  |
-|  \_\_ | <code>T</code> |  |
+|  old | <code>T</code> |  |
+|  prev | <code>T</code> |  |
 
 <b>Returns:</b>
 

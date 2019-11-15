@@ -4,10 +4,11 @@
 
 ## MemMappedComponent.addListener() method
 
+
 <b>Signature:</b>
 
 ```typescript
-addListener(id: string, fn: Fn<Event, void>, scope?: any): boolean;
+addListener(id: string, fn: Listener, scope?: any): boolean;
 ```
 
 ## Parameters
@@ -15,7 +16,7 @@ addListener(id: string, fn: Fn<Event, void>, scope?: any): boolean;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  id | <code>string</code> |  |
-|  fn | <code>Fn&lt;Event, void&gt;</code> |  |
+|  fn | <code>Listener</code> |  |
 |  scope | <code>any</code> |  |
 
 <b>Returns:</b>

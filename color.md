@@ -78,7 +78,7 @@
 |  [clampH](./color.clamph.md) | Similar to [clamp](./color.clamp.md)<!-- -->, but calls <code>ensureHue</code> to fold (instead of clamping) the hue into \[0,1\] interval. |
 |  [closestHue](./color.closesthue.md) | Returns the [Hue](./color.hue.md) constant of the closest of 12 defined hues. |
 |  [closestPrimaryHue](./color.closestprimaryhue.md) | Returns the [Hue](./color.hue.md) constant of the closest primary or secondary hue. |
-|  [concat](./color.concat.md) | Concatenates given color matrices by pairwise multiplying them in left-right order. Returns combined result matrix to be used with [transform](./color.transform.md)<!-- -->.<!-- -->Note: Using [concat](./color.concat.md) is the recommended way when applying multiple color transformations in sequence. Since the transforms are combined into a single matrix, it is faster than multiple, individual [transform](./color.transform.md) calls and will also produce more correct results, since result color clamping is only applied once at the end (by default, unless disabled). |
+|  [concat](./color.concat.md) | Concatenates given color matrices by pairwise multiplying them in left-right order. Returns combined result matrix to be used with [transform](./color.transform.md)<!-- -->. |
 |  [contrast](./color.contrast.md) |  |
 |  [convert](./color.convert.md) |  |
 |  [cosineCoeffs](./color.cosinecoeffs.md) | Returns coefficients to produce a cosine gradient between the two given RGBA colors. |

@@ -4,19 +4,20 @@
 
 ## History.removeListener() method
 
+
 <b>Signature:</b>
 
 ```typescript
-removeListener(_: string, __: Listener, ___?: any): boolean;
+removeListener(id: string, fn: Listener, scope?: any): boolean;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  \_ | <code>string</code> |  |
-|  \_\_ | <code>Listener</code> |  |
-|  \_\_\_ | <code>any</code> |  |
+|  id | <code>string</code> |  |
+|  fn | <code>Listener</code> |  |
+|  scope | <code>any</code> |  |
 
 <b>Returns:</b>
 

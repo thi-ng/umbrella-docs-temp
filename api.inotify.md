@@ -4,7 +4,7 @@
 
 ## INotify interface
 
-Interface to provide event emitter functionality. Also see `@INotify` decorator mixin
+Interface to provide event emitter functionality. Also see [INotifyMixin](./api.inotifymixin.md) decorator mixin.
 
 <b>Signature:</b>
 

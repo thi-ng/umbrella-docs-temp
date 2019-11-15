@@ -7,14 +7,14 @@
 <b>Signature:</b>
 
 ```typescript
-removeWatch(_: string): boolean;
+removeWatch(id: string): boolean;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  \_ | <code>string</code> |  |
+|  id | <code>string</code> |  |
 
 <b>Returns:</b>
 

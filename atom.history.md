@@ -4,13 +4,17 @@
 
 ## History class
 
-Undo/redo history stack wrapper for atoms and cursors. Implements [IAtom](./atom.iatom.md) interface and so can be used directly in place and delegates to wrapped atom/cursor. Value changes are only recorded in history if `changed` predicate returns truthy value, or else by calling [History.record()](./atom.history.record.md) directly. This class too implements the [INotify](./api.inotify.md) interface to support event listeners for [History.undo()](./atom.history.undo.md)<!-- -->, [History.redo()](./atom.history.redo.md) and [History.record()](./atom.history.record.md)<!-- -->.
+Undo/redo history stack wrapper for atoms and cursors. Implements [IAtom](./atom.iatom.md) interface and so can be used directly in place and delegates to wrapped atom/cursor.
 
 <b>Signature:</b>
 
 ```typescript
 export declare class History<T> implements IHistory<T> 
 ```
+
+## Remarks
+
+Value changes are only recorded in history if `changed` predicate returns truthy value, or else by calling [History.record()](./atom.history.record.md) directly. This class too implements the [INotify](./api.inotify.md) interface to support event listeners for [History.undo()](./atom.history.undo.md)<!-- -->, [History.redo()](./atom.history.redo.md) and [History.record()](./atom.history.record.md)<!-- -->.
 
 ## Constructors
 
@@ -36,23 +40,23 @@ export declare class History<T> implements IHistory<T>
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
-|  [addListener(\_, \_\_, \_\_\_)](./atom.history.addlistener.md) |  |  |
+|  [addListener(id, fn, scope)](./atom.history.addlistener.md) |  |  |
 |  [addView(path, tx, lazy)](./atom.history.addview.md) |  |  |
 |  [addWatch(id, fn)](./atom.history.addwatch.md) |  | <code>IWatch.addWatch()</code> implementation. Delegates to wrapped atom/cursor. |
 |  [canRedo()](./atom.history.canredo.md) |  |  |
 |  [canUndo()](./atom.history.canundo.md) |  |  |
 |  [clear()](./atom.history.clear.md) |  | Clears history &amp; future stacks |
 |  [deref()](./atom.history.deref.md) |  | Returns wrapped atom's \*\*current\*\* value. |
-|  [notify(\_)](./atom.history.notify.md) |  |  |
+|  [notify(e)](./atom.history.notify.md) |  |  |
 |  [notifyWatches(oldState, newState)](./atom.history.notifywatches.md) |  | <code>IWatch.notifyWatches()</code> implementation. Delegates to wrapped atom/cursor. |
-|  [record(state)](./atom.history.record.md) |  | Records given state in history. This method is only needed when manually managing snapshots, i.e. when applying multiple swaps on the wrapped atom directly, but not wanting to create an history entry for each change. \*\*DO NOT call this explicitly if using [History.reset()](./atom.history.reset.md) / [History.swap()](./atom.history.swap.md) etc.\*\*<!-- -->If no <code>state</code> is given, uses the wrapped atom's current state value (user code SHOULD always call without arg).<!-- -->If recording succeeded, the <code>History.EVENT_RECORD</code> event is emitted with the recorded state provided as event value. |
-|  [redo()](./atom.history.redo.md) |  | Attempts to re-apply most recent value from future stack to atom and returns it if successful (i.e. there's a future). Before the switch, first records the atom's current value into the history stack (to enable [History.undo()](./atom.history.undo.md) feature). Returns <code>undefined</code> if there's no future (so sad!).<!-- -->If redo was possible, the <code>History.EVENT_REDO</code> event is emitted after the restoration with both the <code>prev</code> and <code>curr</code> (restored) states provided as event value (and object with these two keys). This allows for additional state handling to be executed, e.g. application of the "Command pattern". See [History.addListener()](./atom.history.addlistener.md) for registering event listeners. |
+|  [record(state)](./atom.history.record.md) |  | Records given state in history. This method is only needed when manually managing snapshots, i.e. when applying multiple swaps on the wrapped atom directly, but not wanting to create an history entry for each change. |
+|  [redo()](./atom.history.redo.md) |  | Attempts to re-apply most recent value from future stack to atom and returns it if successful (i.e. there's a future). |
 |  [release()](./atom.history.release.md) |  |  |
-|  [removeListener(\_, \_\_, \_\_\_)](./atom.history.removelistener.md) |  |  |
+|  [removeListener(id, fn, scope)](./atom.history.removelistener.md) |  |  |
 |  [removeWatch(id)](./atom.history.removewatch.md) |  | <code>IWatch.removeWatch()</code> implementation. Delegates to wrapped atom/cursor. |
 |  [reset(val)](./atom.history.reset.md) |  | <code>IReset.reset()</code> implementation. Delegates to wrapped atom/cursor, but too applies <code>changed</code> predicate to determine if there was a change and if the previous value should be recorded. |
 |  [resetIn(path, val)](./atom.history.resetin.md) |  |  |
 |  [swap(fn, args)](./atom.history.swap.md) |  | <code>ISwap.swap()</code> implementation. Delegates to wrapped atom/cursor, but too applies <code>changed</code> predicate to determine if there was a change and if the previous value should be recorded. |
 |  [swapIn(path, fn, args)](./atom.history.swapin.md) |  |  |
-|  [undo()](./atom.history.undo.md) |  | Attempts to re-apply most recent historical value to atom and returns it if successful (i.e. there's a history). Before the switch, first records the atom's current value into the future stack (to enable [History.redo()](./atom.history.redo.md) feature). Returns <code>undefined</code> if there's no history.<!-- -->If undo was possible, the <code>History.EVENT_UNDO</code> event is emitted after the restoration with both the <code>prev</code> and <code>curr</code> (restored) states provided as event value (and object with these two keys). This allows for additional state handling to be executed, e.g. application of the "Command pattern". See [History.addListener()](./atom.history.addlistener.md) for registering event listeners. |
+|  [undo()](./atom.history.undo.md) |  | Attempts to re-apply most recent historical value to atom and returns it if successful (i.e. there's a history). |
 

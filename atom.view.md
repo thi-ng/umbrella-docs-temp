@@ -4,17 +4,21 @@
 
 ## View class
 
-This class implements readonly access to a deeply nested value with in an Atom/Cursor. An optional transformer function can be supplied at creation time to produce a derived/materialized view of the actual value held in the atom. Views can be created directly or via the [IViewable.addView()](./atom.iviewable.addview.md) method of the parent state. Views can be [IDeref.deref()](./api.ideref.deref.md)<!-- -->'d like atoms and polled for value changes using [IView.changed()](./atom.iview.changed.md)<!-- -->. The transformer is only applied once per value change and its result cached until the next change.
-
-If the optional `lazy` is true (default), the transformer will only be executed with the first [IDeref.deref()](./api.ideref.deref.md) after each value change. If `lazy` is false, the transformer function will be executed immediately after a value change occurred and so can be used like a watch which only triggers if there was an actual value change (in contrast to normal watches, which execute with each update, regardless of value change).
-
-Related, the actual value change predicate can be customized. If not given, the default [equiv](./equiv.equiv.md) will be used.
+This class implements readonly access to a deeply nested value with in an Atom/Cursor. An optional transformer function can be supplied at creation time to produce a derived/materialized view of the actual value held in the atom.
 
 <b>Signature:</b>
 
 ```typescript
 export declare class View<T> implements IView<T> 
 ```
+
+## Remarks
+
+Views can be created directly or via the [IViewable.addView()](./atom.iviewable.addview.md) method of the parent state. Views can be [IDeref.deref()](./api.ideref.deref.md)<!-- -->'d like atoms and polled for value changes using [IView.changed()](./atom.iview.changed.md)<!-- -->. The transformer is only applied once per value change and its result cached until the next change.
+
+If the optional `lazy` is true (default), the transformer will only be executed with the first [IDeref.deref()](./api.ideref.deref.md) after each value change. If `lazy` is false, the transformer function will be executed immediately after a value change occurred and so can be used like a watch which only triggers if there was an actual value change (in contrast to normal watches, which execute with each update, regardless of value change).
+
+Related, the actual value change predicate can be customized. If not given, the default [equiv](./equiv.equiv.md) will be used.
 
 ## Example
 
@@ -65,7 +69,7 @@ v.release()
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
 |  [changed()](./atom.view.changed.md) |  | Returns true, if the view's value has changed since last [IDeref.deref()](./api.ideref.deref.md)<!-- -->. |
-|  [deref()](./atom.view.deref.md) |  | Returns view's value. If the view has a transformer, the transformed value is returned. The transformer is only run once per value change. See class comments about difference between lazy/eager behaviors. |
+|  [deref()](./atom.view.deref.md) |  | Returns view's value. If the view has a transformer, the transformed value is returned. The transformer is only run once per value change. |
 |  [release()](./atom.view.release.md) |  | Disconnects this view from parent state, marks itself dirty/changed and sets its unprocessed raw value to <code>undefined</code>. |
-|  [view()](./atom.view.view.md) |  | Like [IDeref.deref()](./api.ideref.deref.md)<!-- -->, but doesn't update view's cached state and dirty flag if value has changed. If there's an unprocessed value change, returns result of this sub's transformer or else the cached value.<!-- -->\*\*Important:\*\* Use this function only if the view has none or or a stateless transformer. Else might cause undefined/inconsistent behavior when calling <code>view</code> or [IDeref.deref()](./api.ideref.deref.md) subsequently. |
+|  [view()](./atom.view.view.md) |  | Like [IDeref.deref()](./api.ideref.deref.md)<!-- -->, but doesn't update view's cached state and dirty flag if value has changed. |
 

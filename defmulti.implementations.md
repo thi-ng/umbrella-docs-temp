@@ -6,15 +6,17 @@
 
 Syntax-sugar intended for sets of multi-methods sharing same dispatch values / logic. Takes a dispatch value, an object of "is-a" relationships and a number of multi-methods, each with an implementation for the given dispatch value.
 
-The relations object has dispatch values (parents) as keys and arrays of multi-methods as their values. For each multi-method associates the given `type` with the related parent dispatch value to delegate to its implementation.
-
-The remaining implementations are associated with their related multi-method and the given `type` dispatch value.
-
 <b>Signature:</b>
 
 ```typescript
 implementations: (type: string | number | symbol, rels: IObjectOf<MultiFn<any>[]>, ...impls: (MultiFn<any> | import("@thi.ng/api").FnAny<any>)[]) => void
 ```
+
+## Remarks
+
+The relations object has dispatch values (parents) as keys and arrays of multi-methods as their values. For each multi-method associates the given `type` with the related parent dispatch value to delegate to its implementation.
+
+The remaining implementations are associated with their related multi-method and the given `type` dispatch value.
 
 ## Example
 

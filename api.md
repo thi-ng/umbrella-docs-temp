@@ -54,7 +54,7 @@
 |  [ILength](./api.ilength.md) | <code>length</code> property declaration for collections to obtain their element count. |
 |  [ILogger](./api.ilogger.md) |  |
 |  [IMeta](./api.imeta.md) | Generic interface for types supporting metadata. Implementations MUST exclude metadata from any comparisons, equality checks &amp; hashing. |
-|  [INotify](./api.inotify.md) | Interface to provide event emitter functionality. Also see <code>@INotify</code> decorator mixin |
+|  [INotify](./api.inotify.md) | Interface to provide event emitter functionality. Also see [INotifyMixin](./api.inotifymixin.md) decorator mixin. |
 |  [IObjectOf](./api.iobjectof.md) | Generic plain object with all key values of given type. |
 |  [IRelease](./api.irelease.md) | Interface for types supported the release of internal resources. |
 |  [ISet](./api.iset.md) | Generic interface for set collection types. |

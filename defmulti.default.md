@@ -4,6 +4,8 @@
 
 ## DEFAULT variable
 
+Unique symbol used for registering a default / fallback implementation.
+
 <b>Signature:</b>
 
 ```typescript

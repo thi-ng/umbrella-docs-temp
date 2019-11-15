@@ -8,7 +8,7 @@
 
 |  Function | Description |
 |  --- | --- |
-|  [defmulti(f, rels)](./defmulti.defmulti.md) | Returns a new multi-dispatch function using the provided dispatcher. The dispatcher can take any number of arguments and must produce a dispatch value (string, number or symbol) used to lookup an implementation. If found, the impl is called with the same args and its return value used as own return value. If no matching implementation is available, attempts to dispatch to DEFAULT impl. If none is registered, an error is thrown.<code>defmulti</code> provides generics for type checking up to 8 args (plus the return type) and the generics will also apply to all implementations. If more than 8 args are required, <code>defmulti</code> will fall back to an untyped varargs solution.<!-- -->Implementations for different dispatch values can be added and removed dynamically by calling <code>.add(id, fn)</code> or <code>.remove(id)</code> on the returned function. Each returns <code>true</code> if the operation was successful. |
+|  [defmulti(f, rels)](./defmulti.defmulti.md) | Returns a new multi-dispatch function using the provided dispatch value function. |
 |  [defmulti(f, rels)](./defmulti.defmulti_9.md) |  |
 |  [defmulti(f, rels)](./defmulti.defmulti_10.md) |  |
 |  [defmulti(f, rels)](./defmulti.defmulti_11.md) |  |
@@ -53,9 +53,9 @@
 
 |  Variable | Description |
 |  --- | --- |
-|  [DEFAULT](./defmulti.default.md) |  |
-|  [defmultiN](./defmulti.defmultin.md) | Returns a multi-dispatch function which delegates to one of the provided implementations, based on the arity (number of args) when the function is called. Internally uses , so new arities can be dynamically added (or removed) at a later time. If no <code>fallback</code> is provided, <code>defmultiN</code> also registers a [DEFAULT](./defmulti.default.md) implementation which simply throws an [IllegalArityError](./errors.illegalarityerror.md) when invoked.<!-- -->\*\*Note:\*\* Unlike  no argument type checking is supported, however you can specify the return type for the generated function. |
-|  [implementations](./defmulti.implementations.md) | Syntax-sugar intended for sets of multi-methods sharing same dispatch values / logic. Takes a dispatch value, an object of "is-a" relationships and a number of multi-methods, each with an implementation for the given dispatch value.<!-- -->The relations object has dispatch values (parents) as keys and arrays of multi-methods as their values. For each multi-method associates the given <code>type</code> with the related parent dispatch value to delegate to its implementation.<!-- -->The remaining implementations are associated with their related multi-method and the given <code>type</code> dispatch value. |
+|  [DEFAULT](./defmulti.default.md) | Unique symbol used for registering a default / fallback implementation. |
+|  [defmultiN](./defmulti.defmultin.md) | Returns a multi-dispatch function which delegates to one of the provided implementations, based on the arity (number of args) when the function is called. |
+|  [implementations](./defmulti.implementations.md) | Syntax-sugar intended for sets of multi-methods sharing same dispatch values / logic. Takes a dispatch value, an object of "is-a" relationships and a number of multi-methods, each with an implementation for the given dispatch value. |
 |  [LOGGER](./defmulti.logger.md) |  |
 |  [setLogger](./defmulti.setlogger.md) |  |
 

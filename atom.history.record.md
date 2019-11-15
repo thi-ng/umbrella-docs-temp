@@ -4,11 +4,7 @@
 
 ## History.record() method
 
-Records given state in history. This method is only needed when manually managing snapshots, i.e. when applying multiple swaps on the wrapped atom directly, but not wanting to create an history entry for each change. \*\*DO NOT call this explicitly if using [History.reset()](./atom.history.reset.md) / [History.swap()](./atom.history.swap.md) etc.\*\*
-
-If no `state` is given, uses the wrapped atom's current state value (user code SHOULD always call without arg).
-
-If recording succeeded, the `History.EVENT_RECORD` event is emitted with the recorded state provided as event value.
+Records given state in history. This method is only needed when manually managing snapshots, i.e. when applying multiple swaps on the wrapped atom directly, but not wanting to create an history entry for each change.
 
 <b>Signature:</b>
 
@@ -25,4 +21,12 @@ record(state?: T): void;
 <b>Returns:</b>
 
 `void`
+
+## Remarks
+
+\*\*DO NOT call this explicitly if using [History.reset()](./atom.history.reset.md) / [History.swap()](./atom.history.swap.md) etc.\*\*
+
+If no `state` is given, uses the wrapped atom's current state value (user code SHOULD always call without arg).
+
+If recording succeeded, the `History.EVENT_RECORD` event is emitted with the recorded state provided as event value.
 

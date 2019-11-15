@@ -62,28 +62,8 @@ export declare class Channel<T> implements IReadWriteableChannel<T>
 |  [into(src, close)](./csp.channel.into.md) |  |  |
 |  [isClosed()](./csp.channel.isclosed.md) |  |  |
 |  [isReadable()](./csp.channel.isreadable.md) |  |  |
-|  [merge(chans, out, close, named)](./csp.channel.merge.md) | <code>static</code> | Takes an array of channels to merge into new channel. Any closed channels will be automatically removed from the input selection. Once all inputs are closed, the target channel will close too (by default).<!-- -->If <code>named</code> is true, the merged channel will have tuples of: <code>[src-id, val]</code> If false (default), only received values will be forwarded. |
-|  [mergeTuples(chans, out, closeOnFirst, closeOutput)](./csp.channel.mergetuples.md) | <code>static</code> | Takes an array of channels to merge into new channel of tuples. Whereas <code>Channel.merge()</code> realizes a sequential merging with no guarantees about ordering of the output, the output channel of this function will collect values from all channels and a new tuple is emitted only once a new value has been read from ALL channels. Therefore the overall throughput is dictated by the slowest of the inputs.<!-- -->Once any of the inputs closes, the process is terminated and the output channel is closed too (by default).
-```
-Channel.mergeTuples([
-  Channel.from([1, 2, 3]),
-  Channel.from([10, 20, 30]),
-  Channel.from([100, 200, 300])
-]).consume();
-
-// chan-0 : [ 1, 10, 100 ]
-// chan-0 : [ 2, 20, 200 ]
-// chan-0 : [ 3, 30, 300 ]
-// chan-0 done
-
-Channel.mergeTuples([
-  Channel.from([1, 2, 3]),
-  Channel.from([10, 20, 30]),
-  Channel.from([100, 200, 300])
-], null, false).consume();
-
-```
- |
+|  [merge(chans, out, close, named)](./csp.channel.merge.md) | <code>static</code> | Takes an array of channels to merge into new channel. Any closed channels will be automatically removed from the input selection. Once all inputs are closed, the target channel will close too (by default). |
+|  [mergeTuples(chans, out, closeOnFirst, closeOutput)](./csp.channel.mergetuples.md) | <code>static</code> | Takes an array of channels to merge into new channel of tuples. Whereas <code>Channel.merge()</code> realizes a sequential merging with no guarantees about ordering of the output. |
 |  [pipe(dest, close)](./csp.channel.pipe.md) |  |  |
 |  [process()](./csp.channel.process.md) |  |  |
 |  [produce(fn, close)](./csp.channel.produce.md) |  |  |

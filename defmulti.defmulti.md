@@ -4,11 +4,7 @@
 
 ## defmulti() function
 
-Returns a new multi-dispatch function using the provided dispatcher. The dispatcher can take any number of arguments and must produce a dispatch value (string, number or symbol) used to lookup an implementation. If found, the impl is called with the same args and its return value used as own return value. If no matching implementation is available, attempts to dispatch to DEFAULT impl. If none is registered, an error is thrown.
-
-`defmulti` provides generics for type checking up to 8 args (plus the return type) and the generics will also apply to all implementations. If more than 8 args are required, `defmulti` will fall back to an untyped varargs solution.
-
-Implementations for different dispatch values can be added and removed dynamically by calling `.add(id, fn)` or `.remove(id)` on the returned function. Each returns `true` if the operation was successful.
+Returns a new multi-dispatch function using the provided dispatch value function.
 
 <b>Signature:</b>
 
@@ -26,4 +22,12 @@ export declare function defmulti<T>(f: DispatchFn, rels?: AncestorDefs): MultiFn
 <b>Returns:</b>
 
 `MultiFn<T>`
+
+## Remarks
+
+The dispatcher can take any number of arguments and must produce a dispatch value (string, number or symbol) used to lookup an implementation. If found, the impl is called with the same args and its return value used as own return value. If no matching implementation is available, attempts to dispatch to DEFAULT impl. If none is registered, an error is thrown.
+
+`defmulti` provides generics for type checking up to 8 args (plus the return type) and the generics will also apply to all implementations. If more than 8 args are required, `defmulti` will fall back to an untyped varargs solution.
+
+Implementations for different dispatch values can be added and removed dynamically by calling `.add(id, fn)` or `.remove(id)` on the returned function. Each returns `true` if the operation was successful.
 

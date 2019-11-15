@@ -6,8 +6,6 @@
 
 Takes an array of channels to merge into new channel. Any closed channels will be automatically removed from the input selection. Once all inputs are closed, the target channel will close too (by default).
 
-If `named` is true, the merged channel will have tuples of: `[src-id, val]` If false (default), only received values will be forwarded.
-
 <b>Signature:</b>
 
 ```typescript
@@ -26,4 +24,8 @@ static merge(chans: Channel<any>[], out?: Channel<any>, close?: boolean, named?:
 <b>Returns:</b>
 
 `Channel<any>`
+
+## Remarks
+
+If `named` is true, the merged channel will have tuples of: `[src-id, val]` If false (default), only received values will be forwarded.
 

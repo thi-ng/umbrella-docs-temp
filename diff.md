@@ -21,7 +21,7 @@
 
 |  Variable | Description |
 |  --- | --- |
-|  [diffArray](./diff.diffarray.md) | Based on "An O(NP) Sequence Comparison Algorithm"" by Wu, Manber, Myers and Miller<!-- -->- [http://www.itu.dk/stud/speciale/bepjea/xwebtex/litt/an-onp-sequence-comparison-algorithm.pdf](http://www.itu.dk/stud/speciale/bepjea/xwebtex/litt/an-onp-sequence-comparison-algorithm.pdf) - [https://github.com/cubicdaiya/onp](https://github.com/cubicdaiya/onp)<!-- -->Various optimizations, fixes &amp; refactorings. By default uses [equiv](./equiv.equiv.md) for equality checks. |
+|  [diffArray](./diff.diffarray.md) | Based on "An O(NP) Sequence Comparison Algorithm"" by Wu, Manber, Myers and Miller. |
 |  [diffObject](./diff.diffobject.md) |  |
 
 ## Type Aliases

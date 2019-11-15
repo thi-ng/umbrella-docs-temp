@@ -4,10 +4,11 @@
 
 ## MemMappedComponent.removeListener() method
 
+
 <b>Signature:</b>
 
 ```typescript
-removeListener(id: string, fn: Fn<Event, void>, scope?: any): boolean;
+removeListener(id: string, fn: Listener, scope?: any): boolean;
 ```
 
 ## Parameters
@@ -15,7 +16,7 @@ removeListener(id: string, fn: Fn<Event, void>, scope?: any): boolean;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  id | <code>string</code> |  |
-|  fn | <code>Fn&lt;Event, void&gt;</code> |  |
+|  fn | <code>Listener</code> |  |
 |  scope | <code>any</code> |  |
 
 <b>Returns:</b>

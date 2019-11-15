@@ -4,6 +4,7 @@
 
 ## ECS.notify() method
 
+
 <b>Signature:</b>
 
 ```typescript
