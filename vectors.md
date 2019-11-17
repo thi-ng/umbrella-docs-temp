@@ -535,8 +535,8 @@
 |  [mixBilinear2](./vectors.mixbilinear2.md) |  |
 |  [mixBilinear3](./vectors.mixbilinear3.md) |  |
 |  [mixBilinear4](./vectors.mixbilinear4.md) |  |
-|  [mixCubic](./vectors.mixcubic.md) |  |
-|  [mixCubicHermite](./vectors.mixcubichermite.md) | Vector version of thi.ng/math [mixCubicHermite](./vectors.mixcubichermite.md)<!-- -->. |
+|  [mixCubic](./vectors.mixcubic.md) | Vector version of [mixCubic](./math.mixcubic.md)<!-- -->. |
+|  [mixCubicHermite](./vectors.mixcubichermite.md) | Vector version of [mixCubicHermite](./math.mixcubichermite.md)<!-- -->. |
 |  [mixHermiteCardinal](./vectors.mixhermitecardinal.md) | Convenience version of [mixCubicHermite](./vectors.mixcubichermite.md)<!-- -->, using 4 input points and [tangentCardinal](./vectors.tangentcardinal.md) to compute the tangents for points <code>b</code> and <code>c</code> (with optional <code>scale</code>, default 0.5). Interpolated result point is that of <code>b</code> and <code>c</code>, with <code>a</code> and <code>d</code> only being used for tangent calculations.<!-- -->If <code>out</code> is null, stores result in <code>b</code>. |
 |  [mixHermiteDiff3](./vectors.mixhermitediff3.md) | Convenience version of [mixCubicHermite](./vectors.mixcubichermite.md)<!-- -->, using 4 input points and [tangentDiff3](./vectors.tangentdiff3.md) to compute the tangents for points <code>b</code> and <code>c</code>. Interpolated result point is that of <code>b</code> and <code>c</code>, with <code>a</code> and <code>d</code> only being used for tangent calculations.<!-- -->If <code>out</code> is null, stores result in <code>b</code>. |
 |  [mixN](./vectors.mixn.md) |  |
@@ -546,7 +546,7 @@
 |  [mixNS2](./vectors.mixns2.md) |  |
 |  [mixNS3](./vectors.mixns3.md) |  |
 |  [mixNS4](./vectors.mixns4.md) |  |
-|  [mixQuadratic](./vectors.mixquadratic.md) |  |
+|  [mixQuadratic](./vectors.mixquadratic.md) | Vector version of [mixQuadratic](./math.mixquadratic.md)<!-- -->. |
 |  [mixS2](./vectors.mixs2.md) |  |
 |  [mixS3](./vectors.mixs3.md) |  |
 |  [mixS4](./vectors.mixs4.md) |  |
@@ -816,8 +816,8 @@
 |  [tan2](./vectors.tan2.md) |  |
 |  [tan3](./vectors.tan3.md) |  |
 |  [tan4](./vectors.tan4.md) |  |
-|  [tangentCardinal](./vectors.tangentcardinal.md) | Vector version of thi.ng/math [tangentCardinal](./vectors.tangentcardinal.md)<!-- -->. |
-|  [tangentDiff3](./vectors.tangentdiff3.md) | Vector version of thi.ng/math [tangentDiff3](./vectors.tangentdiff3.md)<!-- -->. |
+|  [tangentCardinal](./vectors.tangentcardinal.md) | Vector version of [tangentCardinal](./math.tangentcardinal.md)<!-- -->. |
+|  [tangentDiff3](./vectors.tangentdiff3.md) | Vector version of [tangentDiff3](./math.tangentdiff3.md)<!-- -->. |
 |  [tanh](./vectors.tanh.md) |  |
 |  [tanh2](./vectors.tanh2.md) |  |
 |  [tanh3](./vectors.tanh3.md) |  |

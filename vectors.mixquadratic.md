@@ -4,6 +4,8 @@
 
 ## mixQuadratic variable
 
+Vector version of [mixQuadratic](./math.mixquadratic.md)<!-- -->.
+
 <b>Signature:</b>
 
 ```typescript

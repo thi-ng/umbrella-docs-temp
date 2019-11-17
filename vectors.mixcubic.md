@@ -4,6 +4,8 @@
 
 ## mixCubic variable
 
+Vector version of [mixCubic](./math.mixcubic.md)<!-- -->.
+
 <b>Signature:</b>
 
 ```typescript

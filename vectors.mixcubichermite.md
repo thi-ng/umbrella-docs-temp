@@ -4,7 +4,7 @@
 
 ## mixCubicHermite variable
 
-Vector version of thi.ng/math [mixCubicHermite](./vectors.mixcubichermite.md)<!-- -->.
+Vector version of [mixCubicHermite](./math.mixcubichermite.md)<!-- -->.
 
 <b>Signature:</b>
 
