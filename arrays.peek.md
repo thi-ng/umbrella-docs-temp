@@ -9,5 +9,5 @@ Returns last element of given array or `undefined` if array is empty.
 <b>Signature:</b>
 
 ```typescript
-peek: <T>(x: ArrayLike<T>) => T
+peek: <T>(buf: ArrayLike<T>) => T
 ```

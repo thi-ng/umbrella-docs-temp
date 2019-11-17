@@ -16,8 +16,8 @@ addWatch(id: string, fn: Watch<T>): boolean;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  id | <code>string</code> |  |
-|  fn | <code>Watch&lt;T&gt;</code> |  |
+|  id | <code>string</code> | watch ID |
+|  fn | <code>Watch&lt;T&gt;</code> | watch function |
 
 <b>Returns:</b>
 

@@ -16,8 +16,8 @@ get(key: T, notFound?: T): T | undefined;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  key | <code>T</code> |  |
-|  notFound | <code>T</code> |  |
+|  key | <code>T</code> | search key |
+|  notFound | <code>T</code> | default value |
 
 <b>Returns:</b>
 

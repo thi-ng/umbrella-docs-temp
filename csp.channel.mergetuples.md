@@ -16,10 +16,10 @@ static mergeTuples(chans: Channel<any>[], out?: Channel<any>, closeOnFirst?: boo
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  chans | <code>Channel&lt;any&gt;[]</code> |  |
-|  out | <code>Channel&lt;any&gt;</code> |  |
-|  closeOnFirst | <code>boolean</code> |  |
-|  closeOutput | <code>boolean</code> |  |
+|  chans | <code>Channel&lt;any&gt;[]</code> | source channels |
+|  out | <code>Channel&lt;any&gt;</code> | result channel |
+|  closeOnFirst | <code>boolean</code> | true, if result closes when first input is done |
+|  closeOutput | <code>boolean</code> | true, if result closes when all inputs are done |
 
 <b>Returns:</b>
 

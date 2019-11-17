@@ -4,9 +4,7 @@
 
 ## ICompare.compare() method
 
-Compares this value with given value `x`<!-- -->. MUST follow same contract as `Comparator`<!-- -->. MUST return 0 if the type also implements `IEquiv` and `equiv` returns true for same `x`<!-- -->.
-
-Also see `IHash`<!-- -->.
+Compares this value with given value `x`<!-- -->. MUST follow same contract as [Comparator](./api.comparator.md)<!-- -->.
 
 <b>Signature:</b>
 
@@ -18,9 +16,15 @@ compare(x: T): number;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  x | <code>T</code> |  |
+|  x | <code>T</code> | compare value |
 
 <b>Returns:</b>
 
 `number`
+
+## Remarks
+
+MUST return 0 if the type also implements `IEquiv` and `equiv` returns true for same `x`<!-- -->.
+
+Also see [IHash](./api.ihash.md)<!-- -->.
 

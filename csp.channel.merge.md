@@ -16,10 +16,10 @@ static merge(chans: Channel<any>[], out?: Channel<any>, close?: boolean, named?:
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  chans | <code>Channel&lt;any&gt;[]</code> |  |
-|  out | <code>Channel&lt;any&gt;</code> |  |
-|  close | <code>boolean</code> |  |
-|  named | <code>boolean</code> |  |
+|  chans | <code>Channel&lt;any&gt;[]</code> | source channels |
+|  out | <code>Channel&lt;any&gt;</code> | result channel |
+|  close | <code>boolean</code> | true, if result closes |
+|  named | <code>boolean</code> | true, to emit labeled tuples |
 
 <b>Returns:</b>
 

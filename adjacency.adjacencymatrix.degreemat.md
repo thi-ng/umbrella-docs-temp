@@ -14,7 +14,7 @@ degreeMat(deg?: DegreeType): CSR;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  deg | <code>DegreeType</code> |  |
+|  deg | <code>DegreeType</code> | degree type |
 
 <b>Returns:</b>
 

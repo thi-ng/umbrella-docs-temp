@@ -16,7 +16,7 @@ resize(n: number): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  n | <code>number</code> |  |
+|  n | <code>number</code> | new max vertices |
 
 <b>Returns:</b>
 

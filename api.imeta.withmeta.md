@@ -16,7 +16,7 @@ withMeta(meta: any): T;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  meta | <code>any</code> |  |
+|  meta | <code>any</code> | meta data |
 
 <b>Returns:</b>
 

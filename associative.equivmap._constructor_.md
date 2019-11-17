@@ -16,6 +16,6 @@ constructor(pairs?: Iterable<Pair<K, V>> | null, opts?: Partial<EquivMapOpts<K>>
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  pairs | <code>Iterable&lt;Pair&lt;K, V&gt;&gt; &#124; null</code> |  |
-|  opts | <code>Partial&lt;EquivMapOpts&lt;K&gt;&gt;</code> |  |
+|  pairs | <code>Iterable&lt;Pair&lt;K, V&gt;&gt; &#124; null</code> | key-value pairs |
+|  opts | <code>Partial&lt;EquivMapOpts&lt;K&gt;&gt;</code> | config options |
 

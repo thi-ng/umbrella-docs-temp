@@ -16,7 +16,7 @@ disj(x: V): T;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  x | <code>V</code> |  |
+|  x | <code>V</code> | value to remove |
 
 <b>Returns:</b>
 

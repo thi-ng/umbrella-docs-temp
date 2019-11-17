@@ -9,5 +9,5 @@ Similar to `Array.findIndex()`<!-- -->, but uses [equiv](./equiv.equiv.md) as de
 <b>Signature:</b>
 
 ```typescript
-findIndex: <T>(src: ArrayLike<T>, x: T, equiv?: import("@thi.ng/api").Fn2<T, T, boolean>) => number
+findIndex: <T>(buf: ArrayLike<T>, x: T, equiv?: import("@thi.ng/api").Fn2<T, T, boolean>) => number
 ```

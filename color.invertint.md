@@ -4,7 +4,7 @@
 
 ## invertInt variable
 
-Inverts the lowest 24 bits of an ARGB int.
+Inverts the lowest 24 bits of an ARGB int. Does not modify alpha.
 
 <b>Signature:</b>
 

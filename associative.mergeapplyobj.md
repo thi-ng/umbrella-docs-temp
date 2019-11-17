@@ -26,8 +26,8 @@ Returns new merged object and does not modify any of the inputs.
 
 ```ts
 mergeApplyObj(
-  {a: "hello", b: 23, c: 12},
-  {a: (x) => x + " world", b: 42}
+  { a: "hello", b: 23, c: 12 },
+  { a: (x) => x + " world", b: 42 }
 );
 // { a: 'hello world', b: 42, c: 12 }
 

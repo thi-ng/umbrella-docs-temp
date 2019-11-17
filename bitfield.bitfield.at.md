@@ -16,7 +16,7 @@ at(n: number): number;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  n | <code>number</code> |  |
+|  n | <code>number</code> | bit number |
 
 <b>Returns:</b>
 

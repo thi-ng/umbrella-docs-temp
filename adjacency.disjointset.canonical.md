@@ -16,7 +16,7 @@ canonical(id: number): number;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  id | <code>number</code> |  |
+|  id | <code>number</code> | node ID |
 
 <b>Returns:</b>
 

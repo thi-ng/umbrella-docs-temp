@@ -16,5 +16,5 @@ export interface ICompare<T>
 
 |  Method | Description |
 |  --- | --- |
-|  [compare(x)](./api.icompare.compare.md) | Compares this value with given value <code>x</code>. MUST follow same contract as <code>Comparator</code>. MUST return 0 if the type also implements <code>IEquiv</code> and <code>equiv</code> returns true for same <code>x</code>.<!-- -->Also see <code>IHash</code>. |
+|  [compare(x)](./api.icompare.compare.md) | Compares this value with given value <code>x</code>. MUST follow same contract as [Comparator](./api.comparator.md)<!-- -->. |
 

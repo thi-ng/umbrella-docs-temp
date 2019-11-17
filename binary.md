@@ -40,7 +40,7 @@
 |  [floatToSortableInt](./binary.floattosortableint.md) | Converts given float into a sortable integer representation, using raw bitwise conversion via [floatToIntBits](./binary.floattointbits.md)<!-- -->.[https://github.com/tzaeschke/phtree/blob/master/PhTreeRevisited.pdf](https://github.com/tzaeschke/phtree/blob/master/PhTreeRevisited.pdf) (page 3) |
 |  [floatToUintBits](./binary.floattouintbits.md) |  |
 |  [floorPow2](./binary.floorpow2.md) |  |
-|  [hammingDist](./binary.hammingdist.md) | [https://en.wikipedia.org/wiki/Hamming\_distance](https://en.wikipedia.org/wiki/Hamming_distance) |
+|  [hammingDist](./binary.hammingdist.md) | Returns number of bit changes between <code>x</code> and <code>y</code>.[https://en.wikipedia.org/wiki/Hamming\_distance](https://en.wikipedia.org/wiki/Hamming_distance) |
 |  [intBitsToFloat](./binary.intbitstofloat.md) |  |
 |  [isAligned](./binary.isaligned.md) | Returns true if <code>addr</code> is aligned to wordsize <code>size</code>. |
 |  [isPow2](./binary.ispow2.md) |  |

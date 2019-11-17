@@ -35,7 +35,7 @@ export declare class DisjointSet
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
 |  [canonical(id)](./adjacency.disjointset.canonical.md) |  | Returns canonical ID (tree root) for given <code>id</code>. Unless <code>id</code> already is unified with some other ID, this will always return <code>id</code> itself (since each node is initially its own root). |
-|  [subsets()](./adjacency.disjointset.subsets.md) |  | Returns a <code>Map</code> of all subsets (connected components) with their canonical tree root IDs as keys and arrays of node IDs as values. If only the number of subsets is required, use the <code>count</code> property of this class instance instead (O(1), updated with each call to [DisjointSet.union()](./adjacency.disjointset.union.md)<!-- -->). |
+|  [subsets()](./adjacency.disjointset.subsets.md) |  | Returns a <code>Map</code> of all subsets (connected components) with their canonical tree root IDs as keys and arrays of node IDs as values. |
 |  [unified(a, b)](./adjacency.disjointset.unified.md) |  | Returns true, if the given two nodes belong to the same tree / subset. |
 |  [union(a, b)](./adjacency.disjointset.union.md) |  | Connects combines the trees of the given two node IDs and returns the new resulting canonical tree root ID. |
 

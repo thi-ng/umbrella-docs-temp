@@ -30,7 +30,7 @@ export declare class AdjacencyBitMatrix implements IGraph
 |  --- | --- | --- |
 |  [addEdge(from, to)](./adjacency.adjacencybitmatrix.addedge.md) |  |  |
 |  [edges()](./adjacency.adjacencybitmatrix.edges.md) |  |  |
-|  [fromEdges(n, edges, undirected)](./adjacency.adjacencybitmatrix.fromedges.md) | <code>static</code> | Creates adjacency matrix with capacity <code>n</code> (max vertices) from given edge pairs. Each edge is <code>[dest-node src-node]</code>.<!-- -->If <code>undirected</code> is true, creates symmetrical adjacencies. |
+|  [fromEdges(n, edges, undirected)](./adjacency.adjacencybitmatrix.fromedges.md) | <code>static</code> | Creates adjacency matrix with capacity <code>n</code> (max vertices) from given edge pairs. Each edge is <code>[dest-node src-node]</code>. |
 |  [hasEdge(from, to)](./adjacency.adjacencybitmatrix.hasedge.md) |  |  |
 |  [neighbors(id)](./adjacency.adjacencybitmatrix.neighbors.md) |  |  |
 |  [numEdges()](./adjacency.adjacencybitmatrix.numedges.md) |  |  |

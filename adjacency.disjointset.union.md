@@ -16,8 +16,8 @@ union(a: number, b: number): number;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  a | <code>number</code> |  |
-|  b | <code>number</code> |  |
+|  a | <code>number</code> | node ID |
+|  b | <code>number</code> | node ID |
 
 <b>Returns:</b>
 

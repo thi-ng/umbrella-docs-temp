@@ -6,8 +6,6 @@
 
 Creates adjacency matrix from given edge pairs. Each edge is `[dest-node src-node]`<!-- -->.
 
-If `undirected` is true (default: false), creates symmetrical edges.
-
 <b>Signature:</b>
 
 ```typescript
@@ -19,10 +17,14 @@ static fromEdges(n: number, edges: Iterable<Pair<number, number>>, undirected?: 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  n | <code>number</code> | max number of vertices |
-|  edges | <code>Iterable&lt;Pair&lt;number, number&gt;&gt;</code> |  |
-|  undirected | <code>boolean</code> |  |
+|  edges | <code>Iterable&lt;Pair&lt;number, number&gt;&gt;</code> | edge pairs |
+|  undirected | <code>boolean</code> | true, if undirected |
 
 <b>Returns:</b>
 
 `AdjacencyMatrix`
+
+## Remarks
+
+If `undirected` is true (default: false), creates symmetrical edges.
 

@@ -16,7 +16,7 @@ conj(x: V): T;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  x | <code>V</code> |  |
+|  x | <code>V</code> | value to add |
 
 <b>Returns:</b>
 

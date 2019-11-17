@@ -97,7 +97,7 @@
 |  Type Alias | Description |
 |  --- | --- |
 |  [ArrayLikeIterable](./api.arraylikeiterable.md) |  |
-|  [Comparator](./api.comparator.md) | Generic 2-element comparator function type alias. Must follow this contract and return:<!-- -->- negative if <code>a &lt; b</code> - zero if <code>a == b</code> - positive if <code>a &gt; b</code> |
+|  [Comparator](./api.comparator.md) | Generic 2-element comparator function type alias. |
 |  [FloatArray](./api.floatarray.md) |  |
 |  [FloatType](./api.floattype.md) |  |
 |  [Fn](./api.fn.md) | A single arg function from A to B. |

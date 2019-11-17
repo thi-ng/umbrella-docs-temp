@@ -16,8 +16,8 @@ export declare function into<K, V>(dest: Map<K, V>, src: Iterable<Pair<K, V>>): 
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  dest | <code>Map&lt;K, V&gt;</code> |  |
-|  src | <code>Iterable&lt;Pair&lt;K, V&gt;&gt;</code> |  |
+|  dest | <code>Map&lt;K, V&gt;</code> | target collection |
+|  src | <code>Iterable&lt;Pair&lt;K, V&gt;&gt;</code> | source collection |
 
 <b>Returns:</b>
 

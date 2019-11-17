@@ -9,5 +9,5 @@ Similar to `Array.find()`<!-- -->, but uses [equiv](./equiv.equiv.md) as default
 <b>Signature:</b>
 
 ```typescript
-find: <T>(src: ArrayLike<T>, x: T, equiv?: import("@thi.ng/api").Fn2<T, T, boolean>) => T | undefined
+find: <T>(buf: ArrayLike<T>, x: T, equiv?: import("@thi.ng/api").Fn2<T, T, boolean>) => T | undefined
 ```

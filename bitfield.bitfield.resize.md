@@ -16,7 +16,7 @@ resize(n: number): this;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  n | <code>number</code> |  |
+|  n | <code>number</code> | new size |
 
 <b>Returns:</b>
 

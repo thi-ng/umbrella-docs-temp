@@ -4,7 +4,7 @@
 
 ## IEquiv.equiv() method
 
-Returns `true` if this \*value\* is equivalent to `o`<!-- -->. Also see `ICompare.compare` and `IHash.hash`<!-- -->.
+Returns `true` if this \*value\* is equivalent to `o`<!-- -->. Also see [ICompare.compare()](./api.icompare.compare.md) and [IHash.hash()](./api.ihash.hash.md)<!-- -->.
 
 <b>Signature:</b>
 
@@ -16,7 +16,7 @@ equiv(o: any): boolean;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  o | <code>any</code> |  |
+|  o | <code>any</code> | value to check for equivalence |
 
 <b>Returns:</b>
 

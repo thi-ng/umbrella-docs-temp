@@ -4,7 +4,7 @@
 
 ## AdjacencyMatrix.deformedLaplacian() method
 
-Computes: `I - nA + n^2 * (D - I)`
+Computes: `I - nA + n^2 * (D - I)`<!-- -->, where `I` is the unit matrix, `A` the adjacency matrix, `D` the degree matrix, and `n` is a (complex-valued) number.
 
 <b>Signature:</b>
 
@@ -16,10 +16,14 @@ deformedLaplacian(n: number, deg?: CSR): CSR;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  n | <code>number</code> |  |
-|  deg | <code>CSR</code> |  |
+|  n | <code>number</code> | scale factor |
+|  deg | <code>CSR</code> | degree matrix |
 
 <b>Returns:</b>
 
 `CSR`
+
+## Remarks
+
+See [AdjacencyMatrix.degreeMat()](./adjacency.adjacencymatrix.degreemat.md)<!-- -->.
 

@@ -16,3 +16,5 @@ shuffleRange: <T extends AnyArray>(buf: T, start?: number, end?: number, rnd?: I
 
 If neither `start` / `end` are given, the entire array will be shuffled. Mutates original array.
 
+See [IRandom](./random.irandom.md)
+

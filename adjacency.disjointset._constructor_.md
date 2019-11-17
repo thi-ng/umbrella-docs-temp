@@ -16,5 +16,5 @@ constructor(n: number);
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  n | <code>number</code> |  |
+|  n | <code>number</code> | initial capacity, ID range \[0..n) |
 

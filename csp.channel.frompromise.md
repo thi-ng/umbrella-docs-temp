@@ -16,7 +16,7 @@ static fromPromise<T>(p: Promise<T>): Channel<T>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  p | <code>Promise&lt;T&gt;</code> |  |
+|  p | <code>Promise&lt;T&gt;</code> | promise |
 
 <b>Returns:</b>
 

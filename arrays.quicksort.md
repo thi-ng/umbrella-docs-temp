@@ -16,11 +16,11 @@ export declare function quickSort<T>(arr: T[], _cmp?: Comparator<T>, _swap?: Fn3
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  arr | <code>T[]</code> |  |
-|  \_cmp | <code>Comparator&lt;T&gt;</code> |  |
-|  \_swap | <code>Fn3&lt;T[], number, number, void&gt;</code> |  |
-|  start | <code>number</code> |  |
-|  end | <code>number</code> |  |
+|  arr | <code>T[]</code> | array to sort |
+|  \_cmp | <code>Comparator&lt;T&gt;</code> | comparator |
+|  \_swap | <code>Fn3&lt;T[], number, number, void&gt;</code> | swap function |
+|  start | <code>number</code> | start index |
+|  end | <code>number</code> | end index (inclusive) |
 
 <b>Returns:</b>
 

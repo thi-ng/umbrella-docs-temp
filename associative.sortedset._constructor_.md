@@ -16,6 +16,6 @@ constructor(values?: Iterable<T> | null, opts?: Partial<SortedSetOpts<T>>);
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  values | <code>Iterable&lt;T&gt; &#124; null</code> |  |
-|  opts | <code>Partial&lt;SortedSetOpts&lt;T&gt;&gt;</code> |  |
+|  values | <code>Iterable&lt;T&gt; &#124; null</code> | input values |
+|  opts | <code>Partial&lt;SortedSetOpts&lt;T&gt;&gt;</code> | config options |
 

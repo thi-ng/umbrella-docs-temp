@@ -16,8 +16,8 @@ static fromObject<T>(obj: IObjectOf<T>, opts?: Partial<SortedMapOpts<string>>): 
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  obj | <code>IObjectOf&lt;T&gt;</code> |  |
-|  opts | <code>Partial&lt;SortedMapOpts&lt;string&gt;&gt;</code> |  |
+|  obj | <code>IObjectOf&lt;T&gt;</code> | source object |
+|  opts | <code>Partial&lt;SortedMapOpts&lt;string&gt;&gt;</code> | config options |
 
 <b>Returns:</b>
 

@@ -16,7 +16,7 @@ reset(val: T): T;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  val | <code>T</code> |  |
+|  val | <code>T</code> | replacement value |
 
 <b>Returns:</b>
 

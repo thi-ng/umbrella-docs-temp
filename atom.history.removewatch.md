@@ -16,7 +16,7 @@ removeWatch(id: string): boolean;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  id | <code>string</code> |  |
+|  id | <code>string</code> | watch iD |
 
 <b>Returns:</b>
 

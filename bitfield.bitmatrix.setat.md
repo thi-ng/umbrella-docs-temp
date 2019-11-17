@@ -16,9 +16,9 @@ setAt(m: number, n: number, v?: boolean): number;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  m | <code>number</code> |  |
-|  n | <code>number</code> |  |
-|  v | <code>boolean</code> |  |
+|  m | <code>number</code> | row |
+|  n | <code>number</code> | column |
+|  v | <code>boolean</code> | bit value |
 
 <b>Returns:</b>
 

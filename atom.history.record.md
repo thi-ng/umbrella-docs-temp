@@ -16,7 +16,7 @@ record(state?: T): void;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  state | <code>T</code> |  |
+|  state | <code>T</code> | state to record |
 
 <b>Returns:</b>
 

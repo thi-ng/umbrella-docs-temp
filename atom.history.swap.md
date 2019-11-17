@@ -16,8 +16,8 @@ swap(fn: SwapFn<T>, ...args: any[]): T;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  fn | <code>SwapFn&lt;T&gt;</code> |  |
-|  args | <code>any[]</code> |  |
+|  fn | <code>SwapFn&lt;T&gt;</code> | update function |
+|  args | <code>any[]</code> | additional args passed to <code>fn</code> |
 
 <b>Returns:</b>
 

@@ -27,10 +27,10 @@ export declare class AdjacencyMatrix extends CSR implements IGraph
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
 |  [addEdge(from, to)](./adjacency.adjacencymatrix.addedge.md) |  |  |
-|  [deformedLaplacian(n, deg)](./adjacency.adjacencymatrix.deformedlaplacian.md) |  | Computes: <code>I - nA + n^2 * (D - I)</code> |
+|  [deformedLaplacian(n, deg)](./adjacency.adjacencymatrix.deformedlaplacian.md) |  | Computes: <code>I - nA + n^2 * (D - I)</code>, where <code>I</code> is the unit matrix, <code>A</code> the adjacency matrix, <code>D</code> the degree matrix, and <code>n</code> is a (complex-valued) number. |
 |  [degreeMat(deg)](./adjacency.adjacencymatrix.degreemat.md) |  |  |
 |  [edges()](./adjacency.adjacencymatrix.edges.md) |  |  |
-|  [fromEdges(n, edges, undirected)](./adjacency.adjacencymatrix.fromedges.md) | <code>static</code> | Creates adjacency matrix from given edge pairs. Each edge is <code>[dest-node src-node]</code>.<!-- -->If <code>undirected</code> is true (default: false), creates symmetrical edges. |
+|  [fromEdges(n, edges, undirected)](./adjacency.adjacencymatrix.fromedges.md) | <code>static</code> | Creates adjacency matrix from given edge pairs. Each edge is <code>[dest-node src-node]</code>. |
 |  [hasEdge(from, to)](./adjacency.adjacencymatrix.hasedge.md) |  |  |
 |  [laplacianMat(deg)](./adjacency.adjacencymatrix.laplacianmat.md) |  | Returns this graph's Laplacian matrix: <code>L = D - A</code> Where <code>D</code> is the degree matrix and <code>A</code> this adjacency matrix. |
 |  [neighbors(id)](./adjacency.adjacencymatrix.neighbors.md) |  |  |

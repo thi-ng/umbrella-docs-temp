@@ -16,8 +16,8 @@ setAt(n: number, v?: boolean): number;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  n | <code>number</code> |  |
-|  v | <code>boolean</code> |  |
+|  n | <code>number</code> | bit number |
+|  v | <code>boolean</code> | new bit value |
 
 <b>Returns:</b>
 

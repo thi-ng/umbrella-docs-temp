@@ -4,12 +4,17 @@
 
 ## Comparator type
 
-Generic 2-element comparator function type alias. Must follow this contract and return:
-
-- negative if `a < b` - zero if `a == b` - positive if `a > b`
+Generic 2-element comparator function type alias.
 
 <b>Signature:</b>
 
 ```typescript
 export declare type Comparator<T> = Fn2<T, T, number>;
 ```
+
+## Remarks
+
+Must follow this contract and return:
+
+- negative if `a < b` - zero if `a == b` - positive if `a > b`
+

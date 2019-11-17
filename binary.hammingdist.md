@@ -4,6 +4,8 @@
 
 ## hammingDist variable
 
+Returns number of bit changes between `x` and `y`<!-- -->.
+
 [https://en.wikipedia.org/wiki/Hamming\_distance](https://en.wikipedia.org/wiki/Hamming_distance)
 
 <b>Signature:</b>

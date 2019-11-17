@@ -16,8 +16,8 @@ at(m: number, n: number): number;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  m | <code>number</code> |  |
-|  n | <code>number</code> |  |
+|  m | <code>number</code> | row |
+|  n | <code>number</code> | column |
 
 <b>Returns:</b>
 

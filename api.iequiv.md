@@ -14,5 +14,5 @@ export interface IEquiv
 
 |  Method | Description |
 |  --- | --- |
-|  [equiv(o)](./api.iequiv.equiv.md) | Returns <code>true</code> if this \*value\* is equivalent to <code>o</code>. Also see <code>ICompare.compare</code> and <code>IHash.hash</code>. |
+|  [equiv(o)](./api.iequiv.equiv.md) | Returns <code>true</code> if this \*value\* is equivalent to <code>o</code>. Also see [ICompare.compare()](./api.icompare.compare.md) and [IHash.hash()](./api.ihash.hash.md)<!-- -->. |
 

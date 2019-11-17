@@ -110,7 +110,7 @@
 |  [int32Css](./color.int32css.md) |  |
 |  [int32Rgba](./color.int32rgba.md) |  |
 |  [INV8BIT](./color.inv8bit.md) |  |
-|  [invertInt](./color.invertint.md) | Inverts the lowest 24 bits of an ARGB int. |
+|  [invertInt](./color.invertint.md) | Inverts the lowest 24 bits of an ARGB int. Does not modify alpha. |
 |  [invertRGB](./color.invertrgb.md) | Inverts the RGB channels of an RGBA color. |
 |  [kelvinRgba](./color.kelvinrgba.md) | Based on: - [https://github.com/neilbartlett/color-temperature/blob/master/index.js](https://github.com/neilbartlett/color-temperature/blob/master/index.js) - [http://www.zombieprototypes.com/?p=210](http://www.zombieprototypes.com/?p=210)<!-- -->Uses adjusted coefficients to produce normalized RGB values. |
 |  [linearSrgb](./color.linearsrgb.md) | Maps a single linear RGB channel value to sRGB.[https://en.wikipedia.org/wiki/SRGB](https://en.wikipedia.org/wiki/SRGB) |

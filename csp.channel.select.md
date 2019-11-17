@@ -16,7 +16,7 @@ static select(chans: Channel<any>[]): Promise<any>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  chans | <code>Channel&lt;any&gt;[]</code> |  |
+|  chans | <code>Channel&lt;any&gt;[]</code> | source channels |
 
 <b>Returns:</b>
 

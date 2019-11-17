@@ -16,7 +16,7 @@ contains(x: T): boolean;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  x | <code>T</code> |  |
+|  x | <code>T</code> | value to check for |
 
 <b>Returns:</b>
 

@@ -95,6 +95,7 @@
 |  [@thi.ng/rstream-log-file](./rstream-log-file.md) |  |
 |  [@thi.ng/rstream-query](./rstream-query.md) |  |
 |  [@thi.ng/sax](./sax.md) |  |
+|  [@thi.ng/seq](./seq.md) |  |
 |  [@thi.ng/sexpr](./sexpr.md) |  |
 |  [@thi.ng/shader-ast](./shader-ast.md) |  |
 |  [@thi.ng/shader-ast-glsl](./shader-ast-glsl.md) |  |
@@ -115,4 +116,5 @@
 |  [@thi.ng/webgl](./webgl.md) |  |
 |  [@thi.ng/webgl-msdf](./webgl-msdf.md) |  |
 |  [@thi.ng/webgl-shadertoy](./webgl-shadertoy.md) |  |
+|  [@thi.ng/zipper](./zipper.md) |  |
 
