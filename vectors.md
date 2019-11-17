@@ -117,12 +117,6 @@
 |  [angleBetween2](./vectors.anglebetween2.md) |  |
 |  [angleBetween3](./vectors.anglebetween3.md) |  |
 |  [angleRatio](./vectors.angleratio.md) |  |
-|  [ARGS\_V](./vectors.args_v.md) |  |
-|  [ARGS\_VN](./vectors.args_vn.md) |  |
-|  [ARGS\_VNV](./vectors.args_vnv.md) |  |
-|  [ARGS\_VV](./vectors.args_vv.md) |  |
-|  [ARGS\_VVN](./vectors.args_vvn.md) |  |
-|  [ARGS\_VVV](./vectors.args_vvv.md) |  |
 |  [asin](./vectors.asin.md) |  |
 |  [asin2](./vectors.asin2.md) |  |
 |  [asin3](./vectors.asin3.md) |  |
@@ -222,10 +216,6 @@
 |  [comparator2](./vectors.comparator2.md) | Returns a new 2D vector comparator using given component order. The comparator returns the signed index+1 of the first differing component, e.g. if order is <code>0,1</code>, a return value of -2 means that <code>a.y &lt; b.y</code>. |
 |  [comparator3](./vectors.comparator3.md) | Returns a new 3D vector comparator using given component order. The comparator returns the signed index+1 of the first differing component, e.g. if order is <code>0,1,2</code>, a return value of -3 means that <code>a.z &lt; b.z</code>. |
 |  [comparator4](./vectors.comparator4.md) | Returns a new 4D vector comparator using given component order. The comparator returns the signed index+1 of the first differing component, e.g. if order is <code>0,1,2,3</code>, a return value of -4 means that <code>a.w &lt; b.w</code>. |
-|  [compile](./vectors.compile.md) |  |
-|  [compileG](./vectors.compileg.md) |  |
-|  [compileGHOF](./vectors.compileghof.md) |  |
-|  [compileHOF](./vectors.compilehof.md) |  |
 |  [copy](./vectors.copy.md) |  |
 |  [copyVectors](./vectors.copyvectors.md) |  |
 |  [corner2](./vectors.corner2.md) | Syntax sugar for <code>sign(signedArea2(a, b, c))</code>.<!-- -->- [sign](./math.sign.md) - [signedArea2](./vectors.signedarea2.md) |
@@ -241,10 +231,6 @@
 |  [cross3](./vectors.cross3.md) |  |
 |  [crossS2](./vectors.crosss2.md) |  |
 |  [crossS3](./vectors.crosss3.md) |  |
-|  [declareIndex](./vectors.declareindex.md) |  |
-|  [declareIndices](./vectors.declareindices.md) |  |
-|  [DEFAULT\_OUT](./vectors.default_out.md) |  |
-|  [defaultOut](./vectors.defaultout.md) |  |
 |  [defBitOp](./vectors.defbitop.md) |  |
 |  [defBitOpN](./vectors.defbitopn.md) |  |
 |  [defFnOp](./vectors.deffnop.md) |  |
@@ -302,9 +288,7 @@
 |  [divU2](./vectors.divu2.md) |  |
 |  [divU3](./vectors.divu3.md) |  |
 |  [divU4](./vectors.divu4.md) |  |
-|  [DOT\_G](./vectors.dot_g.md) |  |
 |  [dot](./vectors.dot.md) |  |
-|  [DOT](./vectors.dot.md) |  |
 |  [dot2](./vectors.dot2.md) |  |
 |  [dot3](./vectors.dot3.md) |  |
 |  [dot4](./vectors.dot4.md) |  |
@@ -363,11 +347,6 @@
 |  [fmodN2](./vectors.fmodn2.md) |  |
 |  [fmodN3](./vectors.fmodn3.md) |  |
 |  [fmodN4](./vectors.fmodn4.md) |  |
-|  [FN\_N](./vectors.fn_n.md) |  |
-|  [FN](./vectors.fn.md) |  |
-|  [FN2](./vectors.fn2.md) |  |
-|  [FN3](./vectors.fn3.md) |  |
-|  [FN5](./vectors.fn5.md) |  |
 |  [fract](./vectors.fract.md) |  |
 |  [fract2](./vectors.fract2.md) |  |
 |  [fract3](./vectors.fract3.md) |  |
@@ -502,11 +481,6 @@
 |  [mapVV](./vectors.mapvv.md) | Vec2/3/4 view based buffer transformation for [VecOpVV](./vectors.vecopvv.md) type ops and supporting arbitrary component and element layouts of all input and output buffers. |
 |  [mapVVN](./vectors.mapvvn.md) | Like [mapVV](./vectors.mapvv.md)<!-- -->, but for [VecOpVVN](./vectors.vecopvvn.md) type ops and hence using two vector input buffers <code>a</code>, <code>b</code> and a scalar <code>n</code>. |
 |  [mapVVV](./vectors.mapvvv.md) | Like [mapVV](./vectors.mapvv.md)<!-- -->, but for [VecOpVVV](./vectors.vecopvvv.md) type ops and hence using three vector input buffers <code>a</code>, <code>b</code>, <code>c</code>. |
-|  [MATH\_N](./vectors.math_n.md) |  |
-|  [MATH](./vectors.math.md) |  |
-|  [MATH2\_N](./vectors.math2_n.md) |  |
-|  [MATH2](./vectors.math2.md) |  |
-|  [MATH2A\_N](./vectors.math2a_n.md) |  |
 |  [max](./vectors.max.md) |  |
 |  [max2](./vectors.max2.md) |  |
 |  [MAX2](./vectors.max2.md) |  |
@@ -525,9 +499,7 @@
 |  [minor2](./vectors.minor2.md) |  |
 |  [minor3](./vectors.minor3.md) |  |
 |  [minor4](./vectors.minor4.md) |  |
-|  [MIX\_N](./vectors.mix_n.md) |  |
 |  [mix](./vectors.mix.md) |  |
-|  [MIX](./vectors.mix.md) |  |
 |  [mix2](./vectors.mix2.md) |  |
 |  [mix3](./vectors.mix3.md) |  |
 |  [mix4](./vectors.mix4.md) |  |
@@ -607,7 +579,6 @@
 |  [neq2](./vectors.neq2.md) |  |
 |  [neq3](./vectors.neq3.md) |  |
 |  [neq4](./vectors.neq4.md) |  |
-|  [NEW\_OUT](./vectors.new_out.md) |  |
 |  [normalCCW](./vectors.normalccw.md) | Computes 2D normal by rotating direction vector <code>a</code> -<!-- -->&gt; <code>b</code>, 90 deg counterclockwise, normalized to length <code>n</code> (default: 1). If <code>out</code> is null, creates new vector. |
 |  [normalCW](./vectors.normalcw.md) | Computes 2D normal by rotating direction vector <code>a</code> -<!-- -->&gt; <code>b</code>, 90 deg clockwise, normalized to length <code>n</code> (default: 1). If <code>out</code> is null, creates new vector. |
 |  [normalize](./vectors.normalize.md) | Normalizes vector to given (optional) length (default: 1). If <code>out</code> is null, modifies <code>v</code> in place. |
@@ -688,12 +659,7 @@
 |  [rshiftU2](./vectors.rshiftu2.md) |  |
 |  [rshiftU3](./vectors.rshiftu3.md) |  |
 |  [rshiftU4](./vectors.rshiftu4.md) |  |
-|  [SARGS\_V](./vectors.sargs_v.md) |  |
-|  [SARGS\_VV](./vectors.sargs_vv.md) |  |
-|  [SARGS\_VVV](./vectors.sargs_vvv.md) |  |
-|  [SET\_N](./vectors.set_n.md) |  |
 |  [set](./vectors.set.md) |  |
-|  [SET](./vectors.set.md) |  |
 |  [set2](./vectors.set2.md) |  |
 |  [set3](./vectors.set3.md) |  |
 |  [set4](./vectors.set4.md) |  |
@@ -730,8 +696,6 @@
 |  [sign2](./vectors.sign2.md) |  |
 |  [sign3](./vectors.sign3.md) |  |
 |  [sign4](./vectors.sign4.md) |  |
-|  [SIGNED\_N](./vectors.signed_n.md) |  |
-|  [SIGNED](./vectors.signed.md) |  |
 |  [signedArea2](./vectors.signedarea2.md) | Returns area \* 2 of the 2D triangle defined by the input vectors. This is a useful classifier for many geometry processing tasks. In addition to the triangle area, the result can also be interpreted as follows:<!-- -->- <code>&gt; 0</code>: points are ordered counterclockwise - <code>&lt; 0</code>: points are ordered clockwise - <code>0</code>: points are co-linear<!-- -->Same as: <code>cross2(sub2([], b, a), sub2([], c, a))</code>- [corner2](./vectors.corner2.md) - [clockwise2](./vectors.clockwise2.md) - [cross2](./vectors.cross2.md) |
 |  [signedAreaC2](./vectors.signedareac2.md) | Same as [signedArea2](./vectors.signedarea2.md)<!-- -->, but expects individual vector component args, instead of vectors. |
 |  [sin](./vectors.sin.md) |  |
@@ -826,8 +790,6 @@
 |  [trunc2](./vectors.trunc2.md) |  |
 |  [trunc3](./vectors.trunc3.md) |  |
 |  [trunc4](./vectors.trunc4.md) |  |
-|  [UNSIGNED\_N](./vectors.unsigned_n.md) |  |
-|  [UNSIGNED](./vectors.unsigned.md) |  |
 |  [vec2](./vectors.vec2.md) |  |
 |  [vec2n](./vectors.vec2n.md) |  |
 |  [vec3](./vectors.vec3.md) |  |
