@@ -4,7 +4,17 @@
 
 ## gvec variable
 
-Wrapper for strided, arbitrary length vectors. Wraps given buffer in ES6 `Proxy` with custom property getters/setters and implements the following interfaces:
+Wrapper for strided, arbitrary length vectors.
+
+<b>Signature:</b>
+
+```typescript
+gvec: (buf: Vec, size: number, offset?: number, stride?: number) => IVector<any>
+```
+
+## Remarks
+
+Wraps given buffer in ES6 `Proxy` with custom property getters/setters and implements the following interfaces:
 
 - `Iterable` (ES6) - [ICopy](./api.icopy.md) - [IEmpty](./api.iempty.md) - [IEqualsDelta](./api.iequalsdelta.md) - [IVector](./vectors.ivector.md) - `Object.toString()`
 
@@ -15,6 +25,9 @@ Read/write access for the following properties:
 Array index access uses bounds checking against the \[0 .. `size`<!-- -->) interval, but, for performance reasons, \*\*not\*\* against the actual wrapped buffer.
 
 Note: ES6 proxies are \~10x slower than standard array accesses. If several computations are to be performed on such vectors it will be much more efficient to first copy them to compact arrays and then copy result back if needed.
+
+## Example
+
 
 ```
 // 3D vector w/ stride length of 4
@@ -46,8 +59,3 @@ eqDelta(a, [1, 2, 3])
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-gvec: (buf: Vec, size: number, offset?: number, stride?: number) => IVector<any>
-```

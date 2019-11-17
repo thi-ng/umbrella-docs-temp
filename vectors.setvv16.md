@@ -4,16 +4,20 @@
 
 ## setVV16 variable
 
-Sets `out` to:
-
-```
-[a.x, a.y, a.z, a.w, b.x, b.y, b.z, b.w,
- c.x, c.y, c.z, c.w, d.x, d.y, d.z, d.w]
-
-```
+Sets `out` to concatenation of `a`<!-- -->, `b`<!-- -->, `c`<!-- -->, `d`<!-- -->:
 
 <b>Signature:</b>
 
 ```typescript
 setVV16: (out: Vec | null, a: import("@thi.ng/api").ArrayLikeIterable<number>, b: import("@thi.ng/api").ArrayLikeIterable<number>, c: import("@thi.ng/api").ArrayLikeIterable<number>, d: import("@thi.ng/api").ArrayLikeIterable<number>) => Vec
 ```
+
+## Example
+
+
+```ts
+[a.x, a.y, a.z, a.w, b.x, b.y, b.z, b.w,
+ c.x, c.y, c.z, c.w, d.x, d.y, d.z, d.w]
+
+```
+

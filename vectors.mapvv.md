@@ -4,13 +4,26 @@
 
 ## mapVV variable
 
-Vec2/3/4 view based buffer transformation for [VecOpVV](./vectors.vecopvv.md) type ops and supporting arbitrary component and element layouts of all input and output buffers. The given pre-initialized vectors MUST be separate instances, are used as sliding cursors / views of their respective backing buffers and will be modified as part of the transformation process (though the input buffers themselves are treated as immutable, unless `out` is configured to use one of the input buffers).
+Vec2/3/4 view based buffer transformation for [VecOpVV](./vectors.vecopvv.md) type ops and supporting arbitrary component and element layouts of all input and output buffers.
+
+<b>Signature:</b>
+
+```typescript
+mapVV: (op: import("@thi.ng/api").Fn3<import("./api").Vec | null, import("@thi.ng/api").ArrayLikeIterable<number>, import("@thi.ng/api").ArrayLikeIterable<number>, import("./api").Vec>, out: IVector<any>, a: IVector<any>, b: IVector<any>, num: number, so?: number, sa?: number, sb?: number) => import("./api").Vec
+```
+
+## Remarks
+
+The given pre-initialized vectors MUST be separate instances, are used as sliding cursors / views of their respective backing buffers and will be modified as part of the transformation process (though the input buffers themselves are treated as immutable, unless `out` is configured to use one of the input buffers).
 
 In each iteration `op` is called via `op(out, a, b)`<!-- -->, followed by cursor updates to process the next vector view. No bounds checking is performed.
 
 This function returns `out`<!-- -->'s backing buffer.
 
-```
+## Example
+
+
+```ts
 // each input buffer contains 2 2D vectors, but using
 // different strided data layouts
 mapVV(
@@ -32,7 +45,7 @@ mapVV(
 ```
 Alternatively, `Vec2/3/4.iterator()` combined with transducers can be used to achieve the same (and more flexible) transformations, but will incur more intermediate object allocations. `mapV*()` functions only use (and mutate) the provided vector instances and do not allocate any further objects.
 
-```
+```ts
 // output buffer
 const out = new Array(4);
 
@@ -50,8 +63,3 @@ out
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-mapVV: (op: import("@thi.ng/api").Fn3<import("./api").Vec | null, import("@thi.ng/api").ArrayLikeIterable<number>, import("@thi.ng/api").ArrayLikeIterable<number>, import("./api").Vec>, out: IVector<any>, a: IVector<any>, b: IVector<any>, num: number, so?: number, sa?: number, sb?: number) => import("./api").Vec
-```

@@ -4,15 +4,27 @@
 
 ## hash variable
 
-Returns an unsigned 32-bit hash code for the given vector. The hash is the reduction of `hash = H * hash + murmur(x)`<!-- -->, where `murmur(x)` is the partial Murmur3 hash of a single vector component's bitwise representation and `H` an optional hash factor, by default Knuth's 0x9e3779b1 (see TAOCP, section 6.4, page 516). If the vector `v` is empty (length 0), the function returns -1.
+Returns an unsigned 32-bit hash code for the given vector.
+
+<b>Signature:</b>
+
+```typescript
+hash: (v: import("@thi.ng/api").ArrayLikeIterable<number>, H?: number) => number
+```
+
+## Remarks
+
+The hash is the reduction of `hash = H * hash + murmur(x)`<!-- -->, where `murmur(x)` is the partial Murmur3 hash of a single vector component's bitwise representation and `H` an optional hash factor, by default Knuth's 0x9e3779b1 (see TAOCP, section 6.4, page 516). If the vector `v` is empty (length 0), the function returns -1.
 
 Hashes for zero-vectors:
 
 - `[0]`<!-- -->: 1209856430 - `[0, 0]`<!-- -->: 3623989185 - `[0, 0, 0]`<!-- -->: 4192292821 - `[0, 0, 0, 0]`<!-- -->: 2558592725
 
+## Example
+
 Hash collisions:
 
-```
+```ts
 // integer grid coords
 uniq = tx.transduce(tx.map(v.hash32), tx.conj(), tx.range2d(0x1000, 0x1000)).size
 // 16744420
@@ -36,8 +48,3 @@ uniq = tx.transduce(
 ```
 - [https://github.com/thi-ng/c-thing/blob/master/src/math/hashfn.c](https://github.com/thi-ng/c-thing/blob/master/src/math/hashfn.c) - [@thi.ng/morton](./morton.md) for Z-curve ordered hashing
 
-<b>Signature:</b>
-
-```typescript
-hash: (v: import("@thi.ng/api").ArrayLikeIterable<number>, H?: number) => number
-```

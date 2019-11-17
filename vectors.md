@@ -383,61 +383,8 @@
 |  [gte2](./vectors.gte2.md) |  |
 |  [gte3](./vectors.gte3.md) |  |
 |  [gte4](./vectors.gte4.md) |  |
-|  [gvec](./vectors.gvec.md) | Wrapper for strided, arbitrary length vectors. Wraps given buffer in ES6 <code>Proxy</code> with custom property getters/setters and implements the following interfaces:<!-- -->- <code>Iterable</code> (ES6) - [ICopy](./api.icopy.md) - [IEmpty](./api.iempty.md) - [IEqualsDelta](./api.iequalsdelta.md) - [IVector](./vectors.ivector.md) - <code>Object.toString()</code>Read/write access for the following properties:<!-- -->- array indices in the \[0 .. <code>size</code>) interval - <code>offset</code> - start index - <code>stride</code> - component stride - <code>buf</code> - backing buffer (readonly) - <code>length</code> - vector size<!-- -->Array index access uses bounds checking against the \[0 .. <code>size</code>) interval, but, for performance reasons, \*\*not\*\* against the actual wrapped buffer.<!-- -->Note: ES6 proxies are \~10x slower than standard array accesses. If several computations are to be performed on such vectors it will be much more efficient to first copy them to compact arrays and then copy result back if needed.
-```
-// 3D vector w/ stride length of 4
-a = gvec([1,0,0,0,2,0,0,0,3,0,0,0], 3, 0, 4);
-a[0] // 1
-a[1] // 2
-a[2] // 3
-
-a.stride
-// 4
-
-[...a]
-// [1, 2, 3]
-
-a.toString()
-// "[1,2,3]"
-
-add([], a, a)
-// [2, 4, 6]
-
-copy(a)
-// [1, 2, 3]
-
-a.copyView()
-// Proxy [ [ 1, 0, 2, 0, 3, 0 ], ... }
-
-eqDelta(a, [1, 2, 3])
-// true
-
-```
- |
-|  [hash](./vectors.hash.md) | Returns an unsigned 32-bit hash code for the given vector. The hash is the reduction of <code>hash = H * hash + murmur(x)</code>, where <code>murmur(x)</code> is the partial Murmur3 hash of a single vector component's bitwise representation and <code>H</code> an optional hash factor, by default Knuth's 0x9e3779b1 (see TAOCP, section 6.4, page 516). If the vector <code>v</code> is empty (length 0), the function returns -1.<!-- -->Hashes for zero-vectors:<!-- -->- <code>[0]</code>: 1209856430 - <code>[0, 0]</code>: 3623989185 - <code>[0, 0, 0]</code>: 4192292821 - <code>[0, 0, 0, 0]</code>: 2558592725<!-- -->Hash collisions:
-```
-// integer grid coords
-uniq = tx.transduce(tx.map(v.hash32), tx.conj(), tx.range2d(0x1000, 0x1000)).size
-// 16744420
-
-// collision rate
-(1 - uniq / (0x1000 ** 2)) * 100
-// 0.1955 %
-
-// normalized grid coords
-uniq = tx.transduce(
-  tx.map(v.hash32),
-  tx.conj(),
-  tx.permutations(tx.normRange(1000), tx.normRange(1000))
-).size
-// 1001895
-
-// collision rate
-(1 - uniq / (1001 ** 2)) * 100
-// 0.0106 %
-
-```
-- [https://github.com/thi-ng/c-thing/blob/master/src/math/hashfn.c](https://github.com/thi-ng/c-thing/blob/master/src/math/hashfn.c) - [@thi.ng/morton](./morton.md) for Z-curve ordered hashing |
+|  [gvec](./vectors.gvec.md) | Wrapper for strided, arbitrary length vectors. |
+|  [hash](./vectors.hash.md) | Returns an unsigned 32-bit hash code for the given vector. |
 |  [heading](./vectors.heading.md) | Same as [headingXY](./vectors.headingxy.md) |
 |  [headingSegment](./vectors.headingsegment.md) | Same as [headingSegmentXY](./vectors.headingsegmentxy.md)<!-- -->. |
 |  [headingSegmentXY](./vectors.headingsegmentxy.md) | Computes direction angle (in radians) of line segment <code>a</code> -<!-- -->&gt; <code>b</code> in XY plane. |
@@ -550,63 +497,9 @@ uniq = tx.transduce(
 |  [major4](./vectors.major4.md) |  |
 |  [mapBuffer](./vectors.mapbuffer.md) | Takes an <code>ArrayBuffer</code> and creates a number of typed array vector views of <code>type</code> with given <code>size</code> (number of elements per vector) and spacing. <code>byteOffset</code> defines the start offset for the first vector and <code>byteStride</code> the number of bytes between resulting vectors (defaults to <code>size * SIZEOF[type]</code>). It's user's responsibility to ensure these two values are compatible with the chosen array type (i.e. for <code>Type.F32</code>, these MUST be multiples of 4). |
 |  [mapStridedBuffer](./vectors.mapstridedbuffer.md) |  |
-|  [mapV](./vectors.mapv.md) | Like [mapVV](./vectors.mapvv.md)<!-- -->, but for [VecOpV](./vectors.vecopv.md) type ops and hence only using single input.
-```
-// 4x 2D vectors in SOA layout
-// i.e. [x1, x2, x3, x4, y1, y2, y3, y4]
-buf = [1, 3, 5, 7, 2, 4, 6, 8];
-
-// use `swapXY` to swizzle each vector and use AOS for output
-res = mapV(swapXY, new Vec2(), new Vec2(buf, 0, 4), 4, 2, 1);
-// [ 2, 1, 4, 3, 6, 5, 8, 7 ]
-
-// unpack result for demonstration purposes
-[...Vec2.iterator(res, 4)].map(v => [...v]);
-// [ [ 2, 1 ], [ 4, 3 ], [ 6, 5 ], [ 8, 7 ] ]
-
-```
- |
+|  [mapV](./vectors.mapv.md) | Like [mapVV](./vectors.mapvv.md)<!-- -->, but for [VecOpV](./vectors.vecopv.md) type ops and hence only using single input. |
 |  [mapVN](./vectors.mapvn.md) | Like [mapVV](./vectors.mapvv.md)<!-- -->, but for [VecOpVN](./vectors.vecopvn.md) type ops and hence using a single vector input buffer <code>a</code> and a scalar <code>n</code>. |
-|  [mapVV](./vectors.mapvv.md) | Vec2/3/4 view based buffer transformation for [VecOpVV](./vectors.vecopvv.md) type ops and supporting arbitrary component and element layouts of all input and output buffers. The given pre-initialized vectors MUST be separate instances, are used as sliding cursors / views of their respective backing buffers and will be modified as part of the transformation process (though the input buffers themselves are treated as immutable, unless <code>out</code> is configured to use one of the input buffers).<!-- -->In each iteration <code>op</code> is called via <code>op(out, a, b)</code>, followed by cursor updates to process the next vector view. No bounds checking is performed.<!-- -->This function returns <code>out</code>'s backing buffer.
-```
-// each input buffer contains 2 2D vectors, but using
-// different strided data layouts
-mapVV(
-  // transformation function
-  add,
-  // init output buffer view
-  new Vec2(),
-  // wrap 1st input buffer & configure offset & component stride
-  new Vec2([1,0,2,0,0,0,0,0,3,0,4,0,0,0,0,0], 0, 2),
-  // wrap 2nd input buffer
-  new Vec2([0,10,0,0,20,0,0,30,0,0,40], 1, 3),
-  2, // num vectors
-  2, // output element stride
-  8, // input #1 element stride
-  6  // input #2 element stride
-);
-// [ 11, 22, 33, 44 ]
-
-```
-Alternatively, <code>Vec2/3/4.iterator()</code> combined with transducers can be used to achieve the same (and more flexible) transformations, but will incur more intermediate object allocations. <code>mapV*()</code> functions only use (and mutate) the provided vector instances and do not allocate any further objects.
-```
-// output buffer
-const out = new Array(4);
-
-tx.run(
-  tx.map(([o, a, b]) => add(o, a, b)),
-  tx.zip(
-     Vec2.iterator(out, 2),
-     Vec2.iterator([1,0,2,0,0,0,0,0,3,0,4,0,0,0,0,0], 2, 0, 2, 8),
-     Vec2.iterator([0,10,0,0,20,0,0,30,0,0,40], 2, 1, 3, 6),
-  )
-);
-
-out
-// [ 11, 22, 33, 44 ]
-
-```
- |
+|  [mapVV](./vectors.mapvv.md) | Vec2/3/4 view based buffer transformation for [VecOpVV](./vectors.vecopvv.md) type ops and supporting arbitrary component and element layouts of all input and output buffers. |
 |  [mapVVN](./vectors.mapvvn.md) | Like [mapVV](./vectors.mapvv.md)<!-- -->, but for [VecOpVVN](./vectors.vecopvvn.md) type ops and hence using two vector input buffers <code>a</code>, <code>b</code> and a scalar <code>n</code>. |
 |  [mapVVV](./vectors.mapvvv.md) | Like [mapVV](./vectors.mapvv.md)<!-- -->, but for [VecOpVVV](./vectors.vecopvvv.md) type ops and hence using three vector input buffers <code>a</code>, <code>b</code>, <code>c</code>. |
 |  [MATH\_N](./vectors.math_n.md) |  |
@@ -829,13 +722,7 @@ out
 |  [setSwizzle4](./vectors.setswizzle4.md) | Sets <code>out[a] = v.x, out[b] = v.y, out[c] = v.z, out[d]=v.w</code>, returns <code>out</code>. |
 |  [setVN3](./vectors.setvn3.md) | Sets <code>out</code> to <code>[a.x, a.y, n]</code> |
 |  [setVN4](./vectors.setvn4.md) | Sets <code>out</code> to <code>[a.x, a.y, a.z, n]</code> |
-|  [setVV16](./vectors.setvv16.md) | Sets <code>out</code> to:
-```
-[a.x, a.y, a.z, a.w, b.x, b.y, b.z, b.w,
- c.x, c.y, c.z, c.w, d.x, d.y, d.z, d.w]
-
-```
- |
+|  [setVV16](./vectors.setvv16.md) | Sets <code>out</code> to concatenation of <code>a</code>, <code>b</code>, <code>c</code>, <code>d</code>: |
 |  [setVV4](./vectors.setvv4.md) | Sets <code>out</code> to <code>[a.x, a.y, b.x, b.y]</code> |
 |  [setVV6](./vectors.setvv6.md) | Sets <code>out</code> to <code>[a.x, a.y, b.x, b.y, c.x, c.y]</code> |
 |  [setVV9](./vectors.setvv9.md) | Sets <code>out</code> to: <code>[a.x, a.y, a.z, b.x, b.y, b.z, c.x, c.y, c.z]</code> |
