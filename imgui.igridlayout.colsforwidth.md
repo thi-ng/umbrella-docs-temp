@@ -9,14 +9,14 @@ Returns the number of columns for given width.
 <b>Signature:</b>
 
 ```typescript
-colsForWidth(w: number): number;
+colsForWidth(width: number): number;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  w | <code>number</code> |  |
+|  width | <code>number</code> |  |
 
 <b>Returns:</b>
 

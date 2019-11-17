@@ -25,30 +25,11 @@
 |  [createTextElement](./hdom.createtextelement.md) |  |
 |  [createTree](./hdom.createtree.md) | See [HDOMImplementation](./hdom.hdomimplementation.md) interface for further details. |
 |  [DEFAULT\_IMPL](./hdom.default_impl.md) | Default target implementation to manipulate browser DOM. |
-|  [diffAttributes](./hdom.diffattributes.md) | Helper function for [diffTree](./hdom.difftree.md) to compute &amp; apply the difference between a node's <code>prev</code> and <code>curr</code> attributes. |
 |  [diffTree](./hdom.difftree.md) | See [HDOMImplementation](./hdom.hdomimplementation.md) interface for further details. |
-|  [equiv](./hdom.equiv.md) | Customized version [equiv](./equiv.equiv.md) which takes <code>__diff</code> attributes into account (at any nesting level). If an hdom element's attribute object contains <code>__diff: false</code>, the object will ALWAYS be considered unequal, even if all other attributes in the object are equivalent. |
 |  [getChild](./hdom.getchild.md) |  |
 |  [hydrateTree](./hdom.hydratetree.md) | See [HDOMImplementation](./hdom.hdomimplementation.md) interface for further details. |
 |  [LOGGER](./hdom.logger.md) |  |
-|  [normalizeElement](./hdom.normalizeelement.md) | Expands single hiccup element/component into its canonical form:
-```
-[tagname, {attribs}, ...children]
-
-```
-Emmet-style ID and class names in the original tagname are moved into the attribs object, e.g.:
-```
-["div#foo.bar.baz"] => ["div", {id: "foo", class: "bar baz"}]
-
-```
-If both Emmet-style classes AND a <code>class</code> attrib exists, the former are appended to the latter:
-```
-["div.bar.baz", {class: "foo"}] => ["div", {class: "foo bar baz"}]
-
-```
-Elements with <code>__skip</code> attrib enabled and no children, will have an empty text child element injected. |
 |  [normalizeTree](./hdom.normalizetree.md) | See [HDOMImplementation](./hdom.hdomimplementation.md) interface for further details. |
-|  [releaseTree](./hdom.releasetree.md) | Recursively attempts to call the [ILifecycle.release()](./hdom.ilifecycle.release.md) lifecycle method on every element in given tree (branch), using depth-first descent. Each element is checked for the presence of the <code>__release</code> control attribute. If (and only if) it is set to <code>false</code>, further descent into that element's branch is skipped. |
 |  [removeAttribs](./hdom.removeattribs.md) |  |
 |  [removeChild](./hdom.removechild.md) |  |
 |  [removeListener](./hdom.removelistener.md) | Removes event listener (possibly with options). |

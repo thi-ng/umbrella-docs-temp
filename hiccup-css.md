@@ -47,7 +47,6 @@
 |  [percent](./hiccup-css.percent.md) |  |
 |  [PRETTY](./hiccup-css.pretty.md) | Pretty printing format config with line breaks and indentation. |
 |  [px](./hiccup-css.px.md) |  |
-|  [QUOTED\_FNS](./hiccup-css.quoted_fns.md) |  |
 |  [rad](./hiccup-css.rad.md) |  |
 |  [rem](./hiccup-css.rem.md) |  |
 |  [sec](./hiccup-css.sec.md) |  |

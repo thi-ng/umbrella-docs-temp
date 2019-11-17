@@ -18,10 +18,10 @@ hydrateTree(opts: Partial<HDOMOpts>, parent: T, tree: any, child?: number): void
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  opts | <code>Partial&lt;HDOMOpts&gt;</code> |  |
-|  parent | <code>T</code> |  |
-|  tree | <code>any</code> |  |
-|  child | <code>number</code> |  |
+|  opts | <code>Partial&lt;HDOMOpts&gt;</code> | hdom config options |
+|  parent | <code>T</code> | parent node in target (e.g. DOM element) |
+|  tree | <code>any</code> | component tree |
+|  child | <code>number</code> | child index |
 
 <b>Returns:</b>
 

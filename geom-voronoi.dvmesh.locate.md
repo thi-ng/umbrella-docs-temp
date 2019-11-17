@@ -4,7 +4,7 @@
 
 ## DVMesh.locate() method
 
-Returns tuple of the edge related to `p` and a boolean to indicate if `p` already exists in this triangulation.
+Returns tuple of the edge related to `p` and a boolean to indicate if `p` already exists in this triangulation (true if already present).
 
 <b>Signature:</b>
 
@@ -16,7 +16,7 @@ locate(p: ReadonlyVec, eps?: number): [Edge<Vertex<T>>, boolean];
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  p | <code>ReadonlyVec</code> |  |
+|  p | <code>ReadonlyVec</code> | query point |
 |  eps | <code>number</code> |  |
 
 <b>Returns:</b>

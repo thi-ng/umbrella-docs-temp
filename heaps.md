@@ -8,7 +8,7 @@
 
 |  Class | Description |
 |  --- | --- |
-|  [DHeap](./heaps.dheap.md) | Generic d-ary heap / priority queue with configurable arity (default = 4) and ordering via user-supplied comparator. By default, implements min-heap ordering and uses [compare](./compare.compare.md)<!-- -->. The arity <code>d</code> must be &gt;<!-- -->= 2 (default: 4). If <code>d=2</code>, the default binary [Heap](./heaps.heap.md) implementation will be faster.[https://en.wikipedia.org/wiki/D-ary\_heap](https://en.wikipedia.org/wiki/D-ary_heap) |
+|  [DHeap](./heaps.dheap.md) | Generic d-ary heap / priority queue with configurable arity (default = 4) and ordering via user-supplied comparator. |
 |  [Heap](./heaps.heap.md) | Generic binary heap / priority queue with customizable ordering via user-supplied comparator. By default, implements min-heap ordering and uses @<!-- -->thi.ng/compare. |
 
 ## Interfaces

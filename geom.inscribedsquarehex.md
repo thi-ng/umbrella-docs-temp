@@ -16,7 +16,7 @@ export declare function inscribedSquareHex(hex: Polygon): Rect;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  hex | <code>Polygon</code> |  |
+|  hex | <code>Polygon</code> | target hexagon |
 
 <b>Returns:</b>
 

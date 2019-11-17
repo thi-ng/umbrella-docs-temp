@@ -16,7 +16,7 @@ max(n?: number): T[];
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  n | <code>number</code> |  |
+|  n | <code>number</code> | number of values |
 
 <b>Returns:</b>
 

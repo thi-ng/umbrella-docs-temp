@@ -4,10 +4,15 @@
 
 ## assert variable
 
-Takes a `test` result or predicate function without args and throws error with given `msg` if test failed (i.e. is falsy). The function is only enabled if `NODE_ENV != "production"` or if `UMBRELLA_ASSERTS = 1`<!-- -->.
+Takes a `test` result or predicate function without args and throws error with given `msg` if test failed (i.e. is falsy).
 
 <b>Signature:</b>
 
 ```typescript
 assert: (test: boolean | Fn0<boolean>, msg?: string | Fn0<string>) => void
 ```
+
+## Remarks
+
+The function is only enabled if `NODE_ENV != "production"` or if `UMBRELLA_ASSERTS = 1`<!-- -->.
+

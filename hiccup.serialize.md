@@ -4,7 +4,17 @@
 
 ## serialize variable
 
-Recursively normalizes and serializes given tree as HTML/SVG/XML string. Expands any embedded component functions with their results. Each node of the input tree can have one of the following input forms:
+Recursively normalizes and serializes given tree as HTML/SVG/XML string. Expands any embedded component functions with their results.
+
+<b>Signature:</b>
+
+```typescript
+serialize: (tree: any, ctx?: any, escape?: boolean, span?: boolean, keys?: boolean, path?: number[]) => string
+```
+
+## Remarks
+
+Each node of the input tree can have one of the following input forms:
 
 ```js
 ["tag", ...]
@@ -42,7 +52,7 @@ Any `null` or `undefined` array values (other than in head position) will also b
 
 A function in head position of a node acts as a mechanism for component composition &amp; delayed execution. The function will only be executed at serialization time. In this case the optional global context object and all other elements of that node / array are passed as arguments when that function is called. The return value the function MUST be a valid new tree (or `undefined`<!-- -->).
 
-If the `ctx` object it'll be passed to each embedded component fns. Optionally call [derefContext](./hiccup.derefcontext.md) prior to [serialize](./hiccup.serialize.md) to auto-deref context keys with values implementing the [IDeref](./api.ideref.md) interface.
+If the `ctx` object it'll be passed to each embedded component fns. Optionally call  prior to [serialize](./hiccup.serialize.md) to auto-deref context keys with values implementing the [IDeref](./api.ideref.md) interface.
 
 ```js
 const foo = (ctx, a, b) => ["div#" + a, ctx.foo, b];
@@ -87,8 +97,3 @@ These are used as follows (attribs are only allowed for `?xml`<!-- -->, all othe
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-serialize: (tree: any, ctx?: any, escape?: boolean, span?: boolean, keys?: boolean, path?: number[]) => string
-```

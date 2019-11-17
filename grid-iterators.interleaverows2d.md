@@ -22,7 +22,7 @@ export declare function interleaveRows2d(cols: number, rows?: number, step?: num
 |  --- | --- | --- |
 |  cols | <code>number</code> |  |
 |  rows | <code>number</code> |  |
-|  step | <code>number</code> |  |
+|  step | <code>number</code> | row stride |
 
 <b>Returns:</b>
 

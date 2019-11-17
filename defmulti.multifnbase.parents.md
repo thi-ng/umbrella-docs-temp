@@ -16,7 +16,7 @@ parents(id: PropertyKey): Set<PropertyKey>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  id | <code>PropertyKey</code> |  |
+|  id | <code>PropertyKey</code> | implementation ID |
 
 <b>Returns:</b>
 

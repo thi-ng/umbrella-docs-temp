@@ -16,10 +16,10 @@ setAttrib(element: T, id: string, value: any, attribs?: any): void;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  element | <code>T</code> |  |
-|  id | <code>string</code> |  |
-|  value | <code>any</code> |  |
-|  attribs | <code>any</code> |  |
+|  element | <code>T</code> | target element / DOM node |
+|  id | <code>string</code> | attribute name |
+|  value | <code>any</code> | attribute value |
+|  attribs | <code>any</code> | object with all attribs |
 
 <b>Returns:</b>
 

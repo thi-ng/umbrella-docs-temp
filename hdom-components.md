@@ -43,7 +43,6 @@
 |  [fpsCounter](./hdom-components.fpscounter.md) | Customizable FPS counter with sparkline visualization of N previous frames. |
 |  [groupedDropdown](./hdom-components.groupeddropdown.md) |  |
 |  [link](./hdom-components.link.md) |  |
-|  [mergeAttribs](./hdom-components.mergeattribs.md) | Helper function to immutably merge attribs from two sources and concatenate their <code>class</code> values and merge their <code>style</code> maps (if present). Returns merged result object. |
 |  [notification](./hdom-components.notification.md) | Higher order function to create a new stateless notification component, pre-configured via user supplied options. The returned component function accepts the following arguments:<!-- -->- hdom context object (unused) - partial [NotificationArgs](./hdom-components.notificationargs.md) object (extra attribs, onclose handler) - body content<!-- -->Any <code>attribs</code> provided as arg via [NotificationArgs](./hdom-components.notificationargs.md) are merged with the default options provided to the HOF. If the notification body consists of multiple elements then they will need to be wrapped in a container element. |
 |  [optgroup](./hdom-components.optgroup.md) |  |
 |  [option](./hdom-components.option.md) |  |

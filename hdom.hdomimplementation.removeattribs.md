@@ -16,9 +16,9 @@ removeAttribs(element: T, attribs: string[], prevAttribs: any): void;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  element | <code>T</code> |  |
-|  attribs | <code>string[]</code> |  |
-|  prevAttribs | <code>any</code> |  |
+|  element | <code>T</code> | target element / DOM node |
+|  attribs | <code>string[]</code> | element attributes |
+|  prevAttribs | <code>any</code> | previous attributes |
 
 <b>Returns:</b>
 

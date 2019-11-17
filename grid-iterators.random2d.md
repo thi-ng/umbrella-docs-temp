@@ -18,7 +18,7 @@ export declare function random2d(cols: number, rows?: number, rnd?: IRandom): Ge
 |  --- | --- | --- |
 |  cols | <code>number</code> |  |
 |  rows | <code>number</code> |  |
-|  rnd | <code>IRandom</code> |  |
+|  rnd | <code>IRandom</code> | PRNG |
 
 <b>Returns:</b>
 

@@ -16,7 +16,7 @@ export declare function inscribedSquare(circle: Circle): Rect;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  circle | <code>Circle</code> |  |
+|  circle | <code>Circle</code> | target circle |
 
 <b>Returns:</b>
 

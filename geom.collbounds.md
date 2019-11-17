@@ -4,7 +4,7 @@
 
 ## collBounds variable
 
-Computes the total bounds for the given shape collection, which should either contain only 2D or 3D types. No mixed dimensions are allowed! Currently the [bounds](./geom.bounds.md) function must be passed in as arg to avoid circular module dependencies.
+Computes the total bounds for the given shape collection, which should either contain only 2D or 3D types. No mixed dimensions are allowed! Currently the [bounds](./geom.bounds.md) function MUST be passed in as arg to avoid circular module dependencies.
 
 <b>Signature:</b>
 

@@ -9,5 +9,5 @@ Updates an element's `value` property. For form elements it too ensures the edit
 <b>Signature:</b>
 
 ```typescript
-updateValueAttrib: (el: HTMLInputElement, v: any) => void
+updateValueAttrib: (el: HTMLInputElement, value: any) => void
 ```

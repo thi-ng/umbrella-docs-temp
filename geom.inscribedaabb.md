@@ -16,7 +16,7 @@ export declare function inscribedAABB(sphere: Sphere): AABB;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  sphere | <code>Sphere</code> |  |
+|  sphere | <code>Sphere</code> | target sphere |
 
 <b>Returns:</b>
 

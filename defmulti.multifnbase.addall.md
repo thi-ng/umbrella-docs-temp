@@ -16,7 +16,7 @@ addAll(impls: IObjectOf<I>): boolean;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  impls | <code>IObjectOf&lt;I&gt;</code> |  |
+|  impls | <code>IObjectOf&lt;I&gt;</code> | object of implementations |
 
 <b>Returns:</b>
 

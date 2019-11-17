@@ -9,14 +9,14 @@ Returns the number of rows for given height.
 <b>Signature:</b>
 
 ```typescript
-rowsForHeight(h: number): number;
+rowsForHeight(height: number): number;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  h | <code>number</code> |  |
+|  height | <code>number</code> |  |
 
 <b>Returns:</b>
 

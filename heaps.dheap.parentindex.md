@@ -16,8 +16,8 @@ static parentIndex(idx: number, d?: number): number;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  idx | <code>number</code> |  |
-|  d | <code>number</code> |  |
+|  idx | <code>number</code> | index |
+|  d | <code>number</code> | branch factor |
 
 <b>Returns:</b>
 

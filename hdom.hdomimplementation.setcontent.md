@@ -16,8 +16,8 @@ setContent(element: T, value: any): void;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  element | <code>T</code> |  |
-|  value | <code>any</code> |  |
+|  element | <code>T</code> | target element / DOM node |
+|  value | <code>any</code> | new content |
 
 <b>Returns:</b>
 

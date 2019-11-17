@@ -16,8 +16,8 @@ add(id: PropertyKey, impl: I): boolean;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  id | <code>PropertyKey</code> |  |
-|  impl | <code>I</code> |  |
+|  id | <code>PropertyKey</code> | implementation ID (dispatch value) |
+|  impl | <code>I</code> | implementation |
 
 <b>Returns:</b>
 

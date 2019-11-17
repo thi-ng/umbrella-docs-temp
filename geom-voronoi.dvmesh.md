@@ -35,7 +35,7 @@ export declare class DVMesh<T>
 |  [delaunay(bounds)](./geom-voronoi.dvmesh.delaunay.md) |  |  |
 |  [edges(voronoi, boundsMinMax)](./geom-voronoi.dvmesh.edges.md) |  |  |
 |  [isBoundary(v)](./geom-voronoi.dvmesh.isboundary.md) |  |  |
-|  [locate(p, eps)](./geom-voronoi.dvmesh.locate.md) |  | Returns tuple of the edge related to <code>p</code> and a boolean to indicate if <code>p</code> already exists in this triangulation. |
+|  [locate(p, eps)](./geom-voronoi.dvmesh.locate.md) |  | Returns tuple of the edge related to <code>p</code> and a boolean to indicate if <code>p</code> already exists in this triangulation (true if already present). |
 |  [traverse(proc, edges, e)](./geom-voronoi.dvmesh.traverse.md) |  |  |
 |  [voronoi(bounds)](./geom-voronoi.dvmesh.voronoi.md) |  |  |
 

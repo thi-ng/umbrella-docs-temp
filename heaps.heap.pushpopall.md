@@ -16,7 +16,7 @@ pushPopAll(vals: Iterable<T>): T;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  vals | <code>Iterable&lt;T&gt;</code> |  |
+|  vals | <code>Iterable&lt;T&gt;</code> | values to insert |
 
 <b>Returns:</b>
 

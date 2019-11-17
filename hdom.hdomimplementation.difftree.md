@@ -24,11 +24,11 @@ diffTree(opts: Partial<HDOMOpts>, parent: T, prev: any[], curr: any[], child?: n
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  opts | <code>Partial&lt;HDOMOpts&gt;</code> |  |
-|  parent | <code>T</code> |  |
-|  prev | <code>any[]</code> |  |
-|  curr | <code>any[]</code> |  |
-|  child | <code>number</code> |  |
+|  opts | <code>Partial&lt;HDOMOpts&gt;</code> | hdom config options |
+|  parent | <code>T</code> | parent node in target (e.g. DOM element) |
+|  prev | <code>any[]</code> | previous component tree |
+|  curr | <code>any[]</code> | current component tree |
+|  child | <code>number</code> | child index |
 
 <b>Returns:</b>
 

@@ -16,7 +16,7 @@ callable(...args: any[]): boolean;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  args | <code>any[]</code> |  |
+|  args | <code>any[]</code> | arguments to find impl for |
 
 <b>Returns:</b>
 

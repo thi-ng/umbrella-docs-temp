@@ -9,7 +9,7 @@ Syntax-sugar intended for sets of multi-methods sharing same dispatch values / l
 <b>Signature:</b>
 
 ```typescript
-implementations: (type: string | number | symbol, rels: IObjectOf<MultiFn<any>[]>, ...impls: (MultiFn<any> | import("@thi.ng/api").FnAny<any>)[]) => void
+implementations: (id: string | number | symbol, rels: IObjectOf<MultiFn<any>[]>, ...impls: (MultiFn<any> | import("@thi.ng/api").FnAny<any>)[]) => void
 ```
 
 ## Remarks

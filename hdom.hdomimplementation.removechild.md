@@ -16,8 +16,8 @@ removeChild(parent: T, i: number): void;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  parent | <code>T</code> |  |
-|  i | <code>number</code> |  |
+|  parent | <code>T</code> | parent node in target (e.g. DOM element) |
+|  i | <code>number</code> | child index |
 
 <b>Returns:</b>
 

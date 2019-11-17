@@ -16,10 +16,10 @@ export declare function fsm<T, C, R>(states: IObjectOf<Matcher<T, C, R>>, ctx: C
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  states | <code>IObjectOf&lt;Matcher&lt;T, C, R&gt;&gt;</code> |  |
-|  ctx | <code>C</code> |  |
+|  states | <code>IObjectOf&lt;Matcher&lt;T, C, R&gt;&gt;</code> | FSM state matchers |
+|  ctx | <code>C</code> | FSM context object |
 |  initial | <code>string &#124; number</code> |  |
-|  update | <code>Fn2&lt;C, T, void&gt;</code> |  |
+|  update | <code>Fn2&lt;C, T, void&gt;</code> | context update fn |
 
 <b>Returns:</b>
 

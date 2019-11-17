@@ -16,8 +16,8 @@ createTextElement(parent: T, content: string): T;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  parent | <code>T</code> |  |
-|  content | <code>string</code> |  |
+|  parent | <code>T</code> | parent node in target (e.g. DOM element) |
+|  content | <code>string</code> | content |
 
 <b>Returns:</b>
 

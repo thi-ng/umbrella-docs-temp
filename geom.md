@@ -89,7 +89,7 @@
 |  [clipConvex](./geom.clipconvex.md) |  |
 |  [clippedLine](./geom.clippedline.md) |  |
 |  [closestPoint](./geom.closestpoint.md) |  |
-|  [collBounds](./geom.collbounds.md) | Computes the total bounds for the given shape collection, which should either contain only 2D or 3D types. No mixed dimensions are allowed! Currently the [bounds](./geom.bounds.md) function must be passed in as arg to avoid circular module dependencies. |
+|  [collBounds](./geom.collbounds.md) | Computes the total bounds for the given shape collection, which should either contain only 2D or 3D types. No mixed dimensions are allowed! Currently the [bounds](./geom.bounds.md) function MUST be passed in as arg to avoid circular module dependencies. |
 |  [convexHull](./geom.convexhull.md) |  |
 |  [copyAttribs](./geom.copyattribs.md) |  |
 |  [copyShape](./geom.copyshape.md) |  |

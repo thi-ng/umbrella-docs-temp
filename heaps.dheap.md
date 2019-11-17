@@ -4,15 +4,19 @@
 
 ## DHeap class
 
-Generic d-ary heap / priority queue with configurable arity (default = 4) and ordering via user-supplied comparator. By default, implements min-heap ordering and uses [compare](./compare.compare.md)<!-- -->. The arity `d` must be &gt;<!-- -->= 2 (default: 4). If `d=2`<!-- -->, the default binary [Heap](./heaps.heap.md) implementation will be faster.
-
-[https://en.wikipedia.org/wiki/D-ary\_heap](https://en.wikipedia.org/wiki/D-ary_heap)
+Generic d-ary heap / priority queue with configurable arity (default = 4) and ordering via user-supplied comparator.
 
 <b>Signature:</b>
 
 ```typescript
 export declare class DHeap<T> extends Heap<T> implements ICopy<DHeap<T>>, IEmpty<DHeap<T>>, IStack<T, T, DHeap<T>> 
 ```
+
+## Remarks
+
+By default, implements min-heap ordering and uses [compare](./compare.compare.md)<!-- -->. The arity `d` must be &gt;<!-- -->= 2 (default: 4). If `d=2`<!-- -->, the default binary [Heap](./heaps.heap.md) implementation will be faster.
+
+[https://en.wikipedia.org/wiki/D-ary\_heap](https://en.wikipedia.org/wiki/D-ary_heap)
 
 ## Constructors
 

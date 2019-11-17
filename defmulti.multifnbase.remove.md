@@ -16,7 +16,7 @@ remove(id: PropertyKey): boolean;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  id | <code>PropertyKey</code> |  |
+|  id | <code>PropertyKey</code> | implementation ID |
 
 <b>Returns:</b>
 

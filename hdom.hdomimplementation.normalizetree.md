@@ -34,8 +34,8 @@ normalizeTree(opts: Partial<HDOMOpts>, tree: any): any[];
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  opts | <code>Partial&lt;HDOMOpts&gt;</code> |  |
-|  tree | <code>any</code> |  |
+|  opts | <code>Partial&lt;HDOMOpts&gt;</code> | hdom config options |
+|  tree | <code>any</code> | component tree |
 
 <b>Returns:</b>
 

@@ -23,9 +23,9 @@ replaceChild(opts: Partial<HDOMOpts>, parent: T, child: number, newTree: any, in
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  opts | <code>Partial&lt;HDOMOpts&gt;</code> |  |
-|  parent | <code>T</code> |  |
-|  child | <code>number</code> |  |
-|  newTree | <code>any</code> |  |
+|  parent | <code>T</code> | parent node in target (e.g. DOM element) |
+|  child | <code>number</code> | child index |
+|  newTree | <code>any</code> | component tree |
 |  init | <code>boolean</code> |  |
 
 <b>Returns:</b>

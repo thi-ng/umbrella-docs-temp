@@ -11,5 +11,5 @@ Polynomial attenuation to create bandlimited version of a signal.
 <b>Signature:</b>
 
 ```typescript
-polyBLEP: (eps: number, x: number) => number
+polyBLEP: (dt: number, t: number) => number
 ```

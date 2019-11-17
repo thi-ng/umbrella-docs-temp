@@ -18,10 +18,10 @@ createElement(parent: T, tag: string, attribs?: any, child?: number): T;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  parent | <code>T</code> |  |
-|  tag | <code>string</code> |  |
-|  attribs | <code>any</code> |  |
-|  child | <code>number</code> |  |
+|  parent | <code>T</code> | parent node in target (e.g. DOM element) |
+|  tag | <code>string</code> | element tag name |
+|  attribs | <code>any</code> | element attributes |
+|  child | <code>number</code> | child index |
 
 <b>Returns:</b>
 

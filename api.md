@@ -67,7 +67,7 @@
 
 |  Variable | Description |
 |  --- | --- |
-|  [assert](./api.assert.md) | Takes a <code>test</code> result or predicate function without args and throws error with given <code>msg</code> if test failed (i.e. is falsy). The function is only enabled if <code>NODE_ENV != &quot;production&quot;</code> or if <code>UMBRELLA_ASSERTS = 1</code>. |
+|  [assert](./api.assert.md) | Takes a <code>test</code> result or predicate function without args and throws error with given <code>msg</code> if test failed (i.e. is falsy). |
 |  [configurable](./api.configurable.md) | Property decorator factory. Sets <code>configurable</code> flag of PropertyDescriptor to given state. |
 |  [DEFAULT\_EPS](./api.default_eps.md) |  |
 |  [deprecated](./api.deprecated.md) | Method property decorator factory. Augments original method with deprecation message (via console), shown when method is invoked. Accepts optional message arg. Throws error if assigned property is not a function. |
@@ -86,7 +86,6 @@
 |  [nomixin](./api.nomixin.md) | Method property decorator. Sets <code>configurable</code> flag of PropertyDescriptor to <code>false</code> (same as <code>@configurable(false)</code>). Intended to be used in combination with mixin decorators to enable partial implementations of mixed-in behaviors in target class and avoid them being overidden by mixed-in behaviour. |
 |  [NULL\_LOGGER](./api.null_logger.md) |  |
 |  [sealed](./api.sealed.md) | Class decorator. Seals both constructor and prototype. |
-|  [SEMAPHORE](./api.semaphore.md) | Internal use only. \*\*Do NOT use in user land code!\*\* |
 |  [SIZEOF](./api.sizeof.md) | Size information (in bytes) for [Type](./api.type.md) enums. For [GLType](./api.gltype.md)<!-- -->, use this form, e.g. <code>SIZEOF[GL2TYPE[GLType.F32]]</code> |
 |  [TYPE2GL](./api.type2gl.md) | Potentially lossy conversion from [Type](./api.type.md) to [GLType](./api.gltype.md) enums.<!-- -->Not all enums are mappable:<!-- -->- <code>F64</code> maps to <code>undefined</code>, since unsupported by WebGL - <code>U8C</code> maps to U8 |
 |  [TYPEDARRAY\_CTORS](./api.typedarray_ctors.md) |  |

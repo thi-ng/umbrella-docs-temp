@@ -16,8 +16,8 @@ isa(id: PropertyKey, parent: PropertyKey): boolean;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  id | <code>PropertyKey</code> |  |
-|  parent | <code>PropertyKey</code> |  |
+|  id | <code>PropertyKey</code> | implementation ID |
+|  parent | <code>PropertyKey</code> | parent implementation ID |
 
 <b>Returns:</b>
 

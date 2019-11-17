@@ -55,14 +55,7 @@
 |  [BGR888](./pixel.bgr888.md) |  |
 |  [buffer](./pixel.buffer.md) | Syntax sugar for [PackedBuffer](./pixel.packedbuffer.md) ctor. |
 |  [canvas2d](./pixel.canvas2d.md) | Creates a canvas element of given size, obtains its 2D drawing context and returns object of both. |
-|  [clampRegion](./pixel.clampregion.md) |  |
-|  [compileFromABGR](./pixel.compilefromabgr.md) |  |
-|  [compileGrayFromABGR](./pixel.compilegrayfromabgr.md) |  |
-|  [compileGrayToABGR](./pixel.compilegraytoabgr.md) |  |
-|  [compileToABGR](./pixel.compiletoabgr.md) |  |
 |  [defPackedFormat](./pixel.defpackedformat.md) |  |
-|  [ensureChannel](./pixel.ensurechannel.md) |  |
-|  [ensureSize](./pixel.ensuresize.md) |  |
 |  [GRAY\_ALPHA16](./pixel.gray_alpha16.md) |  |
 |  [GRAY\_ALPHA8](./pixel.gray_alpha8.md) |  |
 |  [GRAY16](./pixel.gray16.md) |  |
@@ -70,12 +63,8 @@
 |  [imageCanvas](./pixel.imagecanvas.md) | Creates canvas for given image and draws image, optionally with given new size. If no width/height is given, the canvas will be of same size as image. |
 |  [imagePromise](./pixel.imagepromise.md) | Async function. Loads image from given <code>src</code> URL. |
 |  [luminanceABGR](./pixel.luminanceabgr.md) |  |
-|  [prepRegions](./pixel.prepregions.md) |  |
 |  [RGB565](./pixel.rgb565.md) |  |
 |  [RGB888](./pixel.rgb888.md) |  |
-|  [setChannelConvert](./pixel.setchannelconvert.md) |  |
-|  [setChannelSame](./pixel.setchannelsame.md) |  |
-|  [setChannelUni](./pixel.setchanneluni.md) |  |
 |  [transformABGR](./pixel.transformabgr.md) |  |
 
 ## Type Aliases

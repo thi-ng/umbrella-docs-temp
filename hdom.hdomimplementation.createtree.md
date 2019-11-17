@@ -4,11 +4,7 @@
 
 ## HDOMImplementation.createTree() method
 
-Realizes the given hdom tree in the target below the `parent` node, e.g. in the case of the browser DOM, creates all required DOM elements encoded by the given hdom tree. If `parent` is null the result tree won't be attached to any parent. If `child` is given, the new elements will be inserted at given child index.
-
-For any components with `init` life cycle methods, the implementation MUST call `init` with the created element, the user provided context (obtained from `opts`<!-- -->) and any other args. `createTree()` returns the created root element(s) - usually only a single one, but can be an array of elements, if the provided tree is an iterable of multiple roots. The default implementation creates text nodes for non-component values. Returns `parent` if tree is `null` or `undefined`<!-- -->.
-
-Implementations MUST check for the presence of the `__impl` control attribute on each branch. If given, the current implementation MUST delegate to the `createTree()` method of the specified implementation and not descent into that branch further itself.
+Realizes the given hdom tree in the target below the `parent` node, e.g. in the case of the browser DOM, creates all required DOM elements encoded by the given hdom tree.
 
 <b>Signature:</b>
 
@@ -21,12 +17,20 @@ createTree(opts: Partial<HDOMOpts>, parent: T, tree: any, child?: number, init?:
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  opts | <code>Partial&lt;HDOMOpts&gt;</code> |  |
-|  parent | <code>T</code> |  |
-|  tree | <code>any</code> |  |
-|  child | <code>number</code> |  |
-|  init | <code>boolean</code> |  |
+|  parent | <code>T</code> | parent node in target (e.g. DOM element) |
+|  tree | <code>any</code> | component tree |
+|  child | <code>number</code> | child index |
+|  init | <code>boolean</code> | true, if [ILifecycle.init()](./hdom.ilifecycle.init.md) methods are called |
 
 <b>Returns:</b>
 
 `T | T[]`
+
+## Remarks
+
+If `parent` is null the result tree won't be attached to any parent. If `child` is given, the new elements will be inserted at given child index.
+
+For any components with `init` life cycle methods, the implementation MUST call `init` with the created element, the user provided context (obtained from `opts`<!-- -->) and any other args. `createTree()` returns the created root element(s) - usually only a single one, but can be an array of elements, if the provided tree is an iterable of multiple roots. The default implementation creates text nodes for non-component values. Returns `parent` if tree is `null` or `undefined`<!-- -->.
+
+Implementations MUST check for the presence of the `__impl` control attribute on each branch. If given, the current implementation MUST delegate to the `createTree()` method of the specified implementation and not descent into that branch further itself.
 

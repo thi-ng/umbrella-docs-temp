@@ -16,7 +16,7 @@ getElementById(id: string): T | null;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  id | <code>string</code> |  |
+|  id | <code>string</code> | element ID |
 
 <b>Returns:</b>
 
