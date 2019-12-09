@@ -4,6 +4,8 @@
 
 ## pairs() function
 
+Iterator yielding key-value pairs of given object's own properties and their values. Same as `zip(keys(x), vals(x))`<!-- -->.
+
 <b>Signature:</b>
 
 ```typescript
@@ -19,4 +21,17 @@ export declare function pairs<T>(x: IObjectOf<T>): IterableIterator<[string, T]>
 <b>Returns:</b>
 
 `IterableIterator<[string, T]>`
+
+## Remarks
+
+- [vals()](./transducers.vals.md) - [zip()](./transducers.zip.md)
+
+## Example
+
+
+```ts
+[...pairs({ a: 1, b: 2 })]
+// [['a', 1], ['b', 2]]
+
+```
 

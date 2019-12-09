@@ -6,21 +6,6 @@
 
 Transducer which for each input `x` (apart from the very first one) applies given predicate `pred` to previous input and `x`<!-- -->. Only passes values downstream as long as the predicate returns a falsy result. Once the result is truthy, `x` is considered converged and the transformation is terminated (by emitting a [reduced](./transducers.reduced.md) value).
 
-This can be used to limit processing of inputs only as long as there're noticeable changes (according to the predicate) and then stop the transducer pipeline once results have converged.
-
-```
-// process as long as difference to prev value is >= 0.01
-[...converge(
-      // predicate
-      (a, b) => Math.abs(a - b) < 0.01,
-      // input sequence
-      iterate((x, i) => x + Math.pow(2, -i), 0)
-)]
-// [ 0, 0.5, 0.75, 0.875, 0.9375, 0.96875, 0.984375, 0.9921875 ]
-
-```
-[takeWhile()](./transducers.takewhile.md)
-
 <b>Signature:</b>
 
 ```typescript
@@ -36,4 +21,25 @@ export declare function converge<T>(pred?: Predicate2<T>): Transducer<T, T>;
 <b>Returns:</b>
 
 `Transducer<T, T>`
+
+## Remarks
+
+This can be used to limit processing of inputs only as long as there're noticeable changes (according to the predicate) and then stop the transducer pipeline once results have converged.
+
+See also: [takeWhile()](./transducers.takewhile.md)
+
+## Example
+
+
+```ts
+// process as long as difference to prev value is >= 0.01
+[...converge(
+      // predicate
+      (a, b) => Math.abs(a - b) < 0.01,
+      // input sequence
+      iterate((x, i) => x + Math.pow(2, -i), 0)
+)]
+// [ 0, 0.5, 0.75, 0.875, 0.9375, 0.96875, 0.984375, 0.9921875 ]
+
+```
 

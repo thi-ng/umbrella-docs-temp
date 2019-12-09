@@ -6,12 +6,6 @@
 
 Transducer. Applies given `fn` to each incoming value and collects values until the return value of the `fn` has changed. Once this happens yields chunk of buffered values.
 
-```
-[...partitionBy((x) => x & 1, [1, 2, 4, 6, 3, 5, 8, 4])]
-// [ [ 1 ], [ 2, 4, 6 ], [ 3, 5 ], [ 8, 4 ] ]
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -28,4 +22,13 @@ export declare function partitionBy<T>(fn: Fn<T, any> | (() => Fn<T, any>), stat
 <b>Returns:</b>
 
 `Transducer<T, T[]>`
+
+## Example
+
+
+```ts
+[...partitionBy((x) => x & 1, [1, 2, 4, 6, 3, 5, 8, 4])]
+// [ [ 1 ], [ 2, 4, 6 ], [ 3, 5 ], [ 8, 4 ] ]
+
+```
 

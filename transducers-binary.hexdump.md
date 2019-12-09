@@ -4,7 +4,7 @@
 
 ## hexDump() function
 
-Transforms bytes into a sequence of hexdump lines with configurable number of `columns` and `address` offset. Uses  internally, so new lines are only produced once filled. If the input hasn't an exact multiple of `cols` bytes, the last line will be padded with zeroes.
+Transforms bytes into a sequence of hexdump lines with configurable number of `columns` and `address` offset. Uses [partition()](./transducers.partition.md) internally, so new lines are only produced once filled. If the input hasn't an exact multiple of `cols` bytes, the last line will be padded with zeroes.
 
 <b>Signature:</b>
 

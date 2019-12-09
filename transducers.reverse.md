@@ -6,12 +6,6 @@
 
 Yields iterator which consumes input and yield its values in reverse order. Important: Input MUST be finite.
 
-```
-[...tx.reverse("hello world")]
-// [ "d", "l", "r", "o", "w", " ", "o", "l", "l", "e", "h" ]
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -27,4 +21,13 @@ export declare function reverse<T>(input: Iterable<T>): IterableIterator<T>;
 <b>Returns:</b>
 
 `IterableIterator<T>`
+
+## Example
+
+
+```ts
+[...tx.reverse("hello world")]
+// [ "d", "l", "r", "o", "w", " ", "o", "l", "l", "e", "h" ]
+
+```
 

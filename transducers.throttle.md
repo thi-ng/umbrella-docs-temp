@@ -6,10 +6,6 @@
 
 Similar to [filter()](./transducers.filter.md)<!-- -->, but works with possibly stateful predicates to achieve rate limiting capabilities. Emits only values when predicate returns a truthy value.
 
-To support multiple instances of stateful predicates, the predicate itself must be wrapped in a no-arg function, which is called when the transducer initializes. Any stateful initialization of the predicate MUST be done in this function and the function MUST return a 1-arg function, the actual predicate applied to each value.
-
-Also see: [throttleTime()](./transducers.throttletime.md)<!-- -->.
-
 <b>Signature:</b>
 
 ```typescript
@@ -25,4 +21,10 @@ export declare function throttle<T>(pred: StatefulPredicate<T>): Transducer<T, T
 <b>Returns:</b>
 
 `Transducer<T, T>`
+
+## Remarks
+
+To support multiple instances of stateful predicates, the predicate itself must be wrapped in a no-arg function, which is called when the transducer initializes. Any stateful initialization of the predicate MUST be done in this function and the function MUST return a 1-arg function, the actual predicate applied to each value.
+
+Also see: [throttleTime()](./transducers.throttletime.md)<!-- -->.
 

@@ -6,14 +6,18 @@
 
 Returns function accepting a single index arg used to lookup value in given array. No bounds checks are done.
 
-```
-[...map(lookup1d([10, 20, 30]), [2,0,1])]
-// [ 30, 10, 20 ]
-
-```
-
 <b>Signature:</b>
 
 ```typescript
 lookup1d: <T>(src: T[]) => (i: number) => T
 ```
+
+## Example
+
+
+```ts
+[...map(lookup1d([10, 20, 30]), [2,0,1])]
+// [ 30, 10, 20 ]
+
+```
+

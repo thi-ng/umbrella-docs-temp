@@ -6,7 +6,7 @@
 
 > Warning: This API is now obsolete.
 > 
-> use 
+> use [juxt()](./compose.juxt.md)
 > 
 
 <b>Signature:</b>

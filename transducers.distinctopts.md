@@ -14,6 +14,6 @@ export interface DistinctOpts<T>
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [cache](./transducers.distinctopts.cache.md) | <code>Fn0&lt;Set&lt;any&gt;&gt;</code> |  |
-|  [key](./transducers.distinctopts.key.md) | <code>Fn&lt;T, any&gt;</code> |  |
+|  [cache](./transducers.distinctopts.cache.md) | <code>Fn0&lt;Set&lt;any&gt;&gt;</code> | Cache factory. Must produce a ES6 Set-like instance used to keep track of seen key values. |
+|  [key](./transducers.distinctopts.key.md) | <code>Fn&lt;T, any&gt;</code> | Key extractor function. |
 

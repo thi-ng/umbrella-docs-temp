@@ -6,15 +6,6 @@
 
 Stateful transducer which accepts any input and flips between given `on` / `off` values for every value received. The `initial` state can be optionally provided (default: false) and must be given if used as an iterator.
 
-```
-[...toggle(1, 0, false, [1, 2, 3, 4])]
-// [ 1, 0, 1, 0 ]
-
-[...tx.toggle("on", "off", true, [1, 2, 3, 4])]
-// [ 'off', 'on', 'off', 'on' ]
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -32,4 +23,16 @@ export declare function toggle<T>(on: T, off: T, initial?: boolean): Transducer<
 <b>Returns:</b>
 
 `Transducer<any, T>`
+
+## Example
+
+
+```ts
+[...toggle(1, 0, false, [1, 2, 3, 4])]
+// [ 1, 0, 1, 0 ]
+
+[...tx.toggle("on", "off", true, [1, 2, 3, 4])]
+// [ 'off', 'on', 'off', 'on' ]
+
+```
 

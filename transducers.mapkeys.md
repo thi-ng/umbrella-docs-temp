@@ -6,18 +6,6 @@
 
 Takes a `keys` object of transformation functions and returns a transducer which expects object values. For each input `x` then calls transformation functions for each key `k` in `keys`<!-- -->. I.e. executes `keys[k](x[k])` and reassigns result. By default creates a shallow copy of each `x`<!-- -->.
 
-```
-[...mapKeys(
-  {
-    a: (x) => x != null ? x * 10 : x,
-    b: (x) => x != null ? x * 100: "n/a"
-  },
-  [{a: 1, b: 2}, {c: 3, d: 4}]
-)]
-// [ { a: 10, b: 200 }, { c: 3, d: 4, b: 'n/a', a: undefined } ]
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -34,4 +22,19 @@ export declare function mapKeys(keys: IObjectOf<Fn<any, any>>, copy?: boolean): 
 <b>Returns:</b>
 
 `Transducer<any, any>`
+
+## Example
+
+
+```ts
+[...mapKeys(
+  {
+    a: (x) => x != null ? x * 10 : x,
+    b: (x) => x != null ? x * 100: "n/a"
+  },
+  [{a: 1, b: 2}, {c: 3, d: 4}]
+)]
+// [ { a: 10, b: 200 }, { c: 3, d: 4, b: 'n/a', a: undefined } ]
+
+```
 

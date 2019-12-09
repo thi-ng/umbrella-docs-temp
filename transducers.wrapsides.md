@@ -4,9 +4,7 @@
 
 ## wrapSides() function
 
-Yields iterator of `src` with the last `numLeft` values of `src` prepended at the beginning and/or the first `numRight` values appended at the end. `numLeft` defaults to 1 and `numRight` defaults to same value as `numLeft`<!-- -->, therefore wraps both sides by default and throws error if either `nXXX` &lt; 0 or larger than `src.length`<!-- -->.
-
-- [extendSides()](./transducers.extendsides.md) - [padSides](./transducers.padsides.md)
+Yields iterator of `src` with the last `numLeft` values of `src` prepended at the beginning and/or the first `numRight` values appended at the end.
 
 <b>Signature:</b>
 
@@ -25,4 +23,10 @@ export declare function wrapSides<T>(src: Iterable<T>, numLeft?: number, numRigh
 <b>Returns:</b>
 
 `Generator<T, void, undefined>`
+
+## Remarks
+
+`numLeft` defaults to 1 and `numRight` defaults to same value as `numLeft`<!-- -->, therefore wraps both sides by default and throws error if either `nXXX < 0` or larger than `src.length`<!-- -->.
+
+See also: - [extendSides()](./transducers.extendsides.md) - [padSides](./transducers.padsides.md)
 

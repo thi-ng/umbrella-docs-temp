@@ -4,22 +4,7 @@
 
 ## page() function
 
-Pagination helper. Returns transducer which extracts only items for given page number (and page length, default 10). When composing with other transducers, it's most efficient if [page()](./transducers.page.md) is used prior to any heavy processing steps.
-
-```
-[...page(0, 5, range(12))]
-// [ 0, 1, 2, 3, 4 ]
-
-[...page(1, 5, range(12))]
-// [ 5, 6, 7, 8, 9 ]
-
-[...page(2, 5, range(12))]
-// [ 10, 11 ]
-
-[...page(3, 5, range(12))]
-// []
-
-```
+Pagination helper. Returns transducer which extracts only items for given page number (and page length, default 10).
 
 <b>Signature:</b>
 
@@ -37,4 +22,26 @@ export declare function page<T>(page: number, pageLen?: number): Transducer<T, T
 <b>Returns:</b>
 
 `Transducer<T, T>`
+
+## Remarks
+
+When [composing](./transducers.comp.md) with other transducers, it's most efficient if `page` is used as early as possible / prior to any heavy processing steps.
+
+## Example
+
+
+```ts
+[...page(0, 5, range(12))]
+// [ 0, 1, 2, 3, 4 ]
+
+[...page(1, 5, range(12))]
+// [ 5, 6, 7, 8, 9 ]
+
+[...page(2, 5, range(12))]
+// [ 10, 11 ]
+
+[...page(3, 5, range(12))]
+// []
+
+```
 

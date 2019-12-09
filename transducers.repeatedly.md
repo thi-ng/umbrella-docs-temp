@@ -4,6 +4,8 @@
 
 ## repeatedly() function
 
+Iterator yielding return values of given no-arg function `fn`<!-- -->. If `n` is given, only that many values will be produced, else the iterator is infinite.
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,10 +16,19 @@ export declare function repeatedly<T>(fn: Fn0<T>, n?: number): Generator<T, void
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  fn | <code>Fn0&lt;T&gt;</code> |  |
-|  n | <code>number</code> |  |
+|  fn | <code>Fn0&lt;T&gt;</code> | value producer |
+|  n | <code>number</code> | num values (default: ∞) |
 
 <b>Returns:</b>
 
 `Generator<T, void, unknown>`
+
+## Example
+
+
+```ts
+[...repeatedly(() => Math.floor(Math.random() * 10), 5)]
+// [7, 0, 9, 3, 1]
+
+```
 

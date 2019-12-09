@@ -6,12 +6,6 @@
 
 Yields an iterator of all `src` values, followed by the same values in reverse order. Efficiently builds the reversed order via an internal linked list.
 
-```
-[...symmetric([1, 2, 3])]
-// [ 1, 2, 3, 3, 2, 1 ]
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -27,4 +21,13 @@ export declare function symmetric<T>(src: Iterable<T>): Generator<T, void, unkno
 <b>Returns:</b>
 
 `Generator<T, void, unknown>`
+
+## Example
+
+
+```ts
+[...symmetric([1, 2, 3])]
+// [ 1, 2, 3, 3, 2, 1 ]
+
+```
 

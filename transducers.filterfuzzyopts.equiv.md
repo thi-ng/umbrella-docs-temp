@@ -4,6 +4,8 @@
 
 ## FilterFuzzyOpts.equiv property
 
+Equivalence predicate function.
+
 <b>Signature:</b>
 
 ```typescript

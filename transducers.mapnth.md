@@ -4,17 +4,7 @@
 
 ## mapNth() function
 
-Transducer. Similar to [map()](./transducers.map.md)<!-- -->, but only transforms every `n`<!-- -->-th input value and passes intermediate values unchanged downstream. The optional `offset` arg can be used to adjust the number of inputs before the first transformation occurs (default 0).
-
-```
-[...mapNth(3, (x) => x * 10, range(1,10))]
-// [ 10, 2, 3, 40, 5, 6, 70, 8, 9 ]
-
-// with offset
-[...mapNth(3, 5, (x) => x * 10, range(1,10))]
-// [ 1, 2, 3, 4, 5, 60, 7, 8, 90 ]
-
-```
+Transducer. Similar to [map()](./transducers.map.md)<!-- -->, but only transforms every `n`<!-- -->-th input value and passes intermediate values unchanged downstream.
 
 <b>Signature:</b>
 
@@ -32,4 +22,21 @@ export declare function mapNth<A, B>(n: number, fn: Fn<A, B>): Transducer<A, A |
 <b>Returns:</b>
 
 `Transducer<A, A | B>`
+
+## Remarks
+
+The optional `offset` arg can be used to adjust the number of inputs before the first transformation occurs (default 0).
+
+## Example
+
+
+```ts
+[...mapNth(3, (x) => x * 10, range(1,10))]
+// [ 10, 2, 3, 40, 5, 6, 70, 8, 9 ]
+
+// with offset
+[...mapNth(3, 5, (x) => x * 10, range(1,10))]
+// [ 1, 2, 3, 4, 5, 60, 7, 8, 90 ]
+
+```
 

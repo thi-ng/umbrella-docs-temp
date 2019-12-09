@@ -30,7 +30,7 @@
 |  [sd(period, scale)](./transducers-stats.sd.md) | Moving standard deviation, calculates mean square error to SMA and yields sequence of <code>sqrt(error / period)</code>.[https://en.wikipedia.org/wiki/Bollinger\_Bands](https://en.wikipedia.org/wiki/Bollinger_Bands)<!-- -->Note: the number of results will be <code>period-1</code> less than the number of processed inputs. |
 |  [sd(src)](./transducers-stats.sd_1.md) |  |
 |  [sd(period, scale, src)](./transducers-stats.sd_2.md) |  |
-|  [sma(period)](./transducers-stats.sma.md) | Like , but using more efficient linked list as sliding window buffer.<!-- -->Note: the number of results will be <code>period-1</code> less than the number of processed inputs. |
+|  [sma(period)](./transducers-stats.sma.md) | Like [movingAverage()](./transducers.movingaverage.md)<!-- -->, but using more efficient linked list as sliding window buffer.<!-- -->Note: the number of results will be <code>period-1</code> less than the number of processed inputs. |
 |  [sma(period, src)](./transducers-stats.sma_1.md) |  |
 |  [stochastic(periodK, periodD1, periodD2)](./transducers-stats.stochastic.md) | Stochastic oscillator. Yields tuples of <code>[%K, %D1, %D2]</code>, where:<!-- -->- %K = (curr - L5) / (H5 - L5) - %D1 = SMA(%K, periodD1) - %D2 = SMA(%D1, periodD2)[https://en.wikipedia.org/wiki/Stochastic\_oscillator](https://en.wikipedia.org/wiki/Stochastic_oscillator) |
 |  [stochastic(src)](./transducers-stats.stochastic_1.md) |  |

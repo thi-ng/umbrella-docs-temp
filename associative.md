@@ -23,15 +23,15 @@
 
 |  Function | Description |
 |  --- | --- |
-|  [differenceR()](./associative.differencer.md) | Reducer version of [difference](./associative.difference.md)<!-- -->. If <code>src</code> is given returns the reduced difference of given inputs, else merely returns a reducer to be used with  /  functions. |
+|  [differenceR()](./associative.differencer.md) | Reducer version of [difference](./associative.difference.md)<!-- -->. If <code>src</code> is given returns the reduced difference of given inputs, else merely returns a reducer to be used with [reduce()](./transducers.reduce.md) / [transduce()](./transducers.transduce.md) functions. |
 |  [differenceR(src)](./associative.differencer_1.md) |  |
 |  [dissoc(map, keys)](./associative.dissoc.md) |  |
 |  [dissoc(set, keys)](./associative.dissoc_1.md) |  |
-|  [intersectionR()](./associative.intersectionr.md) | Reducer version of [intersection](./associative.intersection.md)<!-- -->. If <code>src</code> is given returns the reduced intersection of given inputs, else merely returns a reducer to be used with  /  functions. |
+|  [intersectionR()](./associative.intersectionr.md) | Reducer version of [intersection](./associative.intersection.md)<!-- -->. If <code>src</code> is given returns the reduced intersection of given inputs, else merely returns a reducer to be used with [reduce()](./transducers.reduce.md) / [transduce()](./transducers.transduce.md) functions. |
 |  [intersectionR(src)](./associative.intersectionr_1.md) |  |
 |  [into(dest, src)](./associative.into.md) | Adds elements from <code>src</code> iterable to <code>dest</code> Map or Set. |
 |  [into(dest, src)](./associative.into_1.md) |  |
-|  [unionR()](./associative.unionr.md) | Reducer version of [union](./associative.union.md)<!-- -->. If <code>src</code> is given returns the reduced union of given inputs, else merely returns a reducer to be used with  /  functions. |
+|  [unionR()](./associative.unionr.md) | Reducer version of [union](./associative.union.md)<!-- -->. If <code>src</code> is given returns the reduced union of given inputs, else merely returns a reducer to be used with [reduce()](./transducers.reduce.md) / [transduce()](./transducers.transduce.md) functions. |
 |  [unionR(src)](./associative.unionr_1.md) |  |
 
 ## Interfaces

@@ -4,12 +4,6 @@
 
 ## distinct() function
 
-```
-[...tx.distinct({ key: (x) => x.id }, [{id: 1, x: 2}, {id: 1, x: 3}])]
-// [ { id: 1, x: 2 } ]
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -25,4 +19,13 @@ export declare function distinct<T>(opts?: Partial<DistinctOpts<T>>): Transducer
 <b>Returns:</b>
 
 `Transducer<T, T>`
+
+## Example
+
+
+```ts
+[...distinct({ key: (x) => x.id }, [{id: 1, x: 2}, {id: 1, x: 3}])]
+// [ { id: 1, x: 2 } ]
+
+```
 

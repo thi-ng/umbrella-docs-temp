@@ -4,11 +4,7 @@
 
 ## partitionSync() function
 
-This transducer is intended for synchronization and provenance tracking of possibly previously merged inputs. It partitions the input into labeled tuple objects with the object keys obtained from the user provided `keyfn` (which is applied to each input value).
-
-By default, a new result is only produced once values from \*\*all\*\* given labeled sources have been received. Only labels contained in the provided key set are used, others are skipped. The result tuples will contain the most recent consumed value from each labeled input. In dataflow scenarios this can be used to ensure a subsequent operation consuming these tuples has all necessary inputs, regardless of the individual rates of change of each original (pre-merge) input.
-
-If the `mergeOnly` option is set to true (default: false), \*\*no\*\* synchronization (waiting) of inputs is applied and potentially partially populated tuple objects will be emitted for each received input value, however as with the default behavior, tuples will retain the most recent consumed value from other inputs.
+Transducer intended for synchronization and provenance tracking of possibly previously merged inputs. Partitions the input into labeled tuple objects with the object keys obtained from the user provided `keyfn` (which is applied to each input value).
 
 <b>Signature:</b>
 
@@ -26,6 +22,12 @@ export declare function partitionSync<T>(keys: PropertyKey[] | Set<PropertyKey>,
 <b>Returns:</b>
 
 `Transducer<T, IObjectOf<T>>`
+
+## Remarks
+
+By default, a new result is only produced once values from \*\*all\*\* given labeled sources have been received. Only labels contained in the provided key set are used, others are skipped. The result tuples will contain the most recent consumed value from each labeled input. In dataflow scenarios this can be used to ensure a subsequent operation consuming these tuples has all necessary inputs, regardless of the individual rates of change of each original (pre-merge) input.
+
+If the `mergeOnly` option is set to true (default: false), \*\*no\*\* synchronization (waiting) of inputs is applied and potentially partially populated tuple objects will be emitted for each received input value, however as with the default behavior, tuples will retain the most recent consumed value from other inputs.
 
 ## Example
 
@@ -45,8 +47,21 @@ src = [
 ```
 In addition to the default mode of operation, i.e. waiting for new values from \*all\* named inputs before a new tuple is produced, the behavior for \*all but the first tuple\* can be changed to emit new tuples as soon as a new value with a qualifying label has become available (with other values in the tuple remaining). Compare with above example:
 
-\`\`\` // passing `false` to disable tuple reset \[...partitionSync( \["a", "b"\], { key: (x) =<!-- -->&gt; x\[0\], reset: false }<!-- -->, src )\] // \[ { a: \["a", 2\], b: \["b", 10\] }<!-- -->, // { a: \["a", 2\], b: \["b", 11\] }<!-- -->, // { a: \["a", 3\], b: \["b", 11\] } \]
+```ts
+// passing `false` to disable tuple reset
+[...partitionSync(
+  ["a", "b"],
+  {
+    key: (x) => x[0],
+    reset: false
+  },
+  src
+)]
+// [ { a: ["a", 2], b: ["b", 10] },
+//   { a: ["a", 2], b: ["b", 11] },
+//   { a: ["a", 3], b: ["b", 11] } ]
 
+```
 By default, the last emitted tuple is allowed to be incomplete (in case the input closed). To only allow complete tuples, set the optional `all` arg to false.
 
 Note: If the `keys` set of allowed labels is modified externally, the tuple size will adjust accordingly (only if given as set, will not work if keys are provided as array).

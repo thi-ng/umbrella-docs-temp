@@ -4,7 +4,7 @@
 
 ## movingMedian() function
 
-Transducer. Similar to [movingAverage()](./transducers.movingaverage.md)<!-- -->, but yields median of sliding window and supports non-numeric inputs. The optional `key` and `cmp` function args can be used to select / compute a sortable value and change sorting behavior.
+Transducer. Similar to [movingAverage()](./transducers.movingaverage.md)<!-- -->, but yields median of sliding window and supports non-numeric inputs.
 
 <b>Signature:</b>
 
@@ -22,4 +22,8 @@ export declare function movingMedian<A, B>(n: number, opts?: Partial<SortOpts<A,
 <b>Returns:</b>
 
 `Transducer<A, A>`
+
+## Remarks
+
+The optional `key` and `cmp` function options can be used to select / compute a sortable value and change sorting behavior.
 

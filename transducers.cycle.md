@@ -4,6 +4,8 @@
 
 ## cycle() function
 
+Iterator which yields an infinite repetition of given `input` iterable's values. Produces no values if `input` is empty.
+
 <b>Signature:</b>
 
 ```typescript
@@ -19,4 +21,13 @@ export declare function cycle<T>(input: Iterable<T>): Generator<T, void, undefin
 <b>Returns:</b>
 
 `Generator<T, void, undefined>`
+
+## Example
+
+
+```ts
+[...take(5, cycle([1, 2, 3]))]
+// [1, 2, 3, 1, 2]
+
+```
 

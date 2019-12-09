@@ -4,18 +4,7 @@
 
 ## scan() function
 
-Transducer which performs "scan" operation via given reducer. Note: If an input `src` is given an initial result `init` must be provided too as arg. Use `null` or `undefined` to use the given reducer's default.
-
-[https://en.wikipedia.org/wiki/Prefix\_sum\#Scan\_higher\_order\_function](https://en.wikipedia.org/wiki/Prefix_sum#Scan_higher_order_function)
-
-```
-[...iterator(scan(add()), range(10))]
-// [ 0, 1, 3, 6, 10, 15, 21, 28, 36, 45 ]
-
-[...scan(add(), null, range(10))]
-// [ 0, 1, 3, 6, 10, 15, 21, 28, 36, 45 ]
-
-```
+Transducer which performs "scan" operation via given reducer.
 
 <b>Signature:</b>
 
@@ -33,4 +22,20 @@ export declare function scan<A, B>(rfn: Reducer<B, A>, init?: B): Transducer<A, 
 <b>Returns:</b>
 
 `Transducer<A, B>`
+
+## Remarks
+
+[https://en.wikipedia.org/wiki/Prefix\_sum\#Scan\_higher\_order\_function](https://en.wikipedia.org/wiki/Prefix_sum#Scan_higher_order_function)
+
+## Example
+
+
+```ts
+[...iterator(scan(add()), range(10))]
+// [ 0, 1, 3, 6, 10, 15, 21, 28, 36, 45 ]
+
+[...scan(add(), null, range(10))]
+// [ 0, 1, 3, 6, 10, 15, 21, 28, 36, 45 ]
+
+```
 

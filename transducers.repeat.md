@@ -4,6 +4,10 @@
 
 ## repeat() function
 
+Iterator yielding an infinite (by default) repetition of given value `x`<!-- -->. If `n` is given, only produces that many values.
+
+See also: [repeatedly()](./transducers.repeatedly.md)
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,10 +18,19 @@ export declare function repeat<T>(x: T, n?: number): Generator<T, void, unknown>
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  x | <code>T</code> |  |
-|  n | <code>number</code> |  |
+|  x | <code>T</code> | value to repeat |
+|  n | <code>number</code> | num values (default: ∞) |
 
 <b>Returns:</b>
 
 `Generator<T, void, unknown>`
+
+## Example
+
+
+```ts
+[...repeat(42, 5)]
+// [42, 42, 42, 42, 42]
+
+```
 

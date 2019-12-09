@@ -6,9 +6,17 @@
 
 Returns iterator of `src` padded with value `x`<!-- -->, repeated `numLeft`<!-- -->/`numRight` times (default: 1). By default both sides are padded, but can be adjusted by setting either of them to zero. `numRight` defaults to same value as `numLeft`<!-- -->.
 
+<b>Signature:</b>
+
+```typescript
+padSides: <T>(src: Iterable<T>, x: T, numLeft?: number, numRight?: number) => IterableIterator<T>
+```
+
+## Example
+
 Essentially, syntax sugar for:
 
-```
+```ts
 // default
 concat(repeat(x, numLeft), src, repeat(x, numRight))
 
@@ -21,8 +29,3 @@ concat(src, repeat(x, numRight))
 ```
 - [extendSides()](./transducers.extendsides.md) - [wrapSides()](./transducers.wrapsides.md)
 
-<b>Signature:</b>
-
-```typescript
-padSides: <T>(src: Iterable<T>, x: T, numLeft?: number, numRight?: number) => IterableIterator<T>
-```

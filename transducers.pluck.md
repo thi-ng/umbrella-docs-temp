@@ -6,12 +6,6 @@
 
 Transducer which looks up given `key` in each input and yields sequence of these values.
 
-```
-[...pluck("id", [{id: 1}, {id: 2}, {}])]
-// [ 1, 2, undefined ]
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -27,4 +21,13 @@ export declare function pluck<A, B>(key: PropertyKey): Transducer<A, B>;
 <b>Returns:</b>
 
 `Transducer<A, B>`
+
+## Example
+
+
+```ts
+[...pluck("id", [{id: 1}, {id: 2}, {}])]
+// [ 1, 2, undefined ]
+
+```
 

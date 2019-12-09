@@ -6,12 +6,6 @@
 
 Yields sequence of `n+1` monotonically increasing numbers in the closed interval (0.0 .. 1.0). If `n <= 0`<!-- -->, yields nothing.
 
-```
-[...normRange(4)]
-// [0, 0.25, 0.5, 0.75, 1.0]
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -28,4 +22,13 @@ export declare function normRange(n: number, inclLast?: boolean): Generator<numb
 <b>Returns:</b>
 
 `Generator<number, void, unknown>`
+
+## Example
+
+
+```ts
+[...normRange(4)]
+// [0, 0.25, 0.5, 0.75, 1.0]
+
+```
 

@@ -4,17 +4,28 @@
 
 ## deepTransform variable
 
-Higher-order deep object transformer. Accepts a nested `spec` array reflecting same key structure as the object to be mapped, but with functions or sub-specs as their values. Returns a new function, which when called, recursively applies nested transformers in post-order traversal (child transformers are run first) and returns the result of the root transformer.
+Higher-order deep object transformer used by [mapDeep()](./transducers.mapdeep.md)<!-- -->. Accepts a nested `spec` array reflecting same key structure as the object to be mapped, but with functions or sub-specs as their values. Returns a new function, which when called, recursively applies nested transformers in post-order traversal (child transformers are run first) and returns the result of the root transformer.
+
+<b>Signature:</b>
+
+```typescript
+deepTransform: (spec: TransformSpec) => (x: any) => any
+```
+
+## Remarks
 
 The transform specs are given as arrays in this format:
 
-```
-[tx-function, {key1: [tx-function, {...}], key2: tx-fn}]
+```ts
+[tx-function, { key1: [tx-function, {...}], key2: tx-fn }]
 
 ```
 If a key in the spec has no further sub maps, its transform function can be given directly without having to wrap it into the usual array structure.
 
-```
+## Example
+
+
+```ts
 // source object to be transformed
 src = {
    meta: {
@@ -56,8 +67,3 @@ deepTransform(spec)(src);
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-deepTransform: (spec: TransformSpec) => (x: any) => any
-```

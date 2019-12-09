@@ -6,10 +6,13 @@
 
 Yields transducer which wraps incoming values in promises, which each resolve after specified delay time (in ms).
 
-\*\*Only to be used in async contexts and NOT with [transduce()](./transducers.transduce.md) directly.\*\*
-
 <b>Signature:</b>
 
 ```typescript
 delayed: <T>(t: number) => Transducer<T, Promise<T>>
 ```
+
+## Remarks
+
+Only to be used in async contexts and NOT with [transduce()](./transducers.transduce.md) directly.
+

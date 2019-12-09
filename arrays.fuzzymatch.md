@@ -18,4 +18,5 @@ The optional `equiv` predicate can be used to customize item equality checking. 
 
 Adapted and generalized from: [https://github.com/bevacqua/fufuzzyzzysearch](https://github.com/bevacqua/fufuzzyzzysearch) (MIT)
 
+[filterFuzzy()](./transducers.filterfuzzy.md)
 

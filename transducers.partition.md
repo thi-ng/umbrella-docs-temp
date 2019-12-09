@@ -6,7 +6,26 @@
 
 Transducer to create overlapping and non-overlapping sliding windows of inputs. Window size and progress speed can be configured via `size` and `step`<!-- -->. By default only full / complete partitions are emitted. However, if `all` is true, the last partition is allowed to be incomplete / partially filled only.
 
+<b>Signature:</b>
+
+```typescript
+export declare function partition<T>(size: number): Transducer<T, T[]>;
 ```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  size | <code>number</code> |  |
+
+<b>Returns:</b>
+
+`Transducer<T, T[]>`
+
+## Example
+
+
+```ts
 [...partition(3, range(10))]
 // [ [ 0, 1, 2 ], [ 3, 4, 5 ], [ 6, 7, 8 ] ]
 
@@ -24,20 +43,4 @@ Transducer to create overlapping and non-overlapping sliding windows of inputs. 
 //   [ 7, 8, 9 ] ]
 
 ```
-
-<b>Signature:</b>
-
-```typescript
-export declare function partition<T>(size: number): Transducer<T, T[]>;
-```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  size | <code>number</code> |  |
-
-<b>Returns:</b>
-
-`Transducer<T, T[]>`
 

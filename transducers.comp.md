@@ -4,6 +4,8 @@
 
 ## comp() function
 
+Transducer composition. Returns new transducer which applies given transducers in left-to-right order.
+
 <b>Signature:</b>
 
 ```typescript
@@ -19,4 +21,8 @@ export declare function comp<A, B>(a: Transducer<A, B>): Transducer<A, B>;
 <b>Returns:</b>
 
 `Transducer<A, B>`
+
+## Remarks
+
+Fast (loop-free) paths are provided for up to 10 args (transducers).
 

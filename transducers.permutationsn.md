@@ -4,9 +4,22 @@
 
 ## permutationsN variable
 
-Iterator yielding the Cartesian Product for `n` items of `m` values each. If `m` is not given, defaults to value of `n`<!-- -->. The range of `m` is `0..m-1`<!-- -->. The optional `offsets` array can be used to define start values for each dimension.
+Iterator yielding the Cartesian Product for `n` items of `m` values each.
 
+<b>Signature:</b>
+
+```typescript
+permutationsN: (n: number, m?: number, offsets?: number[] | undefined) => IterableIterator<number[]>
 ```
+
+## Remarks
+
+If `m` is not given, defaults to value of `n`<!-- -->. The range of `m` is `0..m-1`<!-- -->. The optional `offsets` array can be used to define start values for each dimension.
+
+## Example
+
+
+```ts
 [...permutationsN(2)]
 // [ [0, 0], [0, 1], [1, 0], [1, 1] ]
 
@@ -20,8 +33,3 @@ Iterator yielding the Cartesian Product for `n` items of `m` values each. If `m`
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-permutationsN: (n: number, m?: number, offsets?: number[] | undefined) => IterableIterator<number[]>
-```

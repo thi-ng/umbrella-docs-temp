@@ -6,7 +6,19 @@
 
 Stateful transducer. Ignores the actual input values, but produces time measurements since last value processed, e.g. for use in async usage contexts.
 
+<b>Signature:</b>
+
+```typescript
+export declare function benchmark(): Transducer<any, number>;
 ```
+<b>Returns:</b>
+
+`Transducer<any, number>`
+
+## Example
+
+
+```ts
 // example using @thi.ng/rstream
 rstream
     .fromInterval(1000)
@@ -16,13 +28,4 @@ rstream
     )
 
 ```
-
-<b>Signature:</b>
-
-```typescript
-export declare function benchmark(): Transducer<any, number>;
-```
-<b>Returns:</b>
-
-`Transducer<any, number>`
 

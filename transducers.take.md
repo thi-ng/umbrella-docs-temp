@@ -6,12 +6,6 @@
 
 Transducer which only yields the first `n` values and then terminates transformation (by emitting a [reduced](./transducers.reduced.md) value).
 
-```
-[...iterator(comp(take(5), map((x) => x * 10)), range(10))]
-// [ 0, 10, 20, 30, 40 ]
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -27,4 +21,13 @@ export declare function take<T>(n: number): Transducer<T, T>;
 <b>Returns:</b>
 
 `Transducer<T, T>`
+
+## Example
+
+
+```ts
+[...iterator(comp(take(5), map((x) => x * 10)), range(10))]
+// [ 0, 10, 20, 30, 40 ]
+
+```
 

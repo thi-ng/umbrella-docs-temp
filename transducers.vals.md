@@ -4,6 +4,8 @@
 
 ## vals() function
 
+Iterator which yields all values of given object's own properties (Similar to `Object.values()`<!-- -->).
+
 <b>Signature:</b>
 
 ```typescript
@@ -19,4 +21,8 @@ export declare function vals<T>(x: IObjectOf<T>): IterableIterator<T>;
 <b>Returns:</b>
 
 `IterableIterator<T>`
+
+## Remarks
+
+See also: - [keys()](./transducers.keys.md) - [pairs()](./transducers.pairs.md)
 

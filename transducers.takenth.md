@@ -6,12 +6,6 @@
 
 Transducer which only yields every `n`<!-- -->-th value from the input source.
 
-```
-[...takeNth(3, range(10))]
-// [ 0, 3, 6, 9 ]
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -27,4 +21,13 @@ export declare function takeNth<T>(n: number): Transducer<T, T>;
 <b>Returns:</b>
 
 `Transducer<T, T>`
+
+## Example
+
+
+```ts
+[...takeNth(3, range(10))]
+// [ 0, 3, 6, 9 ]
+
+```
 

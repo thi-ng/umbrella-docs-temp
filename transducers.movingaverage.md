@@ -4,11 +4,7 @@
 
 ## movingAverage() function
 
-Computes the Simple Moving Average of given period. [https://en.wikipedia.org/wiki/Moving\_average\#Simple\_moving\_average](https://en.wikipedia.org/wiki/Moving_average#Simple_moving_average)
-
-Note: the number of results will be `period-1` less than the number of processed inputs and no outputs will be produced if there were less than `period` input values.
-
-Also see the [@thi.ng/transducers-stats](./transducers-stats.md) package for more optimized and alternative MAs.
+Computes the [Simple Moving Average](https://en.wikipedia.org/wiki/Moving_average#Simple_moving_average) of given period.
 
 <b>Signature:</b>
 
@@ -25,4 +21,10 @@ export declare function movingAverage(period: number): Transducer<number, number
 <b>Returns:</b>
 
 `Transducer<number, number>`
+
+## Remarks
+
+The number of results will be `period-1` less than the number of processed inputs and no outputs will be produced if there were less than `period` input values.
+
+Also see the [@thi.ng/transducers-stats](./transducers-stats.md) package for more optimized and alternative MA strategies.
 

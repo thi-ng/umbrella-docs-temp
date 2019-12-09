@@ -6,15 +6,6 @@
 
 Yields iterator producing concatenation of given iterables. Undefined &amp; null inputs are silently ignored, however any such values produced or contained in an input will remain.
 
-```
-[...concat([1, 2, 3], null, [4, 5])]
-// [ 1, 2, 3, 4, 5 ]
-
-[...concat([1, 2, 3, undefined], null, [4, 5])]
-// [ 1, 2, 3, undefined, 4, 5 ]
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -30,4 +21,16 @@ export declare function concat<T>(...xs: Iterable<T>[]): IterableIterator<T>;
 <b>Returns:</b>
 
 `IterableIterator<T>`
+
+## Example
+
+
+```ts
+[...concat([1, 2, 3], null, [4, 5])]
+// [ 1, 2, 3, 4, 5 ]
+
+[...concat([1, 2, 3, undefined], null, [4, 5])]
+// [ 1, 2, 3, undefined, 4, 5 ]
+
+```
 

@@ -4,22 +4,7 @@
 
 ## multiplex() function
 
-Yields a new transducer which applies given transducers in parallel (using  &amp; [step](./transducers.step.md)<!-- -->) and produces tuples of results.
-
-Tip: Use [noop](./transducers.noop.md) transducer for lanes which should retain the original input values.
-
-```
-[...iterator(
-  multiplex(
-    map(x => x.charAt(0)),
-    map(x => x.toUpperCase()),
-    map(x => x.length)
-  ),
-  ["Alice", "Bob", "Charlie", "Andy"]
-)]
-// [ [ "A", "ALICE", 5 ], [ "B", "BOB", 3 ], [ "C", "CHARLIE", 7 ] ]
-
-```
+Yields a new transducer which applies given transducers in parallel (using [juxt()](./compose.juxt.md) &amp; [step](./transducers.step.md)<!-- -->) and produces tuples of results.
 
 <b>Signature:</b>
 
@@ -36,4 +21,24 @@ export declare function multiplex<T, A>(a: Transducer<T, A>): Transducer<T, [A]>
 <b>Returns:</b>
 
 `Transducer<T, [A]>`
+
+## Remarks
+
+Use the [noop](./transducers.noop.md) transducer for processing lanes which should retain the original input values.
+
+## Example
+
+
+```ts
+[...iterator(
+  multiplex(
+    map(x => x.charAt(0)),
+    map(x => x.toUpperCase()),
+    map(x => x.length)
+  ),
+  ["Alice", "Bob", "Charlie", "Andy"]
+)]
+// [ [ "A", "ALICE", 5 ], [ "B", "BOB", 3 ], [ "C", "CHARLIE", 7 ] ]
+
+```
 

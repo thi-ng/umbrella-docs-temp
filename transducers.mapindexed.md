@@ -4,7 +4,7 @@
 
 ## mapIndexed() function
 
-Transducer. Similar to [map()](./transducers.map.md)<!-- -->, but given `fn` takes two arguments: `index` and `value` to transform. An optional start index `offset` can be provided (default 0).
+Transducer. Similar to [map()](./transducers.map.md)<!-- -->, but given `fn` takes two arguments: `index` and `value` to transform.
 
 <b>Signature:</b>
 
@@ -22,6 +22,10 @@ export declare function mapIndexed<A, B>(fn: Fn2<number, A, B>, offset?: number)
 <b>Returns:</b>
 
 `Transducer<A, B>`
+
+## Remarks
+
+An optional start index `offset` can be provided (default 0).
 
 ## Example
 

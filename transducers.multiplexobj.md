@@ -6,22 +6,6 @@
 
 Transducer. Similar to (and building on) [multiplex()](./transducers.multiplex.md)<!-- -->, but takes an object of transducers and produces a result object for each input.
 
-```
-[...multiplexObj(
-  {
-    initial: map(x => x.charAt(0)),
-    upper:   map(x => x.toUpperCase()),
-    length:  map(x => x.length)
-  },
-  ["Alice", "Bob", "Charlie", "Andy"]
-)]
-// [ { length: 5, upper: 'ALICE', initial: 'A' },
-//   { length: 3, upper: 'BOB', initial: 'B' },
-//   { length: 7, upper: 'CHARLIE', initial: 'C' },
-//   { length: 4, upper: 'ANDY', initial: 'A' } ]
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -38,4 +22,23 @@ export declare function multiplexObj<A, B>(xforms: IObjectOf<Transducer<A, any>>
 <b>Returns:</b>
 
 `Transducer<A, B>`
+
+## Example
+
+
+```ts
+[...multiplexObj(
+  {
+    initial: map(x => x.charAt(0)),
+    upper:   map(x => x.toUpperCase()),
+    length:  map(x => x.length)
+  },
+  ["Alice", "Bob", "Charlie", "Andy"]
+)]
+// [ { length: 5, upper: 'ALICE', initial: 'A' },
+//   { length: 3, upper: 'BOB', initial: 'B' },
+//   { length: 7, upper: 'CHARLIE', initial: 'C' },
+//   { length: 4, upper: 'ANDY', initial: 'A' } ]
+
+```
 

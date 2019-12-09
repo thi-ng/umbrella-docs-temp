@@ -4,6 +4,8 @@
 
 ## DistinctOpts.cache property
 
+Cache factory. Must produce a ES6 Set-like instance used to keep track of seen key values.
+
 <b>Signature:</b>
 
 ```typescript

@@ -4,7 +4,7 @@
 
 ## asIterable() function
 
-Helper function to (re)provide given iterable in iterator form.
+Helper function / generator to (re)provide given iterable in iterator form.
 
 <b>Signature:</b>
 

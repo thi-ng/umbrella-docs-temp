@@ -34,7 +34,7 @@
 |  [bits(size, msb, src)](./transducers-binary.bits_3.md) |  |
 |  [bytes(cap)](./transducers-binary.bytes.md) |  |
 |  [bytes(cap, src)](./transducers-binary.bytes_1.md) |  |
-|  [hexDump(opts)](./transducers-binary.hexdump.md) | Transforms bytes into a sequence of hexdump lines with configurable number of <code>columns</code> and <code>address</code> offset. Uses  internally, so new lines are only produced once filled. If the input hasn't an exact multiple of <code>cols</code> bytes, the last line will be padded with zeroes. |
+|  [hexDump(opts)](./transducers-binary.hexdump.md) | Transforms bytes into a sequence of hexdump lines with configurable number of <code>columns</code> and <code>address</code> offset. Uses [partition()](./transducers.partition.md) internally, so new lines are only produced once filled. If the input hasn't an exact multiple of <code>cols</code> bytes, the last line will be padded with zeroes. |
 |  [hexDump(src)](./transducers-binary.hexdump_1.md) |  |
 |  [hexDump(opts, src)](./transducers-binary.hexdump_2.md) |  |
 |  [partitionBits(destSize, srcSize)](./transducers-binary.partitionbits.md) | Transducer. |

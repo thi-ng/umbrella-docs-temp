@@ -6,12 +6,6 @@
 
 Transducer which only yields the last `n` values. Assumes input source is finite (of course).
 
-```
-[...takeLast(3, range(10))]
-// [ 7, 8, 9 ]
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -27,4 +21,13 @@ export declare function takeLast<T>(n: number): Transducer<T, T>;
 <b>Returns:</b>
 
 `Transducer<T, T>`
+
+## Example
+
+
+```ts
+[...takeLast(3, range(10))]
+// [ 7, 8, 9 ]
+
+```
 

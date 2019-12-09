@@ -6,15 +6,6 @@
 
 Sliding window transducer, similar to `partition(size, 1)`<!-- -->, but supports initially partially filled windows, if `partial` is set to true (default). Each emitted window is a shallow copy of the internal accumulation buffer.
 
-```
-[...window(3, range(5))]
-// [ [ 0 ], [ 0, 1 ], [ 0, 1, 2 ], [ 1, 2, 3 ], [ 2, 3, 4 ] ]
-
-[...window(3, false, range(5))]
-// [ [ 0, 1, 2 ], [ 1, 2, 3 ], [ 2, 3, 4 ] ]
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -31,4 +22,16 @@ export declare function slidingWindow<T>(size: number, partial?: boolean): Trans
 <b>Returns:</b>
 
 `Transducer<T, T[]>`
+
+## Example
+
+
+```ts
+[...window(3, range(5))]
+// [ [ 0 ], [ 0, 1 ], [ 0, 1, 2 ], [ 1, 2, 3 ], [ 2, 3, 4 ] ]
+
+[...window(3, false, range(5))]
+// [ [ 0, 1, 2 ], [ 1, 2, 3 ], [ 2, 3, 4 ] ]
+
+```
 

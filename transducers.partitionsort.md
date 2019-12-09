@@ -4,23 +4,7 @@
 
 ## partitionSort() function
 
-Transducer. Composition of [partition()](./transducers.partition.md) and [mapcat()](./transducers.mapcat.md) which yields a \*\*partially\*\* sorted sequence of input values. Sorting is performed on sliding / non-overlapping chunks of `n` inputs. The optional `key` and `cmp` function args can be used to select / compute a sortable value and change sorting behavior.
-
-```
-[...partitionSort(4, [5,9,2,6,4,1,3,8,7,0])]
-// [ 2, 5, 6, 9, 1, 3, 4, 8, 0, 7 ]
-
-// with key fn and custom comparator
-[...partitionSort(3, (x) => x.val, (a, b) => b - a,
-  [
-    { id: "a", val: 5 },
-    { id: "b", val: 7 },
-    { id: "c", val: 8 }
-  ]
-)]
-// [ { id: 'c', val: 8 }, { id: 'b', val: 7 }, { id: 'a', val: 5 } ]
-
-```
+Transducer. Composition of [partition()](./transducers.partition.md) and [mapcat()](./transducers.mapcat.md) which yields a \*\*partially\*\* sorted sequence of input values. Sorting is performed on sliding / non-overlapping chunks of `n` inputs.
 
 <b>Signature:</b>
 
@@ -38,4 +22,27 @@ export declare function partitionSort<A, B>(n: number, opts?: Partial<SortOpts<A
 <b>Returns:</b>
 
 `Transducer<A, A>`
+
+## Remarks
+
+The optional `key` and `cmp` function args can be used to select / compute a sortable value and change sorting behavior.
+
+## Example
+
+
+```ts
+[...partitionSort(4, [5,9,2,6,4,1,3,8,7,0])]
+// [ 2, 5, 6, 9, 1, 3, 4, 8, 0, 7 ]
+
+// with key fn and custom comparator
+[...partitionSort(3, (x) => x.val, (a, b) => b - a,
+  [
+    { id: "a", val: 5 },
+    { id: "b", val: 7 },
+    { id: "c", val: 8 }
+  ]
+)]
+// [ { id: 'c', val: 8 }, { id: 'b', val: 7 }, { id: 'a', val: 5 } ]
+
+```
 

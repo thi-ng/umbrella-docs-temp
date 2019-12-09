@@ -4,20 +4,7 @@
 
 ## permutations() function
 
-Iterator yielding the Cartesian Product of the given iterables. All iterables MUST be finite! If any of the given iterables is empty the iterator yields no values.
-
-```
-[...permutations("ab", range(3))]
-// [ ['a', 0], ['a', 1], ['a', 2],
-//   ['b', 0], ['b', 1], ['b', 2] ]
-
-[...map((x: any[]) => x.join(""), permutations("ab", "-", range(3)))]
-// ['a-0', 'a-1', 'a-2', 'b-0', 'b-1', 'b-2']
-
-[...permutations([], "", range(0))]
-// []
-
-```
+Iterator yielding the Cartesian Product of the given iterables.
 
 <b>Signature:</b>
 
@@ -34,4 +21,24 @@ export declare function permutations<A>(a: Iterable<A>): IterableIterator<[A]>;
 <b>Returns:</b>
 
 `IterableIterator<[A]>`
+
+## Remarks
+
+All iterables MUST be finite! If any of the given iterables is empty the iterator yields no values.
+
+## Example
+
+
+```ts
+[...permutations("ab", range(3))]
+// [ ['a', 0], ['a', 1], ['a', 2],
+//   ['b', 0], ['b', 1], ['b', 2] ]
+
+[...map((x: any[]) => x.join(""), permutations("ab", "-", range(3)))]
+// ['a-0', 'a-1', 'a-2', 'b-0', 'b-1', 'b-2']
+
+[...permutations([], "", range(0))]
+// []
+
+```
 

@@ -4,9 +4,7 @@
 
 ## interpolateLinear() function
 
-Pre-configured version of [interpolate()](./transducers.interpolate.md) for numeric values and using pairwise linear interpolation. The number of samples per interval is configurable. No values will be produced if there're less than 2 inputs.
-
-- [interpolate()](./transducers.interpolate.md) - [interpolateHermite()](./transducers.interpolatehermite.md)
+Pre-configured version of [interpolate()](./transducers.interpolate.md) for numeric values and using pairwise linear interpolation.
 
 <b>Signature:</b>
 
@@ -23,4 +21,10 @@ export declare function interpolateLinear(n: number): Transducer<number, number>
 <b>Returns:</b>
 
 `Transducer<number, number>`
+
+## Remarks
+
+The number of samples per interval is configurable. No values will be produced if there're less than 2 inputs.
+
+See also: - [interpolate()](./transducers.interpolate.md) - [interpolateHermite()](./transducers.interpolatehermite.md)
 

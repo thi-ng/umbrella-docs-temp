@@ -4,13 +4,7 @@
 
 ## filterFuzzy() function
 
-Returns transducer which calls [fuzzyMatch](./arrays.fuzzymatch.md) for each value and discards all non-matching values. The optional `key` fn can be used to extract/produce the actual value used for the search. The optional `eq` predicate can be used to customize item equality checking. Uses @<!-- -->thi.ng/equiv by default.
-
-```
-[...filterFuzzy("ho", ["hello", "hallo", "hey", "heyoka"])]
-// ["hello", "hallo", "heyoka"]
-
-```
+Returns transducer which calls [fuzzyMatch](./arrays.fuzzymatch.md) for each value and discards all non-matching values.
 
 <b>Signature:</b>
 
@@ -28,4 +22,17 @@ export declare function filterFuzzy<A, B>(query: ArrayLike<B>, opts?: Partial<Fi
 <b>Returns:</b>
 
 `Transducer<A, A>`
+
+## Remarks
+
+The `key` option function can be used to extract/produce the actual value used for the search. The `equiv` option predicate can be used to customize item equality checking. Uses [equiv](./equiv.equiv.md) by default.
+
+## Example
+
+
+```ts
+[...filterFuzzy("ho", ["hello", "hallo", "hey", "heyoka"])]
+// ["hello", "hallo", "heyoka"]
+
+```
 

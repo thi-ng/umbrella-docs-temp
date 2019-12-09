@@ -6,9 +6,20 @@
 
 Single-step transducer execution wrapper. Returns array if transducer produces multiple results and undefined if there was no output. Else returns single result value.
 
+<b>Signature:</b>
+
+```typescript
+step: <A, B>(tx: Transducer<A, B>) => (x: A) => B | B[]
+```
+
+## Remarks
+
 Likewise, once a transducer has produced a final / reduced value, all further invocations of the stepper function will return undefined.
 
-```
+## Example
+
+
+```ts
 // single result
 step(map(x => x * 10))(1);
 // 10
@@ -31,8 +42,3 @@ f(1); // undefined
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-step: <A, B>(tx: Transducer<A, B>) => (x: A) => B | B[]
-```

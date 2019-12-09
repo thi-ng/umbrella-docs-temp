@@ -4,7 +4,7 @@
 
 ## wordWrap() function
 
-Returns transducer partitioning words into variable sized arrays based on given `lineLength` (default 80). The optional `delim` and `always` args can be used to adjust the length and usage of delimiters between each word. If `always` is true, the delimiter length is added to each word, even near line endings. If false (default), the last word on each line can still fit even if there's no space for the delimiter.
+Returns transducer partitioning words into variable sized arrays based on given `lineLength` (default 80).
 
 <b>Signature:</b>
 
@@ -22,4 +22,8 @@ export declare function wordWrap(lineLength: number, opts?: Partial<WordWrapOpts
 <b>Returns:</b>
 
 `Transducer<string, string[]>`
+
+## Remarks
+
+The optional `delim` and `always` args can be used to adjust the length and usage of delimiters between each word. If `always` is true, the delimiter length is added to each word, even near line endings. If false (default), the last word on each line can still fit even if there's no space for the delimiter.
 

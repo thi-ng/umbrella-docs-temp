@@ -6,12 +6,6 @@
 
 Transducer. Applies mapping function `fn` to each received value and passes result downstream to next reducer.
 
-```
-[...map((x) => x * 10, [1, 2, 3])]
-// [ 10, 20, 30 ]
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -27,4 +21,13 @@ export declare function map<A, B>(fn: Fn<A, B>): Transducer<A, B>;
 <b>Returns:</b>
 
 `Transducer<A, B>`
+
+## Example
+
+
+```ts
+[...map((x) => x * 10, [1, 2, 3])]
+// [ 10, 20, 30 ]
+
+```
 

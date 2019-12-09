@@ -4,20 +4,7 @@
 
 ## extendSides() function
 
-Yields iterator of given iterable which repeats the first and/or last value(s) `numLeft`<!-- -->/`numRight` times (default: 1). By default both sides are repeated, but can be adjusted by setting either of them to zero. `numRight` defaults to same value as `numLeft`<!-- -->.
-
-```
-[...extendSides([1, 2, 3])]
-// [ 1,  1, 2, 3,  3]
-
-[...extendSides([1, 2, 3], 3)]
-// [ 1, 1, 1,  1, 2, 3,  3, 3, 3 ]
-
-[...extendSides([1, 2, 3], 0, 3)]
-// [ 1, 2, 3,  3, 3, 3 ]
-
-```
-- [padSides](./transducers.padsides.md) - [wrapSides()](./transducers.wrapsides.md)
+Yields iterator of given iterable which repeats the first and/or last value(s) `numLeft`<!-- -->/`numRight` times (default: 1).
 
 <b>Signature:</b>
 
@@ -36,4 +23,24 @@ export declare function extendSides<T>(src: Iterable<T>, numLeft?: number, numRi
 <b>Returns:</b>
 
 `Generator<T, void, unknown>`
+
+## Remarks
+
+By default both sides are repeated, but can be adjusted by setting either of them to zero. `numRight` defaults to same value as `numLeft`<!-- -->.
+
+## Example
+
+
+```ts
+[...extendSides([1, 2, 3])]
+// [ 1,  1, 2, 3,  3]
+
+[...extendSides([1, 2, 3], 3)]
+// [ 1, 1, 1,  1, 2, 3,  3, 3, 3 ]
+
+[...extendSides([1, 2, 3], 0, 3)]
+// [ 1, 2, 3,  3, 3, 3 ]
+
+```
+- [padSides](./transducers.padsides.md) - [wrapSides()](./transducers.wrapsides.md)
 

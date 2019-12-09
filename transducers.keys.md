@@ -4,6 +4,8 @@
 
 ## keys() function
 
+Iterator which yields all names of given object's own properties (Similar to `Object.keys()`<!-- -->).
+
 <b>Signature:</b>
 
 ```typescript
@@ -19,4 +21,8 @@ export declare function keys(x: any): IterableIterator<string>;
 <b>Returns:</b>
 
 `IterableIterator<string>`
+
+## Remarks
+
+See also: - [pairs()](./transducers.pairs.md) - [vals()](./transducers.vals.md)
 

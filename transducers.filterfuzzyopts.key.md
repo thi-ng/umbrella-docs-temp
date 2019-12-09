@@ -4,6 +4,8 @@
 
 ## FilterFuzzyOpts.key property
 
+Key extractor function.
+
 <b>Signature:</b>
 
 ```typescript

@@ -14,6 +14,6 @@ export interface FilterFuzzyOpts<A, B>
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [equiv](./transducers.filterfuzzyopts.equiv.md) | <code>Predicate2&lt;any&gt;</code> |  |
-|  [key](./transducers.filterfuzzyopts.key.md) | <code>Fn&lt;A, ArrayLike&lt;B&gt;&gt;</code> |  |
+|  [equiv](./transducers.filterfuzzyopts.equiv.md) | <code>Predicate2&lt;any&gt;</code> | Equivalence predicate function. |
+|  [key](./transducers.filterfuzzyopts.key.md) | <code>Fn&lt;A, ArrayLike&lt;B&gt;&gt;</code> | Key extractor function. |
 

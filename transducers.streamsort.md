@@ -6,12 +6,6 @@
 
 Transducer. Similar to [partitionSort()](./transducers.partitionsort.md)<!-- -->, however uses proper sliding window and insertion sort instead of fully sorting window as done by `partitionSort`<!-- -->.
 
-```
-[...streamSort(4, [5,9,2,6,4,1,3,8,7,0])]
-// [ 2, 4, 1, 3, 5, 6, 0, 7, 8, 9 ]
-
-```
-
 <b>Signature:</b>
 
 ```typescript
@@ -28,4 +22,13 @@ export declare function streamSort<A, B>(n: number, opts?: Partial<SortOpts<A, B
 <b>Returns:</b>
 
 `Transducer<A, A>`
+
+## Example
+
+
+```ts
+[...streamSort(4, [5,9,2,6,4,1,3,8,7,0])]
+// [ 2, 4, 1, 3, 5, 6, 0, 7, 8, 9 ]
+
+```
 
