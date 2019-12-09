@@ -6,7 +6,7 @@
 
 > Warning: This API is now obsolete.
 > 
-> renamed to 
+> renamed to [compL()](./compose.compl.md)
 > 
 
 <b>Signature:</b>

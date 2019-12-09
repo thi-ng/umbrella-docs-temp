@@ -4,7 +4,7 @@
 
 ## utf8Decode() function
 
-Transducer which decodes a byte input sequence into UTF-8 characters. Also see  for reverse transformation.
+Transducer which decodes a byte input sequence into UTF-8 characters. Also see [utf8Encode()](./transducers-binary.utf8encode.md) for reverse transformation.
 
 <b>Signature:</b>
 

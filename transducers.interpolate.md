@@ -21,7 +21,7 @@ Note: The \*very last\* input value can never be fully reached and might need to
 //  0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75 ]
 
 ```
--  -  - [extendSides()](./transducers.extendsides.md)
+- [interpolateHermite()](./transducers.interpolatehermite.md) - [interpolateLinear()](./transducers.interpolatelinear.md) - [extendSides()](./transducers.extendsides.md)
 
 <b>Signature:</b>
 

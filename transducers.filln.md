@@ -4,7 +4,7 @@
 
 ## fillN() function
 
-Like  reducer, but for numeric arrays (incl. typed arrays).
+Like [fill()](./transducers.fill.md) reducer, but for numeric arrays (incl. typed arrays).
 
 <b>Signature:</b>
 

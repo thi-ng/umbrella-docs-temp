@@ -16,6 +16,7 @@ multiSwap: (...xs: AnyArray[]) => import("@thi.ng/api").Fn3<AnyArray, number, nu
 
 The returned function takes the same args as `swap`<!-- -->, and when called swaps 2 elements in the array given to that function AND in the arrays given to [multiSwap](./arrays.multiswap.md) itself. Provides fast routes for up to 3 extra arrays, then falls back to a loop-based approach.
 
+[quickSort()](./arrays.quicksort.md)
 
 ## Example
 

@@ -4,7 +4,7 @@
 
 ## multiplexObj() function
 
-Transducer. Similar to (and building on) , but takes an object of transducers and produces a result object for each input.
+Transducer. Similar to (and building on) [multiplex()](./transducers.multiplex.md)<!-- -->, but takes an object of transducers and produces a result object for each input.
 
 ```
 [...multiplexObj(

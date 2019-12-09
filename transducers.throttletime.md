@@ -4,9 +4,9 @@
 
 ## throttleTime() function
 
-Time-based version of . Ignores any new values in the `delay` interval since the last accepted value.
+Time-based version of [throttle()](./transducers.throttle.md)<!-- -->. Ignores any new values in the `delay` interval since the last accepted value.
 
-\*\*Only to be used in async contexts and NOT with  directly.\*\*
+\*\*Only to be used in async contexts and NOT with [transduce()](./transducers.transduce.md) directly.\*\*
 
 Also see: [@thi.ng/rstream](./rstream.md) and [@thi.ng/csp](./csp.md) packages.
 

@@ -4,7 +4,7 @@
 
 ## compL() function
 
-Similar to , but composes given functions in left-to-right order.
+Similar to [comp()](./compose.comp.md)<!-- -->, but composes given functions in left-to-right order.
 
 <b>Signature:</b>
 

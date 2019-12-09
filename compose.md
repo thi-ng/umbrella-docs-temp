@@ -25,7 +25,7 @@
 |  [comp(a, b, c, d, e, f, g)](./compose.comp_6.md) |  |
 |  [comp(a, b, c, d, e, f, g, h)](./compose.comp_7.md) |  |
 |  [comp(a, b, c, d, e, f, g, h, i)](./compose.comp_8.md) |  |
-|  [compL(a)](./compose.compl.md) | Similar to , but composes given functions in left-to-right order. |
+|  [compL(a)](./compose.compl.md) | Similar to [comp()](./compose.comp.md)<!-- -->, but composes given functions in left-to-right order. |
 |  [compL(a, b, c, d, e, f, g, h, i, j)](./compose.compl_9.md) |  |
 |  [compL(a, b, c, d, e, f, g, h, i, j, xs)](./compose.compl_10.md) |  |
 |  [compL(a, b)](./compose.compl_1.md) |  |

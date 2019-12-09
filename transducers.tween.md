@@ -59,5 +59,5 @@ import { mix, smoothStep } from "@thi.ng/math"
 // [ 100, 100, 100, 120, 179, 200, 158, 41, 0, 0, 0 ]
 
 ```
-- [TweenOpts](./transducers.tweenopts.md) -  -  - 
+- [TweenOpts](./transducers.tweenopts.md) - [interpolate()](./transducers.interpolate.md) - [interpolateHermite()](./transducers.interpolatehermite.md) - [interpolateLinear()](./transducers.interpolatelinear.md)
 

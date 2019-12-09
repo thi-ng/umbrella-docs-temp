@@ -29,7 +29,7 @@ export declare function matchFirst<T>(pred: Predicate<T>): Transducer<T, T>;
 comp(filter(pred), take(1))
 
 ```
-Yields none or only the first value which passed the predicate check and then causes early termination. If `src` input is given, returns first match found (or `undefined`<!-- -->). Also see .
+Yields none or only the first value which passed the predicate check and then causes early termination. If `src` input is given, returns first match found (or `undefined`<!-- -->). Also see [matchLast()](./transducers.matchlast.md)<!-- -->.
 
 ## Example 2
 

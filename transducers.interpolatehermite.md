@@ -4,11 +4,11 @@
 
 ## interpolateHermite() function
 
-Pre-configured version of  for numeric values and using cubic hermite interpolation. The number of samples per interval is configurable. No values will be produced if there're less than 4 inputs.
+Pre-configured version of [interpolate()](./transducers.interpolate.md) for numeric values and using cubic hermite interpolation. The number of samples per interval is configurable. No values will be produced if there're less than 4 inputs.
 
 Note: Due to the nature of hermite interpolation, the very first and last input are only used to compute the curve tangents, but will not appear in the output. Use the [extendSides()](./transducers.extendsides.md) iterator to transform the input so that these values are duplicated and so are used as part of an interpolation interval.
 
--  -  - [extendSides()](./transducers.extendsides.md)
+- [interpolate()](./transducers.interpolate.md) - [interpolateLinear()](./transducers.interpolatelinear.md) - [extendSides()](./transducers.extendsides.md)
 
 <b>Signature:</b>
 

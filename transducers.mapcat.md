@@ -4,7 +4,7 @@
 
 ## mapcat() function
 
-Transducer. Similar to , but expects the given mapping function `fn` to return an iterable result (or `null`<!-- -->) and then emits each value of the result individually downstream. `null` or `undefined` result values will be skipped / omitted.
+Transducer. Similar to [map()](./transducers.map.md)<!-- -->, but expects the given mapping function `fn` to return an iterable result (or `null`<!-- -->) and then emits each value of the result individually downstream. `null` or `undefined` result values will be skipped / omitted.
 
 <b>Signature:</b>
 

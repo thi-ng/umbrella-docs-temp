@@ -6,7 +6,7 @@
 
 Transducer which encodes UTF-8 characters into a byte sequence.
 
-Also see  for reverse transformation.
+Also see [utf8Decode()](./transducers-binary.utf8decode.md) for reverse transformation.
 
 <b>Signature:</b>
 

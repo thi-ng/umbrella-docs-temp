@@ -4,7 +4,7 @@
 
 ## partitionSort() function
 
-Transducer. Composition of  and  which yields a \*\*partially\*\* sorted sequence of input values. Sorting is performed on sliding / non-overlapping chunks of `n` inputs. The optional `key` and `cmp` function args can be used to select / compute a sortable value and change sorting behavior.
+Transducer. Composition of [partition()](./transducers.partition.md) and [mapcat()](./transducers.mapcat.md) which yields a \*\*partially\*\* sorted sequence of input values. Sorting is performed on sliding / non-overlapping chunks of `n` inputs. The optional `key` and `cmp` function args can be used to select / compute a sortable value and change sorting behavior.
 
 ```
 [...partitionSort(4, [5,9,2,6,4,1,3,8,7,0])]

@@ -40,9 +40,9 @@
 |  [partitionBits(destSize, srcSize)](./transducers-binary.partitionbits.md) | Transducer. |
 |  [partitionBits(destSize, src)](./transducers-binary.partitionbits_1.md) |  |
 |  [partitionBits(destSize, srcSize, src)](./transducers-binary.partitionbits_2.md) |  |
-|  [utf8Decode()](./transducers-binary.utf8decode.md) | Transducer which decodes a byte input sequence into UTF-8 characters. Also see  for reverse transformation. |
+|  [utf8Decode()](./transducers-binary.utf8decode.md) | Transducer which decodes a byte input sequence into UTF-8 characters. Also see [utf8Encode()](./transducers-binary.utf8encode.md) for reverse transformation. |
 |  [utf8Decode(src)](./transducers-binary.utf8decode_1.md) |  |
-|  [utf8Encode()](./transducers-binary.utf8encode.md) | Transducer which encodes UTF-8 characters into a byte sequence.<!-- -->Also see  for reverse transformation. |
+|  [utf8Encode()](./transducers-binary.utf8encode.md) | Transducer which encodes UTF-8 characters into a byte sequence.<!-- -->Also see [utf8Decode()](./transducers-binary.utf8decode.md) for reverse transformation. |
 |  [utf8Encode(src)](./transducers-binary.utf8encode_1.md) |  |
 
 ## Interfaces

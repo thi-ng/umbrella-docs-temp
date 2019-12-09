@@ -6,7 +6,7 @@
 
 Transducer which yields sequence of transformed objects, each only only containing the given `keys`<!-- -->. If a key's value is `undefined` (or missing entirely) it will be omitted in the result.
 
-Note: For single key extraction  is a faster alternative.
+Note: For single key extraction [pluck()](./transducers.pluck.md) is a faster alternative.
 
 ```
 [...selectKeys(

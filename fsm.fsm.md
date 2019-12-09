@@ -29,7 +29,7 @@ export declare function fsm<T, C, R>(states: IObjectOf<Matcher<T, C, R>>, ctx: C
 
 Takes an object of `states` and their matchers, an arbitrary context object and an `initial` state ID (default: "start").
 
-The returned transducer consumes inputs of type `T` and produces results of type `R`<!-- -->. The results are produced by callbacks of the given state matchers. Each can produce any number of values. If a callback returns a result wrapped w/ [reduced](./transducers.reduced.md)<!-- -->, the FSM causes early termination of the overall transducer pipeline. Failed state callbacks too can produce outputs, but will afterwards terminate the FSM.
+The returned transducer consumes inputs of type `T` and produces results of type `R`<!-- -->. The results are produced by callbacks of the given state matchers. Each can produce any number of values. If a callback returns a result wrapped w/ , the FSM causes early termination of the overall transducer pipeline. Failed state callbacks too can produce outputs, but will afterwards terminate the FSM.
 
 An [IllegalStateError](./errors.illegalstateerror.md) will be thrown if a transition to an undefined state ID occurs.
 

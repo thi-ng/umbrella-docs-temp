@@ -4,7 +4,7 @@
 
 ## conj() function
 
-Reducer. Like , but for ES6 Sets.
+Reducer. Like [push()](./transducers.push.md)<!-- -->, but for ES6 Sets.
 
 <b>Signature:</b>
 

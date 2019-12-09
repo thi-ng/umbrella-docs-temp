@@ -4,7 +4,7 @@
 
 ## juxtR() function
 
-Composes a new reducer from the ones given, in order to produce multiple reductions in parallel from the same input. The returned reducer produces a result tuple of reduction results, one per reducer. If any of the reducers returns a [reduced](./transducers.reduced.md) result, the reduction process stops for all others too.  produces optimized versions for up to 3 reducer args, but can support any number of reducers.
+Composes a new reducer from the ones given, in order to produce multiple reductions in parallel from the same input. The returned reducer produces a result tuple of reduction results, one per reducer. If any of the reducers returns a [reduced](./transducers.reduced.md) result, the reduction process stops for all others too. `juxtR` produces optimized versions for up to 3 reducer args, but can support any number of reducers.
 
 <b>Signature:</b>
 

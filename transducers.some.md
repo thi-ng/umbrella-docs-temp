@@ -4,7 +4,7 @@
 
 ## some() function
 
-Similar to  reducer, but only requires at least 1 value to succeed predicate test (and then immediately terminates with `true` as result).
+Similar to [every()](./transducers.every.md) reducer, but only requires at least 1 value to succeed predicate test (and then immediately terminates with `true` as result).
 
 <b>Signature:</b>
 

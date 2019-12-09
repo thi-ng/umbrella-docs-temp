@@ -19,6 +19,7 @@ This can be used to limit processing of inputs only as long as there're noticeab
 // [ 0, 0.5, 0.75, 0.875, 0.9375, 0.96875, 0.984375, 0.9921875 ]
 
 ```
+[takeWhile()](./transducers.takewhile.md)
 
 <b>Signature:</b>
 

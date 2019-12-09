@@ -4,7 +4,7 @@
 
 ## cat variable
 
-Transducer to concatenate iterable values. Iterates over each input and emits individual values down stream, therefore removing one level of nesting from the input. If, during processing, the transducer is given a wrapped [reduced](./transducers.reduced.md) input iterable, it will still be processed as normal, but then immediately triggers early termination by wrapping its own result in [reduced](./transducers.reduced.md)<!-- -->. E.g. this behavior allows a  user functions to benefit from [reduced](./transducers.reduced.md) results.
+Transducer to concatenate iterable values. Iterates over each input and emits individual values down stream, therefore removing one level of nesting from the input. If, during processing, the transducer is given a wrapped reduced input iterable, it will still be processed as normal, but then immediately triggers early termination by wrapping its own result in [reduced](./transducers.reduced.md)<!-- -->. E.g. this behavior allows a [mapcat()](./transducers.mapcat.md) user functions to benefit from reduced results.
 
 ```
 [...iterator(comp(map((x) => [x, x]), cat()), [1, 2, 3, 4])]

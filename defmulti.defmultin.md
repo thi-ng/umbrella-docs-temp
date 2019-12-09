@@ -16,9 +16,9 @@ defmultiN: <T>(impls: {
 
 ## Remarks
 
-Internally uses , so new arities can be dynamically added (or removed) at a later time. If no `fallback` is provided, `defmultiN` also registers a [DEFAULT](./defmulti.default.md) implementation which simply throws an [IllegalArityError](./errors.illegalarityerror.md) when invoked.
+Internally uses [defmulti()](./defmulti.defmulti.md)<!-- -->, so new arities can be dynamically added (or removed) at a later time. If no `fallback` is provided, `defmultiN` also registers a [DEFAULT](./defmulti.default.md) implementation which simply throws an [IllegalArityError](./errors.illegalarityerror.md) when invoked.
 
-\*\*Note:\*\* Unlike  no argument type checking is supported, however you can specify the return type for the generated function.
+\*\*Note:\*\* Unlike [defmulti()](./defmulti.defmulti.md) no argument type checking is supported, however you can specify the return type for the generated function.
 
 ## Example
 

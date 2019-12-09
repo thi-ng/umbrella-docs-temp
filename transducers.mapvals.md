@@ -4,7 +4,7 @@
 
 ## mapVals() function
 
-Transducer. Similar to , but expects object values and the given function `fn` is applied to each enumerable property value and the results reassigned to their original keys. By default, a shallow copy of the source object is created. The resulting object is then used as the result of this transducer.
+Transducer. Similar to [map()](./transducers.map.md)<!-- -->, but expects object values and the given function `fn` is applied to each enumerable property value and the results reassigned to their original keys. By default, a shallow copy of the source object is created. The resulting object is then used as the result of this transducer.
 
 ```
 [...mapVals((x)=> x * 10, [{a: 1, b: 2}, {c: 3, d: 4}])]
