@@ -9,7 +9,7 @@ Constructs a new instance of the `MetaStream` class
 <b>Signature:</b>
 
 ```typescript
-constructor(factory: Fn<A, Subscription<B, B>>, id?: string);
+constructor(factory: Fn<A, Subscription<B, B>>, opts?: Partial<CommonOpts>);
 ```
 
 ## Parameters
@@ -17,5 +17,5 @@ constructor(factory: Fn<A, Subscription<B, B>>, id?: string);
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  factory | <code>Fn&lt;A, Subscription&lt;B, B&gt;&gt;</code> |  |
-|  id | <code>string</code> |  |
+|  opts | <code>Partial&lt;CommonOpts&gt;</code> |  |
 

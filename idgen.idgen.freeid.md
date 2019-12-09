@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly freeID: number;
+get freeID(): number;
 ```

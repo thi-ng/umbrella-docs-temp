@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-subscribeTopic(topicID: any, sub: Partial<ISubscriber<B>>, id?: string): Subscription<B, B>;
+subscribeTopic(topicID: any, sub: Partial<ISubscriber<B>>, opts?: Partial<CommonOpts>): Subscription<B, B>;
 ```
 
 ## Parameters
@@ -16,7 +16,7 @@ subscribeTopic(topicID: any, sub: Partial<ISubscriber<B>>, id?: string): Subscri
 |  --- | --- | --- |
 |  topicID | <code>any</code> |  |
 |  sub | <code>Partial&lt;ISubscriber&lt;B&gt;&gt;</code> |  |
-|  id | <code>string</code> |  |
+|  opts | <code>Partial&lt;CommonOpts&gt;</code> |  |
 
 <b>Returns:</b>
 

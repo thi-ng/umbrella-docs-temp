@@ -4,10 +4,10 @@
 
 ## fromEvent variable
 
-Creates a new stream of events attached to given element / event target and using given event listener options (same as supported by `addEventListener()`<!-- -->, default: false).
+Creates a [Stream](./rstream.stream.md) of events attached to given element / event target and using given event listener options (same as supported by `addEventListener()`<!-- -->, default: false).
 
 <b>Signature:</b>
 
 ```typescript
-fromEvent: (src: EventTarget, name: string, opts?: boolean | AddEventListenerOptions) => Stream<Event>
+fromEvent: (src: EventTarget, name: string, listenerOpts?: boolean | AddEventListenerOptions, streamOpts?: Partial<CommonOpts> | undefined) => Stream<Event>
 ```

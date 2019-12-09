@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly [Symbol.species]: typeof DGraph;
+get [Symbol.species](): typeof DGraph;
 ```

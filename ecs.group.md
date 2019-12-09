@@ -21,12 +21,12 @@ export declare class Group<SPEC, K extends ComponentID<SPEC>> implements IID<str
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
 |  [cache](./ecs.group.cache.md) |  | <code>ICache&lt;GroupTuple&lt;SPEC, K&gt;&gt;</code> |  |
-|  [components](./ecs.group.components.md) |  | <code>IComponent&lt;K, any, any&gt;[]</code> |  |
+|  [components](./ecs.group.components.md) |  | <code>IComponent&lt;K, any, any, any&gt;[]</code> |  |
 |  [id](./ecs.group.id.md) |  | <code>string</code> |  |
 |  [ids](./ecs.group.ids.md) |  | <code>Set&lt;number&gt;</code> |  |
 |  [info](./ecs.group.info.md) |  | <code>GroupInfo&lt;SPEC, K&gt;</code> |  |
 |  [n](./ecs.group.n.md) |  | <code>number</code> |  |
-|  [owned](./ecs.group.owned.md) |  | <code>IComponent&lt;K, any, any&gt;[]</code> |  |
+|  [owned](./ecs.group.owned.md) |  | <code>IComponent&lt;K, any, any, any&gt;[]</code> |  |
 
 ## Methods
 

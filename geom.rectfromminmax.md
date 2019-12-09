@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-rectFromMinMax: (min: Vec, max: Vec, attribs?: import("@thi.ng/api").IObjectOf<any> | undefined) => Rect
+rectFromMinMax: (min: Vec, max: Vec, attribs?: Attribs | undefined) => Rect
 ```

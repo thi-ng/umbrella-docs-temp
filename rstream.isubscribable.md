@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export interface ISubscribable<T> extends IDeref<T>, IID<string> 
+export interface ISubscribable<T> extends IDeref<T | undefined>, IID<string> 
 ```
 
 ## Methods
@@ -15,9 +15,9 @@ export interface ISubscribable<T> extends IDeref<T>, IID<string>
 |  Method | Description |
 |  --- | --- |
 |  [getState()](./rstream.isubscribable.getstate.md) |  |
-|  [subscribe(sub, xform, id)](./rstream.isubscribable.subscribe.md) |  |
-|  [subscribe(sub)](./rstream.isubscribable.subscribe_1.md) |  |
-|  [subscribe(xform, id)](./rstream.isubscribable.subscribe_2.md) |  |
-|  [subscribe(sub, id)](./rstream.isubscribable.subscribe_3.md) |  |
+|  [subscribe(sub, opts)](./rstream.isubscribable.subscribe.md) |  |
+|  [subscribe(sub, xform, opts)](./rstream.isubscribable.subscribe_1.md) |  |
+|  [subscribe(xform, opts)](./rstream.isubscribable.subscribe_2.md) |  |
+|  [subscribe(sub)](./rstream.isubscribable.subscribe_3.md) |  |
 |  [unsubscribe(sub)](./rstream.isubscribable.unsubscribe.md) |  |
 

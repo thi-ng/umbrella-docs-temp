@@ -4,13 +4,17 @@
 
 ## merge variable
 
-Returns a new [StreamMerge](./rstream.streammerge.md) instance, a subscription type consuming inputs from multiple inputs and passing received values on to any subscribers. Input streams can be added and removed dynamically. By default, [StreamMerge](./rstream.streammerge.md) calls `done()` when the last active input is done, but this behavior can be overridden via the `close` option.
+Returns a new [StreamMerge](./rstream.streammerge.md) subscription, consuming values from multiple inputs and passing received values on to any subscribers.
 
 <b>Signature:</b>
 
 ```typescript
 merge: <A, B>(opts?: Partial<StreamMergeOpts<A, B>> | undefined) => StreamMerge<A, B>
 ```
+
+## Remarks
+
+Input streams can be added and removed dynamically. By default, `StreamMerge` calls [ISubscriber.done](./rstream.isubscriber.done.md) when the last active input is done, but this behavior can be overridden via the provided [options](./rstream.streammergeopts.md)<!-- -->.
 
 ## Example 1
 
@@ -19,9 +23,9 @@ merge: <A, B>(opts?: Partial<StreamMergeOpts<A, B>> | undefined) => StreamMerge<
 merge({
     // input streams w/ different frequencies
     src: [
-        fromIterable([1, 2, 3], 10),
-        fromIterable([10, 20, 30], 21),
-        fromIterable([100, 200, 300], 7)
+        fromIterable([1, 2, 3], { delay: 10 }),
+        fromIterable([10, 20, 30], { delay: 21 }),
+        fromIterable([100, 200, 300], { delay: 7 })
     ]
 }).subscribe(trace());
 // 100
@@ -35,16 +39,19 @@ merge({
 // 30
 
 ```
-Use the `labeled()` transducer for each input to create a stream of labeled values and track their provenance:
 
 ## Example 2
+
+Use the [labeled()](./transducers.labeled.md) transducer for each input to create a stream of labeled values and track their provenance:
+
+## Example 3
 
 
 ```ts
 merge({
     src: [
-        fromIterable([1, 2, 3]).transform(labeled("a")),
-        fromIterable([10, 20, 30]).transform(labeled("b")),
+        fromIterable([1, 2, 3]).transform(tx.labeled("a")),
+        fromIterable([10, 20, 30]).transform(tx.labeled("b")),
     ]
 }).subscribe(trace());
 // ["a", 1]
@@ -55,5 +62,4 @@ merge({
 // ["b", 30]
 
 ```
-[StreamMergeOpts](./rstream.streammergeopts.md)
 

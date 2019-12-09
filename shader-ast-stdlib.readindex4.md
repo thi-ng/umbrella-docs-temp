@@ -9,5 +9,5 @@ Inline function. Returns vec4 at index `i` in `tex`<!-- -->.
 <b>Signature:</b>
 
 ```typescript
-readIndex4: (tex: import("@thi.ng/shader-ast").Term<"sampler2D">, i: import("@thi.ng/shader-ast").Term<"int">, size: import("@thi.ng/shader-ast").Term<"ivec2">) => import("@thi.ng/shader-ast").FnCall<"vec4">
+readIndex4: (tex: Sampler2DTerm, i: IntTerm, size: IVec2Term) => import("@thi.ng/shader-ast").FnCall<"vec4">
 ```

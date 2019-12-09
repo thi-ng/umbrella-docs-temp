@@ -4,10 +4,15 @@
 
 ## fromIterable variable
 
-Creates a new [Stream](./rstream.stream.md) of given iterable which asynchronously calls `.next()` for each item of the iterable when the first (and in this case the only one) subscriber becomes available. The values are processed via `setInterval()` using the given `delay` value (default: 0). Once the iterable is exhausted (if finite), then calls `.done()` by default, but can be avoided by passing `false` as last argument.
+Returns a [Stream](./rstream.stream.md) of values from provided iterable, emitted at the given `delay` interval.
 
 <b>Signature:</b>
 
 ```typescript
-fromIterable: <T>(src: Iterable<T>, delay?: number, close?: boolean) => Stream<T>
+fromIterable: <T>(src: Iterable<T>, opts?: Partial<FromIterableOpts>) => Stream<T>
 ```
+
+## Remarks
+
+Asynchronously starts pulling values from source iterable when the first subscriber becomes available. The values are processed &amp; emitted via `setInterval()`<!-- -->, using the given `delay` value (default: 0). By default, once the iterable is exhausted (if finite), calls [ISubscriber.done](./rstream.isubscriber.done.md) to close the stream, but this can be re-configured via provided [options](./rstream.commonopts.md)<!-- -->.
+

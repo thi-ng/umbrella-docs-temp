@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-transform<C, D, E, F>(a: Transducer<B, C>, b: Transducer<C, D>, c: Transducer<D, E>, d: Transducer<E, F>, id?: string): Subscription<B, F>;
+transform<C, D, E, F>(a: Transducer<B, C>, b: Transducer<C, D>, c: Transducer<D, E>, d: Transducer<E, F>, opts?: Partial<CommonOpts>): Subscription<B, F>;
 ```
 
 ## Parameters
@@ -18,7 +18,7 @@ transform<C, D, E, F>(a: Transducer<B, C>, b: Transducer<C, D>, c: Transducer<D,
 |  b | <code>Transducer&lt;C, D&gt;</code> |  |
 |  c | <code>Transducer&lt;D, E&gt;</code> |  |
 |  d | <code>Transducer&lt;E, F&gt;</code> |  |
-|  id | <code>string</code> |  |
+|  opts | <code>Partial&lt;CommonOpts&gt;</code> |  |
 
 <b>Returns:</b>
 

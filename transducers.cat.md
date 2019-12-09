@@ -9,7 +9,7 @@ Transducer to concatenate iterable values. Iterates over each input and emits in
 <b>Signature:</b>
 
 ```typescript
-cat: <T>() => Transducer<Iterable<T> | null | undefined, T>
+cat: <T>() => Transducer<Nullable<Iterable<T>>, T>
 ```
 
 ## Remarks

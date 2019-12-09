@@ -4,9 +4,15 @@
 
 ## rstream-csp package
 
+## Interfaces
+
+|  Interface | Description |
+|  --- | --- |
+|  [FromChannelOpts](./rstream-csp.fromchannelopts.md) |  |
+
 ## Variables
 
 |  Variable | Description |
 |  --- | --- |
-|  [fromChannel](./rstream-csp.fromchannel.md) |  |
+|  [fromChannel](./rstream-csp.fromchannel.md) | Returns a stream of values received from given [Channel](./csp.channel.md)<!-- -->. |
 

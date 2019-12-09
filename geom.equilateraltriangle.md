@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-equilateralTriangle: (a: Vec, b: Vec, attribs?: import("@thi.ng/api").IObjectOf<any> | undefined) => Triangle
+equilateralTriangle: (a: Vec, b: Vec, attribs?: Attribs | undefined) => Triangle
 ```

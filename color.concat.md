@@ -9,7 +9,7 @@ Concatenates given color matrices by pairwise multiplying them in left-right ord
 <b>Signature:</b>
 
 ```typescript
-concat: (mat: [number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number], ...xs: [number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number][]) => [number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number]
+concat: (mat: ColorMatrix, ...xs: ColorMatrix[]) => ColorMatrix
 ```
 
 ## Remarks

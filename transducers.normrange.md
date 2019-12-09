@@ -9,7 +9,7 @@ Yields sequence of `n+1` monotonically increasing numbers in the closed interval
 <b>Signature:</b>
 
 ```typescript
-export declare function normRange(n: number, inclLast?: boolean): Generator<number, void, unknown>;
+export declare function normRange(n: number, inclLast?: boolean): IterableIterator<number>;
 ```
 
 ## Parameters
@@ -21,7 +21,7 @@ export declare function normRange(n: number, inclLast?: boolean): Generator<numb
 
 <b>Returns:</b>
 
-`Generator<number, void, unknown>`
+`IterableIterator<number>`
 
 ## Example
 

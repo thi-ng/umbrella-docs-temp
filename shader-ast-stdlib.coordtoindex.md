@@ -9,5 +9,5 @@ Inline function. Reverse op to [indexToCoord](./shader-ast-stdlib.indextocoord.m
 <b>Signature:</b>
 
 ```typescript
-coordToIndex: (coord: import("@thi.ng/shader-ast").Term<"uvec2">, width: import("@thi.ng/shader-ast").Term<"uint">) => import("@thi.ng/shader-ast").Term<"uint">
+coordToIndex: (coord: UVec2Term, width: UintTerm) => import("@thi.ng/shader-ast").Term<"uint">
 ```

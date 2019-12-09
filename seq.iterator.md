@@ -4,19 +4,19 @@
 
 ## iterator() function
 
-Converts given seq into an ES6 iterable.
+Yields an ES6 iterable for given seq or seqable.
 
 <b>Signature:</b>
 
 ```typescript
-export declare function iterator<T>(seq: Nullable<ISeq<T>>): Generator<NonNullable<T>, void, unknown>;
+export declare function iterator<T>(src: Nullable<ISeq<T> | ISeqable<T> | ArrayLike<T>>): Generator<NonNullable<T>, void, unknown>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  seq | <code>Nullable&lt;ISeq&lt;T&gt;&gt;</code> |  |
+|  src | <code>Nullable&lt;ISeq&lt;T&gt; &#124; ISeqable&lt;T&gt; &#124; ArrayLike&lt;T&gt;&gt;</code> |  |
 
 <b>Returns:</b>
 

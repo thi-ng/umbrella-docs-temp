@@ -9,7 +9,7 @@ Returns an infinite iterator of random choices and their (optional) weights. If 
 <b>Signature:</b>
 
 ```typescript
-choices: <T>(choices: ArrayLike<T> & Iterable<T>, weights?: ArrayLike<number> | undefined, rnd?: IRandom) => Generator<any, void, unknown>
+choices: <T>(choices: ArrayLike<T> & Iterable<T>, weights?: ArrayLike<number> | undefined, rnd?: IRandom) => IterableIterator<T>
 ```
 
 ## Example

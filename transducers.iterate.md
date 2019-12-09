@@ -11,7 +11,7 @@ Yields an infinite iterator of the inductive sequence:
 <b>Signature:</b>
 
 ```typescript
-export declare function iterate<T>(fn: Fn2<T, number, T>, seed: T): Generator<T, void, unknown>;
+export declare function iterate<T>(fn: Fn2<T, number, T>, seed: T): IterableIterator<T>;
 ```
 
 ## Parameters
@@ -23,7 +23,7 @@ export declare function iterate<T>(fn: Fn2<T, number, T>, seed: T): Generator<T,
 
 <b>Returns:</b>
 
-`Generator<T, void, unknown>`
+`IterableIterator<T>`
 
 ## Remarks
 

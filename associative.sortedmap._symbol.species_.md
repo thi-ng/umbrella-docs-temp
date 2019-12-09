@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly [Symbol.species]: typeof SortedMap;
+get [Symbol.species](): typeof SortedMap;
 ```

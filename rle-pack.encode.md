@@ -9,5 +9,5 @@ Compresses input using dynamically sized RLE compression and returns result as `
 <b>Signature:</b>
 
 ```typescript
-encode: (src: Iterable<number>, num: number, wordSize?: number, rleSizes?: [number, number, number, number]) => Uint8Array
+encode: (src: Iterable<number>, num: number, wordSize?: number, rleSizes?: RLESizes) => Uint8Array
 ```

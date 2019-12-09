@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-sortPatterns: (patterns: [any, any, any][]) => [any, any, any][]
+sortPatterns: (patterns: Pattern[]) => Pattern[]
 ```

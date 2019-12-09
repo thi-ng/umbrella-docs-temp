@@ -9,7 +9,7 @@ Constructs a new instance of the `SidechainToggle` class
 <b>Signature:</b>
 
 ```typescript
-constructor(side: ISubscribable<B>, initial?: boolean, pred?: Predicate<B>, id?: string);
+constructor(side: ISubscribable<B>, opts?: Partial<SidechainToggleOpts<B>>);
 ```
 
 ## Parameters
@@ -17,7 +17,5 @@ constructor(side: ISubscribable<B>, initial?: boolean, pred?: Predicate<B>, id?:
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  side | <code>ISubscribable&lt;B&gt;</code> |  |
-|  initial | <code>boolean</code> |  |
-|  pred | <code>Predicate&lt;B&gt;</code> |  |
-|  id | <code>string</code> |  |
+|  opts | <code>Partial&lt;SidechainToggleOpts&lt;B&gt;&gt;</code> |  |
 

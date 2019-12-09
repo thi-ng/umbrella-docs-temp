@@ -7,14 +7,15 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function stream<T>(id: string): Stream<T>;
+export declare function stream<T>(src: StreamSource<T>, opts?: Partial<CommonOpts>): Stream<T>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  id | <code>string</code> |  |
+|  src | <code>StreamSource&lt;T&gt;</code> |  |
+|  opts | <code>Partial&lt;CommonOpts&gt;</code> |  |
 
 <b>Returns:</b>
 

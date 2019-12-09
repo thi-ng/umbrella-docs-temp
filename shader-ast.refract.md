@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-refract: <I extends Vec, N extends I>(i: Term<I>, n: Term<N>, ior: Term<"float">) => FnCall<I>
+refract: <I extends Vec, N extends I>(i: Term<I>, n: Term<N>, ior: FloatTerm) => FnCall<I>
 ```

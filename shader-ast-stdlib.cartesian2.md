@@ -9,5 +9,5 @@ Converts 2D polar vector `v`<!-- -->, i.e. `[r,θ]` (angle in radians) to cartes
 <b>Signature:</b>
 
 ```typescript
-cartesian2: (v: import("@thi.ng/shader-ast").Term<"vec2">) => import("@thi.ng/shader-ast").Op2<"vec2">
+cartesian2: (v: Vec2Term) => import("@thi.ng/shader-ast").Op2<"vec2">
 ```

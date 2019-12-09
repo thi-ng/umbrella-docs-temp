@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-path: (segments: PathSegment[], attribs?: import("@thi.ng/api").IObjectOf<any> | undefined) => Path
+path: (segments: PathSegment[], attribs?: Attribs | undefined) => Path
 ```

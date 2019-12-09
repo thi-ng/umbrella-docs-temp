@@ -7,15 +7,15 @@
 <b>Signature:</b>
 
 ```typescript
-defGroup<K extends ComponentID<SPEC>>(comps: IComponent<K, any, any>[], owned?: IComponent<K, any, any>[], opts?: Partial<GroupOpts>): Group<SPEC, K>;
+defGroup<K extends ComponentID<SPEC>>(comps: IComponent<K, any, any, any>[], owned?: IComponent<K, any, any, any>[], opts?: Partial<GroupOpts>): Group<SPEC, K>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  comps | <code>IComponent&lt;K, any, any&gt;[]</code> |  |
-|  owned | <code>IComponent&lt;K, any, any&gt;[]</code> |  |
+|  comps | <code>IComponent&lt;K, any, any, any&gt;[]</code> |  |
+|  owned | <code>IComponent&lt;K, any, any, any&gt;[]</code> |  |
 |  opts | <code>Partial&lt;GroupOpts&gt;</code> |  |
 
 <b>Returns:</b>

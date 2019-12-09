@@ -45,7 +45,7 @@ The given keyframe times can lie outside the `min`<!-- -->/`max` range and also 
 // [ 100, 100, 100, 133, 166, 200, 133, 66, 0, 0, 0 ]
 
 ```
-Using easing functions (e.g. from ), non-linear interpolation within each keyframe interval can be achieved:
+Using easing functions (e.g. via [@thi.ng/math](./math.md)<!-- -->), non-linear interpolation within each keyframe interval can be achieved:
 
 ## Example 2
 

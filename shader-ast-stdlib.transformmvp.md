@@ -9,5 +9,5 @@ Inline function. Multiplies `pos` with given model, view &amp; projection matric
 <b>Signature:</b>
 
 ```typescript
-transformMVP: (p: import("@thi.ng/shader-ast").Term<"vec3">, model: import("@thi.ng/shader-ast").Term<"mat4">, view: import("@thi.ng/shader-ast").Term<"mat4">, proj: import("@thi.ng/shader-ast").Term<"mat4">) => import("@thi.ng/shader-ast").Op2<"vec4">
+transformMVP: (p: Vec3Term, model: Mat4Term, view: Mat4Term, proj: Mat4Term) => import("@thi.ng/shader-ast").Op2<"vec4">
 ```

@@ -7,5 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-protected doSplit: boolean;
+protected get doSplit(): boolean;
+
+protected set doSplit(flag: boolean);
 ```

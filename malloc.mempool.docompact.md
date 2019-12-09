@@ -7,5 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-protected doCompact: boolean;
+protected get doCompact(): boolean;
+
+protected set doCompact(flag: boolean);
 ```

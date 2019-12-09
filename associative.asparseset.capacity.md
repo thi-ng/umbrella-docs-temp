@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly capacity: number;
+get capacity(): number;
 ```

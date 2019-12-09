@@ -9,5 +9,5 @@ Creates a new [Stream](./rstream.stream.md) of given iterable which synchronousl
 <b>Signature:</b>
 
 ```typescript
-fromIterableSync: <T>(src: Iterable<T>, close?: boolean) => Stream<T>
+fromIterableSync: <T>(src: Iterable<T>, opts?: Partial<CommonOpts> | undefined) => Stream<T>
 ```

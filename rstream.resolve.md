@@ -4,13 +4,17 @@
 
 ## resolve variable
 
-Creates a new subscription which receives promises, buffers them and then passes their resolved values downstream. If the optional `fail` handler is provided, it'll be called with the error of each failed promise. If none is provided, the sub's `error()` handler is called, which then stops the sub from receiving further values.
+Creates a [Subscription](./rstream.subscription.md) which receives promises, buffers them and then passes their resolved values downstream.
 
 <b>Signature:</b>
 
 ```typescript
 resolve: <T>(opts?: Partial<ResolverOpts> | undefined) => Resolver<T>
 ```
+
+## Remarks
+
+If the optional `fail` handler is provided, it'll be called with the error of each failed promise. If none is provided, the sub's [ISubscriber.error](./rstream.isubscriber.error.md) handler is called, which then stops the sub from receiving further values.
 
 ## Example
 

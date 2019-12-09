@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly left: Location<T> | undefined;
+get left(): Location<T> | undefined;
 ```

@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-pointArraysAsShapes: (ctor: PCLikeConstructor, src?: Iterable<Vec[]> | undefined, attribs?: import("@thi.ng/api").IObjectOf<any> | undefined) => import("@thi.ng/geom-api").PCLike[] | undefined
+pointArraysAsShapes: (ctor: PCLikeConstructor, src?: Iterable<Vec[]> | undefined, attribs?: Attribs | undefined) => import("@thi.ng/geom-api").PCLike[] | undefined
 ```

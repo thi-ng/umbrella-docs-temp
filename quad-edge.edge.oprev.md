@@ -9,5 +9,5 @@ Next CW edge from this edge's origin.
 <b>Signature:</b>
 
 ```typescript
-readonly oprev: Edge<T>;
+get oprev(): Edge<T>;
 ```

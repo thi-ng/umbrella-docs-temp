@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-defComponent<K extends ComponentID<SPEC>>(opts: ObjectComponentOpts<K, SPEC[K]>): Component<K, SPEC[K]>;
+defComponent<K extends ComponentID<SPEC>>(opts: ObjectComponentOpts<K, SPEC[K]>): ObjectComponent<K, SPEC[K]>;
 ```
 
 ## Parameters
@@ -18,5 +18,5 @@ defComponent<K extends ComponentID<SPEC>>(opts: ObjectComponentOpts<K, SPEC[K]>)
 
 <b>Returns:</b>
 
-`Component<K, SPEC[K]>`
+`ObjectComponent<K, SPEC[K]>`
 

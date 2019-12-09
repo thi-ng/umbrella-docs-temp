@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-ONE_MINUS_A: (a: import("@thi.ng/shader-ast").Term<"float">) => import("@thi.ng/shader-ast").Op2<"float">
+ONE_MINUS_A: (a: FloatTerm) => import("@thi.ng/shader-ast").Op2<"float">
 ```

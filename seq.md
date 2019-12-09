@@ -8,14 +8,17 @@
 
 |  Function | Description |
 |  --- | --- |
-|  [iterator(seq)](./seq.iterator.md) | Converts given seq into an ES6 iterable. |
+|  [iterator(src)](./seq.iterator.md) | Yields an ES6 iterable for given seq or seqable. |
 
 ## Variables
 
 |  Variable | Description |
 |  --- | --- |
-|  [aseq](./seq.aseq.md) | Returns a zero-copy  for the given array and optionally defined index range. |
-|  [concat](./seq.concat.md) |  |
-|  [concatA](./seq.concata.md) |  |
+|  [aseq](./seq.aseq.md) | Returns a zero-copy [ISeq](./api.iseq.md) for the given array and optionally for defined index range only. |
+|  [concat](./seq.concat.md) | Returns the concatenation sequence of given nullable  or [ISeqable](./api.iseqable.md) values. |
+|  [concatA](./seq.concata.md) | Same as [concat](./seq.concat.md)<!-- -->, but optimized for nullable arraylike values. |
 |  [ensureSeq](./seq.ensureseq.md) |  |
+|  [isSeq](./seq.isseq.md) |  |
+|  [isSeqable](./seq.isseqable.md) |  |
+|  [rseq](./seq.rseq.md) | Similar to [aseq](./seq.aseq.md)<!-- -->, returns a zero-copy [ISeq](./api.iseq.md) for the given array, though in reverse order and optionally for defined index range only. |
 

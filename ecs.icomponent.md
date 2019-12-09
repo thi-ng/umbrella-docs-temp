@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export interface IComponent<K extends string, T, V> extends IID<K>, INotify 
+export interface IComponent<K extends string, VALUES, GET, SET> extends IID<K>, INotify 
 ```
 
 ## Properties
@@ -19,7 +19,7 @@ export interface IComponent<K extends string, T, V> extends IID<K>, INotify
 |  [size](./ecs.icomponent.size.md) | <code>number</code> |  |
 |  [sparse](./ecs.icomponent.sparse.md) | <code>UIntArray</code> |  |
 |  [stride](./ecs.icomponent.stride.md) | <code>number</code> |  |
-|  [vals](./ecs.icomponent.vals.md) | <code>ArrayLike&lt;any&gt;</code> |  |
+|  [vals](./ecs.icomponent.vals.md) | <code>VALUES</code> |  |
 
 ## Methods
 
@@ -31,6 +31,9 @@ export interface IComponent<K extends string, T, V> extends IID<K>, INotify
 |  [getIndex(i)](./ecs.icomponent.getindex.md) |  |
 |  [has(id)](./ecs.icomponent.has.md) |  |
 |  [keys()](./ecs.icomponent.keys.md) |  |
-|  [swapIndices(a, b)](./ecs.icomponent.swapindices.md) |  |
+|  [set(i, val)](./ecs.icomponent.set.md) |  |
+|  [setIndex(i, val)](./ecs.icomponent.setindex.md) |  |
+|  [setIndexUnsafe(i, val, notify)](./ecs.icomponent.setindexunsafe.md) |  |
+|  [swapIndices(src, dest)](./ecs.icomponent.swapindices.md) | Swaps slots of <code>src</code> &amp; <code>dest</code> indices. The given args are NOT entity IDs, but indices in the <code>dense</code> array. The corresponding sparse &amp; value slots are swapped too. Returns true if swap happened (false, if <code>src</code> and <code>dest</code> are equal) |
 |  [values()](./ecs.icomponent.values.md) |  |
 

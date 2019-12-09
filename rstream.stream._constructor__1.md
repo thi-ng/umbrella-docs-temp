@@ -9,12 +9,12 @@ Constructs a new instance of the `Stream` class
 <b>Signature:</b>
 
 ```typescript
-constructor(id: string);
+constructor(opts: Partial<CommonOpts>);
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  id | <code>string</code> |  |
+|  opts | <code>Partial&lt;CommonOpts&gt;</code> |  |
 

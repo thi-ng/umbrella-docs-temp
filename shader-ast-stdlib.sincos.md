@@ -9,5 +9,5 @@ Inline function. Returns vec2(sin(x), cos(x)).
 <b>Signature:</b>
 
 ```typescript
-sincos: (x: import("@thi.ng/shader-ast").Term<"float">) => import("@thi.ng/shader-ast").Lit<"vec2">
+sincos: (x: FloatTerm) => import("@thi.ng/shader-ast").Lit<"vec2">
 ```

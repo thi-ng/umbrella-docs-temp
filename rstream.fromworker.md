@@ -4,17 +4,25 @@
 
 ## fromWorker variable
 
-Returns a new [Stream](./rstream.stream.md) instance which adds "message" and "error" event listeners to given `worker` and then passes received values downstream. If `terminate` is true (default), the worker will be terminated when the stream is being closed (either directly or indirectly, i.e. if the user called `.done()` on the stream or the last child subscription has unsubscribed).
-
-As with [postWorker](./rstream.postworker.md)<!-- -->, the `worker` can be an existing `Worker` instance, a JS source code `Blob` or an URL string. In the latter two cases, a worker is created automatically using `utils/makeWorker()`<!-- -->.
-
-```
-
-
-```
+Returns a [Stream](./rstream.stream.md) which adds `message` and `error` event listeners to given `worker` and then emits received values.
 
 <b>Signature:</b>
 
 ```typescript
-fromWorker: <T>(worker: string | Blob | Worker, terminate?: boolean, id?: string | undefined) => Stream<T>
+fromWorker: <T>(worker: string | Blob | Worker, opts?: Partial<FromWorkerOpts> | undefined) => Stream<T>
 ```
+
+## Remarks
+
+If `terminate` is true (default), the worker will be terminated when the stream is being closed (either directly or indirectly, i.e. if the user called [ISubscriber.done](./rstream.isubscriber.done.md) on the stream or the last child subscription has unsubscribed, depending on [config options](./rstream.commonopts.md)<!-- -->).
+
+As with [postWorker](./rstream.postworker.md)<!-- -->, the `worker` can be an existing `Worker` instance, a JS source code `Blob` or an URL string. In the latter two cases, a worker is created automatically.
+
+## Example
+
+
+```ts
+
+
+```
+

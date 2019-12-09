@@ -9,5 +9,5 @@ Shape instancing group. The `shape` can be an SVG shape `#id` defined elsewhere 
 <b>Signature:</b>
 
 ```typescript
-points: (pts: Iterable<ArrayLike<number>>, shape: string, size?: number, attribs?: any) => any[]
+points: (pts: Iterable<Vec2Like>, shape: string, size?: number, attribs?: any) => any[]
 ```

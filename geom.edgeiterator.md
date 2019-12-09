@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-edgeIterator: (vertices: Iterable<import("@thi.ng/api").ArrayLikeIterable<number>>, closed?: boolean) => IterableIterator<[import("@thi.ng/vectors").Vec, import("@thi.ng/vectors").Vec]>
+edgeIterator: (vertices: Iterable<import("@thi.ng/api").ArrayLikeIterable<number>>, closed?: boolean) => IterableIterator<VecPair>
 ```

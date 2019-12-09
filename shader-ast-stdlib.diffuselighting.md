@@ -11,5 +11,5 @@ col = lambert \* lightCol \* diffuseCol + ambientCol
 <b>Signature:</b>
 
 ```typescript
-diffuseLighting: (lambertian: import("@thi.ng/shader-ast").Term<"float">, diffuse: import("@thi.ng/shader-ast").Term<"vec3">, light: import("@thi.ng/shader-ast").Term<"vec3">, ambient: import("@thi.ng/shader-ast").Term<"vec3">) => import("@thi.ng/shader-ast").Term<"vec3">
+diffuseLighting: (lambertian: FloatTerm, diffuse: Vec3Term, light: Vec3Term, ambient: Vec3Term) => import("@thi.ng/shader-ast").Term<"vec3">
 ```

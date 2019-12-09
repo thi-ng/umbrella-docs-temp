@@ -9,5 +9,5 @@ Executes word with given name, defined in supplied `env` object and with given o
 <b>Signature:</b>
 
 ```typescript
-runWord: (id: string, env: any, stack?: any[]) => pf.StackContext
+runWord: (id: string, env: any, stack?: pf.Stack) => pf.StackContext
 ```

@@ -9,5 +9,5 @@ Like [runWord](./pointfree-lang.runword.md)<!-- -->, but returns unwrapped value
 <b>Signature:</b>
 
 ```typescript
-runWordU: (id: string, env: any, stack?: any[], n?: number) => any
+runWordU: (id: string, env: any, stack?: pf.Stack, n?: number) => any
 ```

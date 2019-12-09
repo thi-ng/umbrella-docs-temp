@@ -7,9 +7,9 @@
 <b>Signature:</b>
 
 ```typescript
-toHiccup(): (string | number | import("@thi.ng/api").IObjectOf<any> | undefined)[];
+toHiccup(): (string | number | Attribs | undefined)[];
 ```
 <b>Returns:</b>
 
-`(string | number | import("@thi.ng/api").IObjectOf<any> | undefined)[]`
+`(string | number | Attribs | undefined)[]`
 

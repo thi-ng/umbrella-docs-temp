@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-svgDoc: (attribs: import("@thi.ng/api").IObjectOf<any>, ...xs: IShape[]) => any[]
+svgDoc: (attribs: Attribs, ...xs: IShape[]) => any[]
 ```

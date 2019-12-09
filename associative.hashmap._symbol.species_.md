@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly [Symbol.species]: typeof HashMap;
+get [Symbol.species](): typeof HashMap;
 ```

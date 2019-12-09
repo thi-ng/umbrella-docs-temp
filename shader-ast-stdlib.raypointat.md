@@ -9,5 +9,5 @@ Inline function. Returns point on ray (`p`<!-- -->, `dir`<!-- -->) at distance `
 <b>Signature:</b>
 
 ```typescript
-rayPointAt: <A extends Vec, B extends A>(p: Term<A>, dir: Term<B>, t: Term<"float">, norm?: boolean) => import("@thi.ng/shader-ast").Op2<A>
+rayPointAt: <A extends Vec, B extends A>(p: Term<A>, dir: Term<B>, t: FloatTerm, norm?: boolean) => import("@thi.ng/shader-ast").Op2<A>
 ```

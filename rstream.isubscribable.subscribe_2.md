@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-subscribe<C>(xform: Transducer<T, C>, id?: string): Subscription<T, C>;
+subscribe<C>(xform: Transducer<T, C>, opts?: Partial<CommonOpts>): Subscription<T, C>;
 ```
 
 ## Parameters
@@ -15,7 +15,7 @@ subscribe<C>(xform: Transducer<T, C>, id?: string): Subscription<T, C>;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  xform | <code>Transducer&lt;T, C&gt;</code> |  |
-|  id | <code>string</code> |  |
+|  opts | <code>Partial&lt;CommonOpts&gt;</code> |  |
 
 <b>Returns:</b>
 

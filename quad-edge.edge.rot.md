@@ -9,5 +9,5 @@ Dual of this edge, right -<!-- -->&gt; left.
 <b>Signature:</b>
 
 ```typescript
-readonly rot: Edge<T>;
+get rot(): Edge<T>;
 ```

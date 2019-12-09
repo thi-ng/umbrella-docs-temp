@@ -32,6 +32,7 @@ export declare class Logger extends StreamMerge<LogEntry, LogEntry> implements I
 |  [debug(args)](./rstream-log.logger.debug.md) |  |  |
 |  [fine(args)](./rstream-log.logger.fine.md) |  |  |
 |  [info(args)](./rstream-log.logger.info.md) |  |  |
+|  [log(level, args)](./rstream-log.logger.log.md) |  |  |
 |  [next(x)](./rstream-log.logger.next.md) |  |  |
 |  [severe(args)](./rstream-log.logger.severe.md) |  |  |
 |  [warn(args)](./rstream-log.logger.warn.md) |  |  |

@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-add(id: number, val?: V): boolean;
+add(id: number, val?: SET): boolean;
 ```
 
 ## Parameters
@@ -15,7 +15,7 @@ add(id: number, val?: V): boolean;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  id | <code>number</code> |  |
-|  val | <code>V</code> |  |
+|  val | <code>SET</code> |  |
 
 <b>Returns:</b>
 

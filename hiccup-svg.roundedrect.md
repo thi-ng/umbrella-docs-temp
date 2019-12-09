@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-roundedRect: (p: ArrayLike<number>, width: number, height: number, rx: number, ry: number, attribs?: any) => any[]
+roundedRect: (p: Vec2Like, width: number, height: number, rx: number, ry: number, attribs?: any) => any[]
 ```

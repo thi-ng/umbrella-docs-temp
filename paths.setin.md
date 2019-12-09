@@ -12,12 +12,17 @@ Immediate use setter, i.e. same as: `setter(path)(state, val)`<!-- -->.
 setIn: (state: any, path: Path, val: any) => any
 ```
 
+## Remarks
+
+Supports type checked paths and values for path lengths &lt;<!-- -->= 8. String paths are always unchecked (i.e. `state` is `any`<!-- -->).
+
 ## Example
 
 
 ```ts
+
 setIn({}, "a.b.c", 23);
-// {a: {b: {c: 23}}}
+// { a: { b: { c: 23} } }
 
 ```
 

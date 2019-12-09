@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-ray: (pos: Vec, dir: Vec, attribs?: import("@thi.ng/api").IObjectOf<any> | undefined, normalize?: boolean) => Ray
+ray: (pos: Vec, dir: Vec, attribs?: Attribs | undefined, normalize?: boolean) => Ray
 ```

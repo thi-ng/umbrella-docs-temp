@@ -9,5 +9,5 @@ Syntax sugar for defining `void main()` functions.
 <b>Signature:</b>
 
 ```typescript
-defMain: (body: import("@thi.ng/api").Fn0<(Term<any> | null | undefined)[]>) => TaggedFn0<"void">
+defMain: (body: import("@thi.ng/api").Fn0<ScopeBody>) => TaggedFn0<"void">
 ```

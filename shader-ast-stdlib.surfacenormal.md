@@ -9,5 +9,5 @@ Inline function. Multiplies `normal` with given 4x4 normal matrix (e.g. transpos
 <b>Signature:</b>
 
 ```typescript
-surfaceNormal: (n: import("@thi.ng/shader-ast").Term<"vec3">, normalMat: import("@thi.ng/shader-ast").Term<"mat4">) => import("@thi.ng/shader-ast").FnCall<"vec3">
+surfaceNormal: (n: Vec3Term, normalMat: Mat4Term) => import("@thi.ng/shader-ast").FnCall<"vec3">
 ```

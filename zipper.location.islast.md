@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly isLast: boolean;
+get isLast(): boolean;
 ```

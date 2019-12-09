@@ -20,7 +20,6 @@ export declare class StreamMerge<A, B> extends Subscription<A, B>
 
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
-|  [closeMode](./rstream.streammerge.closemode.md) |  | <code>CloseMode</code> |  |
 |  [sources](./rstream.streammerge.sources.md) |  | <code>Map&lt;ISubscribable&lt;A&gt;, Subscription&lt;A, any&gt;&gt;</code> |  |
 
 ## Methods

@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-star: (r: number, n: number, profile: number[], attribs?: import("@thi.ng/api").IObjectOf<any> | undefined) => Polygon
+star: (r: number, n: number, profile: number[], attribs?: Attribs | undefined) => Polygon
 ```

@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-hueRotate: (theta: number) => [number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number]
+hueRotate: (theta: number) => ColorMatrix
 ```

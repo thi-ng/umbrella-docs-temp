@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-vals: ArrayLike<any>;
+vals: VALUES;
 ```

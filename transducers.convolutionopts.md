@@ -18,8 +18,8 @@ export interface ConvolutionOpts<K>
 |  [kernel](./transducers.convolutionopts.kernel.md) | <code>K</code> | Convolution kernel, pre-build via <code>buildKernel*</code> |
 |  [kwidth](./transducers.convolutionopts.kwidth.md) | <code>number</code> | Kernel width (MUST be odd number) |
 |  [reduce](./transducers.convolutionopts.reduce.md) | <code>Fn0&lt;Reducer&lt;number, number&gt;&gt;</code> | Optional custom reducer to process convoluted results. Default: <code>add</code> |
-|  [src](./transducers.convolutionopts.src.md) | <code>number[]</code> | Current cell states |
-|  [weights](./transducers.convolutionopts.weights.md) | <code>number[]</code> | Kernel weights |
+|  [src](./transducers.convolutionopts.src.md) | <code>ArrayLike&lt;number&gt;</code> | Current cell states |
+|  [weights](./transducers.convolutionopts.weights.md) | <code>Iterable&lt;number&gt;</code> | Kernel weights |
 |  [width](./transducers.convolutionopts.width.md) | <code>number</code> | Cell matrix width |
 |  [wrap](./transducers.convolutionopts.wrap.md) | <code>boolean</code> | True, if convolution is seamless / wraps around near edges. Default: true |
 

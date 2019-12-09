@@ -4,7 +4,7 @@
 
 ## CloseMode enum
 
-Closing behavior for [StreamMerge](./rstream.streammerge.md) and [StreamSync](./rstream.streamsync.md)<!-- -->.
+Closing behaviors.
 
 <b>Signature:</b>
 
@@ -16,7 +16,7 @@ export declare const enum CloseMode
 
 |  Member | Value | Description |
 |  --- | --- | --- |
-|  FIRST | <code>1</code> |  |
-|  LAST | <code>2</code> |  |
-|  NEVER | <code>0</code> |  |
+|  FIRST | <code>1</code> | Close when first input/output is done / removed. |
+|  LAST | <code>2</code> | Close when last input/output is done / removed. |
+|  NEVER | <code>0</code> | Never close, even if no more inputs/outputs. |
 

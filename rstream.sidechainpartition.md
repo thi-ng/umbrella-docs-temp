@@ -4,9 +4,22 @@
 
 ## sidechainPartition variable
 
-Buffers values from `src` until side chain fires, then emits buffer (unless empty) and repeats process until either input is done. By default, the value read from the side chain is ignored, however the optional predicate can be used to only trigger for specific values / conditions.
+Returns a [Subscription](./rstream.subscription.md) which buffers values from `src` until side chain fires, then emits buffer (unless empty) and repeats process until either input is done.
 
+<b>Signature:</b>
+
+```typescript
+sidechainPartition: <A, B>(side: ISubscribable<B>, opts?: Partial<SidechainPartitionOpts<B>> | undefined) => Subscription<A, A[]>
 ```
+
+## Remarks
+
+By default, the values read from the side chain are ignored (i.e. only their timing is used), however the `pred`<!-- -->icate option can be used to only trigger for specific values / conditions.
+
+## Example
+
+
+```t
 // merge various event streams
 events = merge([
     fromEvent(document,"mousemove"),
@@ -20,8 +33,3 @@ events.subscribe(sidechainPartition(fromRAF())).subscribe(trace())
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-sidechainPartition: <A, B>(side: ISubscribable<B>, pred?: import("@thi.ng/api").Fn<B, boolean> | undefined, id?: string | undefined) => Subscription<A, A[]>
-```

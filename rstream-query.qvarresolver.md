@@ -9,7 +9,7 @@ Returns an optimized query variable solution extractor function based on given p
 <b>Signature:</b>
 
 ```typescript
-qvarResolver: (vs: boolean, vp: boolean, vo: boolean, s: string, p: string, o: string) => ((f: [any, any, any]) => {
+qvarResolver: (vs: boolean, vp: boolean, vo: boolean, s: string, p: string, o: string) => ((f: import("./api").Pattern) => {
     [x: number]: any;
 }) | undefined
 ```

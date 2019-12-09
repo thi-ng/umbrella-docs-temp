@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-subscribeTopic<C>(topicID: any, tx: Transducer<B, C>, id?: string): Subscription<B, C>;
+subscribeTopic<C>(topicID: any, xform: Transducer<B, C>, opts?: Partial<CommonOpts>): Subscription<B, C>;
 ```
 
 ## Parameters
@@ -15,8 +15,8 @@ subscribeTopic<C>(topicID: any, tx: Transducer<B, C>, id?: string): Subscription
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  topicID | <code>any</code> |  |
-|  tx | <code>Transducer&lt;B, C&gt;</code> |  |
-|  id | <code>string</code> |  |
+|  xform | <code>Transducer&lt;B, C&gt;</code> |  |
+|  opts | <code>Partial&lt;CommonOpts&gt;</code> |  |
 
 <b>Returns:</b>
 

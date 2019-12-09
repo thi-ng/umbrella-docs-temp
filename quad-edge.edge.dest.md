@@ -9,5 +9,5 @@ Returns this edge's dest vertex. I.e. `this.sym.origin`
 <b>Signature:</b>
 
 ```typescript
-readonly dest: T;
+get dest(): T;
 ```

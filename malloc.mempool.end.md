@@ -7,5 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-protected end: number;
+protected get end(): number;
+
+protected set end(x: number);
 ```

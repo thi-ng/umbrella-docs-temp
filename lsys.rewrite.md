@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-rewrite: (rules: IObjectOf<ArrayLike<string | number> & Iterable<string | number>>, syms: Iterable<string | number>) => IterableIterator<string | number>
+rewrite: (rules: ProductionRules, syms: Iterable<string | number>) => IterableIterator<string | number>
 ```

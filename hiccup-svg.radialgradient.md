@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-radialGradient: (id: string, from: ArrayLike<number>, to: ArrayLike<number>, fr: number, r: number, stops: [string | number, string][], attribs?: any) => any[]
+radialGradient: (id: string, from: Vec2Like, to: Vec2Like, fr: number, r: number, stops: GradientStop[], attribs?: any) => any[]
 ```

@@ -9,5 +9,5 @@ Compiles given [NodeSpec](./rstream-graph.nodespec.md) and adds it to graph. Ret
 <b>Signature:</b>
 
 ```typescript
-addNode: (graph: IObjectOf<Node>, state: IAtom<any>, id: string, spec: NodeSpec) => Node
+addNode: (graph: Graph, state: IAtom<any>, id: string, spec: NodeSpec) => Node
 ```

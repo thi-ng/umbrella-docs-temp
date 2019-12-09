@@ -4,7 +4,7 @@
 
 ## transduce variable
 
-Returns a promise which subscribes to given input and transforms incoming values using given transducer `xform` and reducer `rfn`<!-- -->. Once the input is done the promise will resolve with the final reduced result (or fail with error).
+Returns a promise which subscribes to given input and transforms incoming values using given transducer `xform` and reducer `rfn`<!-- -->.
 
 <b>Signature:</b>
 
@@ -12,12 +12,16 @@ Returns a promise which subscribes to given input and transforms incoming values
 transduce: <A, B, C>(src: Subscription<any, A>, xform: Transducer<A, B>, rfn: Reducer<C, B>, init?: C | undefined) => Promise<C>
 ```
 
+## Remarks
+
+Once the input or the reducer is done, the promise will resolve with the final reduced result (or fail with error).
+
 ## Example
 
 
 ```ts
-rs.transduce(
-  rs.fromIterable(tx.range(10)),
+transduce(
+  fromIterable(tx.range(10)),
   tx.map((x) => x * 10),
   tx.add()
 ).then((x) => console.log("result", x))

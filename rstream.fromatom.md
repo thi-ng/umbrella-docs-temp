@@ -4,21 +4,25 @@
 
 ## fromAtom variable
 
-Yields stream of value changes in given atom / cursor. Attaches watch to atom and checks for value changes with given `changed` predicate (`!==` by default). If the predicate returns truthy result, the new value is emitted on the stream. If `emitFirst` is true (default), also emits atom's current value when first subscriber attaches to stream.
-
-See: - [fromView](./rstream.fromview.md) - [@thi.ng/atom](./atom.md)
+Yields [Stream](./rstream.stream.md) of value changes in given [Atom-like state container](./atom.md)<!-- -->.
 
 <b>Signature:</b>
 
 ```typescript
-fromAtom: <T>(atom: ReadonlyAtom<T>, emitFirst?: boolean, changed?: import("@thi.ng/api").Fn2<T, T, boolean> | undefined) => Stream<T>
+fromAtom: <T>(atom: ReadonlyAtom<T>, opts?: Partial<FromAtomOpts<T>> | undefined) => Stream<T>
 ```
+
+## Remarks
+
+Attaches a [watch](./api.iwatch.addwatch.md) to the atom and checks for value changes with given `changed` predicate (`!==` by default). If the predicate returns truthy result, the new value is emitted on the stream. If `emitFirst` is true (default), also emits atom's current value when first subscriber attaches to stream.
+
+Also see [fromView](./rstream.fromview.md)
 
 ## Example
 
 
 ```ts
-db = new Atom({a: 23, b: 88});
+db = new Atom({ a: 23, b: 88 });
 cursor = new Cursor(db, "a")
 
 rs.fromAtom(cursor).subscribe(rs.trace("cursor val:"))

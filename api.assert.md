@@ -14,5 +14,5 @@ assert: (test: boolean | Fn0<boolean>, msg?: string | Fn0<string>) => void
 
 ## Remarks
 
-The function is only enabled if `NODE_ENV != "production"` or if `UMBRELLA_ASSERTS = 1`<!-- -->.
+The function is only enabled if `process.env.NODE_ENV != "production"` or if the `UMBRELLA_ASSERTS` env var is set to 1.
 

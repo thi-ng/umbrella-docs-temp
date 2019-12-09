@@ -4,40 +4,44 @@
 
 ## fromPromises variable
 
-Wraps given promises in `Promise.all()` to yield stream of results in same order as arguments, then closes. If any of the promises rejects, all others do too and calls [ISubscriber.error](./rstream.isubscriber.error.md) in subscribers.
+Wraps given iterable in `Promise.all()` to yield [Stream](./rstream.stream.md) of results in same order as arguments, then closes.
 
 <b>Signature:</b>
 
 ```typescript
-fromPromises: <T>(promises: Iterable<Promise<T>>) => Subscription<T[], T>
+fromPromises: <T>(promises: Iterable<T | PromiseLike<T>>, opts?: Partial<CommonOpts> | undefined) => Subscription<T[], T>
 ```
+
+## Remarks
+
+If any of the promises rejects, all others will do so too. In this case the stream calls [ISubscriber.error](./rstream.isubscriber.error.md) in all of its subscribers.
 
 ## Example 1
 
 
 ```ts
-rs.fromPromises([
+fromPromises([
     Promise.resolve(1),
     Promise.resolve(2),
     Promise.resolve(3)
-]).subscribe(rs.trace())
+]).subscribe(trace())
 // 1
 // 2
 // 3
 // done
 
 ```
-If individual error handling is required, an alternative is below (however this approach provides no ordering guarantees):
 
 ## Example 2
 
+If individual error handling is required, an alternative is below (however this approach provides no ordering guarantees):
 
 ```ts
-rs.fromIterable([
+fromIterable([
     Promise.resolve(1),
-    new Promise(()=> { setTimeout(()=> { throw new Error("eeek"); }, 10); }),
+    new Promise(() => setTimeout(() => { throw new Error("eeek"); }, 10)),
     Promise.resolve(3)
-]).subscribe(rs.resolve()).subscribe(rs.trace())
+]).subscribe(resolve()).subscribe(trace())
 
 ```
 

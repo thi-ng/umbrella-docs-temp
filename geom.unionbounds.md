@@ -9,5 +9,5 @@ Takes the position and size vectors of 2 [AABBLike](./geom-api.aabblike.md)<!-- 
 <b>Signature:</b>
 
 ```typescript
-unionBounds: (apos: import("@thi.ng/api").ArrayLikeIterable<number>, asize: import("@thi.ng/api").ArrayLikeIterable<number>, bpos: import("@thi.ng/api").ArrayLikeIterable<number>, bsize: import("@thi.ng/api").ArrayLikeIterable<number>) => [import("@thi.ng/vectors").Vec, import("@thi.ng/vectors").Vec]
+unionBounds: (apos: import("@thi.ng/api").ArrayLikeIterable<number>, asize: import("@thi.ng/api").ArrayLikeIterable<number>, bpos: import("@thi.ng/api").ArrayLikeIterable<number>, bsize: import("@thi.ng/api").ArrayLikeIterable<number>) => VecPair
 ```

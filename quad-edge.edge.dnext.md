@@ -9,5 +9,5 @@ Next CCW edge to this edge's dest.
 <b>Signature:</b>
 
 ```typescript
-readonly dnext: Edge<T>;
+get dnext(): Edge<T>;
 ```

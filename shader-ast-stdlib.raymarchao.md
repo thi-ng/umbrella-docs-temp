@@ -9,5 +9,5 @@ Higher order function returning an function to compute the Ambient Occlusion ter
 <b>Signature:</b>
 
 ```typescript
-raymarchAO: (scene: import("@thi.ng/shader-ast").TaggedFn1<"vec3", "vec2">, numSamples?: number) => import("@thi.ng/shader-ast").TaggedFn2<"vec3", "vec3", "float">
+raymarchAO: (scene: RaymarchScene, numSamples?: number) => import("@thi.ng/shader-ast").TaggedFn2<"vec3", "vec3", "float">
 ```

@@ -11,5 +11,5 @@ Applies [shuffleRange](./arrays.shufflerange.md) to the given array. If `n` is g
 <b>Signature:</b>
 
 ```typescript
-shuffle: <T extends AnyArray>(buf: T, n?: number, rnd?: IRandom) => T
+shuffle: <T extends any[] | Int8Array | Uint8Array | Uint8ClampedArray | Int16Array | Uint16Array | Int32Array | Uint32Array | Float32Array | Float64Array>(buf: T, n?: number, rnd?: IRandom) => T
 ```

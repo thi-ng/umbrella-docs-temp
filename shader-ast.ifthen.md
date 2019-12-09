@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-ifThen: (test: Term<"bool">, truthy: Term<any>[], falsey?: Term<any>[] | undefined) => Branch
+ifThen: (test: BoolTerm, truthy: Term<any>[], falsey?: Term<any>[] | undefined) => Branch
 ```

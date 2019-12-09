@@ -9,5 +9,5 @@ Computes UV coord in \[0..1\] interval from given `fragCoord` and screen `res`<!
 <b>Signature:</b>
 
 ```typescript
-fragUV: (fragCoord: import("@thi.ng/shader-ast").Term<"vec4">, res: import("@thi.ng/shader-ast").Term<"vec2">) => import("@thi.ng/shader-ast").Op2<"vec2">
+fragUV: (fragCoord: Vec4Term, res: Vec2Term) => import("@thi.ng/shader-ast").Op2<"vec2">
 ```

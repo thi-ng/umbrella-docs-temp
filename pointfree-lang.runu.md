@@ -9,5 +9,5 @@ Like [run](./pointfree-lang.run.md)<!-- -->, but returns unwrapped value(s) from
 <b>Signature:</b>
 
 ```typescript
-runU: (src: string, env?: any, stack?: any[] | undefined, n?: number) => any
+runU: (src: string, env?: any, stack?: pf.Stack | undefined, n?: number) => any
 ```

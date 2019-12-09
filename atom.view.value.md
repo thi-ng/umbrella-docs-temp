@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly value: T | undefined;
+get value(): T | undefined;
 ```

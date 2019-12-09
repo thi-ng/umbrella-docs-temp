@@ -9,5 +9,5 @@ Transforms `src` RGBA color with given matrix and stores result in `out` (writes
 <b>Signature:</b>
 
 ```typescript
-transform: (out: import("@thi.ng/vectors").Vec | null, mat: [number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number], src: import("@thi.ng/api").ArrayLikeIterable<number>, clampOut?: boolean) => import("@thi.ng/vectors").Vec
+transform: (out: import("@thi.ng/vectors").Vec | null, mat: ColorMatrix, src: import("@thi.ng/api").ArrayLikeIterable<number>, clampOut?: boolean) => import("@thi.ng/vectors").Vec
 ```

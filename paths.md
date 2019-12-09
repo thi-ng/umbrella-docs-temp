@@ -4,28 +4,153 @@
 
 ## paths package
 
+## Functions
+
+|  Function | Description |
+|  --- | --- |
+|  [deleteInT(state, path)](./paths.deleteint.md) | Type checked version of [deleteIn](./paths.deletein.md)<!-- -->. |
+|  [deleteInT(state, path)](./paths.deleteint_1.md) |  |
+|  [deleteInT(state, path)](./paths.deleteint_2.md) |  |
+|  [deleteInT(state, path)](./paths.deleteint_3.md) |  |
+|  [deleteInT(state, path)](./paths.deleteint_4.md) |  |
+|  [deleteInT(state, path)](./paths.deleteint_5.md) |  |
+|  [deleteInT(state, path)](./paths.deleteint_6.md) |  |
+|  [deleteInT(state, path)](./paths.deleteint_7.md) |  |
+|  [getInT(state, path)](./paths.getint.md) | Type checked version of [getIn](./paths.getin.md)<!-- -->. |
+|  [getInT(state, path)](./paths.getint_9.md) |  |
+|  [getInT(state, path)](./paths.getint_1.md) |  |
+|  [getInT(state, path)](./paths.getint_2.md) |  |
+|  [getInT(state, path)](./paths.getint_3.md) |  |
+|  [getInT(state, path)](./paths.getint_4.md) |  |
+|  [getInT(state, path)](./paths.getint_5.md) |  |
+|  [getInT(state, path)](./paths.getint_6.md) |  |
+|  [getInT(state, path)](./paths.getint_7.md) |  |
+|  [getInT(state, path)](./paths.getint_8.md) |  |
+|  [getterT(path)](./paths.gettert.md) | Type checked version of [getter](./paths.getter.md)<!-- -->. |
+|  [getterT(path)](./paths.gettert_9.md) |  |
+|  [getterT(path)](./paths.gettert_1.md) |  |
+|  [getterT(path)](./paths.gettert_2.md) |  |
+|  [getterT(path)](./paths.gettert_3.md) |  |
+|  [getterT(path)](./paths.gettert_4.md) |  |
+|  [getterT(path)](./paths.gettert_5.md) |  |
+|  [getterT(path)](./paths.gettert_6.md) |  |
+|  [getterT(path)](./paths.gettert_7.md) |  |
+|  [getterT(path)](./paths.gettert_8.md) |  |
+|  [mutatorT(path)](./paths.mutatort.md) | Type checked version of [mutator](./paths.mutator.md)<!-- -->. |
+|  [mutatorT(path)](./paths.mutatort_9.md) |  |
+|  [mutatorT(path)](./paths.mutatort_1.md) |  |
+|  [mutatorT(path)](./paths.mutatort_2.md) |  |
+|  [mutatorT(path)](./paths.mutatort_3.md) |  |
+|  [mutatorT(path)](./paths.mutatort_4.md) |  |
+|  [mutatorT(path)](./paths.mutatort_5.md) |  |
+|  [mutatorT(path)](./paths.mutatort_6.md) |  |
+|  [mutatorT(path)](./paths.mutatort_7.md) |  |
+|  [mutatorT(path)](./paths.mutatort_8.md) |  |
+|  [mutInT(state, path, val)](./paths.mutint.md) | Type checked version of [mutIn](./paths.mutin.md)<!-- -->. |
+|  [mutInT(state, path, val)](./paths.mutint_9.md) |  |
+|  [mutInT(state, path, val)](./paths.mutint_1.md) |  |
+|  [mutInT(state, path, val)](./paths.mutint_2.md) |  |
+|  [mutInT(state, path, val)](./paths.mutint_3.md) |  |
+|  [mutInT(state, path, val)](./paths.mutint_4.md) |  |
+|  [mutInT(state, path, val)](./paths.mutint_5.md) |  |
+|  [mutInT(state, path, val)](./paths.mutint_6.md) |  |
+|  [mutInT(state, path, val)](./paths.mutint_7.md) |  |
+|  [mutInT(state, path, val)](./paths.mutint_8.md) |  |
+|  [setInT(state, path, val)](./paths.setint.md) | Type checked version of [setIn](./paths.setin.md)<!-- -->. |
+|  [setInT(state, path, val)](./paths.setint_9.md) |  |
+|  [setInT(state, path, val)](./paths.setint_1.md) |  |
+|  [setInT(state, path, val)](./paths.setint_2.md) |  |
+|  [setInT(state, path, val)](./paths.setint_3.md) |  |
+|  [setInT(state, path, val)](./paths.setint_4.md) |  |
+|  [setInT(state, path, val)](./paths.setint_5.md) |  |
+|  [setInT(state, path, val)](./paths.setint_6.md) |  |
+|  [setInT(state, path, val)](./paths.setint_7.md) |  |
+|  [setInT(state, path, val)](./paths.setint_8.md) |  |
+|  [setterT(path)](./paths.settert.md) | Type checked version of [setter](./paths.setter.md)<!-- -->. |
+|  [setterT(path)](./paths.settert_9.md) |  |
+|  [setterT(path)](./paths.settert_1.md) |  |
+|  [setterT(path)](./paths.settert_2.md) |  |
+|  [setterT(path)](./paths.settert_3.md) |  |
+|  [setterT(path)](./paths.settert_4.md) |  |
+|  [setterT(path)](./paths.settert_5.md) |  |
+|  [setterT(path)](./paths.settert_6.md) |  |
+|  [setterT(path)](./paths.settert_7.md) |  |
+|  [setterT(path)](./paths.settert_8.md) |  |
+|  [updateInT(state, path, fn)](./paths.updateint.md) | Type checked version of [updateIn](./paths.updatein.md)<!-- -->. |
+|  [updateInT(state, path, fn, args)](./paths.updateint_9.md) |  |
+|  [updateInT(state, path, fn, args)](./paths.updateint_1.md) |  |
+|  [updateInT(state, path, fn, args)](./paths.updateint_2.md) |  |
+|  [updateInT(state, path, fn, args)](./paths.updateint_3.md) |  |
+|  [updateInT(state, path, fn, args)](./paths.updateint_4.md) |  |
+|  [updateInT(state, path, fn, args)](./paths.updateint_5.md) |  |
+|  [updateInT(state, path, fn, args)](./paths.updateint_6.md) |  |
+|  [updateInT(state, path, fn, args)](./paths.updateint_7.md) |  |
+|  [updateInT(state, path, fn, args)](./paths.updateint_8.md) |  |
+|  [updaterT(path, fn)](./paths.updatert.md) | Type checked version of [updater](./paths.updater.md)<!-- -->. |
+|  [updaterT(path, fn)](./paths.updatert_9.md) |  |
+|  [updaterT(path, fn)](./paths.updatert_1.md) |  |
+|  [updaterT(path, fn)](./paths.updatert_2.md) |  |
+|  [updaterT(path, fn)](./paths.updatert_3.md) |  |
+|  [updaterT(path, fn)](./paths.updatert_4.md) |  |
+|  [updaterT(path, fn)](./paths.updatert_5.md) |  |
+|  [updaterT(path, fn)](./paths.updatert_6.md) |  |
+|  [updaterT(path, fn)](./paths.updatert_7.md) |  |
+|  [updaterT(path, fn)](./paths.updatert_8.md) |  |
+
 ## Variables
 
 |  Variable | Description |
 |  --- | --- |
-|  [deleteIn](./paths.deletein.md) | Uses [updateIn](./paths.updatein.md) and returns updated state with key for given path removed. Does not modify original state.<!-- -->Returns <code>undefined</code> if <code>path</code> is an empty string or array. |
+|  [deleteIn](./paths.deletein.md) | Uses [updateIn](./paths.updatein.md) and returns updated state with key for given path removed. Does not modify original state.Returns <code>undefined</code> if <code>path</code> is an empty string or array.
+```
+deleteIn({ a: { b: { c: 23 } } }, "a.b.c");
+// { a: { b: { } } }
+
+```
+ |
 |  [exists](./paths.exists.md) | Takes an arbitrary object and lookup path. Descends into object along path and returns true if the full path exists (even if final leaf value is <code>null</code> or <code>undefined</code>). Checks are performed using <code>hasOwnProperty()</code>. |
 |  [getIn](./paths.getin.md) | Immediate use getter, i.e. same as: <code>getter(path)(state)</code>. |
-|  [getter](./paths.getter.md) | Composes a getter function for given nested lookup path. Optimized fast execution paths are provided for path lengths less than 5. Supports any <code>[]</code>-indexable data structure (arrays, objects, strings). |
-|  [mutator](./paths.mutator.md) | Higher-order function, similar to [setter](./paths.setter.md)<!-- -->. Returns function which when called mutates given object/array at given path location and bails if any intermediate path values are non-indexable (only the very last path element can be missing in the actual object structure). If successful, returns original (mutated) object, else <code>undefined</code>. This function provides optimized versions for path lengths &lt;<!-- -->= 4. |
+|  [getter](./paths.getter.md) | Composes a getter function for given nested lookup path. Optimized fast execution paths are provided for path lengths &lt;<!-- -->= 4. |
+|  [mutator](./paths.mutator.md) | Higher-order function, similar to [setter](./paths.setter.md)<!-- -->. Returns function which when called mutates given object/array at given path location. |
 |  [mutIn](./paths.mutin.md) | Immediate use mutator, i.e. same as: <code>mutator(path)(state, val)</code>. |
-|  [mutInMany](./paths.mutinmany.md) | Like [mutIn](./paths.mutin.md)<!-- -->, but takes any number of path-value pairs and applies them in sequence. All key paths must already be present in the given data structure until their penultimate key. |
+|  [mutInMany](./paths.mutinmany.md) | Similar to [mutIn](./paths.mutin.md)<!-- -->, but takes any number of path-value pairs as args and applies them in sequence using <code>mutIn()</code>. All key paths must already be present in the given data structure until their penultimate key. |
 |  [setIn](./paths.setin.md) | Immediate use setter, i.e. same as: <code>setter(path)(state, val)</code>. |
-|  [setInMany](./paths.setinmany.md) | Like [setIn](./paths.setin.md)<!-- -->, but takes any number of path-value pairs and applies them in sequence by calling [setIn](./paths.setin.md) for each. Any key paths missing in the data structure will be created. Does \*not\* mutate original (instead use [mutInMany](./paths.mutinmany.md) for this purpose). |
-|  [setter](./paths.setter.md) | Composes a setter function for given nested update path. Optimized fast execution paths are provided for path lengths less up to 4. Supports both arrays and objects and creates intermediate shallow copies at each level of the path. Thus provides structural sharing with the original data for any branches not being updated by the setter.<!-- -->If <code>path</code> is given as string, it will be split using <code>.</code>. Returns function which accepts single object and when called, \*\*immutably\*\* updates value at given path, i.e. produces a partial deep copy of obj up until given path.<!-- -->If any intermediate key is not present in the given obj, creates a plain empty object for that key and descends further.<!-- -->If <code>path</code> is an empty string or array, the returned setter will simply return the new value.<!-- -->Also see: [setIn](./paths.setin.md)<!-- -->, [updateIn](./paths.updatein.md)<!-- -->, [deleteIn](./paths.deletein.md) |
-|  [toPath](./paths.topath.md) | Converts the given key path to canonical form (array). |
-|  [updateIn](./paths.updatein.md) | Similar to [setIn](./paths.setin.md)<!-- -->, but applies given function to current path value (incl. any additional/optional arguments passed to [updateIn](./paths.updatein.md)<!-- -->) and uses result as new value. Does not modify original state (unless given function does so itself). |
-|  [updater](./paths.updater.md) | Similar to [setter](./paths.setter.md)<!-- -->, returns a function to update values at given <code>path</code> using provided update <code>fn</code>. The returned function accepts a single object / array and applies <code>fn</code> to current path value (incl. any additional/optional arguments passed) and uses result as new value. Does not modify original state (unless given function does so itself). |
+|  [setInMany](./paths.setinmany.md) | Similar to [setIn](./paths.setin.md)<!-- -->, but takes any number of path-value pairs as args and applies them in sequence by calling <code>setIn()</code> for each. |
+|  [setter](./paths.setter.md) | Composes a setter function for given nested update path. Optimized fast execution paths are provided for path lengths less up to 4. |
+|  [toPath](./paths.topath.md) | Converts the given key path to canonical form (array).
+```
+toPath("a.b.c");
+// ["a", "b", "c"]
+
+toPath(0)
+// [0]
+
+toPath(["a", "b", "c"])
+// ["a", "b", "c"]
+
+```
+ |
+|  [updateIn](./paths.updatein.md) | Similar to [setIn](./paths.setin.md)<!-- -->, but applies given function to current path value (incl. any additional/optional arguments passed to <code>updateIn</code>) and uses result as new value. Does not modify original state (unless given function does so itself).
+```
+add = (x, y) => x + y;
+updateIn({ a: { b: { c: 23 } } }, "a.b.c", add, 10);
+// { a: { b: { c: 33 } } }
+
+```
+ |
+|  [updater](./paths.updater.md) | Similar to [setter](./paths.setter.md)<!-- -->, returns a function to update values at given <code>path</code> using provided update <code>fn</code>. |
 
 ## Type Aliases
 
 |  Type Alias | Description |
 |  --- | --- |
-|  [Path](./paths.path.md) |  |
+|  [Path1](./paths.path1.md) |  |
+|  [Path2](./paths.path2.md) |  |
+|  [Path3](./paths.path3.md) |  |
+|  [Path4](./paths.path4.md) |  |
+|  [Path5](./paths.path5.md) |  |
+|  [Path6](./paths.path6.md) |  |
+|  [Path7](./paths.path7.md) |  |
+|  [Path8](./paths.path8.md) |  |
 |  [UpdateFn](./paths.updatefn.md) |  |
 

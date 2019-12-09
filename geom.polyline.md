@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-polyline: (pts: Vec[], attribs?: import("@thi.ng/api").IObjectOf<any> | undefined) => Polyline
+polyline: (pts: Vec[], attribs?: Attribs | undefined) => Polyline
 ```

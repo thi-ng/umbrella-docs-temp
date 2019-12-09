@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-plane: (normal: Vec, w: number, attribs?: import("@thi.ng/api").IObjectOf<any> | undefined) => Plane
+plane: (normal: Vec, w: number, attribs?: Attribs | undefined) => Plane
 ```

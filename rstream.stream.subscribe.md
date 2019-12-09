@@ -7,18 +7,17 @@
 <b>Signature:</b>
 
 ```typescript
-subscribe<C>(sub: Partial<ISubscriber<C>>, xform: Transducer<T, C>, id?: string): Subscription<T, C>;
+subscribe(sub: Partial<ISubscriber<T>>, opts?: Partial<CommonOpts>): Subscription<T, T>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  sub | <code>Partial&lt;ISubscriber&lt;C&gt;&gt;</code> |  |
-|  xform | <code>Transducer&lt;T, C&gt;</code> |  |
-|  id | <code>string</code> |  |
+|  sub | <code>Partial&lt;ISubscriber&lt;T&gt;&gt;</code> |  |
+|  opts | <code>Partial&lt;CommonOpts&gt;</code> |  |
 
 <b>Returns:</b>
 
-`Subscription<T, C>`
+`Subscription<T, T>`
 

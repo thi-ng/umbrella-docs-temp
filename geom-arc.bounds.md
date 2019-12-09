@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-bounds: (pos: import("@thi.ng/api").ArrayLikeIterable<number>, r: import("@thi.ng/api").ArrayLikeIterable<number>, axis: number, start: number, end: number) => [Vec, Vec]
+bounds: (pos: import("@thi.ng/api").ArrayLikeIterable<number>, r: import("@thi.ng/api").ArrayLikeIterable<number>, axis: number, start: number, end: number) => VecPair
 ```

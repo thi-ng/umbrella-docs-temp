@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-line: (a: ArrayLike<number>, b: ArrayLike<number>, attribs?: any) => any[]
+line: (a: Vec2Like, b: Vec2Like, attribs?: any) => any[]
 ```

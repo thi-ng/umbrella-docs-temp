@@ -20,7 +20,6 @@ export declare class StreamSync<A, B> extends Subscription<A, B>
 
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
-|  [closeMode](./rstream.streamsync.closemode.md) |  | <code>CloseMode</code> | closing behavior |
 |  [idSources](./rstream.streamsync.idsources.md) |  | <code>Map&lt;string, ISubscribable&lt;A&gt;&gt;</code> | maps real source IDs to their actual input |
 |  [invRealSourceIDs](./rstream.streamsync.invrealsourceids.md) |  | <code>Map&lt;string, string&gt;</code> | maps real src.id to (potentially aliased) input IDs |
 |  [realSourceIDs](./rstream.streamsync.realsourceids.md) |  | <code>Map&lt;string, string&gt;</code> | maps (potentially aliased) input IDs to their actual src.id |

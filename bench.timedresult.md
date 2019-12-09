@@ -9,5 +9,5 @@ Similar to [timed](./bench.timed.md)<!-- -->, but produces no output and instead
 <b>Signature:</b>
 
 ```typescript
-timedResult: <T>(fn: () => T) => [T, number]
+timedResult: <T>(fn: () => T) => TimingResult<T>
 ```

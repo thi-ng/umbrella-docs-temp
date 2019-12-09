@@ -9,5 +9,5 @@ Inline function. Computes luminance of given RGB color
 <b>Signature:</b>
 
 ```typescript
-luminanceRGB: (rgb: import("@thi.ng/shader-ast").Term<"vec3">) => import("@thi.ng/shader-ast").FnCall<"float">
+luminanceRGB: (rgb: Vec3Term) => import("@thi.ng/shader-ast").FnCall<"float">
 ```

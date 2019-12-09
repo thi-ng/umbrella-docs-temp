@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly rights: T[] | undefined;
+get rights(): T[] | undefined;
 ```

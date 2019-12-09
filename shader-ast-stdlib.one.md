@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-ONE: () => import("@thi.ng/shader-ast").Term<"float">
+ONE: () => FloatTerm
 ```

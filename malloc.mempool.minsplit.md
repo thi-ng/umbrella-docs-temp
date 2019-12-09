@@ -7,5 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-protected minSplit: number;
+protected get minSplit(): number;
+
+protected set minSplit(x: number);
 ```

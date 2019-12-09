@@ -4,21 +4,17 @@
 
 ## updateIn variable
 
-Similar to [setIn](./paths.setin.md)<!-- -->, but applies given function to current path value (incl. any additional/optional arguments passed to [updateIn](./paths.updatein.md)<!-- -->) and uses result as new value. Does not modify original state (unless given function does so itself).
+Similar to [setIn](./paths.setin.md)<!-- -->, but applies given function to current path value (incl. any additional/optional arguments passed to `updateIn`<!-- -->) and uses result as new value. Does not modify original state (unless given function does so itself).
+
+```
+add = (x, y) => x + y;
+updateIn({ a: { b: { c: 23 } } }, "a.b.c", add, 10);
+// { a: { b: { c: 33 } } }
+
+```
 
 <b>Signature:</b>
 
 ```typescript
 updateIn: (state: any, path: Path, fn: UpdateFn<any>, ...args: any[]) => any
 ```
-
-## Example
-
-
-```ts
-add = (x, y) => x + y;
-updateIn({a: {b: {c: 23}}}, "a.b.c", add, 10);
-// {a: {b: {c: 33}}}
-
-```
-

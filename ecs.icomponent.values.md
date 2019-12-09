@@ -7,9 +7,9 @@
 <b>Signature:</b>
 
 ```typescript
-values(): IterableIterator<T>;
+values(): IterableIterator<GET>;
 ```
 <b>Returns:</b>
 
-`IterableIterator<T>`
+`IterableIterator<GET>`
 

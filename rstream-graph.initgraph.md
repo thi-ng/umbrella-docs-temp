@@ -9,5 +9,5 @@ Dataflow graph initialization function. Takes a state Atom (or `null` if not nee
 <b>Signature:</b>
 
 ```typescript
-initGraph: (state: IAtom<any>, spec: IObjectOf<Node | import("@thi.ng/api").Fn<ResolveFn, Node> | NodeSpec>) => IObjectOf<Node>
+initGraph: (state: IAtom<any>, spec: GraphSpec) => Graph
 ```

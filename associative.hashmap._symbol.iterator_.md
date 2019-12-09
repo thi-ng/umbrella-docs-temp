@@ -7,9 +7,9 @@
 <b>Signature:</b>
 
 ```typescript
-[Symbol.iterator](): IterableIterator<[K, V]>;
+[Symbol.iterator](): IterableIterator<Pair<K, V>>;
 ```
 <b>Returns:</b>
 
-`IterableIterator<[K, V]>`
+`IterableIterator<Pair<K, V>>`
 

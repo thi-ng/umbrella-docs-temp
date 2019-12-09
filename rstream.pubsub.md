@@ -4,10 +4,19 @@
 
 ## pubsub variable
 
-Creates a new [PubSub](./rstream.pubsub.md) instance. See class docs for further details.
+Topic based stream splitter. Applies `topic` function to each received value and only forwards it to the child subscriptions of the returned topic.
 
 <b>Signature:</b>
 
 ```typescript
 pubsub: <A, B>(opts: PubSubOpts<A, B>) => PubSub<A, B>
 ```
+
+## Remarks
+
+The actual topic (return value from `topic` fn) can be of any type, apart from `undefined`<!-- -->. Complex topics (e.g objects / arrays) are allowed and they're matched with registered topics using [equiv](./equiv.equiv.md) by default (but customizable via `equiv` option). Each topic can have any number of subscribers.
+
+If a `xform` transducer is given, it is always applied prior to passing the input to the topic function. I.e. in this case the topic function will receive the transformed inputs.
+
+[PubSub](./rstream.pubsub.md) supports dynamic topic subscriptions and unsubscriptions via [PubSub.subscribeTopic()](./rstream.pubsub.subscribetopic.md) and [PubSub.unsubscribeTopic()](./rstream.pubsub.unsubscribetopic.md)<!-- -->. However, the standard [ISubscribable.subscribe()](./rstream.isubscribable.subscribe.md) / [ISubscribable.unsubscribe()](./rstream.isubscribable.unsubscribe.md) methods are NOT supported (since meaningless) and will throw an error! `unsubscribe()` can only be called WITHOUT argument to unsubscribe the entire `PubSub` instance (incl. all topic subscriptions) from the parent stream.
+

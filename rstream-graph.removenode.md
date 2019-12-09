@@ -9,5 +9,5 @@ Calls `.unsubscribe()` on given node and all of its outputs, then removes it fro
 <b>Signature:</b>
 
 ```typescript
-removeNode: (graph: IObjectOf<Node>, id: string) => boolean
+removeNode: (graph: Graph, id: string) => boolean
 ```

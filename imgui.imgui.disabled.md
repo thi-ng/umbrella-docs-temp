@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly disabled: boolean;
+get disabled(): boolean;
 ```

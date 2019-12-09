@@ -9,5 +9,5 @@ Inline function. Returns max(v.x, v.y, v.z, v.w)
 <b>Signature:</b>
 
 ```typescript
-maxComp4: (v: import("@thi.ng/shader-ast").Sym<"vec4">) => import("@thi.ng/shader-ast").FnCall<"float">
+maxComp4: (v: Vec4Sym) => import("@thi.ng/shader-ast").FnCall<"float">
 ```

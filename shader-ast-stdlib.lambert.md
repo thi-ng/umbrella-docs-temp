@@ -9,5 +9,5 @@ Inline function. Computes Lambert term, i.e. `max(dot(n, l), 0)`<!-- -->. Both v
 <b>Signature:</b>
 
 ```typescript
-lambert: (n: import("@thi.ng/shader-ast").Term<"vec3">, ldir: import("@thi.ng/shader-ast").Term<"vec3">) => import("@thi.ng/shader-ast").FnCall<"float">
+lambert: (n: Vec3Term, ldir: Vec3Term) => import("@thi.ng/shader-ast").FnCall<"float">
 ```

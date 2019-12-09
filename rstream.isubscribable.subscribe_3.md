@@ -7,17 +7,16 @@
 <b>Signature:</b>
 
 ```typescript
-subscribe(sub: Partial<ISubscriber<T>>, id?: string): Subscription<T, T>;
+subscribe<C>(sub: Subscription<T, C>): Subscription<T, C>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  sub | <code>Partial&lt;ISubscriber&lt;T&gt;&gt;</code> |  |
-|  id | <code>string</code> |  |
+|  sub | <code>Subscription&lt;T, C&gt;</code> |  |
 
 <b>Returns:</b>
 
-`Subscription<T, T>`
+`Subscription<T, C>`
 

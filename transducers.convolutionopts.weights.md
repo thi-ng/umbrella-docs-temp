@@ -9,5 +9,5 @@ Kernel weights
 <b>Signature:</b>
 
 ```typescript
-weights?: number[];
+weights?: Iterable<number>;
 ```

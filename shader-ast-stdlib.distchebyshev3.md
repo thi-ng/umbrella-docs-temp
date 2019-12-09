@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-distChebyshev3: (a: import("@thi.ng/shader-ast").Term<"vec3"> | import("@thi.ng/shader-ast").Term<"vec4">, b: import("@thi.ng/shader-ast").Term<"vec3"> | import("@thi.ng/shader-ast").Term<"vec4">) => import("@thi.ng/shader-ast").FnCall<"float">
+distChebyshev3: (a: Vec3Term | Vec4Term, b: Vec3Term | Vec4Term) => import("@thi.ng/shader-ast").FnCall<"float">
 ```

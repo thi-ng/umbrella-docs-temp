@@ -4,8 +4,6 @@
 
 ## MemMappedComponent.swapIndices() method
 
-Swaps slots of `src` &amp; `dest` indices. The given args are NOT entity IDs, but indices in the `dense` array. The corresponding sparse &amp; value slots are swapped too. Returns true if swap happened (false, if `src` and `dest` are equal)
-
 <b>Signature:</b>
 
 ```typescript

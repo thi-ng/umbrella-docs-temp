@@ -9,5 +9,5 @@ Inline function. Returns min(v.x, v.y, v.z)
 <b>Signature:</b>
 
 ```typescript
-minComp3: (v: import("@thi.ng/shader-ast").Sym<"vec3"> | import("@thi.ng/shader-ast").Sym<"vec4">) => import("@thi.ng/shader-ast").FnCall<"float">
+minComp3: (v: Vec3Sym | Vec4Sym) => import("@thi.ng/shader-ast").FnCall<"float">
 ```

@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly available: number;
+get available(): number;
 ```

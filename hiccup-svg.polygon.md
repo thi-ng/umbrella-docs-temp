@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-polygon: (pts: ArrayLike<number>[], attribs?: any) => any[]
+polygon: (pts: Vec2Like[], attribs?: any) => any[]
 ```

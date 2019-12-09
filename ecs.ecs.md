@@ -20,7 +20,7 @@ export declare class ECS<SPEC> implements INotify
 
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
-|  [components](./ecs.ecs.components.md) |  | <code>Map&lt;ComponentID&lt;SPEC&gt;, IComponent&lt;ComponentID&lt;SPEC&gt;, any, any&gt;&gt;</code> |  |
+|  [components](./ecs.ecs.components.md) |  | <code>Map&lt;ComponentID&lt;SPEC&gt;, IComponent&lt;ComponentID&lt;SPEC&gt;, any, any, any&gt;&gt;</code> |  |
 |  [groups](./ecs.ecs.groups.md) |  | <code>Map&lt;string, Group&lt;SPEC, any&gt;&gt;</code> |  |
 |  [idgen](./ecs.ecs.idgen.md) |  | <code>IDGen</code> |  |
 

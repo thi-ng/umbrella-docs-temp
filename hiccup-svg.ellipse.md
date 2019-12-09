@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-ellipse: (p: ArrayLike<number>, rx: number, ry: number, attribs?: any) => any[]
+ellipse: (p: Vec2Like, rx: number, ry: number, attribs?: any) => any[]
 ```

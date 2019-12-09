@@ -11,5 +11,5 @@ Inline function. Computes 2D cross product of given vectors.
 <b>Signature:</b>
 
 ```typescript
-cross2: (a: import("@thi.ng/shader-ast").Term<"vec2">, b: import("@thi.ng/shader-ast").Term<"vec2">) => import("@thi.ng/shader-ast").Op2<"float">
+cross2: (a: Vec2Term, b: Vec2Term) => import("@thi.ng/shader-ast").Op2<"float">
 ```

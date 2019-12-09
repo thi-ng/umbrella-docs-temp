@@ -4,7 +4,7 @@
 
 ## mutInMany variable
 
-Like [mutIn](./paths.mutin.md)<!-- -->, but takes any number of path-value pairs and applies them in sequence. All key paths must already be present in the given data structure until their penultimate key.
+Similar to [mutIn](./paths.mutin.md)<!-- -->, but takes any number of path-value pairs as args and applies them in sequence using `mutIn()`<!-- -->. All key paths must already be present in the given data structure until their penultimate key.
 
 <b>Signature:</b>
 
@@ -12,11 +12,19 @@ Like [mutIn](./paths.mutin.md)<!-- -->, but takes any number of path-value pairs
 mutInMany: (state: any, ...pairs: any[]) => any
 ```
 
+## Remarks
+
+Unlike [mutIn](./paths.mutin.md)<!-- -->, this function does not use type checked paths.
+
 ## Example
 
 
 ```ts
-mutInMany({a: {b: 1}, x: {y: {z: 2}}}, "a.b", 10, "x.y.z", 20)
+mutInMany(
+  { a: { b: 1 }, x: { y: { z: 2 } } },
+  "a.b", 10,
+  "x.y.z", 20
+)
 // { a: { b: 10 }, x: { y: { z: 20 } } }
 
 ```

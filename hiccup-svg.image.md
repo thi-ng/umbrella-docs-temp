@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-image: (pos: ArrayLike<number>, url: string, attribs?: any) => any[]
+image: (pos: Vec2Like, url: string, attribs?: any) => any[]
 ```

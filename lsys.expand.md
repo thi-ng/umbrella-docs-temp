@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-expand: (rules: IObjectOf<ArrayLike<string | number> & Iterable<string | number>>, initial: string | number, limit?: number) => any
+expand: (rules: ProductionRules, initial: string | number, limit?: number) => any
 ```

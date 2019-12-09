@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-quadOnPlane: (plane: Plane, pos: import("@thi.ng/api").ArrayLikeIterable<number>, size: number | import("@thi.ng/api").ArrayLikeIterable<number>, attribs?: import("@thi.ng/api").IObjectOf<any> | undefined) => Quad3
+quadOnPlane: (plane: Plane, pos: import("@thi.ng/api").ArrayLikeIterable<number>, size: number | import("@thi.ng/api").ArrayLikeIterable<number>, attribs?: Attribs | undefined) => Quad3
 ```

@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly children: T[];
+get children(): T[];
 ```

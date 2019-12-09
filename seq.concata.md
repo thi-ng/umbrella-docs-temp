@@ -4,8 +4,10 @@
 
 ## concatA variable
 
+Same as [concat](./seq.concat.md)<!-- -->, but optimized for nullable arraylike values.
+
 <b>Signature:</b>
 
 ```typescript
-concatA: <T>(...xs: Nullable<ArrayLike<T>>[]) => ISeq<T> | undefined
+concatA: <T>(...args: Nullable<ArrayLike<T>>[]) => ISeq<T> | undefined
 ```

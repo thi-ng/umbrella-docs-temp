@@ -7,14 +7,16 @@
 <b>Signature:</b>
 
 ```typescript
-subscribe<C>(sub: Subscription<T, C>): Subscription<T, C>;
+subscribe<C>(sub: Partial<ISubscriber<T>>, xform: Transducer<T, C>, opts?: Partial<CommonOpts>): Subscription<T, C>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  sub | <code>Subscription&lt;T, C&gt;</code> |  |
+|  sub | <code>Partial&lt;ISubscriber&lt;T&gt;&gt;</code> |  |
+|  xform | <code>Transducer&lt;T, C&gt;</code> |  |
+|  opts | <code>Partial&lt;CommonOpts&gt;</code> |  |
 
 <b>Returns:</b>
 

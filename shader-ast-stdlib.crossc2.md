@@ -9,5 +9,5 @@ Inline function. Computes 2D cross product of given individual components: ax \*
 <b>Signature:</b>
 
 ```typescript
-crossC2: (ax: import("@thi.ng/shader-ast").Term<"float">, ay: import("@thi.ng/shader-ast").Term<"float">, bx: import("@thi.ng/shader-ast").Term<"float">, by: import("@thi.ng/shader-ast").Term<"float">) => import("@thi.ng/shader-ast").Op2<"float">
+crossC2: (ax: FloatTerm, ay: FloatTerm, bx: FloatTerm, by: FloatTerm) => import("@thi.ng/shader-ast").Op2<"float">
 ```

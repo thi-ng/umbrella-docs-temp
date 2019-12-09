@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-clippedLine: (l: Line, bounds: Rect | [Vec, Vec]) => Line | undefined
+clippedLine: (l: Line, bounds: VecPair | Rect) => Line | undefined
 ```

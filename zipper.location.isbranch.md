@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly isBranch: boolean;
+get isBranch(): boolean;
 ```

@@ -15,5 +15,5 @@ Note: The provided (or merged) env is only active within the execution scope of 
 <b>Signature:</b>
 
 ```typescript
-word: (prog: any[], env?: any, mergeEnv?: boolean) => StackFn
+word: (prog: StackProgram, env?: any, mergeEnv?: boolean) => StackFn
 ```

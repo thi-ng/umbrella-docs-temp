@@ -20,5 +20,5 @@ Example:
 <b>Signature:</b>
 
 ```typescript
-resolvePathPattern: ([s, p, o]: [any, any[], any], maxLen?: number) => [[any, any, any][], string[]]
+resolvePathPattern: ([s, p, o]: PathPattern, maxLen?: number) => [Pattern[], string[]]
 ```

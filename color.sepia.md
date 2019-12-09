@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-sepia: (x?: number) => [number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number]
+sepia: (x?: number) => ColorMatrix
 ```

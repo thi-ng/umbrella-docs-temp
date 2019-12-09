@@ -8,15 +8,14 @@
 
 |  Class | Description |
 |  --- | --- |
-|  [Component](./ecs.component.md) |  |
+|  [AComponent](./ecs.acomponent.md) |  |
 |  [ECS](./ecs.ecs.md) |  |
 |  [Group](./ecs.group.md) |  |
-|  [IDGen](./ecs.idgen.md) |  |
 |  [LRU](./ecs.lru.md) |  |
 |  [MemMappedComponent](./ecs.memmappedcomponent.md) |  |
 |  [NullCache](./ecs.nullcache.md) |  |
+|  [ObjectComponent](./ecs.objectcomponent.md) |  |
 |  [UnboundedCache](./ecs.unboundedcache.md) |  |
-|  [VersionedIdGen](./ecs.versionedidgen.md) |  |
 
 ## Interfaces
 
@@ -36,6 +35,8 @@
 |  [EVENT\_ADDED](./ecs.event_added.md) |  |
 |  [EVENT\_CHANGED](./ecs.event_changed.md) |  |
 |  [EVENT\_PRE\_DELETE](./ecs.event_pre_delete.md) |  |
+|  [LOGGER](./ecs.logger.md) |  |
+|  [setLogger](./ecs.setlogger.md) |  |
 
 ## Type Aliases
 

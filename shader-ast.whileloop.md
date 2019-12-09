@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-whileLoop: (test: Term<"bool">, body: Term<any>[]) => WhileLoop
+whileLoop: (test: BoolTerm, body: Term<any>[]) => WhileLoop
 ```

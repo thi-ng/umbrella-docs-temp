@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-get(id: number): T | undefined;
+get(id: number): GET | undefined;
 ```
 
 ## Parameters
@@ -18,5 +18,5 @@ get(id: number): T | undefined;
 
 <b>Returns:</b>
 
-`T | undefined`
+`GET | undefined`
 

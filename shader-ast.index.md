@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-index: <T extends "bool[]" | "float[]" | "int[]" | "uint[]" | "vec2[]" | "vec3[]" | "vec4[]" | "ivec2[]" | "ivec3[]" | "ivec4[]" | "uvec2[]" | "uvec3[]" | "uvec4[]" | "bvec2[]" | "bvec3[]" | "bvec4[]">(val: Sym<T>, id: number | import("../api/nodes").Term<"int"> | import("../api/nodes").Term<"uint">) => Index<IndexTypeMap[T]>
+index: <T extends "bool[]" | "float[]" | "int[]" | "uint[]" | "vec2[]" | "vec3[]" | "vec4[]" | "ivec2[]" | "ivec3[]" | "ivec4[]" | "uvec2[]" | "uvec3[]" | "uvec4[]" | "bvec2[]" | "bvec3[]" | "bvec4[]">(val: Sym<T>, id: number | import("../api/terms").IntTerm | UintTerm) => Index<IndexTypeMap[T]>
 ```

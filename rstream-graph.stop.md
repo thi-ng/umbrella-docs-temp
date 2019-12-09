@@ -9,5 +9,5 @@ Calls `.unsubscribe()` on all nodes in the graph, causing all related streams &a
 <b>Signature:</b>
 
 ```typescript
-stop: (graph: IObjectOf<Node>) => void
+stop: (graph: Graph) => void
 ```

@@ -6,19 +6,7 @@
 
 Converts the given key path to canonical form (array).
 
-<b>Signature:</b>
-
-```typescript
-toPath: (path: Path) => (string | number | symbol)[]
 ```
-
-## Example 1
-
-
-## Example 2
-
-
-```ts
 toPath("a.b.c");
 // ["a", "b", "c"]
 
@@ -30,3 +18,8 @@ toPath(["a", "b", "c"])
 
 ```
 
+<b>Signature:</b>
+
+```typescript
+toPath: (path: Path) => (string | number | symbol)[]
+```

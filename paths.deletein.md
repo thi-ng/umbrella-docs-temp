@@ -4,22 +4,16 @@
 
 ## deleteIn variable
 
-Uses [updateIn](./paths.updatein.md) and returns updated state with key for given path removed. Does not modify original state.
+Uses [updateIn](./paths.updatein.md) and returns updated state with key for given path removed. Does not modify original state.Returns `undefined` if `path` is an empty string or array.
 
-Returns `undefined` if `path` is an empty string or array.
+```
+deleteIn({ a: { b: { c: 23 } } }, "a.b.c");
+// { a: { b: { } } }
+
+```
 
 <b>Signature:</b>
 
 ```typescript
-deleteIn: (state: any, path: Path) => any
+deleteIn: (state: any, path: Path) => Pick<any, never>
 ```
-
-## Example
-
-
-```ts
-deleteIn({a:{b:{c: 23}}}, "a.b.c");
-// {a: {b: {}}}
-
-```
-

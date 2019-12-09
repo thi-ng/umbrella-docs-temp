@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-asPath: (src: IShape, attribs?: import("@thi.ng/api").IObjectOf<any> | undefined) => import("..").Path
+asPath: (src: IShape, attribs?: Attribs | undefined) => import("..").Path
 ```

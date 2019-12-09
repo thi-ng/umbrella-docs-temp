@@ -9,7 +9,7 @@ Yields iterator of `src` with the last `numLeft` values of `src` prepended at th
 <b>Signature:</b>
 
 ```typescript
-export declare function wrapSides<T>(src: Iterable<T>, numLeft?: number, numRight?: number): Generator<T, void, undefined>;
+export declare function wrapSides<T>(src: Iterable<T>, numLeft?: number, numRight?: number): IterableIterator<T>;
 ```
 
 ## Parameters
@@ -22,7 +22,7 @@ export declare function wrapSides<T>(src: Iterable<T>, numLeft?: number, numRigh
 
 <b>Returns:</b>
 
-`Generator<T, void, undefined>`
+`IterableIterator<T>`
 
 ## Remarks
 

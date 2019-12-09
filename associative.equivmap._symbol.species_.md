@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly [Symbol.species]: typeof EquivMap;
+get [Symbol.species](): typeof EquivMap;
 ```

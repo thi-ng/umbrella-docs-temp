@@ -8,6 +8,7 @@
 
 |  Function | Description |
 |  --- | --- |
+|  [arrayIterator(buf, start, end)](./arrays.arrayiterator.md) | Returns iterator of nullable array w/ optional index range support and/or reverse iteration order. The default range covers the entire array. |
 |  [quickSort(arr, \_cmp, \_swap, start, end)](./arrays.quicksort.md) | In-place quicksort implementation with optional comparator &amp; index based swap function, useful for sorting multiple related arrays in parallel, based on a single sort criteria. |
 |  [quickSort(arr, \_cmp, \_swap, start, end)](./arrays.quicksort_1.md) |  |
 

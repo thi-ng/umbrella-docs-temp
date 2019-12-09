@@ -9,5 +9,5 @@ Returns cross product of given 3D vectors.
 <b>Signature:</b>
 
 ```typescript
-cross: (a: Term<"vec3">, b: Term<"vec3">) => FnCall<"vec3">
+cross: (a: Vec3Term, b: Vec3Term) => FnCall<"vec3">
 ```

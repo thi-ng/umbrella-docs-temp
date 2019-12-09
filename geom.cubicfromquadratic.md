@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-cubicFromQuadratic: (a: Vec, b: Vec, c: Vec, attribs?: import("@thi.ng/api").IObjectOf<any> | undefined) => Cubic
+cubicFromQuadratic: (a: Vec, b: Vec, c: Vec, attribs?: Attribs | undefined) => Cubic
 ```

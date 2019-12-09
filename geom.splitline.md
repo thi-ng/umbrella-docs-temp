@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-splitLine: (a: Vec, b: Vec, t: number) => [[Vec, Vec], [Vec, Vec]]
+splitLine: (a: Vec, b: Vec, t: number) => [VecPair, VecPair]
 ```

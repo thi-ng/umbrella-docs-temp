@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-patternVars: ([s, p, o]: [any, any, any]) => string[]
+patternVars: ([s, p, o]: Pattern) => string[]
 ```

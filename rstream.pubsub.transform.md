@@ -4,7 +4,7 @@
 
 ## PubSub.transform() method
 
-Unsupported. Use  instead.
+Unsupported. Use [PubSub.subscribeTopic()](./rstream.pubsub.subscribetopic.md) instead.
 
 <b>Signature:</b>
 

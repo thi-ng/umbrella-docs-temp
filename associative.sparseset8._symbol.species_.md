@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly [Symbol.species]: typeof SparseSet8;
+get [Symbol.species](): typeof SparseSet8;
 ```

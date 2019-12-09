@@ -9,5 +9,5 @@ Takes the path for the current key and a lookup path string. Converts the possib
 <b>Signature:</b>
 
 ```typescript
-absPath: (curr: (string | number | symbol)[], path: string, idx?: number) => (string | number | symbol)[]
+absPath: (curr: LookupPath, path: string, idx?: number) => (string | number | symbol)[]
 ```

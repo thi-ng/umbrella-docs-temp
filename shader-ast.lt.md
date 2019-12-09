@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-lt: <A extends "float" | "int" | "uint", B extends A>(a: Term<A>, b: Term<B>) => Term<"bool">
+lt: <A extends "float" | "int" | "uint", B extends A>(a: Term<A>, b: Term<B>) => BoolTerm
 ```

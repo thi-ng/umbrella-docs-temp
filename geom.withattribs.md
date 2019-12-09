@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-withAttribs: <T extends IShape>(shape: T, attribs: import("@thi.ng/api").IObjectOf<any>, replace?: boolean) => T
+withAttribs: <T extends IShape>(shape: T, attribs: Attribs, replace?: boolean) => T
 ```

@@ -15,5 +15,5 @@ n += decay / exp2(i) \* fn(pos \* exp2(i) + i \* shift)
 <b>Signature:</b>
 
 ```typescript
-additive: <T extends Prim>(type: T, fn: Fn<Term<T>, Term<"float">>, oct?: number, name?: string) => import("@thi.ng/shader-ast").TaggedFn3<T, T, "float", "float">
+additive: <T extends Prim>(type: T, fn: Fn<Term<T>, FloatTerm>, oct?: number, name?: string) => import("@thi.ng/shader-ast").TaggedFn3<T, T, "float", "float">
 ```

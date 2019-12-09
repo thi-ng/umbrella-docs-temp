@@ -7,9 +7,9 @@
 <b>Signature:</b>
 
 ```typescript
-edges(): Generator<[number, number], void, unknown>;
+edges(): Generator<Pair<number, number>, void, unknown>;
 ```
 <b>Returns:</b>
 
-`Generator<[number, number], void, unknown>`
+`Generator<Pair<number, number>, void, unknown>`
 

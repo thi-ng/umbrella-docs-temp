@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export interface StreamSyncOpts<A, B> extends IID<string> 
+export interface StreamSyncOpts<A, B> extends TransformableOpts<IObjectOf<A>, B> 
 ```
 
 ## Properties
@@ -15,9 +15,8 @@ export interface StreamSyncOpts<A, B> extends IID<string>
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [all](./rstream.streamsyncopts.all.md) | <code>boolean</code> | By default, the last emitted tuple is allowed to be incomplete (in case all inputs closed). To only allow complete tuples, set the <code>all</code> to false. |
-|  [close](./rstream.streamsyncopts.close.md) | <code>boolean &#124; CloseMode</code> | If false or <code>CloseMode.NEVER</code>, StreamSync stays active even if all inputs are done. If true, or <code>CloseMode.LAST</code>, the StreamSync closes when the last input is done. If <code>CloseMode.FIRST</code>, the instance closes when the first input is done. |
-|  [mergeOnly](./rstream.streamsyncopts.mergeonly.md) | <code>boolean</code> | If true, \*no\* input synchronization (waiting for values) is applied and [StreamSync](./rstream.streamsync.md) will emit potentially partially populated tuple objects for each received input value. However, as with the default behavior, tuples will retain the most recent consumed value from other inputs. |
+|  [backPressure](./rstream.streamsyncopts.backpressure.md) | <code>number</code> | If greater than 0, then each labeled input will cache upto the stated number of input values, even if other inputs have not yet produced new values. Once the limit is reached, <code>partitionSync()</code> will throw an <code>IllegalState</code> error.<!-- -->Enabling this option will cause the same behavior as if <code>reset</code> is enabled (regardless of the actual configured <code>reset</code> setting). I.e. new results are only produced when ALL required inputs have available values... |
+|  [mergeOnly](./rstream.streamsyncopts.mergeonly.md) | <code>boolean</code> | If true (default: false) \*no\* input synchronization (waiting for values) is applied and <code>StreamSync</code> will emit potentially partially populated tuple objects for each received input value. However, as with the default behavior, tuples will retain the most recent consumed value from other inputs. |
 |  [reset](./rstream.streamsyncopts.reset.md) | <code>boolean</code> | If true, StreamSync waits for new values from \*all\* inputs before a new tuple is produced. If false, that synchronization only happens for the very first tuple. |
 |  [src](./rstream.streamsyncopts.src.md) | <code>ISubscribable&lt;A&gt;[] &#124; IObjectOf&lt;ISubscribable&lt;A&gt;&gt;</code> | Either an array or object of input streams / subscribables. If the latter, the object keys are used to label the inputs, else their <code>id</code> is used as label. |
-|  [xform](./rstream.streamsyncopts.xform.md) | <code>Transducer&lt;IObjectOf&lt;A&gt;, B&gt;</code> | Optional transducer applied to the synced result tuple objects. |
 

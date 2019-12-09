@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-contrast: (x: number, o?: number) => [number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number]
+contrast: (x: number, o?: number) => ColorMatrix
 ```

@@ -9,5 +9,5 @@ Inline function. Returns counter-clockwise perpendicular vector (assuming Y-up).
 <b>Signature:</b>
 
 ```typescript
-perpendicularCCW: (v: import("@thi.ng/shader-ast").Term<"vec2">) => import("@thi.ng/shader-ast").Lit<"vec2">
+perpendicularCCW: (v: Vec2Term) => import("@thi.ng/shader-ast").Lit<"vec2">
 ```

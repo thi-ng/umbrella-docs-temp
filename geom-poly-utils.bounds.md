@@ -9,7 +9,7 @@ Computes the nD bounds of given vectors. `vmin` should be initialized to `+∞` 
 <b>Signature:</b>
 
 ```typescript
-bounds: (pts: readonly Vec[], vmin: Vec, vmax: Vec) => [Vec, Vec]
+bounds: (pts: readonly Vec[], vmin: Vec, vmax: Vec) => VecPair
 ```
 
 ## Example

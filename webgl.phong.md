@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-PHONG: (opts?: Partial<ShaderOpts<Pick<Material, "ambientCol" | "diffuseCol" | "specularCol">>>) => ShaderSpec
+PHONG: (opts?: Partial<PhongOpts>) => ShaderSpec
 ```

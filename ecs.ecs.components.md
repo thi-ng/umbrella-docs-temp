@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-components: Map<ComponentID<SPEC>, IComponent<ComponentID<SPEC>, any, any>>;
+components: Map<ComponentID<SPEC>, IComponent<ComponentID<SPEC>, any, any, any>>;
 ```

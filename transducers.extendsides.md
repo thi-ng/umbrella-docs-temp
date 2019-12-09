@@ -9,7 +9,7 @@ Yields iterator of given iterable which repeats the first and/or last value(s) `
 <b>Signature:</b>
 
 ```typescript
-export declare function extendSides<T>(src: Iterable<T>, numLeft?: number, numRight?: number): Generator<T, void, unknown>;
+export declare function extendSides<T>(src: Iterable<T>, numLeft?: number, numRight?: number): IterableIterator<T>;
 ```
 
 ## Parameters
@@ -22,7 +22,7 @@ export declare function extendSides<T>(src: Iterable<T>, numLeft?: number, numRi
 
 <b>Returns:</b>
 
-`Generator<T, void, unknown>`
+`IterableIterator<T>`
 
 ## Remarks
 

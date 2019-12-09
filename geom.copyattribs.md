@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-copyAttribs: ($: IShape) => import("@thi.ng/api").IObjectOf<any>
+copyAttribs: ($: IShape) => Attribs
 ```

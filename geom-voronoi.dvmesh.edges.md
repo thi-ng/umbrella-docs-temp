@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-edges(voronoi?: boolean, boundsMinMax?: VecPair): [Vec, Vec][];
+edges(voronoi?: boolean, boundsMinMax?: VecPair): VecPair[];
 ```
 
 ## Parameters
@@ -19,5 +19,5 @@ edges(voronoi?: boolean, boundsMinMax?: VecPair): [Vec, Vec][];
 
 <b>Returns:</b>
 
-`[Vec, Vec][]`
+`VecPair[]`
 

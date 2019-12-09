@@ -4,10 +4,15 @@
 
 ## fromInterval variable
 
-Returns a new [Stream](./rstream.stream.md) which emits a monotonically increasing counter value at given `delay` interval, up to an optionally defined max value (default: ∞), after which the stream is closed. The stream only starts when the first subscriber becomes available.
+Returns a [Stream](./rstream.stream.md) of monotonically increasing counter values, emitted at given `delay` interval and up to the optionally defined max value (default: ∞), after which the stream is closed.
 
 <b>Signature:</b>
 
 ```typescript
-fromInterval: (delay: number, count?: number) => Stream<number>
+fromInterval: (delay: number, opts?: Partial<FromIntervalOpts> | undefined) => Stream<number>
 ```
+
+## Remarks
+
+The stream only starts when the first subscriber becomes available.
+

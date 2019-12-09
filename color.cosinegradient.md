@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-cosineGradient: (n: number, spec: [[number, number, number, number], [number, number, number, number], [number, number, number, number], [number, number, number, number]]) => unknown[]
+cosineGradient: (n: number, spec: CosGradientSpec) => unknown[]
 ```

@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-componentsForID(id: number): IterableIterator<IComponent<ComponentID<SPEC>, any, any>>;
+componentsForID(id: number): IterableIterator<IComponent<ComponentID<SPEC>, any, any, any>>;
 ```
 
 ## Parameters
@@ -18,5 +18,5 @@ componentsForID(id: number): IterableIterator<IComponent<ComponentID<SPEC>, any,
 
 <b>Returns:</b>
 
-`IterableIterator<IComponent<ComponentID<SPEC>, any, any>>`
+`IterableIterator<IComponent<ComponentID<SPEC>, any, any, any>>`
 

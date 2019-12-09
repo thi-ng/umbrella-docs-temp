@@ -4,14 +4,14 @@
 
 ## Subscription.transform() method
 
-Creates a new child subscription using given transducers and optional subscription ID. Supports up to 4 transducers and if more than one transducer is given, composes them in left-to-right order using .
+Creates a new child subscription using given transducers and optional subscription ID. Supports up to 4 transducers and if more than one transducer is given, composes them in left-to-right order using [comp()](./transducers.comp.md)<!-- -->.
 
 Shorthand for `subscribe(comp(xf1, xf2,...), id)`
 
 <b>Signature:</b>
 
 ```typescript
-transform<C>(a: Transducer<B, C>, id?: string): Subscription<B, C>;
+transform<C>(a: Transducer<B, C>, opts?: Partial<CommonOpts>): Subscription<B, C>;
 ```
 
 ## Parameters
@@ -19,7 +19,7 @@ transform<C>(a: Transducer<B, C>, id?: string): Subscription<B, C>;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  a | <code>Transducer&lt;B, C&gt;</code> |  |
-|  id | <code>string</code> |  |
+|  opts | <code>Partial&lt;CommonOpts&gt;</code> |  |
 
 <b>Returns:</b>
 

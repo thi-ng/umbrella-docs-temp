@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-quadraticBounds: (a: import("@thi.ng/api").ArrayLikeIterable<number>, b: import("@thi.ng/api").ArrayLikeIterable<number>, c: import("@thi.ng/api").ArrayLikeIterable<number>) => [import("@thi.ng/vectors").Vec, import("@thi.ng/vectors").Vec]
+quadraticBounds: (a: import("@thi.ng/api").ArrayLikeIterable<number>, b: import("@thi.ng/api").ArrayLikeIterable<number>, c: import("@thi.ng/api").ArrayLikeIterable<number>) => VecPair
 ```

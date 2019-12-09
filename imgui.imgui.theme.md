@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly theme: GUITheme;
+get theme(): GUITheme;
 ```

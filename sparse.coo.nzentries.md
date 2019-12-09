@@ -7,9 +7,9 @@
 <b>Signature:</b>
 
 ```typescript
-nzEntries(): IterableIterator<[number, number, number]>;
+nzEntries(): IterableIterator<NzEntry>;
 ```
 <b>Returns:</b>
 
-`IterableIterator<[number, number, number]>`
+`IterableIterator<NzEntry>`
 

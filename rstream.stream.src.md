@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-src: StreamSource<T>;
+src?: StreamSource<T>;
 ```

@@ -9,7 +9,7 @@ Constructs a new instance of the `Subscription` class
 <b>Signature:</b>
 
 ```typescript
-constructor(sub?: ISubscriber<B>, xform?: Transducer<A, B>, parent?: ISubscribable<A>, id?: string);
+constructor(sub?: ISubscriber<B>, opts?: Partial<SubscriptionOpts<A, B>>);
 ```
 
 ## Parameters
@@ -17,7 +17,5 @@ constructor(sub?: ISubscriber<B>, xform?: Transducer<A, B>, parent?: ISubscribab
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  sub | <code>ISubscriber&lt;B&gt;</code> |  |
-|  xform | <code>Transducer&lt;A, B&gt;</code> |  |
-|  parent | <code>ISubscribable&lt;A&gt;</code> |  |
-|  id | <code>string</code> |  |
+|  opts | <code>Partial&lt;SubscriptionOpts&lt;A, B&gt;&gt;</code> |  |
 

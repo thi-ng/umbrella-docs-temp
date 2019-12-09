@@ -9,5 +9,5 @@ Next CCW edge around the right face (dual vertex) to this edge's dest.
 <b>Signature:</b>
 
 ```typescript
-readonly rnext: Edge<T>;
+get rnext(): Edge<T>;
 ```

@@ -12,11 +12,20 @@ Immediate use getter, i.e. same as: `getter(path)(state)`<!-- -->.
 getIn: (state: any, path: Path) => any
 ```
 
+## Remarks
+
+Supports type checked paths and values for path lengths &lt;<!-- -->= 8. String paths are always unchecked (i.e. `state` is `any`<!-- -->).
+
 ## Example
 
 
 ```ts
-getIn({a: {b: {c: 23}}}, "a.b.c");
+// checked path and inferred return type
+getIn({ a: { b: { c: 23 } } }, ["a","b","c"]);
+// 23
+
+// unchecked path
+getIn({ a: { b: { c: 23 } } }, "a.b.c");
 // 23
 
 ```

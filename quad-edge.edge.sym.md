@@ -9,5 +9,5 @@ Symmetric partner edge of this edge, from dest -<!-- -->&gt; src. I.e. `this ===
 <b>Signature:</b>
 
 ```typescript
-readonly sym: Edge<T>;
+get sym(): Edge<T>;
 ```

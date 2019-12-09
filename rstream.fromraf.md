@@ -4,12 +4,17 @@
 
 ## fromRAF variable
 
-Yields a stream of monotonically increasing counter, triggered by a `requestAnimationFrame()` loop (only available in browser environments). In NodeJS, this function falls back to `fromInterval(16)`<!-- -->, yielding a similar (approximately 60fps) stream.
-
-Subscribers to this stream will be processed during that same loop iteration.
+Yields [Stream](./rstream.stream.md) of a monotonically increasing counter, triggered by a `requestAnimationFrame()` loop (only available in browser environments).
 
 <b>Signature:</b>
 
 ```typescript
-fromRAF: () => Stream<number>
+fromRAF: (opts?: Partial<CommonOpts> | undefined) => Stream<number>
 ```
+
+## Remarks
+
+In NodeJS, this function falls back to [fromInterval](./rstream.frominterval.md)<!-- -->, yielding a similar (approx. 60Hz) stream.
+
+All subscribers to this stream will be processed during that same loop iteration.
+

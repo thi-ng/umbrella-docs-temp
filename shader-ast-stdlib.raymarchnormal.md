@@ -9,5 +9,5 @@ Higher order function producing a function to compute the raymarched scene norma
 <b>Signature:</b>
 
 ```typescript
-raymarchNormal: (scene: import("@thi.ng/shader-ast").TaggedFn1<"vec3", "vec2">, name?: string) => import("@thi.ng/shader-ast").TaggedFn2<"vec3", "float", "vec3">
+raymarchNormal: (scene: RaymarchScene, name?: string) => import("@thi.ng/shader-ast").TaggedFn2<"vec3", "float", "vec3">
 ```

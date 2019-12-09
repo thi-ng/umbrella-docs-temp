@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-interpret: <T>(ctx: T, impls: IObjectOf<Fn2<T, string | number, void>>, syms: Iterable<string | number>) => T
+interpret: <T>(ctx: T, impls: RuleImplementations<T>, syms: Iterable<string | number>) => T
 ```

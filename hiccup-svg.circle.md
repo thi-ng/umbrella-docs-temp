@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-circle: (p: ArrayLike<number>, r: number, attribs?: any) => any[]
+circle: (p: Vec2Like, r: number, attribs?: any) => any[]
 ```

@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-buildKernel1d: (weights: Iterable<number>, w: number) => [number, number][]
+buildKernel1d: (weights: Iterable<number>, w: number) => ConvolutionKernel1D
 ```

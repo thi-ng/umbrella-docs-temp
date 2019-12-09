@@ -4,8 +4,10 @@
 
 ## fromChannel variable
 
+Returns a stream of values received from given [Channel](./csp.channel.md)<!-- -->.
+
 <b>Signature:</b>
 
 ```typescript
-fromChannel: <T>(src: Channel<T>, closeWhenCancelled?: boolean) => Stream<T>
+fromChannel: <T>(src: Channel<T>, opts?: Partial<FromChannelOpts> | undefined) => Stream<T>
 ```

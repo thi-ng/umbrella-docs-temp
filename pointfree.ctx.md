@@ -9,5 +9,5 @@ Creates a new StackContext tuple from given d-stack and/or environment only (the
 <b>Signature:</b>
 
 ```typescript
-ctx: (stack?: any[], env?: any) => StackContext
+ctx: (stack?: Stack, env?: any) => StackContext
 ```

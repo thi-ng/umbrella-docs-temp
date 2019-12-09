@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-arcFrom2Points: (a: import("@thi.ng/api").ArrayLikeIterable<number>, b: import("@thi.ng/api").ArrayLikeIterable<number>, radii: import("@thi.ng/api").ArrayLikeIterable<number>, axis?: number, xl?: boolean, cw?: boolean, attribs?: import("@thi.ng/api").IObjectOf<any> | undefined) => Arc | undefined
+arcFrom2Points: (a: import("@thi.ng/api").ArrayLikeIterable<number>, b: import("@thi.ng/api").ArrayLikeIterable<number>, radii: import("@thi.ng/api").ArrayLikeIterable<number>, axis?: number, xl?: boolean, cw?: boolean, attribs?: Attribs | undefined) => Arc | undefined
 ```

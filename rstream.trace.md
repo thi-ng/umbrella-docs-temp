@@ -4,7 +4,7 @@
 
 ## trace variable
 
-Helper subscriber for inspection / debugging purposes. Simply logs received values to console, optionally with given `prefix`<!-- -->.
+Helper [ISubscriber](./rstream.isubscriber.md) for inspection / debugging purposes. Simply logs received values to console, optionally with given `prefix`<!-- -->.
 
 <b>Signature:</b>
 

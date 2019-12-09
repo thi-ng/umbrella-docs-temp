@@ -4,12 +4,28 @@
 
 ## DCons.shuffle() method
 
+Shuffles list by probabilistically moving cells to head or tail positions.
+
 <b>Signature:</b>
 
 ```typescript
-shuffle(): this;
+shuffle(iter?: number, rnd?: IRandom): this;
 ```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  iter | <code>number</code> |  |
+|  rnd | <code>IRandom</code> |  |
+
 <b>Returns:</b>
 
 `this`
+
+## Remarks
+
+Supports configurable iterations and custom PRNG via [IRandom](./random.irandom.md) (default: [SYSTEM](./random.system.md)<!-- -->).
+
+Default iterations: `ceil(3/2 * log2(n))`
 

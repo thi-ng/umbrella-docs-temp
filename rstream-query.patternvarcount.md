@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-patternVarCount: (p: [any, any, any]) => number
+patternVarCount: (p: Pattern) => number
 ```

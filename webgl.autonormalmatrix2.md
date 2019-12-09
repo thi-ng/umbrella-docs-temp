@@ -9,5 +9,5 @@ Computes the inverse transpose of the matrix product of given 4x4 matrix uniform
 <b>Signature:</b>
 
 ```typescript
-autoNormalMatrix2: (model?: string, view?: string) => (shaderU: IObjectOf<import("./api/shader").ShaderUniform>, specU: IObjectOf<number | import("@thi.ng/api").ArrayLikeIterable<number>>) => GLMat4
+autoNormalMatrix2: (model?: string, view?: string) => (shaderU: ShaderUniforms, specU: IObjectOf<number | import("@thi.ng/api").ArrayLikeIterable<number>>) => GLMat4
 ```

@@ -4,10 +4,15 @@
 
 ## fromPromise variable
 
-Yields a single-value stream of the resolved promise and then automatically marks itself done. It doesn't matter if the promise resolves before the first subscriber has attached.
+Yields a single-value [Stream](./rstream.stream.md) of the resolved promise and then automatically marks itself done.
 
 <b>Signature:</b>
 
 ```typescript
-fromPromise: <T>(src: Promise<T>) => Stream<T>
+fromPromise: <T>(src: Promise<T>, opts?: Partial<CommonOpts> | undefined) => Stream<T>
 ```
+
+## Remarks
+
+It doesn't matter if the promise resolves before the first subscriber has attached.
+

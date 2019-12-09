@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-temperature: (x: number) => [number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number]
+temperature: (x: number) => ColorMatrix
 ```

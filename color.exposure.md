@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-exposure: (x: number) => [number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number]
+exposure: (x: number) => ColorMatrix
 ```

@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-defMaterial: (mat?: Partial<Material>, flags?: Partial<Record<"ambientCol" | "diffuseCol" | "specularCol", boolean>>, base?: Material) => import("@thi.ng/api").IObjectOf<import("./api/shader").UniformDecl>
+defMaterial: (mat?: Partial<Material>, flags?: Partial<Record<"ambientCol" | "diffuseCol" | "specularCol", boolean>>, base?: Material) => ShaderUniformSpecs
 ```

@@ -11,5 +11,5 @@ Inline function. Computes Half-Lambertian term. Both vectors must be pre-normali
 <b>Signature:</b>
 
 ```typescript
-halfLambert: (n: import("@thi.ng/shader-ast").Term<"vec3">, ldir: import("@thi.ng/shader-ast").Term<"vec3">) => import("@thi.ng/shader-ast").Op2<"float">
+halfLambert: (n: Vec3Term, ldir: Vec3Term) => import("@thi.ng/shader-ast").Op2<"float">
 ```

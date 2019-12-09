@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-saturation: (x: number) => [number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number]
+saturation: (x: number) => ColorMatrix
 ```

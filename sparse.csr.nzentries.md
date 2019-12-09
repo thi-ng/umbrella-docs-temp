@@ -7,9 +7,9 @@
 <b>Signature:</b>
 
 ```typescript
-nzEntries(): Generator<[number, number, number], void, unknown>;
+nzEntries(): Generator<NzEntry, void, unknown>;
 ```
 <b>Returns:</b>
 
-`Generator<[number, number, number], void, unknown>`
+`Generator<NzEntry, void, unknown>`
 

@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-cubicBounds: (a: import("@thi.ng/api").ArrayLikeIterable<number>, b: import("@thi.ng/api").ArrayLikeIterable<number>, c: import("@thi.ng/api").ArrayLikeIterable<number>, d: import("@thi.ng/api").ArrayLikeIterable<number>) => [Vec, Vec]
+cubicBounds: (a: import("@thi.ng/api").ArrayLikeIterable<number>, b: import("@thi.ng/api").ArrayLikeIterable<number>, c: import("@thi.ng/api").ArrayLikeIterable<number>, d: import("@thi.ng/api").ArrayLikeIterable<number>) => VecPair
 ```

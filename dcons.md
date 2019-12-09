@@ -16,3 +16,9 @@
 |  --- | --- |
 |  [ConsCell](./dcons.conscell.md) |  |
 
+## Variables
+
+|  Variable | Description |
+|  --- | --- |
+|  [dcons](./dcons.dcons.md) | Functional syntax sugar for <code>new DCons(src?)</code>. |
+

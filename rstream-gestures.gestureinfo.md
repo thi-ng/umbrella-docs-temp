@@ -16,6 +16,7 @@ export interface GestureInfo
 
 |  Property | Type | Description |
 |  --- | --- | --- |
+|  [buttons](./rstream-gestures.gestureinfo.buttons.md) | <code>number</code> |  |
 |  [click](./rstream-gestures.gestureinfo.click.md) | <code>number[]</code> |  |
 |  [delta](./rstream-gestures.gestureinfo.delta.md) | <code>number[]</code> |  |
 |  [pos](./rstream-gestures.gestureinfo.pos.md) | <code>number[]</code> |  |

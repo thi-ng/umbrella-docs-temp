@@ -4,15 +4,17 @@
 
 ## getter variable
 
-Composes a getter function for given nested lookup path. Optimized fast execution paths are provided for path lengths less than 5. Supports any `[]`<!-- -->-indexable data structure (arrays, objects, strings).
+Composes a getter function for given nested lookup path. Optimized fast execution paths are provided for path lengths &lt;<!-- -->= 4.
 
 <b>Signature:</b>
 
 ```typescript
-getter: (path: Path) => (s: any) => any
+getter: (path: Path) => Fn<any, any>
 ```
 
 ## Remarks
+
+Supports any `[]`<!-- -->-indexable data structure (arrays, objects, strings).
 
 If `path` is given as string, it will be split using `.`<!-- -->. Returns function which accepts single object and when called, returns value at given path.
 
@@ -20,21 +22,27 @@ If any intermediate key is not present in the given obj, descent stops and the f
 
 If `path` is an empty string or array, the returned getter will simply return the given state arg (identity function).
 
-Also see: [getIn](./paths.getin.md)
+Also see: `getIn()`
 
-## Example 1
-
-
-## Example 2
+## Example
 
 
 ```ts
-g = getter("a.b.c");
-// or
-g = getter(["a","b","c"]);
+interface Foo {
+  a: { b: { c: number; } }
+}
 
-g({a: {b: {c: 23}}}) // 23
-g({x: 23}) // undefined
+// fully typed getter
+g = getter<Foo, "a", "b", "c">(["a","b","c"]);
+
+// error (wrong `d` key)
+g = getter<Foo, "a", "b", "d">(["a","b","d"]);
+
+// unchecked (accepts any, returns any)
+g = getter("a.b.c");
+
+g({ a: { b: { c: 23} } }) // 23
+g({ x: 23 }) // undefined
 g() // undefined
 
 ```

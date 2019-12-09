@@ -9,5 +9,5 @@ Returns top of stack value (always unsafe, no underflow checking).
 <b>Signature:</b>
 
 ```typescript
-tos: (stack: any[]) => any
+tos: (stack: Stack) => any
 ```

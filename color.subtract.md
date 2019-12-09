@@ -9,5 +9,5 @@ Returns a transformation matrix which subtracts user color from given `src` colo
 <b>Signature:</b>
 
 ```typescript
-subtract: (src?: import("@thi.ng/api").ArrayLikeIterable<number>) => [number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number]
+subtract: (src?: import("@thi.ng/api").ArrayLikeIterable<number>) => ColorMatrix
 ```

@@ -9,5 +9,5 @@ Main user function. Takes a string w/ DSL source code and optional env and stack
 <b>Signature:</b>
 
 ```typescript
-run: (src: string, env?: any, stack?: any[]) => pf.StackContext
+run: (src: string, env?: any, stack?: pf.Stack) => pf.StackContext
 ```

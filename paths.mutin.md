@@ -12,10 +12,23 @@ Immediate use mutator, i.e. same as: `mutator(path)(state, val)`<!-- -->.
 mutIn: (state: any, path: Path, val: any) => any
 ```
 
+## Remarks
+
+Also see [setIn](./paths.setin.md)<!-- -->, [updateIn](./paths.updatein.md)<!-- -->, [deleteIn](./paths.deletein.md)<!-- -->.
+
 ## Example
 
 
 ```ts
+interface Foo {
+  a: { b: number[]; }
+}
+
+// fully type checked
+mutIn({ a: { b: [10, 20] } }, ["a", "b", 1], 23)
+// { a: { b: [ 10, 23 ] } }
+
+// unchecked
 mutIn({ a: { b: [10, 20] } }, "a.b.1", 23);
 // { a: { b: [ 10, 23 ] } }
 

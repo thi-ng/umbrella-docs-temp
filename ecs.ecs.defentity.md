@@ -7,14 +7,14 @@
 <b>Signature:</b>
 
 ```typescript
-defEntity<K extends ComponentID<SPEC>>(comps?: K[] | IComponent<K, any, any>[] | Partial<Pick<SPEC, K>>): number;
+defEntity<K extends ComponentID<SPEC>>(comps?: K[] | IComponent<K, any, any, any>[] | Partial<Pick<SPEC, K>>): number;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  comps | <code>K[] &#124; IComponent&lt;K, any, any&gt;[] &#124; Partial&lt;Pick&lt;SPEC, K&gt;&gt;</code> |  |
+|  comps | <code>K[] &#124; IComponent&lt;K, any, any, any&gt;[] &#124; Partial&lt;Pick&lt;SPEC, K&gt;&gt;</code> |  |
 
 <b>Returns:</b>
 

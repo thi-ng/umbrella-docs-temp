@@ -9,5 +9,5 @@ Inline function. Bi-directional offset to create ring like shapes.
 <b>Signature:</b>
 
 ```typescript
-sdfAnnular: (d: import("@thi.ng/shader-ast").Term<"float">, r: import("@thi.ng/shader-ast").Term<"float">) => import("@thi.ng/shader-ast").Op2<"float">
+sdfAnnular: (d: FloatTerm, r: FloatTerm) => import("@thi.ng/shader-ast").Op2<"float">
 ```

@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-subscribeTopic<C>(topicID: any, sub: Subscription<B, C>): Subscription<B, C>;
+subscribeTopic<C>(topicID: any, opts?: Partial<CommonOpts>): Subscription<B, C>;
 ```
 
 ## Parameters
@@ -15,7 +15,7 @@ subscribeTopic<C>(topicID: any, sub: Subscription<B, C>): Subscription<B, C>;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  topicID | <code>any</code> |  |
-|  sub | <code>Subscription&lt;B, C&gt;</code> |  |
+|  opts | <code>Partial&lt;CommonOpts&gt;</code> |  |
 
 <b>Returns:</b>
 

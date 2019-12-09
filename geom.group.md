@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-group: (attribs?: import("@thi.ng/api").IObjectOf<any>, children?: IHiccupShape[] | undefined) => Group
+group: (attribs?: Attribs, children?: IHiccupShape[] | undefined) => Group
 ```

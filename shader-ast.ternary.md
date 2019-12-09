@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-ternary: <A extends Type, B extends A>(test: Term<"bool">, t: Term<A>, f: Term<B>) => Ternary<A>
+ternary: <A extends Type, B extends A>(test: BoolTerm, t: Term<A>, f: Term<B>) => Ternary<A>
 ```

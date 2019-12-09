@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-text: (p: ArrayLike<number>, body: string, attribs?: any) => any[]
+text: (p: Vec2Like, body: string, attribs?: any) => any[]
 ```

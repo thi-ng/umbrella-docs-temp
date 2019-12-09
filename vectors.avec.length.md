@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-abstract readonly length: number;
+abstract get length(): number;
 ```

@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-bitnot: <T extends Term<"int"> | Term<"uint"> | Term<IVec> | Term<UVec>>(val: T) => Op1<"int" | "uint" | "ivec2" | "ivec3" | "ivec4" | "uvec2" | "uvec3" | "uvec4">
+bitnot: <T extends IntTerm | UintTerm | Term<IVec> | Term<UVec>>(val: T) => Op1<"int" | "uint" | "ivec2" | "ivec3" | "ivec4" | "uvec2" | "uvec3" | "uvec4">
 ```

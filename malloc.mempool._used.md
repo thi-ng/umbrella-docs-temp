@@ -7,5 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-protected _used: number;
+protected get _used(): number;
+
+protected set _used(block: number);
 ```

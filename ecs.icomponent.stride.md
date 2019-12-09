@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-stride: number;
+readonly stride: number;
 ```

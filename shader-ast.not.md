@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-not: (val: Term<"bool">) => Op1<"bool">
+not: (val: BoolTerm) => Op1<"bool">
 ```

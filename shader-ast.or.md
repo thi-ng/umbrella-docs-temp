@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-or: (a: Term<"bool">, b: Term<"bool">) => Op2<any>
+or: (a: BoolTerm, b: BoolTerm) => Op2<any>
 ```

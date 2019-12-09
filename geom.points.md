@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-points: (pts?: Vec[] | undefined, attribs?: import("@thi.ng/api").IObjectOf<any> | undefined) => Points
+points: (pts?: Vec[] | undefined, attribs?: Attribs | undefined) => Points
 ```

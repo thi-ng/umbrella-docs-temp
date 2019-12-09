@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-roundedRect: (pos: Vec, size: Vec, r: number | Vec, attribs?: import("@thi.ng/api").IObjectOf<any> | undefined) => Path
+roundedRect: (pos: Vec, size: Vec, r: number | Vec, attribs?: Attribs | undefined) => Path
 ```

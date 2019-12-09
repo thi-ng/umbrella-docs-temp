@@ -13,5 +13,5 @@ Optimization only happens for cases where either `fa` and/or `fb` are [ZERO](./s
 <b>Signature:</b>
 
 ```typescript
-porterDuff: (name: string, fa: Fn2<import("@thi.ng/shader-ast").Term<"float">, import("@thi.ng/shader-ast").Term<"float">, import("@thi.ng/shader-ast").Term<"float">>, fb: Fn2<import("@thi.ng/shader-ast").Term<"float">, import("@thi.ng/shader-ast").Term<"float">, import("@thi.ng/shader-ast").Term<"float">>) => import("@thi.ng/shader-ast").TaggedFn2<"vec4", "vec4", "vec4">
+porterDuff: (name: string, fa: Fn2<FloatTerm, FloatTerm, FloatTerm>, fb: Fn2<FloatTerm, FloatTerm, FloatTerm>) => import("@thi.ng/shader-ast").TaggedFn2<"vec4", "vec4", "vec4">
 ```

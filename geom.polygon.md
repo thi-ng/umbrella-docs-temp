@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-polygon: (pts: Vec[], attribs?: import("@thi.ng/api").IObjectOf<any> | undefined) => Polygon
+polygon: (pts: Vec[], attribs?: Attribs | undefined) => Polygon
 ```

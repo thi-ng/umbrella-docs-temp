@@ -4,15 +4,30 @@
 
 ## subscription variable
 
-Creates a new [Subscription](./rstream.subscription.md) instance, the fundamental datatype &amp; building block provided by this package ([Stream](./rstream.stream.md)<!-- -->s are [Subscription](./rstream.subscription.md)<!-- -->s too). Subscriptions can be:
+Creates a new [Subscription](./rstream.subscription.md) instance, the fundamental datatype and building block provided by this package.
 
-- linked into directed graphs (if async, not necessarily DAGs) - transformed using transducers (incl. early termination) - can have any number of subscribers (optionally each w/ their own transducer) - recursively unsubscribe themselves from parent after their last subscriber unsubscribed - will go into a non-recoverable error state if NONE of the subscribers has an error handler itself - implement the [IDeref](./api.ideref.md) interface
+<b>Signature:</b>
 
+```typescript
+subscription: <A, B>(sub?: ISubscriber<B> | undefined, opts?: Partial<SubscriptionOpts<A, B>> | undefined) => Subscription<A, B>
 ```
+
+## Remarks
+
+Most other types in rstream, including [Stream](./rstream.stream.md)<!-- -->s, are `Subscription`<!-- -->s and all can be:
+
+- linked into directed graphs (sync or async &amp; not necessarily DAGs) - transformed using transducers (incl. support for early termination) - can have any number of subscribers (optionally each w/ their own transducers) - recursively unsubscribe themselves from parent after their last subscriber unsubscribed (configurable) - will go into a non-recoverable error state if none of the subscribers has an error handler itself - implement the [IDeref](./api.ideref.md) interface
+
+Subscription behavior can be customized via the additional (optional) options arg. See `CommonOpts` and `SubscriptionOpts` for further details.
+
+## Example
+
+
+```ts
 // as reactive value mechanism (same as with stream() above)
-s = rs.subscription();
+s = subscription();
 s.subscribe(trace("s1"));
-s.subscribe(trace("s2"), tx.filter((x) => x > 25));
+s.subscribe(trace("s2"), { xform: tx.filter((x) => x > 25) });
 
 // external trigger
 s.next(23);
@@ -23,8 +38,3 @@ s.next(42);
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-subscription: <A, B>(sub?: ISubscriber<B> | undefined, xform?: Transducer<A, B> | undefined, parent?: ISubscribable<A> | undefined, id?: string | undefined) => Subscription<A, B>
-```

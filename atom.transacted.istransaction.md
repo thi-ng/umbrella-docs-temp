@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly isTransaction: boolean;
+get isTransaction(): boolean;
 ```

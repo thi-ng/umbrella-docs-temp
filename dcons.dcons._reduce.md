@@ -4,6 +4,7 @@
 
 ## DCons.$reduce() method
 
+
 <b>Signature:</b>
 
 ```typescript

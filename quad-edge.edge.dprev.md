@@ -9,5 +9,5 @@ Next CW edge to this edge's dest.
 <b>Signature:</b>
 
 ```typescript
-readonly dprev: Edge<T>;
+get dprev(): Edge<T>;
 ```

@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly lefts: T[] | undefined;
+get lefts(): T[] | undefined;
 ```

@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-pathFromCubics: (cubics: Cubic[], attribs?: import("@thi.ng/api").IObjectOf<any> | undefined) => Path
+pathFromCubics: (cubics: Cubic[], attribs?: Attribs | undefined) => Path
 ```

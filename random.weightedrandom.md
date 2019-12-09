@@ -11,5 +11,5 @@ Returns a no-arg function which produces a random choice of given weighted `choi
 <b>Signature:</b>
 
 ```typescript
-weightedRandom: <T>(choices: T[], weights?: ArrayLike<number> | undefined, rnd?: IRandom) => () => T | undefined
+weightedRandom: <T>(choices: T[], weights?: ArrayLike<number> | undefined, rnd?: IRandom) => () => T
 ```

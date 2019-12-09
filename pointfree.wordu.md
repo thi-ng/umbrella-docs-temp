@@ -11,5 +11,5 @@ Like [word](./pointfree.word.md)<!-- -->, but automatically calls [unwrap](./poi
 <b>Signature:</b>
 
 ```typescript
-wordU: (prog: any[], n?: number, env?: any, mergeEnv?: boolean) => (ctx: StackContext) => any
+wordU: (prog: StackProgram, n?: number, env?: any, mergeEnv?: boolean) => (ctx: StackContext) => any
 ```

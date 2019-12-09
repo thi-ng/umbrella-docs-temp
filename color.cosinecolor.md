@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-cosineColor: (spec: [[number, number, number, number], [number, number, number, number], [number, number, number, number], [number, number, number, number]], t: number) => import("@thi.ng/vectors").Vec
+cosineColor: (spec: CosGradientSpec, t: number) => import("@thi.ng/vectors").Vec
 ```

@@ -57,6 +57,8 @@
 |  [INotify](./api.inotify.md) | Interface to provide event emitter functionality. Also see [INotifyMixin](./api.inotifymixin.md) decorator mixin. |
 |  [IObjectOf](./api.iobjectof.md) | Generic plain object with all key values of given type. |
 |  [IRelease](./api.irelease.md) | Interface for types supported the release of internal resources. |
+|  [ISeq](./api.iseq.md) | Lisp-like sequence abstraction for arbitrary types using <code>first</code> &amp; <code>next</code> operations only. |
+|  [ISeqable](./api.iseqable.md) | Interface for data types providing an [ISeq](./api.iseq.md) abstraction. |
 |  [ISet](./api.iset.md) | Generic interface for set collection types. |
 |  [IStack](./api.istack.md) | Generic interface for collections implementing stack functionality. |
 |  [IToHiccup](./api.itohiccup.md) |  |
@@ -74,6 +76,7 @@
 |  [EVENT\_ALL](./api.event_all.md) |  |
 |  [EVENT\_DISABLE](./api.event_disable.md) |  |
 |  [EVENT\_ENABLE](./api.event_enable.md) |  |
+|  [exposeGlobal](./api.exposeglobal.md) | Exposes given <code>value</code> as <code>id</code> in global scope, iff <code>always = true</code> (default: false) or if <code>process.env.NODE_ENV != &quot;production&quot;</code> or if the <code>UMBRELLA_GLOBALS</code> env var is set to 1. |
 |  [GL2TYPE](./api.gl2type.md) | Conversion from [GLType](./api.gltype.md) to [Type](./api.type.md) enums. |
 |  [IEnableMixin](./api.ienablemixin.md) | Mixin class decorator, injects IEnable default implementation, incl. a <code>_enabled</code> property. If the target also implements the [INotify](./api.inotify.md) interface, [IEnable.enable()](./api.ienable.enable.md) and [IEnable.disable()](./api.ienable.disable.md) will automatically emit the respective events. |
 |  [inotify\_dispatch](./api.inotify_dispatch.md) |  |
@@ -131,9 +134,13 @@
 |  [Keys3](./api.keys3.md) |  |
 |  [Keys4](./api.keys4.md) |  |
 |  [Keys5](./api.keys5.md) |  |
+|  [Keys6](./api.keys6.md) |  |
+|  [Keys7](./api.keys7.md) |  |
+|  [Keys8](./api.keys8.md) |  |
 |  [Listener](./api.listener.md) | Event listener. |
 |  [Nullable](./api.nullable.md) |  |
 |  [NumericArray](./api.numericarray.md) |  |
+|  [NumOrString](./api.numorstring.md) |  |
 |  [Pair](./api.pair.md) | A key-value pair / tuple. |
 |  [Path](./api.path.md) | Lookup path for nested data structures. |
 |  [Predicate](./api.predicate.md) | Predicate function mapping given value to true/false. |
@@ -155,6 +162,14 @@
 |  [Range32\_63](./api.range32_63.md) |  |
 |  [Range4\_7](./api.range4_7.md) |  |
 |  [Range8\_15](./api.range8_15.md) |  |
+|  [Replace](./api.replace.md) | Utilities for replacing types of nested keys. |
+|  [Replace2](./api.replace2.md) |  |
+|  [Replace3](./api.replace3.md) |  |
+|  [Replace4](./api.replace4.md) |  |
+|  [Replace5](./api.replace5.md) |  |
+|  [Replace6](./api.replace6.md) |  |
+|  [Replace7](./api.replace7.md) |  |
+|  [Replace8](./api.replace8.md) |  |
 |  [Select2](./api.select2.md) |  |
 |  [Select3](./api.select3.md) |  |
 |  [Select4](./api.select4.md) |  |
@@ -170,5 +185,16 @@
 |  [Val3](./api.val3.md) |  |
 |  [Val4](./api.val4.md) |  |
 |  [Val5](./api.val5.md) |  |
+|  [Val6](./api.val6.md) |  |
+|  [Val7](./api.val7.md) |  |
+|  [Val8](./api.val8.md) |  |
 |  [Watch](./api.watch.md) | Observer function for [IWatch](./api.iwatch.md) implementations. |
+|  [Without](./api.without.md) | Utilities for constructing types with nested keys removed. |
+|  [Without2](./api.without2.md) |  |
+|  [Without3](./api.without3.md) |  |
+|  [Without4](./api.without4.md) |  |
+|  [Without5](./api.without5.md) |  |
+|  [Without6](./api.without6.md) |  |
+|  [Without7](./api.without7.md) |  |
+|  [Without8](./api.without8.md) |  |
 

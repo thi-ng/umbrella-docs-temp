@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type Primitive = number | string | boolean | symbol;
+export declare type Primitive = NumOrString | boolean | symbol;
 ```

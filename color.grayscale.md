@@ -9,7 +9,7 @@ Returns transformation matrix which computes luminance of user color (optionally
 <b>Signature:</b>
 
 ```typescript
-grayscale: (offset?: number, [r, g, b]?: number[]) => [number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number]
+grayscale: (offset?: number, [r, g, b]?: number[]) => ColorMatrix
 ```
 
 ## Remarks

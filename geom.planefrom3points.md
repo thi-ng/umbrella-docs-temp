@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-planeFrom3Points: (a: import("@thi.ng/api").ArrayLikeIterable<number>, b: import("@thi.ng/api").ArrayLikeIterable<number>, c: import("@thi.ng/api").ArrayLikeIterable<number>, attribs?: import("@thi.ng/api").IObjectOf<any> | undefined) => Plane
+planeFrom3Points: (a: import("@thi.ng/api").ArrayLikeIterable<number>, b: import("@thi.ng/api").ArrayLikeIterable<number>, c: import("@thi.ng/api").ArrayLikeIterable<number>, attribs?: Attribs | undefined) => Plane
 ```

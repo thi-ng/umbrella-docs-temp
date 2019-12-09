@@ -15,6 +15,7 @@ export interface PartitionSyncOpts<T>
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [all](./transducers.partitionsyncopts.all.md) | <code>boolean</code> |  |
+|  [backPressure](./transducers.partitionsyncopts.backpressure.md) | <code>number</code> | If greater than 0, then each labeled input will cache upto the stated number of input values, even if other inputs have not yet produced new values. Once the limit is reached, <code>partitionSync()</code> will throw an <code>IllegalState</code> error.<!-- -->Enabling this option will cause the same behavior as if <code>reset</code> is enabled (regardless of the actual configured <code>reset</code> setting). I.e. new results are only produced when ALL required inputs have available values... |
 |  [key](./transducers.partitionsyncopts.key.md) | <code>Fn&lt;T, PropertyKey&gt;</code> |  |
 |  [mergeOnly](./transducers.partitionsyncopts.mergeonly.md) | <code>boolean</code> |  |
 |  [reset](./transducers.partitionsyncopts.reset.md) | <code>boolean</code> |  |

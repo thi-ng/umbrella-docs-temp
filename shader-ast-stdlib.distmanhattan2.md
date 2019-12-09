@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-distManhattan2: (a: import("@thi.ng/shader-ast").Term<"vec2"> | import("@thi.ng/shader-ast").Term<"vec3"> | import("@thi.ng/shader-ast").Term<"vec4">, b: import("@thi.ng/shader-ast").Term<"vec2"> | import("@thi.ng/shader-ast").Term<"vec3"> | import("@thi.ng/shader-ast").Term<"vec4">) => import("@thi.ng/shader-ast").Op2<"float">
+distManhattan2: (a: Vec2Term | Vec3Term | Vec4Term, b: Vec2Term | Vec3Term | Vec4Term) => import("@thi.ng/shader-ast").Op2<"float">
 ```

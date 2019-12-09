@@ -9,7 +9,7 @@ Constructs a new instance of the `Stream` class
 <b>Signature:</b>
 
 ```typescript
-constructor(src: StreamSource<T>);
+constructor(src: StreamSource<T>, opts?: Partial<CommonOpts>);
 ```
 
 ## Parameters
@@ -17,4 +17,5 @@ constructor(src: StreamSource<T>);
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  src | <code>StreamSource&lt;T&gt;</code> |  |
+|  opts | <code>Partial&lt;CommonOpts&gt;</code> |  |
 

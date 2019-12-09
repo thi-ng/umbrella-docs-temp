@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-unsubscribe(sub?: Subscription<B, any>): boolean;
+unsubscribe(sub: Subscription<B, any>): boolean;
 ```
 
 ## Parameters

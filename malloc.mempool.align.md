@@ -7,5 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-protected align: Pow2;
+protected get align(): Pow2;
+
+protected set align(x: Pow2);
 ```

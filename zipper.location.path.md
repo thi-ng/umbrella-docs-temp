@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly path: T[] | undefined;
+get path(): T[] | undefined;
 ```

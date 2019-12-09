@@ -9,5 +9,5 @@ Dual of this edge, left -<!-- -->&gt; right. I.e same as `this.rot.sym`
 <b>Signature:</b>
 
 ```typescript
-readonly invrot: Edge<T>;
+get invrot(): Edge<T>;
 ```

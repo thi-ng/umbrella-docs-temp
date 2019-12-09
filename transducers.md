@@ -294,7 +294,7 @@
 |  [wordWrap(lineLength, src)](./transducers.wordwrap_1.md) |  |
 |  [wordWrap(lineLength, opts, src)](./transducers.wordwrap_2.md) |  |
 |  [wrapSides(src, numLeft, numRight)](./transducers.wrapsides.md) | Yields iterator of <code>src</code> with the last <code>numLeft</code> values of <code>src</code> prepended at the beginning and/or the first <code>numRight</code> values appended at the end. |
-|  [zip(a)](./transducers.zip.md) |  |
+|  [zip(a)](./transducers.zip.md) | Accepts a number of iterables and combines them into an iterable of tuples of successively consumed input values. |
 |  [zip(a, b)](./transducers.zip_1.md) |  |
 |  [zip(a, b, c)](./transducers.zip_2.md) |  |
 |  [zip(a, b, c, d)](./transducers.zip_3.md) |  |

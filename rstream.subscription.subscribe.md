@@ -9,18 +9,17 @@ Creates new child subscription with given subscriber and/or transducer and optio
 <b>Signature:</b>
 
 ```typescript
-subscribe<C>(sub: Partial<ISubscriber<C>>, xform: Transducer<B, C>, id?: string): Subscription<B, C>;
+subscribe(sub: Partial<ISubscriber<B>>, opts?: Partial<CommonOpts>): Subscription<B, B>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  sub | <code>Partial&lt;ISubscriber&lt;C&gt;&gt;</code> |  |
-|  xform | <code>Transducer&lt;B, C&gt;</code> |  |
-|  id | <code>string</code> |  |
+|  sub | <code>Partial&lt;ISubscriber&lt;B&gt;&gt;</code> |  |
+|  opts | <code>Partial&lt;CommonOpts&gt;</code> |  |
 
 <b>Returns:</b>
 
-`Subscription<B, C>`
+`Subscription<B, B>`
 

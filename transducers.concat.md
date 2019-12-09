@@ -9,14 +9,14 @@ Yields iterator producing concatenation of given iterables. Undefined &amp; null
 <b>Signature:</b>
 
 ```typescript
-export declare function concat<T>(...xs: Iterable<T>[]): IterableIterator<T>;
+export declare function concat<T>(...xs: Nullable<Iterable<T>>[]): IterableIterator<T>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  xs | <code>Iterable&lt;T&gt;[]</code> |  |
+|  xs | <code>Nullable&lt;Iterable&lt;T&gt;&gt;[]</code> |  |
 
 <b>Returns:</b>
 

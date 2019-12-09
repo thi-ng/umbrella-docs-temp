@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare class MemMappedComponent<K extends string> implements IComponent<K, TypedArray, ArrayLike<number>>, INotify 
+export declare class MemMappedComponent<K extends string> extends AComponent<K, TypedArray, TypedArray, ArrayLike<number>> 
 ```
 
 ## Constructors
@@ -21,33 +21,17 @@ export declare class MemMappedComponent<K extends string> implements IComponent<
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
 |  [cache](./ecs.memmappedcomponent.cache.md) |  | <code>ICache&lt;TypedArray&gt;</code> |  |
-|  [default](./ecs.memmappedcomponent.default.md) |  | <code>ComponentDefaultValue&lt;ArrayLike&lt;number&gt;&gt;</code> |  |
-|  [dense](./ecs.memmappedcomponent.dense.md) |  | <code>UIntArray</code> |  |
-|  [id](./ecs.memmappedcomponent.id.md) |  | <code>K</code> |  |
-|  [n](./ecs.memmappedcomponent.n.md) |  | <code>number</code> |  |
-|  [owner](./ecs.memmappedcomponent.owner.md) |  | <code>IID&lt;string&gt;</code> |  |
 |  [size](./ecs.memmappedcomponent.size.md) |  | <code>number</code> |  |
-|  [sparse](./ecs.memmappedcomponent.sparse.md) |  | <code>UIntArray</code> |  |
 |  [stride](./ecs.memmappedcomponent.stride.md) |  | <code>number</code> |  |
-|  [vals](./ecs.memmappedcomponent.vals.md) |  | <code>TypedArray</code> |  |
 
 ## Methods
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
-|  [add(id, val)](./ecs.memmappedcomponent.add.md) |  |  |
-|  [addListener(id, fn, scope)](./ecs.memmappedcomponent.addlistener.md) |  |  |
-|  [delete(id)](./ecs.memmappedcomponent.delete.md) |  |  |
 |  [get(id)](./ecs.memmappedcomponent.get.md) |  |  |
 |  [getIndex(i)](./ecs.memmappedcomponent.getindex.md) |  |  |
-|  [has(id)](./ecs.memmappedcomponent.has.md) |  |  |
-|  [keys()](./ecs.memmappedcomponent.keys.md) |  |  |
-|  [notify(event)](./ecs.memmappedcomponent.notify.md) |  |  |
-|  [notifyChange(id)](./ecs.memmappedcomponent.notifychange.md) |  |  |
+|  [moveIndex(src, dest)](./ecs.memmappedcomponent.moveindex.md) |  |  |
 |  [packedValues()](./ecs.memmappedcomponent.packedvalues.md) |  |  |
-|  [removeListener(id, fn, scope)](./ecs.memmappedcomponent.removelistener.md) |  |  |
-|  [set(id, val)](./ecs.memmappedcomponent.set.md) |  |  |
-|  [setIndex(i, val)](./ecs.memmappedcomponent.setindex.md) |  |  |
-|  [swapIndices(src, dest)](./ecs.memmappedcomponent.swapindices.md) |  | Swaps slots of <code>src</code> &amp; <code>dest</code> indices. The given args are NOT entity IDs, but indices in the <code>dense</code> array. The corresponding sparse &amp; value slots are swapped too. Returns true if swap happened (false, if <code>src</code> and <code>dest</code> are equal) |
-|  [values()](./ecs.memmappedcomponent.values.md) |  |  |
+|  [setIndexUnsafe(i, val, notify)](./ecs.memmappedcomponent.setindexunsafe.md) |  |  |
+|  [swapIndices(src, dest)](./ecs.memmappedcomponent.swapindices.md) |  |  |
 

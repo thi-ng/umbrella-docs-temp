@@ -9,5 +9,5 @@ Inline function. SDF shape union (a \|\| b).
 <b>Signature:</b>
 
 ```typescript
-sdfUnion: (a: import("@thi.ng/shader-ast").Term<"float">, b: import("@thi.ng/shader-ast").Term<"float">) => import("@thi.ng/shader-ast").FnCall<"float">
+sdfUnion: (a: FloatTerm, b: FloatTerm) => import("@thi.ng/shader-ast").FnCall<"float">
 ```

@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-matchingPrimFor: <T extends Prim>(t: Term<T>, x: Term<"float">) => Term<T>
+matchingPrimFor: <T extends Prim>(t: Term<T>, x: FloatTerm) => Term<T>
 ```

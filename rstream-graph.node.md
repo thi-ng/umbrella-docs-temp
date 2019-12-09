@@ -8,6 +8,8 @@ Higher order node / stream creator. Takes a transducer and (optional) required i
 
 If `reset` is true (default: false), the `xform` will only re-run when all inputs have produced new values. See [StreamSync](./rstream.streamsync.md) for further reference.
 
+// TODO add close behavior opts
+
 <b>Signature:</b>
 
 ```typescript

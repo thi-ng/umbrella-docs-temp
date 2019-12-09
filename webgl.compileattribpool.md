@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-compileAttribPool: (gl: WebGLRenderingContext, pool: AttribPool, ids?: string[] | undefined, target?: number, mode?: number) => import("@thi.ng/api").IObjectOf<import("./api/model").ModelAttributeSpec>
+compileAttribPool: (gl: WebGLRenderingContext, pool: AttribPool, ids?: string[] | undefined, target?: number, mode?: number) => ModelAttributeSpecs
 ```

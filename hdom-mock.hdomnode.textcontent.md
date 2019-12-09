@@ -7,5 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-textContent: string;
+get textContent(): string;
+
+set textContent(body: string);
 ```

@@ -9,5 +9,5 @@ Similar to [bench](./bench.bench.md)<!-- -->, but produces no output and instead
 <b>Signature:</b>
 
 ```typescript
-benchResult: <T>(fn: () => T, n?: number) => [T, number]
+benchResult: <T>(fn: () => T, n?: number) => TimingResult<T>
 ```

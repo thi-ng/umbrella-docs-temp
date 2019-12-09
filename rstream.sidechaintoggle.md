@@ -4,9 +4,22 @@
 
 ## sidechainToggle variable
 
-Filters values from input based on values received from side chain. By default, the value read from the side chain is ignored, however the optional predicate can be used to only trigger for specific values/conditions. Every time the predicate fn returns true, the filter will be toggled on/off. Whilst switched off, no input values will be forwarded.
+Returns [Subscription](./rstream.subscription.md) which filters values from input based on values received from side chain.
 
+<b>Signature:</b>
+
+```typescript
+sidechainToggle: <A, B>(side: ISubscribable<B>, opts?: Partial<SidechainToggleOpts<B>> | undefined) => Subscription<A, A>
 ```
+
+## Remarks
+
+By default, the value read from the side chain is ignored (i.e. only their timing is used), however the `pred`<!-- -->icate option can be used to only trigger for specific values/conditions. Every time the predicate fn returns true, the filter will be toggled on/off. Whilst switched off, no input values will be forwarded.
+
+## Example
+
+
+```ts
 // use slower interval stream to toggle main stream on/off
 fromInterval(500)
   .subscribe(sidechainToggle(fromInterval(1000)))
@@ -20,8 +33,3 @@ fromInterval(500)
 
 ```
 
-<b>Signature:</b>
-
-```typescript
-sidechainToggle: <A, B>(side: ISubscribable<B>, initial?: boolean, pred?: import("@thi.ng/api").Fn<B, boolean> | undefined, id?: string | undefined) => Subscription<A, A>
-```

@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly position: number;
+get position(): number;
 ```

@@ -7,14 +7,12 @@
 <b>Signature:</b>
 
 ```typescript
-export interface StreamMergeOpts<A, B> extends IID<string> 
+export interface StreamMergeOpts<A, B> extends TransformableOpts<A, B> 
 ```
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [close](./rstream.streammergeopts.close.md) | <code>boolean &#124; CloseMode</code> | If false or <code>CloseMode.NEVER</code>, StreamMerge stays active even if all inputs are done. If true (default) or <code>CloseMode.LAST</code>, the StreamMerge closes when the last input is done. If <code>CloseMode.FIRST</code>, the instance closes when the first input is done. |
 |  [src](./rstream.streammergeopts.src.md) | <code>ISubscribable&lt;A&gt;[]</code> | Input sources. |
-|  [xform](./rstream.streammergeopts.xform.md) | <code>Transducer&lt;A, B&gt;</code> | Optional transducer applied to each input value. |
 

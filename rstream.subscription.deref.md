@@ -7,9 +7,9 @@
 <b>Signature:</b>
 
 ```typescript
-deref(): B;
+deref(): B | undefined;
 ```
 <b>Returns:</b>
 
-`B`
+`B | undefined`
 

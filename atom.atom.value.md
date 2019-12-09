@@ -7,5 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-value: T;
+get value(): T;
+
+set value(val: T);
 ```

@@ -4,15 +4,15 @@
 
 ## aseq variable
 
-Returns a zero-copy  for the given array and optionally defined index range.
+Returns a zero-copy [ISeq](./api.iseq.md) for the given array and optionally for defined index range only.
 
 <b>Signature:</b>
 
 ```typescript
-aseq: <T>(buf: Nullable<ArrayLike<T>>, start?: number, end?: number | undefined) => ISeq<T>
+aseq: <T>(buf: Nullable<ArrayLike<T>>, start?: number, end?: number | undefined) => ISeq<T> | undefined
 ```
 
 ## Remarks
 
-See  for related functionality.
+If given, `start` MUST be &lt; `end`<!-- -->. The latter defaults to the end of the array (`.length`<!-- -->). Also see [arrayIterator()](./arrays.arrayiterator.md) for related functionality.
 

@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-protected addParamQueries(patterns: Iterable<Pattern>): IterableIterator<ISubscribable<Set<IObjectOf<any>>>>;
+protected addParamQueries(patterns: Iterable<Pattern>): IterableIterator<QuerySolution>;
 ```
 
 ## Parameters
@@ -18,5 +18,5 @@ protected addParamQueries(patterns: Iterable<Pattern>): IterableIterator<ISubscr
 
 <b>Returns:</b>
 
-`IterableIterator<ISubscribable<Set<IObjectOf<any>>>>`
+`IterableIterator<QuerySolution>`
 

@@ -9,5 +9,5 @@ Inline function. Returns vec3 (x,y,z components) at index `i` in `tex`<!-- -->.
 <b>Signature:</b>
 
 ```typescript
-readIndex3: (tex: import("@thi.ng/shader-ast").Term<"sampler2D">, i: import("@thi.ng/shader-ast").Term<"int">, size: import("@thi.ng/shader-ast").Term<"ivec2">) => import("@thi.ng/shader-ast").Swizzle<"vec3">
+readIndex3: (tex: Sampler2DTerm, i: IntTerm, size: IVec2Term) => import("@thi.ng/shader-ast").Swizzle<"vec3">
 ```

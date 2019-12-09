@@ -4,8 +4,10 @@
 
 ## concat variable
 
+Returns the concatenation sequence of given nullable  or [ISeqable](./api.iseqable.md) values.
+
 <b>Signature:</b>
 
 ```typescript
-concat: <T>(...xs: Nullable<ISeq<T>>[]) => ISeq<T> | undefined
+concat: <T>(...args: Nullable<ISeq<T> | ISeqable<T>>[]) => ISeq<T> | undefined
 ```

@@ -4,17 +4,27 @@
 
 ## sync variable
 
-Similar to [StreamMerge](./rstream.streammerge.md)<!-- -->, but with extra synchronization of inputs. Before emitting any new values, [StreamSync](./rstream.streamsync.md) collects values until at least one has been received from \*all\* inputs. Once that's the case, the collected values are sent as labeled tuple object to downstream subscribers. Each value in the emitted tuple objects is stored under their input stream's ID. Only the last value received from each input is passed on. After the initial tuple has been emitted, you can choose from two possible behaviors:
-
-1) Any future change in any input will produce a new result tuple. These tuples will retain the most recently read values from other inputs. This behavior is the default and illustrated in the above schematic. 2) If the `reset` option is `true`<!-- -->, every input will have to provide at least one new value again until another result tuple is produced.
-
-Any done inputs are automatically removed. By default, [StreamSync](./rstream.streamsync.md) calls `done()` when the last active input is done, but this behavior can be overridden via the `close` constructor option.
+Similar to [StreamMerge](./rstream.streammerge.md)<!-- -->, but with extra synchronization of inputs. Before emitting any new values, [StreamSync](./rstream.streamsync.md) collects values until at least one has been received from \*all\* inputs. Once that's the case, the collected values are sent as labeled tuple object to downstream subscribers.
 
 <b>Signature:</b>
 
 ```typescript
 sync: <A, B>(opts: Partial<StreamSyncOpts<A, B>>) => StreamSync<A, B>
 ```
+
+## Remarks
+
+Each value in the emitted tuple objects is stored under their input stream's ID. Only the last value received from each input is passed on. After the initial tuple has been emitted, you can choose from two possible behaviors:
+
+1) Any future change in any input will produce a new result tuple. These tuples will retain the most recently read values from other inputs. This behavior is the default and illustrated in the above schematic. 2) If the `reset` option is `true`<!-- -->, every input will have to provide at least one new value again until another result tuple is produced.
+
+Any done inputs are automatically removed. By default, `StreamSync` calls [ISubscriber.done](./rstream.isubscriber.done.md) when the last active input is done, but this behavior can be overridden via the provided options.
+
+Input streams can be added and removed dynamically and the emitted tuple size adjusts to the current number of inputs (the next time a value is received from any input).
+
+If the `reset` option is enabled, the last emitted tuple is allowed to be incomplete, by default. To only allow complete tuples, also set the `all` option to `false`<!-- -->.
+
+The synchronization is done via the [partitionSync()](./transducers.partitionsync.md) transducer fro the [@thi.ng/transducers](./transducers.md) package. See this function's docs for further details.
 
 ## Example
 
@@ -28,11 +38,5 @@ b.next(2);
 // result: { a: 1, b: 2 }
 
 ```
-Input streams can be added and removed dynamically and the emitted tuple size adjusts to the current number of inputs (the next time a value is received from any input).
-
-If the `reset` option is enabled, the last emitted tuple is allowed to be incomplete, by default. To only allow complete tuples, also set the `all` option to `false`<!-- -->.
-
-The synchronization is done via the  transducer fro the [@thi.ng/transducers](./transducers.md) package. See this function's docs for further details.
-
-[StreamSyncOpts](./rstream.streamsyncopts.md)
+Also see: [StreamSyncOpts](./rstream.streamsyncopts.md)
 

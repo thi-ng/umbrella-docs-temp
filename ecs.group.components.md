@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-components: IComponent<K, any, any>[];
+components: IComponent<K, any, any, any>[];
 ```

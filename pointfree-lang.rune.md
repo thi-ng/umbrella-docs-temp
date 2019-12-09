@@ -9,5 +9,5 @@ Like [run](./pointfree-lang.run.md)<!-- -->, but returns resulting env object on
 <b>Signature:</b>
 
 ```typescript
-runE: (src: string, env?: any, stack?: any[] | undefined) => any
+runE: (src: string, env?: any, stack?: pf.Stack | undefined) => any
 ```

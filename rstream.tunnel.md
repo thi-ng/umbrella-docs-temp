@@ -4,10 +4,17 @@
 
 ## tunnel variable
 
-Creates a new worker [Tunnel](./rstream.tunnel.md) instance with given options. This subscription type processes received values via the configured worker(s) and then passes any values received back from the worker(s) on to downstream subscriptions, thereby allowing workers to be used transparently for stream processing. Multiple worker instances are supported for processing. See the `maxWorkers` option for details.
+Returns a [Subscription](./rstream.subscription.md) which processes received values via the configured worker(s) and then passes values received back from the worker(s) downstream, thereby allowing workers to be used transparently for stream processing.
 
 <b>Signature:</b>
 
 ```typescript
 tunnel: <A, B>(opts: TunnelOpts<A>) => Tunnel<A, B>
 ```
+
+## Remarks
+
+Multiple worker instances are supported for concurrent processing. See the [TunnelOpts](./rstream.tunnelopts.md) for details.
+
+Also see [forkJoin](./rstream.forkjoin.md) and [postWorker](./rstream.postworker.md)<!-- -->.
+

@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-pathBuilder: (attribs?: import("@thi.ng/api").IObjectOf<any> | undefined) => PathBuilder
+pathBuilder: (attribs?: Attribs | undefined) => PathBuilder
 ```

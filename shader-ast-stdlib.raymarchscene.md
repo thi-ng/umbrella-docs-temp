@@ -15,5 +15,5 @@ The `scene` function itself takes a 3D point as input and returns a vec2 with th
 <b>Signature:</b>
 
 ```typescript
-raymarchScene: (scene: import("@thi.ng/shader-ast").TaggedFn1<"vec3", "vec2">, _opts?: Partial<RaymarchOpts> | undefined) => import("@thi.ng/shader-ast").TaggedFn2<"vec3", "vec3", "vec2">
+raymarchScene: (scene: RaymarchScene, _opts?: Partial<RaymarchOpts> | undefined) => import("@thi.ng/shader-ast").TaggedFn2<"vec3", "vec3", "vec2">
 ```

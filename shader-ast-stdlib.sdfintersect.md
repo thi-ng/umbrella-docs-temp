@@ -9,5 +9,5 @@ Inline function. SDF shape intersection (a &amp; b).
 <b>Signature:</b>
 
 ```typescript
-sdfIntersect: (a: import("@thi.ng/shader-ast").Term<"float">, b: import("@thi.ng/shader-ast").Term<"float">) => import("@thi.ng/shader-ast").FnCall<"float">
+sdfIntersect: (a: FloatTerm, b: FloatTerm) => import("@thi.ng/shader-ast").FnCall<"float">
 ```

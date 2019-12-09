@@ -4,7 +4,17 @@
 
 ## setter variable
 
-Composes a setter function for given nested update path. Optimized fast execution paths are provided for path lengths less up to 4. Supports both arrays and objects and creates intermediate shallow copies at each level of the path. Thus provides structural sharing with the original data for any branches not being updated by the setter.
+Composes a setter function for given nested update path. Optimized fast execution paths are provided for path lengths less up to 4.
+
+<b>Signature:</b>
+
+```typescript
+setter: (path: Path) => Fn2<any, any, any>
+```
+
+## Remarks
+
+Supports both arrays and objects and creates intermediate shallow copies at each level of the path. Thus provides structural sharing with the original data for any branches not being updated by the setter.
 
 If `path` is given as string, it will be split using `.`<!-- -->. Returns function which accepts single object and when called, \*\*immutably\*\* updates value at given path, i.e. produces a partial deep copy of obj up until given path.
 
@@ -12,33 +22,28 @@ If any intermediate key is not present in the given obj, creates a plain empty o
 
 If `path` is an empty string or array, the returned setter will simply return the new value.
 
+Only keys in the path will be modified, all other keys present in the given object retain their original values to provide efficient structural sharing / re-use.
+
 Also see: [setIn](./paths.setin.md)<!-- -->, [updateIn](./paths.updatein.md)<!-- -->, [deleteIn](./paths.deletein.md)
-
-<b>Signature:</b>
-
-```typescript
-setter: (path: Path) => (s: any, v: any) => any
-```
 
 ## Example 1
 
 
-```ts
+```
 s = setter("a.b.c");
 // or
 s = setter(["a","b","c"]);
 
-s({a: {b: {c: 23}}}, 24)
-// {a: {b: {c: 24}}}
+s({ a: { b: { c: 23} } }, 24)
+// { a: { b: { c: 24} } }
 
-s({x: 23}, 24)
+s({ x: 23 }, 24)
 // { x: 23, a: { b: { c: 24 } } }
 
 s(null, 24)
 // { a: { b: { c: 24 } } }
 
 ```
-Only keys in the path will be modified, all other keys present in the given object retain their original values to provide efficient structural sharing / re-use.
 
 ## Example 2
 

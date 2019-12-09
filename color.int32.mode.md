@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly mode: ColorMode;
+get mode(): ColorMode;
 ```

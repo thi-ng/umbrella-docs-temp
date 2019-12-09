@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly [Symbol.species]: typeof ArraySet;
+get [Symbol.species](): typeof ArraySet;
 ```

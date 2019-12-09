@@ -11,5 +11,5 @@ If `x < 0` results in darker color. If `x > 0` results in brighter color.
 <b>Signature:</b>
 
 ```typescript
-brightness: (x: number) => [number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number]
+brightness: (x: number) => ColorMatrix
 ```

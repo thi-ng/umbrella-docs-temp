@@ -4,7 +4,7 @@
 
 ## TunnelOpts.maxWorkers property
 
-Max. number of worker instances to use. Only useful if `interrupt` is disabled. If more than one is used, incoming stream values will be assigned to workers in a round robin order. Workers will be instantiated on demand.
+Max. number of worker instances to use. Only useful if `interrupt` is disabled. If more than one worker is used, incoming stream values will be assigned in a round robin manner and result value ordering will be non-deterministic. Workers will be instantiated on demand.
 
 Default: 1
 

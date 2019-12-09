@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-getIndex(i: number): T | undefined;
+getIndex(i: number): GET | undefined;
 ```
 
 ## Parameters
@@ -18,5 +18,5 @@ getIndex(i: number): T | undefined;
 
 <b>Returns:</b>
 
-`T | undefined`
+`GET | undefined`
 

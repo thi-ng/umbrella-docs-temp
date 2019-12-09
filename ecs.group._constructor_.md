@@ -9,14 +9,14 @@ Constructs a new instance of the `Group` class
 <b>Signature:</b>
 
 ```typescript
-constructor(comps: IComponent<K, any, any>[], owned: IComponent<K, any, any>[] | undefined, opts: GroupOpts);
+constructor(comps: IComponent<K, any, any, any>[], owned: IComponent<K, any, any, any>[] | undefined, opts: GroupOpts);
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  comps | <code>IComponent&lt;K, any, any&gt;[]</code> |  |
-|  owned | <code>IComponent&lt;K, any, any&gt;[] &#124; undefined</code> |  |
+|  comps | <code>IComponent&lt;K, any, any, any&gt;[]</code> |  |
+|  owned | <code>IComponent&lt;K, any, any, any&gt;[] &#124; undefined</code> |  |
 |  opts | <code>GroupOpts</code> |  |
 

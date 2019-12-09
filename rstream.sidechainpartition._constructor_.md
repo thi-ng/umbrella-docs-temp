@@ -9,7 +9,7 @@ Constructs a new instance of the `SidechainPartition` class
 <b>Signature:</b>
 
 ```typescript
-constructor(side: ISubscribable<B>, pred?: Predicate<B>, id?: string);
+constructor(side: ISubscribable<B>, opts?: Partial<SidechainPartitionOpts<B>>);
 ```
 
 ## Parameters
@@ -17,6 +17,5 @@ constructor(side: ISubscribable<B>, pred?: Predicate<B>, id?: string);
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  side | <code>ISubscribable&lt;B&gt;</code> |  |
-|  pred | <code>Predicate&lt;B&gt;</code> |  |
-|  id | <code>string</code> |  |
+|  opts | <code>Partial&lt;SidechainPartitionOpts&lt;B&gt;&gt;</code> |  |
 

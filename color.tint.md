@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-tint: (x: number) => [number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number]
+tint: (x: number) => ColorMatrix
 ```

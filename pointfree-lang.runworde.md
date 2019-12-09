@@ -9,5 +9,5 @@ Like [runWord](./pointfree-lang.runword.md)<!-- -->, but returns resulting env o
 <b>Signature:</b>
 
 ```typescript
-runWordE: (id: string, env: any, stack?: any[]) => any
+runWordE: (id: string, env: any, stack?: pf.Stack) => any
 ```

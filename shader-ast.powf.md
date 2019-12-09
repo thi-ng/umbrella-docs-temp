@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-powf: <T extends Prim>(x: Term<T>, y: Term<"float">) => FnCall<T>
+powf: <T extends Prim>(x: Term<T>, y: FloatTerm) => FnCall<T>
 ```

@@ -9,7 +9,7 @@ Yields an iterator of all `src` values, followed by the same values in reverse o
 <b>Signature:</b>
 
 ```typescript
-export declare function symmetric<T>(src: Iterable<T>): Generator<T, void, unknown>;
+export declare function symmetric<T>(src: Iterable<T>): IterableIterator<T>;
 ```
 
 ## Parameters
@@ -20,7 +20,7 @@ export declare function symmetric<T>(src: Iterable<T>): Generator<T, void, unkno
 
 <b>Returns:</b>
 
-`Generator<T, void, unknown>`
+`IterableIterator<T>`
 
 ## Example
 

@@ -9,5 +9,5 @@ Inline function. Similar to [indexToUV](./shader-ast-stdlib.indextouv.md)<!-- --
 <b>Signature:</b>
 
 ```typescript
-indexToCoord: (i: import("@thi.ng/shader-ast").Term<"uint">, width: import("@thi.ng/shader-ast").Term<"uint">) => import("@thi.ng/shader-ast").Lit<"uvec2">
+indexToCoord: (i: UintTerm, width: UintTerm) => import("@thi.ng/shader-ast").Lit<"uvec2">
 ```

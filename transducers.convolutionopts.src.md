@@ -9,5 +9,5 @@ Current cell states
 <b>Signature:</b>
 
 ```typescript
-src: number[];
+src: ArrayLike<number>;
 ```

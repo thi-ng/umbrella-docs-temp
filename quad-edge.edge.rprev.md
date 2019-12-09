@@ -9,5 +9,5 @@ Next CCW edge around the right face (dual vertex) to this edge's origin.
 <b>Signature:</b>
 
 ```typescript
-readonly rprev: Edge<T>;
+get rprev(): Edge<T>;
 ```

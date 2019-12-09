@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly rightmost: Location<T>;
+get rightmost(): Location<T>;
 ```

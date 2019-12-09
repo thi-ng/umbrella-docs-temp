@@ -9,5 +9,5 @@ Returns coefficients to produce a cosine gradient between the two given RGBA col
 <b>Signature:</b>
 
 ```typescript
-cosineCoeffs: (from: import("@thi.ng/api").ArrayLikeIterable<number>, to: import("@thi.ng/api").ArrayLikeIterable<number>) => [[number, number, number, number], [number, number, number, number], [number, number, number, number], [number, number, number, number]]
+cosineCoeffs: (from: import("@thi.ng/api").ArrayLikeIterable<number>, to: import("@thi.ng/api").ArrayLikeIterable<number>) => CosGradientSpec
 ```

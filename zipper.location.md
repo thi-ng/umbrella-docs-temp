@@ -24,6 +24,7 @@ export declare class Location<T>
 |  [\_ops](./zipper.location._ops.md) |  | <code>ZipperOps&lt;T&gt;</code> |  |
 |  [\_path](./zipper.location._path.md) |  | <code>Path&lt;T&gt; &#124; undefined</code> |  |
 |  [children](./zipper.location.children.md) |  | <code>T[]</code> |  |
+|  [depth](./zipper.location.depth.md) |  | <code>number</code> |  |
 |  [down](./zipper.location.down.md) |  | <code>Location&lt;T&gt; &#124; undefined</code> |  |
 |  [isBranch](./zipper.location.isbranch.md) |  | <code>boolean</code> |  |
 |  [isFirst](./zipper.location.isfirst.md) |  | <code>boolean</code> |  |

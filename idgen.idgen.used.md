@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly used: number;
+get used(): number;
 ```

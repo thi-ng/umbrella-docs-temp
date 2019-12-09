@@ -11,5 +11,5 @@ Inline function. Essentially an isoline offset to create:
 <b>Signature:</b>
 
 ```typescript
-sdfRound: (d: import("@thi.ng/shader-ast").Term<"float">, r: import("@thi.ng/shader-ast").Term<"float">) => import("@thi.ng/shader-ast").Op2<"float">
+sdfRound: (d: FloatTerm, r: FloatTerm) => import("@thi.ng/shader-ast").Op2<"float">
 ```
