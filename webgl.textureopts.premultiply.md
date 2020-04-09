@@ -4,6 +4,8 @@
 
 ## TextureOpts.premultiply property
 
+True, if the source data's color channels should be pre-multiplied with the alpha channel.
+
 <b>Signature:</b>
 
 ```typescript

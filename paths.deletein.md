@@ -2,18 +2,42 @@
 
 [Home](./index.md) &gt; [@thi.ng/paths](./paths.md) &gt; [deleteIn](./paths.deletein.md)
 
-## deleteIn variable
+## deleteIn() function
 
-Uses [updateIn](./paths.updatein.md) and returns updated state with key for given path removed. Does not modify original state.Returns `undefined` if `path` is an empty string or array.
-
-```
-deleteIn({ a: { b: { c: 23 } } }, "a.b.c");
-// { a: { b: { } } }
-
-```
+Uses  and returns updated state with key for given path removed. Does not modify original state. Returns `undefined` if `path` is an empty string or array.
 
 <b>Signature:</b>
 
 ```typescript
-deleteIn: (state: any, path: Path) => Pick<any, never>
+export declare function deleteIn<T, A extends Keys<T>>(state: T, path: readonly [A]): Without<T, A>;
 ```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  state | <code>T</code> |  |
+|  path | <code>readonly [A]</code> |  |
+
+<b>Returns:</b>
+
+`Without<T, A>`
+
+## Remarks
+
+Only the first 8 path levels are type checked. The result type will have the path value removed too.
+
+See [deleteInUnsafe](./paths.deleteinunsafe.md) for unchecked version.
+
+## Example
+
+
+```ts
+// type checked
+deleteIn({ a: { b: { c: 23 } } }, ["a","b","c"]);
+
+// error (invalid path)
+deleteIn({ a: { b: { c: 23 } } }, ["a","b","d"]);
+
+```
+

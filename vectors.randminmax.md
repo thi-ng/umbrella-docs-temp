@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-randMinMax: MultiVecOpOOO<import("@thi.ng/api").ArrayLikeIterable<number>, import("@thi.ng/api").ArrayLikeIterable<number>, IRandom>
+randMinMax: import("./api").MultiVecOpImpl<VecOpOOO<import("@thi.ng/api").ArrayLikeIterable<number>, import("@thi.ng/api").ArrayLikeIterable<number>, IRandom>>
 ```

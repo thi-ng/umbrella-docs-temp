@@ -9,14 +9,14 @@ Takes a transducer and input iterable. Returns iterator of transformed results.
 <b>Signature:</b>
 
 ```typescript
-export declare function iterator<A, B>(xform: Transducer<A, B>, xs: Iterable<A>): IterableIterator<B>;
+export declare function iterator<A, B>(xform: TxLike<A, B>, xs: Iterable<A>): IterableIterator<B>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  xform | <code>Transducer&lt;A, B&gt;</code> |  |
+|  xform | <code>TxLike&lt;A, B&gt;</code> |  |
 |  xs | <code>Iterable&lt;A&gt;</code> |  |
 
 <b>Returns:</b>

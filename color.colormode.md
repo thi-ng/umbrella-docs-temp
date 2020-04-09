@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare const enum ColorMode 
+export declare enum ColorMode 
 ```
 
 ## Enumeration Members

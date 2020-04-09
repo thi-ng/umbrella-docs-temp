@@ -4,6 +4,8 @@
 
 ## TextureOpts.sub property
 
+True, if given `image` is only defining a sub-image (i.e. partial update of a previously configured texture). If true, also uses `pos` option.
+
 <b>Signature:</b>
 
 ```typescript

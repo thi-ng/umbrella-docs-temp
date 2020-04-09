@@ -19,7 +19,9 @@ export interface GestureStreamOpts extends IID<string>
 |  [local](./rstream-gestures.gesturestreamopts.local.md) | <code>boolean</code> | Local coordinate flag. If true (default), the elements position offset is subtracted. |
 |  [maxZoom](./rstream-gestures.gesturestreamopts.maxzoom.md) | <code>number</code> | Max zoom value. Default: 4 |
 |  [minZoom](./rstream-gestures.gesturestreamopts.minzoom.md) | <code>number</code> | Min zoom value. Default: 0.25 |
+|  [preventContextMenu](./rstream-gestures.gesturestreamopts.preventcontextmenu.md) | <code>boolean</code> | If true (default), attaches dummy event handler disabling context menu for the target element and thus allow using right mouse button to be used normally. |
 |  [preventDefault](./rstream-gestures.gesturestreamopts.preventdefault.md) | <code>boolean</code> | If <code>true</code>, calls <code>preventDefault()</code> for each event. Default: true |
+|  [preventScrollOnZoom](./rstream-gestures.gesturestreamopts.preventscrollonzoom.md) | <code>boolean</code> | If true (default), wheel events on the element will prevent the document from scrolling. If false, the wheel event will use the eventOpts.passive argument (default: true) which should be true in most cases for performance reasons: https://www.chromestatus.com/feature/5745543795965952 |
 |  [scale](./rstream-gestures.gesturestreamopts.scale.md) | <code>boolean</code> | If true, all positions and delta values are scaled by <code>window.devicePixelRatio</code>. Note: Only enable if <code>local</code> is true. |
 |  [smooth](./rstream-gestures.gesturestreamopts.smooth.md) | <code>number</code> | Scaling factor for zoom changes. Default: 1 |
 |  [zoom](./rstream-gestures.gesturestreamopts.zoom.md) | <code>number</code> | Initial zoom value. Default: 1 |

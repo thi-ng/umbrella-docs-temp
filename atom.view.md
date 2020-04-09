@@ -14,7 +14,7 @@ export declare class View<T> implements IView<T>
 
 ## Remarks
 
-Views can be created directly or via the [IViewable.addView()](./atom.iviewable.addview.md) method of the parent state. Views can be [IDeref.deref()](./api.ideref.deref.md)<!-- -->'d like atoms and polled for value changes using [IView.changed()](./atom.iview.changed.md)<!-- -->. The transformer is only applied once per value change and its result cached until the next change.
+Views can be created directly or via the  method of the parent state. Views can be [IDeref.deref()](./api.ideref.deref.md)<!-- -->'d like atoms and polled for value changes using [IView.changed()](./atom.iview.changed.md)<!-- -->. The transformer is only applied once per value change and its result cached until the next change.
 
 If the optional `lazy` is true (default), the transformer will only be executed with the first [IDeref.deref()](./api.ideref.deref.md) after each value change. If `lazy` is false, the transformer function will be executed immediately after a value change occurred and so can be used like a watch which only triggers if there was an actual value change (in contrast to normal watches, which execute with each update, regardless of value change).
 
@@ -24,23 +24,23 @@ Related, the actual value change predicate can be customized. If not given, the 
 
 
 ```ts
-a = new Atom({a: {b: 1}});
-v = a.addView("a.b", (x) => x * 10);
+a = defAtom({ a: { b: 1 } });
+v = defView(a, ["a", "b"], (x) => x * 10);
 
 v.deref()
 // 10
 
 // update atom state
-a.swap((state) => setIn(state, "a.b", 2));
-// {a: {b: 2}}
+a.resetIn(["a", "b"], 2);
+// { a: { b: 2 } }
 
 v.changed()
 // true
 v.deref()
 // 20
 
-v.release()
 // remove view from parent state
+v.release()
 
 ```
 
@@ -58,9 +58,9 @@ v.release()
 |  [isDirty](./atom.view.isdirty.md) |  | <code>boolean</code> |  |
 |  [isLazy](./atom.view.islazy.md) |  | <code>boolean</code> |  |
 |  [parent](./atom.view.parent.md) |  | <code>ReadonlyAtom&lt;any&gt;</code> |  |
-|  [path](./atom.view.path.md) |  | <code>PropertyKey[]</code> |  |
+|  [path](./atom.view.path.md) |  | <code>Path</code> |  |
 |  [state](./atom.view.state.md) |  | <code>T &#124; undefined</code> |  |
-|  [tx](./atom.view.tx.md) |  | <code>ViewTransform&lt;T&gt;</code> |  |
+|  [tx](./atom.view.tx.md) |  | <code>Fn&lt;any, T&gt;</code> |  |
 |  [unprocessed](./atom.view.unprocessed.md) |  | <code>any</code> |  |
 |  [value](./atom.view.value.md) |  | <code>T &#124; undefined</code> |  |
 

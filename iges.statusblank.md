@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare const enum StatusBlank 
+export declare enum StatusBlank 
 ```
 
 ## Enumeration Members

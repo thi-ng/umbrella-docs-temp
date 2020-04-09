@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare const enum TextureRepeat 
+export declare enum TextureRepeat 
 ```
 
 ## Enumeration Members

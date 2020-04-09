@@ -11,7 +11,7 @@ Type enums for Typedarray-backed buffers.
 <b>Signature:</b>
 
 ```typescript
-export declare const enum Type 
+export declare enum Type 
 ```
 
 ## Enumeration Members

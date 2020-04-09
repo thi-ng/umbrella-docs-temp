@@ -9,14 +9,14 @@ Transducer composition. Returns new transducer which applies given transducers i
 <b>Signature:</b>
 
 ```typescript
-export declare function comp<A, B>(a: Transducer<A, B>): Transducer<A, B>;
+export declare function comp<A, B>(a: TxLike<A, B>): Transducer<A, B>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  a | <code>Transducer&lt;A, B&gt;</code> |  |
+|  a | <code>TxLike&lt;A, B&gt;</code> |  |
 
 <b>Returns:</b>
 

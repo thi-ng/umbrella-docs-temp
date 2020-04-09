@@ -10,3 +10,9 @@
 |  --- | --- |
 |  [DGraph](./dgraph.dgraph.md) |  |
 
+## Variables
+
+|  Variable | Description |
+|  --- | --- |
+|  [defDGraph](./dgraph.defdgraph.md) |  |
+

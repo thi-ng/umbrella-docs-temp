@@ -7,16 +7,16 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function keep<T>(pred?: Fn<T, any>): Transducer<T, T>;
+export declare function keep<T>(pred?: Fn<Nullable<T>, any>): Transducer<Nullable<T>, T>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  pred | <code>Fn&lt;T, any&gt;</code> |  |
+|  pred | <code>Fn&lt;Nullable&lt;T&gt;, any&gt;</code> |  |
 
 <b>Returns:</b>
 
-`Transducer<T, T>`
+`Transducer<Nullable<T>, T>`
 

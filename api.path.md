@@ -4,10 +4,10 @@
 
 ## Path type
 
-Lookup path for nested data structures.
+Unchecked lookup path for nested data structures.
 
 <b>Signature:</b>
 
 ```typescript
-export declare type Path = PropertyKey | PropertyKey[];
+export declare type Path = readonly NumOrString[] | NumOrString;
 ```

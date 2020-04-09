@@ -4,8 +4,10 @@
 
 ## GestureInfo.delta property
 
+Difference vector between from `start` to `pos`<!-- -->.
+
 <b>Signature:</b>
 
 ```typescript
-delta: number[];
+delta?: number[];
 ```

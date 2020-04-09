@@ -27,6 +27,9 @@
 |  [PagerOpts](./hdom-components.pageropts.md) | Configuration options for pager components. |
 |  [SparklineOpts](./hdom-components.sparklineopts.md) |  |
 |  [TitleOpts](./hdom-components.titleopts.md) |  |
+|  [ToggleDotOpts](./hdom-components.toggledotopts.md) |  |
+|  [ToggleOpts](./hdom-components.toggleopts.md) |  |
+|  [ToggleRectOpts](./hdom-components.togglerectopts.md) |  |
 
 ## Variables
 
@@ -64,6 +67,8 @@ const mypager = pager({
 
 ```
  |
+|  [slideToggleDot](./hdom-components.slidetoggledot.md) |  |
+|  [slideToggleRect](./hdom-components.slidetogglerect.md) |  |
 |  [sparkline](./hdom-components.sparkline.md) | Customizable, stateless SVG sparkline component. |
 |  [title](./hdom-components.title.md) | Configurable Higher order title with optional subtitle component. The returned component function takes two args: title, subtitle. |
 

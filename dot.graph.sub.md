@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-sub?: IObjectOf<Graph>;
+sub?: Graph[];
 ```

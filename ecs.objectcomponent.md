@@ -31,6 +31,7 @@ export declare class ObjectComponent<K extends string, T> extends AComponent<K, 
 |  [getIndex(i)](./ecs.objectcomponent.getindex.md) |  |  |
 |  [moveIndex(src, dest)](./ecs.objectcomponent.moveindex.md) |  |  |
 |  [packedValues()](./ecs.objectcomponent.packedvalues.md) |  |  |
+|  [resize(cap)](./ecs.objectcomponent.resize.md) |  |  |
 |  [setIndexUnsafe(i, v, notify)](./ecs.objectcomponent.setindexunsafe.md) |  |  |
 |  [swapIndices(src, dest)](./ecs.objectcomponent.swapindices.md) |  |  |
 

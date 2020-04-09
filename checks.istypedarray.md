@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-isTypedArray: (x: any) => x is ArrayLike<number>
+isTypedArray: (x: any) => x is TypedArray
 ```

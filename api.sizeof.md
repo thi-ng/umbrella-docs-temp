@@ -10,14 +10,14 @@ Size information (in bytes) for [Type](./api.type.md) enums. For [GLType](./api.
 
 ```typescript
 SIZEOF: {
-    [Type.U8]: number;
-    [Type.U8C]: number;
-    [Type.I8]: number;
-    [Type.U16]: number;
-    [Type.I16]: number;
-    [Type.U32]: number;
-    [Type.I32]: number;
-    [Type.F32]: number;
-    [Type.F64]: number;
+    0: number;
+    1: number;
+    2: number;
+    3: number;
+    4: number;
+    5: number;
+    6: number;
+    7: number;
+    8: number;
 }
 ```

@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare const enum MouseButton 
+export declare enum MouseButton 
 ```
 
 ## Enumeration Members

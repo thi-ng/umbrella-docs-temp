@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare const enum BlendEquation 
+export declare enum BlendEquation 
 ```
 
 ## Enumeration Members

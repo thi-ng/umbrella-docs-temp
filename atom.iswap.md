@@ -16,4 +16,14 @@ export interface ISwap<T>
 |  --- | --- |
 |  [swap(fn, args)](./atom.iswap.swap.md) |  |
 |  [swapIn(path, fn, args)](./atom.iswap.swapin.md) |  |
+|  [swapIn(path, fn, args)](./atom.iswap.swapin_9.md) |  |
+|  [swapIn(path, fn, args)](./atom.iswap.swapin_1.md) |  |
+|  [swapIn(path, fn, args)](./atom.iswap.swapin_2.md) |  |
+|  [swapIn(path, fn, args)](./atom.iswap.swapin_3.md) |  |
+|  [swapIn(path, fn, args)](./atom.iswap.swapin_4.md) |  |
+|  [swapIn(path, fn, args)](./atom.iswap.swapin_5.md) |  |
+|  [swapIn(path, fn, args)](./atom.iswap.swapin_6.md) |  |
+|  [swapIn(path, fn, args)](./atom.iswap.swapin_7.md) |  |
+|  [swapIn(path, fn, args)](./atom.iswap.swapin_8.md) |  |
+|  [swapInUnsafe(path, fn, args)](./atom.iswap.swapinunsafe.md) |  |
 

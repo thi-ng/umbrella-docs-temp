@@ -18,9 +18,3 @@
 |  [MemPoolOpts](./malloc.mempoolopts.md) |  |
 |  [MemPoolStats](./malloc.mempoolstats.md) |  |
 
-## Type Aliases
-
-|  Type Alias | Description |
-|  --- | --- |
-|  [BlockCtor](./malloc.blockctor.md) |  |
-

@@ -9,5 +9,5 @@ WebGL draw mode. Defaults to `TRIANGLES`
 <b>Signature:</b>
 
 ```typescript
-mode?: GLenum;
+mode?: DrawMode;
 ```

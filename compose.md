@@ -71,9 +71,9 @@
 |  [constantly](./compose.constantly.md) |  |
 |  [delay](./compose.delay.md) |  |
 |  [delayed](./compose.delayed.md) |  |
-|  [foo](./compose.foo.md) |  |
 |  [identity](./compose.identity.md) |  |
 |  [ifDef](./compose.ifdef.md) | Returns f(x) iff <code>x</code> is not null or undefined. |
+|  [promisify](./compose.promisify.md) | Takes a function accepting a NodeJS-like callback w/ (error, result) args and converts it into a Promise, e.g. for use in async contexts. |
 |  [threadFirst](./compose.threadfirst.md) | Takes an <code>init</code> value and a number of functions and/or function tuples, consisting of: <code>[fn, ...args]</code>. Executes each function (or tuple) with the return value of the previous expression inserted as first argument, using <code>init</code> for the first expression. |
 |  [threadLast](./compose.threadlast.md) | Takes an <code>init</code> value and a number of functions and/or function tuples, consisting of: <code>[fn, ...args]</code>. Executes each function (or tuple) with the return value of the previous expression inserted as last argument, using <code>init</code> for the first expression. |
 |  [trampoline](./compose.trampoline.md) | Takes a function returning either a no-arg function (thunk) or its already realized (non-function) result. Re-executes thunk for as long as it returns another function/thunk. Once a non-function result has been produced, <code>trampoline</code> returns that value itself. |

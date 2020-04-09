@@ -7,15 +7,15 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function multiplex<T, A, B>(a: Transducer<T, A>, b: Transducer<T, B>): Transducer<T, [A, B]>;
+export declare function multiplex<T, A, B>(a: TxLike<T, A>, b: TxLike<T, B>): Transducer<T, [A, B]>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  a | <code>Transducer&lt;T, A&gt;</code> |  |
-|  b | <code>Transducer&lt;T, B&gt;</code> |  |
+|  a | <code>TxLike&lt;T, A&gt;</code> |  |
+|  b | <code>TxLike&lt;T, B&gt;</code> |  |
 
 <b>Returns:</b>
 

@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare const enum GLSLVersion 
+export declare enum GLSLVersion 
 ```
 
 ## Enumeration Members

@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-bitMux: (n: number, a: number, b: number, s: number) => number
+bitMux: (a: number, b: number, s: number) => number
 ```

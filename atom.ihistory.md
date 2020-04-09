@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export interface IHistory<T> extends IAtom<T>, INotify 
+export interface IHistory<T> extends IAtom<T>, IClear, INotify 
 ```
 
 ## Methods
@@ -16,7 +16,6 @@ export interface IHistory<T> extends IAtom<T>, INotify
 |  --- | --- |
 |  [canRedo()](./atom.ihistory.canredo.md) |  |
 |  [canUndo()](./atom.ihistory.canundo.md) |  |
-|  [clear()](./atom.ihistory.clear.md) |  |
 |  [record()](./atom.ihistory.record.md) |  |
 |  [redo()](./atom.ihistory.redo.md) |  |
 |  [undo()](./atom.ihistory.undo.md) |  |

@@ -4,6 +4,8 @@
 
 ## eqDelta variable
 
+Checks given vectors for componentwise equality, taking tolerance `eps` (default: [EPS](./math.eps.md)<!-- -->) into account.
+
 <b>Signature:</b>
 
 ```typescript

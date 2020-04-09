@@ -2,19 +2,25 @@
 
 [Home](./index.md) &gt; [@thi.ng/paths](./paths.md) &gt; [updateIn](./paths.updatein.md)
 
-## updateIn variable
+## updateIn() function
 
-Similar to [setIn](./paths.setin.md)<!-- -->, but applies given function to current path value (incl. any additional/optional arguments passed to `updateIn`<!-- -->) and uses result as new value. Does not modify original state (unless given function does so itself).
-
-```
-add = (x, y) => x + y;
-updateIn({ a: { b: { c: 23 } } }, "a.b.c", add, 10);
-// { a: { b: { c: 33 } } }
-
-```
+Type checked version of . Only the first 8 path levels are type checked.
 
 <b>Signature:</b>
 
 ```typescript
-updateIn: (state: any, path: Path, fn: UpdateFn<any>, ...args: any[]) => any
+export declare function updateIn<T>(state: T, path: Path0, fn: UpdateFn<T, T>): T;
 ```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  state | <code>T</code> |  |
+|  path | <code>Path0</code> |  |
+|  fn | <code>UpdateFn&lt;T, T&gt;</code> |  |
+
+<b>Returns:</b>
+
+`T`
+

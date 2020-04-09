@@ -7,18 +7,18 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function multiplex<T, A, B, C, D, E>(a: Transducer<T, A>, b: Transducer<T, B>, c: Transducer<T, C>, d: Transducer<T, D>, e: Transducer<T, E>): Transducer<T, [A, B, C, D, E]>;
+export declare function multiplex<T, A, B, C, D, E>(a: TxLike<T, A>, b: TxLike<T, B>, c: TxLike<T, C>, d: TxLike<T, D>, e: TxLike<T, E>): Transducer<T, [A, B, C, D, E]>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  a | <code>Transducer&lt;T, A&gt;</code> |  |
-|  b | <code>Transducer&lt;T, B&gt;</code> |  |
-|  c | <code>Transducer&lt;T, C&gt;</code> |  |
-|  d | <code>Transducer&lt;T, D&gt;</code> |  |
-|  e | <code>Transducer&lt;T, E&gt;</code> |  |
+|  a | <code>TxLike&lt;T, A&gt;</code> |  |
+|  b | <code>TxLike&lt;T, B&gt;</code> |  |
+|  c | <code>TxLike&lt;T, C&gt;</code> |  |
+|  d | <code>TxLike&lt;T, D&gt;</code> |  |
+|  e | <code>TxLike&lt;T, E&gt;</code> |  |
 
 <b>Returns:</b>
 

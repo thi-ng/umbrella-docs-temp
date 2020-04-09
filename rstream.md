@@ -8,6 +8,7 @@
 
 |  Class | Description |
 |  --- | --- |
+|  [ASidechain](./rstream.asidechain.md) | Abstract base class for sidechained subscription types (e.g. [sidechainPartition](./rstream.sidechainpartition.md)<!-- -->, [sidechainToggle](./rstream.sidechaintoggle.md)<!-- -->). |
 |  [MetaStream](./rstream.metastream.md) |  |
 |  [PubSub](./rstream.pubsub.md) |  |
 |  [Resolver](./rstream.resolver.md) |  |
@@ -30,6 +31,16 @@
 
 |  Function | Description |
 |  --- | --- |
+|  [fromView(parent, opts)](./rstream.fromview.md) | Similar to [fromAtom](./rstream.fromatom.md)<!-- -->, but creates a type checked, eager derived view for a nested value in an Atom-like state container and yields stream of its value changes. |
+|  [fromView(parent, opts)](./rstream.fromview_9.md) |  |
+|  [fromView(parent, opts)](./rstream.fromview_1.md) |  |
+|  [fromView(parent, opts)](./rstream.fromview_2.md) |  |
+|  [fromView(parent, opts)](./rstream.fromview_3.md) |  |
+|  [fromView(parent, opts)](./rstream.fromview_4.md) |  |
+|  [fromView(parent, opts)](./rstream.fromview_5.md) |  |
+|  [fromView(parent, opts)](./rstream.fromview_6.md) |  |
+|  [fromView(parent, opts)](./rstream.fromview_7.md) |  |
+|  [fromView(parent, opts)](./rstream.fromview_8.md) |  |
 |  [stream(opts)](./rstream.stream.md) | Creates a new [Stream](./rstream.stream.md) instance, optionally with given <code>StreamSource</code> function and / or options. |
 |  [stream(src, opts)](./rstream.stream_1.md) |  |
 |  [trigger()](./rstream.trigger.md) | Utility stream. Returns a new stream which emits a single value <code>x</code> (if given) and then closes. If no arg is provided, the stream emits a single <code>true</code>. |
@@ -78,7 +89,7 @@
 |  [fromPromise](./rstream.frompromise.md) | Yields a single-value [Stream](./rstream.stream.md) of the resolved promise and then automatically marks itself done. |
 |  [fromPromises](./rstream.frompromises.md) | Wraps given iterable in <code>Promise.all()</code> to yield [Stream](./rstream.stream.md) of results in same order as arguments, then closes. |
 |  [fromRAF](./rstream.fromraf.md) | Yields [Stream](./rstream.stream.md) of a monotonically increasing counter, triggered by a <code>requestAnimationFrame()</code> loop (only available in browser environments). |
-|  [fromView](./rstream.fromview.md) | Similar to [fromAtom](./rstream.fromatom.md)<!-- -->, but creates an eager derived view for a nested value in atom / cursor and yields stream of its value changes. |
+|  [fromViewUnsafe](./rstream.fromviewunsafe.md) | Unchecked version of . Paths can be given as string or tuple. |
 |  [fromWorker](./rstream.fromworker.md) | Returns a [Stream](./rstream.stream.md) which adds <code>message</code> and <code>error</code> event listeners to given <code>worker</code> and then emits received values. |
 |  [inlineWorker](./rstream.inlineworker.md) |  |
 |  [joinBuffer](./rstream.joinbuffer.md) | Higher-order join function for scenarios involving the split-parallel processing of a large buffer. |
@@ -107,6 +118,7 @@
 
 |  Type Alias | Description |
 |  --- | --- |
+|  [FromViewUnsafeOpts](./rstream.fromviewunsafeopts.md) |  |
 |  [StreamCancel](./rstream.streamcancel.md) |  |
 |  [StreamSource](./rstream.streamsource.md) |  |
 

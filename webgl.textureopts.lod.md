@@ -4,6 +4,8 @@
 
 ## TextureOpts.lod property
 
+Min/max level-of-detail values.
+
 <b>Signature:</b>
 
 ```typescript

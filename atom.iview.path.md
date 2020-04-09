@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-readonly path: PropertyKey[];
+readonly path: Path;
 ```

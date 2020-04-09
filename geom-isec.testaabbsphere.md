@@ -4,8 +4,10 @@
 
 ## testAABBSphere variable
 
+Same as [testRectCircle](./geom-isec.testrectcircle.md)<!-- -->, but for 3D AABB and sphere.
+
 <b>Signature:</b>
 
 ```typescript
-testAABBSphere: ([rx, ry, rz]: import("@thi.ng/api").ArrayLikeIterable<number>, [w, h, d]: import("@thi.ng/api").ArrayLikeIterable<number>, [cx, cy, cz]: import("@thi.ng/api").ArrayLikeIterable<number>, r: number) => boolean
+testAABBSphere: Fn4<import("@thi.ng/api").ArrayLikeIterable<number>, import("@thi.ng/api").ArrayLikeIterable<number>, import("@thi.ng/api").ArrayLikeIterable<number>, number, boolean>
 ```

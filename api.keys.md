@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type Keys<T> = keyof T;
+export declare type Keys<T> = keyof Required<T>;
 ```

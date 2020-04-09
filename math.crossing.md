@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare const enum Crossing 
+export declare enum Crossing 
 ```
 
 ## Enumeration Members

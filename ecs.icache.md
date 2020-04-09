@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export interface ICache<T> extends IRelease 
+export interface ICache<T> extends IClear, IRelease 
 ```
 
 ## Methods

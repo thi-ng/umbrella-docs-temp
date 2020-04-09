@@ -4,7 +4,7 @@
 
 ## sub variable
 
-Componentwise matrix subtraction. If `out` is not given, writes result in `a`<!-- -->.
+Componentwise matrix subtraction. If `out` is not given, writes result in `a`<!-- -->. Both input matrices MUST be of same size.
 
 out = a - b
 

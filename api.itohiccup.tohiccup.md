@@ -9,7 +9,7 @@ Returns a [@thi.ng/hiccup](./hiccup.md) compatible representation. The optional 
 <b>Signature:</b>
 
 ```typescript
-toHiccup(ctx?: any): any;
+toHiccup(ctx?: any, attribs?: any, ...xs: any[]): any;
 ```
 
 ## Parameters
@@ -17,6 +17,8 @@ toHiccup(ctx?: any): any;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  ctx | <code>any</code> | user context object |
+|  attribs | <code>any</code> | user attribs |
+|  xs | <code>any[]</code> | additional args |
 
 <b>Returns:</b>
 

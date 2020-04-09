@@ -4,19 +4,19 @@
 
 ## mapKeys() function
 
-Takes a `keys` object of transformation functions and returns a transducer which expects object values. For each input `x` then calls transformation functions for each key `k` in `keys`<!-- -->. I.e. executes `keys[k](x[k])` and reassigns result. By default creates a shallow copy of each `x`<!-- -->.
+Takes a `keys` object of transformation functions and returns a transducer which expects object values. For each input `x` then calls transformation functions for each key `k` in `keys`<!-- -->. I.e. executes `keys[k](x[k], x)` and reassigns result. By default creates a shallow copy of each `x`<!-- -->.
 
 <b>Signature:</b>
 
 ```typescript
-export declare function mapKeys(keys: IObjectOf<Fn<any, any>>, copy?: boolean): Transducer<any, any>;
+export declare function mapKeys(keys: IObjectOf<Fn2<any, any, any>>, copy?: boolean): Transducer<any, any>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  keys | <code>IObjectOf&lt;Fn&lt;any, any&gt;&gt;</code> | object of transformation functions |
+|  keys | <code>IObjectOf&lt;Fn2&lt;any, any, any&gt;&gt;</code> | object of transformation functions |
 |  copy | <code>boolean</code> | if true (default), creates a shallow copy of each incoming value |
 
 <b>Returns:</b>

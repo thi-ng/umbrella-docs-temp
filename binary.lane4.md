@@ -4,7 +4,7 @@
 
 ## lane4 variable
 
-Extracts 4-bit lane from given 32bit uint.
+Extracts 4-bit lane from given 32bit uint and returns as unsigned nibble \[0x00 .. 0x0f\].
 
 - Lane \#0: bits 28-31 - Lane \#1: bits 24-27 - Lane \#2: bits 20-23 - Lane \#3: bits 16-19 - Lane \#4: bits 12-15 - Lane \#5: bits 8-11 - Lane \#6: bits 4-7 - Lane \#7: bits 0-3
 

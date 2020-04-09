@@ -21,17 +21,10 @@ export declare class KdNode<K extends ReadonlyVec, V>
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
 |  [d](./geom-accel.kdnode.d.md) |  | <code>number</code> |  |
+|  [height](./geom-accel.kdnode.height.md) |  | <code>number</code> |  |
 |  [k](./geom-accel.kdnode.k.md) |  | <code>K</code> |  |
-|  [l](./geom-accel.kdnode.l.md) |  | <code>KdNode&lt;K, V&gt; &#124; null</code> |  |
-|  [parent](./geom-accel.kdnode.parent.md) |  | <code>KdNode&lt;K, V&gt; &#124; null</code> |  |
-|  [r](./geom-accel.kdnode.r.md) |  | <code>KdNode&lt;K, V&gt; &#124; null</code> |  |
+|  [l](./geom-accel.kdnode.l.md) |  | <code>KdNode&lt;K, V&gt;</code> |  |
+|  [parent](./geom-accel.kdnode.parent.md) |  | <code>KdNode&lt;K, V&gt;</code> |  |
+|  [r](./geom-accel.kdnode.r.md) |  | <code>KdNode&lt;K, V&gt;</code> |  |
 |  [v](./geom-accel.kdnode.v.md) |  | <code>V</code> |  |
-
-## Methods
-
-|  Method | Modifiers | Description |
-|  --- | --- | --- |
-|  [\[Symbol.iterator\]()](./geom-accel.kdnode._symbol.iterator_.md) |  |  |
-|  [height()](./geom-accel.kdnode.height.md) |  |  |
-|  [keys()](./geom-accel.kdnode.keys.md) |  |  |
 

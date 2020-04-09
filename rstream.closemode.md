@@ -9,7 +9,7 @@ Closing behaviors.
 <b>Signature:</b>
 
 ```typescript
-export declare const enum CloseMode 
+export declare enum CloseMode 
 ```
 
 ## Enumeration Members

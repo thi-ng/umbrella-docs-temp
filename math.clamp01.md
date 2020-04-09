@@ -4,6 +4,8 @@
 
 ## clamp01 variable
 
+Clamps value `x` to closed \[0 .. 1\] interval.
+
 <b>Signature:</b>
 
 ```typescript

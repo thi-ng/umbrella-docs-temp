@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-r: KdNode<K, V> | null;
+r?: KdNode<K, V>;
 ```

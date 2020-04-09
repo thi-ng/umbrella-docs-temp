@@ -4,7 +4,7 @@
 
 ## EVENT\_ROUTE\_CHANGED variable
 
-ID of event being triggered by `router.match()`
+ID of success event being triggered by `router.match()`
 
 <b>Signature:</b>
 

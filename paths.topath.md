@@ -21,5 +21,5 @@ toPath(["a", "b", "c"])
 <b>Signature:</b>
 
 ```typescript
-toPath: (path: Path) => (string | number | symbol)[]
+toPath: (path: Path) => (string | number)[]
 ```

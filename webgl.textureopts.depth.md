@@ -4,6 +4,8 @@
 
 ## TextureOpts.depth property
 
+Texture depth in pixels. Only used if `target` is `TextureTarget.TEXTURE_3D`
+
 <b>Signature:</b>
 
 ```typescript

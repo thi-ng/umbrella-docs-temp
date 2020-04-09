@@ -8,6 +8,13 @@
 
 |  Class | Description |
 |  --- | --- |
-|  [BitField](./bitfield.bitfield.md) | 1D bit field, backed by a Uint32Array. Size is always a multiple of 32. |
-|  [BitMatrix](./bitfield.bitmatrix.md) | MxN row-major 2D bit matrix, backed by a Uint32Array. Width is always a multiple of 32. |
+|  [BitField](./bitfield.bitfield.md) | 1D bit field, backed by a Uint32Array. Hence size is always rounded up to a multiple of 32. |
+|  [BitMatrix](./bitfield.bitmatrix.md) | MxN row-major 2D bit matrix, backed by a Uint32Array. Hence the width (number of columns) is always rounded up to a multiple of 32. |
+
+## Variables
+
+|  Variable | Description |
+|  --- | --- |
+|  [bitField](./bitfield.bitfield.md) |  |
+|  [bitMatrix](./bitfield.bitmatrix.md) |  |
 

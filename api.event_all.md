@@ -4,6 +4,8 @@
 
 ## EVENT\_ALL variable
 
+Catch-all event ID
+
 <b>Signature:</b>
 
 ```typescript

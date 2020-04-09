@@ -9,7 +9,7 @@ Filtered access types (currently unused)
 <b>Signature:</b>
 
 ```typescript
-export declare const enum Filter 
+export declare enum Filter 
 ```
 
 ## Enumeration Members

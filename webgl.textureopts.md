@@ -14,21 +14,21 @@ export interface TextureOpts
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [depth](./webgl.textureopts.depth.md) | <code>number</code> |  |
+|  [depth](./webgl.textureopts.depth.md) | <code>number</code> | Texture depth in pixels. Only used if <code>target</code> is <code>TextureTarget.TEXTURE_3D</code> |
 |  [filter](./webgl.textureopts.filter.md) | <code>TextureFilter &#124; [TextureFilter, TextureFilter?]</code> |  |
-|  [flip](./webgl.textureopts.flip.md) | <code>boolean</code> |  |
+|  [flip](./webgl.textureopts.flip.md) | <code>boolean</code> | True, if source data should be flipped along its vertical axis. |
 |  [format](./webgl.textureopts.format.md) | <code>TextureFormat</code> |  |
-|  [height](./webgl.textureopts.height.md) | <code>number</code> |  |
-|  [image](./webgl.textureopts.image.md) | <code>ArrayBufferView &#124; TexImageSource &#124; null</code> |  |
-|  [level](./webgl.textureopts.level.md) | <code>number</code> |  |
-|  [lod](./webgl.textureopts.lod.md) | <code>[number, number?]</code> |  |
-|  [minMaxLevel](./webgl.textureopts.minmaxlevel.md) | <code>[number, number]</code> |  |
-|  [mipmap](./webgl.textureopts.mipmap.md) | <code>boolean</code> |  |
-|  [pos](./webgl.textureopts.pos.md) | <code>number[]</code> |  |
-|  [premultiply](./webgl.textureopts.premultiply.md) | <code>boolean</code> |  |
-|  [sub](./webgl.textureopts.sub.md) | <code>boolean</code> |  |
+|  [height](./webgl.textureopts.height.md) | <code>number</code> | Texture height in pixels. Only used if <code>image</code> is null or a typed array. |
+|  [image](./webgl.textureopts.image.md) | <code>ArrayBufferView &#124; TexImageSource &#124; null</code> | If this value is null or a typedarray then size options (i.e. <code>width</code>, <code>height</code>, <code>depth</code>) MUST be given (the latter only if <code>target</code> is TEXTURE\_3D). |
+|  [level](./webgl.textureopts.level.md) | <code>number</code> | Mipmap level to configure (e.g. if providing custom mipmaps) |
+|  [lod](./webgl.textureopts.lod.md) | <code>[number, number?]</code> | Min/max level-of-detail values. |
+|  [minMaxLevel](./webgl.textureopts.minmaxlevel.md) | <code>[number, number]</code> | Min/max mipmap levels (ints) |
+|  [mipmap](./webgl.textureopts.mipmap.md) | <code>boolean</code> | True, if mipmaps should be generated. |
+|  [pos](./webgl.textureopts.pos.md) | <code>number[]</code> | Pixel position offset for <code>sub</code> image updates. |
+|  [premultiply](./webgl.textureopts.premultiply.md) | <code>boolean</code> | True, if the source data's color channels should be pre-multiplied with the alpha channel. |
+|  [sub](./webgl.textureopts.sub.md) | <code>boolean</code> | True, if given <code>image</code> is only defining a sub-image (i.e. partial update of a previously configured texture). If true, also uses <code>pos</code> option. |
 |  [target](./webgl.textureopts.target.md) | <code>TextureTarget</code> |  |
-|  [type](./webgl.textureopts.type.md) | <code>TextureType</code> |  |
-|  [width](./webgl.textureopts.width.md) | <code>number</code> |  |
+|  [type](./webgl.textureopts.type.md) | <code>TextureType</code> | Only needed if overriding <code>format</code>'s default type. |
+|  [width](./webgl.textureopts.width.md) | <code>number</code> | Texture width in pixels. Only used if <code>image</code> is null or a typed array. |
 |  [wrap](./webgl.textureopts.wrap.md) | <code>TextureRepeat &#124; [TextureRepeat, TextureRepeat?, TextureRepeat?]</code> |  |
 

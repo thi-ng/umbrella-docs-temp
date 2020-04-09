@@ -4,7 +4,7 @@
 
 ## floatToSortableInt variable
 
-Converts given float into a sortable integer representation, using raw bitwise conversion via [floatToIntBits](./binary.floattointbits.md)<!-- -->.
+Converts given float (f32) into a sortable integer representation, using raw bitwise conversion via [floatToIntBits](./binary.floattointbits.md)<!-- -->.
 
 [https://github.com/tzaeschke/phtree/blob/master/PhTreeRevisited.pdf](https://github.com/tzaeschke/phtree/blob/master/PhTreeRevisited.pdf) (page 3)
 

@@ -4,7 +4,7 @@
 
 ## eqDeltaS variable
 
-Similar to [eq](./vectors.eq.md)<!-- -->, but takes tolerance `eps` into account for equality checks.
+Checks given strided vectors for componentwise equality, taking tolerance `eps` (default: [EPS](./math.eps.md)<!-- -->) into account.
 
 <b>Signature:</b>
 

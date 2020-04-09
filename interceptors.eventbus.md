@@ -32,12 +32,12 @@ Wraps an [IAtom](./atom.iatom.md) state container (i.e. `Atom`<!-- -->/`Cursor`<
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
-|  [addBuiltIns()](./interceptors.eventbus.addbuiltins.md) |  | Adds same built-in event &amp; side effect handlers as in <code>StatelessEventBus.addBuiltIns()</code> and the following additions:<!-- -->\#\#\# Handlers<!-- -->\#\#\#\# <code>EV_SET_VALUE</code>Resets state path to provided value. See [setIn](./paths.setin.md)<!-- -->.<!-- -->Example event definition:
+|  [addBuiltIns()](./interceptors.eventbus.addbuiltins.md) |  | Adds same built-in event &amp; side effect handlers as in <code>StatelessEventBus.addBuiltIns()</code> and the following additions:<!-- -->\#\#\# Handlers<!-- -->\#\#\#\# <code>EV_SET_VALUE</code>Resets state path to provided value. See .<!-- -->Example event definition:
 ```
 [EV_SET_VALUE, ["path.to.value", val]]
 
 ```
-\#\#\#\# <code>EV_UPDATE_VALUE</code>Updates a state path's value with provided function and optional extra arguments. See [updateIn](./paths.updatein.md)<!-- -->.<!-- -->Example event definition:
+\#\#\#\# <code>EV_UPDATE_VALUE</code>Updates a state path's value with provided function and optional extra arguments. See .<!-- -->Example event definition:
 ```
 [EV_UPDATE_VALUE, ["path.to.value", (x, y) => x + y, 1]]
 

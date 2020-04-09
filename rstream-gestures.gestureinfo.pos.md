@@ -4,6 +4,8 @@
 
 ## GestureInfo.pos property
 
+Current cursor position (as per [GestureStreamOpts.local](./rstream-gestures.gesturestreamopts.local.md) &amp; [GestureStreamOpts.scale](./rstream-gestures.gesturestreamopts.scale.md)<!-- -->)
+
 <b>Signature:</b>
 
 ```typescript

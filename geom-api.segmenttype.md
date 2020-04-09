@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare const enum SegmentType 
+export declare enum SegmentType 
 ```
 
 ## Enumeration Members

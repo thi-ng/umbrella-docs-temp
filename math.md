@@ -36,8 +36,9 @@
 |  [bounce](./math.bounce.md) |  |
 |  [circular](./math.circular.md) | Circular interpolation: <code>sqrt(1 - (1 - t)^2)</code> |
 |  [clamp](./math.clamp.md) | Clamps value <code>x</code> to given closed interval. |
-|  [clamp01](./math.clamp01.md) |  |
-|  [clamp11](./math.clamp11.md) |  |
+|  [clamp01](./math.clamp01.md) | Clamps value <code>x</code> to closed \[0 .. 1\] interval. |
+|  [clamp05](./math.clamp05.md) | Clamps value <code>x</code> to closed \[0 .. 0.5\] interval. |
+|  [clamp11](./math.clamp11.md) | Clamps value <code>x</code> to closed \[-1 .. 1\] interval. |
 |  [classifyCrossing](./math.classifycrossing.md) | Returns [Crossing](./math.crossing.md) classifier indicating the relationship of line A to line B. The optional epsilon value is used to determine if both lines are considered equal or flat.<!-- -->- [isCrossOver](./math.iscrossover.md) - [isCrossUnder](./math.iscrossunder.md) - [Crossing](./math.crossing.md) |
 |  [cosine](./math.cosine.md) |  |
 |  [cossin](./math.cossin.md) | Returns vector of <code>[cos(theta)*n, sin(theta)*n]</code>. |
@@ -58,6 +59,7 @@
 |  [EPS](./math.eps.md) |  |
 |  [eqDelta](./math.eqdelta.md) | Checks if <code>&#124;a - b&#124; &lt;= ε</code> and adapts given epsilon value to the given arguments:<!-- -->ε is factored with the largest absolute value of <code>a</code> or <code>b</code> (but never lesser than the given <code>eps</code> value):<code>ε = ε * max(1, &#124;a&#124;, &#124;b&#124;)</code> |
 |  [eqDeltaFixed](./math.eqdeltafixed.md) | Similar to [eqDelta](./math.eqdelta.md)<!-- -->, but used given <code>eps</code> as is. |
+|  [expFactor](./math.expfactor.md) | Computes exponential factor to interpolate from <code>a</code> to <code>b</code> over <code>num</code> steps. I.e. multiplying <code>a</code> with the returned factor will yield <code>b</code> after <code>num</code> steps. All args must be &gt; 0. |
 |  [expStep](./math.expstep.md) | Exponential ramp with variable shape, e.g.<!-- -->- S-curve: k=8, n=4 - Step near 1.0: k=8, n=20 - Pulse: k=0.005, n=-10 - Ease-in: k=0.5, n=0.25 |
 |  [fastCos](./math.fastcos.md) | Fast cosine approximation using [normCos](./math.normcos.md) (polynomial). Max. error \~0.00059693<!-- -->In \[0 .. 2π\] interval, approx. 18-20% faster than <code>Math.cos</code> on V8. |
 |  [fastSin](./math.fastsin.md) | [fastCos](./math.fastcos.md) |
@@ -67,7 +69,7 @@
 |  [fit11](./math.fit11.md) |  |
 |  [fitClamped](./math.fitclamped.md) |  |
 |  [fmod](./math.fmod.md) | Returns <code>a - b * floor(a/b)</code> |
-|  [foldback](./math.foldback.md) | [http://www.musicdsp.org/showone.php?id=203](http://www.musicdsp.org/showone.php?id=203) |
+|  [foldback](./math.foldback.md) | If <code>abs(x) &gt; abs(e)</code>, recursively mirrors <code>x</code> back into <code>[-e .. +e]</code> interval at respective positive/negative boundary. |
 |  [fract](./math.fract.md) |  |
 |  [gain](./math.gain.md) |  |
 |  [HALF\_PI](./math.half_pi.md) |  |
@@ -99,6 +101,8 @@
 |  [minError](./math.minerror.md) | Recursively evaluates function <code>fn</code> for <code>res</code> uniformly spaced values <code>t</code> in the closed parametric interval <code>[start,end]</code> and computes corresponding sample values <code>p</code>. For each <code>p</code> then calls <code>error</code> function to compute the error to query target value <code>q</code> and eventually returns the <code>t</code> producing the overall minimum error. At each level of recursion the search interval is increasingly narrowed / centered around the best <code>t</code> of the current iteration.<!-- -->The search is terminated early if the best error value is less than <code>eps</code>.<!-- -->The interval end points <code>start</code> and <code>end</code> MUST be normalized values in the closed \[0,1\] interval. |
 |  [minimaIndex](./math.minimaindex.md) | Returns index of the first local &amp; internal minima found in given <code>values</code> array, or -1 if no such minima exists. The search range can be optionally defined via semi-open \[from, to) index interval. |
 |  [minimaIndices](./math.minimaindices.md) | Returns an iterator yielding all minima indices in given <code>values</code> array. The search range can be optionally defined via semi-open \[from, to) index interval. |
+|  [minNonZero2](./math.minnonzero2.md) | Returns the non-zero minimum value of the given <code>a</code>, <code>b</code> args. |
+|  [minNonZero3](./math.minnonzero3.md) | Returns the non-zero minimum value of the given <code>a</code>, <code>b</code>, <code>c</code> args. |
 |  [mix](./math.mix.md) |  |
 |  [mixBilinear](./math.mixbilinear.md) |  |
 |  [mixCubic](./math.mixcubic.md) |  |
@@ -132,7 +136,7 @@
 |  [QUARTER\_PI](./math.quarter_pi.md) |  |
 |  [rad](./math.rad.md) | Converts angle to radians. |
 |  [RAD2DEG](./math.rad2deg.md) |  |
-|  [roundEps](./math.roundeps.md) | Only rounds <code>x</code> to nearest int if <code>fract(x)</code> &lt; <code>eps</code> or &gt; <code>1-eps</code>. |
+|  [roundEps](./math.roundeps.md) | Only rounds <code>x</code> to nearest int if <code>fract(x)</code> &lt;<!-- -->= <code>eps</code> or &gt;<!-- -->= <code>1-eps</code>. |
 |  [roundTo](./math.roundto.md) |  |
 |  [rshifti16](./math.rshifti16.md) |  |
 |  [rshifti32](./math.rshifti32.md) |  |
@@ -140,6 +144,7 @@
 |  [rshiftu16](./math.rshiftu16.md) |  |
 |  [rshiftu32](./math.rshiftu32.md) |  |
 |  [rshiftu8](./math.rshiftu8.md) |  |
+|  [safeDiv](./math.safediv.md) | Returns <code>a</code> divided by <code>b</code> or zero if <code>b = 0</code>. |
 |  [sclamp](./math.sclamp.md) | Same as <code>smin(smax(x, min, k), max, k)</code>. |
 |  [sec](./math.sec.md) | Secant. Approaches <code>±Infinity</code> for <code>theta</code> near π/2 ± nπ |
 |  [sigmoid](./math.sigmoid.md) | Sigmoid function for inputs in \[0..1\] interval. |
@@ -178,9 +183,10 @@
 |  [trunc](./math.trunc.md) |  |
 |  [tween](./math.tween.md) | HOF interpolator. Takes a timing function <code>f</code> and interval <code>[from, to]</code>. Returns function which takes normalized time as single arg and returns interpolated value. |
 |  [TWO\_THIRD](./math.two_third.md) |  |
-|  [wrap](./math.wrap.md) |  |
-|  [wrap01](./math.wrap01.md) |  |
-|  [wrap11](./math.wrap11.md) |  |
+|  [wrap](./math.wrap.md) | Folds <code>x</code> back inside closed \[min..max\] interval. Also see [wrapOnce](./math.wraponce.md)<!-- -->. |
+|  [wrap01](./math.wrap01.md) | Similar to [wrapOnce](./math.wraponce.md) for \[0..1\] interval. |
+|  [wrap11](./math.wrap11.md) | Similar to [wrapOnce](./math.wraponce.md) for \[-1..1\] interval. |
+|  [wrapOnce](./math.wraponce.md) | Like [wrap](./math.wrap.md)<!-- -->, but optimized for cases where <code>x</code> is guaranteed to be in <code>[min - d, max + d]</code> interval, where <code>d = max - min</code>. Result will be in closed <code>[min..max]</code> interval. |
 |  [xori16](./math.xori16.md) |  |
 |  [xori32](./math.xori32.md) |  |
 |  [xori8](./math.xori8.md) |  |

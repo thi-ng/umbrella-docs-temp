@@ -11,7 +11,7 @@ WebGL numeric type constants. Use [GL2TYPE](./api.gl2type.md) to convert, if nee
 <b>Signature:</b>
 
 ```typescript
-export declare const enum GLType 
+export declare enum GLType 
 ```
 
 ## Enumeration Members

@@ -28,6 +28,7 @@ export declare class LRU<T> implements ICache<T>
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
+|  [clear()](./ecs.lru.clear.md) |  |  |
 |  [delete(key)](./ecs.lru.delete.md) |  |  |
 |  [get(key)](./ecs.lru.get.md) |  |  |
 |  [getSet(key, notFound)](./ecs.lru.getset.md) |  |  |

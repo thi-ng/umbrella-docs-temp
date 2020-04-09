@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-tri: (phase: number, freq: number, amp?: number, dc?: number) => number
+tri: StatelessOscillator
 ```

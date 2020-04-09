@@ -9,5 +9,5 @@ Similar to [binarySearch](./arrays.binarysearch.md)<!-- -->, but optimized for n
 <b>Signature:</b>
 
 ```typescript
-binarySearchNumeric: (buf: ArrayLike<number>, x: number, cmp?: import("@thi.ng/api").Fn2<number, number, number>) => number
+binarySearchNumeric: (buf: ArrayLike<number>, x: number, cmp?: import("@thi.ng/api").Fn2<number, number, number>, low?: number, high?: number) => number
 ```

@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-translatedShape: (ctor: PCLikeConstructor) => ($: PCLike, mat: import("@thi.ng/api").ArrayLikeIterable<number>) => PCLike
+translatedShape: (ctor: PCLikeConstructor) => ($: PCLike, delta: import("@thi.ng/api").ArrayLikeIterable<number>) => PCLike
 ```

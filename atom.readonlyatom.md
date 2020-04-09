@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-export interface ReadonlyAtom<T> extends IDeref<T>, IRelease, IWatch<T>, IViewable 
+export interface ReadonlyAtom<T> extends IDeref<T>, IRelease, IWatch<T> 
 ```

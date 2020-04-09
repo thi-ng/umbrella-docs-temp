@@ -31,6 +31,7 @@
 |  [alphaNum](./fsm.alphanum.md) | Combination of [digit](./fsm.digit.md) and [alpha](./fsm.alpha.md)<!-- -->. |
 |  [alts](./fsm.alts.md) | Returns a composed matcher which applies inputs to all given child matchers (<code>opts</code>) until either all have failed or one of them returns a full match. |
 |  [altsLit](./fsm.altslit.md) |  |
+|  [altsLitObj](./fsm.altslitobj.md) |  |
 |  [always](./fsm.always.md) | Returns a matcher which always succeeds (produces a <code>Match.FULL</code> result) for any given input. Use <code>never()</code> for the opposite effect. |
 |  [digit](./fsm.digit.md) | Matcher for single digit characters (0-9). |
 |  [lit](./fsm.lit.md) |  |

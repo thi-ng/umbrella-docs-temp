@@ -7,15 +7,15 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function keep<T>(pred: Fn<T, any>, src: Iterable<T>): IterableIterator<T>;
+export declare function keep<T>(pred: Fn<Nullable<T>, any>, src: Iterable<Nullable<T>>): IterableIterator<T>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  pred | <code>Fn&lt;T, any&gt;</code> |  |
-|  src | <code>Iterable&lt;T&gt;</code> |  |
+|  pred | <code>Fn&lt;Nullable&lt;T&gt;, any&gt;</code> |  |
+|  src | <code>Iterable&lt;Nullable&lt;T&gt;&gt;</code> |  |
 
 <b>Returns:</b>
 

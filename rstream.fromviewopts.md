@@ -7,14 +7,14 @@
 <b>Signature:</b>
 
 ```typescript
-export interface FromViewOpts<T> extends Partial<CommonOpts> 
+export interface FromViewOpts<P, A, B> extends Partial<CommonOpts> 
 ```
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [equiv](./rstream.fromviewopts.equiv.md) | <code>Predicate2&lt;any&gt;</code> |  |
-|  [path](./rstream.fromviewopts.path.md) | <code>Path</code> |  |
-|  [tx](./rstream.fromviewopts.tx.md) | <code>ViewTransform&lt;T&gt;</code> |  |
+|  [equiv](./rstream.fromviewopts.equiv.md) | <code>Predicate2&lt;A&gt;</code> |  |
+|  [path](./rstream.fromviewopts.path.md) | <code>P</code> |  |
+|  [tx](./rstream.fromviewopts.tx.md) | <code>Fn&lt;A, B&gt;</code> |  |
 

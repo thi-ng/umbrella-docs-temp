@@ -9,7 +9,7 @@ Wrap behaviors (currently unused)
 <b>Signature:</b>
 
 ```typescript
-export declare const enum Wrap 
+export declare enum Wrap 
 ```
 
 ## Enumeration Members

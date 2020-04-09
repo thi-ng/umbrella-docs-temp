@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-tx?: ViewTransform<T>;
+tx?: Fn<A, B>;
 ```

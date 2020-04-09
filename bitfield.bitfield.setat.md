@@ -4,7 +4,7 @@
 
 ## BitField.setAt() method
 
-Enables or disables bit `n`<!-- -->. Returns a non-zero value if the bit was previously enabled. No bounds checking. .
+Enables or disables bit `n`<!-- -->. Returns a non-zero value if the bit was previously enabled. No bounds checking.
 
 <b>Signature:</b>
 

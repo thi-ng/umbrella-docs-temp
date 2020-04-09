@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-bitOr: (n: number, a: number, b: number) => number
+bitOr: (a: number, b: number) => number
 ```

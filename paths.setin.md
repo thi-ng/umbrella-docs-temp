@@ -2,27 +2,42 @@
 
 [Home](./index.md) &gt; [@thi.ng/paths](./paths.md) &gt; [setIn](./paths.setin.md)
 
-## setIn variable
+## setIn() function
 
-Immediate use setter, i.e. same as: `setter(path)(state, val)`<!-- -->.
+Type checked, immediate use setter, i.e. same as: `defSetterUnsafe(path)(state, val)`<!-- -->.
 
 <b>Signature:</b>
 
 ```typescript
-setIn: (state: any, path: Path, val: any) => any
+export declare function setIn<T>(state: T, path: Path0, val: T): T;
 ```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  state | <code>T</code> |  |
+|  path | <code>Path0</code> |  |
+|  val | <code>T</code> |  |
+
+<b>Returns:</b>
+
+`T`
 
 ## Remarks
 
-Supports type checked paths and values for path lengths &lt;<!-- -->= 8. String paths are always unchecked (i.e. `state` is `any`<!-- -->).
+Only the first 8 path levels are type checked.
 
 ## Example
 
 
 ```ts
+// type checked path & value
+setIn({ a: { b: { c: 23 } } }, ["a", "b", "c"], 24);
+// { a: { b: { c: 24 } } }
 
-setIn({}, "a.b.c", 23);
-// { a: { b: { c: 23} } }
+// error (wrong value type)
+setIn({ a: { b: { c: 23 } } }, ["a", "b", "c"], "24");
 
 ```
 

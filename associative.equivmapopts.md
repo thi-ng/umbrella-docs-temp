@@ -14,5 +14,5 @@ export interface EquivMapOpts<K> extends EquivSetOpts<K>
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [keys](./associative.equivmapopts.keys.md) | <code>EquivSetConstructor&lt;K&gt;</code> |  |
+|  [keys](./associative.equivmapopts.keys.md) | <code>EquivSetConstructor&lt;K&gt;</code> | Underlying [IEquivSet](./associative.iequivset.md) implementation for storing the unique keys of the map. |
 

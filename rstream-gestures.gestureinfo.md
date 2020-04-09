@@ -4,8 +4,6 @@
 
 ## GestureInfo interface
 
-Reverse lookup for [GestureType](./rstream-gestures.gesturetype.md) enums
-
 <b>Signature:</b>
 
 ```typescript
@@ -16,10 +14,9 @@ export interface GestureInfo
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [buttons](./rstream-gestures.gestureinfo.buttons.md) | <code>number</code> |  |
-|  [click](./rstream-gestures.gestureinfo.click.md) | <code>number[]</code> |  |
-|  [delta](./rstream-gestures.gestureinfo.delta.md) | <code>number[]</code> |  |
-|  [pos](./rstream-gestures.gestureinfo.pos.md) | <code>number[]</code> |  |
-|  [zoom](./rstream-gestures.gestureinfo.zoom.md) | <code>number</code> |  |
-|  [zoomDelta](./rstream-gestures.gestureinfo.zoomdelta.md) | <code>number</code> |  |
+|  [delta](./rstream-gestures.gestureinfo.delta.md) | <code>number[]</code> | Difference vector between from <code>start</code> to <code>pos</code>. |
+|  [force](./rstream-gestures.gestureinfo.force.md) | <code>number</code> | Optional current force/pressure details. Only available for touch gestures and if hardware supports it. Default value is hardware specific too, usually 0 or 1. |
+|  [id](./rstream-gestures.gestureinfo.id.md) | <code>number</code> | Touch/cursor ID. For mouse cursors this always is zero. |
+|  [pos](./rstream-gestures.gestureinfo.pos.md) | <code>number[]</code> | Current cursor position (as per [GestureStreamOpts.local](./rstream-gestures.gesturestreamopts.local.md) &amp; [GestureStreamOpts.scale](./rstream-gestures.gesturestreamopts.scale.md)<!-- -->) |
+|  [start](./rstream-gestures.gestureinfo.start.md) | <code>number[]</code> | Initial start position of this cursor. |
 

@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export interface ShaderToyOpts 
+export interface ShaderToyOpts<U extends ShaderToyUniforms> 
 ```
 
 ## Properties
@@ -16,7 +16,7 @@ export interface ShaderToyOpts
 |  --- | --- | --- |
 |  [canvas](./webgl-shadertoy.shadertoyopts.canvas.md) | <code>HTMLCanvasElement</code> |  |
 |  [gl](./webgl-shadertoy.shadertoyopts.gl.md) | <code>WebGLRenderingContext</code> |  |
-|  [main](./webgl-shadertoy.shadertoyopts.main.md) | <code>MainImageFn</code> | Main user shader function |
+|  [main](./webgl-shadertoy.shadertoyopts.main.md) | <code>MainImageFn&lt;U&gt;</code> | Main user shader function |
 |  [textures](./webgl-shadertoy.shadertoyopts.textures.md) | <code>ITexture[]</code> | Optional textures to bind |
-|  [uniforms](./webgl-shadertoy.shadertoyopts.uniforms.md) | <code>ShaderUniformSpecs</code> | Optional additional uniforms |
+|  [uniforms](./webgl-shadertoy.shadertoyopts.uniforms.md) | <code>Partial&lt;Record&lt;keyof U, UniformDecl&gt;&gt;</code> | Optional additional uniforms |
 

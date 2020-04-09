@@ -7,14 +7,14 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function transduce<A, B, C>(tx: Transducer<A, B>, rfn: Reducer<C, B>, acc: C, xs: IReducible<C, A>): C;
+export declare function transduce<A, B, C>(tx: TxLike<A, B>, rfn: Reducer<C, B>, acc: C, xs: IReducible<C, A>): C;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  tx | <code>Transducer&lt;A, B&gt;</code> |  |
+|  tx | <code>TxLike&lt;A, B&gt;</code> |  |
 |  rfn | <code>Reducer&lt;C, B&gt;</code> |  |
 |  acc | <code>C</code> |  |
 |  xs | <code>IReducible&lt;C, A&gt;</code> |  |

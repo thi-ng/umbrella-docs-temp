@@ -7,14 +7,14 @@
 <b>Signature:</b>
 
 ```typescript
-recompile(main: MainImageFn): void;
+recompile(main: MainImageFn<U>): void;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  main | <code>MainImageFn</code> |  |
+|  main | <code>MainImageFn&lt;U&gt;</code> |  |
 
 <b>Returns:</b>
 

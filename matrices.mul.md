@@ -4,7 +4,7 @@
 
 ## mul variable
 
-Componentwise matrix addition. Use [mulM](./matrices.mulm.md) for actual matrix-matrix multiplication. If `out` is not given, writes result in `a`<!-- -->.
+Componentwise matrix multiplication. Use [mulM](./matrices.mulm.md) or [concat](./matrices.concat.md) for actual matrix-matrix multiplication/concatenation. If `out` is not given, writes result in `a`<!-- -->. Both input matrices MUST be of same size.
 
 out = a \* b
 

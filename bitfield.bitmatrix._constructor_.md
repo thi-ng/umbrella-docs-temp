@@ -9,13 +9,13 @@ Constructs a new instance of the `BitMatrix` class
 <b>Signature:</b>
 
 ```typescript
-constructor(m: number, n?: number);
+constructor(rows: number, cols?: number);
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  m | <code>number</code> |  |
-|  n | <code>number</code> |  |
+|  rows | <code>number</code> |  |
+|  cols | <code>number</code> |  |
 

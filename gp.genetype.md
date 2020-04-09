@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare const enum GeneType 
+export declare enum GeneType 
 ```
 
 ## Enumeration Members

@@ -10,51 +10,84 @@
 |  --- | --- |
 |  [align](./binary.align.md) | Aligns <code>addr</code> to next multiple of <code>size</code>. The latter must be a power of 2. |
 |  [bitAnd](./binary.bitand.md) |  |
+|  [bitAndM](./binary.bitandm.md) |  |
 |  [bitAoi21](./binary.bitaoi21.md) |  |
+|  [bitAoi21M](./binary.bitaoi21m.md) |  |
 |  [bitAoi22](./binary.bitaoi22.md) |  |
+|  [bitAoi22M](./binary.bitaoi22m.md) |  |
 |  [bitClear](./binary.bitclear.md) | Clears bit in given uint <code>x</code>. |
 |  [bitClearWindow](./binary.bitclearwindow.md) |  |
 |  [bitDemux](./binary.bitdemux.md) |  |
+|  [bitDemuxM](./binary.bitdemuxm.md) |  |
 |  [bitFlip](./binary.bitflip.md) | Toggles bit in given uint <code>x</code>. |
 |  [bitImply](./binary.bitimply.md) |  |
+|  [bitImplyM](./binary.bitimplym.md) |  |
 |  [bitMux](./binary.bitmux.md) |  |
+|  [bitMuxM](./binary.bitmuxm.md) |  |
 |  [bitNand](./binary.bitnand.md) |  |
+|  [bitNandM](./binary.bitnandm.md) |  |
 |  [bitNor](./binary.bitnor.md) |  |
+|  [bitNorM](./binary.bitnorm.md) |  |
 |  [bitNot](./binary.bitnot.md) |  |
+|  [bitNotM](./binary.bitnotm.md) |  |
 |  [bitOai21](./binary.bitoai21.md) |  |
+|  [bitOai21M](./binary.bitoai21m.md) |  |
 |  [bitOai22](./binary.bitoai22.md) |  |
+|  [bitOai22M](./binary.bitoai22m.md) |  |
 |  [bitOr](./binary.bitor.md) |  |
+|  [bitOrM](./binary.bitorm.md) |  |
 |  [bitSet](./binary.bitset.md) | Sets bit in given uint <code>x</code>. |
 |  [bitSetWindow](./binary.bitsetwindow.md) |  |
-|  [bitSize](./binary.bitsize.md) | Returns the number of bits required to encode <code>x</code> (MUST be &gt; 0). |
+|  [bitSize](./binary.bitsize.md) | Returns the number of bits required to encode <code>x</code>. Returns zero if <code>x</code> &lt;<!-- -->= 1. |
 |  [bitXnor](./binary.bitxnor.md) |  |
+|  [bitXnorM](./binary.bitxnorm.md) |  |
 |  [bitXor](./binary.bitxor.md) |  |
+|  [bitXorM](./binary.bitxorm.md) |  |
+|  [bytes16](./binary.bytes16.md) |  |
+|  [bytes24](./binary.bytes24.md) |  |
+|  [bytes32](./binary.bytes32.md) |  |
+|  [bytes64](./binary.bytes64.md) |  |
+|  [bytesF32](./binary.bytesf32.md) |  |
+|  [bytesF64](./binary.bytesf64.md) |  |
 |  [ceilPow2](./binary.ceilpow2.md) |  |
 |  [clz32](./binary.clz32.md) | Math.clz32() polyfill (corrected).[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Math/clz32$revision/1426816](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/clz32$revision/1426816) |
 |  [ctz32](./binary.ctz32.md) |  |
 |  [decodeGray32](./binary.decodegray32.md) | Converts 32bit Gray code to binary / unsigned int.[https://en.wikipedia.org/wiki/Gray\_code](https://en.wikipedia.org/wiki/Gray_code) |
 |  [defMask](./binary.defmask.md) | Creates bit mask by enabling bit <code>a</code> to bit <code>b-1</code>, both in range 0-32. <code>b</code> MUST be &gt;<!-- -->= <code>a</code>. |
 |  [encodeGray32](./binary.encodegray32.md) | Converts 32bit unsigned int to Gray code (reflected binary). Gray codes of successive values always have a Hamming distance of 1 (i.e. only 1 bit changes at a time).[https://en.wikipedia.org/wiki/Gray\_code](https://en.wikipedia.org/wiki/Gray_code) |
-|  [flipBytes](./binary.flipbytes.md) | Same as <code>swizzle8(x, 3, 2, 1, 0)</code>, but faster. |
+|  [f32u16](./binary.f32u16.md) | Converts normalized float (\[-1..1\] range) to u16. |
+|  [f32u24](./binary.f32u24.md) | Converts normalized float (\[-1..1\] range) to u24. |
+|  [f32u32](./binary.f32u32.md) | Converts normalized float (\[-1..1\] range) to u32. |
+|  [f32u8](./binary.f32u8.md) | Converts normalized float (\[-1..1\] range) to u8. |
+|  [flip16](./binary.flip16.md) | Swaps the highest &amp; lowest 16 bits in <code>x</code>. |
+|  [flip8](./binary.flip8.md) | Same as <code>swizzle8(x, 3, 2, 1, 0)</code>, but faster. |
+|  [flipBytes](./binary.flipbytes.md) |  |
 |  [floatToIntBits](./binary.floattointbits.md) |  |
-|  [floatToSortableInt](./binary.floattosortableint.md) | Converts given float into a sortable integer representation, using raw bitwise conversion via [floatToIntBits](./binary.floattointbits.md)<!-- -->.[https://github.com/tzaeschke/phtree/blob/master/PhTreeRevisited.pdf](https://github.com/tzaeschke/phtree/blob/master/PhTreeRevisited.pdf) (page 3) |
+|  [floatToIntBits64](./binary.floattointbits64.md) | Returns i32 representation of f64 as \[hi, lo\] tuple (takes environment's Little Endianess into account). |
+|  [floatToSortableInt](./binary.floattosortableint.md) | Converts given float (f32) into a sortable integer representation, using raw bitwise conversion via [floatToIntBits](./binary.floattointbits.md)<!-- -->.[https://github.com/tzaeschke/phtree/blob/master/PhTreeRevisited.pdf](https://github.com/tzaeschke/phtree/blob/master/PhTreeRevisited.pdf) (page 3) |
 |  [floatToUintBits](./binary.floattouintbits.md) |  |
+|  [floatToUintBits64](./binary.floattouintbits64.md) | Returns u32 representation of f64 as \[hi, lo\] tuple (takes environment's Little Endianess into account). |
 |  [floorPow2](./binary.floorpow2.md) |  |
 |  [hammingDist](./binary.hammingdist.md) | Returns number of bit changes between <code>x</code> and <code>y</code>.[https://en.wikipedia.org/wiki/Hamming\_distance](https://en.wikipedia.org/wiki/Hamming_distance) |
 |  [intBitsToFloat](./binary.intbitstofloat.md) |  |
+|  [intBitsToFloat64](./binary.intbitstofloat64.md) | Reverse op of [floatToIntBits64](./binary.floattointbits64.md)<!-- -->. |
+|  [IS\_LE](./binary.is_le.md) | This value is true iff the environment is Little Endian. |
 |  [isAligned](./binary.isaligned.md) | Returns true if <code>addr</code> is aligned to wordsize <code>size</code>. |
 |  [isPow2](./binary.ispow2.md) |  |
+|  [lane16](./binary.lane16.md) | Extracts 16-bit lane from given 32bit uint and returns as unsigned half word \[0x0000 .. 0xffff\].<!-- -->- Lane \#0: bits 16-31 - Lane \#1: bits 0-15 |
 |  [lane2](./binary.lane2.md) |  |
-|  [lane4](./binary.lane4.md) | Extracts 4-bit lane from given 32bit uint.<!-- -->- Lane \#0: bits 28-31 - Lane \#1: bits 24-27 - Lane \#2: bits 20-23 - Lane \#3: bits 16-19 - Lane \#4: bits 12-15 - Lane \#5: bits 8-11 - Lane \#6: bits 4-7 - Lane \#7: bits 0-3 |
-|  [lane8](./binary.lane8.md) | Extracts 8-bit lane from given 32bit uint.<!-- -->- Lane \#0: bits 24-31 - Lane \#1: bits 16-23 - Lane \#2: bits 8-15 - Lane \#3: bits 0-7 |
+|  [lane4](./binary.lane4.md) | Extracts 4-bit lane from given 32bit uint and returns as unsigned nibble \[0x00 .. 0x0f\].<!-- -->- Lane \#0: bits 28-31 - Lane \#1: bits 24-27 - Lane \#2: bits 20-23 - Lane \#3: bits 16-19 - Lane \#4: bits 12-15 - Lane \#5: bits 8-11 - Lane \#6: bits 4-7 - Lane \#7: bits 0-3 |
+|  [lane8](./binary.lane8.md) | Extracts 8-bit lane from given 32bit uint and returns as unsigned byte \[0x00 .. 0xff\].<!-- -->- Lane \#0: bits 24-31 - Lane \#1: bits 16-23 - Lane \#2: bits 8-15 - Lane \#3: bits 0-7 |
 |  [maskH](./binary.maskh.md) | Returns unsigned version of <code>x</code> with only highest <code>n</code> bits. |
 |  [maskL](./binary.maskl.md) | Returns unsigned version of <code>x</code> with only lowest <code>n</code> bits. |
 |  [MASKS](./binary.masks.md) |  |
+|  [mux](./binary.mux.md) | Merges bits of <code>a</code> and <code>b</code>, selecting bits from <code>b</code> where <code>mask</code> bits are set. |
 |  [popCount](./binary.popcount.md) | Returns number of 1 bits in <code>x</code>. |
 |  [rotateLeft](./binary.rotateleft.md) | Rotates <code>x</code> <code>n</code> bits to the left. |
 |  [rotateRight](./binary.rotateright.md) | Rotates <code>x</code> <code>n</code> bits to the right. |
 |  [same4](./binary.same4.md) | Returns true if bits 0-3 are same as bits 4-7. |
 |  [same8](./binary.same8.md) | Returns true if bits 0-7 are same as bits 8-15. |
+|  [setLane16](./binary.setlane16.md) |  |
 |  [setLane2](./binary.setlane2.md) | Sets 2-bit <code>lane</code> with value <code>y</code> in <code>x</code>.[lane2](./binary.lane2.md) |
 |  [setLane4](./binary.setlane4.md) | Sets 4-bit <code>lane</code> with value <code>y</code> in <code>x</code>.[lane4](./binary.lane4.md) |
 |  [setLane8](./binary.setlane8.md) | Sets 8-bit <code>lane</code> with value<code>y</code> in <code>x</code>.[lane8](./binary.lane8.md) |
@@ -65,13 +98,19 @@
 |  [splat8\_32](./binary.splat8_32.md) | Repeats lowest byte of <code>x</code> as 32 bit uint. |
 |  [swizzle4](./binary.swizzle4.md) |  |
 |  [swizzle8](./binary.swizzle8.md) | Re-orders byte lanes in given order (MSB). |
+|  [u16f32](./binary.u16f32.md) | Reverse op of [f32u16](./binary.f32u16.md)<!-- -->. |
+|  [u24f32](./binary.u24f32.md) | Reverse op of [f32u24](./binary.f32u24.md)<!-- -->. |
+|  [u32f32](./binary.u32f32.md) | Reverse op of [f32u32](./binary.f32u32.md)<!-- -->. |
+|  [u8f32](./binary.u8f32.md) | Reverse op of [f32u8](./binary.f32u8.md)<!-- -->. |
 |  [uintBitsToFloat](./binary.uintbitstofloat.md) |  |
+|  [uintBitsToFloat64](./binary.uintbitstofloat64.md) | Reverse op of [floatToUintBits64](./binary.floattouintbits64.md)<!-- -->. |
 
 ## Type Aliases
 
 |  Type Alias | Description |
 |  --- | --- |
 |  [Bit](./binary.bit.md) |  |
+|  [Lane16](./binary.lane16.md) |  |
 |  [Lane2](./binary.lane2.md) |  |
 |  [Lane4](./binary.lane4.md) |  |
 |  [Lane8](./binary.lane8.md) |  |

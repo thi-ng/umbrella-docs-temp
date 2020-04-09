@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-sin: (phase: number, freq: number, amp?: number, dc?: number) => number
+sin: StatelessOscillator
 ```

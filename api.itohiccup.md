@@ -14,5 +14,5 @@ export interface IToHiccup
 
 |  Method | Description |
 |  --- | --- |
-|  [toHiccup(ctx)](./api.itohiccup.tohiccup.md) | Returns a [@thi.ng/hiccup](./hiccup.md) compatible representation. The optional <code>ctx</code> arg is an arbitrary user context object passed to all hiccup components during serialization (or during DOM creation / update if used with [@thi.ng/hdom](./hdom.md)<!-- -->) |
+|  [toHiccup(ctx, attribs, xs)](./api.itohiccup.tohiccup.md) | Returns a [@thi.ng/hiccup](./hiccup.md) compatible representation. The optional <code>ctx</code> arg is an arbitrary user context object passed to all hiccup components during serialization (or during DOM creation / update if used with [@thi.ng/hdom](./hdom.md)<!-- -->) |
 

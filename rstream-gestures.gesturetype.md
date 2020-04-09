@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare const enum GestureType 
+export declare enum GestureType 
 ```
 
 ## Enumeration Members

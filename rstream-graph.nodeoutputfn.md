@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type NodeOutputFn = (node: ISubscribable<any>, id: PropertyKey) => ISubscribable<any>;
+export declare type NodeOutputFn = (node: ISubscribable<any>, id: NumOrString) => ISubscribable<any>;
 ```

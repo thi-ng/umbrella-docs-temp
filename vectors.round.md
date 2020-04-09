@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-round: MultiVecOpVO<number>
+round: import("./api").MultiVecOpImpl<VecOpVO<number>>
 ```

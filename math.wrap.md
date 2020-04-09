@@ -4,6 +4,8 @@
 
 ## wrap variable
 
+Folds `x` back inside closed \[min..max\] interval. Also see [wrapOnce](./math.wraponce.md)<!-- -->.
+
 <b>Signature:</b>
 
 ```typescript

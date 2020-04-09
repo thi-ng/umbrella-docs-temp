@@ -2,10 +2,10 @@
 
 [Home](./index.md) &gt; [@thi.ng/vectors](./vectors.md) &gt; [MultiCompareOp](./vectors.multicompareop.md)
 
-## MultiCompareOp interface
+## MultiCompareOp type
 
 <b>Signature:</b>
 
 ```typescript
-export interface MultiCompareOp extends CompareOp, MultiVecOp<CompareOp> 
+export declare type MultiCompareOp = MultiVecOpImpl<CompareOp>;
 ```

@@ -4,7 +4,7 @@
 
 ## Cursor class
 
-A cursor provides read/write access to a path location within a nested parent state (Atom or another Cursor).
+A cursor provides read/write access to a path location within a nested (Atom-like) parent state.
 
 <b>Signature:</b>
 
@@ -24,9 +24,7 @@ When using the optional validator predicate (also specified via config object to
 
 |  Constructor | Modifiers | Description |
 |  --- | --- | --- |
-|  [(constructor)(opts)](./atom.cursor._constructor_.md) |  | Constructs a new instance of the <code>Cursor</code> class |
-|  [(constructor)(parent, path)](./atom.cursor._constructor__1.md) |  | Constructs a new instance of the <code>Cursor</code> class |
-|  [(constructor)(parent, lookup, update)](./atom.cursor._constructor__2.md) |  | Constructs a new instance of the <code>Cursor</code> class |
+|  [(constructor)(parent, path, opts)](./atom.cursor._constructor_.md) |  | Constructs a new instance of the <code>Cursor</code> class |
 
 ## Properties
 
@@ -42,7 +40,6 @@ When using the optional validator predicate (also specified via config object to
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
-|  [addView(path, tx, lazy)](./atom.cursor.addview.md) |  |  |
 |  [addWatch(id, fn)](./atom.cursor.addwatch.md) |  |  |
 |  [deref()](./atom.cursor.deref.md) |  |  |
 |  [notifyWatches(oldState, newState)](./atom.cursor.notifywatches.md) |  |  |
@@ -50,6 +47,26 @@ When using the optional validator predicate (also specified via config object to
 |  [removeWatch(id)](./atom.cursor.removewatch.md) |  |  |
 |  [reset(val)](./atom.cursor.reset.md) |  |  |
 |  [resetIn(path, val)](./atom.cursor.resetin.md) |  |  |
+|  [resetIn(path, val)](./atom.cursor.resetin_9.md) |  |  |
+|  [resetIn(path, val)](./atom.cursor.resetin_1.md) |  |  |
+|  [resetIn(path, val)](./atom.cursor.resetin_2.md) |  |  |
+|  [resetIn(path, val)](./atom.cursor.resetin_3.md) |  |  |
+|  [resetIn(path, val)](./atom.cursor.resetin_4.md) |  |  |
+|  [resetIn(path, val)](./atom.cursor.resetin_5.md) |  |  |
+|  [resetIn(path, val)](./atom.cursor.resetin_6.md) |  |  |
+|  [resetIn(path, val)](./atom.cursor.resetin_7.md) |  |  |
+|  [resetIn(path, val)](./atom.cursor.resetin_8.md) |  |  |
+|  [resetInUnsafe(path, val)](./atom.cursor.resetinunsafe.md) |  |  |
 |  [swap(fn, args)](./atom.cursor.swap.md) |  |  |
 |  [swapIn(path, fn, args)](./atom.cursor.swapin.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.cursor.swapin_9.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.cursor.swapin_1.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.cursor.swapin_2.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.cursor.swapin_3.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.cursor.swapin_4.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.cursor.swapin_5.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.cursor.swapin_6.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.cursor.swapin_7.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.cursor.swapin_8.md) |  |  |
+|  [swapInUnsafe(path, fn, args)](./atom.cursor.swapinunsafe.md) |  |  |
 

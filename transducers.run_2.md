@@ -7,14 +7,14 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function run<A, B>(tx: Transducer<A, B>, fx: Fn<B, void>, xs: Iterable<A>): void;
+export declare function run<A, B>(tx: TxLike<A, B>, fx: Fn<B, void>, xs: Iterable<A>): void;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  tx | <code>Transducer&lt;A, B&gt;</code> |  |
+|  tx | <code>TxLike&lt;A, B&gt;</code> |  |
 |  fx | <code>Fn&lt;B, void&gt;</code> |  |
 |  xs | <code>Iterable&lt;A&gt;</code> |  |
 

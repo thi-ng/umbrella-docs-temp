@@ -4,7 +4,7 @@
 
 ## roundEps variable
 
-Only rounds `x` to nearest int if `fract(x)` &lt; `eps` or &gt; `1-eps`<!-- -->.
+Only rounds `x` to nearest int if `fract(x)` &lt;<!-- -->= `eps` or &gt;<!-- -->= `1-eps`<!-- -->.
 
 <b>Signature:</b>
 

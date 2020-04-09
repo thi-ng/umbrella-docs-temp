@@ -23,6 +23,10 @@
 |  [intersectRayRect](./geom-isec.intersectrayrect.md) |  |
 |  [isParallelLine](./geom-isec.isparallelline.md) | 2D only. Returns true if line <code>a</code>,<code>b</code> is parallel (or coincident) to line <code>c</code>,<code>d</code>. |
 |  [pointInAABB](./geom-isec.pointinaabb.md) |  |
+|  [pointInBox](./geom-isec.pointinbox.md) |  |
+|  [pointInCenteredAABB](./geom-isec.pointincenteredaabb.md) |  |
+|  [pointInCenteredBox](./geom-isec.pointincenteredbox.md) |  |
+|  [pointInCenteredRect](./geom-isec.pointincenteredrect.md) |  |
 |  [pointInCircle](./geom-isec.pointincircle.md) |  |
 |  [pointInCircumCircle](./geom-isec.pointincircumcircle.md) |  |
 |  [pointInPolygon2](./geom-isec.pointinpolygon2.md) |  |
@@ -31,10 +35,14 @@
 |  [pointInSphere](./geom-isec.pointinsphere.md) |  |
 |  [pointInTriangle2](./geom-isec.pointintriangle2.md) |  |
 |  [testAabbAabb](./geom-isec.testaabbaabb.md) |  |
-|  [testAABBSphere](./geom-isec.testaabbsphere.md) |  |
+|  [testAABBSphere](./geom-isec.testaabbsphere.md) | Same as [testRectCircle](./geom-isec.testrectcircle.md)<!-- -->, but for 3D AABB and sphere. |
+|  [testBoxSphere](./geom-isec.testboxsphere.md) |  |
+|  [testCenteredAABBSphere](./geom-isec.testcenteredaabbsphere.md) | Similar to [testAABBSphere](./geom-isec.testaabbsphere.md)<!-- -->, but for AABBs defined by centroid and radius-like extent. |
+|  [testCenteredBoxSphere](./geom-isec.testcenteredboxsphere.md) | Like [testCenteredAABBSphere](./geom-isec.testcenteredaabbsphere.md)<!-- -->, but for arbitrary dimensions w/ optimized execution for 2D &amp; 3D cases. |
+|  [testCenteredRectCircle](./geom-isec.testcenteredrectcircle.md) | Similar to [testRectCircle](./geom-isec.testrectcircle.md)<!-- -->, but for rects defined by centroid and radius-like extent. |
 |  [testCircleCircle](./geom-isec.testcirclecircle.md) |  |
 |  [testRayAABB](./geom-isec.testrayaabb.md) |  |
 |  [testRayRect](./geom-isec.testrayrect.md) |  |
-|  [testRectCircle](./geom-isec.testrectcircle.md) |  |
+|  [testRectCircle](./geom-isec.testrectcircle.md) | Returns true if given 2D rect defined by <code>boxMinPos</code> and <code>boxSize</code> intersects circle. |
 |  [testRectRect](./geom-isec.testrectrect.md) |  |
 

@@ -34,6 +34,7 @@ export declare class Group<SPEC, K extends ComponentID<SPEC>> implements IID<str
 |  --- | --- | --- |
 |  [addExisting()](./ecs.group.addexisting.md) |  |  |
 |  [addID(id, validate)](./ecs.group.addid.md) |  |  |
+|  [addRemoveListeners(add)](./ecs.group.addremovelisteners.md) |  |  |
 |  [ensureFullyOwning()](./ecs.group.ensurefullyowning.md) |  |  |
 |  [forEach(fn, xs)](./ecs.group.foreach.md) |  |  |
 |  [forEachRaw(fn, xs)](./ecs.group.foreachraw.md) |  |  |

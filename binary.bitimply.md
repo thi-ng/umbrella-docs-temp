@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-bitImply: (n: number, a: number, b: number) => number
+bitImply: (a: number, b: number) => number
 ```

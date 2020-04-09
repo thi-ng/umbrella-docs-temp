@@ -4,6 +4,8 @@
 
 ## EquivMapOpts.keys property
 
+Underlying [IEquivSet](./associative.iequivset.md) implementation for storing the unique keys of the map.
+
 <b>Signature:</b>
 
 ```typescript

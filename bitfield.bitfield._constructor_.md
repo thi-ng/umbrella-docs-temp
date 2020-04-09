@@ -9,12 +9,12 @@ Constructs a new instance of the `BitField` class
 <b>Signature:</b>
 
 ```typescript
-constructor(n: number);
+constructor(bits: number | string | ArrayLike<boolean>);
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  n | <code>number</code> |  |
+|  bits | <code>number &#124; string &#124; ArrayLike&lt;boolean&gt;</code> |  |
 

@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-validate?: Predicate<T>;
+validate: Predicate<T>;
 ```

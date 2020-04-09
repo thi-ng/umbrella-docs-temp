@@ -4,6 +4,8 @@
 
 ## wrap11 variable
 
+Similar to [wrapOnce](./math.wraponce.md) for \[-1..1\] interval.
+
 <b>Signature:</b>
 
 ```typescript

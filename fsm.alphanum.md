@@ -9,5 +9,5 @@ Combination of [digit](./fsm.digit.md) and [alpha](./fsm.alpha.md)<!-- -->.
 <b>Signature:</b>
 
 ```typescript
-alphaNum: <C, R>(success?: AltCallback<string, C, R> | undefined, fail?: import("./api").SeqCallback<string, C, R> | undefined) => Matcher<string, C, R>
+alphaNum: <C, R>(success?: LitCallback<string, C, R> | undefined, fail?: LitCallback<string, C, R> | undefined) => Matcher<string, C, R>
 ```

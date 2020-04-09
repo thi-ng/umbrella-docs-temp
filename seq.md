@@ -17,8 +17,10 @@
 |  [aseq](./seq.aseq.md) | Returns a zero-copy [ISeq](./api.iseq.md) for the given array and optionally for defined index range only. |
 |  [concat](./seq.concat.md) | Returns the concatenation sequence of given nullable  or [ISeqable](./api.iseqable.md) values. |
 |  [concatA](./seq.concata.md) | Same as [concat](./seq.concat.md)<!-- -->, but optimized for nullable arraylike values. |
+|  [cons](./seq.cons.md) | Returns a new <code>ISeq</code> with <code>head</code> prepended to (optional) <code>seq</code>. |
 |  [ensureSeq](./seq.ensureseq.md) |  |
 |  [isSeq](./seq.isseq.md) |  |
 |  [isSeqable](./seq.isseqable.md) |  |
+|  [lazyseq](./seq.lazyseq.md) | Returns a new lazily evaluated <code>ISeq</code> produced by given function <code>fn</code>, which is only realized when values are requested. The function is only called once (if at all) and its result cached. |
 |  [rseq](./seq.rseq.md) | Similar to [aseq](./seq.aseq.md)<!-- -->, returns a zero-copy [ISeq](./api.iseq.md) for the given array, though in reverse order and optionally for defined index range only. |
 

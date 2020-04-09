@@ -4,6 +4,8 @@
 
 ## TextureOpts.mipmap property
 
+True, if mipmaps should be generated.
+
 <b>Signature:</b>
 
 ```typescript

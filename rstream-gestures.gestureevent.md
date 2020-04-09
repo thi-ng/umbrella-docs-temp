@@ -14,6 +14,12 @@ export interface GestureEvent
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  ["0"](./rstream-gestures.gestureevent._0_.md) | <code>GestureType</code> |  |
-|  ["1"](./rstream-gestures.gestureevent._1_.md) | <code>GestureInfo</code> |  |
+|  [active](./rstream-gestures.gestureevent.active.md) | <code>GestureInfo[]</code> | Active cursors (i.e. ongoing drag / touch gestures) |
+|  [buttons](./rstream-gestures.gestureevent.buttons.md) | <code>number</code> | Mouse button bitmask (same as in standard <code>MouseEvent</code>), or, if <code>isTouch</code> is true, number of <code>active</code> touches. |
+|  [event](./rstream-gestures.gestureevent.event.md) | <code>UIEvent</code> | Original DOM event. |
+|  [isTouch](./rstream-gestures.gestureevent.istouch.md) | <code>boolean</code> | True, if original event was a <code>TouchEvent</code>. |
+|  [pos](./rstream-gestures.gestureevent.pos.md) | <code>number[]</code> | Event position (as per [GestureStreamOpts.local](./rstream-gestures.gesturestreamopts.local.md) &amp; [GestureStreamOpts.scale](./rstream-gestures.gesturestreamopts.scale.md)<!-- -->) |
+|  [type](./rstream-gestures.gestureevent.type.md) | <code>GestureType</code> | Current translated/abstracted event type. |
+|  [zoom](./rstream-gestures.gestureevent.zoom.md) | <code>number</code> | Current zoom factor (as per [GestureStreamOpts](./rstream-gestures.gesturestreamopts.md) config) |
+|  [zoomDelta](./rstream-gestures.gestureevent.zoomdelta.md) | <code>number</code> | Last <code>WheelEvent</code>'s transformed <code>deltaY</code>, <code>wheelDeltaY</code> |
 

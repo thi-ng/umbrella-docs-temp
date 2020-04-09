@@ -4,10 +4,12 @@
 
 ## Tuple type
 
+Defines a fixed sized, iterable tuple with elements of type `T` and length `N`<!-- -->.
+
 <b>Signature:</b>
 
 ```typescript
 export declare type Tuple<T, N extends number> = [T, ...T[]] & {
     length: N;
-};
+} & Iterable<T>;
 ```

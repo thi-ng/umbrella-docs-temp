@@ -4,7 +4,7 @@
 
 ## lane8 variable
 
-Extracts 8-bit lane from given 32bit uint.
+Extracts 8-bit lane from given 32bit uint and returns as unsigned byte \[0x00 .. 0xff\].
 
 - Lane \#0: bits 24-31 - Lane \#1: bits 16-23 - Lane \#2: bits 8-15 - Lane \#3: bits 0-7
 

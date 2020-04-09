@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare const enum DraftVersion 
+export declare enum DraftVersion 
 ```
 
 ## Enumeration Members

@@ -7,14 +7,14 @@
 <b>Signature:</b>
 
 ```typescript
-next(x: A): void;
+next(x: T): void;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  x | <code>A</code> |  |
+|  x | <code>T</code> |  |
 
 <b>Returns:</b>
 

@@ -4,7 +4,10 @@
 
 ## flipBytes variable
 
-Same as `swizzle8(x, 3, 2, 1, 0)`<!-- -->, but faster.
+> Warning: This API is now obsolete.
+> 
+> renamed to [flip8](./binary.flip8.md)
+> 
 
 <b>Signature:</b>
 

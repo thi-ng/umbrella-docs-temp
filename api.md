@@ -35,6 +35,7 @@
 |  [IAssocIn](./api.iassocin.md) |  |
 |  [IBind](./api.ibind.md) | Generic resource binding methods. |
 |  [IBuffered](./api.ibuffered.md) | Generic interface for types with binary backing buffers. |
+|  [IClear](./api.iclear.md) | Interface for mutable types supporting internal cleanup (e.g. removing all values in a container etc.). |
 |  [ICompare](./api.icompare.md) | Generic interface to compare value types. |
 |  [IContains](./api.icontains.md) | Generic interface for collection types to check if a given value is part of the collection. |
 |  [ICopy](./api.icopy.md) | Generic interface for clonable types. |
@@ -57,12 +58,14 @@
 |  [INotify](./api.inotify.md) | Interface to provide event emitter functionality. Also see [INotifyMixin](./api.inotifymixin.md) decorator mixin. |
 |  [IObjectOf](./api.iobjectof.md) | Generic plain object with all key values of given type. |
 |  [IRelease](./api.irelease.md) | Interface for types supported the release of internal resources. |
+|  [IReset](./api.ireset.md) | Interface for types supporting some form of internal state reset. |
 |  [ISeq](./api.iseq.md) | Lisp-like sequence abstraction for arbitrary types using <code>first</code> &amp; <code>next</code> operations only. |
 |  [ISeqable](./api.iseqable.md) | Interface for data types providing an [ISeq](./api.iseq.md) abstraction. |
 |  [ISet](./api.iset.md) | Generic interface for set collection types. |
 |  [IStack](./api.istack.md) | Generic interface for collections implementing stack functionality. |
 |  [IToHiccup](./api.itohiccup.md) |  |
 |  [IWatch](./api.iwatch.md) | Interface for types offering observers of internal value changes. Also see <code>@IWatch</code> decorator mixin. |
+|  [RangeValueMap](./api.rangevaluemap.md) | Type LUT of allowed range values <code>[0..n)</code> for given range size <code>n</code>. |
 |  [TypedArrayTypeMap](./api.typedarraytypemap.md) |  |
 
 ## Variables
@@ -73,7 +76,7 @@
 |  [configurable](./api.configurable.md) | Property decorator factory. Sets <code>configurable</code> flag of PropertyDescriptor to given state. |
 |  [DEFAULT\_EPS](./api.default_eps.md) |  |
 |  [deprecated](./api.deprecated.md) | Method property decorator factory. Augments original method with deprecation message (via console), shown when method is invoked. Accepts optional message arg. Throws error if assigned property is not a function. |
-|  [EVENT\_ALL](./api.event_all.md) |  |
+|  [EVENT\_ALL](./api.event_all.md) | Catch-all event ID |
 |  [EVENT\_DISABLE](./api.event_disable.md) |  |
 |  [EVENT\_ENABLE](./api.event_enable.md) |  |
 |  [exposeGlobal](./api.exposeglobal.md) | Exposes given <code>value</code> as <code>id</code> in global scope, iff <code>always = true</code> (default: false) or if <code>process.env.NODE_ENV != &quot;production&quot;</code> or if the <code>UMBRELLA_GLOBALS</code> env var is set to 1. |
@@ -99,7 +102,11 @@
 |  Type Alias | Description |
 |  --- | --- |
 |  [ArrayLikeIterable](./api.arraylikeiterable.md) |  |
+|  [ButLast](./api.butlast.md) | Extracts everything except the last element from a tuple. |
 |  [Comparator](./api.comparator.md) | Generic 2-element comparator function type alias. |
+|  [DeepPath](./api.deeppath.md) | Semi-typechecked lookup path (depth &gt; 8). Only the first 8 levels are checked. |
+|  [Derefed](./api.derefed.md) | If <code>T</code> is a [IDeref](./api.ideref.md)<!-- -->, returns its value type or else <code>T</code>. |
+|  [DerefedKeys](./api.derefedkeys.md) | Constructs a type with a set of properties <code>K</code> of type <code>T</code> and attempts to resolve each given key via [Derefed](./api.derefed.md)<!-- -->. |
 |  [FloatArray](./api.floatarray.md) |  |
 |  [FloatType](./api.floattype.md) |  |
 |  [Fn](./api.fn.md) | A single arg function from A to B. |
@@ -125,9 +132,12 @@
 |  [FnO7](./api.fno7.md) |  |
 |  [FnO8](./api.fno8.md) |  |
 |  [FnO9](./api.fno9.md) |  |
+|  [Head](./api.head.md) | Extracts the first element of a tuple. |
 |  [IntArray](./api.intarray.md) |  |
 |  [IntType](./api.inttype.md) |  |
-|  [IterableTuple](./api.iterabletuple.md) |  |
+|  [IsEmpty](./api.isempty.md) | Returns 1 if T is empty tuple, else 0 |
+|  [IsOpt](./api.isopt.md) | Returns true if <code>T</code> includes undefined. |
+|  [IsOptPath](./api.isoptpath.md) | Returns true if given path contains any intermediate properties declared as optional in type <code>T</code>.<!-- -->Reference: https://stackoverflow.com/q/60869412/294515 |
 |  [Keys](./api.keys.md) |  |
 |  [Keys1](./api.keys1.md) |  |
 |  [Keys2](./api.keys2.md) |  |
@@ -137,30 +147,54 @@
 |  [Keys6](./api.keys6.md) |  |
 |  [Keys7](./api.keys7.md) |  |
 |  [Keys8](./api.keys8.md) |  |
+|  [KeysN](./api.keysn.md) | Generalised version of Keys0 - Keys7. |
+|  [Last](./api.last.md) | Extracts the last element from a tuple. |
 |  [Listener](./api.listener.md) | Event listener. |
+|  [LogLevelName](./api.loglevelname.md) |  |
 |  [Nullable](./api.nullable.md) |  |
 |  [NumericArray](./api.numericarray.md) |  |
+|  [NumericKeys](./api.numerickeys.md) |  |
 |  [NumOrString](./api.numorstring.md) |  |
+|  [OptPathVal](./api.optpathval.md) | Similar to [PathVal](./api.pathval.md)<!-- -->, but also takes into account if given path contains any intermediate properties declared as optional in type <code>T</code>. If that's the case, returns union of <code>undefined</code> and inferred value for path, else just the latter.<!-- -->Context &amp; reference: https://stackoverflow.com/q/60869412/294515 |
+|  [OptVal](./api.optval.md) | Returns <code>RES</code> if <code>PRED</code> is <code>never</code>, else <code>RES &#124; undefined</code> |
 |  [Pair](./api.pair.md) | A key-value pair / tuple. |
-|  [Path](./api.path.md) | Lookup path for nested data structures. |
+|  [Path](./api.path.md) | Unchecked lookup path for nested data structures. |
+|  [Path0](./api.path0.md) | Empty lookup path. |
+|  [Path1](./api.path1.md) | Type checked lookup path (depth 1) |
+|  [Path2](./api.path2.md) | Type checked lookup path (depth 2) |
+|  [Path3](./api.path3.md) | Type checked lookup path (depth 3) |
+|  [Path4](./api.path4.md) | Type checked lookup path (depth 4) |
+|  [Path5](./api.path5.md) | Type checked lookup path (depth 5) |
+|  [Path6](./api.path6.md) | Type checked lookup path (depth 6) |
+|  [Path7](./api.path7.md) | Type checked lookup path (depth 7) |
+|  [Path8](./api.path8.md) | Type checked lookup path (depth 8) |
+|  [PathVal](./api.pathval.md) | Returns nested value type for given path into <code>T</code> or <code>never</code> if path is incompatible with <code>T</code>. |
 |  [Predicate](./api.predicate.md) | Predicate function mapping given value to true/false. |
 |  [Predicate2](./api.predicate2.md) | Predicate function mapping given args to true/false. |
+|  [Prepend](./api.prepend.md) | Adds an element at the start of an tuple. |
 |  [Primitive](./api.primitive.md) |  |
 |  [Range0\_1](./api.range0_1.md) |  |
 |  [Range0\_15](./api.range0_15.md) |  |
+|  [Range0\_23](./api.range0_23.md) |  |
 |  [Range0\_3](./api.range0_3.md) |  |
 |  [Range0\_31](./api.range0_31.md) |  |
+|  [Range0\_47](./api.range0_47.md) |  |
 |  [Range0\_63](./api.range0_63.md) |  |
 |  [Range0\_7](./api.range0_7.md) |  |
 |  [Range1\_16](./api.range1_16.md) |  |
 |  [Range1\_2](./api.range1_2.md) |  |
+|  [Range1\_24](./api.range1_24.md) |  |
 |  [Range1\_32](./api.range1_32.md) |  |
 |  [Range1\_4](./api.range1_4.md) |  |
+|  [Range1\_48](./api.range1_48.md) |  |
 |  [Range1\_64](./api.range1_64.md) |  |
 |  [Range1\_8](./api.range1_8.md) |  |
+|  [Range16\_23](./api.range16_23.md) |  |
 |  [Range16\_31](./api.range16_31.md) |  |
+|  [Range32\_47](./api.range32_47.md) |  |
 |  [Range32\_63](./api.range32_63.md) |  |
 |  [Range4\_7](./api.range4_7.md) |  |
+|  [Range48\_63](./api.range48_63.md) |  |
 |  [Range8\_15](./api.range8_15.md) |  |
 |  [Replace](./api.replace.md) | Utilities for replacing types of nested keys. |
 |  [Replace2](./api.replace2.md) |  |
@@ -170,14 +204,20 @@
 |  [Replace6](./api.replace6.md) |  |
 |  [Replace7](./api.replace7.md) |  |
 |  [Replace8](./api.replace8.md) |  |
+|  [ReplaceN](./api.replacen.md) | Generalised version of Replace0-Replace8. |
+|  [Reverse](./api.reverse.md) | Reverses the order of elements from a tuple. |
 |  [Select2](./api.select2.md) |  |
 |  [Select3](./api.select3.md) |  |
 |  [Select4](./api.select4.md) |  |
 |  [StatefulPredicate](./api.statefulpredicate.md) | Higher order [Predicate](./api.predicate.md) builder. Possibly stateful. |
 |  [StatefulPredicate2](./api.statefulpredicate2.md) | Higher order [Predicate2](./api.predicate2.md) builder. Possibly stateful. |
-|  [Tuple](./api.tuple.md) |  |
+|  [StringKeys](./api.stringkeys.md) |  |
+|  [Tail](./api.tail.md) | Extracts everything except the first element from a tuple. |
+|  [Tuple](./api.tuple.md) | Defines a fixed sized, iterable tuple with elements of type <code>T</code> and length <code>N</code>. |
+|  [TupleLength](./api.tuplelength.md) | Extracts a tuple's length / size. |
 |  [TypedArray](./api.typedarray.md) |  |
 |  [TypedArrayConstructor](./api.typedarrayconstructor.md) |  |
+|  [TypedKeys](./api.typedkeys.md) | Extracts from A all keys which have values assignable to type B. |
 |  [UIntArray](./api.uintarray.md) |  |
 |  [UintType](./api.uinttype.md) |  |
 |  [Val1](./api.val1.md) |  |
@@ -188,6 +228,7 @@
 |  [Val6](./api.val6.md) |  |
 |  [Val7](./api.val7.md) |  |
 |  [Val8](./api.val8.md) |  |
+|  [ValN](./api.valn.md) | Generalised version of Val1-Val7 |
 |  [Watch](./api.watch.md) | Observer function for [IWatch](./api.iwatch.md) implementations. |
 |  [Without](./api.without.md) | Utilities for constructing types with nested keys removed. |
 |  [Without2](./api.without2.md) |  |
@@ -197,4 +238,5 @@
 |  [Without6](./api.without6.md) |  |
 |  [Without7](./api.without7.md) |  |
 |  [Without8](./api.without8.md) |  |
+|  [WithoutN](./api.withoutn.md) | Generalised version of Without0-Without8. |
 

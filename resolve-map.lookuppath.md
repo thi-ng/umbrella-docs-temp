@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type LookupPath = PropertyKey[];
+export declare type LookupPath = NumOrString[];
 ```

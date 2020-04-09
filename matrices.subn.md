@@ -4,7 +4,7 @@
 
 ## subN variable
 
-Subtracts matrix componentwise with single scalar. If `out` is not given, writes result in `mat`<!-- -->.
+Componentwise scalar subtraction. If `out` is not given, writes result in `mat`<!-- -->.
 
 out = mat - n
 

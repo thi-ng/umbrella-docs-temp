@@ -4,6 +4,8 @@
 
 ## TextureOpts.flip property
 
+True, if source data should be flipped along its vertical axis.
+
 <b>Signature:</b>
 
 ```typescript

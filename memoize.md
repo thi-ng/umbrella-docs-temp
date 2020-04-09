@@ -30,14 +30,3 @@
 |  --- | --- |
 |  [defonce](./memoize.defonce.md) | Lightweight named singleton factory, intended for hot-module replacement situations. Takes a (preferably globally unique) <code>id</code> and <code>factory</code> function. If there's no value defined for <code>id</code> yet, calls <code>factory</code> to produce the singleton value and caches it. Returns singleton value.<!-- -->Note: All created values will remain in the private cache until the JS process terminates or this module itself has been reloaded (though the latter shouldn't happen in an HMR workflow). |
 
-## Type Aliases
-
-|  Type Alias | Description |
-|  --- | --- |
-|  [Fn0](./memoize.fn0.md) |  |
-|  [Fn1](./memoize.fn1.md) |  |
-|  [Fn2](./memoize.fn2.md) |  |
-|  [Fn3](./memoize.fn3.md) |  |
-|  [Fn4](./memoize.fn4.md) |  |
-|  [FnAny](./memoize.fnany.md) |  |
-

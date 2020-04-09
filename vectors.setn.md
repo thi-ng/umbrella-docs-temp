@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-setN: MultiVecOpN
+setN: import("./api").MultiVecOpImpl<import("@thi.ng/api").Fn2<Vec | null, number, Vec>>
 ```

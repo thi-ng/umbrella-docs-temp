@@ -9,5 +9,9 @@
 |  Class | Description |
 |  --- | --- |
 |  [KdNode](./geom-accel.kdnode.md) |  |
-|  [KdTree](./geom-accel.kdtree.md) | [https://en.wikipedia.org/wiki/K-d\_tree](https://en.wikipedia.org/wiki/K-d_tree)<!-- -->Partially based on: [https://github.com/ubilabs/kd-tree-javascript](https://github.com/ubilabs/kd-tree-javascript) |
+|  [KdTreeMap](./geom-accel.kdtreemap.md) | [https://en.wikipedia.org/wiki/K-d\_tree](https://en.wikipedia.org/wiki/K-d_tree)<!-- -->Partially based on: [https://github.com/ubilabs/kd-tree-javascript](https://github.com/ubilabs/kd-tree-javascript) |
+|  [KdTreeSet](./geom-accel.kdtreeset.md) |  |
+|  [NdQtNode](./geom-accel.ndqtnode.md) |  |
+|  [NdQuadtreeMap](./geom-accel.ndquadtreemap.md) | Point-based quadtree for nD keys and optional value association. Supports radial range queries and key removal with tree pruning. See . |
+|  [NdQuadtreeSet](./geom-accel.ndquadtreeset.md) |  |
 

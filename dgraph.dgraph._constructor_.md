@@ -9,5 +9,12 @@ Constructs a new instance of the `DGraph` class
 <b>Signature:</b>
 
 ```typescript
-constructor();
+constructor(edges?: Iterable<Pair<T, T>>);
 ```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  edges | <code>Iterable&lt;Pair&lt;T, T&gt;&gt;</code> |  |
+

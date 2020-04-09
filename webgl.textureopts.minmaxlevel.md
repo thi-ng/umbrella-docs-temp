@@ -4,6 +4,8 @@
 
 ## TextureOpts.minMaxLevel property
 
+Min/max mipmap levels (ints)
+
 <b>Signature:</b>
 
 ```typescript

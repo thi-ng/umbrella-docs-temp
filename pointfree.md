@@ -17,6 +17,7 @@
 |  [$](./pointfree._.md) |  |
 |  [$n](./pointfree._n.md) |  |
 |  [$stackFn](./pointfree._stackfn.md) |  |
+|  [$try](./pointfree._try.md) | Expects a body and error handler quotation on stack. Executes body within an implicit <code>try .. catch</code> and if an error was thrown pushes it on stack and executes error quotation.<!-- -->( body catch -- ? ) |
 |  [add](./pointfree.add.md) | ( x y -- x+y ) |
 |  [and](./pointfree.and.md) | ( x y -- x&amp;&amp;y ) |
 |  [at](./pointfree.at.md) | Reads key/index from object/array.<!-- -->( obj k -- obj\[k\] ) |
@@ -72,11 +73,13 @@
 |  [exp](./pointfree.exp.md) | ( x -- exp(x) ) |
 |  [floor](./pointfree.floor.md) | ( x -- floor(x) ) |
 |  [foldl](./pointfree.foldl.md) | Convenience wrapper for [mapl](./pointfree.mapl.md) to provide an alternative stack layout for reduction purposes:<!-- -->( arr q init -- reduction ) |
+|  [fromjson](./pointfree.fromjson.md) | ( str -- obj ) |
 |  [gt](./pointfree.gt.md) | ( x y -- x<!-- -->&gt;<!-- -->y ) |
 |  [gteq](./pointfree.gteq.md) | ( x y -- x<!-- -->&gt;<!-- -->=y ) |
 |  [hypot](./pointfree.hypot.md) | ( x y -- sqrt(x\*x+y\*y) ) |
 |  [inc](./pointfree.inc.md) | ( x -- x+1 ) |
 |  [invrot](./pointfree.invrot.md) | Rotates three topmost d-stack items upwards/to the right.<!-- -->( x y z -- z x y ) |
+|  [ismatch](./pointfree.ismatch.md) | Takes a string and stringified regexp (w/o flags), returns true if regexp matches the string.<!-- -->( str re -- bool ) |
 |  [isneg](./pointfree.isneg.md) | ( x -- x<!-- -->&lt;<!-- -->0 ) |
 |  [isnull](./pointfree.isnull.md) | ( x -- x==null ) |
 |  [ispos](./pointfree.ispos.md) | ( x -- x<!-- -->&gt;<!-- -->0 ) |
@@ -200,6 +203,7 @@ runU([0, [1, 2, 3, 4], [add], mapl])
 |  [swap2](./pointfree.swap2.md) | Swaps the two topmost d-stack pairs.<!-- -->( a b c d -- c d a b ) |
 |  [tan](./pointfree.tan.md) | ( x -- tan(x) ) |
 |  [tanh](./pointfree.tanh.md) | ( x -- tanh(x) ) |
+|  [tojson](./pointfree.tojson.md) | ( x -- str ) |
 |  [tos](./pointfree.tos.md) | Returns top of stack value (always unsafe, no underflow checking). |
 |  [tri](./pointfree.tri.md) | Applies <code>p</code> to <code>x</code>, then <code>q</code> to <code>x</code>, and finally <code>r</code> to <code>x</code>( x p q r -- px qx rx ) |
 |  [tri2](./pointfree.tri2.md) | Applies <code>p</code> to the two input values <code>x y</code>, then same with <code>q</code>, and finally with <code>r</code>.<!-- -->( x y p q r -- pxy qxy rxy ) |
@@ -218,6 +222,7 @@ runU([0, [1, 2, 3, 4], [add], mapl])
 |  [vec4](./pointfree.vec4.md) |  |
 |  [vmul](./pointfree.vmul.md) |  |
 |  [vsub](./pointfree.vsub.md) |  |
+|  [whenq](./pointfree.whenq.md) | Similar to [condq](./pointfree.condq.md)<!-- -->, but only expects <code>test</code> result and truthy branch d-stack. Executes word/quotation if <code>test</code> is truthy, else does nothing.<!-- -->( test whenq -- ? ) |
 |  [word](./pointfree.word.md) | Higher order word. Takes a StackProgram and returns it as StackFn to be used like any word. Unknown stack effect.<!-- -->If the optional <code>env</code> is given, uses a shallow copy of that environment (one per invocation) instead of the current one passed by [run](./pointfree.run.md) at runtime. If <code>mergeEnv</code> is true (default), the user provided env will be merged with the current env (also shallow copies). This is useful in conjunction with [pushenv](./pointfree.pushenv.md) and [store](./pointfree.store.md) or <code>storekey()</code> to save results of sub procedures in the main env.<!-- -->Note: The provided (or merged) env is only active within the execution scope of the word.<!-- -->( ? -- ? ) |
 |  [wordU](./pointfree.wordu.md) | Like [word](./pointfree.word.md)<!-- -->, but automatically calls [unwrap](./pointfree.unwrap.md) on result context to produced unwrapped value/tuple.<!-- -->\*\*Importatant:\*\* Words defined with this function CANNOT be used as part of a larger stack program, only for standalone use. |
 

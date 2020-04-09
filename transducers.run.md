@@ -9,14 +9,14 @@ Transforms `xs` with given transducer and optional side effect without any reduc
 <b>Signature:</b>
 
 ```typescript
-export declare function run<A>(tx: Transducer<A, any>, xs: Iterable<A>): void;
+export declare function run<A>(tx: TxLike<A, any>, xs: Iterable<A>): void;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  tx | <code>Transducer&lt;A, any&gt;</code> |  |
+|  tx | <code>TxLike&lt;A, any&gt;</code> |  |
 |  xs | <code>Iterable&lt;A&gt;</code> |  |
 
 <b>Returns:</b>

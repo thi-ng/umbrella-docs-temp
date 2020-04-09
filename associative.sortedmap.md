@@ -42,7 +42,6 @@ export declare class SortedMap<K, V> extends Map<K, V>
 |  [findPredNode(k)](./associative.sortedmap.findprednode.md) |  |  |
 |  [first()](./associative.sortedmap.first.md) |  |  |
 |  [forEach(fn, thisArg)](./associative.sortedmap.foreach.md) |  |  |
-|  [fromObject(obj, opts)](./associative.sortedmap.fromobject.md) | <code>static</code> | Creates new [SortedMap](./associative.sortedmap.md) instance from given object's key-value pairs. |
 |  [get(k, notFound)](./associative.sortedmap.get.md) |  |  |
 |  [has(key)](./associative.sortedmap.has.md) |  |  |
 |  [into(pairs)](./associative.sortedmap.into.md) |  |  |

@@ -27,6 +27,7 @@ fbo = new FBO(gl, { tex: [tex1, tex2] });
 |  --- | --- |
 |  [Blend](./webgl.blend.md) |  |
 |  [BlendEquation](./webgl.blendequation.md) |  |
+|  [DrawMode](./webgl.drawmode.md) |  |
 |  [TextureFilter](./webgl.texturefilter.md) |  |
 |  [TextureFormat](./webgl.textureformat.md) |  |
 |  [TextureRepeat](./webgl.texturerepeat.md) |  |
@@ -85,7 +86,6 @@ fbo = new FBO(gl, { tex: [tex1, tex2] });
 |  [bindTextures](./webgl.bindtextures.md) |  |
 |  [BLEND\_ADD](./webgl.blend_add.md) |  |
 |  [BLEND\_NORMAL](./webgl.blend_normal.md) |  |
-|  [buffer](./webgl.buffer.md) |  |
 |  [checkerboard](./webgl.checkerboard.md) |  |
 |  [colorAttrib](./webgl.colorattrib.md) |  |
 |  [compileAttribPool](./webgl.compileattribpool.md) |  |
@@ -93,16 +93,22 @@ fbo = new FBO(gl, { tex: [tex1, tex2] });
 |  [compileModel](./webgl.compilemodel.md) |  |
 |  [compileShader](./webgl.compileshader.md) |  |
 |  [compileVAO](./webgl.compilevao.md) |  |
-|  [cube](./webgl.cube.md) |  |
-|  [cubeMap](./webgl.cubemap.md) | Creates cube map texture from given 6 <code>face</code> texture sources. The given options are shared by each each side/face of the cube map. The following options are applied to the cube map directly:<!-- -->- <code>filter</code> - <code>mipmap</code>The following options are ignored entirely:<!-- -->- <code>target</code> - <code>image</code> |
 |  [DEFAULT\_MATERIAL](./webgl.default_material.md) |  |
 |  [DEFAULT\_OUTPUT](./webgl.default_output.md) |  |
+|  [defBuffer](./webgl.defbuffer.md) |  |
+|  [defCubeModel](./webgl.defcubemodel.md) |  |
+|  [defFBO](./webgl.deffbo.md) |  |
 |  [defMaterial](./webgl.defmaterial.md) |  |
+|  [defMultiPass](./webgl.defmultipass.md) |  |
+|  [defQuadModel](./webgl.defquadmodel.md) |  |
+|  [defRBO](./webgl.defrbo.md) |  |
+|  [defShader](./webgl.defshader.md) |  |
+|  [defTexture](./webgl.deftexture.md) |  |
+|  [defTextureCubeMap](./webgl.deftexturecubemap.md) | Creates cube map texture from given 6 <code>face</code> texture sources. The given options are shared by each each side/face of the cube map. The following options are applied to the cube map directly:<!-- -->- <code>filter</code> - <code>mipmap</code>The following options are ignored entirely:<!-- -->- <code>target</code> - <code>image</code> |
+|  [defTextureFloat](./webgl.deftexturefloat.md) | Creates &amp; configure a new float texture.<!-- -->\*\*Important:\*\* Since each texel will hold 4x 32-bit float values, the <code>data</code> buffer needs to have a length of at least <code>4 * width * height</code>.<!-- -->Under WebGL 1.0, we assume the caller has previously enabled the <code>OES_texture_float</code> extension. |
 |  [draw](./webgl.draw.md) |  |
 |  [error](./webgl.error.md) |  |
 |  [EXPORT\_FRAGCOL](./webgl.export_fragcol.md) | GLSL version specific fragment shader output. If <code>__VERSION__ &gt;= 300</code> assigns <code>body</code> to <code>out</code>, else to <code>gl_FragColor</code>. |
-|  [fbo](./webgl.fbo.md) |  |
-|  [floatTexture](./webgl.floattexture.md) | Creates &amp; configure a new FLOAT texture.<!-- -->\*\*Important:\*\* Since each texel will hold 4x 32-bit float values, the <code>data</code> buffer needs to have a length of at least <code>4 * width * height</code>.<!-- -->Under WebGL 1.0, we assume the caller has previously enabled the <code>OES_texture_float</code> extension. |
 |  [FX\_SHADER\_SPEC\_UV](./webgl.fx_shader_spec_uv.md) |  |
 |  [FX\_SHADER\_SPEC](./webgl.fx_shader_spec.md) |  |
 |  [getExtensions](./webgl.getextensions.md) |  |
@@ -113,7 +119,6 @@ fbo = new FBO(gl, { tex: [tex1, tex2] });
 |  [isGL2Context](./webgl.isgl2context.md) |  |
 |  [LAMBERT](./webgl.lambert.md) |  |
 |  [LOGGER](./webgl.logger.md) |  |
-|  [multipass](./webgl.multipass.md) |  |
 |  [NO\_PREFIXES](./webgl.no_prefixes.md) |  |
 |  [PASSTHROUGH\_FS\_UV](./webgl.passthrough_fs_uv.md) |  |
 |  [PASSTHROUGH\_FS](./webgl.passthrough_fs.md) |  |
@@ -123,17 +128,13 @@ fbo = new FBO(gl, { tex: [tex1, tex2] });
 |  [positionAttrib](./webgl.positionattrib.md) |  |
 |  [PREFIXES](./webgl.prefixes.md) |  |
 |  [prepareShaderSource](./webgl.prepareshadersource.md) |  |
-|  [quad](./webgl.quad.md) |  |
-|  [rbo](./webgl.rbo.md) |  |
 |  [readPixels](./webgl.readpixels.md) |  |
 |  [readTexture](./webgl.readtexture.md) |  |
 |  [setLogger](./webgl.setlogger.md) |  |
-|  [shader](./webgl.shader.md) |  |
 |  [shaderSourceFromAST](./webgl.shadersourcefromast.md) |  |
 |  [stripes](./webgl.stripes.md) |  |
 |  [SYNTAX](./webgl.syntax.md) | GLSL data declaration code generators. |
 |  [TEX\_FORMATS](./webgl.tex_formats.md) |  |
-|  [texture](./webgl.texture.md) |  |
 |  [VERSION\_CHECK](./webgl.version_check.md) | GLSL preprocessor macro for conditional execution based on <code>__VERSION__</code>. |
 
 ## Type Aliases

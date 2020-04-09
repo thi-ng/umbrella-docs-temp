@@ -2,39 +2,40 @@
 
 [Home](./index.md) &gt; [@thi.ng/paths](./paths.md) &gt; [mutIn](./paths.mutin.md)
 
-## mutIn variable
+## mutIn() function
 
-Immediate use mutator, i.e. same as: `mutator(path)(state, val)`<!-- -->.
+Type checked, immediate use mutator, i.e. same as: `defMutator(path)(state, val)`<!-- -->.
 
 <b>Signature:</b>
 
 ```typescript
-mutIn: (state: any, path: Path, val: any) => any
+export declare function mutIn<T>(state: T, path: Path0, val: T): T;
 ```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  state | <code>T</code> |  |
+|  path | <code>Path0</code> |  |
+|  val | <code>T</code> |  |
+
+<b>Returns:</b>
+
+`T`
 
 ## Remarks
 
-Also see [setIn](./paths.setin.md)<!-- -->, [updateIn](./paths.updatein.md)<!-- -->, [deleteIn](./paths.deletein.md)<!-- -->.
+Only the first 8 path levels are type checked.
+
+Also see , [mutInUnsafe](./paths.mutinunsafe.md)
 
 ## Example
 
 
 ```ts
-interface Foo {
-  a: { b: number[]; }
-}
-
-// fully type checked
 mutIn({ a: { b: [10, 20] } }, ["a", "b", 1], 23)
 // { a: { b: [ 10, 23 ] } }
-
-// unchecked
-mutIn({ a: { b: [10, 20] } }, "a.b.1", 23);
-// { a: { b: [ 10, 23 ] } }
-
-// fails (see `mutator` docs)
-mutIn({}, "a.b.c", 23);
-// undefined
 
 ```
 

@@ -31,6 +31,7 @@ export interface IComponent<K extends string, VALUES, GET, SET> extends IID<K>, 
 |  [getIndex(i)](./ecs.icomponent.getindex.md) |  |
 |  [has(id)](./ecs.icomponent.has.md) |  |
 |  [keys()](./ecs.icomponent.keys.md) |  |
+|  [resize(cap)](./ecs.icomponent.resize.md) |  |
 |  [set(i, val)](./ecs.icomponent.set.md) |  |
 |  [setIndex(i, val)](./ecs.icomponent.setindex.md) |  |
 |  [setIndexUnsafe(i, val, notify)](./ecs.icomponent.setindexunsafe.md) |  |

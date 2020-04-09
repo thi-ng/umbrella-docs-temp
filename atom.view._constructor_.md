@@ -9,7 +9,7 @@ Constructs a new instance of the `View` class
 <b>Signature:</b>
 
 ```typescript
-constructor(parent: ReadonlyAtom<any>, path: Path, tx?: ViewTransform<T>, lazy?: boolean, equiv?: (a: any, b: any) => boolean);
+constructor(parent: ReadonlyAtom<any>, path: Path, tx?: Fn<any, T>, lazy?: boolean, equiv?: (a: any, b: any) => boolean);
 ```
 
 ## Parameters
@@ -18,7 +18,7 @@ constructor(parent: ReadonlyAtom<any>, path: Path, tx?: ViewTransform<T>, lazy?:
 |  --- | --- | --- |
 |  parent | <code>ReadonlyAtom&lt;any&gt;</code> |  |
 |  path | <code>Path</code> |  |
-|  tx | <code>ViewTransform&lt;T&gt;</code> |  |
+|  tx | <code>Fn&lt;any, T&gt;</code> |  |
 |  lazy | <code>boolean</code> |  |
 |  equiv | <code>(a: any, b: any) =&gt; boolean</code> |  |
 

@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-random: MultiVecOpOOO<number, number, IRandom>
+random: import("./api").MultiVecOpImpl<VecOpOOO<number, number, IRandom>>
 ```

@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare const enum DiffMode 
+export declare enum DiffMode 
 ```
 
 ## Enumeration Members

@@ -7,9 +7,9 @@
 <b>Signature:</b>
 
 ```typescript
-commit(): NonNullable<T>;
+commit(): T;
 ```
 <b>Returns:</b>
 
-`NonNullable<T>`
+`T`
 

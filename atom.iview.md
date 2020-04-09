@@ -14,7 +14,7 @@ export interface IView<T> extends IDeref<T | undefined>, IID<string>, IRelease
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [path](./atom.iview.path.md) | <code>PropertyKey[]</code> |  |
+|  [path](./atom.iview.path.md) | <code>Path</code> |  |
 |  [value](./atom.iview.value.md) | <code>T &#124; undefined</code> |  |
 
 ## Methods

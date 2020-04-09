@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare class IMGUI implements IToHiccup 
+export declare class IMGUI implements IClear, IToHiccup 
 ```
 
 ## Constructors

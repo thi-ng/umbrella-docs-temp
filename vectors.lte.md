@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-lte: MultiCompareOp
+lte: import("./api").MultiVecOpImpl<import("@thi.ng/api").Fn3<import("./api").BVec | null, import("@thi.ng/api").ArrayLikeIterable<number>, import("@thi.ng/api").ArrayLikeIterable<number>, import("./api").BVec>>
 ```

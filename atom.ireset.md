@@ -16,4 +16,14 @@ export interface IReset<T>
 |  --- | --- |
 |  [reset(val)](./atom.ireset.reset.md) |  |
 |  [resetIn(path, val)](./atom.ireset.resetin.md) |  |
+|  [resetIn(path, val)](./atom.ireset.resetin_9.md) |  |
+|  [resetIn(path, val)](./atom.ireset.resetin_1.md) |  |
+|  [resetIn(path, val)](./atom.ireset.resetin_2.md) |  |
+|  [resetIn(path, val)](./atom.ireset.resetin_3.md) |  |
+|  [resetIn(path, val)](./atom.ireset.resetin_4.md) |  |
+|  [resetIn(path, val)](./atom.ireset.resetin_5.md) |  |
+|  [resetIn(path, val)](./atom.ireset.resetin_6.md) |  |
+|  [resetIn(path, val)](./atom.ireset.resetin_7.md) |  |
+|  [resetIn(path, val)](./atom.ireset.resetin_8.md) |  |
+|  [resetInUnsafe(path, val)](./atom.ireset.resetinunsafe.md) |  |
 

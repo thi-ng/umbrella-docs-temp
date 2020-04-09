@@ -15,17 +15,12 @@
 |  Interface | Description |
 |  --- | --- |
 |  [GestureEvent](./rstream-gestures.gestureevent.md) |  |
-|  [GestureInfo](./rstream-gestures.gestureinfo.md) | Reverse lookup for [GestureType](./rstream-gestures.gesturetype.md) enums |
+|  [GestureInfo](./rstream-gestures.gestureinfo.md) |  |
 |  [GestureStreamOpts](./rstream-gestures.gesturestreamopts.md) |  |
 
 ## Variables
 
 |  Variable | Description |
 |  --- | --- |
-|  [gestureStream](./rstream-gestures.gesturestream.md) | Attaches mouse &amp; touch event listeners to given DOM element and returns a stream of custom "gesture" events in the form of tuples:
-```
-[type, {pos, click?, delta?, zoom}]
-
-```
-The <code>click</code> and <code>delta</code> values are only present if <code>type == GestureType.DRAG</code>. Both (and <code>pos</code> too) are 2-element arrays of <code>[x,y]</code> coordinates.<!-- -->The <code>zoom</code> value is always present, but is only updated with wheel events. The value will be constrained to <code>minZoom</code> ... <code>maxZoom</code> interval (provided via options object).<!-- -->Note: If using <code>preventDefault</code> and attaching the event stream to <code>document.body</code>, the following event listener options SHOULD be used: |
+|  [gestureStream](./rstream-gestures.gesturestream.md) | Attaches mouse &amp; touch event listeners to given DOM element and returns a stream of [GestureEvent](./rstream-gestures.gestureevent.md)<!-- -->s and their [GestureInfo](./rstream-gestures.gestureinfo.md) details.<!-- -->In multi-touch environments, a <code>GestureEvent</code> can contain multiple such <code>GestureInfo</code> objects (one per active touch). In general, the <code>click</code> and <code>delta</code> values are only present if the abstracted event <code>type == GestureType.DRAG</code>. Both (and <code>pos</code> too) are 2-element arrays of <code>[x,y]</code> coordinates.<!-- -->The <code>zoom</code> value is always present, but is only updated with wheel events. The value will be constrained to <code>minZoom</code> ... <code>maxZoom</code> interval (provided via options object).<!-- -->Note: If using <code>preventDefault</code> and attaching the event stream to <code>document.body</code>, the following event listener options SHOULD be used: |
 

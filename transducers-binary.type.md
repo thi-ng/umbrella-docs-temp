@@ -7,28 +7,32 @@
 <b>Signature:</b>
 
 ```typescript
-export declare const enum Type 
+export declare enum Type 
 ```
 
 ## Enumeration Members
 
 |  Member | Value | Description |
 |  --- | --- | --- |
-|  F32 | <code>12</code> |  |
-|  F32\_ARRAY | <code>13</code> |  |
-|  F64 | <code>14</code> |  |
-|  F64\_ARRAY | <code>15</code> |  |
+|  F32 | <code>16</code> |  |
+|  F32\_ARRAY | <code>17</code> |  |
+|  F64 | <code>18</code> |  |
+|  F64\_ARRAY | <code>19</code> |  |
 |  I16 | <code>4</code> |  |
 |  I16\_ARRAY | <code>5</code> |  |
-|  I32 | <code>8</code> |  |
-|  I32\_ARRAY | <code>9</code> |  |
+|  I24 | <code>8</code> |  |
+|  I24\_ARRAY | <code>9</code> |  |
+|  I32 | <code>12</code> |  |
+|  I32\_ARRAY | <code>13</code> |  |
 |  I8 | <code>0</code> |  |
 |  I8\_ARRAY | <code>1</code> |  |
-|  STR | <code>16</code> |  |
+|  STR | <code>20</code> |  |
 |  U16 | <code>6</code> |  |
 |  U16\_ARRAY | <code>7</code> |  |
-|  U32 | <code>10</code> |  |
-|  U32\_ARRAY | <code>11</code> |  |
+|  U24 | <code>10</code> |  |
+|  U24\_ARRAY | <code>11</code> |  |
+|  U32 | <code>14</code> |  |
+|  U32\_ARRAY | <code>15</code> |  |
 |  U8 | <code>2</code> |  |
 |  U8\_ARRAY | <code>3</code> |  |
 

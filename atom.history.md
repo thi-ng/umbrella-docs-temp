@@ -41,7 +41,6 @@ Value changes are only recorded in history if `changed` predicate returns truthy
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
 |  [addListener(id, fn, scope)](./atom.history.addlistener.md) |  |  |
-|  [addView(path, tx, lazy)](./atom.history.addview.md) |  |  |
 |  [addWatch(id, fn)](./atom.history.addwatch.md) |  | <code>IWatch.addWatch()</code> implementation. Delegates to wrapped atom/cursor. |
 |  [canRedo()](./atom.history.canredo.md) |  |  |
 |  [canUndo()](./atom.history.canundo.md) |  |  |
@@ -56,7 +55,27 @@ Value changes are only recorded in history if `changed` predicate returns truthy
 |  [removeWatch(id)](./atom.history.removewatch.md) |  | <code>IWatch.removeWatch()</code> implementation. Delegates to wrapped atom/cursor. |
 |  [reset(val)](./atom.history.reset.md) |  | <code>IReset.reset()</code> implementation. Delegates to wrapped atom/cursor, but too applies <code>changed</code> predicate to determine if there was a change and if the previous value should be recorded. |
 |  [resetIn(path, val)](./atom.history.resetin.md) |  |  |
+|  [resetIn(path, val)](./atom.history.resetin_9.md) |  |  |
+|  [resetIn(path, val)](./atom.history.resetin_1.md) |  |  |
+|  [resetIn(path, val)](./atom.history.resetin_2.md) |  |  |
+|  [resetIn(path, val)](./atom.history.resetin_3.md) |  |  |
+|  [resetIn(path, val)](./atom.history.resetin_4.md) |  |  |
+|  [resetIn(path, val)](./atom.history.resetin_5.md) |  |  |
+|  [resetIn(path, val)](./atom.history.resetin_6.md) |  |  |
+|  [resetIn(path, val)](./atom.history.resetin_7.md) |  |  |
+|  [resetIn(path, val)](./atom.history.resetin_8.md) |  |  |
+|  [resetInUnsafe(path, val)](./atom.history.resetinunsafe.md) |  |  |
 |  [swap(fn, args)](./atom.history.swap.md) |  | <code>ISwap.swap()</code> implementation. Delegates to wrapped atom/cursor, but too applies <code>changed</code> predicate to determine if there was a change and if the previous value should be recorded. |
 |  [swapIn(path, fn, args)](./atom.history.swapin.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.history.swapin_9.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.history.swapin_1.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.history.swapin_2.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.history.swapin_3.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.history.swapin_4.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.history.swapin_5.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.history.swapin_6.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.history.swapin_7.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.history.swapin_8.md) |  |  |
+|  [swapInUnsafe(path, fn, args)](./atom.history.swapinunsafe.md) |  |  |
 |  [undo()](./atom.history.undo.md) |  | Attempts to re-apply most recent historical value to atom and returns it if successful (i.e. there's a history). |
 

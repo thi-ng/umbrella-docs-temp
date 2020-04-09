@@ -7,15 +7,15 @@
 <b>Signature:</b>
 
 ```typescript
-swapIn<V>(path: Path, fn: SwapFn<V>, ...args: any[]): T;
+swapIn<A>(path: Path0, fn: SwapFn<T, T>, ...args: any[]): T;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  path | <code>Path</code> |  |
-|  fn | <code>SwapFn&lt;V&gt;</code> |  |
+|  path | <code>Path0</code> |  |
+|  fn | <code>SwapFn&lt;T, T&gt;</code> |  |
 |  args | <code>any[]</code> |  |
 
 <b>Returns:</b>

@@ -4,7 +4,7 @@
 
 ## PoissonOpts.index property
 
-Spatial indexing implementation for nearest neighbor searches of candidate points. Currently only [KdTree](./geom-accel.kdtree.md) is available and must be pre-initialized to given dimensions prior to calling [samplePoisson](./poisson.samplepoisson.md)<!-- -->.
+Spatial indexing implementation for nearest neighbor searches of candidate points. Currently only  is available and must be pre-initialized to given dimensions prior to calling [samplePoisson](./poisson.samplepoisson.md)<!-- -->.
 
 The data structure is used to store all successful sample points (as keys) incl. their exclusion radius (as value).
 
@@ -13,5 +13,5 @@ Furthermore, pre-seeding the data structure allows already indexed points to par
 <b>Signature:</b>
 
 ```typescript
-index: ISpatialAccel<ReadonlyVec, number>;
+index: ISpatialSet<ReadonlyVec>;
 ```

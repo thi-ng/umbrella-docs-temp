@@ -7,14 +7,14 @@
 <b>Signature:</b>
 
 ```typescript
-swap(fn: SwapFn<T>, ...args: any[]): T;
+swap(fn: SwapFn<T, T>, ...args: any[]): T;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  fn | <code>SwapFn&lt;T&gt;</code> |  |
+|  fn | <code>SwapFn&lt;T, T&gt;</code> |  |
 |  args | <code>any[]</code> |  |
 
 <b>Returns:</b>

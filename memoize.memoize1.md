@@ -9,14 +9,14 @@ Optimized memoization for single arg functions. If the function expects args oth
 <b>Signature:</b>
 
 ```typescript
-export declare function memoize1<A, B>(fn: Fn1<A, B>, cache?: MapLike<A, B>): (x: A) => B;
+export declare function memoize1<A, B>(fn: Fn<A, B>, cache?: MapLike<A, B>): (x: A) => B;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  fn | <code>Fn1&lt;A, B&gt;</code> |  |
+|  fn | <code>Fn&lt;A, B&gt;</code> |  |
 |  cache | <code>MapLike&lt;A, B&gt;</code> |  |
 
 <b>Returns:</b>

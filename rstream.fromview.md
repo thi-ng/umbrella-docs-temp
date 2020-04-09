@@ -2,39 +2,55 @@
 
 [Home](./index.md) &gt; [@thi.ng/rstream](./rstream.md) &gt; [fromView](./rstream.fromview.md)
 
-## fromView variable
+## fromView() function
 
-Similar to [fromAtom](./rstream.fromatom.md)<!-- -->, but creates an eager derived view for a nested value in atom / cursor and yields stream of its value changes.
+Similar to [fromAtom](./rstream.fromatom.md)<!-- -->, but creates a type checked, eager derived view for a nested value in an Atom-like state container and yields stream of its value changes.
 
 <b>Signature:</b>
 
 ```typescript
-fromView: <T>(atom: ReadonlyAtom<any>, opts: FromViewOpts<T>) => Stream<T>
+export declare function fromView<T, R = undefined>(parent: ReadonlyAtom<T>, opts: FromViewOpts<Path0, T, R>): Stream<R extends undefined ? T : R>;
 ```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  parent | <code>ReadonlyAtom&lt;T&gt;</code> |  |
+|  opts | <code>FromViewOpts&lt;Path0, T, R&gt;</code> |  |
+
+<b>Returns:</b>
+
+`Stream<R extends undefined ? T : R>`
 
 ## Remarks
 
-Views are readonly and more lightweight versions of [cursors](./atom.cursor.md)<!-- -->. The view checks for value changes with given `equiv` predicate ([equiv](./equiv.equiv.md) by default). If the predicate returns a falsy result, the new value is emitted on the stream. The first value emitted is always the (possibly transformed) current value at the stream's start time (i.e. when the first subscriber attaches).
+Stream value type is inferred from target path or (if given), the result type of the optional view transformer (`tx` option).
+
+Views are readonly and more lightweight versions of [cursors](./atom.cursor.md)<!-- -->. The view checks for value changes with given `equiv` predicate (default: [equiv](./equiv.equiv.md)<!-- -->). If the predicate returns a falsy result (i.e. there's a new value), the new value is emitted on the stream. The first value emitted is always the (possibly transformed) current value at the stream's start time (i.e. when the first subscriber attaches).
 
 If the `tx` option is given, the raw value is first passed to this transformer function and its result emitted on the stream instead.
 
 When the stream is cancelled the view is destroyed as well.
 
+Also see , [defViewUnsafe()](./atom.defviewunsafe.md)
+
 ## Example
 
 
 ```ts
-db = new Atom({ a: 1, b: { c: 2 }});
+const db = defAtom<any>({ a: 1, b: { c: 2 }});
 
 fromView(
   db,
   {
-    path: "b.c",
-    tx: (x) => x != null ? x : "n/a"
-}).subscribe(trace("view:"))
+    path: ["b,"c"],
+    tx: (x) => x != null ? String(x) : "n/a"
+  }
+).subscribe(trace("view:"))
 // view: 2
 
-db.swapIn("b.c", (x: number) => x + 1);
+db.swapIn(["b","c"], (x) => x + 1);
 // view: 3
 
 db.reset({ a: 10 });

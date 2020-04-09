@@ -4,6 +4,8 @@
 
 ## TextureOpts.level property
 
+Mipmap level to configure (e.g. if providing custom mipmaps)
+
 <b>Signature:</b>
 
 ```typescript

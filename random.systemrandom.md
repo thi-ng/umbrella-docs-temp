@@ -16,4 +16,5 @@ export declare class SystemRandom extends ARandom
 |  --- | --- | --- |
 |  [float(norm)](./random.systemrandom.float.md) |  |  |
 |  [int()](./random.systemrandom.int.md) |  |  |
+|  [norm(norm)](./random.systemrandom.norm.md) |  |  |
 

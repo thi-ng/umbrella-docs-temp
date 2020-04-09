@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type Val2<T, A extends Keys<T>, B extends Keys1<T, A>> = Val1<T, A>[B];
+export declare type Val2<T, A extends Keys<T>, B extends Keys1<T, A>> = ValN<T, [A, B]>;
 ```

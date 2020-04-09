@@ -22,7 +22,7 @@
 
 |  Variable | Description |
 |  --- | --- |
-|  [add](./matrices.add.md) | Componentwise matrix addition. If <code>out</code> is not given, writes result in <code>a</code>.<!-- -->out = a + b |
+|  [add](./matrices.add.md) | Componentwise matrix addition. If <code>out</code> is not given, writes result in <code>a</code>. Both input matrices MUST be of same size.<!-- -->out = a + b |
 |  [add22](./matrices.add22.md) |  |
 |  [add23](./matrices.add23.md) |  |
 |  [add33](./matrices.add33.md) |  |
@@ -53,7 +53,7 @@
 |  [diag23](./matrices.diag23.md) |  |
 |  [diag33](./matrices.diag33.md) |  |
 |  [diag44](./matrices.diag44.md) |  |
-|  [div](./matrices.div.md) | Componentwise matrix division. If <code>out</code> is not given, writes result in <code>a</code>.<!-- -->out = a / b |
+|  [div](./matrices.div.md) | Componentwise matrix division. If <code>out</code> is not given, writes result in <code>a</code>. Both input matrices MUST be of same size.<!-- -->out = a / b |
 |  [div22](./matrices.div22.md) |  |
 |  [div23](./matrices.div23.md) |  |
 |  [div33](./matrices.div33.md) |  |
@@ -96,7 +96,7 @@
 |  [mat44to33](./matrices.mat44to33.md) | Converts 4x4 to 3x3 matrix and writes result to <code>out</code>. Creates new matrix if <code>out</code> is <code>null</code>. |
 |  [mat44v](./matrices.mat44v.md) | Initializes 4x4 matrix from 4D column vectors. |
 |  [mixQ](./matrices.mixq.md) | Interpolates quaternion <code>a</code> to <code>b</code> by given amount <code>t</code> \[0...1\], using SLERP. Writes result to <code>out</code>. The optional <code>eps</code> (default 1e-3) is used to switch to linear interpolation if the angular difference is very small. |
-|  [mul](./matrices.mul.md) | Componentwise matrix addition. Use [mulM](./matrices.mulm.md) for actual matrix-matrix multiplication. If <code>out</code> is not given, writes result in <code>a</code>.<!-- -->out = a \* b |
+|  [mul](./matrices.mul.md) | Componentwise matrix multiplication. Use [mulM](./matrices.mulm.md) or [concat](./matrices.concat.md) for actual matrix-matrix multiplication/concatenation. If <code>out</code> is not given, writes result in <code>a</code>. Both input matrices MUST be of same size.<!-- -->out = a \* b |
 |  [mul22](./matrices.mul22.md) |  |
 |  [mul23](./matrices.mul23.md) |  |
 |  [mul33](./matrices.mul33.md) |  |
@@ -116,7 +116,7 @@
 |  [mulV22](./matrices.mulv22.md) | Multiplies 2x2 matrix <code>m</code> with 2D vector <code>v</code>. Supports in-place modification, i.e. if <code>out === v</code>. |
 |  [mulV23](./matrices.mulv23.md) | Multiplies 2x3 matrix <code>m</code> with 2D vector <code>v</code>. Supports in-place modification, i.e. if <code>out === v</code>. |
 |  [mulV33](./matrices.mulv33.md) | Multiplies 3x3 matrix <code>m</code> with 3D vector <code>v</code>. Supports in-place modification, i.e. if <code>out === v</code>. |
-|  [mulV344](./matrices.mulv344.md) | Multiplies 4x4 matrix <code>m</code> with 3D vector <code>v</code> and assumes <code>w=1</code>, i.e. the vector is interpreted as <code>[x,y,z,1]</code>. After transformation applies perspective divide of the resulting XYZ components. |
+|  [mulV344](./matrices.mulv344.md) | Multiplies 4x4 matrix <code>m</code> with 3D vector <code>v</code> and assumes initial <code>w=1</code>, i.e. the vector is interpreted as <code>[x,y,z,1]</code>. After transformation applies perspective divide of the resulting XYZ components. Returns <code>undefined</code> if the computed perspective divisor is zero (and would cause <code>NaN</code> results). |
 |  [mulV44](./matrices.mulv44.md) | Multiplies 4x4 matrix <code>m</code> with 4D vector <code>v</code>. Supports in-place modification, i.e. if <code>out === v</code>. |
 |  [mulVM22](./matrices.mulvm22.md) | Same as: |
 |  [mulVM23](./matrices.mulvm23.md) |  |
@@ -132,6 +132,7 @@
 |  [outerProduct4](./matrices.outerproduct4.md) |  |
 |  [perspective](./matrices.perspective.md) | Creates a 4x4 matrix perspective projection matrix and writes result to <code>out</code>. |
 |  [project](./matrices.project.md) | Transforms given point <code>p</code> (4D, homogeneous coordinates) with 4x4 matrix <code>mvp</code>, applies perspective divide and then transforms XY components with 2x3 matrix <code>view</code> matrix. Returns 3D vector. The result Z component can be used for depth sorting. |
+|  [project3](./matrices.project3.md) | Same as [project](./matrices.project.md)<!-- -->, but slightly faster and more convenient for the most common use case of projecting a 3D input point (assumes <code>w=1</code> for its homogeneous coordinate, i.e. <code>[x,y,z,1]</code>). Returns <code>undefined</code> if the computed perspective divisor is zero (and would cause in <code>NaN</code> results). |
 |  [quatFromAxisAngle](./matrices.quatfromaxisangle.md) | Computes a quaternion representing the rotation <code>theta</code> around <code>axis</code>. |
 |  [quatFromEuler](./matrices.quatfromeuler.md) | Constructs a quaternion from given rotation angles in specified <code>order</code>. |
 |  [quatToAxisAngle](./matrices.quattoaxisangle.md) | Decomposes quaternion into <code>[axis, theta]</code> tuple. |
@@ -195,12 +196,12 @@
 |  [skewZX44](./matrices.skewzx44.md) |  |
 |  [skewZY33](./matrices.skewzy33.md) |  |
 |  [skewZY44](./matrices.skewzy44.md) |  |
-|  [sub](./matrices.sub.md) | Componentwise matrix subtraction. If <code>out</code> is not given, writes result in <code>a</code>.<!-- -->out = a - b |
+|  [sub](./matrices.sub.md) | Componentwise matrix subtraction. If <code>out</code> is not given, writes result in <code>a</code>. Both input matrices MUST be of same size.<!-- -->out = a - b |
 |  [sub22](./matrices.sub22.md) |  |
 |  [sub23](./matrices.sub23.md) |  |
 |  [sub33](./matrices.sub33.md) |  |
 |  [sub44](./matrices.sub44.md) |  |
-|  [subN](./matrices.subn.md) | Subtracts matrix componentwise with single scalar. If <code>out</code> is not given, writes result in <code>mat</code>.<!-- -->out = mat - n |
+|  [subN](./matrices.subn.md) | Componentwise scalar subtraction. If <code>out</code> is not given, writes result in <code>mat</code>.<!-- -->out = mat - n |
 |  [subN22](./matrices.subn22.md) |  |
 |  [subN23](./matrices.subn23.md) |  |
 |  [subN33](./matrices.subn33.md) |  |
@@ -213,7 +214,7 @@
 |  [transpose22](./matrices.transpose22.md) | Writes transposition of 2x2 matrix <code>m</code> to <code>out</code>. Creates new matrix if <code>out</code> is <code>null</code> |
 |  [transpose33](./matrices.transpose33.md) | Writes transposition of 3x3 matrix <code>m</code> to <code>out</code>. Creates new matrix if <code>out</code> is <code>null</code> |
 |  [transpose44](./matrices.transpose44.md) | Writes transposition of 4x4 matrix <code>m</code> to <code>out</code>. Creates new matrix if <code>out</code> is <code>null</code> |
-|  [unproject](./matrices.unproject.md) | Reverse operation of [project](./matrices.project.md)<!-- -->. If <code>invert</code> is true (default: false), both <code>mvp</code> and <code>view</code> matrices will be inverted first (non-destructively), else they're both assumed to be inverted already. |
+|  [unproject](./matrices.unproject.md) | Reverse operation of [project3](./matrices.project3.md)<!-- -->. If <code>invert</code> is true (default: false), both <code>mvp</code> and <code>view</code> matrices will be inverted first (non-destructively), else they're both assumed to be inverted already. |
 |  [viewport](./matrices.viewport.md) | Produces a 2x3 viewport matrix to transform projected coordinates to screen space. |
 
 ## Type Aliases

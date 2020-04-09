@@ -9,13 +9,13 @@ Constructs a new instance of the `SidechainToggle` class
 <b>Signature:</b>
 
 ```typescript
-constructor(side: ISubscribable<B>, opts?: Partial<SidechainToggleOpts<B>>);
+constructor(side: ISubscribable<S>, opts?: Partial<SidechainToggleOpts<S>>);
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  side | <code>ISubscribable&lt;B&gt;</code> |  |
-|  opts | <code>Partial&lt;SidechainToggleOpts&lt;B&gt;&gt;</code> |  |
+|  side | <code>ISubscribable&lt;S&gt;</code> |  |
+|  opts | <code>Partial&lt;SidechainToggleOpts&lt;S&gt;&gt;</code> |  |
 

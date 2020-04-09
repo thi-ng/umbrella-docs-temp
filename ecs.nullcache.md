@@ -14,6 +14,7 @@ export declare class NullCache<T> implements ICache<T>
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
+|  [clear()](./ecs.nullcache.clear.md) |  |  |
 |  [delete(\_)](./ecs.nullcache.delete.md) |  |  |
 |  [get(\_)](./ecs.nullcache.get.md) |  |  |
 |  [getSet(\_, notFound)](./ecs.nullcache.getset.md) |  |  |

@@ -8,29 +8,203 @@
 
 |  Class | Description |
 |  --- | --- |
-|  [AMFMOscillator](./dsp.amfmoscillator.md) |  |
-|  [Oscillator](./dsp.oscillator.md) |  |
+|  [Add](./dsp.add.md) |  |
+|  [ADSR](./dsp.adsr.md) |  |
+|  [AGen](./dsp.agen.md) | Abstract base class for unit gens in this package. Provides [IDeref](./api.ideref.md) to obtain the gen's current value and <code>Iterable</code> implementations to use gens as ES6 iterables. |
+|  [AllPass1](./dsp.allpass1.md) |  |
+|  [Alt](./dsp.alt.md) |  |
+|  [AProc](./dsp.aproc.md) | Abstract base class for unit gens in this package. Provides [IDeref](./api.ideref.md) to obtain the gen's current value and <code>Iterable</code> implementations to use gens as ES6 iterables. |
+|  [AProc2](./dsp.aproc2.md) |  |
+|  [Biquad](./dsp.biquad.md) |  |
+|  [CompP](./dsp.compp.md) |  |
+|  [CompP2](./dsp.compp2.md) |  |
+|  [CompP3](./dsp.compp3.md) |  |
+|  [CompP4](./dsp.compp4.md) |  |
+|  [Const](./dsp.const.md) |  |
+|  [Cosine](./dsp.cosine.md) |  |
+|  [DCBlock](./dsp.dcblock.md) |  |
+|  [Delay](./dsp.delay.md) | Ring buffer / delay line for arbitrary values w/ support for tapping at any delay time (within configured buffer size). |
+|  [FeedbackDelay](./dsp.feedbackdelay.md) |  |
+|  [Foldback](./dsp.foldback.md) |  |
+|  [Impulse](./dsp.impulse.md) |  |
+|  [ImpulseTrain](./dsp.impulsetrain.md) |  |
+|  [Integrator](./dsp.integrator.md) |  |
+|  [MAdd](./dsp.madd.md) |  |
+|  [MapG1](./dsp.mapg1.md) |  |
+|  [MapG2](./dsp.mapg2.md) |  |
+|  [MapG3](./dsp.mapg3.md) |  |
+|  [MapG4](./dsp.mapg4.md) |  |
+|  [Mix](./dsp.mix.md) |  |
+|  [Mul](./dsp.mul.md) |  |
+|  [Multiplex](./dsp.multiplex.md) |  |
+|  [OnePole](./dsp.onepole.md) | https://www.earlevel.com/main/2012/12/15/a-one-pole-filter/ |
+|  [Osc](./dsp.osc.md) |  |
+|  [PinkNoise](./dsp.pinknoise.md) |  |
+|  [Reciprocal](./dsp.reciprocal.md) |  |
+|  [SinCos](./dsp.sincos.md) | Generator of sine &amp; cosine values of given frequency in the form of \[sin,cos\] tuples. Start phase always zero. |
+|  [SVF](./dsp.svf.md) | Multi-type state variable filter w/ trapezoidal integration, after Andrew Simper.<!-- -->Reference:<!-- -->- https://cytomic.com/files/dsp/SvfLinearTrapOptimised2.pdf - https://en.wikipedia.org/wiki/Trapezoidal\_rule |
+|  [WaveShaper](./dsp.waveshaper.md) |  |
+|  [WhiteNoise](./dsp.whitenoise.md) |  |
+
+## Enumerations
+
+|  Enumeration | Description |
+|  --- | --- |
+|  [FilterType](./dsp.filtertype.md) |  |
+
+## Functions
+
+|  Function | Description |
+|  --- | --- |
+|  [compP(a, b)](./dsp.compp.md) |  |
+|  [compP(a, b, c)](./dsp.compp_1.md) |  |
+|  [compP(a, b, c, d)](./dsp.compp_2.md) |  |
+|  [compP(a, b, c, d, xs)](./dsp.compp_3.md) |  |
+|  [conjugate(src, isImg)](./dsp.conjugate.md) | If given a [ComplexArray](./dsp.complexarray.md)<!-- -->, computes the complex conjugate, concatenates it in mirrored order to input (excluding bin 0) and returns it as new (complex) array. |
+|  [conjugate(complex)](./dsp.conjugate_1.md) |  |
+|  [mapG(op, a, init)](./dsp.mapg.md) |  |
+|  [mapG(op, a, b, init)](./dsp.mapg_1.md) |  |
+|  [mapG(op, a, b, c, init)](./dsp.mapg_2.md) |  |
+|  [mapG(op, a, b, c, d, init)](./dsp.mapg_3.md) |  |
+|  [multiplex(a, b)](./dsp.multiplex.md) |  |
+|  [multiplex(a, b, c)](./dsp.multiplex_1.md) |  |
+|  [multiplex(a, b, c, d)](./dsp.multiplex_2.md) |  |
+|  [pipe(src, proc)](./dsp.pipe.md) |  |
+|  [pipe(src, a, b)](./dsp.pipe_1.md) |  |
+|  [pipe(src, a, b, c)](./dsp.pipe_2.md) |  |
+|  [pipe(src, a, b, c, d)](./dsp.pipe_3.md) |  |
+|  [pipe(src, a, b, c, d, xs)](./dsp.pipe_4.md) |  |
+|  [product(a, b)](./dsp.product.md) | Higher order gen. Returns a [MapG2](./dsp.mapg2.md) or [MapG3](./dsp.mapg3.md) yielding stepwise (non-accumulated) products of the given [IGen](./dsp.igen.md)<!-- -->s. Initializes to 0. |
+|  [product(a, b, c)](./dsp.product_1.md) |  |
+|  [sum(a, b)](./dsp.sum.md) | Higher order gen. Returns a [MapG2](./dsp.mapg2.md) or [MapG3](./dsp.mapg3.md) yielding stepwise (non-accumulated) sums of given [IGen](./dsp.igen.md)<!-- -->s. Initializes to 0. |
+|  [sum(a, b, c)](./dsp.sum_1.md) |  |
+
+## Interfaces
+
+|  Interface | Description |
+|  --- | --- |
+|  [ADSROpts](./dsp.adsropts.md) |  |
+|  [FilterConfig](./dsp.filterconfig.md) |  |
+|  [FilterResponse](./dsp.filterresponse.md) |  |
+|  [IFilter](./dsp.ifilter.md) |  |
+|  [IGen](./dsp.igen.md) |  |
+|  [IProc](./dsp.iproc.md) |  |
+|  [IProc2](./dsp.iproc2.md) |  |
 
 ## Variables
 
 |  Variable | Description |
 |  --- | --- |
+|  [add](./dsp.add.md) | Creates a new <code>Add</code> gen using given <code>step</code> (default: 1) and <code>start (default: 0) values, producing: </code>y(t) = step + y(t-1)<!-- -->\`<!-- -->. |
+|  [addG](./dsp.addg.md) | Creates a new [IGen](./dsp.igen.md) using given <code>step</code> gen and <code>start (default: 0) value, producing: </code>y(t) = step(t) + y(t-1)<!-- -->\`<!-- -->. |
 |  [additive](./dsp.additive.md) |  |
+|  [adsr](./dsp.adsr.md) | Time based ADSR envelope gen with customizable exponential attack, decay and release curves. |
+|  [allpass](./dsp.allpass.md) | One-pole allpass filter. |
+|  [alt](./dsp.alt.md) |  |
+|  [altB](./dsp.altb.md) |  |
+|  [altT](./dsp.altt.md) |  |
+|  [binFreq](./dsp.binfreq.md) | Returns frequency for given FFT bin index, sample rate and window size. See [freqBin](./dsp.freqbin.md) for reverse op. |
+|  [biquad](./dsp.biquad.md) |  |
+|  [biquadBP](./dsp.biquadbp.md) |  |
+|  [biquadHiShelf](./dsp.biquadhishelf.md) |  |
+|  [biquadHP](./dsp.biquadhp.md) |  |
+|  [biquadLoShelf](./dsp.biquadloshelf.md) |  |
+|  [biquadLP](./dsp.biquadlp.md) |  |
+|  [biquadNotch](./dsp.biquadnotch.md) |  |
+|  [biquadPeak](./dsp.biquadpeak.md) |  |
+|  [complexArray](./dsp.complexarray.md) | Returns a new tuple of real/img F64 buffers of given size. |
+|  [constant](./dsp.constant.md) | Returns new gen yielding always the same given value <code>x</code>. |
+|  [cosine](./dsp.cosine.md) | Approximated cosine generator using given normalized <code>freq</code> and <code>amp</code> (default: 1). |
+|  [curve](./dsp.curve.md) | Returns new [MAdd](./dsp.madd.md) gen, producing an exponential curve (with adjustable curvature) between <code>start</code> and <code>end</code> values over <code>num</code> steps. This is the exponential equivalent of [line](./dsp.line.md)<!-- -->. |
+|  [dbMag](./dsp.dbmag.md) | Converts given dBFS value to linear magnitude (i.e. <code>pow(10, x / 20)</code>) |
+|  [dcBlock](./dsp.dcblock.md) | One-pole DC blocker based on [OnePole](./dsp.onepole.md)<!-- -->. |
+|  [delay](./dsp.delay.md) | Delay line of length <code>n</code> for numeric values. |
+|  [delayT](./dsp.delayt.md) | Delay line of length <code>n</code> for arbitrary typed values. |
+|  [denormalizeFFT](./dsp.denormalizefft.md) |  |
+|  [dsf](./dsp.dsf.md) | Oscillator using Discrete Summation Formula:<code>y(t) = (1-a^2) * sin(2πt) / (1 + a^2 - 2a * cos(b * 2πt))</code> |
+|  [dsfHOF](./dsp.dsfhof.md) | Higher order version of [dsf](./dsp.dsf.md) oscillator with pre-configured params. Slightly faster, but not dynamically changeable waveform. |
+|  [feedbackDelay](./dsp.feedbackdelay.md) | Extension of [Delay](./dsp.delay.md) which adds sum delayed value multiplied with <code>feedback</code> for each new input. |
+|  [fejer](./dsp.fejer.md) | Fejér weight for <code>k</code>-th harmonic in a Fourier series of length <code>n</code>. |
+|  [fft](./dsp.fft.md) | Computes in-place forward FFT for given real/imaginary component buffers (each MUST be pow2 length), optionally with windowing. |
+|  [fftFreq](./dsp.fftfreq.md) | Returns array of bin center frequencies for given FFT window size and sample rate. By default only the first N/2 values are returned. |
+|  [filterResponse](./dsp.filterresponse.md) |  |
+|  [filterResponseRaw](./dsp.filterresponseraw.md) | Returns filter response for given filter coefficients at normalized frequency <code>f</code>. If <code>db</code> is true (default), the magnitude in the returned object will be in dBFS.<!-- -->References:<!-- -->- https://www.earlevel.com/main/2016/12/01/evaluating-filter-frequency-response/ - https://www.earlevel.com/main/2016/12/08/filter-frequency-response-grapher/ - https://github.com/mohayonao/freqr |
+|  [foldback](./dsp.foldback.md) | Recursively folds input into <code>[-thresh .. +thresh]</code> interval and amplifies it with <code>amp</code> (default: 1/thresh). |
+|  [framesMs](./dsp.framesms.md) | Reverse op of [msFrames](./dsp.msframes.md)<!-- -->. |
+|  [freqBin](./dsp.freqbin.md) | Returns FFT bin index for given frequency, sample rate and window size. See [binFreq](./dsp.binfreq.md) for reverse op. |
+|  [freqMs](./dsp.freqms.md) | Returns period length in milliseconds for given frequency in Hz. |
+|  [freqRad](./dsp.freqrad.md) | Returns frequency <code>f</code> in radians, based on sample rate <code>fs</code>. I.e. Nyquist freq = PI |
+|  [freqRange](./dsp.freqrange.md) |  |
 |  [gibbs](./dsp.gibbs.md) | Reference: - [https://en.wikipedia.org/wiki/Gibbs\_phenomenon](https://en.wikipedia.org/wiki/Gibbs_phenomenon) - [http://www.musicdsp.org/files/bandlimited.pdf](http://www.musicdsp.org/files/bandlimited.pdf)<!-- -->Interactive graph: [https://www.desmos.com/calculator/irugw6gnhy](https://www.desmos.com/calculator/irugw6gnhy) |
-|  [mix](./dsp.mix.md) |  |
+|  [ifft](./dsp.ifft.md) | Inverse FFT via computing forward transform with swapped real/imaginary components. Expects denormalized inputs. |
+|  [impulse](./dsp.impulse.md) | Numeric version of [impulseT](./dsp.impulset.md)<!-- -->, using given <code>on</code> (default: 1) as initial value and zero for the remaining values. |
+|  [impulseB](./dsp.impulseb.md) | Boolean version of [impulseT](./dsp.impulset.md)<!-- -->, using given <code>start</code> (default: true) as initial value and its inverse for the remaining values. |
+|  [impulseT](./dsp.impulset.md) | Creates a new impulse gen, producing a single <code>on</code> for the first invocation of [IGen.next()](./dsp.igen.next.md)<!-- -->, then only <code>off</code> thereafter. |
+|  [impulseTrain](./dsp.impulsetrain.md) | https://en.wikipedia.org/wiki/Dirac\_comb |
+|  [impulseTrainB](./dsp.impulsetrainb.md) |  |
+|  [impulseTrainT](./dsp.impulsetraint.md) |  |
+|  [integrator](./dsp.integrator.md) | Leaky integrator.<!-- -->https://en.wikipedia.org/wiki/Leaky\_integrator |
+|  [line](./dsp.line.md) | Timebased version of [add](./dsp.add.md)<!-- -->. Creates a new <code>Add</code> gen based on given <code>start</code> (default: 0) and <code>end</code> (default: 1) positions and tracing a line over <code>num</code> steps. |
+|  [madd](./dsp.madd.md) | Returns new multiply-add gen producing <code>y(t) = factor * y(t-1) + offset</code>. If <code>clamp</code> is given, the curve will be clamped at that value. |
+|  [magDb](./dsp.magdb.md) | Converts given linear magnitude to dBFS (i.e. <code>20 * log10(x)</code>) |
+|  [mixOsc](./dsp.mixosc.md) | HOF oscillator. Takes 2 stateless oscillator fns and returns new oscillator function which produces an interpolated result of both. The returned function takes an additional <code>mix</code> arg (\[0..1\] range) control contributions of either oscillator (default: 0.5 aka 50/50 ratio). |
+|  [mixOscHOF](./dsp.mixoschof.md) | Similar to [mixOsc](./dsp.mixosc.md)<!-- -->, but with <code>mix</code> arg (\[0..1\] range) directly given to HOF and not changeable after. |
+|  [modOsc](./dsp.modosc.md) | Syntax sugar for creating frequency modulated <code>Osc</code> gens. |
+|  [msFrames](./dsp.msframes.md) | Returns number of samples for given millisecond period and samle rate. |
+|  [mul](./dsp.mul.md) | Returns new multiply gen, producing <code>y(t) = factor * y(t-1)</code>, using given <code>factor</code> and <code>start</code> values.<!-- -->Also see . |
+|  [normalizeFFT](./dsp.normalizefft.md) |  |
+|  [normFreq](./dsp.normfreq.md) | Returns frequency <code>f</code> normalized to sample rate <code>fs</code>: <code>fnorm = f / fs</code> |
+|  [onepoleHP](./dsp.onepolehp.md) |  |
+|  [onepoleLP](./dsp.onepolelp.md) |  |
+|  [osc](./dsp.osc.md) | Higher order oscillator gen, wrapping a [StatelessOscillator](./dsp.statelessoscillator.md) function and supporting either constant or [IGen](./dsp.igen.md)<!-- -->-based frequency and amplitude, thus allowing for FM/AM modulation. Furthermore, a constant <code>dc</code> offset (center value) can be specified (default: 0). |
+|  [parabolic](./dsp.parabolic.md) | Parabolic waveform oscillator. |
+|  [pinkNoise](./dsp.pinknoise.md) | Pink noise generator with customizable frequency distribution. The default config produces a power spectrum roughly following the <code>1/f</code> pink characteristic. |
 |  [polyBLEP](./dsp.polyblep.md) | Polynomial attenuation to create bandlimited version of a signal.<!-- -->- [http://research.spa.aalto.fi/publications/papers/smc2010-phaseshaping/](http://research.spa.aalto.fi/publications/papers/smc2010-phaseshaping/) - [http://www.kvraudio.com/forum/viewtopic.php?t=375517](http://www.kvraudio.com/forum/viewtopic.php?t=375517) |
+|  [radFreq](./dsp.radfreq.md) | Reverse op of [freqRad](./dsp.freqrad.md)<!-- -->. |
+|  [reciprocal](./dsp.reciprocal.md) | Returns a gen which yield sequence <code>y(t) = 1 / (y(t - 1) + step)</code>. |
 |  [rect](./dsp.rect.md) |  |
+|  [rectHOF](./dsp.recthof.md) | Higher order version of [rect](./dsp.rect.md) with pre-configured <code>duty</code> width (in the (0..1) range). |
 |  [saw](./dsp.saw.md) |  |
 |  [sawAdditive](./dsp.sawadditive.md) | Interactive graph of this oscillator: [https://www.desmos.com/calculator/irugw6gnhy](https://www.desmos.com/calculator/irugw6gnhy) |
+|  [scaleFFT](./dsp.scalefft.md) |  |
 |  [sin](./dsp.sin.md) |  |
-|  [squareAdditive](./dsp.squareadditive.md) | Interactive graph of this oscillator:  |
+|  [spectrumMag](./dsp.spectrummag.md) | Computes magnitude spectrum for given FFT. By default only the first N/2 values are returned. |
+|  [spectrumPhase](./dsp.spectrumphase.md) | Computes phase spectrum for given FFT and writes results to <code>out</code>. By default only the first N/2 values are returned. |
+|  [spectrumPow](./dsp.spectrumpow.md) | Computes power spectrum (optionally as dBFS) for the given raw, unnormalized FFT result arrays (length = N) and writes result to <code>out</code>. |
+|  [squareAdditive](./dsp.squareadditive.md) | Interactive graph of this oscillator: [https://www.desmos.com/calculator/irugw6gnhy](https://www.desmos.com/calculator/irugw6gnhy) |
+|  [svfAllpass](./dsp.svfallpass.md) |  |
+|  [svfBP](./dsp.svfbp.md) |  |
+|  [svfHP](./dsp.svfhp.md) |  |
+|  [svfLP](./dsp.svflp.md) |  |
+|  [svfNotch](./dsp.svfnotch.md) |  |
+|  [svfPeak](./dsp.svfpeak.md) |  |
+|  [sweep](./dsp.sweep.md) | Similar to [curve](./dsp.curve.md)<!-- -->, but with added accumulation (via [addG](./dsp.addg.md)<!-- -->). Systax sugar for <code>addg(curve(...))</code> and intended for creating oscillator frequency sweeps. By default, the sweep speed is clamped at the given <code>end</code> value. |
 |  [tri](./dsp.tri.md) |  |
-|  [triConcave](./dsp.triconcave.md) |  |
+|  [waveShaper](./dsp.waveshaper.md) | Customizable wave shaper for user defined shaping function supporting one (optional, implementation specific) adjustable curve parameter. By default uses [waveshapeTan](./dsp.waveshapetan.md) and supports configurable curvature. Post-amplification is applied to the transformed result value (see remarks). |
+|  [waveshapeSigmoid](./dsp.waveshapesigmoid.md) |  |
+|  [waveshapeSin](./dsp.waveshapesin.md) |  |
+|  [waveshapeTan](./dsp.waveshapetan.md) |  |
 |  [wavetable](./dsp.wavetable.md) |  |
+|  [whiteNoise](./dsp.whitenoise.md) | White noise gen with customizable gain and [IRandom](./random.irandom.md) source. |
+|  [window](./dsp.window.md) | Creates or fills a given buffer with results of window function <code>fn</code>. The buffer size MUST be the same as the signal length given to [fft](./dsp.fft.md)<!-- -->. |
+|  [windowBlackman](./dsp.windowblackman.md) |  |
+|  [windowBlackmanHarris](./dsp.windowblackmanharris.md) |  |
+|  [windowBlackmanNuttall](./dsp.windowblackmannuttall.md) |  |
+|  [windowGauss](./dsp.windowgauss.md) |  |
+|  [windowHamming](./dsp.windowhamming.md) |  |
+|  [windowHann](./dsp.windowhann.md) |  |
+|  [windowLanczos](./dsp.windowlanczos.md) |  |
+|  [windowNuttall](./dsp.windownuttall.md) |  |
+|  [windowRect](./dsp.windowrect.md) |  |
+|  [windowSin](./dsp.windowsin.md) |  |
+|  [windowSinPow](./dsp.windowsinpow.md) |  |
 
 ## Type Aliases
 
 |  Type Alias | Description |
 |  --- | --- |
+|  [ComplexArray](./dsp.complexarray.md) |  |
 |  [StatelessOscillator](./dsp.statelessoscillator.md) |  |
+|  [WaveShaperFn](./dsp.waveshaperfn.md) |  |
+|  [WindowFn](./dsp.windowfn.md) |  |
 

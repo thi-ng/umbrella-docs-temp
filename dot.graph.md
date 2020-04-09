@@ -18,6 +18,7 @@ export interface Graph
 |  [directed](./dot.graph.directed.md) | <code>boolean</code> |  |
 |  [edges](./dot.graph.edges.md) | <code>Edge[]</code> |  |
 |  [id](./dot.graph.id.md) | <code>string</code> |  |
+|  [include](./dot.graph.include.md) | <code>string</code> |  |
 |  [nodes](./dot.graph.nodes.md) | <code>IObjectOf&lt;Partial&lt;Node&gt;&gt;</code> |  |
-|  [sub](./dot.graph.sub.md) | <code>IObjectOf&lt;Graph&gt;</code> |  |
+|  [sub](./dot.graph.sub.md) | <code>Graph[]</code> |  |
 

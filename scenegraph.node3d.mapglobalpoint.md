@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-mapGlobalPoint(p: ReadonlyVec): Vec;
+mapGlobalPoint(p: ReadonlyVec): Vec | undefined;
 ```
 
 ## Parameters
@@ -18,5 +18,5 @@ mapGlobalPoint(p: ReadonlyVec): Vec;
 
 <b>Returns:</b>
 
-`Vec`
+`Vec | undefined`
 

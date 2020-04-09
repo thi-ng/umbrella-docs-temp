@@ -4,13 +4,9 @@
 
 ## gestureStream variable
 
-Attaches mouse &amp; touch event listeners to given DOM element and returns a stream of custom "gesture" events in the form of tuples:
+Attaches mouse &amp; touch event listeners to given DOM element and returns a stream of [GestureEvent](./rstream-gestures.gestureevent.md)<!-- -->s and their [GestureInfo](./rstream-gestures.gestureinfo.md) details.
 
-```
-[type, {pos, click?, delta?, zoom}]
-
-```
-The `click` and `delta` values are only present if `type == GestureType.DRAG`<!-- -->. Both (and `pos` too) are 2-element arrays of `[x,y]` coordinates.
+In multi-touch environments, a `GestureEvent` can contain multiple such `GestureInfo` objects (one per active touch). In general, the `click` and `delta` values are only present if the abstracted event `type == GestureType.DRAG`<!-- -->. Both (and `pos` too) are 2-element arrays of `[x,y]` coordinates.
 
 The `zoom` value is always present, but is only updated with wheel events. The value will be constrained to `minZoom` ... `maxZoom` interval (provided via options object).
 
@@ -19,7 +15,7 @@ Note: If using `preventDefault` and attaching the event stream to `document.body
 <b>Signature:</b>
 
 ```typescript
-gestureStream: (el: HTMLElement, _opts?: Partial<GestureStreamOpts> | undefined) => StreamMerge<any, GestureEvent>
+gestureStream: (el: Element, _opts?: Partial<GestureStreamOpts> | undefined) => import("@thi.ng/rstream").StreamMerge<UIEvent, GestureEvent>
 ```
 
 ## Example

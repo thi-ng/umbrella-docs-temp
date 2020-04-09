@@ -25,7 +25,7 @@
 
 |  Variable | Description |
 |  --- | --- |
-|  [EVENT\_ROUTE\_CHANGED](./router.event_route_changed.md) | ID of event being triggered by <code>router.match()</code> |
+|  [EVENT\_ROUTE\_CHANGED](./router.event_route_changed.md) | ID of success event being triggered by <code>router.match()</code> |
 |  [EVENT\_ROUTE\_FAILED](./router.event_route_failed.md) |  |
 
 ## Type Aliases

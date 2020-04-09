@@ -4,6 +4,8 @@
 
 ## TextureOpts.pos property
 
+Pixel position offset for `sub` image updates.
+
 <b>Signature:</b>
 
 ```typescript

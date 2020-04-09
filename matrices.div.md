@@ -4,7 +4,7 @@
 
 ## div variable
 
-Componentwise matrix division. If `out` is not given, writes result in `a`<!-- -->.
+Componentwise matrix division. If `out` is not given, writes result in `a`<!-- -->. Both input matrices MUST be of same size.
 
 out = a / b
 

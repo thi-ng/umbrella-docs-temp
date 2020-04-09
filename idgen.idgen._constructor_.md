@@ -9,7 +9,7 @@ Constructs a new instance of the `IDGen` class
 <b>Signature:</b>
 
 ```typescript
-constructor(bits: number, vbits?: number, cap?: number, next?: number);
+constructor(bits?: number, vbits?: number, cap?: number, next?: number);
 ```
 
 ## Parameters

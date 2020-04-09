@@ -9,7 +9,7 @@ Single-step transducer execution wrapper. Returns array if transducer produces m
 <b>Signature:</b>
 
 ```typescript
-step: <A, B>(tx: Transducer<A, B>) => (x: A) => B | B[]
+step: <A, B>(tx: TxLike<A, B>) => (x: A) => B | B[]
 ```
 
 ## Remarks

@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export interface IEquivSet<T> extends Set<T>, ICopy<IEquivSet<T>>, IEmpty<IEquivSet<T>>, IEquiv, IGet<T, T>, IInto<T, IEquivSet<T>> 
+export interface IEquivSet<T> extends Set<T>, IClear, ICopy<IEquivSet<T>>, IEmpty<IEquivSet<T>>, IEquiv, IGet<T, T>, IInto<T, IEquivSet<T>> 
 ```
 
 ## Methods

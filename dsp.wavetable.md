@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-wavetable: (table: number[]) => StatelessOscillator
+wavetable: (table: NumericArray, interpolate?: Fn3<number, number, number, number>) => StatelessOscillator
 ```

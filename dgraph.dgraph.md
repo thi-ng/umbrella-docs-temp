@@ -14,7 +14,7 @@ export declare class DGraph<T> implements Iterable<T>, ICopy<DGraph<T>>
 
 |  Constructor | Modifiers | Description |
 |  --- | --- | --- |
-|  [(constructor)()](./dgraph.dgraph._constructor_.md) |  | Constructs a new instance of the <code>DGraph</code> class |
+|  [(constructor)(edges)](./dgraph.dgraph._constructor_.md) |  | Constructs a new instance of the <code>DGraph</code> class |
 
 ## Properties
 
@@ -29,6 +29,7 @@ export declare class DGraph<T> implements Iterable<T>, ICopy<DGraph<T>>
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
 |  [\[Symbol.iterator\]()](./dgraph.dgraph._symbol.iterator_.md) |  |  |
+|  [addDependencies(node, deps)](./dgraph.dgraph.adddependencies.md) |  |  |
 |  [addDependency(node, dep)](./dgraph.dgraph.adddependency.md) |  |  |
 |  [addNode(node)](./dgraph.dgraph.addnode.md) |  |  |
 |  [copy()](./dgraph.dgraph.copy.md) |  |  |

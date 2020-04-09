@@ -2,10 +2,10 @@
 
 [Home](./index.md) &gt; [@thi.ng/vectors](./vectors.md) &gt; [MultiVecOpVO](./vectors.multivecopvo.md)
 
-## MultiVecOpVO interface
+## MultiVecOpVO type
 
 <b>Signature:</b>
 
 ```typescript
-export interface MultiVecOpVO<T> extends VecOpVO<T>, MultiVecOp<VecOpVO<T>> 
+export declare type MultiVecOpVO<T> = MultiVecOpImpl<VecOpVO<T>>;
 ```

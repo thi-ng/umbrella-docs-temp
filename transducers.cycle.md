@@ -4,12 +4,12 @@
 
 ## cycle() function
 
-Iterator which yields an infinite repetition of given `input` iterable's values. Produces no values if `input` is empty.
+Iterator which yields an infinite repetition of given `input` iterable's values. Produces no values if `input` is empty. If `num` is given, only that many cycles will be emitted.
 
 <b>Signature:</b>
 
 ```typescript
-export declare function cycle<T>(input: Iterable<T>): Generator<T, void, undefined>;
+export declare function cycle<T>(input: Iterable<T>, num?: number): Generator<T, void, undefined>;
 ```
 
 ## Parameters
@@ -17,17 +17,27 @@ export declare function cycle<T>(input: Iterable<T>): Generator<T, void, undefin
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  input | <code>Iterable&lt;T&gt;</code> |  |
+|  num | <code>number</code> |  |
 
 <b>Returns:</b>
 
 `Generator<T, void, undefined>`
 
+## Remarks
+
+Also see [repeat()](./transducers.repeat.md)<!-- -->, [repeatedly()](./transducers.repeatedly.md) for related functions.
+
 ## Example
 
 
 ```ts
+// take 5 from infinite sequence
 [...take(5, cycle([1, 2, 3]))]
 // [1, 2, 3, 1, 2]
+
+// only produce 2 cycles
+[...cycle(range(3), 2)]
+// [ 0, 1, 2, 0, 1, 2 ]
 
 ```
 

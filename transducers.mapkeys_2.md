@@ -7,14 +7,14 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function mapKeys(keys: IObjectOf<Fn<any, any>>, copy: boolean, src: Iterable<any>): IterableIterator<any>;
+export declare function mapKeys(keys: IObjectOf<Fn2<any, any, any>>, copy: boolean, src: Iterable<any>): IterableIterator<any>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  keys | <code>IObjectOf&lt;Fn&lt;any, any&gt;&gt;</code> |  |
+|  keys | <code>IObjectOf&lt;Fn2&lt;any, any, any&gt;&gt;</code> |  |
 |  copy | <code>boolean</code> |  |
 |  src | <code>Iterable&lt;any&gt;</code> |  |
 

@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare const enum DegreeType 
+export declare enum DegreeType 
 ```
 
 ## Enumeration Members

@@ -8,7 +8,6 @@
 
 |  Class | Description |
 |  --- | --- |
-|  [GridLayout](./imgui.gridlayout.md) |  |
 |  [IMGUI](./imgui.imgui.md) |  |
 
 ## Enumerations
@@ -24,10 +23,7 @@
 |  Interface | Description |
 |  --- | --- |
 |  [GUITheme](./imgui.guitheme.md) |  |
-|  [IGridLayout](./imgui.igridlayout.md) |  |
-|  [ILayout](./imgui.ilayout.md) |  |
 |  [IMGUIOpts](./imgui.imguiopts.md) |  |
-|  [LayoutBox](./imgui.layoutbox.md) |  |
 
 ## Variables
 
@@ -43,7 +39,6 @@
 |  [dialRaw](./imgui.dialraw.md) |  |
 |  [dialVal](./imgui.dialval.md) |  |
 |  [dropdown](./imgui.dropdown.md) |  |
-|  [gridLayout](./imgui.gridlayout.md) | Syntax sugar for [GridLayout](./imgui.gridlayout.md) ctor. By default creates a single-column layout at given position and width. |
 |  [handleButtonKeys](./imgui.handlebuttonkeys.md) |  |
 |  [handleSlider1Keys](./imgui.handleslider1keys.md) |  |
 |  [handleSlider2Keys](./imgui.handleslider2keys.md) |  |
@@ -52,8 +47,6 @@
 |  [INPUT\_DIGITS](./imgui.input_digits.md) |  |
 |  [isHoverButton](./imgui.ishoverbutton.md) |  |
 |  [isHoverSlider](./imgui.ishoverslider.md) |  |
-|  [isLayout](./imgui.islayout.md) |  |
-|  [layoutBox](./imgui.layoutbox.md) |  |
 |  [NONE](./imgui.none.md) |  |
 |  [radialMenu](./imgui.radialmenu.md) |  |
 |  [radio](./imgui.radio.md) |  |

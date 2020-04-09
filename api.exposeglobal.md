@@ -9,5 +9,5 @@ Exposes given `value` as `id` in global scope, iff `always = true` (default: fal
 <b>Signature:</b>
 
 ```typescript
-exposeGlobal: (id: string, value: any, always?: boolean) => any
+exposeGlobal: (id: string, value: any, always?: boolean) => void
 ```

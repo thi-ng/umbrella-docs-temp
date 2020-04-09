@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-bitOai22: (n: number, a: number, b: number, c: number, d: number) => number
+bitOai22: (a: number, b: number, c: number, d: number) => number
 ```

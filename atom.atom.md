@@ -31,7 +31,6 @@ export declare class Atom<T> implements IAtom<T>, IEquiv
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
-|  [addView(path, tx, lazy)](./atom.atom.addview.md) |  |  |
 |  [addWatch(id, fn)](./atom.atom.addwatch.md) |  |  |
 |  [deref()](./atom.atom.deref.md) |  |  |
 |  [equiv(o)](./atom.atom.equiv.md) |  |  |
@@ -40,6 +39,26 @@ export declare class Atom<T> implements IAtom<T>, IEquiv
 |  [removeWatch(id)](./atom.atom.removewatch.md) |  |  |
 |  [reset(val)](./atom.atom.reset.md) |  |  |
 |  [resetIn(path, val)](./atom.atom.resetin.md) |  |  |
+|  [resetIn(path, val)](./atom.atom.resetin_9.md) |  |  |
+|  [resetIn(path, val)](./atom.atom.resetin_1.md) |  |  |
+|  [resetIn(path, val)](./atom.atom.resetin_2.md) |  |  |
+|  [resetIn(path, val)](./atom.atom.resetin_3.md) |  |  |
+|  [resetIn(path, val)](./atom.atom.resetin_4.md) |  |  |
+|  [resetIn(path, val)](./atom.atom.resetin_5.md) |  |  |
+|  [resetIn(path, val)](./atom.atom.resetin_6.md) |  |  |
+|  [resetIn(path, val)](./atom.atom.resetin_7.md) |  |  |
+|  [resetIn(path, val)](./atom.atom.resetin_8.md) |  |  |
+|  [resetInUnsafe(path, val)](./atom.atom.resetinunsafe.md) |  |  |
 |  [swap(fn, args)](./atom.atom.swap.md) |  |  |
 |  [swapIn(path, fn, args)](./atom.atom.swapin.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.atom.swapin_9.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.atom.swapin_1.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.atom.swapin_2.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.atom.swapin_3.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.atom.swapin_4.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.atom.swapin_5.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.atom.swapin_6.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.atom.swapin_7.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.atom.swapin_8.md) |  |  |
+|  [swapInUnsafe(path, fn, args)](./atom.atom.swapinunsafe.md) |  |  |
 

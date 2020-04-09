@@ -45,9 +45,12 @@ export declare abstract class AComponent<K extends string, VALUES, GET, SET> imp
 |  [notify(event)](./ecs.acomponent.notify.md) |  |  |
 |  [notifyChange(id)](./ecs.acomponent.notifychange.md) |  |  |
 |  [removeListener(id, fn, scope)](./ecs.acomponent.removelistener.md) |  |  |
+|  [resize(newCap)](./ecs.acomponent.resize.md) |  |  |
 |  [set(id, val)](./ecs.acomponent.set.md) |  |  |
 |  [setIndex(i, val)](./ecs.acomponent.setindex.md) |  |  |
 |  [setIndexUnsafe(i, val, notify)](./ecs.acomponent.setindexunsafe.md) |  |  |
 |  [swapIndices(src, dest)](./ecs.acomponent.swapindices.md) |  |  |
+|  [valueIndexForID(id)](./ecs.acomponent.valueindexforid.md) |  |  |
+|  [valueIndexForIDUnsafe(id)](./ecs.acomponent.valueindexforidunsafe.md) |  |  |
 |  [values()](./ecs.acomponent.values.md) |  |  |
 

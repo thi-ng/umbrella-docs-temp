@@ -7,15 +7,15 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function comp<A, B, C>(a: Transducer<A, B>, b: Transducer<B, C>): Transducer<A, C>;
+export declare function comp<A, B, C>(a: TxLike<A, B>, b: TxLike<B, C>): Transducer<A, C>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  a | <code>Transducer&lt;A, B&gt;</code> |  |
-|  b | <code>Transducer&lt;B, C&gt;</code> |  |
+|  a | <code>TxLike&lt;A, B&gt;</code> |  |
+|  b | <code>TxLike&lt;B, C&gt;</code> |  |
 
 <b>Returns:</b>
 

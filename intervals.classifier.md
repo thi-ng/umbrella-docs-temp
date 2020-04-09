@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare const enum Classifier 
+export declare enum Classifier 
 ```
 
 ## Enumeration Members

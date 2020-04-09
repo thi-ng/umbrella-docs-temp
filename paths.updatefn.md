@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type UpdateFn<T> = (curr: T, ...args: any[]) => T;
+export declare type UpdateFn<A, B> = FnO<A, B>;
 ```

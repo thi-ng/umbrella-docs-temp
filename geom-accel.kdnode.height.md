@@ -2,14 +2,10 @@
 
 [Home](./index.md) &gt; [@thi.ng/geom-accel](./geom-accel.md) &gt; [KdNode](./geom-accel.kdnode.md) &gt; [height](./geom-accel.kdnode.height.md)
 
-## KdNode.height() method
+## KdNode.height property
 
 <b>Signature:</b>
 
 ```typescript
-height(): number;
+get height(): number;
 ```
-<b>Returns:</b>
-
-`number`
-

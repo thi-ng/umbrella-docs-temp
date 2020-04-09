@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-mapLocalPointToNode(dest: Node3D, p: ReadonlyVec): Vec;
+mapLocalPointToNode(dest: Node3D, p: ReadonlyVec): Vec | undefined;
 ```
 
 ## Parameters
@@ -19,5 +19,5 @@ mapLocalPointToNode(dest: Node3D, p: ReadonlyVec): Vec;
 
 <b>Returns:</b>
 
-`Vec`
+`Vec | undefined`
 

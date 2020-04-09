@@ -9,12 +9,14 @@ Constructs a new instance of the `Cursor` class
 <b>Signature:</b>
 
 ```typescript
-constructor(opts: CursorOpts<T>);
+constructor(parent: IAtom<any>, path: Path, opts?: Partial<CursorOpts<T>>);
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  opts | <code>CursorOpts&lt;T&gt;</code> |  |
+|  parent | <code>IAtom&lt;any&gt;</code> |  |
+|  path | <code>Path</code> |  |
+|  opts | <code>Partial&lt;CursorOpts&lt;T&gt;&gt;</code> |  |
 

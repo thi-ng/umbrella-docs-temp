@@ -9,14 +9,14 @@ Yields a new transducer which applies given transducers in parallel (using [juxt
 <b>Signature:</b>
 
 ```typescript
-export declare function multiplex<T, A>(a: Transducer<T, A>): Transducer<T, [A]>;
+export declare function multiplex<T, A>(a: TxLike<T, A>): Transducer<T, [A]>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  a | <code>Transducer&lt;T, A&gt;</code> |  |
+|  a | <code>TxLike&lt;T, A&gt;</code> |  |
 
 <b>Returns:</b>
 

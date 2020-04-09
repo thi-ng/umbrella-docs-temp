@@ -9,7 +9,7 @@ ABGR 8bit lane/channel IDs
 <b>Signature:</b>
 
 ```typescript
-export declare const enum Lane 
+export declare enum Lane 
 ```
 
 ## Enumeration Members

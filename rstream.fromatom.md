@@ -16,7 +16,7 @@ fromAtom: <T>(atom: ReadonlyAtom<T>, opts?: Partial<FromAtomOpts<T>> | undefined
 
 Attaches a [watch](./api.iwatch.addwatch.md) to the atom and checks for value changes with given `changed` predicate (`!==` by default). If the predicate returns truthy result, the new value is emitted on the stream. If `emitFirst` is true (default), also emits atom's current value when first subscriber attaches to stream.
 
-Also see [fromView](./rstream.fromview.md)
+Also see , [fromViewUnsafe](./rstream.fromviewunsafe.md)
 
 ## Example
 

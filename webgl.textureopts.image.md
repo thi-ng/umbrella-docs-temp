@@ -4,6 +4,8 @@
 
 ## TextureOpts.image property
 
+If this value is null or a typedarray then size options (i.e. `width`<!-- -->, `height`<!-- -->, `depth`<!-- -->) MUST be given (the latter only if `target` is TEXTURE\_3D).
+
 <b>Signature:</b>
 
 ```typescript

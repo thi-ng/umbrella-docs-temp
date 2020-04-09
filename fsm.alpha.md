@@ -9,5 +9,5 @@ Matcher for single A-Z or a-z characters.
 <b>Signature:</b>
 
 ```typescript
-alpha: <C, R>(success?: AltCallback<string, C, R> | undefined, fail?: import("./api").SeqCallback<string, C, R> | undefined) => Matcher<string, C, R>
+alpha: <C, R>(success?: LitCallback<string, C, R> | undefined, fail?: LitCallback<string, C, R> | undefined) => Matcher<string, C, R>
 ```

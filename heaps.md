@@ -10,6 +10,7 @@
 |  --- | --- |
 |  [DHeap](./heaps.dheap.md) | Generic d-ary heap / priority queue with configurable arity (default = 4) and ordering via user-supplied comparator. |
 |  [Heap](./heaps.heap.md) | Generic binary heap / priority queue with customizable ordering via user-supplied comparator. By default, implements min-heap ordering and uses @<!-- -->thi.ng/compare. |
+|  [PairingHeap](./heaps.pairingheap.md) |  |
 
 ## Interfaces
 

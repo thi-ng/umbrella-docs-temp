@@ -11,7 +11,7 @@ Yields an infinite iterator of the inductive sequence:
 <b>Signature:</b>
 
 ```typescript
-export declare function iterate<T>(fn: Fn2<T, number, T>, seed: T): IterableIterator<T>;
+export declare function iterate<T>(fn: Fn2<T, number, T>, seed: T, num?: number): IterableIterator<T>;
 ```
 
 ## Parameters
@@ -20,6 +20,7 @@ export declare function iterate<T>(fn: Fn2<T, number, T>, seed: T): IterableIter
 |  --- | --- | --- |
 |  fn | <code>Fn2&lt;T, number, T&gt;</code> |  |
 |  seed | <code>T</code> |  |
+|  num | <code>number</code> |  |
 
 <b>Returns:</b>
 
@@ -33,10 +34,10 @@ The first value emitted always is `seed` itself, then f(seed), f(f(seed)) etc. T
 
 
 ```ts
-[...take(5, iterate((x) => x * 2, 1))]
+[...iterate((x) => x * 2, 1, 5)]
 // [ 1, 2, 4, 8, 16 ]
 
-[...take(8, iterate((x, i) => x * 10 + i, 0))]
+[...iterate((x, i) => x * 10 + i, 0, 8)]
 // [ 0, 1, 12, 123, 1234, 12345, 123456, 1234567 ]
 
 ```

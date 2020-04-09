@@ -7,20 +7,20 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function comp<A, B, C, D, E, F, G, H>(a: Transducer<A, B>, b: Transducer<B, C>, c: Transducer<C, D>, d: Transducer<D, E>, e: Transducer<E, F>, f: Transducer<F, G>, g: Transducer<G, H>): Transducer<A, H>;
+export declare function comp<A, B, C, D, E, F, G, H>(a: TxLike<A, B>, b: TxLike<B, C>, c: TxLike<C, D>, d: TxLike<D, E>, e: TxLike<E, F>, f: TxLike<F, G>, g: TxLike<G, H>): Transducer<A, H>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  a | <code>Transducer&lt;A, B&gt;</code> |  |
-|  b | <code>Transducer&lt;B, C&gt;</code> |  |
-|  c | <code>Transducer&lt;C, D&gt;</code> |  |
-|  d | <code>Transducer&lt;D, E&gt;</code> |  |
-|  e | <code>Transducer&lt;E, F&gt;</code> |  |
-|  f | <code>Transducer&lt;F, G&gt;</code> |  |
-|  g | <code>Transducer&lt;G, H&gt;</code> |  |
+|  a | <code>TxLike&lt;A, B&gt;</code> |  |
+|  b | <code>TxLike&lt;B, C&gt;</code> |  |
+|  c | <code>TxLike&lt;C, D&gt;</code> |  |
+|  d | <code>TxLike&lt;D, E&gt;</code> |  |
+|  e | <code>TxLike&lt;E, F&gt;</code> |  |
+|  f | <code>TxLike&lt;F, G&gt;</code> |  |
+|  g | <code>TxLike&lt;G, H&gt;</code> |  |
 
 <b>Returns:</b>
 

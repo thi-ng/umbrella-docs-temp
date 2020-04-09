@@ -9,14 +9,14 @@ Transducer. Similar to (and building on) [multiplex()](./transducers.multiplex.m
 <b>Signature:</b>
 
 ```typescript
-export declare function multiplexObj<A, B>(xforms: IObjectOf<Transducer<A, any>>, rfn?: Reducer<B, [PropertyKey, any]>): Transducer<A, B>;
+export declare function multiplexObj<A, B>(xforms: IObjectOf<TxLike<A, any>>, rfn?: Reducer<B, [PropertyKey, any]>): Transducer<A, B>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  xforms | <code>IObjectOf&lt;Transducer&lt;A, any&gt;&gt;</code> | object of transducers |
+|  xforms | <code>IObjectOf&lt;TxLike&lt;A, any&gt;&gt;</code> | object of transducers |
 |  rfn | <code>Reducer&lt;B, [PropertyKey, any]&gt;</code> |  |
 
 <b>Returns:</b>

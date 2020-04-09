@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-additive: (osc: StatelessOscillator, freqFn: Fn<number, number>, ampFn: Fn<number, number>, n: number) => (phase: number, freq: number, amp?: number, dc?: number) => number
+additive: (osc: StatelessOscillator, freqFn: Fn<number, number>, ampFn: Fn<number, number>, n: number) => StatelessOscillator
 ```

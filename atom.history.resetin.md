@@ -7,15 +7,15 @@
 <b>Signature:</b>
 
 ```typescript
-resetIn<V>(path: Path, val: V): T;
+resetIn(path: Path0, val: T): T;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  path | <code>Path</code> |  |
-|  val | <code>V</code> |  |
+|  path | <code>Path0</code> |  |
+|  val | <code>T</code> |  |
 
 <b>Returns:</b>
 

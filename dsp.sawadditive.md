@@ -9,5 +9,5 @@ Interactive graph of this oscillator: [https://www.desmos.com/calculator/irugw6g
 <b>Signature:</b>
 
 ```typescript
-sawAdditive: (n?: number) => (phase: number, freq: number, amp?: number, dc?: number) => number
+sawAdditive: (n?: number) => StatelessOscillator
 ```

@@ -26,6 +26,7 @@ export declare class UnboundedCache<T> implements ICache<T>
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
+|  [clear()](./ecs.unboundedcache.clear.md) |  |  |
 |  [delete(key)](./ecs.unboundedcache.delete.md) |  |  |
 |  [get(key)](./ecs.unboundedcache.get.md) |  |  |
 |  [getSet(key, notFound)](./ecs.unboundedcache.getset.md) |  |  |

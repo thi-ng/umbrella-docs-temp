@@ -32,7 +32,6 @@ export declare class Transacted<T> implements IAtom<T>
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
-|  [addView(path, tx, lazy)](./atom.transacted.addview.md) |  |  |
 |  [addWatch(id, watch)](./atom.transacted.addwatch.md) |  |  |
 |  [begin()](./atom.transacted.begin.md) |  |  |
 |  [cancel()](./atom.transacted.cancel.md) |  |  |
@@ -45,6 +44,26 @@ export declare class Transacted<T> implements IAtom<T>
 |  [removeWatch(id)](./atom.transacted.removewatch.md) |  |  |
 |  [reset(val)](./atom.transacted.reset.md) |  |  |
 |  [resetIn(path, val)](./atom.transacted.resetin.md) |  |  |
+|  [resetIn(path, val)](./atom.transacted.resetin_9.md) |  |  |
+|  [resetIn(path, val)](./atom.transacted.resetin_1.md) |  |  |
+|  [resetIn(path, val)](./atom.transacted.resetin_2.md) |  |  |
+|  [resetIn(path, val)](./atom.transacted.resetin_3.md) |  |  |
+|  [resetIn(path, val)](./atom.transacted.resetin_4.md) |  |  |
+|  [resetIn(path, val)](./atom.transacted.resetin_5.md) |  |  |
+|  [resetIn(path, val)](./atom.transacted.resetin_6.md) |  |  |
+|  [resetIn(path, val)](./atom.transacted.resetin_7.md) |  |  |
+|  [resetIn(path, val)](./atom.transacted.resetin_8.md) |  |  |
+|  [resetInUnsafe(path, val)](./atom.transacted.resetinunsafe.md) |  |  |
 |  [swap(fn, args)](./atom.transacted.swap.md) |  |  |
 |  [swapIn(path, fn, args)](./atom.transacted.swapin.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.transacted.swapin_9.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.transacted.swapin_1.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.transacted.swapin_2.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.transacted.swapin_3.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.transacted.swapin_4.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.transacted.swapin_5.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.transacted.swapin_6.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.transacted.swapin_7.md) |  |  |
+|  [swapIn(path, fn, args)](./atom.transacted.swapin_8.md) |  |  |
+|  [swapInUnsafe(path, fn, args)](./atom.transacted.swapinunsafe.md) |  |  |
 

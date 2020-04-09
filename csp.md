@@ -15,17 +15,11 @@
 |  [PubSub](./csp.pubsub.md) |  |
 |  [SlidingBuffer](./csp.slidingbuffer.md) |  |
 
-## Enumerations
-
-|  Enumeration | Description |
-|  --- | --- |
-|  [State](./csp.state.md) |  |
-
 ## Interfaces
 
 |  Interface | Description |
 |  --- | --- |
-|  [ChannelItem](./csp.channelitem.md) | Reverse lookup for <code>State</code> enums |
+|  [ChannelItem](./csp.channelitem.md) |  |
 |  [IBuffer](./csp.ibuffer.md) |  |
 |  [IChannel](./csp.ichannel.md) |  |
 |  [IReadableChannel](./csp.ireadablechannel.md) |  |

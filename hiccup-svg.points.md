@@ -4,10 +4,17 @@
 
 ## points variable
 
-Shape instancing group. The `shape` can be an SVG shape `#id` defined elsewhere in the document or set to `circle` or `rect` (default). The `size` arg is only used for the latter two shape types and defines the radius or width respectively.
+Shape instancing group.
 
 <b>Signature:</b>
 
 ```typescript
 points: (pts: Iterable<Vec2Like>, shape: string, size?: number, attribs?: any) => any[]
 ```
+
+## Remarks
+
+The `shape` arg can be an SVG shape `#id` defined elsewhere in the document or set to `circle` or `rect` (default).
+
+The `size` arg is only used for the latter two shape types and defines the radius or width respectively.
+

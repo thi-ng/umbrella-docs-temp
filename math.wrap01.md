@@ -4,6 +4,8 @@
 
 ## wrap01 variable
 
+Similar to [wrapOnce](./math.wraponce.md) for \[0..1\] interval.
+
 <b>Signature:</b>
 
 ```typescript

@@ -7,14 +7,14 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function multiplexObj<A, B>(xforms: IObjectOf<Transducer<A, any>>, rfn: Reducer<B, [PropertyKey, any]>, src: Iterable<A>): IterableIterator<B>;
+export declare function multiplexObj<A, B>(xforms: IObjectOf<TxLike<A, any>>, rfn: Reducer<B, [PropertyKey, any]>, src: Iterable<A>): IterableIterator<B>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  xforms | <code>IObjectOf&lt;Transducer&lt;A, any&gt;&gt;</code> |  |
+|  xforms | <code>IObjectOf&lt;TxLike&lt;A, any&gt;&gt;</code> |  |
 |  rfn | <code>Reducer&lt;B, [PropertyKey, any]&gt;</code> |  |
 |  src | <code>Iterable&lt;A&gt;</code> |  |
 

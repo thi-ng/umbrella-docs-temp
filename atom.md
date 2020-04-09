@@ -9,10 +9,36 @@
 |  Class | Description |
 |  --- | --- |
 |  [Atom](./atom.atom.md) | Mutable wrapper for an (usually) immutable value. Support for watches. |
-|  [Cursor](./atom.cursor.md) | A cursor provides read/write access to a path location within a nested parent state (Atom or another Cursor). |
+|  [Cursor](./atom.cursor.md) | A cursor provides read/write access to a path location within a nested (Atom-like) parent state. |
 |  [History](./atom.history.md) | Undo/redo history stack wrapper for atoms and cursors. Implements [IAtom](./atom.iatom.md) interface and so can be used directly in place and delegates to wrapped atom/cursor. |
 |  [Transacted](./atom.transacted.md) |  |
 |  [View](./atom.view.md) | This class implements readonly access to a deeply nested value with in an Atom/Cursor. An optional transformer function can be supplied at creation time to produce a derived/materialized view of the actual value held in the atom. |
+
+## Functions
+
+|  Function | Description |
+|  --- | --- |
+|  [defCursor(parent, path, opts)](./atom.defcursor.md) |  |
+|  [defCursor(parent, path, opts)](./atom.defcursor_1.md) |  |
+|  [defCursor(parent, path, opts)](./atom.defcursor_2.md) |  |
+|  [defCursor(parent, path, opts)](./atom.defcursor_3.md) |  |
+|  [defCursor(parent, path, opts)](./atom.defcursor_4.md) |  |
+|  [defCursor(parent, path, opts)](./atom.defcursor_5.md) |  |
+|  [defCursor(parent, path, opts)](./atom.defcursor_6.md) |  |
+|  [defCursor(parent, path, opts)](./atom.defcursor_7.md) |  |
+|  [defCursor(parent, path, opts)](./atom.defcursor_8.md) |  |
+|  [defCursorUnsafe(parent, path, opts)](./atom.defcursorunsafe.md) |  |
+|  [defView(parent, path, tx, lazy, equiv)](./atom.defview.md) |  |
+|  [defView(parent, path, tx, lazy, equiv)](./atom.defview_9.md) |  |
+|  [defView(parent, path, tx, lazy, equiv)](./atom.defview_1.md) |  |
+|  [defView(parent, path, tx, lazy, equiv)](./atom.defview_2.md) |  |
+|  [defView(parent, path, tx, lazy, equiv)](./atom.defview_3.md) |  |
+|  [defView(parent, path, tx, lazy, equiv)](./atom.defview_4.md) |  |
+|  [defView(parent, path, tx, lazy, equiv)](./atom.defview_5.md) |  |
+|  [defView(parent, path, tx, lazy, equiv)](./atom.defview_6.md) |  |
+|  [defView(parent, path, tx, lazy, equiv)](./atom.defview_7.md) |  |
+|  [defView(parent, path, tx, lazy, equiv)](./atom.defview_8.md) |  |
+|  [defViewUnsafe(parent, path, tx, lazy, equiv)](./atom.defviewunsafe.md) |  |
 
 ## Interfaces
 
@@ -24,13 +50,20 @@
 |  [IReset](./atom.ireset.md) |  |
 |  [ISwap](./atom.iswap.md) |  |
 |  [IView](./atom.iview.md) |  |
-|  [IViewable](./atom.iviewable.md) |  |
 |  [ReadonlyAtom](./atom.readonlyatom.md) |  |
+
+## Variables
+
+|  Variable | Description |
+|  --- | --- |
+|  [beginTransaction](./atom.begintransaction.md) | Like [defTransacted](./atom.deftransacted.md)<!-- -->, but immediately starts new transaction as well, i.e. same as <code>defTransacted(state).begin()</code>. |
+|  [defAtom](./atom.defatom.md) |  |
+|  [defHistory](./atom.defhistory.md) |  |
+|  [defTransacted](./atom.deftransacted.md) | Return a new [Transacted](./atom.transacted.md) state wrapper. |
 
 ## Type Aliases
 
 |  Type Alias | Description |
 |  --- | --- |
 |  [SwapFn](./atom.swapfn.md) |  |
-|  [ViewTransform](./atom.viewtransform.md) |  |
 

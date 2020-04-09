@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-equiv?: Predicate2<any>;
+equiv?: Predicate2<A>;
 ```

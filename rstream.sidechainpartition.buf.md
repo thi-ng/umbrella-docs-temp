@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-buf: A[];
+buf: T[];
 ```

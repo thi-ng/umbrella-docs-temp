@@ -4,6 +4,8 @@
 
 ## TextureOpts.type property
 
+Only needed if overriding `format`<!-- -->'s default type.
+
 <b>Signature:</b>
 
 ```typescript

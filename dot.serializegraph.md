@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-serializeGraph: (graph: Graph, acc?: string[] | undefined) => string
+serializeGraph: (graph: Graph, isSub?: boolean) => string
 ```

@@ -4,8 +4,6 @@
 
 ## ChannelItem interface
 
-Reverse lookup for `State` enums
-
 <b>Signature:</b>
 
 ```typescript

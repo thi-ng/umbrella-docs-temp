@@ -9,7 +9,7 @@ Generic binary heap / priority queue with customizable ordering via user-supplie
 <b>Signature:</b>
 
 ```typescript
-export declare class Heap<T> implements ICopy<Heap<T>>, IEmpty<Heap<T>>, ILength, IStack<T, T, Heap<T>> 
+export declare class Heap<T> implements Iterable<T>, IClear, ICopy<Heap<T>>, IEmpty<Heap<T>>, ILength, IStack<T, T, Heap<T>> 
 ```
 
 ## Example

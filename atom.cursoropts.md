@@ -15,7 +15,5 @@ export interface CursorOpts<T>
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [id](./atom.cursoropts.id.md) | <code>string</code> |  |
-|  [parent](./atom.cursoropts.parent.md) | <code>IAtom&lt;any&gt;</code> |  |
-|  [path](./atom.cursoropts.path.md) | <code>Path &#124; [(s: any) =&gt; T, (s: any, v: T) =&gt; any]</code> |  |
 |  [validate](./atom.cursoropts.validate.md) | <code>Predicate&lt;T&gt;</code> |  |
 

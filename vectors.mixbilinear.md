@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-mixBilinear: MultiVecOpVVVVNN
+mixBilinear: import("./api").MultiVecOpImpl<import("@thi.ng/api").Fn7<import("./api").Vec | null, import("@thi.ng/api").ArrayLikeIterable<number>, import("@thi.ng/api").ArrayLikeIterable<number>, import("@thi.ng/api").ArrayLikeIterable<number>, import("@thi.ng/api").ArrayLikeIterable<number>, number, number, import("./api").Vec>>
 ```

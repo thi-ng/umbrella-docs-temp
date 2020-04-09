@@ -4,10 +4,15 @@
 
 ## foldback variable
 
-[http://www.musicdsp.org/showone.php?id=203](http://www.musicdsp.org/showone.php?id=203)
+If `abs(x) > abs(e)`<!-- -->, recursively mirrors `x` back into `[-e .. +e]` interval at respective positive/negative boundary.
 
 <b>Signature:</b>
 
 ```typescript
 foldback: (e: number, x: number) => number
 ```
+
+## Remarks
+
+References: - https://www.desmos.com/calculator/lkyf2ag3ta - https://www.musicdsp.org/en/latest/Effects/203-fold-back-distortion.html
+

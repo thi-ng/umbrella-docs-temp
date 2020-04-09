@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare const enum BooleanOp 
+export declare enum BooleanOp 
 ```
 
 ## Enumeration Members

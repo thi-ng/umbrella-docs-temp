@@ -23,6 +23,7 @@ export declare class MemMappedComponent<K extends string> extends AComponent<K, 
 |  [cache](./ecs.memmappedcomponent.cache.md) |  | <code>ICache&lt;TypedArray&gt;</code> |  |
 |  [size](./ecs.memmappedcomponent.size.md) |  | <code>number</code> |  |
 |  [stride](./ecs.memmappedcomponent.stride.md) |  | <code>number</code> |  |
+|  [type](./ecs.memmappedcomponent.type.md) |  | <code>Type</code> |  |
 
 ## Methods
 
@@ -32,6 +33,7 @@ export declare class MemMappedComponent<K extends string> extends AComponent<K, 
 |  [getIndex(i)](./ecs.memmappedcomponent.getindex.md) |  |  |
 |  [moveIndex(src, dest)](./ecs.memmappedcomponent.moveindex.md) |  |  |
 |  [packedValues()](./ecs.memmappedcomponent.packedvalues.md) |  |  |
+|  [resize(cap)](./ecs.memmappedcomponent.resize.md) |  |  |
 |  [setIndexUnsafe(i, val, notify)](./ecs.memmappedcomponent.setindexunsafe.md) |  |  |
 |  [swapIndices(src, dest)](./ecs.memmappedcomponent.swapindices.md) |  |  |
 

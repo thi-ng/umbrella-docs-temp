@@ -4,7 +4,7 @@
 
 ## bitSize variable
 
-Returns the number of bits required to encode `x` (MUST be &gt; 0).
+Returns the number of bits required to encode `x`<!-- -->. Returns zero if `x` &lt;<!-- -->= 1.
 
 <b>Signature:</b>
 

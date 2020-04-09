@@ -39,4 +39,5 @@ export declare class ECS<SPEC> implements INotify
 |  [hasID(id)](./ecs.ecs.hasid.md) |  |  |
 |  [notify(event)](./ecs.ecs.notify.md) |  |  |
 |  [removeListener(id, fn, scope)](./ecs.ecs.removelistener.md) |  |  |
+|  [setCapacity(newCap)](./ecs.ecs.setcapacity.md) |  |  |
 

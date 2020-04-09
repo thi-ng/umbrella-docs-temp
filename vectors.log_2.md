@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-log_2: MultiVecOpV
+log_2: import("./api").MultiVecOpImpl<import("@thi.ng/api").Fn2<import("./api").Vec | null, import("@thi.ng/api").ArrayLikeIterable<number>, import("./api").Vec>>
 ```

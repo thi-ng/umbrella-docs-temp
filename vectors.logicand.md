@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-logicAnd: MultiBVecOpVV
+logicAnd: import("./api").MultiVecOpImpl<import("@thi.ng/api").Fn3<import("./api").BVec | null, import("@thi.ng/api").ArrayLikeIterable<boolean>, import("@thi.ng/api").ArrayLikeIterable<boolean>, import("./api").BVec>>
 ```

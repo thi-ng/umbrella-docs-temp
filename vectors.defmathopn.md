@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-defMathOpN: (op: string) => [MultiVecOpVN, import("@thi.ng/api").Fn3<import("../api").Vec | null, import("@thi.ng/api").ArrayLikeIterable<number>, number, import("../api").Vec>, import("@thi.ng/api").Fn3<import("../api").Vec | null, import("@thi.ng/api").ArrayLikeIterable<number>, number, import("../api").Vec>, import("@thi.ng/api").Fn3<import("../api").Vec | null, import("@thi.ng/api").ArrayLikeIterable<number>, number, import("../api").Vec>]
+defMathOpN: (op: string) => [import("../api").MultiVecOpImpl<import("@thi.ng/api").Fn3<import("../api").Vec | null, import("@thi.ng/api").ArrayLikeIterable<number>, number, import("../api").Vec>>, import("@thi.ng/api").Fn3<import("../api").Vec | null, import("@thi.ng/api").ArrayLikeIterable<number>, number, import("../api").Vec>, import("@thi.ng/api").Fn3<import("../api").Vec | null, import("@thi.ng/api").ArrayLikeIterable<number>, number, import("../api").Vec>, import("@thi.ng/api").Fn3<import("../api").Vec | null, import("@thi.ng/api").ArrayLikeIterable<number>, number, import("../api").Vec>]
 ```

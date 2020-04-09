@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type MainImageFn = Fn2<GLSLTarget, ShaderToyUniforms, ScopeBody>;
+export declare type MainImageFn<U extends ShaderToyUniforms> = Fn2<GLSLTarget, U, ScopeBody>;
 ```

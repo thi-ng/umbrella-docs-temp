@@ -11,17 +11,17 @@ Function memoization for arbitrary argument counts. Returns augmented function, 
 <b>Signature:</b>
 
 ```typescript
-export declare function memoize<A, B>(fn: Fn1<A, B>, cache: MapLike<A, B>): Fn1<A, B>;
+export declare function memoize<A, B>(fn: Fn<A, B>, cache: MapLike<A, B>): Fn<A, B>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  fn | <code>Fn1&lt;A, B&gt;</code> |  |
+|  fn | <code>Fn&lt;A, B&gt;</code> |  |
 |  cache | <code>MapLike&lt;A, B&gt;</code> |  |
 
 <b>Returns:</b>
 
-`Fn1<A, B>`
+`Fn<A, B>`
 

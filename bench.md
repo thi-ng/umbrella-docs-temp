@@ -4,14 +4,23 @@
 
 ## bench package
 
+## Interfaces
+
+|  Interface | Description |
+|  --- | --- |
+|  [BenchmarkOpts](./bench.benchmarkopts.md) |  |
+|  [BenchmarkResult](./bench.benchmarkresult.md) |  |
+
 ## Variables
 
 |  Variable | Description |
 |  --- | --- |
 |  [bench](./bench.bench.md) | Executes given function <code>n</code> times, prints elapsed time to console and returns last result from fn. The optional <code>prefix</code> will be displayed with the output, allowing to label different measurements. |
+|  [benchmark](./bench.benchmark.md) |  |
 |  [benchResult](./bench.benchresult.md) | Similar to [bench](./bench.bench.md)<!-- -->, but produces no output and instead returns tuple of <code>fn</code>'s last result and the grand total time measurement. |
+|  [now](./bench.now.md) | If available, returns wrapper for <code>process.hrtime.bigint()</code> else falls back to <code>Date.now()</code>. In all cases, returns a nanosec-scale timestamp, either as <code>bigint</code> or <code>number</code>. |
 |  [timed](./bench.timed.md) | Calls function <code>fn</code> without args, prints elapsed time and returns fn's result. The optional <code>prefix</code> will be displayed with the output, allowing to label different measurements. |
-|  [timedResult](./bench.timedresult.md) | Similar to [timed](./bench.timed.md)<!-- -->, but produces no output and instead returns tuple of <code>fn</code>'s result and the time measurement. |
+|  [timedResult](./bench.timedresult.md) | Similar to [timed](./bench.timed.md)<!-- -->, but produces no output and instead returns tuple of <code>fn</code>'s result and the time measurement (in milliseconds). |
 
 ## Type Aliases
 

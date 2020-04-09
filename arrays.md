@@ -18,19 +18,34 @@
 |  --- | --- |
 |  [binarySearch](./arrays.binarysearch.md) | Returns the supposed index of <code>x</code> in pre-sorted array-like collection <code>buf</code>. |
 |  [binarySearchNumeric](./arrays.binarysearchnumeric.md) | Similar to [binarySearch](./arrays.binarysearch.md)<!-- -->, but optimized for numeric arrays and supporting custom comparators (default: [compareNumAsc](./compare.comparenumasc.md)<!-- -->). |
+|  [bsEQ](./arrays.bseq.md) | [binarySearch](./arrays.binarysearch.md) result index classifier for equals queries. Merely syntax sugar, casting any non-found result indices to -1. |
+|  [bsGE](./arrays.bsge.md) | Similar to [bsGT](./arrays.bsgt.md)<!-- -->, but for greater-than-equals queries. |
+|  [bsGT](./arrays.bsgt.md) | [binarySearch](./arrays.binarysearch.md) result index classifier for successor queries. Returns index of first item greater than search value or -1 if no such values exist. |
+|  [bsLE](./arrays.bsle.md) | Similar to [bsLT](./arrays.bslt.md)<!-- -->, but for less-than-equals queries. |
+|  [bsLT](./arrays.bslt.md) | [binarySearch](./arrays.binarysearch.md) result index classifier for predecessor queries. Returns index of last item less than search value or -1 if no such values exist. |
 |  [endsWith](./arrays.endswith.md) | Returns true if the last items of <code>buf</code> are the same items as in <code>needle</code>. |
 |  [ensureArray](./arrays.ensurearray.md) | Helper function to avoid unnecessary copying if <code>x</code> is already an array. |
 |  [ensureArrayLike](./arrays.ensurearraylike.md) | Similar to [ensureArray](./arrays.ensurearray.md)<!-- -->, but for <code>ArrayLike</code> types.[ensureArray](./arrays.ensurearray.md) |
 |  [ensureIterable](./arrays.ensureiterable.md) | Attempts to obtain an iterator from <code>x</code> and throws error if <code>x</code> is not iterable. |
+|  [fillRange](./arrays.fillrange.md) | Fills given array with values in \[start .. end) interval from <code>index</code> and with optional <code>step</code> size. |
 |  [find](./arrays.find.md) | Similar to <code>Array.find()</code>, but uses [equiv](./equiv.equiv.md) as default predicate. |
 |  [findIndex](./arrays.findindex.md) | Similar to <code>Array.findIndex()</code>, but uses [equiv](./equiv.equiv.md) as default predicate. |
 |  [fuzzyMatch](./arrays.fuzzymatch.md) | Performs a fuzzy search of <code>query</code> in <code>domain</code> and returns <code>true</code> if successful. |
 |  [isSorted](./arrays.issorted.md) | Returns true if the given array and its elements in the selected index range (entire array, by default) are in the order defined by the given comparator ([compare](./compare.compare.md) by default). |
+|  [levenshtein](./arrays.levenshtein.md) | Computes Levenshtein distance w/ optionally given <code>maxDist</code> (for early termination, default: ∞) and equality predicate (default: <code>===</code>). Returns 0 if both <code>a</code> and <code>b</code> are equal (based on predicate). Returns <code>Infinity</code> if actual distance &gt; <code>maxDist</code>. |
 |  [multiSwap](./arrays.multiswap.md) | Higher-order version of [swap](./arrays.swap.md) for swapping elements in multiple arrays at once and hence useful for sorting multiple arrays based on a single criteria. |
+|  [normalizedLevenshtein](./arrays.normalizedlevenshtein.md) | Normalized version of [levenshtein](./arrays.levenshtein.md)<!-- -->, i.e. the actual L-dist divided by the length of the longest input (or <code>Infinity</code> if actual distance &gt; <code>maxDist</code>). |
 |  [peek](./arrays.peek.md) | Returns last element of given array or <code>undefined</code> if array is empty. |
 |  [shuffle](./arrays.shuffle.md) | Applies [shuffleRange](./arrays.shufflerange.md) to the given array. If <code>n</code> is given, only the first <code>n</code> items are shuffled. Mutates original array.[shuffleRange](./arrays.shufflerange.md) |
 |  [shuffleRange](./arrays.shufflerange.md) | Shuffles the items in the given index range of array <code>buf</code> using Fisher-yates and optional <code>rnd</code> PRNG. |
 |  [startsWith](./arrays.startswith.md) | Returns true if the first items of <code>buf</code> are the same items as in <code>needle</code>. |
 |  [swap](./arrays.swap.md) | Swaps values at index <code>x</code>/<code>y</code> in given array. |
 |  [swizzle](./arrays.swizzle.md) | Returns optimized function to immutably select, repeat, reshape and / or reorder array / object values in the specified index order. |
+
+## Type Aliases
+
+|  Type Alias | Description |
+|  --- | --- |
+|  [AnyArray](./arrays.anyarray.md) |  |
+|  [SwapFn](./arrays.swapfn.md) |  |
 

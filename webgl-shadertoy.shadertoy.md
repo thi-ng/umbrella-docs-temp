@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-shaderToy: (opts: ShaderToyOpts) => ShaderToy
+shaderToy: <U extends ShaderToyUniforms>(opts: ShaderToyOpts<U>) => ShaderToy<U>
 ```

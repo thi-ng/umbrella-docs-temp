@@ -14,6 +14,8 @@
 
 |  Function | Description |
 |  --- | --- |
+|  [asBytes()](./transducers-binary.asbytes.md) | Transducer which converts [BinStructItem](./transducers-binary.binstructitem.md) inputs to bytes. If <code>src</code> iterable is given, yields an iterator of unsigned bytes (e.g. for streaming purposes). |
+|  [asBytes(src)](./transducers-binary.asbytes_1.md) |  |
 |  [base64Decode()](./transducers-binary.base64decode.md) | Stateful transducer. Decodes base64 chars into bytes. Supports URL safe &amp; unsafe flavors. |
 |  [base64Decode(src)](./transducers-binary.base64decode_1.md) |  |
 |  [base64Encode()](./transducers-binary.base64encode.md) | Stateful transducer. Encodes bytes into base64 chars. Supports URL safe &amp; unsafe flavors, configurable via provided options. Uses internal buffer (size also configurable, default = 1024) to store intermediate results. Then repeatedly calls reducer to drain buffer whenever it's been filled. |
@@ -60,8 +62,11 @@
 |  [f32array](./transducers-binary.f32array.md) |  |
 |  [f64](./transducers-binary.f64.md) |  |
 |  [f64array](./transducers-binary.f64array.md) |  |
+|  [hexDumpString](./transducers-binary.hexdumpstring.md) | Convenience wrapper for , return the hexdump as a single result string. |
 |  [i16](./transducers-binary.i16.md) |  |
 |  [i16array](./transducers-binary.i16array.md) |  |
+|  [i24](./transducers-binary.i24.md) |  |
+|  [i24array](./transducers-binary.i24array.md) |  |
 |  [i32](./transducers-binary.i32.md) |  |
 |  [i32array](./transducers-binary.i32array.md) |  |
 |  [i8](./transducers-binary.i8.md) |  |
@@ -70,6 +75,8 @@
 |  [str](./transducers-binary.str.md) |  |
 |  [u16](./transducers-binary.u16.md) |  |
 |  [u16array](./transducers-binary.u16array.md) |  |
+|  [u24](./transducers-binary.u24.md) |  |
+|  [u24array](./transducers-binary.u24array.md) |  |
 |  [u32](./transducers-binary.u32.md) |  |
 |  [u32array](./transducers-binary.u32array.md) |  |
 |  [u8](./transducers-binary.u8.md) |  |

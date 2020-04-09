@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare const enum LineFontPattern 
+export declare enum LineFontPattern 
 ```
 
 ## Enumeration Members

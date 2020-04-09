@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-repeat: import("@thi.ng/memoize").Fn2<string, number, string>
+repeat: import("@thi.ng/api").Fn2<string, number, string>
 ```

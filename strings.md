@@ -14,6 +14,7 @@
 
 |  Variable | Description |
 |  --- | --- |
+|  [ALPHA](./strings.alpha.md) | Object with ASCII upper &amp; lowercase characters as keys and their values set to true. All others undefined. |
 |  [B16](./strings.b16.md) | 16bit binary conversion preset. |
 |  [B32](./strings.b32.md) | 32bit binary conversion preset. |
 |  [B8](./strings.b8.md) | 8bit binary conversion preset. |
@@ -22,27 +23,39 @@
 |  [camel](./strings.camel.md) | Converts a kebab-case or snake\_case string into CamelCase. Uses <code>-</code> as default delimiter. |
 |  [capitalize](./strings.capitalize.md) | String formatter which capitalizes first character. |
 |  [center](./strings.center.md) | Returns stringer which pads given input with <code>ch</code> (default: space) on both sides and returns fixed width string of given <code>lineWidth</code>. Returns string of only pad characters for any <code>null</code> or <code>undefined</code> values. If the string version of an input is &gt; <code>lineWidth</code>, no centering is performed, but the string will be truncated to <code>lineWidth</code>.<!-- -->Note: The padding string can contain multiple characters. |
+|  [defFormat](./strings.defformat.md) | HOF version of [format](./strings.format.md)<!-- -->. |
+|  [DIGITS](./strings.digits.md) | Object with 0-9 characters as keys and their values set to true. All others undefined. |
 |  [float](./strings.float.md) | Returns [Stringer](./strings.stringer.md) which formats numbers to given precision. Exceptions:<!-- -->- NaN =<!-- -->&gt; "NaN" - Infinity =<!-- -->&gt; "+/-∞" |
 |  [floatFixedWidth](./strings.floatfixedwidth.md) | Similar to <code>float</code>, returns [Stringer](./strings.stringer.md) which formats numbers to given character width &amp; precision. Uses scientific notation if needed.<!-- -->Default precision: 3 fractional digits |
 |  [format](./strings.format.md) |  |
 |  [grams](./strings.grams.md) |  |
+|  [HEX](./strings.hex.md) | Object with hex digit characters (upper &amp; lower case versions) as keys and their values set to true. All others undefined. |
 |  [hstr](./strings.hstr.md) | Formats given value <code>x</code> as Fortran style Hollerith string. |
+|  [ignore](./strings.ignore.md) | Helper for [format](./strings.format.md) which ignores argument and always returns an empty string. |
+|  [interpolate](./strings.interpolate.md) | Takes a string template with embedded <code>{number}</code> style terms and any number of args. Replaces numbered terms with their respective args given. |
+|  [join](./strings.join.md) | Higher-order version of <code>Array.join()</code>. Takes separator string <code>sep</code> and returns function which accepts an array and joins all elements w/ separator into a result string. |
 |  [kebab](./strings.kebab.md) | Converts a CamelCase string into kebab case, with optional custom delimiter (<code>-</code> by default).<!-- -->TODO: Switch back to currently broken Regex w/ positive lookbehind, once avail in FF &amp; Safari (currently TC39 stage 4)[https://github.com/tc39/proposal-regexp-lookbehind](https://github.com/tc39/proposal-regexp-lookbehind) |
 |  [lower](./strings.lower.md) | Lowercase string formatter. |
+|  [LOWER](./strings.lower.md) | Object with ASCII lowercase characters as keys and their values set to true. All others undefined. |
 |  [maybeParseFloat](./strings.maybeparsefloat.md) |  |
 |  [maybeParseInt](./strings.maybeparseint.md) |  |
 |  [meters](./strings.meters.md) |  |
 |  [padLeft](./strings.padleft.md) |  |
 |  [padRight](./strings.padright.md) |  |
 |  [percent](./strings.percent.md) | Returns [Stringer](./strings.stringer.md) which formats given fractions as percentage (e.g. <code>0.1234 =&gt; 12.34%</code>). |
+|  [PUNCTUATION](./strings.punctuation.md) | Object with ASCII punctuation characters as keys and their values set to true. All others undefined. |
 |  [radix](./strings.radix.md) | Returns a [Stringer](./strings.stringer.md) which formats given numbers to <code>radix</code>, <code>len</code> and with optional prefix (not included in <code>len</code>). |
 |  [repeat](./strings.repeat.md) |  |
 |  [seconds](./strings.seconds.md) |  |
 |  [slugify](./strings.slugify.md) | Based on: [https://medium.com/@matthagemann/the-ultimate-way-to-slugify-a-url-string-in-javascript-b8e4a0d849e1](https://medium.com/@matthagemann/the-ultimate-way-to-slugify-a-url-string-in-javascript-b8e4a0d849e1) |
+|  [slugifyGH](./strings.slugifygh.md) | Similar to [slugify](./strings.slugify.md)<!-- -->, however uses GitHub's anchor naming rules for headings in markdown files (AFAICT). |
 |  [snake](./strings.snake.md) | Short for [kebab](./strings.kebab.md) using <code>_</code> as delimiter. |
 |  [splice](./strings.splice.md) | Forms a new strings which inserts given <code>insert</code> string into <code>src</code> string at <code>from</code> position and appends remaining <code>src</code> chars from original <code>to</code> position. If <code>from</code> and <code>to</code> are equal (<code>to</code> by default is), the operation is a pure insertion. If not, then some chars from <code>src</code> will be removed in the new string. If either position is negative, it'll be considered relative to the end of the <code>src</code>. |
+|  [str](./strings.str.md) | Helper for [format](./strings.format.md) which coerces <code>x</code> to a string. |
+|  [trim](./strings.trim.md) | Higher order trim function (both sides) with support for user defined trimmable characters (default: whitespace only). |
 |  [truncate](./strings.truncate.md) |  |
 |  [truncateLeft](./strings.truncateleft.md) |  |
+|  [truncateRight](./strings.truncateright.md) | Alias for [truncate](./strings.truncate.md) |
 |  [U16](./strings.u16.md) | 16bit hex conversion preset. Assumes unsigned inputs. |
 |  [U24](./strings.u24.md) | 24bit hex conversion preset. Assumes unsigned inputs. |
 |  [U32](./strings.u32.md) | 32bit hex conversion preset. Assumes unsigned inputs. |
@@ -50,7 +63,10 @@
 |  [U8](./strings.u8.md) | 8bit hex conversion preset. Assumes unsigned inputs. |
 |  [units](./strings.units.md) |  |
 |  [upper](./strings.upper.md) | Uppercase string formatter. |
+|  [UPPER](./strings.upper.md) | Object with ASCII uppercase characters as keys and their values set to true. All others undefined. |
+|  [uuid](./strings.uuid.md) | Returns UUID formatted string of given byte array from optional start index <code>i</code> (default: 0). Array must have min. length 16. |
 |  [wrap](./strings.wrap.md) | Returns a [Stringer](./strings.stringer.md) which wrap inputs with given <code>pad</code> string on both sides. |
+|  [WS](./strings.ws.md) | Object with whitespace characters as keys and their values set to true. All others undefined. |
 |  [Z2](./strings.z2.md) | Zero-padded 2 digit formatter. |
 |  [Z3](./strings.z3.md) | Zero-padded 3 digit formatter. |
 |  [Z4](./strings.z4.md) | Zero-padded 4 digit formatter. |

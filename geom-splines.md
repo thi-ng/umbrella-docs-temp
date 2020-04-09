@@ -19,6 +19,8 @@
 |  [cubicPointAt](./geom-splines.cubicpointat.md) | Same as thi.ng/vectors/mixCubic |
 |  [cubicSplitAt](./geom-splines.cubicsplitat.md) |  |
 |  [cubicTangentAt](./geom-splines.cubictangentat.md) |  |
+|  [openCubicFromBreakPoints](./geom-splines.opencubicfrombreakpoints.md) |  |
+|  [openCubicFromControlPoints](./geom-splines.opencubicfromcontrolpoints.md) |  |
 |  [quadraticBounds](./geom-splines.quadraticbounds.md) |  |
 |  [quadraticFromLine](./geom-splines.quadraticfromline.md) |  |
 |  [quadraticPointAt](./geom-splines.quadraticpointat.md) | Same as thi.ng/vectors/mixQuadratic |
@@ -26,6 +28,8 @@
 |  [quadraticSplitNearPoint](./geom-splines.quadraticsplitnearpoint.md) |  |
 |  [quadraticTangentAt](./geom-splines.quadratictangentat.md) |  |
 |  [sampleCubic](./geom-splines.samplecubic.md) |  |
+|  [sampleCubicArray](./geom-splines.samplecubicarray.md) |  |
 |  [sampleQuadratic](./geom-splines.samplequadratic.md) |  |
+|  [sampleQuadraticArray](./geom-splines.samplequadraticarray.md) |  |
 |  [splitCubicNearPoint](./geom-splines.splitcubicnearpoint.md) |  |
 

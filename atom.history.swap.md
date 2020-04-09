@@ -9,14 +9,14 @@
 <b>Signature:</b>
 
 ```typescript
-swap(fn: SwapFn<T>, ...args: any[]): T;
+swap(fn: SwapFn<T, T>, ...args: any[]): T;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  fn | <code>SwapFn&lt;T&gt;</code> | update function |
+|  fn | <code>SwapFn&lt;T, T&gt;</code> | update function |
 |  args | <code>any[]</code> | additional args passed to <code>fn</code> |
 
 <b>Returns:</b>

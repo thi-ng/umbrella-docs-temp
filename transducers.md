@@ -49,7 +49,8 @@
 |  [count(xs)](./transducers.count_1.md) |  |
 |  [count(offset, xs)](./transducers.count_2.md) |  |
 |  [count(offset, step, xs)](./transducers.count_3.md) |  |
-|  [cycle(input)](./transducers.cycle.md) | Iterator which yields an infinite repetition of given <code>input</code> iterable's values. Produces no values if <code>input</code> is empty. |
+|  [curve(start, end, steps, rate)](./transducers.curve.md) | Iterator producing an exponential curve (with adjustable curvature) between <code>start</code> and <code>end</code> values over <code>num</code> steps. This is the exponential equivalent of [line](./transducers.line.md)<!-- -->. |
+|  [cycle(input, num)](./transducers.cycle.md) | Iterator which yields an infinite repetition of given <code>input</code> iterable's values. Produces no values if <code>input</code> is empty. If <code>num</code> is given, only that many cycles will be emitted. |
 |  [dedupe(equiv)](./transducers.dedupe.md) |  |
 |  [dedupe(src)](./transducers.dedupe_1.md) |  |
 |  [dedupe(equiv, src)](./transducers.dedupe_2.md) |  |
@@ -65,6 +66,9 @@
 |  [dropWhile(pred)](./transducers.dropwhile.md) |  |
 |  [dropWhile(src)](./transducers.dropwhile_1.md) |  |
 |  [dropWhile(pred, src)](./transducers.dropwhile_2.md) |  |
+|  [dup(x)](./transducers.dup.md) | Returns the concatentation of <code>x</code> with itself. If input is an iterable, it MUST be finite! |
+|  [dup(x)](./transducers.dup_1.md) |  |
+|  [dup(x)](./transducers.dup_2.md) |  |
 |  [duplicate(n)](./transducers.duplicate.md) |  |
 |  [duplicate(n, src)](./transducers.duplicate_1.md) |  |
 |  [every(pred)](./transducers.every.md) | Reducer which applies optional <code>pred</code> function to each value and terminates early if the predicate returned a falsy result. If no predicate is given the values are checked via JS native truthiness rules (i.e. 0, "", false, null, undefined are all falsy).<!-- -->Returns true if \*all\* values passed test. |
@@ -109,7 +113,7 @@
 |  [interpolateLinear(n, src)](./transducers.interpolatelinear_1.md) |  |
 |  [interpose(sep)](./transducers.interpose.md) |  |
 |  [interpose(sep, src)](./transducers.interpose_1.md) |  |
-|  [iterate(fn, seed)](./transducers.iterate.md) | Yields an infinite iterator of the inductive sequence:<code>f(x+1) = f(f(x))</code> |
+|  [iterate(fn, seed, num)](./transducers.iterate.md) | Yields an infinite iterator of the inductive sequence:<code>f(x+1) = f(f(x))</code> |
 |  [iterator(xform, xs)](./transducers.iterator.md) | Takes a transducer and input iterable. Returns iterator of transformed results. |
 |  [iterator1(xform, xs)](./transducers.iterator1.md) | Optimized version of [iterator()](./transducers.iterator.md) for transducers which are guaranteed to:<!-- -->1) Only produce none or a single result per input 2) Do not require a <code>completion</code> reduction step |
 |  [juxtR(r1)](./transducers.juxtr.md) | Composes a new reducer from the ones given, in order to produce multiple reductions in parallel from the same input. |
@@ -133,7 +137,7 @@
 |  [mapIndexed(fn, offset)](./transducers.mapindexed.md) | Transducer. Similar to [map()](./transducers.map.md)<!-- -->, but given <code>fn</code> takes two arguments: <code>index</code> and <code>value</code> to transform. |
 |  [mapIndexed(fn, src)](./transducers.mapindexed_1.md) |  |
 |  [mapIndexed(fn, offset, src)](./transducers.mapindexed_2.md) |  |
-|  [mapKeys(keys, copy)](./transducers.mapkeys.md) | Takes a <code>keys</code> object of transformation functions and returns a transducer which expects object values. For each input <code>x</code> then calls transformation functions for each key <code>k</code> in <code>keys</code>. I.e. executes <code>keys[k](x[k])</code> and reassigns result. By default creates a shallow copy of each <code>x</code>. |
+|  [mapKeys(keys, copy)](./transducers.mapkeys.md) | Takes a <code>keys</code> object of transformation functions and returns a transducer which expects object values. For each input <code>x</code> then calls transformation functions for each key <code>k</code> in <code>keys</code>. I.e. executes <code>keys[k](x[k], x)</code> and reassigns result. By default creates a shallow copy of each <code>x</code>. |
 |  [mapKeys(keys, src)](./transducers.mapkeys_1.md) |  |
 |  [mapKeys(keys, copy, src)](./transducers.mapkeys_2.md) |  |
 |  [mapNth(n, fn)](./transducers.mapnth.md) | Transducer. Similar to [map()](./transducers.map.md)<!-- -->, but only transforms every <code>n</code>-th input value and passes intermediate values unchanged downstream. |
@@ -185,6 +189,9 @@
 |  [page(page, src)](./transducers.page_1.md) |  |
 |  [page(page, pageLen, src)](./transducers.page_2.md) |  |
 |  [pairs(x)](./transducers.pairs.md) | Iterator yielding key-value pairs of given object's own properties and their values. Same as <code>zip(keys(x), vals(x))</code>. |
+|  [palindrome(x)](./transducers.palindrome.md) | Returns the concatentation of <code>x</code> with its own duplicate in reverse order. If input is an iterable, it MUST be finite! |
+|  [palindrome(x)](./transducers.palindrome_1.md) |  |
+|  [palindrome(x)](./transducers.palindrome_2.md) |  |
 |  [partition(size)](./transducers.partition.md) | Transducer to create overlapping and non-overlapping sliding windows of inputs. Window size and progress speed can be configured via <code>size</code> and <code>step</code>. By default only full / complete partitions are emitted. However, if <code>all</code> is true, the last partition is allowed to be incomplete / partially filled only. |
 |  [partition(size, all)](./transducers.partition_1.md) |  |
 |  [partition(size, step)](./transducers.partition_2.md) |  |
@@ -204,6 +211,10 @@
 |  [partitionSync(keys, opts)](./transducers.partitionsync.md) | Transducer intended for synchronization and provenance tracking of possibly previously merged inputs. Partitions the input into labeled tuple objects with the object keys obtained from the user provided <code>keyfn</code> (which is applied to each input value). |
 |  [partitionSync(keys, src)](./transducers.partitionsync_1.md) |  |
 |  [partitionSync(keys, opts, src)](./transducers.partitionsync_2.md) |  |
+|  [partitionTime(period)](./transducers.partitiontime.md) | Transducer. Yields tumbling, non-overlapping windows/partitions of input values, with the window size defined by given realtime <code>period</code> (in milliseconds). |
+|  [partitionTime(period, src)](./transducers.partitiontime_1.md) |  |
+|  [peek()](./transducers.peek.md) | Transducer version of , i.e. extracts the last item of an array. |
+|  [peek(src)](./transducers.peek_1.md) |  |
 |  [permutations(a)](./transducers.permutations.md) | Iterator yielding the Cartesian Product of the given iterables. |
 |  [permutations(a, b)](./transducers.permutations_1.md) |  |
 |  [permutations(a, b, c)](./transducers.permutations_2.md) |  |
@@ -213,6 +224,8 @@
 |  [pluck(key, src)](./transducers.pluck_1.md) |  |
 |  [push()](./transducers.push.md) |  |
 |  [push(xs)](./transducers.push_1.md) |  |
+|  [pushSort(cmp)](./transducers.pushsort.md) | Similar to [push()](./transducers.push.md)<!-- -->, but sorts result array upon completion using optionally given comparator (default [compare](./compare.compare.md)<!-- -->). |
+|  [pushSort(cmp, xs)](./transducers.pushsort_1.md) |  |
 |  [range()](./transducers.range.md) |  |
 |  [range(to)](./transducers.range_1.md) |  |
 |  [range(from, to)](./transducers.range_2.md) |  |
@@ -252,6 +265,7 @@
 |  [some(pred)](./transducers.some.md) | Similar to [every()](./transducers.every.md) reducer, but only requires at least 1 value to succeed predicate test (and then immediately terminates with <code>true</code> as result). |
 |  [some(xs)](./transducers.some_1.md) |  |
 |  [some(pred, xs)](./transducers.some_2.md) |  |
+|  [sortedKeys(x, cmp)](./transducers.sortedkeys.md) | Syntax sugar for <code>Object.keys(x).sort()</code> with support for custom comparator (default: [compare](./compare.compare.md)<!-- -->) and yielding iterator of sorted keys. |
 |  [str(sep)](./transducers.str.md) |  |
 |  [str(sep, xs)](./transducers.str_1.md) |  |
 |  [streamShuffle(n, maxSwaps)](./transducers.streamshuffle.md) | Transducer. Creates internal sliding window of <code>n</code> values and performs <code>maxSwaps</code> random shuffle operations for each new value and yields values in shuffled order. By default <code>maxSwaps</code> is the same as the chosen chunk size. |
@@ -314,6 +328,7 @@
 |  [FilterFuzzyOpts](./transducers.filterfuzzyopts.md) |  |
 |  [GroupByOpts](./transducers.groupbyopts.md) |  |
 |  [IReducible](./transducers.ireducible.md) |  |
+|  [IXform](./transducers.ixform.md) | Interface for types able to provide some internal functionality (or derive some related transformation) as [Transducer](./transducers.transducer.md)<!-- -->. Implementations of this interface can be directly passed to all functions in this package where a <code>Transducer</code> arg is expected. |
 |  [PartitionSyncOpts](./transducers.partitionsyncopts.md) |  |
 |  [Reducer](./transducers.reducer.md) |  |
 |  [SortOpts](./transducers.sortopts.md) |  |
@@ -327,7 +342,6 @@
 |  Variable | Description |
 |  --- | --- |
 |  [$$reduce](./transducers.__reduce.md) |  |
-|  [$iter](./transducers._iter.md) | Helper function used by various transducers to wrap themselves as transforming iterators. Delegates to [iterator1()](./transducers.iterator1.md) by default. |
 |  [buildKernel1d](./transducers.buildkernel1d.md) |  |
 |  [buildKernel2d](./transducers.buildkernel2d.md) |  |
 |  [cat](./transducers.cat.md) | Transducer to concatenate iterable values. Iterates over each input and emits individual values down stream, therefore removing one level of nesting from the input. |
@@ -339,6 +353,7 @@
 |  [groupBinary](./transducers.groupbinary.md) | Creates a bottom-up, unbalanced binary tree of desired depth and choice of data structures. Any value can be indexed, as long as a numeric representation (key) can be obtained. This numeric key is produced by the supplied <code>key</code> function. IMPORTANT: the returned values MUST be unsigned and less than the provided bit length (i.e. <code>0 .. (2^bits) - 1</code> range).<!-- -->By default the tree is constructed using plain objects for branches, with left branches stored as "l" and right ones as "r". The original values are stored at the lowest tree level using a customizable nested reducer. By default leaves are collected in arrays (using the [push()](./transducers.push.md) reducer), but any suitable reducer can be used (e.g. [conj()](./transducers.conj.md) to collect values into sets).<!-- -->Index by lowest 4-bits of ID value: |
 |  [isReduced](./transducers.isreduced.md) |  |
 |  [keySelector](./transducers.keyselector.md) |  |
+|  [line](./transducers.line.md) | Iterator yielding <code>steps</code> + 1 interpolated values on a line in the closed <code>[start .. end]</code> interval. |
 |  [lookup1d](./transducers.lookup1d.md) | Returns function accepting a single index arg used to lookup value in given array. No bounds checks are done. |
 |  [lookup2d](./transducers.lookup2d.md) | Returns function accepting a single <code>[x, y]</code> index tuple, used to lookup value in given array. Useful for transducers processing 2D data. |
 |  [lookup3d](./transducers.lookup3d.md) | Same as [lookup2d](./transducers.lookup2d.md)<!-- -->, but for 3D data. The index ordering of the source data MUST be in Z, Y, X order (i.e. a stack of row major 2D slices). No bounds checks are done. |
@@ -366,4 +381,5 @@
 |  [Transducer](./transducers.transducer.md) |  |
 |  [TransformFn](./transducers.transformfn.md) |  |
 |  [TransformSubSpec](./transducers.transformsubspec.md) |  |
+|  [TxLike](./transducers.txlike.md) |  |
 

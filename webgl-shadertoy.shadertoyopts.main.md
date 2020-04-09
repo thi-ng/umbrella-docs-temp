@@ -9,5 +9,5 @@ Main user shader function
 <b>Signature:</b>
 
 ```typescript
-main: MainImageFn;
+main: MainImageFn<U>;
 ```

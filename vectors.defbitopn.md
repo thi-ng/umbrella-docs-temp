@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-defBitOpN: (op: string, signed?: boolean) => [MultiVecOpVN, import("@thi.ng/api").Fn3<import("../api").Vec | null, import("@thi.ng/api").ArrayLikeIterable<number>, number, import("../api").Vec>, import("@thi.ng/api").Fn3<import("../api").Vec | null, import("@thi.ng/api").ArrayLikeIterable<number>, number, import("../api").Vec>, import("@thi.ng/api").Fn3<import("../api").Vec | null, import("@thi.ng/api").ArrayLikeIterable<number>, number, import("../api").Vec>]
+defBitOpN: (op: string, signed?: boolean) => [import("../api").MultiVecOpImpl<import("@thi.ng/api").Fn3<import("../api").Vec | null, import("@thi.ng/api").ArrayLikeIterable<number>, number, import("../api").Vec>>, import("@thi.ng/api").Fn3<import("../api").Vec | null, import("@thi.ng/api").ArrayLikeIterable<number>, number, import("../api").Vec>, import("@thi.ng/api").Fn3<import("../api").Vec | null, import("@thi.ng/api").ArrayLikeIterable<number>, number, import("../api").Vec>, import("@thi.ng/api").Fn3<import("../api").Vec | null, import("@thi.ng/api").ArrayLikeIterable<number>, number, import("../api").Vec>]
 ```

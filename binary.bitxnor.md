@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-bitXnor: (n: number, a: number, b: number) => number
+bitXnor: (a: number, b: number) => number
 ```

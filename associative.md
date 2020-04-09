@@ -23,6 +23,12 @@
 
 |  Function | Description |
 |  --- | --- |
+|  [defEquivMap(pairs, opts)](./associative.defequivmap.md) |  |
+|  [defEquivMap(obj, opts)](./associative.defequivmap_1.md) |  |
+|  [defHashMap(pairs, opts)](./associative.defhashmap.md) |  |
+|  [defHashMap(obj, opts)](./associative.defhashmap_1.md) |  |
+|  [defSortedMap(pairs, opts)](./associative.defsortedmap.md) |  |
+|  [defSortedMap(obj, opts)](./associative.defsortedmap_1.md) |  |
 |  [differenceR()](./associative.differencer.md) | Reducer version of [difference](./associative.difference.md)<!-- -->. If <code>src</code> is given returns the reduced difference of given inputs, else merely returns a reducer to be used with [reduce()](./transducers.reduce.md) / [transduce()](./transducers.transduce.md) functions. |
 |  [differenceR(src)](./associative.differencer_1.md) |  |
 |  [dissoc(map, keys)](./associative.dissoc.md) |  |
@@ -51,6 +57,10 @@
 |  --- | --- |
 |  [commonKeysMap](./associative.commonkeysmap.md) | Like [commonKeysObj](./associative.commonkeysobj.md)<!-- -->, but for ES6 Maps. |
 |  [commonKeysObj](./associative.commonkeysobj.md) | Returns array of keys present in both args, i.e. the set intersection of the given objects' key / property sets. |
+|  [defArraySet](./associative.defarrayset.md) |  |
+|  [defLLSet](./associative.defllset.md) |  |
+|  [defSortedSet](./associative.defsortedset.md) |  |
+|  [defSparseSet](./associative.defsparseset.md) | Creates a new sparse set with given max. capacity (max ID + 1) and chooses most memory efficient implementation, e.g. if <code>n</code> &lt;<!-- -->= 256 returns a [SparseSet8](./associative.sparseset8.md) instance. |
 |  [difference](./associative.difference.md) | Computes the difference of sets <code>a - b</code> and writes results to new set or optionally given set <code>out</code> (assumed to be empty for correct results). |
 |  [dissocObj](./associative.dissocobj.md) |  |
 |  [indexed](./associative.indexed.md) | Takes an iterable of plain objects and array of indexing keys. Calls [selectKeysObj](./associative.selectkeysobj.md) on each value and uses returned objects as new keys to group original values. Returns a new [EquivMap](./associative.equivmap.md) of sets. |
@@ -77,7 +87,6 @@ renameKeysObj({a: 1, b: 2, c: 3}, {a: "b", b: "a", c: "cc"})
  |
 |  [selectKeysMap](./associative.selectkeysmap.md) | Returns a new map of same type as input only containing given keys (and only if they existed in the original map). |
 |  [selectKeysObj](./associative.selectkeysobj.md) | Returns a new object only containing given keys (and only if they existed in the original). |
-|  [sparseSet](./associative.sparseset.md) | Creates a new sparse set with given max. capacity (max ID + 1) and chooses most memory efficient implementation, e.g. if <code>n</code> &lt;<!-- -->= 256 returns a [SparseSet8](./associative.sparseset8.md) instance. |
 |  [union](./associative.union.md) | Computes union of sets <code>a</code> and <code>b</code> and writes results to new set or optionally given set <code>out</code> (assumed to be empty for correct results). |
 |  [withoutKeysMap](./associative.withoutkeysmap.md) |  |
 |  [withoutKeysObj](./associative.withoutkeysobj.md) |  |

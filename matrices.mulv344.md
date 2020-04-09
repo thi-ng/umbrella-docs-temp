@@ -4,10 +4,10 @@
 
 ## mulV344 variable
 
-Multiplies 4x4 matrix `m` with 3D vector `v` and assumes `w=1`<!-- -->, i.e. the vector is interpreted as `[x,y,z,1]`<!-- -->. After transformation applies perspective divide of the resulting XYZ components.
+Multiplies 4x4 matrix `m` with 3D vector `v` and assumes initial `w=1`<!-- -->, i.e. the vector is interpreted as `[x,y,z,1]`<!-- -->. After transformation applies perspective divide of the resulting XYZ components. Returns `undefined` if the computed perspective divisor is zero (and would cause `NaN` results).
 
 <b>Signature:</b>
 
 ```typescript
-mulV344: MatOpMV
+mulV344: (out: Vec | null, m: import("@thi.ng/api").ArrayLikeIterable<number>, v: import("@thi.ng/api").ArrayLikeIterable<number>) => Vec | undefined
 ```

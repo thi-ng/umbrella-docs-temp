@@ -4,6 +4,8 @@
 
 ## TextureOpts.width property
 
+Texture width in pixels. Only used if `image` is null or a typed array.
+
 <b>Signature:</b>
 
 ```typescript

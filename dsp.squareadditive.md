@@ -4,10 +4,10 @@
 
 ## squareAdditive variable
 
-Interactive graph of this oscillator: 
+Interactive graph of this oscillator: [https://www.desmos.com/calculator/irugw6gnhy](https://www.desmos.com/calculator/irugw6gnhy)
 
 <b>Signature:</b>
 
 ```typescript
-squareAdditive: (n?: number) => (phase: number, freq: number, amp?: number, dc?: number) => number
+squareAdditive: (n?: number) => StatelessOscillator
 ```

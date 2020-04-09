@@ -4,6 +4,14 @@
 
 ## morton package
 
+## Classes
+
+|  Class | Description |
+|  --- | --- |
+|  [ZCurve](./morton.zcurve.md) | Z-Curve encoder/decoder and optimized bbox range extraction for arbitrary dimensions (<!-- -->&gt;<!-- -->= 2). Supports max. 32bit per-component value range and resulting Morton codes encoded as <code>BigInt</code>. |
+|  [ZCurve2](./morton.zcurve2.md) |  |
+|  [ZCurve3](./morton.zcurve3.md) |  |
+
 ## Variables
 
 |  Variable | Description |

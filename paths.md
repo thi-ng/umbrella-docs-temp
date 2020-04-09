@@ -8,115 +8,119 @@
 
 |  Function | Description |
 |  --- | --- |
-|  [deleteInT(state, path)](./paths.deleteint.md) | Type checked version of [deleteIn](./paths.deletein.md)<!-- -->. |
-|  [deleteInT(state, path)](./paths.deleteint_1.md) |  |
-|  [deleteInT(state, path)](./paths.deleteint_2.md) |  |
-|  [deleteInT(state, path)](./paths.deleteint_3.md) |  |
-|  [deleteInT(state, path)](./paths.deleteint_4.md) |  |
-|  [deleteInT(state, path)](./paths.deleteint_5.md) |  |
-|  [deleteInT(state, path)](./paths.deleteint_6.md) |  |
-|  [deleteInT(state, path)](./paths.deleteint_7.md) |  |
-|  [getInT(state, path)](./paths.getint.md) | Type checked version of [getIn](./paths.getin.md)<!-- -->. |
-|  [getInT(state, path)](./paths.getint_9.md) |  |
-|  [getInT(state, path)](./paths.getint_1.md) |  |
-|  [getInT(state, path)](./paths.getint_2.md) |  |
-|  [getInT(state, path)](./paths.getint_3.md) |  |
-|  [getInT(state, path)](./paths.getint_4.md) |  |
-|  [getInT(state, path)](./paths.getint_5.md) |  |
-|  [getInT(state, path)](./paths.getint_6.md) |  |
-|  [getInT(state, path)](./paths.getint_7.md) |  |
-|  [getInT(state, path)](./paths.getint_8.md) |  |
-|  [getterT(path)](./paths.gettert.md) | Type checked version of [getter](./paths.getter.md)<!-- -->. |
-|  [getterT(path)](./paths.gettert_9.md) |  |
-|  [getterT(path)](./paths.gettert_1.md) |  |
-|  [getterT(path)](./paths.gettert_2.md) |  |
-|  [getterT(path)](./paths.gettert_3.md) |  |
-|  [getterT(path)](./paths.gettert_4.md) |  |
-|  [getterT(path)](./paths.gettert_5.md) |  |
-|  [getterT(path)](./paths.gettert_6.md) |  |
-|  [getterT(path)](./paths.gettert_7.md) |  |
-|  [getterT(path)](./paths.gettert_8.md) |  |
-|  [mutatorT(path)](./paths.mutatort.md) | Type checked version of [mutator](./paths.mutator.md)<!-- -->. |
-|  [mutatorT(path)](./paths.mutatort_9.md) |  |
-|  [mutatorT(path)](./paths.mutatort_1.md) |  |
-|  [mutatorT(path)](./paths.mutatort_2.md) |  |
-|  [mutatorT(path)](./paths.mutatort_3.md) |  |
-|  [mutatorT(path)](./paths.mutatort_4.md) |  |
-|  [mutatorT(path)](./paths.mutatort_5.md) |  |
-|  [mutatorT(path)](./paths.mutatort_6.md) |  |
-|  [mutatorT(path)](./paths.mutatort_7.md) |  |
-|  [mutatorT(path)](./paths.mutatort_8.md) |  |
-|  [mutInT(state, path, val)](./paths.mutint.md) | Type checked version of [mutIn](./paths.mutin.md)<!-- -->. |
-|  [mutInT(state, path, val)](./paths.mutint_9.md) |  |
-|  [mutInT(state, path, val)](./paths.mutint_1.md) |  |
-|  [mutInT(state, path, val)](./paths.mutint_2.md) |  |
-|  [mutInT(state, path, val)](./paths.mutint_3.md) |  |
-|  [mutInT(state, path, val)](./paths.mutint_4.md) |  |
-|  [mutInT(state, path, val)](./paths.mutint_5.md) |  |
-|  [mutInT(state, path, val)](./paths.mutint_6.md) |  |
-|  [mutInT(state, path, val)](./paths.mutint_7.md) |  |
-|  [mutInT(state, path, val)](./paths.mutint_8.md) |  |
-|  [setInT(state, path, val)](./paths.setint.md) | Type checked version of [setIn](./paths.setin.md)<!-- -->. |
-|  [setInT(state, path, val)](./paths.setint_9.md) |  |
-|  [setInT(state, path, val)](./paths.setint_1.md) |  |
-|  [setInT(state, path, val)](./paths.setint_2.md) |  |
-|  [setInT(state, path, val)](./paths.setint_3.md) |  |
-|  [setInT(state, path, val)](./paths.setint_4.md) |  |
-|  [setInT(state, path, val)](./paths.setint_5.md) |  |
-|  [setInT(state, path, val)](./paths.setint_6.md) |  |
-|  [setInT(state, path, val)](./paths.setint_7.md) |  |
-|  [setInT(state, path, val)](./paths.setint_8.md) |  |
-|  [setterT(path)](./paths.settert.md) | Type checked version of [setter](./paths.setter.md)<!-- -->. |
-|  [setterT(path)](./paths.settert_9.md) |  |
-|  [setterT(path)](./paths.settert_1.md) |  |
-|  [setterT(path)](./paths.settert_2.md) |  |
-|  [setterT(path)](./paths.settert_3.md) |  |
-|  [setterT(path)](./paths.settert_4.md) |  |
-|  [setterT(path)](./paths.settert_5.md) |  |
-|  [setterT(path)](./paths.settert_6.md) |  |
-|  [setterT(path)](./paths.settert_7.md) |  |
-|  [setterT(path)](./paths.settert_8.md) |  |
-|  [updateInT(state, path, fn)](./paths.updateint.md) | Type checked version of [updateIn](./paths.updatein.md)<!-- -->. |
-|  [updateInT(state, path, fn, args)](./paths.updateint_9.md) |  |
-|  [updateInT(state, path, fn, args)](./paths.updateint_1.md) |  |
-|  [updateInT(state, path, fn, args)](./paths.updateint_2.md) |  |
-|  [updateInT(state, path, fn, args)](./paths.updateint_3.md) |  |
-|  [updateInT(state, path, fn, args)](./paths.updateint_4.md) |  |
-|  [updateInT(state, path, fn, args)](./paths.updateint_5.md) |  |
-|  [updateInT(state, path, fn, args)](./paths.updateint_6.md) |  |
-|  [updateInT(state, path, fn, args)](./paths.updateint_7.md) |  |
-|  [updateInT(state, path, fn, args)](./paths.updateint_8.md) |  |
-|  [updaterT(path, fn)](./paths.updatert.md) | Type checked version of [updater](./paths.updater.md)<!-- -->. |
-|  [updaterT(path, fn)](./paths.updatert_9.md) |  |
-|  [updaterT(path, fn)](./paths.updatert_1.md) |  |
-|  [updaterT(path, fn)](./paths.updatert_2.md) |  |
-|  [updaterT(path, fn)](./paths.updatert_3.md) |  |
-|  [updaterT(path, fn)](./paths.updatert_4.md) |  |
-|  [updaterT(path, fn)](./paths.updatert_5.md) |  |
-|  [updaterT(path, fn)](./paths.updatert_6.md) |  |
-|  [updaterT(path, fn)](./paths.updatert_7.md) |  |
-|  [updaterT(path, fn)](./paths.updatert_8.md) |  |
+|  [defGetter(path)](./paths.defgetter.md) | Creates getter function for given nested lookup path. Returns function which accepts single object and returns value at given path. |
+|  [defGetter(path)](./paths.defgetter_9.md) |  |
+|  [defGetter(path)](./paths.defgetter_1.md) |  |
+|  [defGetter(path)](./paths.defgetter_2.md) |  |
+|  [defGetter(path)](./paths.defgetter_3.md) |  |
+|  [defGetter(path)](./paths.defgetter_4.md) |  |
+|  [defGetter(path)](./paths.defgetter_5.md) |  |
+|  [defGetter(path)](./paths.defgetter_6.md) |  |
+|  [defGetter(path)](./paths.defgetter_7.md) |  |
+|  [defGetter(path)](./paths.defgetter_8.md) |  |
+|  [defMutator(path)](./paths.defmutator.md) | Higher-order function, similar to . Returns a function, which when called, mutates given object/array at given path location. |
+|  [defMutator(path)](./paths.defmutator_9.md) |  |
+|  [defMutator(path)](./paths.defmutator_1.md) |  |
+|  [defMutator(path)](./paths.defmutator_2.md) |  |
+|  [defMutator(path)](./paths.defmutator_3.md) |  |
+|  [defMutator(path)](./paths.defmutator_4.md) |  |
+|  [defMutator(path)](./paths.defmutator_5.md) |  |
+|  [defMutator(path)](./paths.defmutator_6.md) |  |
+|  [defMutator(path)](./paths.defmutator_7.md) |  |
+|  [defMutator(path)](./paths.defmutator_8.md) |  |
+|  [defSetter(path)](./paths.defsetter.md) | Type checked version of [defSetterUnsafe](./paths.defsetterunsafe.md)<!-- -->. Only the first 8 path levels are type checked. |
+|  [defSetter(path)](./paths.defsetter_9.md) |  |
+|  [defSetter(path)](./paths.defsetter_1.md) |  |
+|  [defSetter(path)](./paths.defsetter_2.md) |  |
+|  [defSetter(path)](./paths.defsetter_3.md) |  |
+|  [defSetter(path)](./paths.defsetter_4.md) |  |
+|  [defSetter(path)](./paths.defsetter_5.md) |  |
+|  [defSetter(path)](./paths.defsetter_6.md) |  |
+|  [defSetter(path)](./paths.defsetter_7.md) |  |
+|  [defSetter(path)](./paths.defsetter_8.md) |  |
+|  [defUpdater(path, fn)](./paths.defupdater.md) | Type checked version of [defUpdaterUnsafe](./paths.defupdaterunsafe.md)<!-- -->. Only the first 8 path levels are type checked. |
+|  [defUpdater(path, fn)](./paths.defupdater_9.md) |  |
+|  [defUpdater(path, fn)](./paths.defupdater_1.md) |  |
+|  [defUpdater(path, fn)](./paths.defupdater_2.md) |  |
+|  [defUpdater(path, fn)](./paths.defupdater_3.md) |  |
+|  [defUpdater(path, fn)](./paths.defupdater_4.md) |  |
+|  [defUpdater(path, fn)](./paths.defupdater_5.md) |  |
+|  [defUpdater(path, fn)](./paths.defupdater_6.md) |  |
+|  [defUpdater(path, fn)](./paths.defupdater_7.md) |  |
+|  [defUpdater(path, fn)](./paths.defupdater_8.md) |  |
+|  [deleteIn(state, path)](./paths.deletein.md) | Uses  and returns updated state with key for given path removed. Does not modify original state. Returns <code>undefined</code> if <code>path</code> is an empty string or array. |
+|  [deleteIn(state, path)](./paths.deletein_1.md) |  |
+|  [deleteIn(state, path)](./paths.deletein_2.md) |  |
+|  [deleteIn(state, path)](./paths.deletein_3.md) |  |
+|  [deleteIn(state, path)](./paths.deletein_4.md) |  |
+|  [deleteIn(state, path)](./paths.deletein_5.md) |  |
+|  [deleteIn(state, path)](./paths.deletein_6.md) |  |
+|  [deleteIn(state, path)](./paths.deletein_7.md) |  |
+|  [getIn(state, path)](./paths.getin.md) | Type checked, immediate use getter, i.e. same as: <code>defGetter(path)(state)</code>. |
+|  [getIn(state, path)](./paths.getin_9.md) |  |
+|  [getIn(state, path)](./paths.getin_1.md) |  |
+|  [getIn(state, path)](./paths.getin_2.md) |  |
+|  [getIn(state, path)](./paths.getin_3.md) |  |
+|  [getIn(state, path)](./paths.getin_4.md) |  |
+|  [getIn(state, path)](./paths.getin_5.md) |  |
+|  [getIn(state, path)](./paths.getin_6.md) |  |
+|  [getIn(state, path)](./paths.getin_7.md) |  |
+|  [getIn(state, path)](./paths.getin_8.md) |  |
+|  [mutIn(state, path, val)](./paths.mutin.md) | Type checked, immediate use mutator, i.e. same as: <code>defMutator(path)(state, val)</code>. |
+|  [mutIn(state, path, val)](./paths.mutin_9.md) |  |
+|  [mutIn(state, path, val)](./paths.mutin_1.md) |  |
+|  [mutIn(state, path, val)](./paths.mutin_2.md) |  |
+|  [mutIn(state, path, val)](./paths.mutin_3.md) |  |
+|  [mutIn(state, path, val)](./paths.mutin_4.md) |  |
+|  [mutIn(state, path, val)](./paths.mutin_5.md) |  |
+|  [mutIn(state, path, val)](./paths.mutin_6.md) |  |
+|  [mutIn(state, path, val)](./paths.mutin_7.md) |  |
+|  [mutIn(state, path, val)](./paths.mutin_8.md) |  |
+|  [mutInManyUnsafe(state, p1, v1)](./paths.mutinmanyunsafe.md) | Similar to [mutInUnsafe](./paths.mutinunsafe.md)<!-- -->, but takes any number of path-value pairs as args and applies them in sequence using <code>mutInUnsafe()</code>. |
+|  [mutInManyUnsafe(state, p1, v1, p2, v2)](./paths.mutinmanyunsafe_1.md) |  |
+|  [mutInManyUnsafe(state, p1, v1, p2, v2, p3, v3)](./paths.mutinmanyunsafe_2.md) |  |
+|  [mutInManyUnsafe(state, p1, v1, p2, v2, p3, v3, p4, v4)](./paths.mutinmanyunsafe_3.md) |  |
+|  [mutInManyUnsafe(state, p1, v1, p2, v2, p3, v3, p4, v4, xs)](./paths.mutinmanyunsafe_4.md) |  |
+|  [setIn(state, path, val)](./paths.setin.md) | Type checked, immediate use setter, i.e. same as: <code>defSetterUnsafe(path)(state, val)</code>. |
+|  [setIn(state, path, val)](./paths.setin_9.md) |  |
+|  [setIn(state, path, val)](./paths.setin_1.md) |  |
+|  [setIn(state, path, val)](./paths.setin_2.md) |  |
+|  [setIn(state, path, val)](./paths.setin_3.md) |  |
+|  [setIn(state, path, val)](./paths.setin_4.md) |  |
+|  [setIn(state, path, val)](./paths.setin_5.md) |  |
+|  [setIn(state, path, val)](./paths.setin_6.md) |  |
+|  [setIn(state, path, val)](./paths.setin_7.md) |  |
+|  [setIn(state, path, val)](./paths.setin_8.md) |  |
+|  [setInManyUnsafe(state, p1, v1)](./paths.setinmanyunsafe.md) | Similar to [setInUnsafe](./paths.setinunsafe.md)<!-- -->, but takes any number of path-value pairs as args and applies them in sequence by calling <code>setIn()</code> for each. |
+|  [setInManyUnsafe(state, p1, v1, p2, v2)](./paths.setinmanyunsafe_1.md) |  |
+|  [setInManyUnsafe(state, p1, v1, p2, v2, p3, v3)](./paths.setinmanyunsafe_2.md) |  |
+|  [setInManyUnsafe(state, p1, v1, p2, v2, p3, v3, p4, v4)](./paths.setinmanyunsafe_3.md) |  |
+|  [setInManyUnsafe(state, p1, v1, p2, v2, p3, v3, p4, v4, xs)](./paths.setinmanyunsafe_4.md) |  |
+|  [updateIn(state, path, fn)](./paths.updatein.md) | Type checked version of . Only the first 8 path levels are type checked. |
+|  [updateIn(state, path, fn, args)](./paths.updatein_9.md) |  |
+|  [updateIn(state, path, fn, args)](./paths.updatein_1.md) |  |
+|  [updateIn(state, path, fn, args)](./paths.updatein_2.md) |  |
+|  [updateIn(state, path, fn, args)](./paths.updatein_3.md) |  |
+|  [updateIn(state, path, fn, args)](./paths.updatein_4.md) |  |
+|  [updateIn(state, path, fn, args)](./paths.updatein_5.md) |  |
+|  [updateIn(state, path, fn, args)](./paths.updatein_6.md) |  |
+|  [updateIn(state, path, fn, args)](./paths.updatein_7.md) |  |
+|  [updateIn(state, path, fn, args)](./paths.updatein_8.md) |  |
 
 ## Variables
 
 |  Variable | Description |
 |  --- | --- |
-|  [deleteIn](./paths.deletein.md) | Uses [updateIn](./paths.updatein.md) and returns updated state with key for given path removed. Does not modify original state.Returns <code>undefined</code> if <code>path</code> is an empty string or array.
-```
-deleteIn({ a: { b: { c: 23 } } }, "a.b.c");
-// { a: { b: { } } }
-
-```
- |
+|  [copy](./paths.copy.md) | Creates a shallow copy of given array, typed array or plain object. |
+|  [defGetterUnsafe](./paths.defgetterunsafe.md) | Unchecked version of . |
+|  [defMutatorUnsafe](./paths.defmutatorunsafe.md) | Unchecked version of . |
+|  [defSetterUnsafe](./paths.defsetterunsafe.md) | Composes a setter function for given nested update path. Optimized fast execution paths are provided for path lengths less up to 4. |
+|  [defUpdaterUnsafe](./paths.defupdaterunsafe.md) | Similar to [defSetterUnsafe](./paths.defsetterunsafe.md)<!-- -->, returns a function to update values at given <code>path</code> using provided update <code>fn</code>. Paths and the arguments given to the returned function are NOT type checked. |
+|  [deleteInUnsafe](./paths.deleteinunsafe.md) | Unchecked version of . Path can be given as string or tuple. |
 |  [exists](./paths.exists.md) | Takes an arbitrary object and lookup path. Descends into object along path and returns true if the full path exists (even if final leaf value is <code>null</code> or <code>undefined</code>). Checks are performed using <code>hasOwnProperty()</code>. |
-|  [getIn](./paths.getin.md) | Immediate use getter, i.e. same as: <code>getter(path)(state)</code>. |
-|  [getter](./paths.getter.md) | Composes a getter function for given nested lookup path. Optimized fast execution paths are provided for path lengths &lt;<!-- -->= 4. |
-|  [mutator](./paths.mutator.md) | Higher-order function, similar to [setter](./paths.setter.md)<!-- -->. Returns function which when called mutates given object/array at given path location. |
-|  [mutIn](./paths.mutin.md) | Immediate use mutator, i.e. same as: <code>mutator(path)(state, val)</code>. |
-|  [mutInMany](./paths.mutinmany.md) | Similar to [mutIn](./paths.mutin.md)<!-- -->, but takes any number of path-value pairs as args and applies them in sequence using <code>mutIn()</code>. All key paths must already be present in the given data structure until their penultimate key. |
-|  [setIn](./paths.setin.md) | Immediate use setter, i.e. same as: <code>setter(path)(state, val)</code>. |
-|  [setInMany](./paths.setinmany.md) | Similar to [setIn](./paths.setin.md)<!-- -->, but takes any number of path-value pairs as args and applies them in sequence by calling <code>setIn()</code> for each. |
-|  [setter](./paths.setter.md) | Composes a setter function for given nested update path. Optimized fast execution paths are provided for path lengths less up to 4. |
+|  [getInUnsafe](./paths.getinunsafe.md) | Unchecked version of . Returns <code>undefined</code> if path is invalid. |
+|  [mutInUnsafe](./paths.mutinunsafe.md) | Unchecked version of . |
+|  [setInUnsafe](./paths.setinunsafe.md) | Unchecked version of . |
 |  [toPath](./paths.topath.md) | Converts the given key path to canonical form (array).
 ```
 toPath("a.b.c");
@@ -130,27 +134,11 @@ toPath(["a", "b", "c"])
 
 ```
  |
-|  [updateIn](./paths.updatein.md) | Similar to [setIn](./paths.setin.md)<!-- -->, but applies given function to current path value (incl. any additional/optional arguments passed to <code>updateIn</code>) and uses result as new value. Does not modify original state (unless given function does so itself).
-```
-add = (x, y) => x + y;
-updateIn({ a: { b: { c: 23 } } }, "a.b.c", add, 10);
-// { a: { b: { c: 33 } } }
-
-```
- |
-|  [updater](./paths.updater.md) | Similar to [setter](./paths.setter.md)<!-- -->, returns a function to update values at given <code>path</code> using provided update <code>fn</code>. |
+|  [updateInUnsafe](./paths.updateinunsafe.md) | Similar to [setInUnsafe](./paths.setinunsafe.md)<!-- -->, but applies given function to current path value (incl. any additional/optional arguments passed to <code>updateIn</code>) and uses result as new value. Does not modify original state. |
 
 ## Type Aliases
 
 |  Type Alias | Description |
 |  --- | --- |
-|  [Path1](./paths.path1.md) |  |
-|  [Path2](./paths.path2.md) |  |
-|  [Path3](./paths.path3.md) |  |
-|  [Path4](./paths.path4.md) |  |
-|  [Path5](./paths.path5.md) |  |
-|  [Path6](./paths.path6.md) |  |
-|  [Path7](./paths.path7.md) |  |
-|  [Path8](./paths.path8.md) |  |
 |  [UpdateFn](./paths.updatefn.md) |  |
 

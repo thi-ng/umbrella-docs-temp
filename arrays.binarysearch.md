@@ -9,7 +9,7 @@ Returns the supposed index of `x` in pre-sorted array-like collection `buf`<!-- 
 <b>Signature:</b>
 
 ```typescript
-binarySearch: <A, B>(buf: ArrayLike<A>, x: A, key?: Fn<A, B>, cmp?: import("@thi.ng/api").Fn2<B, B, number>) => number
+binarySearch: <A, B>(buf: ArrayLike<A>, x: A, key?: Fn<A, B>, cmp?: import("@thi.ng/api").Fn2<B, B, number>, low?: number, high?: number) => number
 ```
 
 ## Remarks

@@ -11,3 +11,13 @@ Based on: [https://medium.com/@matthagemann/the-ultimate-way-to-slugify-a-url-st
 ```typescript
 slugify: Stringer<string>
 ```
+
+## Example
+
+
+```ts
+slugify("Me, myself (& ëye)!")
+// "me-myself-and-eye"
+
+```
+

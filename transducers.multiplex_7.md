@@ -7,21 +7,21 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function multiplex<T, A, B, C, D, E, F, G, H>(a: Transducer<T, A>, b: Transducer<T, B>, c: Transducer<T, C>, d: Transducer<T, D>, e: Transducer<T, E>, f: Transducer<T, F>, g: Transducer<T, G>, h: Transducer<T, H>): Transducer<T, [A, B, C, D, E, F, G, H]>;
+export declare function multiplex<T, A, B, C, D, E, F, G, H>(a: TxLike<T, A>, b: TxLike<T, B>, c: TxLike<T, C>, d: TxLike<T, D>, e: TxLike<T, E>, f: TxLike<T, F>, g: TxLike<T, G>, h: TxLike<T, H>): Transducer<T, [A, B, C, D, E, F, G, H]>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  a | <code>Transducer&lt;T, A&gt;</code> |  |
-|  b | <code>Transducer&lt;T, B&gt;</code> |  |
-|  c | <code>Transducer&lt;T, C&gt;</code> |  |
-|  d | <code>Transducer&lt;T, D&gt;</code> |  |
-|  e | <code>Transducer&lt;T, E&gt;</code> |  |
-|  f | <code>Transducer&lt;T, F&gt;</code> |  |
-|  g | <code>Transducer&lt;T, G&gt;</code> |  |
-|  h | <code>Transducer&lt;T, H&gt;</code> |  |
+|  a | <code>TxLike&lt;T, A&gt;</code> |  |
+|  b | <code>TxLike&lt;T, B&gt;</code> |  |
+|  c | <code>TxLike&lt;T, C&gt;</code> |  |
+|  d | <code>TxLike&lt;T, D&gt;</code> |  |
+|  e | <code>TxLike&lt;T, E&gt;</code> |  |
+|  f | <code>TxLike&lt;T, F&gt;</code> |  |
+|  g | <code>TxLike&lt;T, G&gt;</code> |  |
+|  h | <code>TxLike&lt;T, H&gt;</code> |  |
 
 <b>Returns:</b>
 

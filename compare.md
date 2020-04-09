@@ -4,6 +4,19 @@
 
 ## compare package
 
+## Functions
+
+|  Function | Description |
+|  --- | --- |
+|  [compareByKey(a, cmp)](./compare.comparebykey.md) | HOF comparator. Returns new comparator to sort objects by given <code>key</code> and with optional comparator <code>cmp</code> (default: [compare](./compare.compare.md)<!-- -->). |
+|  [compareByKey(a, cmp)](./compare.comparebykey_1.md) |  |
+|  [compareByKeys2(major, minor, cmpA, cmpB)](./compare.comparebykeys2.md) | HOF comparator. Returns new comparator to sort objects by given keys <code>a</code> (major), <code>b</code> (minor) and with optional comparators (default for each: [compare](./compare.compare.md)<!-- -->). |
+|  [compareByKeys2(major, minor, cmpA, cmpB)](./compare.comparebykeys2_1.md) |  |
+|  [compareByKeys3(major, minor, patch, cmpA, cmpB, cmpC)](./compare.comparebykeys3.md) | Same as , but for 3 sort keys / comparators. |
+|  [compareByKeys3(major, minor, patch, cmpA, cmpB, cmpC)](./compare.comparebykeys3_1.md) |  |
+|  [compareByKeys4(a, b, c, d, cmpA, cmpB, cmpC, cmpD)](./compare.comparebykeys4.md) | Same as , but for 4 sort keys / comparators. |
+|  [compareByKeys4(a, b, c, d, cmpA, cmpB, cmpC, cmpD)](./compare.comparebykeys4_1.md) |  |
+
 ## Variables
 
 |  Variable | Description |
@@ -11,4 +24,5 @@
 |  [compare](./compare.compare.md) |  |
 |  [compareNumAsc](./compare.comparenumasc.md) | Numeric comparator (ascending order) |
 |  [compareNumDesc](./compare.comparenumdesc.md) | Numeric comparator (descending order) |
+|  [reverse](./compare.reverse.md) | HOF comparator. Returns new comparator with reversed order of given comparator. |
 

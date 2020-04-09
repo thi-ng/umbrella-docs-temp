@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-pointInAABB: ([x, y, z]: import("@thi.ng/api").ArrayLikeIterable<number>, pos: import("@thi.ng/api").ArrayLikeIterable<number>, size: import("@thi.ng/api").ArrayLikeIterable<number>) => boolean
+pointInAABB: Fn3<import("@thi.ng/api").ArrayLikeIterable<number>, import("@thi.ng/api").ArrayLikeIterable<number>, import("@thi.ng/api").ArrayLikeIterable<number>, boolean>
 ```

@@ -4,8 +4,10 @@
 
 ## testRectCircle variable
 
+Returns true if given 2D rect defined by `boxMinPos` and `boxSize` intersects circle.
+
 <b>Signature:</b>
 
 ```typescript
-testRectCircle: ([rx, ry]: import("@thi.ng/api").ArrayLikeIterable<number>, [w, h]: import("@thi.ng/api").ArrayLikeIterable<number>, [cx, cy]: import("@thi.ng/api").ArrayLikeIterable<number>, r: number) => boolean
+testRectCircle: Fn4<import("@thi.ng/api").ArrayLikeIterable<number>, import("@thi.ng/api").ArrayLikeIterable<number>, import("@thi.ng/api").ArrayLikeIterable<number>, number, boolean>
 ```

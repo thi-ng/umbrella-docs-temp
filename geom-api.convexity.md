@@ -9,7 +9,7 @@ Polygon convexity classifier.
 <b>Signature:</b>
 
 ```typescript
-export declare const enum Convexity 
+export declare enum Convexity 
 ```
 
 ## Enumeration Members

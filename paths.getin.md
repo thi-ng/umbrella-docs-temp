@@ -2,30 +2,37 @@
 
 [Home](./index.md) &gt; [@thi.ng/paths](./paths.md) &gt; [getIn](./paths.getin.md)
 
-## getIn variable
+## getIn() function
 
-Immediate use getter, i.e. same as: `getter(path)(state)`<!-- -->.
+Type checked, immediate use getter, i.e. same as: `defGetter(path)(state)`<!-- -->.
 
 <b>Signature:</b>
 
 ```typescript
-getIn: (state: any, path: Path) => any
+export declare function getIn<T>(state: T, path: Path0): T;
 ```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  state | <code>T</code> |  |
+|  path | <code>Path0</code> |  |
+
+<b>Returns:</b>
+
+`T`
 
 ## Remarks
 
-Supports type checked paths and values for path lengths &lt;<!-- -->= 8. String paths are always unchecked (i.e. `state` is `any`<!-- -->).
+Only the first 8 path levels are type checked.
 
 ## Example
 
 
 ```ts
-// checked path and inferred return type
+// type checked path and inferred return type
 getIn({ a: { b: { c: 23 } } }, ["a","b","c"]);
-// 23
-
-// unchecked path
-getIn({ a: { b: { c: 23 } } }, "a.b.c");
 // 23
 
 ```

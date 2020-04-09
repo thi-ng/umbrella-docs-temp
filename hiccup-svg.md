@@ -17,8 +17,9 @@
 |  [image](./hiccup-svg.image.md) |  |
 |  [line](./hiccup-svg.line.md) |  |
 |  [linearGradient](./hiccup-svg.lineargradient.md) |  |
+|  [packedPoints](./hiccup-svg.packedpoints.md) | Similar to [points](./hiccup-svg.points.md)<!-- -->, but takes points from a single large flat buffer of coordinates with arbitrary striding. |
 |  [path](./hiccup-svg.path.md) |  |
-|  [points](./hiccup-svg.points.md) | Shape instancing group. The <code>shape</code> can be an SVG shape <code>#id</code> defined elsewhere in the document or set to <code>circle</code> or <code>rect</code> (default). The <code>size</code> arg is only used for the latter two shape types and defines the radius or width respectively. |
+|  [points](./hiccup-svg.points.md) | Shape instancing group. |
 |  [polygon](./hiccup-svg.polygon.md) |  |
 |  [polyline](./hiccup-svg.polyline.md) |  |
 |  [radialGradient](./hiccup-svg.radialgradient.md) |  |
@@ -28,6 +29,7 @@
 |  [svg](./hiccup-svg.svg.md) | Defines an <svg> root element with default XML namespaces. By default currently still sets SVG version to 1.1 to support Safari and other legacy tooling. |
 |  [text](./hiccup-svg.text.md) |  |
 |  [vline](./hiccup-svg.vline.md) |  |
+|  [withoutKeys](./hiccup-svg.withoutkeys.md) |  |
 
 ## Type Aliases
 

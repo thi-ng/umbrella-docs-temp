@@ -9,5 +9,5 @@ Optional additional uniforms
 <b>Signature:</b>
 
 ```typescript
-uniforms?: ShaderUniformSpecs;
+uniforms?: Partial<Record<keyof U, UniformDecl>>;
 ```
